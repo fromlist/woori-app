@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한투자증권프로젝트메타</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+
+</head>
+
+<body>
+
+	<!-- wrap -->
+	<div id="wrap">
+
+		<div class="d-flex j-end">
+			<label class="inp-switch gap10 d-inflex">
+				<b>테마변경</b>
+				<span class="theme-switch">
+					<input type="checkbox" id="themeSelector">
+					<span class="theme-input-white"><span class="blind">화이트모드</span></span>
+					<span class="theme-input-dark"><span class="blind">다크모드</span></span>
+				</span>
+			</label>
+		</div>
+
+		<main class="window-popup">
+
+			<div class="main-inner">
+				<section id="content">
+
+					<!-- title -->
+					<div class="section-title">
+						<h1 class="title">Biz용어 (일반용어)</h1>
+					</div>
+					<!-- //title -->
+
+					<!-- content start -->
+					<div class="main-content">
+
+						<!-- table-caption -->
+						<div class="table-caption">
+							<div class="length">전체 <span class="fc-blue1">30</span>건 (전체 3페이지)</div>
+							<div class="btn-wrap">
+								<div class="right">
+									<div class="form">
+										<select title="Biz용어 (일반용어)" style="width:100px;">
+											<option value="전체">전체</option>
+										</select>
+										<div class="input-wrap">
+											<input type="search" title="작성자">
+											<button type="button" class="btn-ico ico-search" title="검색"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //table-caption -->
+
+						<!-- table-col -->
+						<div class="table-col">
+							<table>
+								<caption>Biz용어 (일반용어)</caption>
+								<colgroup>
+									<col style="width:5%;">
+									<col>
+									<col style="width:16%;">
+									<col style="width:16%;">
+									<col style="width:9%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="ac">No</th>
+										<th scope="col" class="ac">Biz용어명</th>
+										<th scope="col" class="ac">개요</th>
+										<th scope="col" class="ac">신청자부서</th>
+										<th scope="col" class="ac">추가</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="ac" rowspan="3">1</td>
+										<td class="ac" rowspan="3">고객자산금액 진도율</td>
+										<td class="ac">당사의 고객자산금액이 고객자산 목적으로</td>
+										<td class="ac">데이터센터</td>
+										<td class="ac" rowspan="3"><button type="button" class="btn-xsmall btn-secondary btn-inner-ico w80"><i class="i-plus"></i>추가</button></td>
+									</tr>
+									<tr>
+										<td class="ac">당사 고객 그룹별로 점유하고 있는 고객자산금액1</td>
+										<td class="ac">데이터센터</td>
+									</tr>
+									<tr>
+										<td class="ac">당사 고객 그룹별로 점유하고 있는 고객자산금액2</td>
+										<td class="ac">데이터센터</td>
+									</tr>
+									<tr>
+										<td class="ac">1</td>
+										<td class="ac">CMA</td>
+										<td class="ac">첫 거래가 입출금고 거래 계좌중에서 자체 대면</td>
+										<td class="ac">데이터센터</td>
+										<td class="ac"><button type="button" class="btn-xsmall btn-primary w80">추가됨</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-col -->
+
+						<!-- pagination -->
+						<div class="pagination" aria-label="pagination">
+							<a href="#" class="first" title="처음 페이지"></a>
+							<a href="#" class="prev" title="이전 페이지"></a>
+							<a href="#" class="active" title="현재 페이지">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#" class="next" title="다음 페이지"></a>
+							<a href="#" class="last" title="마지막 페이지"></a>
+						</div>
+						<!-- //pagination -->
+
+						<!-- title -->
+						<div class="section-title mt40">
+							<h2 class="title">추가된 Biz용어</h2>
+						</div>
+						<!-- //title -->
+
+
+						<!-- table-col -->
+						<div class="table-col">
+							<table>
+								<caption>추가된 Biz용어</caption>
+								<colgroup>
+									<col style="width:5%;">
+									<col>
+									<col style="width:16%;">
+									<col style="width:16%;">
+									<col style="width:9%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="ac">No</th>
+										<th scope="col" class="ac">Biz용어명</th>
+										<th scope="col" class="ac">개요</th>
+										<th scope="col" class="ac">신청자부서</th>
+										<th scope="col" class="ac">추가</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="ac" rowspan="3">1</td>
+										<td class="ac" rowspan="3">고객자산금액 진도율</td>
+										<td class="ac">당사의 고객자산금액이 고객자산 목적으로</td>
+										<td class="ac">데이터센터</td>
+										<td class="ac" rowspan="3"><button type="button" class="btn-xsmall btn-secondary btn-inner-ico w80"><i class="i-except"></i>제외</button></td>
+									</tr>
+									<tr>
+										<td class="ac">당사 고객 그룹별로 점유하고 있는 고객자산금액1</td>
+										<td class="ac">데이터센터</td>
+									</tr>
+									<tr>
+										<td class="ac">당사 고객 그룹별로 점유하고 있는 고객자산금액2</td>
+										<td class="ac">데이터센터</td>
+									</tr>
+									<tr>
+										<td class="ac">1</td>
+										<td class="ac">CMA</td>
+										<td class="ac">첫 거래가 입출금고 거래 계좌중에서 자체 대면</td>
+										<td class="ac">데이터센터</td>
+										<td class="ac"><button type="button" class="btn-xsmall btn-secondary btn-inner-ico w80"><i class="i-except"></i>제외</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-col -->
+
+
+
+						<!-- btn-wrap -->
+						<div class="btn-wrap">
+							<div class="center">
+								<a href="#" class="btn-large btn-secondary">취소</a>
+								<a href="#" class="btn-large btn-primary">선택완료</a>
+							</div>
+						</div>
+						<!-- //btn-wrap -->
+
+
+
+
+					</div>
+					<!-- // content end -->
+
+
+				</section>
+			</div>
+
+		</main>
+
+	</div>
+	<!-- //wrap -->
+
+</body>
+
+</html>

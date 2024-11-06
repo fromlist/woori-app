@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한투자증권프로젝트메타</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+
+</head>
+
+<body>
+
+	<!-- skipnav -->
+	<div id="skip_navigation">
+		<a href="#content">본문 바로가기</a>
+		<a href="#navigation">주메뉴 바로가기</a>
+	</div>
+	<!-- //skipnav -->
+
+	<!-- wrap -->
+	<div id="wrap">
+
+		<nav id="navigation" class="navigation is-collapse">
+			<div class="navigation-inner">
+				<div class="nav-title">
+					<h1 class="logo"><a href="/html" title="신한투자증권"></a></h1>
+					<button type="button" class="navTrigger" title="Navigation 펼치기/접기" aria-expanded="false"></button>
+				</div>
+				<div class="nav-content"></div>
+			</div>
+		</nav>
+
+
+		<main>
+			<header>
+				<div>
+					<label class="inp-switch gap10 d-inflex">
+						<b>테마변경</b>
+						<span class="theme-switch">
+							<input type="checkbox" id="themeSelector">
+							<span class="theme-input-white"><span class="blind">화이트모드</span></span>
+							<span class="theme-input-dark"><span class="blind">다크모드</span></span>
+						</span>
+					</label>
+				</div>
+			</header>
+
+			<div class="main-inner">
+				<section id="content">
+					<!-- title -->
+					<div class="section-title">
+						<h1 class="title">자유게시판 등록</h1>
+					</div>
+					<!-- //title -->
+
+					<!-- content start -->
+					<div class="main-content">
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">등록자 정보</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-row -->
+						<div class="table-row">
+							<table>
+								<caption>등록자 정보</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">등록자명(사번) <sup class="apos" title="필수입력">*</sup></th>
+										<td>김신한 (20240411)</td>
+										<th scope="row">등록부서 <sup class="apos" title="필수입력">*</sup></th>
+										<td>데이터센터</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">자유게시판 정보</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-row -->
+						<div class="table-row">
+							<table>
+								<caption>자유게시판 정보</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">구분 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="3">
+											<div class="form form-list">
+												<label class="inp"><input type="radio"><b>Q&amp;A</b></label>
+												<label class="inp"><input type="radio"><b>데이터 검증신고</b></label>
+												<label class="inp"><input type="radio"><b>시스템 오류신고</b></label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">실명 공개여부 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="3">
+											<div class="form form-list">
+												<label class="inp"><input type="radio"><b>실명공개</b></label>
+												<label class="inp"><input type="radio"><b>익명</b></label>
+												<div class="form-inner-list">
+													<div class="desc desc-alert">익명선택 시 등록자명(사번), 등록부서가 익명으로 노출됩니다.</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">제목 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="3">
+											<input type="text" placeholder="제목을 입력해 주세요" title="제목">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">분류 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="3">
+											<div class="form form-list">
+												<label class="inp"><input type="radio"><b>통합신청</b></label>
+												<label class="inp"><input type="radio"><b>데이터탐색</b></label>
+												<label class="inp"><input type="radio"><b>BI대시보드</b></label>
+												<label class="inp"><input type="radio"><b>데이터분석</b></label>
+												<label class="inp"><input type="radio"><b>커뮤니케이션</b></label>
+												<label class="inp"><input type="radio"><b>기타</b></label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">내용 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="3">
+											<div id="editor" class="quill-editor">
+
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">첨부파일</th>
+										<td colspan="3">
+											<div action="/upload" class="dropzone dropzone-attach-file"></div>
+										</td>
+									</tr>
+
+									<tr>
+										<th scope="row">태그</th>
+										<td colspan="3">
+											<input type="text" placeholder="단어는 ,(콤마)로 구분해 주세요." title="태그">
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+
+						<!-- btn-wrap -->
+						<!-- 등록 -->
+						<div class="btn-wrap">
+							<div class="center">
+								<a href="#" class="btn-large btn-secondary">취소</a>
+								<a href="#" class="btn-large btn-primary">등록완료</a>
+							</div>
+						</div>
+						<!-- //등록 -->
+						<!-- //btn-wrap -->
+
+
+						<!-- btn-wrap -->
+						<!-- 수정 -->
+						<div class="btn-wrap">
+							<div class="center">
+								<a href="#" class="btn-large btn-tertiary">삭제</a>
+								<a href="#" class="btn-large btn-secondary">취소</a>
+								<a href="#" class="btn-large btn-primary">수정완료</a>
+							</div>
+						</div>
+						<!-- //수정 -->
+						<!-- //btn-wrap -->
+
+					</div>
+					<!-- // content end -->
+
+
+				</section>
+			</div>
+
+		</main>
+
+	</div>
+	<!-- //wrap -->
+
+
+
+	<!-- quill & highlightjs -->
+	<script>
+		hljs.configure({ // optionally configure hljs
+			languages: ['sql']
+		});
+
+		Quill.register("modules/resize", window.QuillResizeModule);
+
+		const toolbarOptions = [
+			['bold', 'italic', 'underline', 'strike'], // toggled buttons
+			['blockquote', 'code-block'],
+			['link', 'image', 'video', 'formula'],
+
+			[{
+				'header': 1
+			}, {
+				'header': 2
+			}], // custom button values
+			[{
+				'list': 'ordered'
+			}, {
+				'list': 'bullet'
+			}, {
+				'list': 'check'
+			}],
+			[{
+				'script': 'sub'
+			}, {
+				'script': 'super'
+			}], // superscript/subscript
+			[{
+				'indent': '-1'
+			}, {
+				'indent': '+1'
+			}], // outdent/indent
+			[{
+				'direction': 'rtl'
+			}], // text direction
+
+			[{
+				'size': ['small', false, 'large', 'huge']
+			}], // custom dropdown
+			[{
+				'header': [1, 2, 3, 4, 5, 6, false]
+			}],
+
+			[{
+				'color': []
+			}, {
+				'background': []
+			}], // dropdown with defaults from theme
+			[{
+				'align': []
+			}],
+
+			['clean'] // remove formatting button,
+		];
+
+		const quill = new Quill('#editor', {
+			modules: {
+				// syntax: true, // Include syntax module
+				toolbar: toolbarOptions,
+				resize: {
+					locale: {},
+				},
+			},
+			placeholder: '내용을 입력해 주세요',
+			theme: 'snow'
+		});
+		var toolbar = quill.container.previousSibling;
+		toolbar.querySelector('.ql-bold').setAttribute('data-tippy-content', 'bold');
+		toolbar.querySelector('.ql-italic').setAttribute('data-tippy-content', 'italic');
+		toolbar.querySelector('.ql-underline').setAttribute('data-tippy-content', 'underline');
+		toolbar.querySelector('.ql-strike').setAttribute('data-tippy-content', 'strike');
+		toolbar.querySelector('.ql-blockquote').setAttribute('data-tippy-content', 'blockquote');
+		toolbar.querySelector('.ql-code-block').setAttribute('data-tippy-content', 'code-block');
+		toolbar.querySelector('.ql-link').setAttribute('data-tippy-content', 'link');
+		toolbar.querySelector('.ql-image').setAttribute('data-tippy-content', 'image');
+		toolbar.querySelector('.ql-video').setAttribute('data-tippy-content', 'video');
+		toolbar.querySelector('.ql-formula').setAttribute('data-tippy-content', 'formula');
+		toolbar.querySelector('.ql-header[value="1"]').setAttribute('data-tippy-content', 'header: 1');
+		toolbar.querySelector('.ql-header[value="2"]').setAttribute('data-tippy-content', 'header: 2');
+		toolbar.querySelector('.ql-list[value="ordered"]').setAttribute('data-tippy-content', 'list: ordered');
+		toolbar.querySelector('.ql-list[value="bullet"]').setAttribute('data-tippy-content', 'list: bullet');
+		toolbar.querySelector('.ql-list[value="check"]').setAttribute('data-tippy-content', 'list: check');
+		toolbar.querySelector('.ql-script[value="sub"]').setAttribute('data-tippy-content', 'script: sub');
+		toolbar.querySelector('.ql-script[value="super"]').setAttribute('data-tippy-content', 'script: super');
+		toolbar.querySelector('.ql-indent[value="-1"]').setAttribute('data-tippy-content', 'indent: -1');
+		toolbar.querySelector('.ql-indent[value="+1"]').setAttribute('data-tippy-content', 'indent: +1');
+		toolbar.querySelector('.ql-direction').setAttribute('data-tippy-content', 'direction: rtl');
+		toolbar.querySelector('.ql-size.ql-picker').setAttribute('data-tippy-content', 'font size');
+		toolbar.querySelector('.ql-header.ql-picker').setAttribute('data-tippy-content', 'font style');
+		toolbar.querySelector('.ql-color.ql-picker.ql-color-picker').setAttribute('data-tippy-content', 'font color');
+		toolbar.querySelector('.ql-background.ql-picker.ql-color-picker').setAttribute('data-tippy-content', 'font background');
+		toolbar.querySelector('.ql-align.ql-picker.ql-icon-picker').setAttribute('data-tippy-content', 'align');
+		toolbar.querySelector('.ql-clean').setAttribute('data-tippy-content', 'clean');
+
+		tippy('[data-tippy-content]');
+	</script>
+
+	<!-- dropzone -->
+	<script>
+		Dropzone.autoDiscover = false;
+		window.onload = function() {
+
+
+			// file upload
+			var dropzoneFileOptions = {
+				dictDefaultMessage: "XLSX, PPTX, DOCX, PDF, TXT, PNG, JPEG, JPG 확장자만 가능합니다. <br> 업로드하려면 여기에 파일을 드롭하거나 여기를 클릭하세요.",
+				dictFallbackMessage: "드래그 앤 드롭 파일 업로드를 지원하지 않습니다.",
+				dictFallbackText: "예전처럼 파일을 업로드하려면 아래 대체 양식을 사용하세요.",
+				dictFileTooBig: "파일이 너무 큽니다({{filesize}}MiB). 최대 파일 크기: {{maxFilesize}}MiB.",
+				dictInvalidFileType: "이 유형의 파일은 업로드할 수 없습니다.",
+				dictResponseError: "서버가 {{statusCode}} 코드로 응답했습니다.",
+				dictCancelUpload: "업로드 취소",
+				dictCancelUploadConfirmation: "정말 이 업로드를 취소하시겠습니까?",
+				dictRemoveFile: "파일 제거",
+				dictMaxFilesExceeded: "더 이상 파일을 업로드할 수 없습니다.",
+				paramName: "파일",
+				maxFilesize: 2, // MB
+				addRemoveLinks: true,
+				createImageThumbnails: false,
+				acceptedFiles: "image/*,.pdf,.doc,.docx,.xls,.xlsx,.csv,.tsv,.ppt,.pptx,.txt",
+				init: function() {
+					this.on("success", function(file) {
+						console.log("success > " + file.name);
+					});
+				}
+			};
+			var fileUploader = document.querySelector('.dropzone-attach-file');
+			var newDropzone = new Dropzone(fileUploader, dropzoneFileOptions);
+		};
+	</script>
+
+</body>
+
+</html>

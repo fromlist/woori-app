@@ -1,0 +1,127 @@
+sv<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+	<title>신한투자증권프로젝트메타</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+	<style>
+		code .hljs-keyword {
+			font-weight: 700;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="code">
+		<pre>
+            <code class="sql">
+CREATE TABLE shop (
+    article INT(4) UNSIGNED ZEROFILL DEFAULT '0000' NOT NULL,
+    dealer  CHAR(20)                 DEFAULT ''     NOT NULL,
+    price   DOUBLE(16,2)             DEFAULT '0.00' NOT NULL,
+    PRIMARY KEY(article, dealer));
+
+INSERT INTO shop VALUES
+    (1,'A',3.45),(1,'B',3.99),(2,'A',10.99),(3,'B',1.45),(3,'C',1.69),
+    (3,'D',1.25),(4,'D',19.95);
+            </code>
+        </pre>
+	</div>
+
+	<div class="code">
+		<pre>
+            <code class="qml">
+CREATE TABLE Customers (
+    First_Name varchar(50) NOT NULL,
+    Last_Name varchar(50) NOT NULL,
+    City varchar(50) NOT NULL,
+    Email varchar(100) NOT NULL,
+    Phone_Number varchar(20) NOT NULL,
+    Registration_Date date NOT NULL
+);
+            </code>
+        </pre>
+	</div>
+
+	<div class="code">
+		<pre>
+            <code class="qml">
+SELECT OBJECT_SCHEMA_NAME(tbl.object_id) AS schema_name
+,tbl.name AS table_name
+,fg.name AS filegroup_name
+FROM sys.tables tbl
+INNER JOIN sys.indexes indx ON tbl.object_id=indx.object_id
+INNER JOIN sys.filegroups fg ON indx.data_space_id=fg.data_space_id
+and tbl.name not like 'sys%'
+ORDER BY tbl.name, indx.index_id
+            </code>
+        </pre>
+	</div>
+
+
+	<script>
+		document.addEventListener('DOMContentLoaded', (event) => {
+			document.querySelectorAll('pre code').forEach((el) => {
+				hljs.highlightElement(el);
+				console.log(hljs)
+			});
+		});
+	</script>
+
+</body>
+
+</html>

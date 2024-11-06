@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한투자증권프로젝트메타</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+
+</head>
+
+<body>
+
+	<!-- wrap -->
+	<div id="wrap">
+
+		<div class="d-flex j-end">
+			<label class="inp-switch gap10 d-inflex">
+				<b>테마변경</b>
+				<span class="theme-switch">
+					<input type="checkbox" id="themeSelector">
+					<span class="theme-input-white"><span class="blind">화이트모드</span></span>
+					<span class="theme-input-dark"><span class="blind">다크모드</span></span>
+				</span>
+			</label>
+		</div>
+
+		<main class="window-popup">
+
+			<div class="main-inner">
+				<section id="content">
+
+					<!-- title -->
+					<div class="section-title">
+						<h1 class="title">Biz용어 상세 </h1>
+					</div>
+					<!-- //title -->
+
+					<!-- content start -->
+					<div class="main-content">
+
+						<!-- step-list -->
+						<nav class="step-list">
+							<ol>
+								<li class="list01">
+									<div class="ico"><i></i></div>
+									<strong>신청중</strong>
+								</li>
+								<li class="list02" aria-current="page">
+									<div class="ico"><i></i></div>
+									<strong>승인완료</strong>
+								</li>
+								<li class="list03">
+									<div class="ico"><i></i></div>
+									<strong>접수중</strong>
+								</li>
+								<li class="list04">
+									<div class="ico"><i></i></div>
+									<strong>접수완료</strong>
+								</li>
+								<li class="list05">
+									<div class="ico"><i></i></div>
+									<strong>처리완료</strong>
+								</li>
+							</ol>
+						</nav>
+						<!-- //step-list -->
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">신청자 정보</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-row -->
+						<div class="table-row">
+							<table>
+								<caption>신청자 정보</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">신청자명(사번)</th>
+										<td>김신한 (20240411)</td>
+										<th scope="row">신청자부서</th>
+										<td>데이터센터</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">Biz용어 정보</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-row -->
+						<div class="table-row">
+							<table>
+								<caption>Biz용어 정보</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">표준계수 여부</th>
+										<td colspan="3">예 (표준 Biz용어)</td>
+									</tr>
+									<tr>
+										<th scope="row">Biz용어명</th>
+										<td colspan="3">공모주 청약경쟁율</td>
+									</tr>
+									<tr>
+										<th scope="row">개요</th>
+										<td colspan="3">공모두 청약 종목의 청약경쟁률로 청약주식수를 개정수량으로 나눈 값이다.</td>
+									</tr>
+									<tr>
+										<th scope="row">담당자명(사번)</th>
+										<td>최신한(20240604)</td>
+										<th scope="row">오너십부서</th>
+										<td>데이터센터</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">상세 정보</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-row -->
+						<div class="table-row">
+							<table>
+								<caption>상세 정보</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">산출식</th>
+										<td colspan="3">청약경쟁률 = 청약주식수/(일반청약)배정수량</td>
+									</tr>
+									<tr>
+										<th scope="row">산출조건</th>
+										<td colspan="3">2010년 이후 공모주 청약 종목만 가능하다.</td>
+									</tr>
+									<tr>
+										<th scope="row">산출Query</th>
+										<td colspan="3">
+											<div id="editor" class="quill-editor ql-container ql-snow">
+												<div class="ql-editor" contenteditable="true" data-placeholder="내용을 입력해 주세요">
+													<div class="ql-code-block-container" spellcheck="false">
+														<div class="ql-code-block" data-language="sql"><span class="ql-token hljs-keyword">CREATE</span> <span class="ql-token hljs-keyword">TABLE</span> shop (</div>
+														<div class="ql-code-block" data-language="sql"> article <span class="ql-token hljs-type">INT</span>(<span class="ql-token hljs-number">4</span>) UNSIGNED ZEROFILL <span class="ql-token hljs-keyword">DEFAULT</span> <span class="ql-token hljs-string">'0000'</span> <span class="ql-token hljs-keyword">NOT</span> <span class="ql-token hljs-keyword">NULL</span>,</div>
+														<div class="ql-code-block" data-language="sql"> dealer <span class="ql-token hljs-type">CHAR</span>(<span class="ql-token hljs-number">20</span>) <span class="ql-token hljs-keyword">DEFAULT</span> <span class="ql-token hljs-string">''</span> <span class="ql-token hljs-keyword">NOT</span> <span class="ql-token hljs-keyword">NULL</span>,</div>
+														<div class="ql-code-block" data-language="sql"> price <span class="ql-token hljs-keyword">DOUBLE</span>(<span class="ql-token hljs-number">16</span>,<span class="ql-token hljs-number">2</span>) <span class="ql-token hljs-keyword">DEFAULT</span> <span class="ql-token hljs-string">'0.00'</span> <span class="ql-token hljs-keyword">NOT</span> <span class="ql-token hljs-keyword">NULL</span>,</div>
+														<div class="ql-code-block" data-language="sql"> <span class="ql-token hljs-keyword">PRIMARY</span> KEY(article, dealer));</div>
+														<div class="ql-code-block" data-language="sql"><br></div>
+														<div class="ql-code-block" data-language="sql"><span class="ql-token hljs-keyword">INSERT</span> <span class="ql-token hljs-keyword">INTO</span> shop <span class="ql-token hljs-keyword">VALUES</span></div>
+														<div class="ql-code-block" data-language="sql"> (<span class="ql-token hljs-number">1</span>,<span class="ql-token hljs-string">'A'</span>,<span class="ql-token hljs-number">3.45</span>),(<span class="ql-token hljs-number">1</span>,<span class="ql-token hljs-string">'B'</span>,<span class="ql-token hljs-number">3.99</span>),(<span class="ql-token hljs-number">2</span>,<span class="ql-token hljs-string">'A'</span>,<span class="ql-token hljs-number">10.99</span>),(<span class="ql-token hljs-number">3</span>,<span class="ql-token hljs-string">'B'</span>,<span class="ql-token hljs-number">1.45</span>),(<span class="ql-token hljs-number">3</span>,<span class="ql-token hljs-string">'C'</span>,<span class="ql-token hljs-number">1.69</span>),</div>
+														<div class="ql-code-block" data-language="sql"> (<span class="ql-token hljs-number">3</span>,<span class="ql-token hljs-string">'D'</span>,<span class="ql-token hljs-number">1.25</span>),(<span class="ql-token hljs-number">4</span>,<span class="ql-token hljs-string">'D'</span>,<span class="ql-token hljs-number">19.95</span>);</div>
+														<div class="ql-code-block" data-language="sql"> </div>
+													</div>
+												</div>
+												<div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">산출단위</th>
+										<td>비율</td>
+										<th scope="row">산출주기</th>
+										<td>연+수시</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">연관 대시보드 정보</h2>
+						</div>
+						<!-- //title -->
+
+
+
+						<!-- table-col -->
+						<div class="table-col">
+							<table>
+								<caption>연관 대시보드 정보</caption>
+								<colgroup>
+									<col style="width:5%;">
+									<col>
+									<col style="width:9%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="ac">No</th>
+										<th scope="col" class="ac">ID/보고서명</th>
+										<th scope="col" class="ac">제외</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="ac">1</td>
+										<td>
+											<a href="#" class="outlink" title="새창 열림" target="_blank">(A123456)금융상품 거래현황3</a>
+										</td>
+										<td class="ac"><button type="button" class="btn-xsmall btn-secondary btn-inner-ico w80"><i class="i-except"></i>제외</button></td>
+									</tr>
+									<tr>
+										<td class="ac">1</td>
+										<td>
+											<a href="#" class="outlink" title="새창 열림" target="_blank">(A123456)금융상품 거래현황3</a>
+										</td>
+										<td class="ac"><button type="button" class="btn-xsmall btn-secondary btn-inner-ico w80"><i class="i-except"></i>제외</button></td>
+									</tr>
+									<tr>
+										<td class="ac">1</td>
+										<td>
+											<a href="#" class="outlink" title="새창 열림" target="_blank">(A123456)금융상품 거래현황3</a>
+										</td>
+										<td class="ac"><button type="button" class="btn-xsmall btn-secondary btn-inner-ico w80"><i class="i-except"></i>제외</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-col -->
+
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">기타 정보</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-row -->
+						<div class="table-row">
+							<table>
+								<caption>기타 정보</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">골드넷+화면번호</th>
+										<td>19971, 1472</td>
+									</tr>
+									<tr>
+										<th scope="row">첨부파일</th>
+										<td>
+											<ul class="attach-column-list">
+												<li>
+													<a href="#"><span>취약점진단.zip</span></a>
+												</li>
+												<li>
+													<a href="#"><span>취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip</span></a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">태그</th>
+										<td>
+											#공지사항
+											&nbsp;&nbsp;
+											#서버점검
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">결제선 정보</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-col -->
+						<div class="table-col">
+							<table>
+								<caption>결제선 정보</caption>
+								<colgroup>
+									<col style="width:5%;">
+									<col style="width:13%;">
+									<col style="width:13%;">
+									<col>
+									<col style="width:30%;">
+									<col style="width:13%;">
+									<col style="width:13%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="ac">No</th>
+										<th scope="col" class="ac">결재타입</th>
+										<th scope="col" class="ac">부서</th>
+										<th scope="col" class="ac">직위</th>
+										<th scope="col" class="ac">이름</th>
+										<th scope="col" class="ac">결재상태</th>
+										<th scope="col" class="ac">결재일시</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="ac">1</td>
+										<td class="ac">승인</td>
+										<td class="ac">데이터센터</td>
+										<td class="ac">부서장</td>
+										<td class="ac">박신한</td>
+										<td class="ac">대기</td>
+										<td class="ac">2024-05-01 <br> 10:00:00</td>
+									</tr>
+									<tr>
+										<td class="ac">2</td>
+										<td class="ac" rowspan="3">처리접수</td>
+										<td class="ac">IT부서</td>
+										<td class="ac">선임</td>
+										<td class="ac">최신한</td>
+										<td class="ac">미결</td>
+										<td class="ac">-</td>
+									</tr>
+									<tr>
+										<td class="ac">3</td>
+										<td class="ac">IT부서</td>
+										<td class="ac">선임</td>
+										<td class="ac">최신한</td>
+										<td class="ac">미결</td>
+										<td class="ac">-</td>
+									</tr>
+									<tr>
+										<td class="ac">4</td>
+										<td class="ac">IT부서</td>
+										<td class="ac">선임</td>
+										<td class="ac">최신한</td>
+										<td class="ac">미결</td>
+										<td class="ac">-</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-col -->
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">의견 작성</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-row -->
+						<div class="table-row">
+							<table>
+								<caption>의견 작성</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">의견 작성 <sup class="apos" title="필수입력">*</sup></th>
+										<td>
+											<textarea title="의견 작성"></textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+
+
+						<!-- btn-wrap -->
+						<div class="btn-wrap">
+							<div class="center">
+								<a href="#" class="btn-large btn-secondary">신청취소</a>
+								<a href="#" class="btn-large btn-primary">확인</a>
+							</div>
+							<div class="center">
+								<a href="#" class="btn-large btn-primary">확인</a>
+							</div>
+							<div class="center">
+								<a href="#" class="btn-large btn-secondary">내역삭제</a>
+								<a href="#" class="btn-large btn-tertiary">재신청</a>
+								<a href="#" class="btn-large btn-primary">확인</a>
+							</div>
+							<div class="center">
+								<a href="#" class="btn-large btn-secondary">구독취소</a>
+								<a href="#" class="btn-large btn-primary">확인</a>
+							</div>
+							<div class="center">
+								<a href="#" class="btn-large btn-secondary">내역삭제</a>
+								<a href="#" class="btn-large btn-primary">확인</a>
+							</div>
+						</div>
+						<!-- //btn-wrap -->
+
+						<!-- btn-wrap -->
+						<div class="btn-wrap">
+							<div class="center">
+								<a href="#" class="btn-large btn-secondary">취소</a>
+								<a href="#" class="btn-large btn-tertiary">반려</a>
+								<a href="#" class="btn-large btn-primary">승인</a>
+								<a href="#" class="btn-large btn-primary">처리접수</a>
+							</div>
+						</div>
+						<!-- //btn-wrap -->
+
+
+					</div>
+					<!-- // content end -->
+
+
+				</section>
+			</div>
+
+		</main>
+
+	</div>
+	<!-- //wrap -->
+
+</body>
+
+</html>

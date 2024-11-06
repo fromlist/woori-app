@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+	<title>신한투자증권프로젝트메타</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+	<style>
+		body {
+			padding: 50px;
+		}
+
+		select {
+			width: auto;
+			color: var(--black);
+		}
+
+		/* Set default font-family */
+		#editor {
+			font-family: 'Pretendard';
+			font-size: 18px;
+			height: 375px;
+		}
+	</style>
+</head>
+<div id="editor" class="quill-editor">
+	<p>Hello World!</p>
+	<p>Some initial <strong>bold</strong> text</p>
+	<p><br /></p>
+</div>
+
+<script>
+	hljs.configure({ // optionally configure hljs
+		languages: ['sql']
+	});
+
+	Quill.register("modules/resize", window.QuillResizeModule);
+
+	const toolbarOptions = [
+		['bold', 'italic', 'underline', 'strike'], // toggled buttons
+		['blockquote', 'code-block'],
+		['link', 'image', 'video', 'formula'],
+
+		[{
+			'header': 1
+		}, {
+			'header': 2
+		}], // custom button values
+		[{
+			'list': 'ordered'
+		}, {
+			'list': 'bullet'
+		}, {
+			'list': 'check'
+		}],
+		[{
+			'script': 'sub'
+		}, {
+			'script': 'super'
+		}], // superscript/subscript
+		[{
+			'indent': '-1'
+		}, {
+			'indent': '+1'
+		}], // outdent/indent
+		[{
+			'direction': 'rtl'
+		}], // text direction
+
+		[{
+			'size': ['small', false, 'large', 'huge']
+		}], // custom dropdown
+		[{
+			'header': [1, 2, 3, 4, 5, 6, false]
+		}],
+
+		[{
+			'color': []
+		}, {
+			'background': []
+		}], // dropdown with defaults from theme
+		[{
+			'align': []
+		}],
+
+		['clean'] // remove formatting button
+	];
+
+	const quill = new Quill('#editor', {
+		modules: {
+			syntax: true, // Include syntax module
+			toolbar: toolbarOptions,
+			resize: {
+				locale: {},
+			},
+		},
+		theme: 'snow'
+	});
+
+
+	var toolbar = quill.container.previousSibling;
+	toolbar.querySelector('.ql-bold').setAttribute('data-tippy-content', 'bold');
+	toolbar.querySelector('.ql-italic').setAttribute('data-tippy-content', 'italic');
+	toolbar.querySelector('.ql-underline').setAttribute('data-tippy-content', 'underline');
+	toolbar.querySelector('.ql-strike').setAttribute('data-tippy-content', 'strike');
+	toolbar.querySelector('.ql-blockquote').setAttribute('data-tippy-content', 'blockquote');
+	toolbar.querySelector('.ql-code-block').setAttribute('data-tippy-content', 'code-block');
+	toolbar.querySelector('.ql-link').setAttribute('data-tippy-content', 'link');
+	toolbar.querySelector('.ql-image').setAttribute('data-tippy-content', 'image');
+	toolbar.querySelector('.ql-video').setAttribute('data-tippy-content', 'video');
+	toolbar.querySelector('.ql-formula').setAttribute('data-tippy-content', 'formula');
+	toolbar.querySelector('.ql-header[value="1"]').setAttribute('data-tippy-content', 'header: 1');
+	toolbar.querySelector('.ql-header[value="2"]').setAttribute('data-tippy-content', 'header: 2');
+	toolbar.querySelector('.ql-list[value="ordered"]').setAttribute('data-tippy-content', 'list: ordered');
+	toolbar.querySelector('.ql-list[value="bullet"]').setAttribute('data-tippy-content', 'list: bullet');
+	toolbar.querySelector('.ql-list[value="check"]').setAttribute('data-tippy-content', 'list: check');
+	toolbar.querySelector('.ql-script[value="sub"]').setAttribute('data-tippy-content', 'script: sub');
+	toolbar.querySelector('.ql-script[value="super"]').setAttribute('data-tippy-content', 'script: super');
+	toolbar.querySelector('.ql-indent[value="-1"]').setAttribute('data-tippy-content', 'indent: -1');
+	toolbar.querySelector('.ql-indent[value="+1"]').setAttribute('data-tippy-content', 'indent: +1');
+	toolbar.querySelector('.ql-direction').setAttribute('data-tippy-content', 'direction: rtl');
+	toolbar.querySelector('.ql-size.ql-picker').setAttribute('data-tippy-content', 'font size');
+	toolbar.querySelector('.ql-header.ql-picker').setAttribute('data-tippy-content', 'font style');
+	toolbar.querySelector('.ql-color.ql-picker.ql-color-picker').setAttribute('data-tippy-content', 'font color');
+	toolbar.querySelector('.ql-background.ql-picker.ql-color-picker').setAttribute('data-tippy-content', 'font background');
+	toolbar.querySelector('.ql-align.ql-picker.ql-icon-picker').setAttribute('data-tippy-content', 'align');
+	toolbar.querySelector('.ql-clean').setAttribute('data-tippy-content', 'clean');
+
+	tippy('[data-tippy-content]');
+	// quill.enable(false);
+</script>
+</body>
+
+</html>

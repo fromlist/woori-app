@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한투자증권프로젝트메타</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
+	<link rel="stylesheet" href="../../assets/css/ui-guide.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+</head>
+
+<body>
+	<div>
+		<label class="inp-switch gap10 d-inflex">
+			<b>테마변경</b>
+			<span class="theme-switch">
+				<input type="checkbox" id="themeSelector">
+				<span class="theme-input-white"><span class="blind">화이트모드</span></span>
+				<span class="theme-input-dark"><span class="blind">다크모드</span></span>
+			</span>
+		</label>
+	</div>
+	<div>
+		<h1>input</h1>
+		<div class="column">
+			<div class="hr">
+				<h2>Default</h2>
+				<input type="text" placeholder="검색어를 입력해 주세요" title="검색어를 입력해 주세요">
+				<br>
+				<input type="text" placeholder="검색어를 입력해 주세요" title="검색어를 입력해 주세요" value="Biz 용어 입력">
+			</div>
+			<div class="hr">
+				<h2>Readonly</h2>
+				<input type="text" placeholder="검색어를 입력해 주세요" title="검색어를 입력해 주세요" readonly>
+				<br>
+				<input type="text" placeholder="검색어를 입력해 주세요" title="검색어를 입력해 주세요" readonly value="Biz 용어 입력">
+			</div>
+			<div class="hr">
+				<h2>Disabled</h2>
+				<input type="text" placeholder="검색어를 입력해 주세요" title="검색어를 입력해 주세요" disabled>
+				<br>
+				<input type="text" placeholder="검색어를 입력해 주세요" title="검색어를 입력해 주세요" disabled value="Biz 용어 입력">
+			</div>
+			<div class="hr">
+				<h2>Search</h2>
+				<input type="search" placeholder="검색어를 입력해 주세요" title="검색어를 입력해 주세요">
+				<br>
+				<input type="search" placeholder="검색어를 입력해 주세요" title="검색어를 입력해 주세요" value="Biz 용어 입력">
+			</div>
+			<div class="hr">
+				<h2>Number</h2>
+				<input type="number" min="0" max="10" title="">
+				<br>
+				<input type="number" min="0" max="10" title="" value="10">
+			</div>
+			<div class="hr">
+				<h2>Date</h2>
+				<input type="date" title="">
+				<br>
+				<input type="date" title="" value="2024-05-20">
+			</div>
+			<div class="hr">
+				<h2>Time</h2>
+				<input type="time" title="">
+				<br>
+				<input type="time" title="" value="13:30">
+			</div>
+			<div class="hr">
+				<h2>Date & Time</h2>
+				<input type="datetime-local" title="">
+				<br>
+				<input type="datetime-local" title="" value="2024-05-20T13:30">
+			</div>
+		</div>
+		<div class="column mt20">
+			<div class="hr">
+				<h2 class="fc-orange">Variation</h2>
+
+			</div>
+		</div>
+		<hr>
+		<h1>Textarea</h1>
+
+		<div class="column">
+			<div class="hr">
+				<h2>Default</h2>
+				<textarea placeholder="내용을 입력해 주세요" title="내용을 입력해 주세요"></textarea>
+				<br>
+				<textarea placeholder="내용을 입력해 주세요" title="내용을 입력해 주세요">Biz 용어 입력</textarea>
+			</div>
+			<div class="hr">
+				<h2>Readonly</h2>
+				<textarea placeholder="내용을 입력해 주세요" title="내용을 입력해 주세요" readonly></textarea>
+				<br>
+				<textarea placeholder="내용을 입력해 주세요" title="내용을 입력해 주세요" readonly>Biz 용어 입력</textarea>
+			</div>
+			<div class="hr">
+				<h2>Disabled</h2>
+				<textarea placeholder="내용을 입력해 주세요" title="내용을 입력해 주세요" disabled></textarea>
+				<br>
+				<textarea placeholder="내용을 입력해 주세요" title="내용을 입력해 주세요" disabled>Biz 용어 입력</textarea>
+			</div>
+		</div>
+		<hr>
+
+		<h1>Select</h1>
+		<div class="column">
+			<div class="hr">
+				<h2>Default</h2>
+				<select title="선택">
+					<option value="전체">전체</option>
+					<option value="제목">제목</option>
+					<option value="내용">내용</option>
+				</select>
+				<br>
+				<select title="선택">
+					<option value="전체">전체</option>
+					<option value="제목" selected>제목</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+					<option value="내용">내용</option>
+				</select>
+			</div>
+			<div class="hr">
+				<h2>Disabled</h2>
+				<select title="선택" disabled>
+					<option value="전체">전체</option>
+					<option value="제목">제목</option>
+					<option value="내용">내용</option>
+				</select>
+				<br>
+				<select title="선택" disabled>
+					<option value="전체">전체</option>
+					<option value="제목" selected>제목</option>
+					<option value="내용">내용</option>
+				</select>
+			</div>
+		</div>
+
+		<h1>Dropdown</h1>
+		<div class="column">
+			<div class="hr">
+				<h2>Default</h2>
+				<div class="dropDown">
+					<button type="button" class="trigger" aria-expanded="true">전체</button>
+					<ul class="target">
+						<li class="is-selected"><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+						<li><button type="button">전체</button></li>
+					</ul>
+				</div>
+			</div>
+			<div class="hr">
+				<h2>Type button</h2>
+				<div class="d-inflex">
+					<div class="dropDown">
+						<button type="button" class="trigger not-button btn-large btn-primary" aria-expanded="true">버튼형</button>
+						<ul class="target">
+							<li class="is-selected"><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="hr">
+				<h2>Has title</h2>
+				<div class="d-inflex">
+					<div class="dropDown has-title">
+						<button type="button" class="trigger not-button btn-large btn-primary" aria-expanded="true">버튼형</button>
+						<div class="target position-right">
+							<div class="target-title">
+								<strong>설정</strong>
+							</div>
+							<ul>
+								<li>
+									<label class="inp-switch"><b>테마변경</b><input type="checkbox" name="inp-switch001"></label>
+								</li>
+								<li><a href="#">테마변경</a></li>
+								<li><a href="#">테마변경</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hr">
+				<h2>Dropdown target position</h2>
+				<div class="d-inflex">
+					<div class="dropDown">
+						<button type="button" class="trigger not-button btn-large btn-primary" aria-expanded="true">left</button>
+						<ul class="target">
+							<li class="is-selected"><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="hr">
+				<h2>Dropdown target position</h2>
+				<div class="d-inflex">
+					<div class="dropDown">
+						<button type="button" class="trigger not-button btn-large btn-primary" aria-expanded="true">center</button>
+						<ul class="target position-center">
+							<li class="is-selected"><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="hr">
+				<h2>Dropdown target position</h2>
+				<div class="d-inflex">
+					<div class="dropDown">
+						<button type="button" class="trigger not-button btn-large btn-primary" aria-expanded="true">right</button>
+						<ul class="target position-right">
+							<li class="is-selected"><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+							<li><button type="button">전체</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="hr"></div>
+			<div class="hr"></div>
+			<div class="hr">
+				<h2>Dropdown Alarm</h2>
+				<div class="d-inflex">
+					<div class="dropDown has-title">
+						<button type="button" class="trigger not-button btn-large btn-primary" aria-expanded="true">알림</button>
+						<div class="target position-right">
+							<div class="target-title">
+								<strong>알림</strong>
+								<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-refresh"></i><span class="blind">새로고침</span></button>
+							</div>
+							<div class="alarm-list">
+								<ul>
+									<li>
+										<a href="#">
+											<div class="thumb"></div>
+											<div class="list">
+												<strong class="ellipsis" data-ellipsis="2">Q&A게시판에 문의글이 등록되었습니다. 문의글이 등록되었습니다. 문의글이 등록되었습니다. 문의글이 등록되었습니다. 문의글이 등록되었습니다. 문의글이 등록되었습니다. 문의글이 등록되었습니다.</strong>
+												<span>23.04.23(화) 17:00 ~ 24:00</span>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="thumb"></div>
+											<div class="list">
+												<strong class="ellipsis" data-ellipsis="2">Q&A게시판에 문의글이 등록되었습니다.</strong>
+												<span>23.04.23(화) 17:00 ~ 24:00</span>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="thumb"></div>
+											<div class="list">
+												<strong class="ellipsis" data-ellipsis="2">Q&A게시판에 문의글이 등록되었습니다.</strong>
+												<span>23.04.23(화) 17:00 ~ 24:00</span>
+											</div>
+										</a>
+									</li>
+								</ul>
+								<button type="button" class="more-view">더보기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<h1>Checkbox</h1>
+		<div class="column">
+			<div class="hr">
+				<h2>Default</h2>
+				<label class="inp"><input type="checkbox"><b>Checkbox</b></label>
+				<label class="inp"><input type="checkbox" checked><b>Checkbox</b></label>
+			</div>
+			<div class="hr">
+				<h2>Disabled</h2>
+				<label class="inp"><input type="checkbox" disabled><b>Checkbox</b></label>
+				<label class="inp"><input type="checkbox" disabled checked><b>Checkbox</b></label>
+			</div>
+			<div class="hr">
+				<h2>form-list</h2>
+				<div class="form form-list">
+					<label class="inp"><input type="checkbox"><b>Checkbox</b></label>
+					<label class="inp"><input type="checkbox"><b>Checkbox</b></label>
+					<label class="inp"><input type="checkbox"><b>Checkbox</b></label>
+				</div>
+			</div>
+		</div>
+
+		<h1>Radio</h1>
+		<div class="column">
+			<div class="hr">
+				<h2>Default</h2>
+				<label class="inp"><input type="radio" name="rad001"><b>radio</b></label>
+				<label class="inp"><input type="radio" name="rad001" checked><b>radio</b></label>
+			</div>
+			<div class="hr">
+				<h2>Disabled</h2>
+				<label class="inp"><input type="radio" name="rad002" disabled><b>radio</b></label>
+				<label class="inp"><input type="radio" name="rad002" disabled checked><b>radio</b></label>
+			</div>
+			<div class="hr">
+				<h2>form-list</h2>
+				<div class="form form-list">
+					<label class="inp"><input type="radio"><b>radio</b></label>
+					<label class="inp"><input type="radio"><b>radio</b></label>
+					<label class="inp"><input type="radio"><b>radio</b></label>
+				</div>
+			</div>
+		</div>
+
+		<h1>Search button</h1>
+		<div class="column">
+			<div class="hr">
+				<h2>Default</h2>
+				<div class="d-flex gap10">
+					<label class="inp-btn"><b>Checkbox</b><input type="checkbox" name="inp-btn001"></label>
+					<label class="inp-btn"><b>Checkbox</b><input type="checkbox" name="inp-btn001"></label>
+				</div>
+			</div>
+		</div>
+
+		<h1>Radio Switch</h1>
+		<div class="column">
+			<div class="hr">
+				<h2>Default</h2>
+				<label class="inp-switch"><b>테마변경</b><input type="checkbox" name="inp-switch001"></label>
+				<label class="inp-switch"><b>대직자설정</b><input type="checkbox" name="inp-switch001"></label>
+			</div>
+		</div>
+
+
+
+	</div>
+
+	<hr>
+	<!-- a link tippy -->
+	<script>
+		const tippyTooltip = document.querySelectorAll('.alarm-list strong.ellipsis')
+		tippyTooltip.forEach(function(el, index) {
+			const tippyToolTipContent = el.innerText;
+			tippy(el, {
+				content: tippyToolTipContent,
+				allowHTML: true,
+				theme: 'link',
+				placement: 'top-start',
+			});
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+	<title>신한투자증권프로젝트메타</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+
+</head>
+
+<body>
+	<tr>
+		<th scope="row">첨부파일</th>
+		<td colspan="3">
+			<div action="/upload" class="dropzone dropzone-attach-file"></div>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">첨부파일</th>
+		<td colspan="3">
+			<div action="/upload" class="dropzone dropzone-attach-video"></div>
+		</td>
+	</tr>
+
+	<script>
+		Dropzone.autoDiscover = false;
+		window.onload = function() {
+
+
+			// file upload
+			var dropzoneFileOptions = {
+				dictDefaultMessage: "XLSX, PPTX, DOCX, PDF, TXT, PNG, JPEG, JPG 확장자만 가능합니다. <br> 업로드하려면 여기에 파일을 드롭하거나 여기를 클릭하세요.",
+				dictFallbackMessage: "드래그 앤 드롭 파일 업로드를 지원하지 않습니다.",
+				dictFallbackText: "예전처럼 파일을 업로드하려면 아래 대체 양식을 사용하세요.",
+				dictFileTooBig: "파일이 너무 큽니다({{filesize}}MiB). 최대 파일 크기: {{maxFilesize}}MiB.",
+				dictInvalidFileType: "이 유형의 파일은 업로드할 수 없습니다.",
+				dictResponseError: "서버가 {{statusCode}} 코드로 응답했습니다.",
+				dictCancelUpload: "업로드 취소",
+				dictCancelUploadConfirmation: "정말 이 업로드를 취소하시겠습니까?",
+				dictRemoveFile: "파일 제거",
+				dictMaxFilesExceeded: "더 이상 파일을 업로드할 수 없습니다.",
+				paramName: "파일",
+				maxFilesize: 2, // MB
+				addRemoveLinks: true,
+				createImageThumbnails: false,
+				acceptedFiles: "image/*,.pdf,.doc,.docx,.xls,.xlsx,.csv,.tsv,.ppt,.pptx,.txt",
+				init: function() {
+					this.on("success", function(file) {
+						console.log("success > " + file.name);
+					});
+				}
+			};
+			var fileUploader = document.querySelector('.dropzone-attach-file');
+			var newDropzone = new Dropzone(fileUploader, dropzoneFileOptions);
+
+
+			// file upload
+			var dropzoneVideoOptions = {
+				dictDefaultMessage: "MP4, AVI 확장자만 가능합니다. 최대 100MB이내로 1개만 업로드 가능합니다. <br> 업로드하려면 여기에 파일을 드롭하거나 여기를 클릭하세요.",
+				dictFallbackMessage: "드래그 앤 드롭 파일 업로드를 지원하지 않습니다.",
+				dictFallbackText: "예전처럼 파일을 업로드하려면 아래 대체 양식을 사용하세요.",
+				dictFileTooBig: "파일이 너무 큽니다({{filesize}}MiB). 최대 파일 크기: {{maxFilesize}}MiB.",
+				dictInvalidFileType: "이 유형의 파일은 업로드할 수 없습니다.",
+				dictResponseError: "서버가 {{statusCode}} 코드로 응답했습니다.",
+				dictCancelUpload: "업로드 취소",
+				dictCancelUploadConfirmation: "정말 이 업로드를 취소하시겠습니까?",
+				dictRemoveFile: "파일 제거",
+				dictMaxFilesExceeded: "더 이상 파일을 업로드할 수 없습니다.",
+				paramName: "파일",
+				maxFilesize: 2, // MB
+				addRemoveLinks: true,
+				createImageThumbnails: false,
+				acceptedFiles: ".mp4,.avi",
+				init: function() {
+					this.on("success", function(file) {
+						console.log("success > " + file.name);
+					});
+				}
+			};
+			var videoUploader = document.querySelector('.dropzone-attach-video');
+			var newDropzone = new Dropzone(videoUploader, dropzoneVideoOptions);
+
+			// console.log("Loaded");
+		};
+	</script>
+</body>
+
+</html>

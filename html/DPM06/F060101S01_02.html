@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한투자증권프로젝트메타</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+
+</head>
+
+<body>
+
+	<!-- skipnav -->
+	<div id="skip_navigation">
+		<a href="#content">본문 바로가기</a>
+		<a href="#navigation">주메뉴 바로가기</a>
+	</div>
+	<!-- //skipnav -->
+
+	<!-- wrap -->
+	<div id="wrap">
+
+		<nav id="navigation" class="navigation is-collapse">
+			<div class="navigation-inner">
+				<div class="nav-title">
+					<h1 class="logo"><a href="/html" title="신한투자증권"></a></h1>
+					<button type="button" class="navTrigger" title="Navigation 펼치기/접기" aria-expanded="false"></button>
+				</div>
+				<div class="nav-content"></div>
+			</div>
+		</nav>
+
+
+		<main>
+			<header>
+				<div>
+					<label class="inp-switch gap10 d-inflex">
+						<b>테마변경</b>
+						<span class="theme-switch">
+							<input type="checkbox" id="themeSelector">
+							<span class="theme-input-white"><span class="blind">화이트모드</span></span>
+							<span class="theme-input-dark"><span class="blind">다크모드</span></span>
+						</span>
+					</label>
+				</div>
+			</header>
+
+			<div class="main-inner">
+				<section id="content">
+
+					<!-- breadcrumbs -->
+					<nav aria-label="Breadcrumb" class="breadcrumb">
+						<ul>
+							<li><a href="#">BI대시보드</a></li>
+							<li><span aria-current="page">대시보드 조회</span></li>
+						</ul>
+					</nav>
+					<!-- //breadcrumbs -->
+
+					<!-- title -->
+					<div class="section-title">
+						<h1 class="title">대시보드 조회</h1>
+						<div class="toggleCont">
+							<button type="button" class="btn-ico ico-favorite toggleTrigger" title="즐겨찾기"><span class="blind">활성화</span></button>
+						</div>
+					</div>
+					<!-- //title -->
+
+
+					<!-- content start -->
+					<div class="main-content">
+
+						<!-- search-filter -->
+						<div class="search-filter">
+							<div class="row">
+								<div class="col">
+									<div class="title">BI종류</div>
+									<div class="cont">
+										<div class="form form-list">
+											<label class="inp"><input type="radio"><b>전체</b></label>
+											<label class="inp"><input type="radio"><b>정형</b></label>
+											<label class="inp"><input type="radio"><b>비정형</b></label>
+										</div>
+									</div>
+									<div class="title">구분</div>
+									<div class="cont">
+										<div class="form form-list">
+											<label class="inp"><input type="checkbox"><b>전체</b></label>
+											<label class="inp"><input type="checkbox"><b>카드형</b></label>
+											<label class="inp"><input type="checkbox"><b>매트릭형</b></label>
+											<label class="inp"><input type="checkbox"><b>보고서형</b></label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="title">분류체계</div>
+									<div class="cont">
+										<div class="form">
+											<select title="분류체계1">
+												<option value="분류체계1">분류체계1</option>
+											</select>
+											<select title="분류체계2">
+												<option value="분류체계2">분류체계2</option>
+											</select>
+											<select title="분류체계3">
+												<option value="분류체계3">분류체계3</option>
+											</select>
+										</div>
+									</div>
+									<div class="title">담당자정보</div>
+									<div class="cont">
+										<div class="form">
+											<select title="담당자정보">
+												<option value="전체">전체</option>
+											</select>
+											<input type="search" title="담당자정보">
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="title">기간검색</div>
+									<div class="cont">
+										<div class="form">
+											<select title="기간검색">
+												<option value="전체">전체</option>
+											</select>
+											<input type="date" title="시작일">
+											<div class="bul">~</div>
+											<input type="date" title="종료일">
+										</div>
+									</div>
+									<div class="title">BI대시보드</div>
+									<div class="cont">
+										<input type="search" title="BI대시보드">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="title"></div>
+									<div class="cont">
+										<div class="btn-wrap">
+											<div class="right">
+												<button type="reset" class="btn-large btn-secondary btn-inner-ico"><i class="i-refresh"></i>초기화</button>
+												<button type="button" class="btn-large btn-primary">검색</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //search-filter -->
+
+						<!-- table-caption -->
+						<div class="table-caption">
+							<div class="length">전체 <span class="fc-blue1">30</span>건 (전체 3페이지)</div>
+							<div class="btn-wrap">
+								<div class="right">
+									<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-grid"></i><span class="blind">카드 형식</span></button>
+									<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-grid"><i class="i-grid"></i><span class="blind">카드 형식 활성화됨</span></button>
+									<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-column"></i><span class="blind">리스트 형식</span></button>
+									<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-column"><i class="i-column"></i><span class="blind">리스트 형식 활성화됨</span></button>
+									<a href="#" class="btn-large btn-secondary btn-inner-ico"><i class="i-download"></i>엑셀다운로드</a>
+									<select title="갯수 보기">
+										<option value="전체">전체</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- //table-caption -->
+
+						<!-- grid-list -->
+						<div class="grid-list">
+							<ul>
+								<li>
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/@temp/table_bg.png">
+											<img src="../../assets/@temp/table_bg.png" alt="">
+										</picture>
+										<button type="button" class="btn-xsmall btn-inner-ico btn-ratio"><i class="i-heart"></i><span class="blind">좋아요</span></button>
+										<!-- <button type="button" class="btn-xsmall btn-inner-ico btn-ratio is-heart"><i class="i-heart"></i><span class="blind">좋아요 활성화됨</span></button> -->
+									</div>
+									<a href="#">
+										<dl>
+											<dt>리테일고객현황</dt>
+											<dd>정보시스템부</dd>
+											<dd>최신한 선임</dd>
+											<dd>20241874</dd>
+											<dd class="date">최종수정일 : 2024-05-31</dd>
+										</dl>
+									</a>
+									<div class="util">
+										<div class="info">
+											<ul>
+												<li>
+													<div class="info-ico likes"><span class="blind">좋아요 수</span>999+</div>
+												</li>
+												<li>
+													<div class="info-ico comments"><span class="blind">댓글 수</span>999+</div>
+												</li>
+												<li>
+													<div class="info-ico views"><span class="blind">조회 수</span>999+</div>
+												</li>
+											</ul>
+										</div>
+										<div class="btn-wrap">
+											<div class="center">
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
+												<!-- <button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-favorite"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button> -->
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-auth"></i><span class="blind">권한</span></button>
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-share"></i><span class="blind">공유</span></button>
+											</div>
+										</div>
+									</div>
+
+								</li>
+								<li>
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/@temp/table_bg.png">
+											<img src="../../assets/@temp/table_bg.png" alt="">
+										</picture>
+										<!-- <button type="button" class="btn-xsmall btn-inner-ico btn-ratio"><i class="i-heart"></i><span class="blind">좋아요</span></button> -->
+										<button type="button" class="btn-xsmall btn-inner-ico btn-ratio is-heart"><i class="i-heart"></i><span class="blind">좋아요 활성화됨</span></button>
+									</div>
+									<a href="#">
+										<dl>
+											<dt>리테일고객현황</dt>
+											<dd>정보시스템부</dd>
+											<dd>최신한 선임</dd>
+											<dd>20241874</dd>
+											<dd class="date">최종수정일 : 2024-05-31</dd>
+										</dl>
+									</a>
+									<div class="util">
+										<div class="info">
+											<ul>
+												<li>
+													<div class="info-ico likes"><span class="blind">좋아요 수</span>999+</div>
+												</li>
+												<li>
+													<div class="info-ico comments"><span class="blind">댓글 수</span>999+</div>
+												</li>
+												<li>
+													<div class="info-ico views"><span class="blind">조회 수</span>999+</div>
+												</li>
+											</ul>
+										</div>
+										<div class="btn-wrap">
+											<div class="center">
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
+												<!-- <button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-favorite"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button> -->
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-auth"></i><span class="blind">권한</span></button>
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-share"></i><span class="blind">공유</span></button>
+											</div>
+										</div>
+									</div>
+
+								</li>
+								<li>
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/@temp/table_bg.png">
+											<img src="../../assets/@temp/table_bg.png" alt="">
+										</picture>
+										<button type="button" class="btn-xsmall btn-inner-ico btn-ratio"><i class="i-heart"></i><span class="blind">좋아요</span></button>
+										<!-- <button type="button" class="btn-xsmall btn-inner-ico btn-ratio is-heart"><i class="i-heart"></i><span class="blind">좋아요 활성화됨</span></button> -->
+									</div>
+									<a href="#">
+										<dl>
+											<dt>리테일고객현황</dt>
+											<dd>정보시스템부</dd>
+											<dd>최신한 선임</dd>
+											<dd>20241874</dd>
+											<dd class="date">최종수정일 : 2024-05-31</dd>
+										</dl>
+									</a>
+									<div class="util">
+										<div class="info">
+											<ul>
+												<li>
+													<div class="info-ico likes"><span class="blind">좋아요 수</span>999+</div>
+												</li>
+												<li>
+													<div class="info-ico comments"><span class="blind">댓글 수</span>999+</div>
+												</li>
+												<li>
+													<div class="info-ico views"><span class="blind">조회 수</span>999+</div>
+												</li>
+											</ul>
+										</div>
+										<div class="btn-wrap">
+											<div class="center">
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
+												<!-- <button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-favorite"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button> -->
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-auth"></i><span class="blind">권한</span></button>
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-share"></i><span class="blind">공유</span></button>
+											</div>
+										</div>
+									</div>
+
+								</li>
+								<li>
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/@temp/table_bg.png">
+											<img src="../../assets/@temp/table_bg.png" alt="">
+										</picture>
+										<button type="button" class="btn-xsmall btn-inner-ico btn-ratio"><i class="i-heart"></i><span class="blind">좋아요</span></button>
+										<!-- <button type="button" class="btn-xsmall btn-inner-ico btn-ratio is-heart"><i class="i-heart"></i><span class="blind">좋아요 활성화됨</span></button> -->
+									</div>
+									<a href="#">
+										<dl>
+											<dt>리테일고객현황</dt>
+											<dd>정보시스템부</dd>
+											<dd>최신한 선임</dd>
+											<dd>20241874</dd>
+											<dd class="date">최종수정일 : 2024-05-31</dd>
+										</dl>
+									</a>
+									<div class="util">
+										<div class="info">
+											<ul>
+												<li>
+													<div class="info-ico likes"><span class="blind">좋아요 수</span>999+</div>
+												</li>
+												<li>
+													<div class="info-ico comments"><span class="blind">댓글 수</span>999+</div>
+												</li>
+												<li>
+													<div class="info-ico views"><span class="blind">조회 수</span>999+</div>
+												</li>
+											</ul>
+										</div>
+										<div class="btn-wrap">
+											<div class="center">
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
+												<!-- <button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-favorite"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button> -->
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-auth"></i><span class="blind">권한</span></button>
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-share"></i><span class="blind">공유</span></button>
+											</div>
+										</div>
+									</div>
+
+								</li>
+								<li>
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/@temp/table_bg.png">
+											<img src="../../assets/@temp/table_bg.png" alt="">
+										</picture>
+										<button type="button" class="btn-xsmall btn-inner-ico btn-ratio"><i class="i-heart"></i><span class="blind">좋아요</span></button>
+										<!-- <button type="button" class="btn-xsmall btn-inner-ico btn-ratio is-heart"><i class="i-heart"></i><span class="blind">좋아요 활성화됨</span></button> -->
+									</div>
+									<a href="#">
+										<dl>
+											<dt>리테일고객현황</dt>
+											<dd>정보시스템부</dd>
+											<dd>최신한 선임</dd>
+											<dd>20241874</dd>
+											<dd class="date">최종수정일 : 2024-05-31</dd>
+										</dl>
+									</a>
+									<div class="util">
+										<div class="info">
+											<ul>
+												<li>
+													<div class="info-ico likes"><span class="blind">좋아요 수</span>999+</div>
+												</li>
+												<li>
+													<div class="info-ico comments"><span class="blind">댓글 수</span>999+</div>
+												</li>
+												<li>
+													<div class="info-ico views"><span class="blind">조회 수</span>999+</div>
+												</li>
+											</ul>
+										</div>
+										<div class="btn-wrap">
+											<div class="center">
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
+												<!-- <button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-favorite"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button> -->
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-auth"></i><span class="blind">권한</span></button>
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-share"></i><span class="blind">공유</span></button>
+											</div>
+										</div>
+									</div>
+
+								</li>
+								<li>
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/@temp/table_bg.png">
+											<img src="../../assets/@temp/table_bg.png" alt="">
+										</picture>
+										<button type="button" class="btn-xsmall btn-inner-ico btn-ratio"><i class="i-heart"></i><span class="blind">좋아요</span></button>
+										<!-- <button type="button" class="btn-xsmall btn-inner-ico btn-ratio is-heart"><i class="i-heart"></i><span class="blind">좋아요 활성화됨</span></button> -->
+									</div>
+									<a href="#">
+										<dl>
+											<dt>리테일고객현황</dt>
+											<dd>정보시스템부</dd>
+											<dd>최신한 선임</dd>
+											<dd>20241874</dd>
+											<dd class="date">최종수정일 : 2024-05-31</dd>
+										</dl>
+									</a>
+									<div class="util">
+										<div class="info">
+											<ul>
+												<li>
+													<div class="info-ico likes"><span class="blind">좋아요 수</span>999+</div>
+												</li>
+												<li>
+													<div class="info-ico comments"><span class="blind">댓글 수</span>999+</div>
+												</li>
+												<li>
+													<div class="info-ico views"><span class="blind">조회 수</span>999+</div>
+												</li>
+											</ul>
+										</div>
+										<div class="btn-wrap">
+											<div class="center">
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
+												<!-- <button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-favorite"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button> -->
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-auth"></i><span class="blind">권한</span></button>
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-share"></i><span class="blind">공유</span></button>
+											</div>
+										</div>
+									</div>
+
+								</li>
+							</ul>
+						</div>
+						<!-- grid-list -->
+
+
+						<!-- pagination -->
+						<div class="pagination" aria-label="pagination">
+							<a href="#" class="first" title="처음 페이지"></a>
+							<a href="#" class="prev" title="이전 페이지"></a>
+							<a href="#" class="active" title="현재 페이지">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#" class="next" title="다음 페이지"></a>
+							<a href="#" class="last" title="마지막 페이지"></a>
+						</div>
+						<!-- //pagination -->
+
+
+					</div>
+					<!-- // content end -->
+
+
+				</section>
+			</div>
+
+		</main>
+
+	</div>
+	<!-- //wrap -->
+
+
+
+	<!-- a link tippy -->
+	<script>
+		const tippyTooltip = document.querySelectorAll('.link.ellipsis')
+		tippyTooltip.forEach(function(el, index) {
+			const tippyToolTipContent = el.innerText;
+			tippy(el, {
+				content: tippyToolTipContent,
+				allowHTML: true,
+				theme: 'link',
+				placement: 'top-start',
+			});
+		})
+	</script>
+</body>
+
+</html>

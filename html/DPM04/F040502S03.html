@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한투자증권프로젝트메타</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+
+</head>
+
+<body>
+
+	<!-- wrap -->
+	<div id="wrap">
+
+		<div class="d-flex j-end">
+			<label class="inp-switch gap10 d-inflex">
+				<b>테마변경</b>
+				<span class="theme-switch">
+					<input type="checkbox" id="themeSelector">
+					<span class="theme-input-white"><span class="blind">화이트모드</span></span>
+					<span class="theme-input-dark"><span class="blind">다크모드</span></span>
+				</span>
+			</label>
+		</div>
+
+		<main class="window-popup">
+
+			<div class="main-inner">
+				<section id="content">
+
+					<!-- title -->
+					<div class="section-title">
+						<h1 class="title">ML모델 신청정보</h1>
+					</div>
+					<!-- //title -->
+
+					<!-- content start -->
+					<div class="main-content">
+
+						<!-- table-row -->
+						<div class="table-row">
+							<table>
+								<caption>ML모델 신청정보</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">ML모델 ID</th>
+										<td colspan="3">
+											<input type="text" title="ML모델 ID">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">분석프로젝트명 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="3">
+											<div class="form">
+												<input type="search" title="분석프로젝트명">
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico"><i class="i-search"></i>검색</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">모델명 <sup class="apos" title="필수입력">*</sup></th>
+										<td>
+											<input type="text" title="모델명">
+										</td>
+										<th scope="row">ML모델유형</th>
+										<td>
+											<select title="ML모델유형">
+												<option value="배치">배치</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">관리부서 <sup class="apos" title="필수입력">*</sup></th>
+										<td>
+											<div class="form">
+												<input type="search" title="관리부서" maxlength="0" value="asdf">
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico"><i class="i-search"></i>검색</button>
+											</div>
+										</td>
+										<th scope="row">관리담당자</th>
+										<td>
+											<input type="text" title="관리담당자">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">모델설명</th>
+										<td colspan="3">
+											<input type="text" title="모델설명">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">최종배포일시</th>
+										<td>2024-04-28 17:45:30</td>
+										<th scope="row">배포버전 <sup class="apos" title="필수입력">*</sup></th>
+										<td>
+											<div class="d-flex j-between a-center">
+												<div>1.2</div>
+												<button type="button" class="btn-xsmall btn-secondary">배포이력보기</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">모델수행주기 <sup class="apos" title="필수입력">*</sup></th>
+										<td>
+											<div class="form a-center">
+												<select title="모델수행주기">
+													<option value="배치">배치</option>
+												</select>
+												<div>매월 5일</div>
+											</div>
+										</td>
+										<th scope="row">첨부파일</th>
+										<td>
+											<ul class="attach-column-list">
+												<li><a href="#"><span>취약점진단.zip</span></a></li>
+												<li>
+													<a href="#"><span>취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip</span></a>
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">배포사유 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="3">세그먼트 추가</td>
+									</tr>
+									<tr>
+
+										<th scope="row">파일경로 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="3">
+											<!-- table-col -->
+											<div class="table-col">
+												<table>
+													<caption>파일경로</caption>
+													<colgroup>
+														<col style="width:16%;">
+														<col>
+														<col style="width:17%;">
+														<col style="width:18%;">
+														<col style="width:20%;">
+														<col style="width:7%;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col" class="ac">구분</th>
+															<th scope="col" class="ac">파일경로</th>
+															<th scope="col" class="ac">파일명</th>
+															<th scope="col" class="ac">변수</th>
+															<th scope="col" class="ac">설명</th>
+															<th scope="col" class="ac"><button type="button" class="btn-xsmall btn-gray btn-inner-ico btn-ratio"><i class="i-plus"></i><span class="blind">추가</span></button></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="ac">
+																<select title="구분">
+																	<option value="INPUT">INPUT</option>
+																</select>
+															</td>
+															<td>dlh/p00001/source</td>
+															<td>1233.py</td>
+															<td>key1</td>
+															<td>메인소스</td>
+															<td class="ac">
+																<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-minus"></i><span class="blind">삭제</span></button>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!-- //table-col -->
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">INPUT</th>
+										<td colspan="3">
+											<!-- table-col -->
+											<div class="table-col">
+												<table>
+													<caption>INPUT</caption>
+													<colgroup>
+														<col style="width:15%;">
+														<col style="width:25%;">
+														<col>
+														<col style="width:7%;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col" class="ac">주제영역</th>
+															<th scope="col" class="ac">스키마</th>
+															<th scope="col" class="ac">테이블</th>
+															<th scope="col" class="ac"><button type="button" class="btn-xsmall btn-gray btn-inner-ico btn-ratio"><i class="i-plus"></i><span class="blind">추가</span></button></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="ac">dlh</td>
+															<td class="ac">ods</td>
+															<td class="ac">
+																<div class="form">
+																	<input type="search" title="테이블">
+																	<button type="button" class="btn-xsmall btn-secondary btn-inner-ico"><i class="i-search"></i>검색</button>
+																</div>
+															</td>
+															<td class="ac">
+																<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-minus"></i><span class="blind">삭제</span></button>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!-- //table-col -->
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">OUTPUT</th>
+										<td colspan="3">
+											<!-- table-col -->
+											<div class="table-col">
+												<table>
+													<caption>OUTPUT</caption>
+													<colgroup>
+														<col style="width:15%;">
+														<col style="width:25%;">
+														<col>
+														<col style="width:7%;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col" class="ac">주제영역</th>
+															<th scope="col" class="ac">스키마</th>
+															<th scope="col" class="ac">테이블</th>
+															<th scope="col" class="ac"><button type="button" class="btn-xsmall btn-gray btn-inner-ico btn-ratio"><i class="i-plus"></i><span class="blind">추가</span></button></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="ac">dlh</td>
+															<td class="ac">ods</td>
+															<td class="ac">
+																<div class="form">
+																	<input type="search" title="테이블">
+																	<button type="button" class="btn-xsmall btn-secondary btn-inner-ico"><i class="i-search"></i>검색</button>
+																</div>
+															</td>
+															<td class="ac">
+																<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-minus"></i><span class="blind">삭제</span></button>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!-- //table-col -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+						<!-- btn-wrap -->
+						<div class="btn-wrap">
+							<div class="center">
+								<a href="#" class="btn-large btn-tertiary">수정신청</a>
+								<a href="#" class="btn-large btn-primary">삭제신청</a>
+							</div>
+						</div>
+						<!-- //btn-wrap-->
+
+
+					</div>
+					<!-- // content end -->
+
+
+				</section>
+			</div>
+
+		</main>
+
+	</div>
+	<!-- //wrap -->
+
+</body>
+
+</html>

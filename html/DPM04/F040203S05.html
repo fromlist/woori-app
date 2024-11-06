@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한투자증권프로젝트메타</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+
+</head>
+
+<body>
+
+	<!-- wrap -->
+	<div id="wrap">
+
+		<div class="d-flex j-end">
+			<label class="inp-switch gap10 d-inflex">
+				<b>테마변경</b>
+				<span class="theme-switch">
+					<input type="checkbox" id="themeSelector">
+					<span class="theme-input-white"><span class="blind">화이트모드</span></span>
+					<span class="theme-input-dark"><span class="blind">다크모드</span></span>
+				</span>
+			</label>
+		</div>
+
+		<main class="window-popup">
+
+			<div class="main-inner">
+				<section id="content">
+
+					<!-- title -->
+					<div class="section-title">
+						<h1 class="title">6500정형보고서 신청하기</h1>
+					</div>
+					<!-- //title -->
+
+					<!-- content start -->
+					<div class="main-content">
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">신청자 정보</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-row -->
+						<div class="table-row">
+							<table>
+								<caption>신청자 정보</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">신청자명(사번) <sup class="apos" title="필수입력">*</sup></th>
+										<td>김신한 (20240411)</td>
+										<th scope="row">신청자부서 <sup class="apos" title="필수입력">*</sup></th>
+										<td>데이터센터</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">상세 정보</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-row -->
+						<div class="table-row">
+							<table>
+								<caption>상세 정보</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+									<col style="width:135px;">
+									<col>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">신청제목 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="5"><input type="text" title="신청제목"></td>
+									</tr>
+									<tr>
+										<th scope="row">6500정형보고서 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="5">
+											<div class="form">
+												<input type="text" title="신청제목">
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico"><i class="i-search"></i>찾기</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">담당자</th>
+										<td colspan="2">최신한(사번), 김신한(사번)</td>
+										<th scope="row">담당부서</th>
+										<td colspan="2">디지털사업</td>
+									</tr>
+									<tr>
+										<th scope="row">반복</th>
+										<td>
+											<label class="inp">
+												<input type="checkbox">
+												<b>반복 추출</b>
+											</label>
+										</td>
+										<th scope="row">반복기준</th>
+										<td>
+											<div class="form">
+												<select title="반복기준">
+													<option value="매주">매주</option>
+												</select>
+												<select title="반복기준">
+													<option value="월요일">월요일</option>
+												</select>
+											</div>
+										</td>
+										<th scope="row">반복종료일</th>
+										<td>
+											<input type="date" title="반복종료일">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">상세추출기준</th>
+										<td colspan="5">입력항목: 시작일자/종료일자 <br> 예시) 20240712</td>
+									</tr>
+									<tr>
+										<th scope="row">입력값 설정 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="5">
+											<!-- table-col -->
+											<div class="table-col inner-vertical-scroll">
+												<table>
+													<caption>입력값 설정</caption>
+													<colgroup>
+														<col style="width:5%;">
+														<col>
+														<col style="width:66%">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col" class="ac">No</th>
+															<th scope="col" class="ac">항목명</th>
+															<th scope="col" class="ac">입력값</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="ac">1</td>
+															<td class="ac">시작일자</td>
+															<td class="ac"><input type="text" title="시작일자"></td>
+														</tr>
+														<tr>
+															<td class="ac">2</td>
+															<td class="ac">종료일자</td>
+															<td class="ac"><input type="text" title="종료일자"></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!-- //table-col -->
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">출력값 설정 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="5">
+											<!-- table-col -->
+											<div class="table-col inner-vertical-scroll">
+												<table>
+													<caption>출력값 설정</caption>
+													<colgroup>
+														<col style="width:5%;">
+														<col>
+														<col style="width:10%">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col" class="ac">No</th>
+															<th scope="col" class="ac">항목명</th>
+															<th scope="col" class="ac">복호화신청</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="ac">1</td>
+															<td class="ac">가입자 ID</td>
+															<td class="ac">
+																<label class="inp">
+																	<input type="checkbox">
+																</label>
+															</td>
+														</tr>
+														<tr>
+															<td class="ac">2</td>
+															<td class="ac">가입자명</td>
+															<td class="ac">
+																<label class="inp">
+																	<input type="checkbox">
+																</label>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<!-- //table-col -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">기타 정보</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-row -->
+						<div class="table-row">
+							<table>
+								<caption>기타 정보</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">신청사유(요청내용)</th>
+										<td><textarea title="신청사유(요청내용)"></textarea></td>
+									</tr>
+
+									<tr>
+										<th scope="row">첨부파일(요청내용)</th>
+										<td>
+											<div action="/upload" class="dropzone dropzone-attach-file"></div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">결제선 정보</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-col -->
+						<div class="table-col">
+							<table>
+								<caption>결제선 정보</caption>
+								<colgroup>
+									<col style="width:5%;">
+									<col style="width:13%;">
+									<col style="width:13%;">
+									<col>
+									<col style="width:30%;">
+									<col style="width:13%;">
+									<col style="width:13%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="ac">No</th>
+										<th scope="col" class="ac">결재타입</th>
+										<th scope="col" class="ac">부서</th>
+										<th scope="col" class="ac">직위</th>
+										<th scope="col" class="ac">이름</th>
+										<th scope="col" class="ac">결재상태</th>
+										<th scope="col" class="ac">결재일시</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="ac">1</td>
+										<td class="ac">승인</td>
+										<td class="ac"></td>
+										<td class="ac"></td>
+										<td class="ac">
+											<div class="form">
+												<input type="search" title="이름검색">
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico"><i class="i-search"></i>검색</button>
+											</div>
+										</td>
+										<td class="ac"></td>
+										<td class="ac"></td>
+									</tr>
+									<tr>
+										<td class="ac">2</td>
+										<td class="ac" rowspan="3">처리접수</td>
+										<td class="ac">IT부서</td>
+										<td class="ac">선임</td>
+										<td class="ac">최신한</td>
+										<td class="ac">미결</td>
+										<td class="ac">-</td>
+									</tr>
+									<tr>
+										<td class="ac">3</td>
+										<td class="ac">IT부서</td>
+										<td class="ac">선임</td>
+										<td class="ac">최신한</td>
+										<td class="ac">미결</td>
+										<td class="ac">-</td>
+									</tr>
+									<tr>
+										<td class="ac">4</td>
+										<td class="ac">IT부서</td>
+										<td class="ac">선임</td>
+										<td class="ac">최신한</td>
+										<td class="ac">미결</td>
+										<td class="ac">-</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-col -->
+
+						<!-- btn-wrap -->
+						<div class="btn-wrap">
+							<div class="center">
+								<a href="#" class="btn-large btn-secondary">취소</a>
+								<a href="#" class="btn-large btn-tertiary">임시저장</a>
+								<a href="#" class="btn-large btn-primary">신청하기</a>
+							</div>
+						</div>
+						<!-- //btn-wrap -->
+
+
+					</div>
+					<!-- // content end -->
+
+
+				</section>
+			</div>
+
+		</main>
+
+	</div>
+	<!-- //wrap -->
+
+	<!-- dropzone -->
+	<script>
+		Dropzone.autoDiscover = false;
+		window.onload = function() {
+
+
+			// file upload
+			var dropzoneFileOptions = {
+				dictDefaultMessage: "XLSX, PPTX, DOCX, PDF, TXT, PNG, JPEG, JPG 확장자만 가능합니다. <br> 업로드하려면 여기에 파일을 드롭하거나 여기를 클릭하세요.",
+				dictFallbackMessage: "드래그 앤 드롭 파일 업로드를 지원하지 않습니다.",
+				dictFallbackText: "예전처럼 파일을 업로드하려면 아래 대체 양식을 사용하세요.",
+				dictFileTooBig: "파일이 너무 큽니다({{filesize}}MiB). 최대 파일 크기: {{maxFilesize}}MiB.",
+				dictInvalidFileType: "이 유형의 파일은 업로드할 수 없습니다.",
+				dictResponseError: "서버가 {{statusCode}} 코드로 응답했습니다.",
+				dictCancelUpload: "업로드 취소",
+				dictCancelUploadConfirmation: "정말 이 업로드를 취소하시겠습니까?",
+				dictRemoveFile: "파일 제거",
+				dictMaxFilesExceeded: "더 이상 파일을 업로드할 수 없습니다.",
+				paramName: "파일",
+				maxFilesize: 2, // MB
+				addRemoveLinks: true,
+				createImageThumbnails: false,
+				acceptedFiles: "image/*,.pdf,.doc,.docx,.xls,.xlsx,.csv,.tsv,.ppt,.pptx,.txt",
+				init: function() {
+					this.on("success", function(file) {
+						console.log("success > " + file.name);
+					});
+				}
+			};
+			var fileUploader = document.querySelector('.dropzone-attach-file');
+			var newDropzone = new Dropzone(fileUploader, dropzoneFileOptions);
+		};
+	</script>
+
+</body>
+
+</html>

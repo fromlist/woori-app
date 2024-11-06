@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/* ExtraLight */
+@font-face {
+    font-family:"Pretendard";
+    font-style:normal;
+    font-weight:100;
+	font-display:swap;
+    src:url(../fonts/Pretendard-ExtraLight.otf) format("opentype")
+}
+/* Thin */
+@font-face {
+    font-family:"Pretendard";
+    font-style:normal;
+    font-weight:200;
+	font-display:swap;
+    src:url(../fonts/Pretendard-Thin.otf) format("opentype")
+}
+/* Light */
+@font-face {
+    font-family:"Pretendard";
+    font-style:normal;
+    font-weight:300;
+	font-display:swap;
+    src:url(../fonts/Pretendard-Light.otf) format("opentype")
+}
+/* Regular */
+@font-face {
+    font-family:"Pretendard";
+    font-style:normal;
+    font-weight:400;
+	font-display:swap;
+    src:url(../fonts/Pretendard-Regular.otf) format("opentype")
+}
+/* Medium */
+@font-face {
+    font-family:"Pretendard";
+    font-style:normal;
+    font-weight:500;
+	font-display:swap;
+    src:url(../fonts/Pretendard-Medium.otf) format("opentype")
+}
+/* SemiBold */
+@font-face {
+    font-family:"Pretendard";
+    font-style:normal;
+    font-weight:600;
+	font-display:swap;
+    src:url(../fonts/Pretendard-SemiBold.otf) format("opentype")
+}
+/* Bold */
+@font-face {
+    font-family:"Pretendard";
+    font-style:normal;
+    font-weight:700;
+	font-display:swap;
+    src:url(../fonts/Pretendard-Bold.otf) format("opentype")
+}
+/* ExtraBold */
+@font-face {
+    font-family:"Pretendard";
+    font-style:normal;
+    font-weight:900;
+	font-display:swap;
+    src:url(../fonts/Pretendard-ExtraBold.otf) format("opentype")
+}
+/* Black */
+@font-face {
+    font-family:"Pretendard";
+    font-style:normal;
+    font-weight:900;
+	font-display:swap;
+    src:url(../fonts/Pretendard-Black.otf) format("opentype")
+}

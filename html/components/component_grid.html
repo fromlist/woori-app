@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한투자증권프로젝트메타</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
+	<link rel="stylesheet" href="../../assets/css/ui-guide.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+</head>
+
+<body>
+	<div>
+		<label class="inp-switch gap10 d-inflex">
+			<b>테마변경</b>
+			<span class="theme-switch">
+				<input type="checkbox" id="themeSelector">
+				<span class="theme-input-white"><span class="blind">화이트모드</span></span>
+				<span class="theme-input-dark"><span class="blind">다크모드</span></span>
+			</span>
+		</label>
+	</div>
+	<div>
+		<h1>Grid</h1>
+		<div class="column column-no-repeat">
+			<div class="hr">
+				<!-- grid-list -->
+				<div class="grid-list">
+					<ul>
+						<li>
+							<div class="thumb">
+								<picture>
+									<source srcset="../../assets/@temp/table_bg.png">
+									<img src="../../assets/@temp/table_bg.png" alt="">
+								</picture>
+								<button type="button" class="btn-xsmall btn-inner-ico btn-ratio"><i class="i-heart"></i><span class="blind">좋아요</span></button>
+								<!-- <button type="button" class="btn-xsmall btn-inner-ico btn-ratio is-heart"><i class="i-heart"></i><span class="blind">좋아요 활성화됨</span></button> -->
+							</div>
+							<a href="#">
+								<dl>
+									<dt>리테일고객현황</dt>
+									<dd>정보시스템부</dd>
+									<dd>최신한 선임</dd>
+									<dd>20241874</dd>
+									<dd class="date">최종수정일 : 2024-05-31</dd>
+								</dl>
+							</a>
+							<div class="util">
+								<div class="info">
+									<ul>
+										<li>
+											<div class="info-ico likes"><span class="blind">좋아요 수</span>999+</div>
+										</li>
+										<li>
+											<div class="info-ico comments"><span class="blind">댓글 수</span>999+</div>
+										</li>
+										<li>
+											<div class="info-ico views"><span class="blind">조회 수</span>999+</div>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-wrap">
+									<div class="center">
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
+										<!-- <button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-favorite"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button> -->
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-auth"></i><span class="blind">권한</span></button>
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-share"></i><span class="blind">공유</span></button>
+									</div>
+								</div>
+							</div>
+
+						</li>
+						<li>
+							<div class="thumb">
+								<picture>
+									<source srcset="../../assets/@temp/table_bg.png">
+									<img src="../../assets/@temp/table_bg.png" alt="">
+								</picture>
+								<button type="button" class="btn-xsmall btn-inner-ico btn-ratio"><i class="i-heart"></i><span class="blind">좋아요</span></button>
+								<!-- <button type="button" class="btn-xsmall btn-inner-ico btn-ratio is-heart"><i class="i-heart"></i><span class="blind">좋아요 활성화됨</span></button> -->
+							</div>
+							<a href="#">
+								<dl>
+									<dt>리테일고객현황</dt>
+									<dd>정보시스템부</dd>
+									<dd>최신한 선임</dd>
+									<dd>20241874</dd>
+									<dd class="date">최종수정일 : 2024-05-31</dd>
+								</dl>
+							</a>
+							<div class="util">
+								<div class="info">
+									<ul>
+										<li>
+											<div class="info-ico likes"><span class="blind">좋아요 수</span>999+</div>
+										</li>
+										<li>
+											<div class="info-ico comments"><span class="blind">댓글 수</span>999+</div>
+										</li>
+										<li>
+											<div class="info-ico views"><span class="blind">조회 수</span>999+</div>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-wrap">
+									<div class="center">
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
+										<!-- <button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-favorite"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button> -->
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-auth"></i><span class="blind">권한</span></button>
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-share"></i><span class="blind">공유</span></button>
+									</div>
+								</div>
+							</div>
+
+						</li>
+						<li>
+							<div class="thumb">
+								<picture>
+									<source srcset="../../assets/@temp/table_bg.png">
+									<img src="../../assets/@temp/table_bg.png" alt="">
+								</picture>
+								<button type="button" class="btn-xsmall btn-inner-ico btn-ratio"><i class="i-heart"></i><span class="blind">좋아요</span></button>
+								<!-- <button type="button" class="btn-xsmall btn-inner-ico btn-ratio is-heart"><i class="i-heart"></i><span class="blind">좋아요 활성화됨</span></button> -->
+							</div>
+							<a href="#">
+								<dl>
+									<dt>리테일고객현황</dt>
+									<dd>정보시스템부</dd>
+									<dd>최신한 선임</dd>
+									<dd>20241874</dd>
+									<dd class="date">최종수정일 : 2024-05-31</dd>
+								</dl>
+							</a>
+							<div class="util">
+								<div class="info">
+									<ul>
+										<li>
+											<div class="info-ico likes"><span class="blind">좋아요 수</span>999+</div>
+										</li>
+										<li>
+											<div class="info-ico comments"><span class="blind">댓글 수</span>999+</div>
+										</li>
+										<li>
+											<div class="info-ico views"><span class="blind">조회 수</span>999+</div>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-wrap">
+									<div class="center">
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
+										<!-- <button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-favorite"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button> -->
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-auth"></i><span class="blind">권한</span></button>
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-share"></i><span class="blind">공유</span></button>
+									</div>
+								</div>
+							</div>
+
+						</li>
+						<li>
+							<div class="thumb">
+								<picture>
+									<source srcset="../../assets/@temp/table_bg.png">
+									<img src="../../assets/@temp/table_bg.png" alt="">
+								</picture>
+								<button type="button" class="btn-xsmall btn-inner-ico btn-ratio"><i class="i-heart"></i><span class="blind">좋아요</span></button>
+								<!-- <button type="button" class="btn-xsmall btn-inner-ico btn-ratio is-heart"><i class="i-heart"></i><span class="blind">좋아요 활성화됨</span></button> -->
+							</div>
+							<a href="#">
+								<dl>
+									<dt>리테일고객현황</dt>
+									<dd>정보시스템부</dd>
+									<dd>최신한 선임</dd>
+									<dd>20241874</dd>
+									<dd class="date">최종수정일 : 2024-05-31</dd>
+								</dl>
+							</a>
+							<div class="util">
+								<div class="info">
+									<ul>
+										<li>
+											<div class="info-ico likes"><span class="blind">좋아요 수</span>999+</div>
+										</li>
+										<li>
+											<div class="info-ico comments"><span class="blind">댓글 수</span>999+</div>
+										</li>
+										<li>
+											<div class="info-ico views"><span class="blind">조회 수</span>999+</div>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-wrap">
+									<div class="center">
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
+										<!-- <button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-favorite"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button> -->
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-auth"></i><span class="blind">권한</span></button>
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-share"></i><span class="blind">공유</span></button>
+									</div>
+								</div>
+							</div>
+
+						</li>
+						<li>
+							<div class="thumb">
+								<picture>
+									<source srcset="../../assets/@temp/table_bg.png">
+									<img src="../../assets/@temp/table_bg.png" alt="">
+								</picture>
+								<button type="button" class="btn-xsmall btn-inner-ico btn-ratio"><i class="i-heart"></i><span class="blind">좋아요</span></button>
+								<!-- <button type="button" class="btn-xsmall btn-inner-ico btn-ratio is-heart"><i class="i-heart"></i><span class="blind">좋아요 활성화됨</span></button> -->
+							</div>
+							<a href="#">
+								<dl>
+									<dt>리테일고객현황</dt>
+									<dd>정보시스템부</dd>
+									<dd>최신한 선임</dd>
+									<dd>20241874</dd>
+									<dd class="date">최종수정일 : 2024-05-31</dd>
+								</dl>
+							</a>
+							<div class="util">
+								<div class="info">
+									<ul>
+										<li>
+											<div class="info-ico likes"><span class="blind">좋아요 수</span>999+</div>
+										</li>
+										<li>
+											<div class="info-ico comments"><span class="blind">댓글 수</span>999+</div>
+										</li>
+										<li>
+											<div class="info-ico views"><span class="blind">조회 수</span>999+</div>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-wrap">
+									<div class="center">
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
+										<!-- <button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-favorite"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button> -->
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-auth"></i><span class="blind">권한</span></button>
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-share"></i><span class="blind">공유</span></button>
+									</div>
+								</div>
+							</div>
+
+						</li>
+						<li>
+							<div class="thumb">
+								<picture>
+									<source srcset="../../assets/@temp/table_bg.png">
+									<img src="../../assets/@temp/table_bg.png" alt="">
+								</picture>
+								<button type="button" class="btn-xsmall btn-inner-ico btn-ratio"><i class="i-heart"></i><span class="blind">좋아요</span></button>
+								<!-- <button type="button" class="btn-xsmall btn-inner-ico btn-ratio is-heart"><i class="i-heart"></i><span class="blind">좋아요 활성화됨</span></button> -->
+							</div>
+							<a href="#">
+								<dl>
+									<dt>리테일고객현황</dt>
+									<dd>정보시스템부</dd>
+									<dd>최신한 선임</dd>
+									<dd>20241874</dd>
+									<dd class="date">최종수정일 : 2024-05-31</dd>
+								</dl>
+							</a>
+							<div class="util">
+								<div class="info">
+									<ul>
+										<li>
+											<div class="info-ico likes"><span class="blind">좋아요 수</span>999+</div>
+										</li>
+										<li>
+											<div class="info-ico comments"><span class="blind">댓글 수</span>999+</div>
+										</li>
+										<li>
+											<div class="info-ico views"><span class="blind">조회 수</span>999+</div>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-wrap">
+									<div class="center">
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
+										<!-- <button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio is-favorite"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button> -->
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-auth"></i><span class="blind">권한</span></button>
+										<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-share"></i><span class="blind">공유</span></button>
+									</div>
+								</div>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+				<!-- grid-list -->
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		const tippyTooltip2 = document.querySelectorAll('.util .info li')
+		tippyTooltip2.forEach(function(el, index) {
+			const tippyToolTipContent2 = el.querySelector('.blind').innerText;
+			tippy(el, {
+				content: tippyToolTipContent2,
+				// allowHTML: true,
+				// theme: 'link',
+				// placement: 'top-start',
+			});
+		})
+	</script>
+</body>
+
+</html>

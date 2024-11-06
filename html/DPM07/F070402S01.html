@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한투자증권프로젝트메타</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+
+</head>
+
+<body>
+
+	<!-- wrap -->
+	<div id="wrap">
+
+		<div class="d-flex j-end">
+			<label class="inp-switch gap10 d-inflex">
+				<b>테마변경</b>
+				<span class="theme-switch">
+					<input type="checkbox" id="themeSelector">
+					<span class="theme-input-white"><span class="blind">화이트모드</span></span>
+					<span class="theme-input-dark"><span class="blind">다크모드</span></span>
+				</span>
+			</label>
+		</div>
+
+		<main class="window-popup">
+
+			<div class="main-inner">
+				<section id="content">
+
+					<!-- title -->
+					<div class="section-title j-between">
+						<h1 class="title">협업신청</h1>
+						<p class="desc desc-alert">* 민감정보를 포함하는 협업은 본 신청 대상에 포함되지 않습니다.</p>
+					</div>
+					<!-- //title -->
+
+					<!-- content start -->
+					<div class="main-content">
+
+						<!-- table-row -->
+						<div class="table-row">
+							<table>
+								<caption>협업 신청 정보</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">신청자명(사번) <sup class="apos" title="필수입력">*</sup></th>
+										<td>김신한 (20240411)</td>
+										<th scope="row">신청자부서 <sup class="apos" title="필수입력">*</sup></th>
+										<td>데이터센터</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+						<!-- table-row -->
+						<div class="table-row mt14">
+							<table>
+								<caption>협업 신청 상세 정보</caption>
+								<colgroup>
+									<col style="width:135px;">
+									<col>
+									<col style="width:135px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">구분 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="3">
+											<div class="form form-list">
+												<label class="inp"><input type="radio"><b>일반협업</b></label>
+												<label class="inp"><input type="radio"><b>보고서 개발</b></label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">과제명 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="3"><input type="text" title="과제명"></td>
+									</tr>
+									<tr>
+										<th scope="row">과제내용 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="3"><input type="text" title="과제내용"></td>
+									</tr>
+									<tr>
+										<th scope="row">담당자정보 <sup class="apos" title="필수입력">*</sup></th>
+										<td>
+											<div class="form">
+												<input type="search" title="협업담당자(사번)">
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico"><i class="i-search"></i>검색</button>
+											</div>
+										</td>
+										<th scope="row">담당자부서</th>
+										<td>데이터센터</td>
+									</tr>
+									<tr>
+										<th scope="row">UAT 대상여부</th>
+										<td>
+											<div class="form form-list">
+												<label class="inp"><input type="radio"><b>대상</b></label>
+												<label class="inp"><input type="radio"><b>비대상</b></label>
+											</div>
+										</td>
+										<th scope="row">협업 수행기간 <sup class="apos" title="필수입력">*</sup></th>
+										<td>
+											<div class="form a-center">
+												<input type="date" title="시작일">
+												<div class="nowrap">까지</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">참조데이터 <sup class="apos" title="필수입력">*</sup></th>
+										<td colspan="3">
+											<div class="form">
+												<input type="text" title="참조데이터" readonly>
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico"><i class="i-search"></i>찾기</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">참조 BI대시보드</th>
+										<td colspan="3">
+											<div class="form">
+												<input type="text" title="참조 BI대시보드" readonly>
+												<button type="button" class="btn-xsmall btn-secondary btn-inner-ico"><i class="i-search"></i>찾기</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">첨부파일</th>
+										<td colspan="3">
+											<div action="/upload" class="dropzone dropzone-attach-file"></div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-row -->
+
+						<!-- title -->
+						<div class="section-title">
+							<h2 class="sub-title">결제선 정보</h2>
+						</div>
+						<!-- //title -->
+
+						<!-- table-col -->
+						<div class="table-col">
+							<table>
+								<caption>결제선 정보</caption>
+								<colgroup>
+									<col style="width:5%;">
+									<col style="width:13%;">
+									<col style="width:13%;">
+									<col>
+									<col style="width:30%;">
+									<col style="width:13%;">
+									<col style="width:13%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="ac">No</th>
+										<th scope="col" class="ac">결재타입</th>
+										<th scope="col" class="ac">부서</th>
+										<th scope="col" class="ac">직위</th>
+										<th scope="col" class="ac">이름</th>
+										<th scope="col" class="ac">결재상태</th>
+										<th scope="col" class="ac">결재일시</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="ac">1</td>
+										<td class="ac">승인</td>
+										<td class="ac">데이터센터</td>
+										<td class="ac">부서장</td>
+										<td class="ac">박신한</td>
+										<td class="ac">대기</td>
+										<td class="ac">-</td>
+									</tr>
+									<tr>
+										<td class="ac">2</td>
+										<td class="ac" rowspan="3">처리접수</td>
+										<td class="ac">IT부서</td>
+										<td class="ac">선임</td>
+										<td class="ac">최신한</td>
+										<td class="ac">미결</td>
+										<td class="ac">-</td>
+									</tr>
+									<tr>
+										<td class="ac">3</td>
+										<td class="ac">IT부서</td>
+										<td class="ac">선임</td>
+										<td class="ac">최신한</td>
+										<td class="ac">미결</td>
+										<td class="ac">-</td>
+									</tr>
+									<tr>
+										<td class="ac">4</td>
+										<td class="ac">IT부서</td>
+										<td class="ac">선임</td>
+										<td class="ac">최신한</td>
+										<td class="ac">미결</td>
+										<td class="ac">-</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table-col -->
+
+
+						<!-- btn-wrap -->
+						<div class="btn-wrap">
+							<div class="center">
+								<a href="#" class="btn-large btn-secondary">취소</a>
+								<a href="#" class="btn-large btn-tertiary">임시저장</a>
+								<a href="#" class="btn-large btn-primary">신청하기</a>
+							</div>
+						</div>
+						<!-- //btn-wrap -->
+
+
+					</div>
+					<!-- // content end -->
+
+
+				</section>
+			</div>
+
+		</main>
+
+	</div>
+	<!-- //wrap -->
+
+
+	<!-- quill & highlightjs -->
+	<script>
+		hljs.configure({ // optionally configure hljs
+			languages: ['sql']
+		});
+
+		Quill.register("modules/resize", window.QuillResizeModule);
+
+		const toolbarOptions = [
+			['code-block'],
+			['clean'] // remove formatting button,
+		];
+
+		const quill = new Quill('#editor', {
+			modules: {
+				syntax: true, // Include syntax module
+				toolbar: toolbarOptions,
+				resize: {
+					locale: {},
+				},
+			},
+			placeholder: '내용을 입력해 주세요',
+			theme: 'snow'
+		});
+		var toolbar = quill.container.previousSibling;
+		toolbar.querySelector('.ql-code-block').setAttribute('data-tippy-content', 'code-block');
+		toolbar.querySelector('.ql-clean').setAttribute('data-tippy-content', 'clean');
+
+		tippy('[data-tippy-content]');
+		quill.enable(false);
+	</script>
+
+	<!-- dropzone -->
+	<script>
+		Dropzone.autoDiscover = false;
+		window.onload = function() {
+
+
+			// file upload
+			var dropzoneFileOptions = {
+				dictDefaultMessage: "XLSX, PPTX, DOCX, PDF, TXT, PNG, JPEG, JPG 확장자만 가능합니다. <br> 업로드하려면 여기에 파일을 드롭하거나 여기를 클릭하세요.",
+				dictFallbackMessage: "드래그 앤 드롭 파일 업로드를 지원하지 않습니다.",
+				dictFallbackText: "예전처럼 파일을 업로드하려면 아래 대체 양식을 사용하세요.",
+				dictFileTooBig: "파일이 너무 큽니다({{filesize}}MiB). 최대 파일 크기: {{maxFilesize}}MiB.",
+				dictInvalidFileType: "이 유형의 파일은 업로드할 수 없습니다.",
+				dictResponseError: "서버가 {{statusCode}} 코드로 응답했습니다.",
+				dictCancelUpload: "업로드 취소",
+				dictCancelUploadConfirmation: "정말 이 업로드를 취소하시겠습니까?",
+				dictRemoveFile: "파일 제거",
+				dictMaxFilesExceeded: "더 이상 파일을 업로드할 수 없습니다.",
+				paramName: "파일",
+				maxFilesize: 2, // MB
+				addRemoveLinks: true,
+				createImageThumbnails: false,
+				acceptedFiles: "image/*,.pdf,.doc,.docx,.xls,.xlsx,.csv,.tsv,.ppt,.pptx,.txt",
+				init: function() {
+					this.on("success", function(file) {
+						console.log("success > " + file.name);
+					});
+				}
+			};
+			var fileUploader = document.querySelector('.dropzone-attach-file');
+			var newDropzone = new Dropzone(fileUploader, dropzoneFileOptions);
+		};
+	</script>
+
+</body>
+
+</html>
