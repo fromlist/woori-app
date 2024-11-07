@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT커스터마이징</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- 개발에서 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+	<!-- main -->
+	<main>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+				</div>
+				<div class="center">
+					<h1>주소록</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="btn-ico btn-size30"><i class="i-close"></i><span class="blind">닫기</span></button>
+				</div>
+			</div>
+			<div class="sub-header">
+				<div class="left">
+					<button type="button" class="btn-ico btn-size24"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
+				</div>
+				<div class="center">
+					<h2>주소록 수정</h2>
+				</div>
+				<div class="right">
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<section class="section">
+
+				<!-- business-section -->
+				<div class="business-section">
+					<label for="img-picture">
+						<input type="file" id="img-picture">
+						<picture>
+							<source srcset="../../assets/images/section/user-photo-default.png">
+							<img class="img-cover" src="../../assets/images/section/user-photo-default.png" alt="">
+						</picture>
+					</label>
+					<dl>
+						<dt>김비즈 책임</dt>
+						<dd>그룹웨어팀</dd>
+					</dl>
+				</div>
+				<!-- //business-section -->
+
+			</section>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li>
+						<div class="group-title">이름</div>
+						<div class="group-cont"><input type="text" title="이름" placeholder="이름을 입력해 주세요"></div>
+					</li>
+					<li>
+						<div class="group-title">회사</div>
+						<div class="group-cont"><input type="text" title="회사" placeholder="회사를 입력해 주세요"></div>
+					</li>
+					<li>
+						<div class="group-title">휴대전화번호</div>
+						<div class="group-cont"><input type="text" title="휴대전화번호" placeholder="(-)제외하고 입력"></div>
+					</li>
+					<li>
+						<div class="group-title">메일</div>
+						<div class="group-cont"><input type="text" title="메일" placeholder="메일 주소 입력"></div>
+					</li>
+					<li>
+						<div class="group-title">개인주소록</div>
+						<div class="group-cont">
+							<select title="개인주소록">
+								<option value="선택안함">선택안함</option>
+							</select>
+						</div>
+					</li>
+					<li class="j-between">
+						<div class="group-title">공개여부</div>
+						<div class="group-cont">
+							<div class="form-list">
+								<label class="inp"><input type="radio"><b>공개</b></label>
+								<label class="inp"><input type="radio"><b>비공개</b></label>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+
+			</section>
+			<!-- //section -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-black">저장</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- main -->
+</body>
+
+</html>

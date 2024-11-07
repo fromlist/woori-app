@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT커스터마이징</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- 개발에서 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+	<!-- main -->
+	<main>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+				</div>
+				<div class="center">
+					<h1>밴드</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="btn-ico btn-size30"><i class="i-close"></i><span class="blind">닫기</span></button>
+				</div>
+			</div>
+			<div class="sub-header">
+				<div class="left">
+				</div>
+				<div class="center">
+					<h2>나의 그룹</h2>
+				</div>
+				<div class="right">
+					<button type="button" class="btn-ico btn-size24"><i class="i-search"></i><span class="blind">검색</span></button>
+					<button type="button" class="btn-ico btn-size24"><i class="i-group"></i><span class="blind">그룹생성</span></button>
+				</div>
+			</div>
+
+			<!-- form -->
+			<div class="form">
+				<div class="input-wrap">
+					<input type="text" value="" title="나의 그룹" placeholder="그룹명을 검색해 주세요">
+					<button type="button" class="form-btn form-search" title="검색"></button>
+				</div>
+			</div>
+			<!-- //form -->
+
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+
+			<!-- section -->
+			<section class="section">
+
+				<!-- band-section -->
+				<div class="band-section">
+					<ul>
+						<li>
+							<a href="#" class="pic">
+								<picture>
+									<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+									<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+								</picture>
+							</a>
+							<div class="band-info">
+								<strong>밴드1</strong>
+								<em>
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+											<path d="M6.5 9V11.5M3 9H10V8.12C9.9999 7.93396 9.94791 7.75163 9.84986 7.59352C9.75181 7.43541 9.61161 7.30779 9.445 7.225L8.555 6.775C8.38839 6.69221 8.24819 6.56459 8.15014 6.40648C8.05209 6.24837 8.0001 6.06604 8 5.88V3.5H8.5C8.76522 3.5 9.01957 3.39464 9.20711 3.20711C9.39464 3.01957 9.5 2.76522 9.5 2.5C9.5 2.23478 9.39464 1.98043 9.20711 1.79289C9.01957 1.60536 8.76522 1.5 8.5 1.5H4.5C4.23478 1.5 3.98043 1.60536 3.79289 1.79289C3.60536 1.98043 3.5 2.23478 3.5 2.5C3.5 2.76522 3.60536 3.01957 3.79289 3.20711C3.98043 3.39464 4.23478 3.5 4.5 3.5H5V5.88C4.9999 6.06604 4.94791 6.24837 4.84986 6.40648C4.75181 6.56459 4.61161 6.69221 4.445 6.775L3.555 7.225C3.38839 7.30779 3.24819 7.43541 3.15014 7.59352C3.05209 7.75163 3.0001 7.93396 3 8.12V9Z" stroke="#8C959F" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</i>
+									<span><b>1</b> Members</span>
+								</em>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pic">
+								<picture>
+									<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+									<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+								</picture>
+							</a>
+							<div class="band-info">
+								<strong>밴드1</strong>
+								<em>
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+											<path d="M6.5 9V11.5M3 9H10V8.12C9.9999 7.93396 9.94791 7.75163 9.84986 7.59352C9.75181 7.43541 9.61161 7.30779 9.445 7.225L8.555 6.775C8.38839 6.69221 8.24819 6.56459 8.15014 6.40648C8.05209 6.24837 8.0001 6.06604 8 5.88V3.5H8.5C8.76522 3.5 9.01957 3.39464 9.20711 3.20711C9.39464 3.01957 9.5 2.76522 9.5 2.5C9.5 2.23478 9.39464 1.98043 9.20711 1.79289C9.01957 1.60536 8.76522 1.5 8.5 1.5H4.5C4.23478 1.5 3.98043 1.60536 3.79289 1.79289C3.60536 1.98043 3.5 2.23478 3.5 2.5C3.5 2.76522 3.60536 3.01957 3.79289 3.20711C3.98043 3.39464 4.23478 3.5 4.5 3.5H5V5.88C4.9999 6.06604 4.94791 6.24837 4.84986 6.40648C4.75181 6.56459 4.61161 6.69221 4.445 6.775L3.555 7.225C3.38839 7.30779 3.24819 7.43541 3.15014 7.59352C3.05209 7.75163 3.0001 7.93396 3 8.12V9Z" stroke="#8C959F" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</i>
+									<span><b>1</b> Members</span>
+								</em>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pic">
+								<picture>
+									<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+									<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+								</picture>
+							</a>
+							<div class="band-info">
+								<strong>밴드1</strong>
+								<em>
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+											<path d="M6.5 9V11.5M3 9H10V8.12C9.9999 7.93396 9.94791 7.75163 9.84986 7.59352C9.75181 7.43541 9.61161 7.30779 9.445 7.225L8.555 6.775C8.38839 6.69221 8.24819 6.56459 8.15014 6.40648C8.05209 6.24837 8.0001 6.06604 8 5.88V3.5H8.5C8.76522 3.5 9.01957 3.39464 9.20711 3.20711C9.39464 3.01957 9.5 2.76522 9.5 2.5C9.5 2.23478 9.39464 1.98043 9.20711 1.79289C9.01957 1.60536 8.76522 1.5 8.5 1.5H4.5C4.23478 1.5 3.98043 1.60536 3.79289 1.79289C3.60536 1.98043 3.5 2.23478 3.5 2.5C3.5 2.76522 3.60536 3.01957 3.79289 3.20711C3.98043 3.39464 4.23478 3.5 4.5 3.5H5V5.88C4.9999 6.06604 4.94791 6.24837 4.84986 6.40648C4.75181 6.56459 4.61161 6.69221 4.445 6.775L3.555 7.225C3.38839 7.30779 3.24819 7.43541 3.15014 7.59352C3.05209 7.75163 3.0001 7.93396 3 8.12V9Z" stroke="#8C959F" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</i>
+									<span><b>1</b> Members</span>
+								</em>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pic">
+								<picture>
+									<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+									<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+								</picture>
+							</a>
+							<div class="band-info">
+								<strong>밴드1</strong>
+								<em>
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+											<path d="M6.5 9V11.5M3 9H10V8.12C9.9999 7.93396 9.94791 7.75163 9.84986 7.59352C9.75181 7.43541 9.61161 7.30779 9.445 7.225L8.555 6.775C8.38839 6.69221 8.24819 6.56459 8.15014 6.40648C8.05209 6.24837 8.0001 6.06604 8 5.88V3.5H8.5C8.76522 3.5 9.01957 3.39464 9.20711 3.20711C9.39464 3.01957 9.5 2.76522 9.5 2.5C9.5 2.23478 9.39464 1.98043 9.20711 1.79289C9.01957 1.60536 8.76522 1.5 8.5 1.5H4.5C4.23478 1.5 3.98043 1.60536 3.79289 1.79289C3.60536 1.98043 3.5 2.23478 3.5 2.5C3.5 2.76522 3.60536 3.01957 3.79289 3.20711C3.98043 3.39464 4.23478 3.5 4.5 3.5H5V5.88C4.9999 6.06604 4.94791 6.24837 4.84986 6.40648C4.75181 6.56459 4.61161 6.69221 4.445 6.775L3.555 7.225C3.38839 7.30779 3.24819 7.43541 3.15014 7.59352C3.05209 7.75163 3.0001 7.93396 3 8.12V9Z" stroke="#8C959F" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</i>
+									<span><b>1</b> Members</span>
+								</em>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pic">
+								<picture>
+									<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+									<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+								</picture>
+							</a>
+							<div class="band-info">
+								<strong>밴드1</strong>
+								<em>
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+											<path d="M6.5 9V11.5M3 9H10V8.12C9.9999 7.93396 9.94791 7.75163 9.84986 7.59352C9.75181 7.43541 9.61161 7.30779 9.445 7.225L8.555 6.775C8.38839 6.69221 8.24819 6.56459 8.15014 6.40648C8.05209 6.24837 8.0001 6.06604 8 5.88V3.5H8.5C8.76522 3.5 9.01957 3.39464 9.20711 3.20711C9.39464 3.01957 9.5 2.76522 9.5 2.5C9.5 2.23478 9.39464 1.98043 9.20711 1.79289C9.01957 1.60536 8.76522 1.5 8.5 1.5H4.5C4.23478 1.5 3.98043 1.60536 3.79289 1.79289C3.60536 1.98043 3.5 2.23478 3.5 2.5C3.5 2.76522 3.60536 3.01957 3.79289 3.20711C3.98043 3.39464 4.23478 3.5 4.5 3.5H5V5.88C4.9999 6.06604 4.94791 6.24837 4.84986 6.40648C4.75181 6.56459 4.61161 6.69221 4.445 6.775L3.555 7.225C3.38839 7.30779 3.24819 7.43541 3.15014 7.59352C3.05209 7.75163 3.0001 7.93396 3 8.12V9Z" stroke="#8C959F" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</i>
+									<span><b>1</b> Members</span>
+								</em>
+							</div>
+						</li>
+					</ul>
+
+					<!-- btn-wrap -->
+					<div class="btn-wrap pt10 pb0">
+						<button type="button" class="btn-large btn-outline-black">더보기</button>
+					</div>
+					<!-- //btn-wrap -->
+
+				</div>
+				<!-- //band-section -->
+
+			</section>
+			<!-- //section -->
+
+			<!-- bottom-btn -->
+			<div class="bottom-btn relative">
+				<div class="sub-header">
+					<div class="left">
+					</div>
+					<div class="center">
+						<h2>회사 전체 그룹</h2>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size24"><i class="i-search"></i><span class="blind">검색</span></button>
+					</div>
+				</div>
+
+				<!-- form -->
+				<div class="form">
+					<div class="input-wrap">
+						<input type="text" value="" title="그룹명" placeholder="그룹명을 검색해 주세요">
+						<button type="button" class="form-btn form-search" title="검색"></button>
+					</div>
+				</div>
+				<!-- //form -->
+			</div>
+			<!-- //bottom-btn -->
+
+
+
+			<!-- section -->
+			<section class="section">
+
+				<!-- band-section -->
+				<div class="band-section">
+					<ul>
+						<li>
+							<a href="#" class="pic">
+								<picture>
+									<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+									<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+								</picture>
+							</a>
+							<div class="band-info">
+								<strong>밴드1</strong>
+								<em>
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+											<path d="M6.5 9V11.5M3 9H10V8.12C9.9999 7.93396 9.94791 7.75163 9.84986 7.59352C9.75181 7.43541 9.61161 7.30779 9.445 7.225L8.555 6.775C8.38839 6.69221 8.24819 6.56459 8.15014 6.40648C8.05209 6.24837 8.0001 6.06604 8 5.88V3.5H8.5C8.76522 3.5 9.01957 3.39464 9.20711 3.20711C9.39464 3.01957 9.5 2.76522 9.5 2.5C9.5 2.23478 9.39464 1.98043 9.20711 1.79289C9.01957 1.60536 8.76522 1.5 8.5 1.5H4.5C4.23478 1.5 3.98043 1.60536 3.79289 1.79289C3.60536 1.98043 3.5 2.23478 3.5 2.5C3.5 2.76522 3.60536 3.01957 3.79289 3.20711C3.98043 3.39464 4.23478 3.5 4.5 3.5H5V5.88C4.9999 6.06604 4.94791 6.24837 4.84986 6.40648C4.75181 6.56459 4.61161 6.69221 4.445 6.775L3.555 7.225C3.38839 7.30779 3.24819 7.43541 3.15014 7.59352C3.05209 7.75163 3.0001 7.93396 3 8.12V9Z" stroke="#8C959F" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</i>
+									<span><b>1</b> Members</span>
+								</em>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pic">
+								<picture>
+									<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+									<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+								</picture>
+							</a>
+							<div class="band-info">
+								<strong>밴드1</strong>
+								<em>
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+											<path d="M6.5 9V11.5M3 9H10V8.12C9.9999 7.93396 9.94791 7.75163 9.84986 7.59352C9.75181 7.43541 9.61161 7.30779 9.445 7.225L8.555 6.775C8.38839 6.69221 8.24819 6.56459 8.15014 6.40648C8.05209 6.24837 8.0001 6.06604 8 5.88V3.5H8.5C8.76522 3.5 9.01957 3.39464 9.20711 3.20711C9.39464 3.01957 9.5 2.76522 9.5 2.5C9.5 2.23478 9.39464 1.98043 9.20711 1.79289C9.01957 1.60536 8.76522 1.5 8.5 1.5H4.5C4.23478 1.5 3.98043 1.60536 3.79289 1.79289C3.60536 1.98043 3.5 2.23478 3.5 2.5C3.5 2.76522 3.60536 3.01957 3.79289 3.20711C3.98043 3.39464 4.23478 3.5 4.5 3.5H5V5.88C4.9999 6.06604 4.94791 6.24837 4.84986 6.40648C4.75181 6.56459 4.61161 6.69221 4.445 6.775L3.555 7.225C3.38839 7.30779 3.24819 7.43541 3.15014 7.59352C3.05209 7.75163 3.0001 7.93396 3 8.12V9Z" stroke="#8C959F" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</i>
+									<span><b>1</b> Members</span>
+								</em>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pic">
+								<picture>
+									<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+									<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+								</picture>
+							</a>
+							<div class="band-info">
+								<strong>밴드1</strong>
+								<em>
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+											<path d="M6.5 9V11.5M3 9H10V8.12C9.9999 7.93396 9.94791 7.75163 9.84986 7.59352C9.75181 7.43541 9.61161 7.30779 9.445 7.225L8.555 6.775C8.38839 6.69221 8.24819 6.56459 8.15014 6.40648C8.05209 6.24837 8.0001 6.06604 8 5.88V3.5H8.5C8.76522 3.5 9.01957 3.39464 9.20711 3.20711C9.39464 3.01957 9.5 2.76522 9.5 2.5C9.5 2.23478 9.39464 1.98043 9.20711 1.79289C9.01957 1.60536 8.76522 1.5 8.5 1.5H4.5C4.23478 1.5 3.98043 1.60536 3.79289 1.79289C3.60536 1.98043 3.5 2.23478 3.5 2.5C3.5 2.76522 3.60536 3.01957 3.79289 3.20711C3.98043 3.39464 4.23478 3.5 4.5 3.5H5V5.88C4.9999 6.06604 4.94791 6.24837 4.84986 6.40648C4.75181 6.56459 4.61161 6.69221 4.445 6.775L3.555 7.225C3.38839 7.30779 3.24819 7.43541 3.15014 7.59352C3.05209 7.75163 3.0001 7.93396 3 8.12V9Z" stroke="#8C959F" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</i>
+									<span><b>1</b> Members</span>
+								</em>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pic">
+								<picture>
+									<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+									<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+								</picture>
+							</a>
+							<div class="band-info">
+								<strong>밴드1</strong>
+								<em>
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+											<path d="M6.5 9V11.5M3 9H10V8.12C9.9999 7.93396 9.94791 7.75163 9.84986 7.59352C9.75181 7.43541 9.61161 7.30779 9.445 7.225L8.555 6.775C8.38839 6.69221 8.24819 6.56459 8.15014 6.40648C8.05209 6.24837 8.0001 6.06604 8 5.88V3.5H8.5C8.76522 3.5 9.01957 3.39464 9.20711 3.20711C9.39464 3.01957 9.5 2.76522 9.5 2.5C9.5 2.23478 9.39464 1.98043 9.20711 1.79289C9.01957 1.60536 8.76522 1.5 8.5 1.5H4.5C4.23478 1.5 3.98043 1.60536 3.79289 1.79289C3.60536 1.98043 3.5 2.23478 3.5 2.5C3.5 2.76522 3.60536 3.01957 3.79289 3.20711C3.98043 3.39464 4.23478 3.5 4.5 3.5H5V5.88C4.9999 6.06604 4.94791 6.24837 4.84986 6.40648C4.75181 6.56459 4.61161 6.69221 4.445 6.775L3.555 7.225C3.38839 7.30779 3.24819 7.43541 3.15014 7.59352C3.05209 7.75163 3.0001 7.93396 3 8.12V9Z" stroke="#8C959F" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</i>
+									<span><b>1</b> Members</span>
+								</em>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="pic">
+								<picture>
+									<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+									<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+								</picture>
+							</a>
+							<div class="band-info">
+								<strong>밴드1</strong>
+								<em>
+									<i>
+										<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+											<path d="M6.5 9V11.5M3 9H10V8.12C9.9999 7.93396 9.94791 7.75163 9.84986 7.59352C9.75181 7.43541 9.61161 7.30779 9.445 7.225L8.555 6.775C8.38839 6.69221 8.24819 6.56459 8.15014 6.40648C8.05209 6.24837 8.0001 6.06604 8 5.88V3.5H8.5C8.76522 3.5 9.01957 3.39464 9.20711 3.20711C9.39464 3.01957 9.5 2.76522 9.5 2.5C9.5 2.23478 9.39464 1.98043 9.20711 1.79289C9.01957 1.60536 8.76522 1.5 8.5 1.5H4.5C4.23478 1.5 3.98043 1.60536 3.79289 1.79289C3.60536 1.98043 3.5 2.23478 3.5 2.5C3.5 2.76522 3.60536 3.01957 3.79289 3.20711C3.98043 3.39464 4.23478 3.5 4.5 3.5H5V5.88C4.9999 6.06604 4.94791 6.24837 4.84986 6.40648C4.75181 6.56459 4.61161 6.69221 4.445 6.775L3.555 7.225C3.38839 7.30779 3.24819 7.43541 3.15014 7.59352C3.05209 7.75163 3.0001 7.93396 3 8.12V9Z" stroke="#8C959F" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</i>
+									<span><b>1</b> Members</span>
+								</em>
+							</div>
+						</li>
+					</ul>
+
+					<!-- btn-wrap -->
+					<div class="btn-wrap pt10 pb0">
+						<button type="button" class="btn-large btn-outline-black">더보기</button>
+					</div>
+					<!-- //btn-wrap -->
+
+				</div>
+				<!-- //band-section -->
+
+			</section>
+			<!-- //section -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+
+	</main>
+	<!-- main -->
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT커스터마이징</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- 개발에서 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+	<!-- main -->
+	<main>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="btn-ico btn-size30"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
+				</div>
+				<div class="center">
+					<h1>포틀릿 설정</h1>
+				</div>
+				<div class="right">
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- row-list -->
+			<div class="row-list mt10" id="sorting01">
+				<label class="inp-switch inp-sorting">
+					<b>
+						날씨
+						<i class="btn-ico btn-size30">
+							<i class="i-sort"></i>
+							<span class="blind">위치이동</span>
+						</i>
+					</b>
+					<input type="checkbox" name="inp-switch001">
+				</label>
+
+				<label class="inp-switch inp-sorting">
+					<b>
+						뉴스
+						<i class="btn-ico btn-size30">
+							<i class="i-sort"></i>
+							<span class="blind">위치이동</span>
+						</i>
+					</b>
+					<input type="checkbox" name="inp-switch001">
+				</label>
+				<label class="inp-switch inp-sorting">
+					<b>
+						축하합니다
+						<i class="btn-ico btn-size30">
+							<i class="i-sort"></i>
+							<span class="blind">위치이동</span>
+						</i>
+					</b>
+					<input type="checkbox" name="inp-switch001">
+				</label>
+				<label class="inp-switch inp-sorting">
+					<b>
+						출퇴근
+						<i class="btn-ico btn-size30">
+							<i class="i-sort"></i>
+							<span class="blind">위치이동</span>
+						</i>
+					</b>
+					<input type="checkbox" name="inp-switch001">
+				</label>
+				<label class="inp-switch inp-sorting">
+					<b>
+						대시보드
+						<i class="btn-ico btn-size30">
+							<i class="i-sort"></i>
+							<span class="blind">위치이동</span>
+						</i>
+					</b>
+					<input type="checkbox" name="inp-switch001">
+				</label>
+			</div>
+			<script>
+				var sortableOption = {
+					group: "shared",
+					animation: 150,
+				};
+
+				sortableList = Sortable.create(sorting01, sortableOption);
+			</script>
+			<!-- //row-list -->
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-outline-red">취소</button>
+				<button type="button" class="btn-large btn-black">저장</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- main -->
+</body>
+
+</html>

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT커스터마이징</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- 개발에서 제외해주세요 -->
+	<!-- //ui source -->
+	<style>
+		body article {
+			height: 100vh;
+		}
+	</style>
+</head>
+
+<body>
+
+	<article>
+		<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal5">modal5</button>
+		<div class="d-flex j-end"><button type="button" class="btn-large btn-black" data-micromodal-trigger="modal5">modal5</button></div>
+		<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal1">data-micromodal-trigger="modal1"</button>
+		<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal2">data-micromodal-trigger="modal2"</button>
+		<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal3">data-micromodal-trigger="modal3"</button>
+		<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal4">data-micromodal-trigger="modal4"</button>
+		<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal5">data-micromodal-trigger="modal5"</button>
+		<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal6">data-micromodal-trigger="modal6"</button>
+		<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal8">data-micromodal-trigger="modal8"</button>
+		<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal9">data-micromodal-trigger="modal9"</button>
+		<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal10">data-micromodal-trigger="modal10"</button>
+
+	</article>
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide modal" id="modal1" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__content">
+
+
+					<!-- main -->
+					<main>
+						<!-- header -->
+						<header>
+							<div class="main-header">
+								<div class="left">
+								</div>
+								<div class="center">
+									<h1>축하합니다</h1>
+								</div>
+								<div class="right">
+									<button type="button" class="btn-ico btn-size30" data-micromodal-close><i class="i-close"></i><span class="blind">닫기</span></button>
+								</div>
+							</div>
+						</header>
+						<!-- //header -->
+
+						<!-- main-inner -->
+						<!-- content start -->
+						<div class="main-inner">
+
+
+							<section class="section">
+
+
+
+								<!-- card -->
+								<div class="card">
+									<div class="card-title">생일</div>
+									<figure class="card-celeb">
+										<div class="card-celeb-info">
+											<picture>
+												<source srcset="../../assets/images/section/user-photo-default.png">
+												<img class="img-cover" src="../../assets/images/section/user-photo-default.png" alt="">
+											</picture>
+											<figcaption>
+												<div class="headline">김엘지 선임</div>
+												<div class="date">6.30</div>
+											</figcaption>
+										</div>
+										<div class="card-celeb-label">생일</div>
+									</figure>
+									<figure class="card-celeb">
+										<div class="card-celeb-info">
+											<picture>
+												<source srcset="../../assets/images/section/user-photo.png">
+												<img class="img-cover" src="../../assets/images/section/user-photo.png" alt="">
+											</picture>
+											<figcaption>
+												<div class="headline">김엘지 선임</div>
+												<div class="date">6.30</div>
+											</figcaption>
+										</div>
+										<div class="card-celeb-label">생일</div>
+									</figure>
+								</div>
+								<!-- //card -->
+
+								<!-- card -->
+								<div class="card">
+									<div class="card-title">결혼기념일</div>
+									<figure class="card-celeb">
+										<div class="card-celeb-info">
+											<picture>
+												<source srcset="../../assets/images/section/user-photo.png">
+												<img class="img-cover" src="../../assets/images/section/user-photo.png" alt="">
+											</picture>
+											<figcaption>
+												<div class="headline">김엘지 선임</div>
+												<div class="date">6.30</div>
+											</figcaption>
+										</div>
+										<div class="card-celeb-label">결혼기념일</div>
+									</figure>
+									<figure class="card-celeb">
+										<div class="card-celeb-info">
+											<picture>
+												<source srcset="../../assets/images/section/user-photo.png">
+												<img class="img-cover" src="../../assets/images/section/user-photo.png" alt="">
+											</picture>
+											<figcaption>
+												<div class="headline">김엘지 선임</div>
+												<div class="date">6.30</div>
+											</figcaption>
+										</div>
+										<div class="card-celeb-label">결혼기념일</div>
+									</figure>
+								</div>
+								<!-- //card -->
+
+							</section>
+
+
+						</div>
+						<!-- //content end -->
+						<!-- //main-inner -->
+
+					</main>
+					<!-- main -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide modal" id="modal2" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container modal__container__left" role="dialog" aria-modal="true">
+				<div class="modal__content">
+
+
+					<!-- main -->
+					<main>
+						<!-- header -->
+						<header>
+							<div class="main-header">
+								<div class="left">
+								</div>
+								<div class="center">
+									<h1>축하합니다</h1>
+								</div>
+								<div class="right">
+									<button type="button" class="btn-ico btn-size30" data-micromodal-close><i class="i-close"></i><span class="blind">닫기</span></button>
+								</div>
+							</div>
+						</header>
+						<!-- //header -->
+
+						<!-- main-inner -->
+						<!-- content start -->
+						<div class="main-inner">
+
+
+							<section class="section">
+
+
+
+								<!-- card -->
+								<div class="card">
+									<div class="card-title">생일</div>
+									<figure class="card-celeb">
+										<div class="card-celeb-info">
+											<picture>
+												<source srcset="../../assets/images/section/user-photo-default.png">
+												<img class="img-cover" src="../../assets/images/section/user-photo-default.png" alt="">
+											</picture>
+											<figcaption>
+												<div class="headline">김엘지 선임</div>
+												<div class="date">6.30</div>
+											</figcaption>
+										</div>
+										<div class="card-celeb-label">생일</div>
+									</figure>
+									<figure class="card-celeb">
+										<div class="card-celeb-info">
+											<picture>
+												<source srcset="../../assets/images/section/user-photo.png">
+												<img class="img-cover" src="../../assets/images/section/user-photo.png" alt="">
+											</picture>
+											<figcaption>
+												<div class="headline">김엘지 선임</div>
+												<div class="date">6.30</div>
+											</figcaption>
+										</div>
+										<div class="card-celeb-label">생일</div>
+									</figure>
+								</div>
+								<!-- //card -->
+
+								<!-- card -->
+								<div class="card">
+									<div class="card-title">결혼기념일</div>
+									<figure class="card-celeb">
+										<div class="card-celeb-info">
+											<picture>
+												<source srcset="../../assets/images/section/user-photo.png">
+												<img class="img-cover" src="../../assets/images/section/user-photo.png" alt="">
+											</picture>
+											<figcaption>
+												<div class="headline">김엘지 선임</div>
+												<div class="date">6.30</div>
+											</figcaption>
+										</div>
+										<div class="card-celeb-label">결혼기념일</div>
+									</figure>
+									<figure class="card-celeb">
+										<div class="card-celeb-info">
+											<picture>
+												<source srcset="../../assets/images/section/user-photo.png">
+												<img class="img-cover" src="../../assets/images/section/user-photo.png" alt="">
+											</picture>
+											<figcaption>
+												<div class="headline">김엘지 선임</div>
+												<div class="date">6.30</div>
+											</figcaption>
+										</div>
+										<div class="card-celeb-label">결혼기념일</div>
+									</figure>
+								</div>
+								<!-- //card -->
+
+							</section>
+
+
+						</div>
+						<!-- //content end -->
+						<!-- //main-inner -->
+
+					</main>
+					<!-- main -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal3" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__content">
+					<div class="modal-select">
+						<strong class="modal-select-title">내 댓글</strong>
+						<ul class="modal-select-list">
+							<li><button type="button"><i class="i-modify"></i>수정</button></li>
+							<li><button type="button"><i class="i-delete"></i>삭제</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal4" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__content">
+
+					<!-- modal-filter -->
+					<div class="modal-filter">
+
+						<!-- row-list-title -->
+						<div class="row-list-title">상세검색</div>
+						<!-- row-list-title -->
+
+						<!-- row-list -->
+						<div class="row-list">
+							<ul class="group">
+								<li class="j-between">
+									<div class="group-title">기간</div>
+									<div class="group-cont">
+										<label class="inp"><input type="checkbox"><b>기간 직접 입력</b></label>
+									</div>
+								</li>
+								<li class="flex-wrap">
+									<div class="group-cont">
+										<div class="row-box-list">
+											<label class="inp-btn flex-auto px0"><input type="radio" name="inp-btn001"><b>전체</b></label>
+											<label class="inp-btn flex-auto px0"><input type="radio" name="inp-btn001"><b>7일</b></label>
+											<label class="inp-btn flex-auto px0"><input type="radio" name="inp-btn001"><b>30일</b></label>
+											<label class="inp-btn flex-auto px0"><input type="radio" name="inp-btn001"><b>60일</b></label>
+											<label class="inp-btn flex-auto px0"><input type="radio" name="inp-btn001"><b>90일</b></label>
+										</div>
+									</div>
+								</li>
+								<li>
+									<input type="date" title="시작일">
+									<div class="bul">~</div>
+									<input type="date" title="종료일">
+								</li>
+							</ul>
+						</div>
+						<!-- //row-list -->
+
+						<div class="divide-line"></div>
+
+
+						<!-- row-list -->
+						<div class="row-list">
+							<ul class="group">
+								<li>
+									<div class="group-title" style="flex:0 0 90px;">보낸사람</div>
+									<div class="group-cont">
+										<input type="text" title="보낸사람" placeholder="입력해 주세요">
+									</div>
+								</li>
+								<li>
+									<div class="group-title" style="flex:0 0 90px;">받는사람, 참조</div>
+									<div class="group-cont">
+										<input type="text" title="받는사람, 참조" placeholder="입력해 주세요">
+									</div>
+								</li>
+								<li>
+									<div class="group-title" style="flex:0 0 90px;">제목</div>
+									<div class="group-cont">
+										<input type="text" title="제목" placeholder="입력해 주세요">
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //row-list -->
+
+						<!-- row-list -->
+						<div class="btn-wrap">
+							<div class="center">
+								<button type="button" class="btn-large btn-outline-red">닫기</button>
+								<button type="button" class="btn-large btn-black">검색</button>
+							</div>
+						</div>
+						<!-- //row-list -->
+
+					</div>
+					<!-- //modal-filter -->
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-dropdown modal" id="modal5" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__content">
+					<div class="modal-select">
+						<ul class="modal-select-list">
+							<li><button type="button"><i class="i-mail01"></i>내게 쓴 메일함</button></li>
+							<li><button type="button"><i class="i-mail02"></i>보낸 메일함</button></li>
+							<li><button type="button"><i class="i-mail03"></i>임시 메일함</button></li>
+							<li><button type="button"><i class="i-mail04"></i>스팸 메일함</button></li>
+							<li><button type="button"><i class="i-mail05"></i>휴지통</button></li>
+							<li><button type="button"><i class="i-mail06"></i>개인 메일함</button></li>
+							<li><button type="button"><i class="i-mail07"></i>개인 추가</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-dropdown modal" id="modal6" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__content">
+					<div class="modal-select">
+						<ul class="modal-select-list">
+							<li><button type="button"><i class="i-folder01"></i>개인업무 폴더함</button></li>
+							<li><button type="button"><i class="i-folder02"></i>부서업무 폴더함</button></li>
+							<li><button type="button"><i class="i-folder03"></i>공유받은 폴더함</button></li>
+							<li><button type="button"><i class="i-folder04"></i>스팸메일함</button></li>
+							<li><button type="button"><i class="i-folder05"></i>휴지통</button></li>
+							<li><button type="button"><i class="i-folder06"></i>개인메일함</button></li>
+							<li><button type="button"><i class="i-folder07"></i>개인추가</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal8" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__content">
+					<div class="modal-select">
+						<strong class="modal-select-title">
+							<div class="date">2024. 06. 26 (수)</div>
+						</strong>
+						<ul class="modal-select-list">
+							<li>
+								<button type="button" class="chevron-30 j-start">
+									<i class="i-time"></i>
+									<div><span class="fc-gray600 nowrap">16:00</span> 미팅 #1</div>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="chevron-30 j-start">
+									<i class="i-time"></i>
+									<div><span class="fc-gray600 nowrap">16:00</span> 미팅 #1미팅 #1미팅 #1미팅 #1미팅 #1미팅 #1미팅 #1</div>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-dropdown modal" id="modal9" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__content">
+					<div class="modal-select">
+						<ul class="modal-select-list">
+							<li><button type="button"><i class="i-folder01"></i>새폴더</button></li>
+							<li><button type="button"><i class="i-folder02"></i>업로드</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal10" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__content">
+
+					<!-- modal-filter -->
+					<div class="modal-filter">
+
+						<!-- row-list-title -->
+						<div class="row-list-title d-flex j-between">이미지 업로드
+							<label for="file-attach01" class="btn-small btn-outline-black btn-inner-ico"><i class="i-file"></i>파일 선택</button>
+						</div>
+						<!-- row-list-title -->
+
+						<div class="form py0 px0 mt10">
+							<input type="file" id="file-attach01" class="inp-file" title="파일 업로드" placeholder="업로드할 파일을 선택해 주세요">
+						</div>
+
+						<!-- info-list -->
+						<ul class="info-list mt10">
+							<li>제한 용량:2MByte</li>
+							<li>Image 파일 가로 길이: 1200Pixel</li>
+							<li>Thumb Image 생성 가로 길이 : 300Pixel</li>
+						</ul>
+						<!-- //info-list -->
+
+
+
+						<!-- row-list -->
+						<div class="btn-wrap">
+							<div class="center">
+								<button type="button" class="btn-large btn-outline-red" data-micromodal-close>취소</button>
+								<button type="button" class="btn-large btn-black">전송</button>
+							</div>
+						</div>
+						<!-- //row-list -->
+
+					</div>
+					<!-- //modal-filter -->
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- bottom-btn -->
+	<div class="bottom-btn">
+		<div class="btn-wrap">
+			<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal5">modal5</button>
+			<button type="button" class="btn-large btn-outline-red">취소</button>
+			<button type="button" class="btn-large btn-outline-red">취소</button>
+			<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal5">modal5</button>
+
+		</div>
+	</div>
+	<!-- //bottom-btn -->
+
+
+	<script>
+		// micromodal
+		MicroModal.init({
+			onShow: function(modalPopup, element) {
+				const trigger = element;
+				const triggerRect = trigger.getBoundingClientRect();
+				const triggerPositionTop = triggerRect.top;
+				const triggerPositionRight = triggerRect.right;
+				const triggerPositionBottom = triggerRect.bottom;
+				const triggerPositionLeft = triggerRect.left;
+				const windowWidth = window.outerWidth;
+				const windowHeight = window.outerHeight;
+				if (modalPopup.classList.contains('micromodal-slide-dropdown')) {
+					const modalPopupBody = modalPopup.querySelector('.modal__container');
+					const modalPopupBodyWidth = modalPopupBody.clientWidth;
+					const modalPopupBodyHeight = modalPopupBody.clientHeight;
+
+					const padding = 10
+
+					// default (position right)
+					if (triggerPositionRight > windowWidth / 2) {
+						modalPopupBody.style.left = triggerPositionRight - modalPopupBodyWidth + 'px';
+
+					}
+					// reverse (position left)
+					else if (windowWidth / 2 > triggerPositionRight) {
+						modalPopupBody.style.left = triggerPositionLeft + 'px';
+					}
+
+					// default (position bottom)
+					if (windowHeight / 2 > triggerPositionTop) {
+						modalPopupBody.style.top = triggerPositionBottom + padding + 'px';
+
+						//overflow bottom
+						if (windowHeight < triggerPositionBottom + padding + modalPopupBodyHeight) {
+							modalPopupBody.style.overflow = 'auto'
+							modalPopupBody.style.maxHeight = windowHeight - triggerPositionBottom - padding + 'px'
+						}
+					}
+					// reverse (position top)
+					else if (windowHeight / 2 < triggerPositionTop) {
+						modalPopupBody.style.bottom = windowHeight - triggerPositionTop + padding + 'px';
+
+						//overflow top
+						if (windowHeight < windowHeight - triggerPositionTop + padding + modalPopupBodyHeight) {
+							modalPopupBody.style.overflow = 'auto'
+							modalPopupBody.style.maxHeight = windowHeight - (windowHeight - triggerPositionTop + padding) + 'px'
+						}
+					}
+				}
+			}, // [1]
+			onClose: function(modalPopup, element) {
+				const trigger = element;
+				if (modalPopup.classList.contains('micromodal-slide-dropdown')) {
+					const modalPopupBody = modalPopup.querySelector('.modal__container');
+					setTimeout(function() {
+						modalPopupBody.removeAttribute('style');
+					}, 300)
+				}
+			}, // [2]
+			// openTrigger: 'data-custom-open', // [3]
+			// closeTrigger: 'data-custom-close', // [4]
+			// openClass: 'is-open', // [5]
+			// disableScroll: true, // [6]
+			// disableFocus: false, // [7]
+			awaitOpenAnimation: true, // [8]
+			awaitCloseAnimation: true, // [9]
+			// debugMode: true // [10]
+		});
+		// document.addEventListener("DOMContentLoaded", function() {
+		// 	MicroModal.show('modal1', {
+		// 		// awaitCloseAnimation: true,
+		// 		onShow: function(modalPopup) {
+		// 			console.info(modalPopup.id + 'is shown')
+
+		// 		},
+		// 		onClose: function(modalPopup) {
+		// 			console.info(modalPopup.id + 'is hidden')
+		// 		}
+		// 	});
+		// });
+	</script>
+</body>
+
+</html>

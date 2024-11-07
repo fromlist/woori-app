@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT커스터마이징</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- 개발에서 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+	<!-- main -->
+	<main>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+				</div>
+				<div class="center">
+					<h1>메일</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="btn-ico btn-size30"><i class="i-close"></i><span class="blind">닫기</span></button>
+				</div>
+			</div>
+			<div class="sub-header">
+				<div class="left">
+					<button type="button" class="btn-ico btn-size24"><i class="i-menu"></i><span class="blind">메뉴</span></button>
+				</div>
+				<div class="center">
+					<h2>휴지통</h2>
+				</div>
+				<div class="right">
+					<button type="button" class="btn-ico btn-size30"><i class="i-search"></i><span class="blind">검색</span></button>
+					<button type="button" class="btn-ico btn-size30"><i class="i-modify"></i><span class="blind">새 메일</span></button>
+				</div>
+			</div>
+
+			<!-- form -->
+			<div class="form">
+				<div class="input-wrap">
+					<input type="text" value="" placeholder="검색어를 입력해 주세요">
+					<button type="button" class="form-btn form-search" title="검색"></button>
+				</div>
+				<button type="button" class="btn-large btn-outline-black btn-inner-ico btn-ratio" data-micromodal-trigger="modal3"><i class="i-filter"></i><span class="blind">필터</span></button>
+			</div>
+			<!-- //form -->
+
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- section -->
+			<section class="section">
+
+				<div class="pb10 d-flex j-between">
+					<label class="inp"><input type="checkbox"><b>전체선택</b></label>
+					<button type="button" class="btn-small btn-outline-black btn-inner-ico mlauto"><i class="i-cancel"></i>취소</button>
+				</div>
+
+				<!-- card -->
+				<label class="card">
+					<div class="inp"><input type="checkbox"></div>
+					<figure class="card-mail">
+						<figcaption>
+							<div class="card-mail-title">
+								<div class="left">
+									<div class="work-label work-label-blue" title="읽지 않음">케이티</div>
+								</div>
+								<div class="right">
+									<div class="date">2024. 05. 23 13:01</div>
+								</div>
+							</div>
+							<div class="headline ellipsis">휴가 일정 공유드립니다. </div>
+						</figcaption>
+					</figure>
+				</label>
+				<!-- //card -->
+
+				<!-- card -->
+				<label class="card">
+					<div class="inp"><input type="checkbox"></div>
+					<figure class="card-mail">
+						<figcaption>
+							<div class="card-mail-title">
+								<div class="left">
+									<div class="work-label" title="읽음">홍길동</div>
+								</div>
+								<div class="right">
+									<div class="date">2024. 05. 23 13:01</div>
+								</div>
+							</div>
+							<div class="headline ellipsis">휴가 일정 공유드립니다. 휴가 일정 공유드립니다. 휴가 일정 공유드립니다. 휴가 일정 공유드립니다. </div>
+						</figcaption>
+					</figure>
+				</label>
+				<!-- //card -->
+
+			</section>
+			<!-- //section -->
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-outline-red">삭제</button>
+				<button type="button" class="btn-large btn-black">안읽음</button>
+				<button type="button" class="btn-large btn-black">읽음</button>
+				<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal5">이동</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-dropdown modal" id="modal5" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__content">
+					<div class="modal-select">
+						<ul class="modal-select-list">
+							<li><button type="button"><i class="i-mail11"></i>받은 메일함</button></li>
+							<li><button type="button"><i class="i-mail01"></i>내게 쓴 메일함</button></li>
+							<li><button type="button"><i class="i-mail02"></i>보낸 메일함</button></li>
+							<li><button type="button"><i class="i-mail03"></i>임시 메일함</button></li>
+							<li><button type="button"><i class="i-mail04"></i>스펨 메일함</button></li>
+							<li><button type="button"><i class="i-mail06"></i>개인 메일함</button></li>
+							<li><button type="button"><i class="i-mail07"></i>개인 추가</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<script>
+		// micromodal
+		MicroModal.init({
+			onShow: function(modalPopup, element) {
+				const trigger = element;
+				const triggerRect = trigger.getBoundingClientRect();
+				const triggerPositionTop = triggerRect.top;
+				const triggerPositionRight = triggerRect.right;
+				const triggerPositionBottom = triggerRect.bottom;
+				const triggerPositionLeft = triggerRect.left;
+				const windowWidth = window.outerWidth;
+				const windowHeight = window.outerHeight;
+				if (modalPopup.classList.contains('micromodal-slide-dropdown')) {
+					const modalPopupBody = modalPopup.querySelector('.modal__container');
+					const modalPopupBodyWidth = modalPopupBody.clientWidth;
+					const modalPopupBodyHeight = modalPopupBody.clientHeight;
+
+					const padding = 10
+
+					// default (position right)
+					if (triggerPositionRight > windowWidth / 2) {
+						modalPopupBody.style.left = triggerPositionRight - modalPopupBodyWidth + 'px';
+
+					}
+					// reverse (position left)
+					else if (windowWidth / 2 > triggerPositionRight) {
+						modalPopupBody.style.left = triggerPositionLeft + 'px';
+					}
+
+					// default (position bottom)
+					if (windowHeight / 2 > triggerPositionTop) {
+						modalPopupBody.style.top = triggerPositionBottom + padding + 'px';
+
+						//overflow bottom
+						if (windowHeight < triggerPositionBottom + padding + modalPopupBodyHeight) {
+							modalPopupBody.style.overflow = 'auto'
+							modalPopupBody.style.maxHeight = windowHeight - triggerPositionBottom - padding + 'px'
+						}
+					}
+					// reverse (position top)
+					else if (windowHeight / 2 < triggerPositionTop) {
+						modalPopupBody.style.bottom = windowHeight - triggerPositionTop + padding + 'px';
+
+						//overflow top
+						if (windowHeight < windowHeight - triggerPositionTop + padding + modalPopupBodyHeight) {
+							modalPopupBody.style.overflow = 'auto'
+							modalPopupBody.style.maxHeight = windowHeight - (windowHeight - triggerPositionTop + padding) + 'px'
+						}
+					}
+				}
+			}, // [1]
+			onClose: function(modalPopup, element) {
+				const trigger = element;
+				if (modalPopup.classList.contains('micromodal-slide-dropdown')) {
+					const modalPopupBody = modalPopup.querySelector('.modal__container');
+					setTimeout(function() {
+						modalPopupBody.removeAttribute('style');
+					}, 300)
+				}
+			}, // [2]
+			// openTrigger: 'data-custom-open', // [3]
+			// closeTrigger: 'data-custom-close', // [4]
+			// openClass: 'is-open', // [5]
+			// disableScroll: true, // [6]
+			// disableFocus: false, // [7]
+			awaitOpenAnimation: true, // [8]
+			awaitCloseAnimation: true, // [9]
+			// debugMode: true // [10]
+		});
+		// document.addEventListener("DOMContentLoaded", function() {
+		// 	MicroModal.show('modal1', {
+		// 		// awaitCloseAnimation: true,
+		// 		onShow: function(modalPopup) {
+		// 			console.info(modalPopup.id + 'is shown')
+
+		// 		},
+		// 		onClose: function(modalPopup) {
+		// 			console.info(modalPopup.id + 'is hidden')
+		// 		}
+		// 	});
+		// });
+	</script>
+
+</body>
+
+</html>

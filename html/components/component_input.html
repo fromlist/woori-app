@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-	<title>신한투자증권프로젝트메타</title>
+	<title>KT 커스터마이징</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,6 +21,8 @@
 	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
 	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
 	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
 	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
 	<!-- micromodal -->
 	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
@@ -51,7 +53,6 @@
 	<link rel="stylesheet" href="../../assets/css/ui-style.css">
 	<link rel="stylesheet" href="../../assets/css/ui-content.css">
 	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
-	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
 	<link rel="stylesheet" href="../../assets/css/ui-guide.css">
 
 	<script src="../../assets/js/ui-script.js"></script>
@@ -61,16 +62,7 @@
 </head>
 
 <body>
-	<div>
-		<label class="inp-switch gap10 d-inflex">
-			<b>테마변경</b>
-			<span class="theme-switch">
-				<input type="checkbox" id="themeSelector">
-				<span class="theme-input-white"><span class="blind">화이트모드</span></span>
-				<span class="theme-input-dark"><span class="blind">다크모드</span></span>
-			</span>
-		</label>
-	</div>
+
 	<div>
 		<h1>input</h1>
 		<div class="column">
@@ -106,9 +98,9 @@
 			</div>
 			<div class="hr">
 				<h2>Date</h2>
-				<input type="date" title="">
+				<input type="text" title="" data-datepicker>
 				<br>
-				<input type="date" title="" value="2024-05-20">
+				<input type="text" title="" data-datepicker value="2024-05-20">
 			</div>
 			<div class="hr">
 				<h2>Time</h2>
@@ -199,171 +191,62 @@
 			</div>
 		</div>
 
-		<h1>Dropdown</h1>
+
+		<h1>Form</h1>
 		<div class="column">
 			<div class="hr">
-				<h2>Default</h2>
-				<div class="dropDown">
-					<button type="button" class="trigger" aria-expanded="true">전체</button>
-					<ul class="target">
-						<li class="is-selected"><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-						<li><button type="button">전체</button></li>
-					</ul>
+				<div class="form">
+					<select name="" id="">
+						<option value="선택안함">선택안함</option>
+					</select>
 				</div>
-			</div>
-			<div class="hr">
-				<h2>Type button</h2>
-				<div class="d-inflex">
-					<div class="dropDown">
-						<button type="button" class="trigger not-button btn-large btn-primary" aria-expanded="true">버튼형</button>
-						<ul class="target">
-							<li class="is-selected"><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-						</ul>
+				<div class="form">
+					<input type="text" placeholder="검색어를 입력해 주세요" title="검색어를 입력해 주세요">
+				</div>
+				<div class="form">
+					<input type="date">
+					<div class="bul">~</div>
+					<input type="date">
+				</div>
+				<div class="form">
+					<div class="input-wrap">
+						<input type="text" value="" placeholder="검색어를 입력해 주세요">
+						<button type="button" class="form-btn form-search" title="검색"></button>
 					</div>
 				</div>
-			</div>
-			<div class="hr">
-				<h2>Has title</h2>
-				<div class="d-inflex">
-					<div class="dropDown has-title">
-						<button type="button" class="trigger not-button btn-large btn-primary" aria-expanded="true">버튼형</button>
-						<div class="target position-right">
-							<div class="target-title">
-								<strong>설정</strong>
-							</div>
-							<ul>
-								<li>
-									<label class="inp-switch"><b>테마변경</b><input type="checkbox" name="inp-switch001"></label>
-								</li>
-								<li><a href="#">테마변경</a></li>
-								<li><a href="#">테마변경</a></li>
-							</ul>
-						</div>
+				<div class="form">
+					<div class="input-wrap">
+						<input type="text" title="댓글 입력" placeholder="댓글을 입력해 주세요">
+						<button type="button" class="form-btn form-send" title="전송"></button>
 					</div>
 				</div>
-			</div>
-			<div class="hr">
-				<h2>Dropdown target position</h2>
-				<div class="d-inflex">
-					<div class="dropDown">
-						<button type="button" class="trigger not-button btn-large btn-primary" aria-expanded="true">left</button>
-						<ul class="target">
-							<li class="is-selected"><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-						</ul>
+				<div class="form">
+					<div class="input-wrap">
+						<input type="text" value="케이티">
+						<button type="button" class="form-btn form-delete" title="검색어 삭제"></button>
 					</div>
 				</div>
-			</div>
-			<div class="hr">
-				<h2>Dropdown target position</h2>
-				<div class="d-inflex">
-					<div class="dropDown">
-						<button type="button" class="trigger not-button btn-large btn-primary" aria-expanded="true">center</button>
-						<ul class="target position-center">
-							<li class="is-selected"><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-						</ul>
+
+				<div class="form">
+					<div class="input-wrap">
+						<input type="text" value="" title="문항" placeholder="1. 문항">
+						<button type="button" class="form-btn form-attach" title="검색"></button>
 					</div>
 				</div>
-			</div>
-			<div class="hr">
-				<h2>Dropdown target position</h2>
-				<div class="d-inflex">
-					<div class="dropDown">
-						<button type="button" class="trigger not-button btn-large btn-primary" aria-expanded="true">right</button>
-						<ul class="target position-right">
-							<li class="is-selected"><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-							<li><button type="button">전체</button></li>
-						</ul>
+				<div class="form">
+					<div class="input-wrap input-wrap-btn2">
+						<input type="text" value="" title="문항" placeholder="1. 문항">
+						<label for="file-attach" class="form-btn form-attach" title="첨부파일">
+							<input type="file" id="file-attach">
+						</label>
+						<button type="button" class="form-btn form-delete" title="항목 삭제"></button>
 					</div>
 				</div>
-			</div>
-			<div class="hr"></div>
-			<div class="hr"></div>
-			<div class="hr">
-				<h2>Dropdown Alarm</h2>
-				<div class="d-inflex">
-					<div class="dropDown has-title">
-						<button type="button" class="trigger not-button btn-large btn-primary" aria-expanded="true">알림</button>
-						<div class="target position-right">
-							<div class="target-title">
-								<strong>알림</strong>
-								<button type="button" class="btn-xsmall btn-secondary btn-inner-ico btn-ratio"><i class="i-refresh"></i><span class="blind">새로고침</span></button>
-							</div>
-							<div class="alarm-list">
-								<ul>
-									<li>
-										<a href="#">
-											<div class="thumb"></div>
-											<div class="list">
-												<strong class="ellipsis" data-ellipsis="2">Q&A게시판에 문의글이 등록되었습니다. 문의글이 등록되었습니다. 문의글이 등록되었습니다. 문의글이 등록되었습니다. 문의글이 등록되었습니다. 문의글이 등록되었습니다. 문의글이 등록되었습니다.</strong>
-												<span>23.04.23(화) 17:00 ~ 24:00</span>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<div class="thumb"></div>
-											<div class="list">
-												<strong class="ellipsis" data-ellipsis="2">Q&A게시판에 문의글이 등록되었습니다.</strong>
-												<span>23.04.23(화) 17:00 ~ 24:00</span>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<div class="thumb"></div>
-											<div class="list">
-												<strong class="ellipsis" data-ellipsis="2">Q&A게시판에 문의글이 등록되었습니다.</strong>
-												<span>23.04.23(화) 17:00 ~ 24:00</span>
-											</div>
-										</a>
-									</li>
-								</ul>
-								<button type="button" class="more-view">더보기</button>
-							</div>
-						</div>
-					</div>
+				<div class="form">
+					<input type="file" id="file-attach01" class="inp-file" title="파일 업로드">
 				</div>
 			</div>
 		</div>
-
 
 		<h1>Checkbox</h1>
 		<div class="column">
@@ -379,7 +262,7 @@
 			</div>
 			<div class="hr">
 				<h2>form-list</h2>
-				<div class="form form-list">
+				<div class="form-list">
 					<label class="inp"><input type="checkbox"><b>Checkbox</b></label>
 					<label class="inp"><input type="checkbox"><b>Checkbox</b></label>
 					<label class="inp"><input type="checkbox"><b>Checkbox</b></label>
@@ -401,7 +284,7 @@
 			</div>
 			<div class="hr">
 				<h2>form-list</h2>
-				<div class="form form-list">
+				<div class="form-list">
 					<label class="inp"><input type="radio"><b>radio</b></label>
 					<label class="inp"><input type="radio"><b>radio</b></label>
 					<label class="inp"><input type="radio"><b>radio</b></label>
@@ -409,13 +292,24 @@
 			</div>
 		</div>
 
-		<h1>Search button</h1>
+		<h1>inp-btn</h1>
 		<div class="column">
 			<div class="hr">
 				<h2>Default</h2>
 				<div class="d-flex gap10">
-					<label class="inp-btn"><b>Checkbox</b><input type="checkbox" name="inp-btn001"></label>
-					<label class="inp-btn"><b>Checkbox</b><input type="checkbox" name="inp-btn001"></label>
+					<label class="inp-btn"><input type="checkbox" name="inp-btn001"><b>Checkbox</b></label>
+					<label class="inp-btn"><input type="checkbox" name="inp-btn001"><b>Checkbox</b></label>
+				</div>
+			</div>
+		</div>
+
+		<h1>inp-box</h1>
+		<div class="column">
+			<div class="hr">
+				<h2>Default</h2>
+				<div class="d-flex gap10">
+					<label class="inp-box"><input type="radio" name="inp-btn001"><b>radio</b></label>
+					<label class="inp-box"><input type="radio" name="inp-btn001"><b>radio</b></label>
 				</div>
 			</div>
 		</div>
@@ -446,6 +340,23 @@
 				placement: 'top-start',
 			});
 		})
+	</script>
+	<script>
+		$(function() {
+			$("[data-datepicker]").datepicker({
+				// showOn: 'button',
+				dateFormat: 'yy-mm-dd',
+				prevText: '이전 달',
+				nextText: '다음 달',
+				monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+				monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+				dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+				dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+				dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+				showMonthAfterYear: true,
+				yearSuffix: '년'
+			});
+		});
 	</script>
 </body>
 

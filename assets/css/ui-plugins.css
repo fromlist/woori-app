@@ -1,25 +1,25 @@
 @charset "utf-8";
 
 
-/* card swiper */
-.swiper-content {display:grid;}
-.swiper-content .swiper {max-width:100%;}
-.swiper-content .swiper .swiper-wrapper {height:auto;}
-
-.swiper-horizontal>.swiper-scrollbar,
-.swiper-scrollbar.swiper-scrollbar-horizontal {position:relative;width:80px;margin:14px auto 0;top:auto;left:auto;bottom:auto;z-index:auto;height:5px;border-radius:4px;background:var(--graye);}
-.swiper-scrollbar-drag {background-color:#AEB1C0;border-radius:4px;}
-
 /* sweetalert2 */
-div:where(.swal2-container) div:where(.swal2-popup) {width:240px;padding-bottom:20px;border-radius:0;background-color:var(--white);}
-div:where(.swal2-container) button:where(.swal2-close) {position:absolute;right:21px;top:14px;font-size:0;background:url(../images/plugins/sweetalert2-close.svg) center center / contain no-repeat;width:20px;height:20px;margin:0;}
-div:where(.swal2-container) button:where(.swal2-close):hover {background:url(../images/plugins/sweetalert2-close.svg) center center / contain no-repeat;}
-div:where(.swal2-container) h2:where(.swal2-title) {font-size:15px;font-weight:700;color:var(--black5);text-align:left;padding:14px 41px 10px 24px;border-bottom:1px solid var(--graye6);}
-div:where(.swal2-container) .swal2-html-container {margin:20px 10px 0;font-size:14px;font-weight:500;line-height:inherit;color:var(--black2);}
-div:where(.swal2-container) div:where(.swal2-actions) {margin:14px auto 0;gap:20px;}
+div:where(.swal2-container) div:where(.swal2-popup) {width:calc(100vw - 60px);border-radius:12px;padding-bottom:0;overflow:hidden;}
 
-div:where(.swal2-container) {z-index:calc(var(--nav-zIndex) +  1001);}
+div:where(.swal2-container) h2:where(.swal2-title) {font-size:18px;font-weight:700;color:var(--gray900);text-align:left;padding:20px 20px 4px;}
+div:where(.swal2-container) .swal2-html-container {margin:16px 20px;font-size:15px;line-height:inherit;color:var(--gray800);}
+div:where(.swal2-container) div:where(.swal2-actions) {display:flex;margin:0;border-top:1px solid var(--gray100);}
+div:where(.swal2-container) div:where(.swal2-actions) .btn-alert {flex:1;font-size:16px;font-weight:700;line-height:60px;color:var(--gray900);text-align:center;}
+div:where(.swal2-container) div:where(.swal2-actions) .btn-alert:not(:last-child) {border-right:1px solid var(--gray100);}
 
+div:where(.swal2-container) {z-index:calc(var(--header-zIndex) +  1001);}
+@keyframes swal2-show {
+    0% {transform:scale(0.99)}
+    45% {transform:scale(1.01)}
+    80% {transform:scale(0.99)}
+    100% {transform:scale(1)}
+}
+
+/* quill */
+select.ql-ui {height:initial;appearance:auto;font-size:initial;font-weight:initial;;padding:initial;background:#fff;border-radius:initial;}
 /* highlightjs */
 .highlightjs {display:flex;}
 .highlightjs pre {display:flex;flex:1;}
@@ -28,132 +28,438 @@ div:where(.swal2-container) {z-index:calc(var(--nav-zIndex) +  1001);}
 
 /* micromodal */
 .modal {font-family:inherit;}
-.micromodal-slide.is-open {position:relative;z-index:calc(var(--nav-zIndex) +  1000);}
-.modal__container {max-width:80vw;max-height:80vh;width:100%;padding:0;background-color:var(--white);}
-.modal__content {margin:0;line-height:inherit;color:inherit;padding:30px 24px 60px;}
+.micromodal-slide.is-open {position:relative;z-index:calc(var(--header-zIndex) +  1000);}
+.modal__container {padding:0;max-width:none;max-height:100%;border-radius:0;flex:1 1 100%;background-color:transparent;}
+.modal__content {margin:0;line-height:inherit;color:inherit;padding:0;border-radius:0;}
+.modal__overlay {display:block;}
 .micromodal-slide .modal__container, .micromodal-slide .modal__overlay {will-change:initial;}
-.micromodal-slide.modal-contain {position:absolute;}
-.micromodal-slide.modal-contain.is-open {z-index:calc(var(--nav-zIndex) - 10);}
-.micromodal-slide.modal-contain .modal__overlay {position:static;background:none;}
-.micromodal-slide.modal-contain .modal__container {}
+.micromodal-slide[aria-hidden="false"] .modal__container.modal__container__left {animation:mmslideLeftIn .3s cubic-bezier(0, 0, .2, 1)}
+.micromodal-slide[aria-hidden="true"] .modal__container.modal__container__left {animation:mmslideLeftOut .3s cubic-bezier(0, 0, .2, 1);}
 
-/* quill */
-.quill-editor {min-height:130px;}
-.ql-container {font-family:inherit;}
-.ql-editor {min-height:inherit;}
-.ql-editor.ql-blank::before {font-style:normal;color:inherit;}
-.ql-toolbar.ql-snow {border:1px solid var(--graye6);border-radius:8px 8px 0 0;}
-.ql-container.ql-snow {border:1px solid var(--graye6);border-radius:0 0 8px 8px;}
-.ql-container.ql-snow:has(.ql-editor:only-child) {border-radius:8px;}
-.ql-snow .ql-stroke {stroke:var(--black2);}
-.ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {fill:var(--black2);}
-.ql-snow .ql-picker {color:var(--black2);}
-.ql-snow .ql-picker-options {background-color:var(--white);}
+.micromodal-slide-bottom .modal__overlay {display:flex;align-items:flex-end;}
+.micromodal-slide-bottom .modal__container {overflow:none;}
+.micromodal-slide-bottom .modal__content {background-color:var(--white);padding:30px 16px 20px;border-radius:20px 20px 0 0;max-height:80vh;overflow-y:auto;}
 
-/* dropzone */
-.dropzone {display:flex;gap:10px 20px;flex-wrap:wrap;min-height:90px;padding:10px;background-color:var(--white);border:1px solid var(--graye6);border-radius:8px;align-items:center;justify-content:center;}
-.dropzone.dz-started {justify-content:flex-start;align-items:flex-start;}
-.dropzone .dz-message {display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0;font-size:13px;font-weight:400;color:var(--graya7);}
-.dropzone .dz-message:before {content:'';flex:0 0 30px;width:30px;height:30px;background:url(../images/plugins/dropzone-upload.svg) center center / contain no-repeat;}
-.dropzone .dz-message .dz-button {}
-.dropzone .dz-preview .dz-image,
-.dropzone .dz-preview .dz-progress,
-.dropzone .dz-preview .dz-success-mark,
-.dropzone .dz-preview .dz-error-mark,
-.dropzone .dz-preview .dz-details .dz-size {display:none;}
-.dropzone .dz-preview {margin:0;min-height:0;display:block;position:relative;background-color:var(--grayf4);border-radius:8px;flex:0 0 calc(25% - 15px);max-width:calc(25% - 15px);height:100%;}
-.dropzone .dz-preview .dz-details {position:static;display:flex;font-size:14px;font-weight:500;line-height:20px;color:var(--black5);padding:10px 40px 10px 20px;gap:6px;}
-.dropzone .dz-preview .dz-details:before {content:'';flex:0 0 20px;width:20px;height:20px;background:url(../images/btn/btn-ico-attach.svg) center center / contain no-repeat;}
-.dropzone .dz-preview .dz-details .dz-filename {width:100%;text-align:left;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;}
-.dropzone .dz-preview .dz-details .dz-filename span,
-.dropzone .dz-preview .dz-details .dz-size span,
-.dropzone .dz-preview .dz-details .dz-filename:not(:hover) span,
-.dropzone .dz-preview .dz-details .dz-filename:hover span {border-radius:initial;padding:0 5px 0 0;background-color:initial;border:none;}
-.dropzone .dz-preview .dz-remove {position:absolute;right:0;top:50%;transform:translateY(-50%);display:block;flex:0 0 40px;width:40px;height:40px;background:url(../images/btn/btn-ico-attach-remove.svg) center center / 20px 20px no-repeat;font-size:0px;}
-.dropzone .dz-preview .dz-error-message {top:calc(100% + 10px);left:0;}
-.dropzone .dz-preview.dz-error .dz-error-message {opacity:1;}
+.micromodal-slide-dropdown .modal__container {position:absolute;background-color:var(--white);padding:10px 24px;border-radius:12px;}
 
-.tippy-box[data-theme~='tomato'],
-.tippy-box[data-theme~='link'] {background-color:var(--black19);color:var(--white);filter:drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10));border-radius:8px;padding:14px;}
-.tippy-box[data-theme~='tomato'][data-placement^=top]>.tippy-arrow:before,
-.tippy-box[data-theme~='link'][data-placement^=top]>.tippy-arrow:before {border-top-color:var(--black19)!important;}
-.tippy-box[data-theme~='tomato'][data-placement^=left]>.tippy-arrow:before,
-.tippy-box[data-theme~='link'][data-placement^=left]>.tippy-arrow:before {border-left-color:var(--black19)!important;}
-.tippy-box[data-theme~='tomato'][data-placement^=right]>.tippy-arrow:before,
-.tippy-box[data-theme~='link'][data-placement^=right]>.tippy-arrow:before {border-right-color:var(--black19)!important;}
-.tippy-box[data-theme~='tomato'][data-placement^=bottom]>.tippy-arrow:before,
-.tippy-box[data-theme~='link'][data-placement^=bottom]>.tippy-arrow:before {border-bottom-color:var(--black19)!important;}
+@keyframes mmslideIn {
+    from {
+        transform:translateY(5%);
+    }
 
-.tippy-box[data-theme~='link'][data-placement^=top]>.tippy-arrow {transform:translate(100%,0)!important;}
-/* .tippy-box[data-theme~='link'] {border-radius:8px 8px 8px 0;} */
+    to {
+        transform:translateY(0);
+    }
+}
 
+@keyframes mmslideOut {
+    from {
+        transform:translateY(0);
+    }
 
-/* jquery ui autocomplete */
-input.autocomplete-active {border-radius:8px 8px 0 0;}
-.ui-widget.ui-widget-content {background-color:var(--white);color:var(--black2);border-color:var(--graye6);max-height:182px;overflow-y:auto;overflow-x:hidden;}
-.ui-state-active,
-.dropdown-target.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active,
-a.ui-button:active,
-.ui-button:active,
-.ui-button.ui-state-active:hover {font-size:14px;border-color:transparent;background:var(--graye9);font-weight:500;color:var(--black2);}
-.dropdown-target.ui-widget {font-family:inherit;}
-.dropdown-target.ui-menu .ui-menu-item-wrapper {padding:8px 12px;}
-.ql-snow .ql-editor select.ql-ui {color:var(--black2);}
+    to {
+        transform:translateY(5%);
+    }
+}
 
+@keyframes mmslideLeftIn {
+    from {
+        transform:translateX(-5%);
+    }
 
-/* jstree */
-.jstree-checklist {}
+    to {
+        transform:translateX(0);
+    }
+}
+@keyframes mmslideLeftOut {
+    from {
+        transform:translateX(0);
+    }
+
+    to {
+        transform:translateX(-5%);
+    }
+}
+
 
 /* jstree icons */
 /* jstree folder */
-.jstree-checklist.jstree-default>.jstree-no-dots .jstree-ocl {
-    -webkit-mask-position:center center;
-    mask-position:center center;
-    -webkit-mask-size:contain;
-    mask-size:contain;
-    -webkit-mask-repeat:no-repeat;
-    mask-repeat:no-repeat;
-    margin-right:10px;
-    flex:0 0 24px;
+.jstree-work .jstree-default .jstree-node,
+.jstree-work .jstree-default .jstree-icon {}
+.jstree-work .jstree-default .jstree-closed>.jstree-ocl {background:url(../images/form/form-jstree-closed.svg) center center / 12px 12px no-repeat;}
+.jstree-work .jstree-default .jstree-open>.jstree-ocl {background:url(../images/form/form-jstree-open.svg) center center / 12px 12px no-repeat;}
+.jstree-work .jstree-anchor>.jstree-themeicon {display:none;}
+.jstree-work.jstree-folder .jstree-anchor>.jstree-themeicon {display: inline-block;background:url(../images/ico/ico-folder-16.svg) center center / 16px 16px no-repeat;}
+
+
+/* datepicker */
+.ui-widget-header {background-color:var(--white);}
+.ui-datepicker td span, .ui-datepicker td a {text-align:center;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {border-color:transparent;background-color:transparent;}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {background-color:var(--red300);color:var(--white);}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {background-color:#176CBB;color:var(--white);}
+
+/* loader */
+.loading-wrap {position:fixed;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;z-index:10000000;background-color:var(--gray100);}
+
+/* #loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side,#959595 94%,#0000) top/8px 8px no-repeat,conic-gradient(#0000 30%,#959595);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    animation: spinning  1s infinite linear;
+}
+@keyframes spinning { 
+    100%{transform: rotate(1turn)}
+} */
+
+/* #loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    border-radius: 50%;
+    background:
+      linear-gradient(0deg ,rgb(0 0 0/50%) 30%,#0000 0 70%,rgb(0 0 0/100%) 0) 50%/8% 100%,
+      linear-gradient(90deg,rgb(0 0 0/25%) 30%,#0000 0 70%,rgb(0 0 0/75% ) 0) 50%/100% 8%;
+    background-repeat: no-repeat;
+    animation: l23 1s infinite steps(12);
+  }
+  #loader::before,
+  #loader::after {
+     content: "";
+     grid-area: 1/1;
+     border-radius: 50%;
+     background: inherit;
+     opacity: 0.915;
+     transform: rotate(30deg);
+  }
+  #loader::after {
+     opacity: 0.83;
+     transform: rotate(60deg);
+  }
+  @keyframes l23 {
+    100% {transform: rotate(1turn)}
+  } */
+
+#loader,
+#loader div,
+#loader div:after {
+    box-sizing: border-box;
+}
+#loader {
+    color: currentColor;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+#loader div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+#loader div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 14.2px;
+    left: 36.8px;
+    width: 4.4px;
+    height: 11.6px;
+    border-radius: 20%;
+    background: currentColor;
+}
+#loader div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+}
+#loader div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+}
+#loader div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+}
+#loader div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+}
+#loader div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+    }
+#loader div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+}
+#loader div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+}
+#loader div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+}
+#loader div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+}
+#loader div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+}
+#loader div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+}
+#loader div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+}
+@keyframes lds-spinner {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-.jstree-checklist.jstree-default>.jstree-no-dots .jstree-closed>.jstree-ocl {
-    background:var(--black5);
-    -webkit-mask-image:url(../images/plugins/jstree-folder-close.svg);
-    mask-image:url(../images/plugins/jstree-folder-close.svg);
-}
-.jstree-default>.jstree-no-dots .jstree-open>.jstree-ocl {
-    background:var(--black5);
-    -webkit-mask-image:url(../images/plugins/jstree-folder-open.svg);
-    mask-image:url(../images/plugins/jstree-folder-open.svg);
-}
-/* jstree checkbox */
-.jstree-checklist.jstree-default .jstree-checkbox {display:inline-flex;align-items:center;justify-content:center;width:24px;flex:0 0 24px;height:24px;border-radius:6px;border:1px solid var(--graye6);background:none;margin-right:10px;}
-.jstree-checklist.jstree-default.jstree-checkbox-selection .jstree-clicked>.jstree-checkbox, 
-.jstree-checklist.jstree-default .jstree-checked>.jstree-checkbox {background:var(--blue1);border-color:transparent;}
-.jstree-checklist.jstree-default.jstree-checkbox-selection .jstree-clicked>.jstree-checkbox:before, 
-.jstree-checklist.jstree-default .jstree-checked>.jstree-checkbox:before {display:block;content:'';width:100%;height:100%;
-    -webkit-mask-position:center center;
-    mask-position:center center;
-    -webkit-mask-size:contain;
-    mask-size:contain;
-    -webkit-mask-repeat:no-repeat;
-    mask-repeat:no-repeat;
-    -webkit-mask-image:url(../images/plugins/jstree-checkbox-checked.svg);
-    mask-image:url(../images/plugins/jstree-checkbox-checked.svg);
-    background:var(--white);
-}
-.jstree-checklist.jstree-default .jstree-anchor>.jstree-undetermined {background-color:var(--blue1);border-color:transparent;}
-.jstree-checklist.jstree-default .jstree-anchor>.jstree-undetermined:before {content:'';display:flex;align-items:center;justify-content:center;width:10px;height:1.5px;background-color:var(--white);border-radius:3px;}
-.jstree-checklist.jstree-default .jstree-themeicon {display:none;}
-
-/* jstree style */
-.jstree-checklist.jstree-default>.jstree-container-ul>.jstree-node {display:flex;flex-wrap:wrap;} /*li*/
-.jstree-checklist.jstree-default>.jstree-container-ul>.jstree-node:not(:last-child) {margin-bottom:20px;}
-.jstree-checklist.jstree-default .jstree-anchor {display:flex;font-size:14px;font-weight:500;padding:0;flex:1 1 calc(100% - 34px);}/*li > a*/
-.jstree-checklist.jstree-default .jstree-node {display:flex;width:100%;flex:1 1 100%;flex-wrap:wrap;}
-.jstree-checklist.jstree-default .jstree-node {margin-top:20px;}
-.jstree-checklist.jstree-default>ul>.jstree-node:first-child {margin-top:0;}
-.jstree-checklist .jstree-checkbox .jstree-children {flex:1 1 100%;}
-.jstree-checklist.jstree-default .jstree-wholerow-ul .jstree-wholerow {display:none;}
+/* flag */
+.flag { background-image:url(../images/flags/flags.png); display:inline-block; width:16px; height:11px; }
+.flag.afghanistan{ background-position:0px -2311px; }
+.flag.albania{ background-position:0px -1034px; }
+.flag.algeria{ background-position:0px -528px; }
+.flag.americanSamoa{ background-position:0px -1562px; }
+.flag.andorra{ background-position:0px -594px; }
+.flag.angola{ background-position:0px -1947px; }
+.flag.anguilla{ background-position:0px -1980px; }
+.flag.antiguaAndBarbuda{ background-position:0px -869px; }
+.flag.argentina{ background-position:0px -2377px; }
+.flag.armenia{ background-position:0px -176px; }
+.flag.aruba{ background-position:0px -792px; }
+.flag.ascensionIsland{ background-position:0px -55px; }
+.flag.australia{ background-position:0px -1716px; }
+.flag.austria{ background-position:0px -1331px; }
+.flag.azerbaijan{ background-position:0px -1243px; }
+.flag.bahamas{ background-position:0px -363px; }
+.flag.bahrain{ background-position:0px -1496px; }
+.flag.bangladesh{ background-position:0px -1771px; }
+.flag.barbados{ background-position:0px -1573px; }
+.flag.belarus{ background-position:0px -1100px; }
+.flag.belgium{ background-position:0px 0px; }
+.flag.belize{ background-position:0px -484px; }
+.flag.benin{ background-position:0px -1298px; }
+.flag.bermuda{ background-position:0px -1914px; }
+.flag.bhutan{ background-position:0px -1848px; }
+.flag.bolivia{ background-position:0px -1650px; }
+.flag.bonaireSintEustatiusAndSaba{ background-position:0px -2719px; }
+.flag.bosniaAndHerzegovina{ background-position:0px -1584px; }
+.flag.botswana{ background-position:0px -2707px; }
+.flag.brazil{ background-position:0px -770px; }
+.flag.brunei{ background-position:0px -1683px; }
+.flag.bulgaria{ background-position:0px -2586px; }
+.flag.burkinaFaso{ background-position:0px -726px; }
+.flag.burundi{ background-position:0px -1892px; }
+.flag.cambodia{ background-position:0px -242px; }
+.flag.cameroon{ background-position:0px -2057px; }
+.flag.canada{ background-position:0px -1375px; }
+.flag.capeVerde{ background-position:0px -2652px; }
+.flag.caymanIslands{ background-position:0px -308px; }
+.flag.centralAfricanRepublic{ background-position:0px -1837px; }
+.flag.chad{ background-position:0px -814px; }
+.flag.chile{ background-position:0px -1342px; }
+.flag.china{ background-position:0px -825px; }
+.flag.colombia{ background-position:0px -330px; }
+.flag.comorosAndMayotte{ background-position:0px -1430px; }
+.flag.congo{ background-position:0px -1793px; }
+.flag.congoDemRep{ background-position:0px -1518px; }
+.flag.cookIslands{ background-position:0px -2267px; }
+.flag.costaRica{ background-position:0px -2090px; }
+.flag.coteDivoire{ background-position:0px -1661px; }
+.flag.croatia{ background-position:0px -902px; }
+.flag.cuba{ background-position:0px -748px; }
+.flag.curaçao{ background-position:0px -2729px; }
+.flag.cyprus{ background-position:0px -561px; }
+.flag.czechRepublic{ background-position:0px -2256px; }
+.flag.denmark{ background-position:0px -1386px; }
+.flag.diegoGarcia{ background-position:0px -55px; }
+.flag.djibouti{ background-position:0px -2101px; }
+.flag.dominica{ background-position:0px -2432px; }
+.flag.dominicanRepublic{ background-position:0px -1529px; }
+.flag.ecuador{ background-position:0px -1188px; }
+.flag.egypt{ background-position:0px -2201px; }
+.flag.elSalvador{ background-position:0px -1639px; }
+.flag.equatorialGuinea{ background-position:0px -1507px; }
+.flag.eritrea{ background-position:0px -715px; }
+.flag.estonia{ background-position:0px -2410px; }
+.flag.ethiopia{ background-position:0px -2443px; }
+.flag.falklandIslands{ background-position:0px -2762px; }
+.flag.faroeIslands{ background-position:0px -1111px; }
+.flag.fiji{ background-position:0px -1859px; }
+.flag.finland{ background-position:0px -1903px; }
+.flag.france{ background-position:0px -1012px; }
+.flag.frenchGuiana{ background-position:0px -2234px; }
+.flag.frenchPolynesia{ background-position:0px -1705px; }
+.flag.gabon{ background-position:0px -880px; }
+.flag.gambia{ background-position:0px -627px; }
+.flag.georgia{ background-position:0px -858px; }
+.flag.germany{ background-position:0px -2509px; }
+.flag.ghana{ background-position:0px -2112px; }
+.flag.gibraltar{ background-position:0px -275px; }
+.flag.greece{ background-position:0px -165px; }
+.flag.greenland{ background-position:0px -1760px; }
+.flag.grenada{ background-position:0px -2399px; }
+.flag.guadeloupe{ background-position:0px -407px; }
+.flag.guam{ background-position:0px -2366px; }
+.flag.guatemala{ background-position:0px -935px; }
+.flag.guinea{ background-position:0px -2575px; }
+.flag.guineaBissau{ background-position:0px -1925px; }
+.flag.guyana{ background-position:0px -803px; }
+.flag.haiti{ background-position:0px -319px; }
+.flag.honduras{ background-position:0px -2156px; }
+.flag.hongKong{ background-position:0px -2696px; }
+.flag.hungary{ background-position:0px -682px; }
+.flag.iceland{ background-position:0px -1991px; }
+.flag.india{ background-position:0px -1694px; }
+.flag.indonesia{ background-position:0px -1958px; }
+.flag.iran{ background-position:0px -2013px; }
+.flag.iraq{ background-position:0px -649px; }
+.flag.ireland{ background-position:0px -1969px; }
+.flag.israel{ background-position:0px -341px; }
+.flag.italy{ background-position:0px -143px; }
+.flag.jamaica{ background-position:0px -1727px; }
+.flag.japan{ background-position:0px -429px; }
+.flag.jordan{ background-position:0px -1463px; }
+.flag.kazakhstan{ background-position:0px -1210px; }
+.flag.kenya{ background-position:0px -2630px; }
+.flag.kiribati{ background-position:0px -374px; }
+.flag.koreaNorth{ background-position:0px -1804px; }
+.flag.koreaSouth{ background-position:0px -2245px; }
+.flag.kuwait{ background-position:0px -2487px; }
+.flag.kyrgyzstan{ background-position:0px -1617px; }
+.flag.laos{ background-position:0px -451px; }
+.flag.latvia{ background-position:0px -1936px; }
+.flag.lebanon{ background-position:0px -1254px; }
+.flag.lesotho{ background-position:0px -2190px; }
+.flag.liberia{ background-position:0px -2068px; }
+.flag.libya{ background-position:0px -132px; }
+.flag.liechtenstein{ background-position:0px -979px; }
+.flag.lithuania{ background-position:0px -1122px; }
+.flag.luxembourg{ background-position:0px -1474px; }
+.flag.macao{ background-position:0px -2597px; }
+.flag.macedonia{ background-position:0px -1353px; }
+.flag.madagascar{ background-position:0px -1287px; }
+.flag.malawi{ background-position:0px -2145px; }
+.flag.malaysia{ background-position:0px -1870px; }
+.flag.maldives{ background-position:0px -616px; }
+.flag.mali{ background-position:0px -2520px; }
+.flag.malta{ background-position:0px -1551px; }
+.flag.marshallIslands{ background-position:0px -1144px; }
+.flag.martinique{ background-position:0px -198px; }
+.flag.mauritania{ background-position:0px -253px; }
+.flag.mauritius{ background-position:0px -2179px; }
+.flag.mexico{ background-position:0px -2024px; }
+.flag.micronesia{ background-position:0px -1738px; }
+.flag.moldova{ background-position:0px -2685px; }
+.flag.monaco{ background-position:0px -913px; }
+.flag.mongolia{ background-position:0px -2553px; }
+.flag.montenegro{ background-position:0px -2167px; }
+.flag.montserrat{ background-position:0px -583px; }
+.flag.morocco{ background-position:0px -2333px; }
+.flag.mozambique{ background-position:0px -638px; }
+.flag.myanmar{ background-position:0px -11px; }
+.flag.namibia{ background-position:0px -1881px; }
+.flag.nauru{ background-position:0px -1749px; }
+.flag.nepal{ background-position:0px -110px; }
+.flag.netherlands{ background-position:0px -1441px; }
+.flag.newCaledonia{ background-position:0px -1276px; }
+.flag.newZealand{ background-position:0px -1540px; }
+.flag.nicaragua{ background-position:0px -154px; }
+.flag.niger{ background-position:0px -550px; }
+.flag.nigeria{ background-position:0px -2476px; }
+.flag.niue{ background-position:0px -2079px; }
+.flag.norfolkIsland{ background-position:0px -209px; }
+.flag.northernMarianaIslands{ background-position:0px -704px; }
+.flag.norway{ background-position:0px -836px; }
+.flag.oman{ background-position:0px -2454px; }
+.flag.pakistan{ background-position:0px -2035px; }
+.flag.palau{ background-position:0px -231px; }
+.flag.palestine{ background-position:0px -1199px; }
+.flag.panama{ background-position:0px -847px; }
+.flag.papuaNewGuinea{ background-position:0px -1485px; }
+.flag.paraguay{ background-position:0px -2344px; }
+.flag.peru{ background-position:0px -946px; }
+.flag.philippines{ background-position:0px -1815px; }
+.flag.poland{ background-position:0px -1177px; }
+.flag.portugal{ background-position:0px -517px; }
+.flag.puertoRico{ background-position:0px -473px; }
+.flag.qatar{ background-position:0px -462px; }
+.flag.reunion{ background-position:0px -264px; }
+.flag.romania{ background-position:0px -671px; }
+.flag.russia{ background-position:0px -660px; }
+.flag.rwanda{ background-position:0px -2674px; }
+.flag.saintBarthélemy{ background-position:0px -1012px; }
+.flag.saintHelena{ background-position:0px -495px; }
+.flag.saintKittsAndNevis{ background-position:0px -99px; }
+.flag.saintLucia{ background-position:0px -1397px; }
+.flag.saintMartin{ background-position:0px -55px; }
+.flag.saintPierreAndMiquelon{ background-position:0px -1078px; }
+.flag.saintVincentGrenadines{ background-position:0px -2619px; }
+.flag.samoa{ background-position:0px -2300px; }
+.flag.sanMarino{ background-position:0px -2123px; }
+.flag.saoTomeAndPrincipe{ background-position:0px -2388px; }
+.flag.saudiArabia{ background-position:0px -33px; }
+.flag.senegal{ background-position:0px -2134px; }
+.flag.serbia{ background-position:0px -2465px; }
+.flag.seychelles{ background-position:0px -1045px; }
+.flag.sierraLeone{ background-position:0px -737px; }
+.flag.singapore{ background-position:0px -22px; }
+.flag.sintMaarten{ background-position:0px -2773px; }
+.flag.slovakia{ background-position:0px -2212px; }
+.flag.slovenia{ background-position:0px -1221px; }
+.flag.solomonIslands{ background-position:0px -1067px; }
+.flag.somalia{ background-position:0px -1364px; }
+.flag.southAfrica{ background-position:0px -2355px; }
+.flag.southSudan{ background-position:0px -2741px; }
+.flag.spain{ background-position:0px -1155px; }
+.flag.sriLanka{ background-position:0px -2641px; }
+.flag.sudan{ background-position:0px -352px; }
+.flag.suriname{ background-position:0px -2663px; }
+.flag.swaziland{ background-position:0px -2278px; }
+.flag.sweden{ background-position:0px -385px; }
+.flag.switzerland{ background-position:0px -1320px; }
+.flag.syria{ background-position:0px -1826px; }
+.flag.taiwan{ background-position:0px -506px; }
+.flag.tajikistan{ background-position:0px -187px; }
+.flag.tanzania{ background-position:0px -2289px; }
+.flag.thailand{ background-position:0px -957px; }
+.flag.timorLeste{ background-position:0px -2784px; }
+.flag.togo{ background-position:0px -605px; }
+.flag.tokelau{ background-position:0px -2751px; }
+.flag.tonga{ background-position:0px -1089px; }
+.flag.trinidadAndTobago{ background-position:0px -440px; }
+.flag.tunisia{ background-position:0px -539px; }
+.flag.turkey{ background-position:0px -1606px; }
+.flag.turkmenistan{ background-position:0px -2542px; }
+.flag.turksAndCaicos{ background-position:0px -1309px; }
+.flag.tuvalu{ background-position:0px -286px; }
+.flag.uganda{ background-position:0px -1166px; }
+.flag.ukraine{ background-position:0px -2002px; }
+.flag.unitedArabEmirates{ background-position:0px -2223px; }
+.flag.unitedKingdom{ background-position:0px -55px; }
+.flag.unitedStates{ background-position:0px -44px; }
+.flag.uruguay{ background-position:0px -2608px; }
+.flag.uzbekistan{ background-position:0px -1001px; }
+.flag.vanuatu{ background-position:0px -1265px; }
+.flag.vaticanCity{ background-position:0px -2322px; }
+.flag.venezuela{ background-position:0px -1056px; }
+.flag.vietnam{ background-position:0px -968px; }
+.flag.virginIslandsBritish{ background-position:0px -1408px; }
+.flag.virginIslandsUs{ background-position:0px -1782px; }
+.flag.wallisAndFutuna{ background-position:0px -1012px; }
+.flag.yemen{ background-position:0px -1672px; }
+.flag.zambia{ background-position:0px -1595px; }
+.flag.zimbabwe{ background-position:0px -2046px; }

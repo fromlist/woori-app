@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT 커스터마이징</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-guide.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+</head>
+
+<body>
+
+	<div>
+		<h1>modal select icon list</h1>
+		<div class="column">
+			<div class="hr">
+				<h2>folder</h2>
+				<ul class="modal-select-list">
+					<li><button type="button"><i class="i-folder01"></i>개인업무 폴더함</button></li>
+					<li><button type="button"><i class="i-folder02"></i>부서업무 폴더함</button></li>
+					<li><button type="button"><i class="i-folder03"></i>공유받은 폴더함</button></li>
+					<li><button type="button"><i class="i-folder04"></i>스팸메일함</button></li>
+					<li><button type="button"><i class="i-folder05"></i>휴지통</button></li>
+					<li><button type="button"><i class="i-folder06"></i>개인메일함</button></li>
+					<li><button type="button"><i class="i-folder07"></i>개인추가</button></li>
+					<li><button type="button"><i class="i-folder08"></i>새폴더</button></li>
+					<li><button type="button"><i class="i-folder09"></i>업로드</button></li>
+					<li><button type="button"><i class="i-folder10"></i>다운로드</button></li>
+				</ul>
+			</div>
+			<hr>
+			<div class="hr">
+				<h2>mail</h2>
+				<ul class="modal-select-list">
+					<li><button type="button"><i class="i-mail01"></i>내게 쓴 메일함</button></li>
+					<li><button type="button"><i class="i-mail02"></i>보낸 메일함</button></li>
+					<li><button type="button"><i class="i-mail03"></i>임시 메일함</button></li>
+					<li><button type="button"><i class="i-mail04"></i>스팸 메일함</button></li>
+					<li><button type="button"><i class="i-mail05"></i>휴지통</button></li>
+					<li><button type="button"><i class="i-mail06"></i>개인 메일함</button></li>
+					<li><button type="button"><i class="i-mail07"></i>개인추가</button></li>
+					<li><button type="button"><i class="i-mail08"></i>안읽음표시</button></li>
+					<li><button type="button"><i class="i-mail09"></i>메일함이동</button></li>
+					<li><button type="button"><i class="i-mail10"></i>삭제</button></li>
+					<li><button type="button"><i class="i-mail11"></i>받은 메일함</button></li>
+					<li><button type="button"><i class="i-mail12"></i>재발송</button></li>
+					<li><button type="button"><i class="i-mail13"></i>나에게 쓰기</button></li>
+					<li><button type="button"><i class="i-mail14"></i>조직도</button></li>
+					<li><button type="button"><i class="i-mail15"></i>주소록</button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

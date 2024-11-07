@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT커스터마이징</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- 개발에서 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+	<!-- main -->
+	<main>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="btn-ico btn-size30"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
+				</div>
+				<div class="center">
+					<h1>내게 쓴 메일함</h1>
+				</div>
+				<div class="right">
+				</div>
+			</div>
+
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+
+			<!-- row-list -->
+			<div class="row-list mt10">
+				<ul class="group">
+					<li class="group-header">
+						<div class="group-title">
+							<strong class="mb5">메일제목제목</strong>
+							<sup class="fs-14">2024.5.31.15:49 (GMT +0900)</sup>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<div class="divide-line"></div>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group toggleCont pb0">
+					<li>
+						<div class="group-title">보낸 사람</div>
+						<div class="group-cont">홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+					</li>
+				</ul>
+				<ul class="group toggleCont py0">
+					<li class="collapse-trigger">
+						<div class="group-title">받는 사람</div>
+						<button type="button" class="chevron-30 chevron-down toggleTrigger">
+							<div class="group-cont">홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+						</button>
+					</li>
+					<li class="collapse-target">
+						<div class="group-title"></div>
+						<div class="group-cont">홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+					</li>
+					<li class="collapse-target">
+						<div class="group-title"></div>
+						<div class="group-cont">홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+					</li>
+				</ul>
+				<ul class="group toggleCont py0">
+
+					<li class="collapse-trigger">
+						<div class="group-title">참조</div>
+						<button type="button" class="chevron-30 chevron-down toggleTrigger">
+							<div class="group-cont">홍xx 과장홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+						</button>
+					</li>
+					<li class="collapse-target">
+						<div class="group-title"></div>
+						<div class="group-cont">홍xx 과장홍xx 과장홍xx 과장홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+					</li>
+					<li class="collapse-target">
+						<div class="group-title"></div>
+						<div class="group-cont">홍xx 과장홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<div class="divide-line"></div>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<div class="row-attach">
+					<div class="row-attach-title">
+						<div class="left">
+							<strong>첨부파일</strong>
+							<em>2</em>
+							<span>(3.86MB)</span>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<div class="attach-name">
+								<button type="button" onclick="swalFire()">
+									<strong>하이브리드_v1.하이브리드_v1.0.pptx</strong>
+									<span>3.86MB</span>
+								</button>
+							</div>
+							<div class="attach-btn">
+								<button type="button" class="btn-ico btn-size24" data-micromodal-trigger="modal7"><i class="i-download"></i><span class="blind">다운로드</span></button>
+								<button type="button" class="btn-ico btn-size24"><i class="i-view"></i><span class="blind">보기</span></button>
+							</div>
+						</li>
+						<li>
+							<div class="attach-name">
+								<button type="button" onclick="swalFire()">
+									<strong>하이브리드_v1.0.pptx</strong>
+									<span>3.86MB</span>
+								</button>
+							</div>
+							<div class="attach-btn">
+								<button type="button" class="btn-ico btn-size24" data-micromodal-trigger="modal7"><i class="i-download"></i><span class="blind">다운로드</span></button>
+								<button type="button" class="btn-ico btn-size24"><i class="i-view"></i><span class="blind">보기</span></button>
+							</div>
+						</li>
+					</ul>
+					<script>
+						function swalFire() {
+							Swal.fire({
+								showCancelButton: true,
+								showCloseButton: false,
+								reverseButtons: true,
+								title: '',
+								html: `
+                                <p>첨부파일을 다운로드 하시겠습니까?</p>
+                                `,
+								confirmButtonText: '확인',
+								cancelButtonText: '취소',
+								customClass: {
+									cancelButton: "btn-alert",
+									confirmButton: "btn-alert",
+								},
+								buttonsStyling: false
+							})
+						}
+					</script>
+				</div>
+			</div>
+			<!-- //row-list -->
+
+
+			<div class="divide-line"></div>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li>
+						<textarea title="메일내용 입력" placeholder="메일 내용을 입력해 주세요"></textarea>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-outline-red">전달</button>
+				<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal6"><i class="btn-ico-more"></i><span class="blind">메일함이동</span></button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-dropdown modal" id="modal6" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__content">
+					<div class="modal-select">
+						<ul class="modal-select-list">
+							<li><button type="button"><i class="i-mail08"></i>안읽음표시</button></li>
+							<li><button type="button" data-micromodal-trigger="modal8"><i class="i-mail09"></i>메일함이동</button></li>
+							<li><button type="button"><i class="i-mail10"></i>삭제</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-dropdown modal" id="modal7" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__content">
+					<div class="modal-select">
+						<ul class="modal-select-list">
+							<li><button type="button"><i class="i-folder01"></i>개인업무 폴더함</button></li>
+							<li><button type="button"><i class="i-folder02"></i>부서업무 폴더함</button></li>
+							<li><button type="button"><i class="i-folder03"></i>공유받은 폴더함</button></li>
+							<li><button type="button"><i class="i-folder04"></i>스팸메일함</button></li>
+							<li><button type="button"><i class="i-folder05"></i>휴지통</button></li>
+							<li><button type="button"><i class="i-folder06"></i>개인메일함</button></li>
+							<li><button type="button"><i class="i-folder07"></i>개인추가</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-dropdown modal" id="modal8" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__content">
+					<div class="modal-select">
+						<ul class="modal-select-list">
+							<li><button type="button"><i class="i-mail01"></i>내게 쓴 메일함</button></li>
+							<li><button type="button"><i class="i-mail02"></i>보낸 메일함</button></li>
+							<li><button type="button"><i class="i-mail03"></i>임시 메일함</button></li>
+							<li><button type="button"><i class="i-mail04"></i>스팸 메일함</button></li>
+							<li><button type="button"><i class="i-mail05"></i>휴지통</button></li>
+							<li><button type="button"><i class="i-mail06"></i>개인 메일함</button></li>
+							<li><button type="button"><i class="i-mail07"></i>개인 추가</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<script>
+		// micromodal
+		MicroModal.init({
+			onShow: function(modalPopup, element) {
+				const trigger = element;
+				const triggerRect = trigger.getBoundingClientRect();
+				const triggerPositionTop = triggerRect.top;
+				const triggerPositionRight = triggerRect.right;
+				const triggerPositionBottom = triggerRect.bottom;
+				const triggerPositionLeft = triggerRect.left;
+				const windowWidth = window.outerWidth;
+				const windowHeight = window.outerHeight;
+				if (modalPopup.classList.contains('micromodal-slide-dropdown')) {
+					const modalPopupBody = modalPopup.querySelector('.modal__container');
+					const modalPopupBodyWidth = modalPopupBody.clientWidth;
+					const modalPopupBodyHeight = modalPopupBody.clientHeight;
+
+					const padding = 10
+
+					// default (position right)
+					if (triggerPositionRight > windowWidth / 2) {
+						modalPopupBody.style.left = triggerPositionRight - modalPopupBodyWidth + 'px';
+
+					}
+					// reverse (position left)
+					else if (windowWidth / 2 > triggerPositionRight) {
+						modalPopupBody.style.left = triggerPositionLeft + 'px';
+					}
+
+					// default (position bottom)
+					if (windowHeight / 2 > triggerPositionTop) {
+						modalPopupBody.style.top = triggerPositionBottom + padding + 'px';
+
+						//overflow bottom
+						if (windowHeight < triggerPositionBottom + padding + modalPopupBodyHeight) {
+							modalPopupBody.style.overflow = 'auto'
+							modalPopupBody.style.maxHeight = windowHeight - triggerPositionBottom - padding + 'px'
+						}
+					}
+					// reverse (position top)
+					else if (windowHeight / 2 < triggerPositionTop) {
+						modalPopupBody.style.bottom = windowHeight - triggerPositionTop + padding + 'px';
+
+						//overflow top
+						if (windowHeight < windowHeight - triggerPositionTop + padding + modalPopupBodyHeight) {
+							modalPopupBody.style.overflow = 'auto'
+							modalPopupBody.style.maxHeight = windowHeight - (windowHeight - triggerPositionTop + padding) + 'px'
+						}
+					}
+				}
+			}, // [1]
+			onClose: function(modalPopup, element) {
+				const trigger = element;
+				if (modalPopup.classList.contains('micromodal-slide-dropdown')) {
+					const modalPopupBody = modalPopup.querySelector('.modal__container');
+					setTimeout(function() {
+						modalPopupBody.removeAttribute('style');
+					}, 300)
+				}
+			}, // [2]
+			// openTrigger: 'data-custom-open', // [3]
+			// closeTrigger: 'data-custom-close', // [4]
+			// openClass: 'is-open', // [5]
+			// disableScroll: true, // [6]
+			// disableFocus: false, // [7]
+			awaitOpenAnimation: true, // [8]
+			awaitCloseAnimation: true, // [9]
+			// debugMode: true // [10]
+		});
+		// document.addEventListener("DOMContentLoaded", function() {
+		// 	MicroModal.show('modal1', {
+		// 		// awaitCloseAnimation: true,
+		// 		onShow: function(modalPopup) {
+		// 			console.info(modalPopup.id + 'is shown')
+
+		// 		},
+		// 		onClose: function(modalPopup) {
+		// 			console.info(modalPopup.id + 'is hidden')
+		// 		}
+		// 	});
+		// });
+	</script>
+
+</body>
+
+</html>

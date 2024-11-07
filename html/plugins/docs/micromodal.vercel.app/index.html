@@ -152,8 +152,8 @@ MicroModal.close('modal-id'); // [2]
 				<p class="black-80 lh-copy mv4"> The <code>init</code> and <code>show</code> methods accept an optional configuration object. This allows you to set custom callbacks and control behaviour of the modal. Example:- </p>
 				<pre><code class="language-js">
 MicroModal.init({
-  onShow: modal => console.info(`${modal.id} is shown`), // [1]
-  onClose: modal => console.info(`${modal.id} is hidden`), // [2]
+  onShow: modal => console.info(modalPopup.id + 'is shown'), // [1]
+  onClose: modal => console.info(modalPopup.id + 'is hidden'), // [2]
   openTrigger: 'data-custom-open', // [3]
   closeTrigger: 'data-custom-close', // [4]
   openClass: 'is-open', // [5]

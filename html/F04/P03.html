@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT커스터마이징</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- 개발에서 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="btn-ico btn-size30"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
+				</div>
+				<div class="center">
+					<h1>휴가 신청</h1>
+				</div>
+				<div class="right">
+				</div>
+
+			</div>
+		</header>
+		<!-- //header -->
+
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- row-list -->
+			<div class="row-list mt10">
+				<ul class="group">
+					<li>
+						<div class="group-title">휴가 신청일</div>
+						<div class="group-cont">2024. 05.31 (금)</div>
+					</li>
+					<li>
+						<div class="group-title">휴가 구분</div>
+						<div class="group-cont">
+							<select title="휴가 구분">
+								<option value="선택안함">선택안함</option>
+							</select>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<div class="divide-line"></div>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li class="subject j-between flex-wrap">
+						<div class="group-title">신청 정보</div>
+						<div class="group-cont">
+							<div class="form-list">
+								<label class="inp"><input type="radio"><b>전일</b></label>
+								<label class="inp"><input type="radio"><b>오전반차</b></label>
+								<label class="inp"><input type="radio"><b>오후 반차</b></label>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<div class="divide-line"></div>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li>
+						<div class="group-title">휴가 시작일</div>
+						<div class="group-cont">
+							<input type="date" title="휴가 시작일">
+						</div>
+					</li>
+					<li>
+						<div class="group-title">휴가 종료일</div>
+						<div class="group-cont">
+							<input type="date" title="휴가 종료일">
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<div class="divide-line"></div>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li>
+						<div class="group-title">휴가사용일수</div>
+						<div class="group-cont">
+							<input type="text" value="2.0" disabled>
+						</div>
+					</li>
+					<li>
+						<div class="group-title">전자결재상태</div>
+						<div class="group-cont">-</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<div class="divide-line"></div>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li>
+						<textarea title="사유 입력" placeholder="사유를 입력해 주세요"></textarea>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-outline-red">취소</button>
+				<button type="button" class="btn-large btn-black" onclick="swalFire()">저장</button>
+				<script>
+					function swalFire() {
+						Swal.fire({
+							showCancelButton: false,
+							showCloseButton: false,
+							showDenyButton: true,
+							reverseButtons: true,
+							title: '휴가신청을 전자결재 하시겠습니까?',
+							html: `
+                                <p>전자결재 없이 작성완료된 경우에도 <br> 휴가사용일수에 포함됩니다. <br> 사용하지 않으실 경우에는 삭제해주십시요.</p>
+                            `,
+							confirmButtonText: '전자결제',
+							denyButtonText: '작성완료',
+							customClass: {
+								cancelButton: "btn-alert",
+								confirmButton: "btn-alert",
+								denyButton: "btn-alert",
+							},
+							buttonsStyling: false
+						}).then((result) => {
+							/* Read more about isConfirmed, isDenied below */
+							if (result.isConfirmed) {
+								console.log(1)
+							} else if (result.isDenied) {
+								console.log(2)
+							}
+						});
+					}
+				</script>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- main -->
+</body>
+
+</html>

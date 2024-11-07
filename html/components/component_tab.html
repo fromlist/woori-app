@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-	<title>신한투자증권프로젝트메타</title>
+	<title>KT 커스터마이징</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,6 +21,8 @@
 	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
 	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
 	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
 	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
 	<!-- micromodal -->
 	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
@@ -51,7 +53,6 @@
 	<link rel="stylesheet" href="../../assets/css/ui-style.css">
 	<link rel="stylesheet" href="../../assets/css/ui-content.css">
 	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
-	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
 	<link rel="stylesheet" href="../../assets/css/ui-guide.css">
 
 	<script src="../../assets/js/ui-script.js"></script>
@@ -61,19 +62,10 @@
 </head>
 
 <body>
-	<div>
-		<label class="inp-switch gap10 d-inflex">
-			<b>테마변경</b>
-			<span class="theme-switch">
-				<input type="checkbox" id="themeSelector">
-				<span class="theme-input-white"><span class="blind">화이트모드</span></span>
-				<span class="theme-input-dark"><span class="blind">다크모드</span></span>
-			</span>
-		</label>
-	</div>
+
 	<div>
 		<h1>Tab</h1>
-		<div class="column column-no-repeat">
+		<div class="column">
 			<div class="hr">
 				<h2>Type Button</h2>
 				<div class="tab-content">
@@ -111,82 +103,6 @@
 			</div>
 		</div>
 	</div>
-
-	<div>
-		<h1>Tab Type 2</h1>
-		<div class="column column-no-repeat">
-			<h2>Type Button</h2>
-
-			<div class="hr">
-				<!-- tab-content -->
-				<div class="tab-content-type02">
-					<ul class="tab-list">
-						<li class="tab tab-active"><button type="button" data-controls="tab-subpanel001">전체 (1,000)</button></li>
-						<li class="tab"><button type="button" data-controls="tab-subpanel002">테이블/컬럼 (500)</button></li>
-						<li class="tab"><button type="button" data-controls="tab-subpanel003">코드 (300)</button></li>
-					</ul>
-				</div>
-				<!-- //tab-content -->
-				<div id="tab-subpanel001" class="tabpanel">
-					<h3 class="blind">tab-sub01</h3>
-					<div style="background-color:#ff9999;">tab-sub01</div>
-				</div>
-				<div id="tab-subpanel002" class="tabpanel">
-					<h3 class="blind">tab-sub02</h3>
-					<div style="background-color:#ff6666;">tab-sub02</div>
-				</div>
-				<div id="tab-subpanel003" class="tabpanel">
-					<h3 class="blind">tab-sub03</h3>
-					<div style="background-color:#ff3333;">tab-sub03</div>
-				</div>
-			</div>
-			<hr>
-			<div class="hr">
-				<!-- tab-content -->
-				<div class="tab-content-type02">
-					<ul class="tab-list">
-						<li class="tab tab-active"><a href="#">전체 (1,000)</a></li>
-						<li class="tab"><a href="#">테이블/컬럼 (500)</a></li>
-						<li class="tab"><a href="#">코드 (300)</a></li>
-						<li class="tab"><a href="#">BIZ용어 (100)</a></li>
-						<li class="tab"><a href="#">외부데이터 (10)</a></li>
-						<li class="tab"><a href="#">BI대시보드 (0)</a></li>
-						<li class="tab"><a href="#">데이터 맵 (15)</a></li>
-						<li class="tab"><a href="#">게시물 (25)</a></li>
-					</ul>
-				</div>
-				<!-- //tab-content -->
-			</div>
-		</div>
-	</div>
-
-	<hr>
-
-	<h1>Card inner Tab</h1>
-
-	<div class="column">
-		<div class="hr">
-			<div class="card">
-				<ul class="tab-list" role="tablist">
-					<li class="tab tab-active"><button type="button" data-controls="tab-subpanel_01" role="tab">tab-sub01</button></li>
-					<li class="tab"><button type="button" data-controls="tab-subpanel_02" role="tab">tab-sub02</button></li>
-				</ul>
-				<div id="tab-subpanel_01" class="tabpanel">
-					<h3 class="blind">tab-sub01</h3>
-					tab-sub01
-				</div>
-				<div id="tab-subpanel_02" class="tabpanel">
-					<h3 class="blind">tab-sub02</h3>
-					tab-sub02
-				</div>
-			</div>
-		</div>
-	</div>
-	<hr>
-
-
-
-
 
 
 </body>

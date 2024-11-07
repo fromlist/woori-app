@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT커스터마이징</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- 개발에서 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+	<!-- main -->
+	<main>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="btn-ico btn-size30"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
+				</div>
+				<div class="center">
+					<h1>출장 신청서</h1>
+				</div>
+				<div class="right">
+				</div>
+			</div>
+
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- row-list -->
+			<div class="row-list mt10">
+				<ul class="group">
+					<li class="subject j-between">
+						<div class="group-title">결제선</div>
+						<div class="group-cont">
+							<button type="button" class="btn-small btn-outline-black btn-inner-ico">추가<i class="i-plus"></i></button>
+						</div>
+					</li>
+					<li>
+						<div class="approval-list sorting-list" id="sorting02">
+							<div class="list">
+								<div class="left">
+									<strong>결제</strong>
+									<span>강용관 부장</span>
+								</div>
+								<div class="right">
+									<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
+								</div>
+							</div>
+							<div class="list">
+								<div class="left">
+									<strong>결제</strong>
+									<span>홍길동 차창</span>
+								</div>
+								<div class="right">
+									<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
+								</div>
+							</div>
+							<div class="list">
+								<div class="left">
+									<strong>결제</strong>
+									<span>이순신 대리</span>
+								</div>
+								<div class="right">
+									<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
+								</div>
+							</div>
+						</div>
+						<script>
+							var sortableOption = {
+								group: "shared",
+								animation: 150,
+							};
+
+							sortableList = Sortable.create(sorting02, sortableOption);
+						</script>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<div class="divide-line"></div>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li class="subject j-between">
+						<div class="group-title">참조자</div>
+						<div class="group-cont">
+							<button type="button" class="btn-small btn-outline-black btn-inner-ico">추가<i class="i-plus"></i></button>
+						</div>
+					</li>
+					<li>
+						<div class="row-box-list">
+							<button type="button" class="btn-medium btn-gray btn-inner-ico fw-700">안병호 부장<i class="i-close"></i></button>
+							<button type="button" class="btn-medium btn-gray btn-inner-ico fw-700">안병호 부장<i class="i-close"></i></button>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<!-- row-list-title -->
+			<div class="row-list-title">신청 정보</div>
+			<!-- row-list-title -->
+
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li>
+						<div class="group-title">신청번호</div>
+						<div class="group-cont">20240511</div>
+					</li>
+					<li>
+						<div class="group-title">신청일자</div>
+						<div class="group-cont">2024. 05. 22</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<div class="divide-line"></div>
+
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li>
+						<div class="group-title">출장 시작일</div>
+						<div class="group-cont">2024. 04.05</div>
+					</li>
+					<li>
+						<div class="group-title">출장 종료일</div>
+						<div class="group-cont">2024. 04.06</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<div class="divide-line"></div>
+
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li>
+						<div class="group-title">출장지역</div>
+						<div class="group-cont">출장지역</div>
+					</li>
+					<li>
+						<div class="group-title">출장비(예상)</div>
+						<div class="group-cont">10,000</div>
+					</li>
+					<li>
+						<div class="group-title">선지급여부/<br>금액</div>
+						<div class="group-cont">사용 / 10,000</div>
+					</li>
+					<li>
+						<div class="group-title">출장목적<br>(장소)</div>
+						<div class="group-cont">여의도 전경련회관</div>
+					</li>
+					<li>
+						<div class="group-title">신청내용</div>
+						<div class="group-cont">계약서 날인 필요</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-outline-red">취소</button>
+				<button type="button" class="btn-large btn-black">결재요청</button>
+				<button type="button" class="btn-large btn-black">결제선불러오기</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- main -->
+</body>
+
+</html>

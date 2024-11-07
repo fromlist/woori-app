@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT커스터마이징</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- 개발에서 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+	<!-- main -->
+	<main>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+				</div>
+				<div class="center">
+					<h1>근태관리</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="btn-ico btn-size30"><i class="i-close"></i><span class="blind">닫기</span></button>
+				</div>
+			</div>
+			<div class="sub-header">
+				<div class="left">
+					<button type="button" class="btn-ico btn-size24"><i class="i-menu"></i><span class="blind">메뉴</span></button>
+				</div>
+				<div class="center">
+					<h2>월별 근태 현황</h2>
+				</div>
+				<div class="right"></div>
+			</div>
+
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- datepicker-section -->
+			<div class="datepicker-section">
+				<button type="button" class="chevron-30 chevron-left"><span class="blind">이전 달</span></button>
+				<strong>2024. 05</strong>
+				<button type="button" class="chevron-30"><span class="blind">다음 달</span></button>
+			</div>
+			<!-- datepicker-section -->
+
+
+			<!-- commute-section -->
+			<div class="commute-section">
+				<table>
+					<colgroup>
+						<col style="width:35%">
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">일자</th>
+							<th scope="col">출근</th>
+							<th scope="col">퇴근</th>
+							<th scope="col">비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">2024. 05.01 (수)</th>
+							<td>12:43</td>
+							<td>12:43</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.02 (목)</th>
+							<td>12:43</td>
+							<td>12:43</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.03 (금)</th>
+							<td>12:43</td>
+							<td>12:43</td>
+							<td>-</td>
+						</tr>
+						<tr class="sat">
+							<th scope="row">2024. 05.04 (토)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr class="sun">
+							<th scope="row">2024. 05.05 (일)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.06 (월)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.07 (화)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.01 (수)</th>
+							<td>12:43</td>
+							<td>12:43</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.02 (목)</th>
+							<td>12:43</td>
+							<td>12:43</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.03 (금)</th>
+							<td>12:43</td>
+							<td>12:43</td>
+							<td>-</td>
+						</tr>
+						<tr class="sat">
+							<th scope="row">2024. 05.04 (토)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr class="sun">
+							<th scope="row">2024. 05.05 (일)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.06 (월)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.07 (화)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.01 (수)</th>
+							<td>12:43</td>
+							<td>12:43</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.02 (목)</th>
+							<td>12:43</td>
+							<td>12:43</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.03 (금)</th>
+							<td>12:43</td>
+							<td>12:43</td>
+							<td>-</td>
+						</tr>
+						<tr class="sat">
+							<th scope="row">2024. 05.04 (토)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr class="sun">
+							<th scope="row">2024. 05.05 (일)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.06 (월)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">2024. 05.07 (화)</th>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //commute-section -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+	</main>
+	<!-- main -->
+</body>
+
+</html>

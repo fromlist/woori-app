@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-	<title>신한투자증권프로젝트메타</title>
+	<title>KT 커스터마이징</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,6 +21,8 @@
 	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
 	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
 	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
 	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
 	<!-- micromodal -->
 	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
@@ -51,112 +53,1275 @@
 	<link rel="stylesheet" href="../../assets/css/ui-style.css">
 	<link rel="stylesheet" href="../../assets/css/ui-content.css">
 	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
-	<link rel="stylesheet" href="../../assets/css/ui-darkmode.css" id="stylesheet-darkmode" disabled>
 	<link rel="stylesheet" href="../../assets/css/ui-guide.css">
 
 	<script src="../../assets/js/ui-script.js"></script>
-	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
-
 </head>
 
 <body>
 	<div>
-		<label class="inp-switch gap10 d-inflex">
-			<b>테마변경</b>
-			<span class="theme-switch">
-				<input type="checkbox" id="themeSelector">
-				<span class="theme-input-white"><span class="blind">화이트모드</span></span>
-				<span class="theme-input-dark"><span class="blind">다크모드</span></span>
-			</span>
-		</label>
-	</div>
-	<div>
-		<h1>List</h1>
-		<div class="column column-no-repeat">
-			<div class="hr">
-				<h2>Type dot</h2>
-				<ul class="dot-list">
-					<li>고객자산금액은 조회일자 기준 전영업일의 고객자산금액이다.</li>
-					<li>그룹은 고객 관리점을 기준으로 구분한다.</li>
-					<li>그룹 구분은 자산관리, 기관고객, PWM, 기타자산이다.</li>
-				</ul>
-			</div>
-		</div>
-		<hr>
-		<div class="column column-no-repeat">
-			<div class="hr">
-				<h2>Type attach column</h2>
-				<ul class="attach-column-list">
-					<li><a href="#"><span>취약점진단.zip</span></a></li>
-					<li>
-						<a href="#"><span>취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip</span></a>
-						<button type="button" class="attach-remove" title="첨부파일 삭제"></button>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<hr>
-		<div class="column column-no-repeat">
+		<h1>row-list</h1>
+		<div class="column">
+			<h2>row-list-title</h2>
 
-			<div class="hr">
-				<h2>Type attach row</h2>
-				<ul class="attach-row-list">
-					<li>
-						<a href="#"><span>취약점진단.zip</span></a>
-						<button type="button" class="attach-remove" title="첨부파일 삭제"></button>
-					</li>
-					<li>
-						<a href="#"><span>취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip</span></a>
-						<button type="button" class="attach-remove" title="첨부파일 삭제"></button>
-					</li>
-					<li>
-						<a href="#"><span>취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip</span></a>
-						<button type="button" class="attach-remove" title="첨부파일 삭제"></button>
-					</li>
-					<li>
-						<a href="#"><span>취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip</span></a>
-						<button type="button" class="attach-remove" title="첨부파일 삭제"></button>
-					</li>
-					<li>
-						<a href="#"><span>취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip</span></a>
-						<button type="button" class="attach-remove" title="첨부파일 삭제"></button>
-					</li>
-					<li>
-						<a href="#"><span>취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip취약점진단.zip</span></a>
-						<button type="button" class="attach-remove" title="첨부파일 삭제"></button>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-		<hr>
-
-		<div class="column column-no-repeat">
-			<div class="hr">
-				<h2>Type remove button</h2>
-				<ul class="remove-list">
-					<li>고객정보원천(CUS_TOUR_INF_ORI) <button type="button" title="참조데이터 삭제"></button></li>
-					<li>고객정보원천(CUS_TOUR_INF_ORI) <button type="button" title="참조데이터 삭제"></button></li>
-					<li>고객정보원천(CUS_TOUR_INF_ORI) <button type="button" title="참조데이터 삭제"></button></li>
-				</ul>
-			</div>
+			<!-- row-list-title -->
+			<div class="row-list-title">알림</div>
+			<!-- row-list-title -->
 		</div>
 		<hr>
 
-		<div class="column column-no-repeat">
-			<div class="hr">
-				<h2>box-info</h2>
-				<div class="box-info">
-					<ul class="dot-list">
-						<li>고객자산금액은 조회일자 기준 전영업일의 고객자산금액이다.</li>
-						<li>그룹은 고객 관리점을 기준으로 구분한다.</li>
-						<li>그룹 구분은 자산관리, 기관고객, PWM, 기타자산이다.</li>
+
+		<div class="column">
+			<h2>no-chevron</h2>
+			<!-- row-list -->
+			<div class="row-list">
+				<a href="#" class="chevron">설정</a>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+		<div class="column">
+
+			<h2>chevron</h2>
+			<!-- row-list -->
+			<div class="row-list">
+				<a href="#" class="chevron chevron-30">설정</a>
+			</div>
+			<!-- //row-list -->
+			<hr>
+			<h2>chevron icon</h2>
+			<!-- row-list -->
+			<div class="row-list">
+				<a href="#" class="chevron chevron-30">
+					<div class="chevron-icon">
+						<picture>
+							<source srcset="../../assets/images/row/chevron-icon-team.svg">
+							<img src="../../assets/images/row/chevron-icon-team.svg" alt="">
+						</picture>
+						<span>모바일#2팀</span>
+					</div>
+				</a>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+
+		<div class="column">
+			<h2>group</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li class="j-between">
+						<div class="group-title">메일</div>
+						<div class="group-cont">kdrago***@naver.com</div>
+					</li>
+					<li class="j-between">
+						<div class="group-title">업무기한</div>
+						<div class="group-cont">
+							<label class="inp"><input type="checkbox"><b>기한없음</b></label>
+						</div>
+					</li>
+					<li>
+						<div class="group-title">메일</div>
+						<div class="group-cont">kdrago***@naver.com</div>
+					</li>
+					<li>
+						<a href="#" class="chevron chevron-30">
+							<div class="group-title">관련업무</div>
+							<div class="group-cont">5월 업무요청</div>
+						</a>
+					</li>
+					<li class="flex-wrap">
+						<div class="group-title">업무형태</div>
+						<div class="group-cont">
+							<div class="row-box-list">
+								<label class="inp-btn"><input type="checkbox" name="inp-btn001"><b>나의 할일</b></label>
+								<label class="inp-btn"><input type="checkbox" name="inp-btn001"><b>업무요청</b></label>
+								<label class="inp-btn"><input type="checkbox" name="inp-btn001"><b>업무보고</b></label>
+								<label class="inp-btn"><input type="checkbox" name="inp-btn001"><b>업무일지</b></label>
+							</div>
+						</div>
+					</li>
+					<li class="subject j-between">
+						<div class="group-title">관련업무</div>
+						<div class="group-cont">
+							<button type="button" class="btn-small btn-outline-black btn-inner-ico">추가<i class="i-plus"></i></button>
+						</div>
+					</li>
+					<li>
+						<div class="row-box-list">
+							<button type="button" class="btn-medium btn-red btn-inner-ico fw-700">나의 할일<i class="i-close"></i></button>
+							<button type="button" class="btn-medium btn-red btn-inner-ico fw-700">나의 할일<i class="i-close"></i></button>
+							<button type="button" class="btn-medium btn-red btn-inner-ico fw-700">나의 할일<i class="i-close"></i></button>
+							<button type="button" class="btn-medium btn-red btn-inner-ico fw-700">나의 할일<i class="i-close"></i></button>
+							<button type="button" class="btn-medium btn-red btn-inner-ico fw-700">나의 할일<i class="i-close"></i></button>
+						</div>
+					</li>
+					<li class="j-between">
+						<div class="group-title">수신자</div>
+						<div class="group-cont">
+							<button type="button" class="btn-small btn-outline-black btn-inner-ico">추가<i class="i-plus"></i></button>
+						</div>
+					</li>
+					<li>
+						<div class="row-box-list">
+							<button type="button" class="btn-medium btn-gray fw-700">안병호 부장</button>
+							<button type="button" class="btn-medium btn-gray btn-inner-ico fw-700">안병호 부장<i class="i-close"></i></button>
+						</div>
+					</li>
+
+					<li>
+						<div class="group-title">요청자</div>
+						<div class="group-cont">
+							<div class="form-list">
+								<label class="inp"><input type="radio"><b>개인요청</b></label>
+								<label class="inp"><input type="radio"><b>팀요청</b></label>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="group-title">요청자</div>
+						<div class="group-cont">
+							<input type="text" placeholder="입력해 주세요">
+						</div>
+					</li>
+					<li>
+						<div class="group-title">요청자</div>
+						<div class="group-cont">
+							<select name="" id="">
+								<option value="선택해 주세요">선택해 주세요</option>
+							</select>
+						</div>
+					</li>
+					<li class="flex-wrap">
+						<div class="group-title">진척율(%)</div>
+						<div class="group-cont">
+							<div class="progress-section">
+								<input type="radio" id="value-0" value="0" name="progress-bar" checked>
+								<input type="radio" id="value-20" value="20" name="progress-bar">
+								<input type="radio" id="value-40" value="40" name="progress-bar">
+								<input type="radio" id="value-60" value="60" name="progress-bar">
+								<input type="radio" id="value-80" value="80" name="progress-bar">
+								<input type="radio" id="value-100" value="100" name="progress-bar">
+								<div class="progress-bar">
+									<div class="progress-bar-inner"></div>
+								</div>
+							</div>
+							<div class="row-alert j-end px0">
+								<p>업무 완료 후에는 수정할 수 없습니다. </p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<dl class="work-label-status">
+							<dt>강용관 부장</dt>
+							<dd>
+								<div class="work-label work-label-red">지연 +2</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="work-date-status">
+							<dt>기한</dt>
+							<dd>2024.05.23 ~ 2024.05.29</dd>
+						</dl>
+					</li>
+					<li class="j-between">
+						<div class="group-title">결제선</div>
+						<div class="group-cont">
+							<button type="button" class="btn-small btn-outline-black btn-inner-ico">추가<i class="i-plus"></i></button>
+						</div>
+					</li>
+					<li>
+						<div class="approval-list sorting-list" id="sorting02">
+							<div class="list">
+								<div class="left">
+									<strong>결제</strong>
+									<span>강용관 부장</span>
+								</div>
+								<div class="right">
+									<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
+								</div>
+							</div>
+							<div class="list">
+								<div class="left">
+									<strong>결제</strong>
+									<span>홍길동 차창</span>
+								</div>
+								<div class="right">
+									<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
+								</div>
+							</div>
+							<div class="list">
+								<div class="left">
+									<strong>결제</strong>
+									<span>이순신 대리</span>
+								</div>
+							</div>
+						</div>
+						<script>
+							var sortableOption = {
+								group: "shared",
+								animation: 150,
+							};
+
+							sortableList = Sortable.create(sorting02, sortableOption);
+						</script>
+					</li>
+					<li>
+						<div class="approval-list">
+							<div class="list">
+								<div class="left">
+									<strong>결제</strong>
+									<span>강용관 부장</span>
+								</div>
+								<div class="right">
+									<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
+								</div>
+							</div>
+							<div class="list">
+								<div class="left">
+									<strong>결제</strong>
+									<span>홍길동 차창</span>
+								</div>
+								<div class="right">
+									<div class="date">06:05 16:26</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="approval-list each-list">
+							<div class="list">
+								<div class="left">
+									<strong>결제</strong>
+									<span>강용관 부장</span>
+								</div>
+								<div class="right">
+									<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
+								</div>
+							</div>
+							<div class="list">
+								<div class="left">
+									<strong>결제</strong>
+									<span>홍길동 차창</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="group-header">
+						<div class="group-title">처리 내역</div>
+						<div class="group-cont">강용관 부장</div>
+					</li>
+					<li class="group-header">
+						<div class="group-title">확인내역</div>
+						<div class="group-cont">
+							<div class="d-flex j-between flex-auto mr10">강용관 부장 <div class="work-label work-label-red">미확인2</div>
+							</div>
+						</div>
+					</li>
+					<li class="group-header">
+						<div class="group-title"><sup>XXX-000010</sup><strong>처리 내역</strong></div>
+					</li>
+					<li class="group-header">
+						<div class="group-title">
+							<strong class="mb5">처리 내역</strong>
+							<sup class="fs-14">2024.5.31.15:49 (GMT +0900)</sup>
+						</div>
+					</li>
+
+					<li class="group-header">
+						<div class="group-title">
+							<div class="work-label work-label-orange">영업활동</div>
+						</div>
+						<div class="group-cont">고객 미팅 #1</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+		</div>
+
+		<hr>
+
+		<div class="column">
+			<h2>group-biz</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group group-biz">
+					<li class="j-between">
+						<div class="group-title">메일</div>
+						<div class="group-cont">kdrago***@naver.com</div>
+					</li>
+					<li class="j-between">
+						<a href="#" class="chevron chevron-30">
+							<div class="group-title">회사전화</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+		<div class="column">
+			<h2>inp-switch</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<label class="inp-switch">
+					<b>온라인 투표</b>
+					<input type="checkbox" name="inp-switch001">
+				</label>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+		<div class="column">
+			<h2>inp-switch sortable</h2>
+
+			<!-- row-list -->
+			<div class="row-list" id="sorting01">
+				<label class="inp-switch inp-sorting">
+					<b>
+						날씨
+						<i class="btn-ico btn-size30">
+							<i class="i-sort"></i>
+							<span class="blind">위치이동</span>
+						</i>
+					</b>
+					<input type="checkbox" name="inp-switch001">
+				</label>
+
+				<label class="inp-switch inp-sorting">
+					<b>
+						뉴스
+						<i class="btn-ico btn-size30">
+							<i class="i-sort"></i>
+							<span class="blind">위치이동</span>
+						</i>
+					</b>
+					<input type="checkbox" name="inp-switch001">
+				</label>
+			</div>
+			<script>
+				var sortableOption = {
+					group: "shared",
+					animation: 150,
+				};
+
+				sortableList = Sortable.create(sorting01, sortableOption);
+			</script>
+			<!-- //row-list -->
+		</div>
+		<hr>
+		<div class="column">
+			<h2>inp</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<div class="row-inp">
+					<label class="inp">
+						<input type="radio" name="rad001">
+						<b>
+							<picture>
+								<source srcset="../../assets/images/section/user-photo.png">
+								<img src="../../assets/images/section/user-photo.png" alt="">
+							</picture>
+							<span>케이티</span>
+							<em>부장</em>
+						</b>
+					</label>
+				</div>
+				<div class="row-inp-btn">
+					<label class="inp">
+						<input type="checkbox" name="rad001">
+						<b>
+							<picture>
+								<source srcset="../../assets/images/section/user-photo.png">
+								<img src="../../assets/images/section/user-photo.png" alt="">
+							</picture>
+							<span>김이지 대리<em>6.30</em></span>
+						</b>
+					</label>
+					<div class="btn-wrap">
+						<button type="button" class="btn-small btn-black">관리자</button>
+						<button type="button" class="btn-small btn-outline-red">가입요청</button>
+					</div>
+				</div>
+				<div class="row-inp-btn">
+					<label class="inp">
+						<input type="checkbox" name="rad001">
+						<b>
+							<picture>
+								<source srcset="../../assets/images/section/user-photo.png">
+								<img src="../../assets/images/section/user-photo.png" alt="">
+							</picture>
+							<span>김이지 대리<em>6.30</em></span>
+						</b>
+					</label>
+					<div class="btn-wrap">
+						<button type="button" class="btn-small btn-black">관리자</button>
+					</div>
+				</div>
+				<div class="row-inp-btn">
+					<label class="inp">
+						<input type="checkbox" name="rad001">
+						<b>
+							<picture>
+								<source srcset="../../assets/images/section/user-photo.png">
+								<img src="../../assets/images/section/user-photo.png" alt="">
+							</picture>
+							<span>김이지 대리<em>6.30</em></span>
+						</b>
+					</label>
+					<div class="btn-wrap">가입</div>
+				</div>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+		<div class="column">
+			<h2>row-alert</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<div class="row-alert">
+					<p>출퇴근 정보시 위치 정보를 제공하기 위함입니다.</p>
+				</div>
+				<div class="row-alert j-end">
+					<p>출퇴근 정보시 위치 정보를 제공하기 위함입니다.</p>
+				</div>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+		<div class="column">
+			<h2>row-breadcrumbs</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="row-breadcrumbs overflow-list">
+					<li><button type="button">회사선택</button></li>
+					<li><button type="button">커스터마이징 EZ</button></li>
+					<li><button type="button">그룹웨어팀</button></li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+		<div class="column">
+			<h2>row-button</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<div class="row-button">
+					<button type="button" class="btn-large btn-outline-black">위치정보 수집 및 이용 약관 보기</button>
+				</div>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+		<div class="column">
+			<h2>row-inp-list</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<div class="row-inp-list overflow-list">
+					<label class="inp-btn"><input type="checkbox" name="inp-btn001"><b>진행중</b></label>
+					<label class="inp-btn"><input type="checkbox" name="inp-btn001"><b>지연</b></label>
+					<label class="inp-btn"><input type="checkbox" name="inp-btn001"><b>완료</b></label>
+					<label class="inp-btn"><input type="checkbox" name="inp-btn001"><b>반려</b></label>
+					<label class="inp-btn"><input type="checkbox" name="inp-btn001"><b>중요</b></label>
+				</div>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+		<div class="column">
+			<h2>row-box-list</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<div class="row-box-list">
+					<label class="inp-box"><input type="radio" name="inp-btn001"><b>나의 할일</b></label>
+					<label class="inp-box"><input type="radio" name="inp-btn001"><b>업무요청</b></label>
+					<label class="inp-box"><input type="radio" name="inp-btn001"><b>업무보고</b></label>
+					<label class="inp-box"><input type="radio" name="inp-btn001"><b>업무일지</b></label>
+					<label class="inp-box"><input type="radio" name="inp-btn001"><b>업무일지</b></label>
+				</div>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+
+		<div class="column">
+			<h2>row-thumb-list</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<div class="row-thumb-list overflow-list">
+					<label class="inp inp-thumb">
+						<input type="radio" name="inp-btn001">
+						<picture>
+							<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+							<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+						</picture>
+					</label>
+					<button type="button" class="inp-thumb">
+						<picture>
+							<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+							<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+						</picture>
+					</button>
+					<button type="button" class="inp-thumb inp-thumb-remove">
+						<picture>
+							<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+							<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+						</picture>
+					</button>
+					<label class="inp inp-thumb">
+						<input type="radio" name="inp-btn001">
+						<picture>
+							<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+							<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+						</picture>
+					</label>
+					<label class="inp inp-thumb">
+						<input type="radio" name="inp-btn001">
+						<picture>
+							<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+							<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+						</picture>
+					</label>
+					<label class="inp inp-thumb">
+						<input type="radio" name="inp-btn001">
+						<picture>
+							<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+							<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+						</picture>
+					</label>
+					<label class="inp inp-thumb">
+						<input type="radio" name="inp-btn001">
+						<picture>
+							<source srcset="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif">
+							<img class="img-cover" src="../../assets/@temp/6a59d0ced279c734c830919ba4c6bdb1.jfif" alt="">
+						</picture>
+					</label>
+				</div>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+
+
+		<div class="column">
+			<h2>row-attach</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<div class="row-attach">
+					<div class="row-attach-title">
+						<div class="left">
+							<strong>첨부파일</strong>
+							<em>2</em>
+							<span>(3.86MB)</span>
+						</div>
+						<div class="right">
+							<div class="right">
+								<label for="attach-file01" class="btn-small btn-outline-black">
+									<input type="file" id="attach-file01">
+									파일첨부
+								</label>
+								<button type="button" class="btn-small btn-outline-black">업무문서함 열기</button>
+							</div>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<div class="attach-name">
+								<button type="button">
+									<strong>하이브리드_v1.하이브리드_v1.0.pptx</strong>
+									<span>3.86MB</span>
+								</button>
+							</div>
+							<div class="attach-btn">
+								<button type="button" class="btn-ico btn-size24"><i class="i-download"></i><span class="blind">다운로드</span></button>
+								<button type="button" class="btn-ico btn-size24"><i class="i-view"></i><span class="blind">보기</span></button>
+							</div>
+						</li>
+						<li>
+							<div class="attach-name">
+								<button type="button">
+									<strong>하이브리드_v1.0.pptx</strong>
+									<span>3.86MB</span>
+								</button>
+							</div>
+							<div class="attach-btn">
+								<button type="button" class="btn-ico btn-size24"><i class="i-download"></i><span class="blind">다운로드</span></button>
+								<button type="button" class="btn-ico btn-size24"><i class="i-view"></i><span class="blind">보기</span></button>
+							</div>
+						</li>
+						<li>
+							<div class="attach-name">
+								<button type="button">
+									<strong>하이브리드_v1.하이브리드_v1.0.pptx</strong>
+									<span>3.86MB</span>
+								</button>
+							</div>
+							<div class="attach-btn">
+								<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
+			<!-- //row-list -->
 		</div>
 		<hr>
+
+		<div class="column">
+			<h2>row-info</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<div class="row-info">
+					<div class="row-info-cont">
+						<picture>
+							<source srcset="../../assets/images/section/user-photo.png">
+							<img class="img-cover" src="../../assets/images/section/user-photo.png" alt="">
+						</picture>
+						<dl>
+							<dt>김비즈 과장</dt>
+							<dd>2024. 05. 29 09:00</dd>
+						</dl>
+					</div>
+					<div class="card-band-etc">
+						<dl class="j-end">
+							<div class="list list01">
+								<dt><span class="blind">조회수</span></dt>
+								<dd>4명</dd>
+							</div>
+							<div class="list list02">
+								<dt><span class="blind">댓글건수</span></dt>
+								<dd>4개</dd>
+							</div>
+							<div class="list list03">
+								<dt><span class="blind">가입상태</span></dt>
+								<dd>가입</dd>
+							</div>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+
+		<div class="column">
+			<h2>row-reply</h2>
+
+			<!-- row-list -->
+			<div class="row-list mt10">
+				<div class="row-reply">
+					<div class="row-reply-title">
+						<strong>댓글 <span>3</span></strong>
+						<div class="form">
+							<div class="input-wrap">
+								<input type="text" title="댓글 입력" placeholder="댓글을 입력해 주세요">
+							</div>
+						</div>
+						<div class="row-attach">
+							<ul>
+								<li>
+									<div class="attach-name">
+										<button type="button">
+											<strong>하이브리드_v1.하이브리드_v1.0.pptx</strong>
+											<span>3.86MB</span>
+										</button>
+									</div>
+									<div class="attach-btn">
+										<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="thumb">
+							<div class="thumb-list">
+								<picture>
+									<source srcset="../../assets/@temp/table_bg.png">
+									<img class="img-cover" src="../../assets/@temp/table_bg.png" alt="">
+								</picture>
+								<button type="button"><span class="blind">첨부파일 삭제</span></button>
+							</div>
+							<div class="thumb-list">
+								<picture>
+									<source srcset="../../assets/@temp/table_bg.png">
+									<img class="img-cover" src="../../assets/@temp/table_bg.png" alt="">
+								</picture>
+								<button type="button"><span class="blind">첨부파일 삭제</span></button>
+							</div>
+						</div>
+						<div class="row-reply-btn">
+							<div class="left">
+								<button type="button" class="btn-ico btn-size20"><i class="i-camera"></i><span class="blind">카메라업로드</span></button>
+								<button type="button" class="btn-ico btn-size20" data-micromodal-trigger="modal10"><i class="i-picture"></i><span class="blind">사진업로드</span></button>
+								<label class="btn-ico btn-size20" for="attach-file"><input type="file" id="attach-file"><i class="i-file"></i><span class="blind">파일업로드</span></label>
+							</div>
+							<div class="right">
+								<button type="button" class="btn-send"><i></i>전송</button>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="divide-line my10"></div>
+
+					<div class="card">
+						<figure class="card-comment">
+							<figcaption>
+								<div class="card-comment-title">
+									<div class="left">
+										<strong>강용관 부장</strong>
+									</div>
+									<div class="right">
+										<button type="button" class="btn-ico btn-size20" data-micromodal-trigger="modal1"><i class="i-more"></i><span class="blind">댓글 메뉴</span></button>
+									</div>
+								</div>
+								<div class="date">2024. 05. 23 15:30 </div>
+								<p>이달 중에 완료해야 다음 업무진행시 차질이 없습니다. 급하게 요청한 건이라 빠른 처리 부탁드립니다. </p>
+								<div class="thumb">
+									<div class="thumb-list">
+										<picture>
+											<source srcset="../../assets/@temp/emoji.png">
+											<img class="img-cover" src="../../assets/@temp/emoji.png" alt="">
+										</picture>
+									</div>
+									<div class="thumb-list">
+										<picture>
+											<source srcset="../../assets/@temp/emoji.png">
+											<img class="img-cover" src="../../assets/@temp/emoji.png" alt="">
+										</picture>
+									</div>
+									<div class="thumb-list">
+										<picture>
+											<source srcset="../../assets/@temp/emoji.png">
+											<img class="img-cover" src="../../assets/@temp/emoji.png" alt="">
+										</picture>
+									</div>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+
+					<div class="divide-line my10"></div>
+
+					<div class="card">
+						<figure class="card-comment">
+							<figcaption>
+								<div class="card-comment-title">
+									<div class="left">
+										<strong>강용관 부장</strong>
+									</div>
+									<div class="right">
+										<button type="button" class="btn-ico btn-size20" data-micromodal-trigger="modal1"><i class="i-more"></i><span class="blind">댓글 메뉴</span></button>
+									</div>
+								</div>
+								<div class="date">2024. 05. 23 15:30 </div>
+								<p>이달 중에 완료해야 다음 업무진행시 차질이 없습니다. 급하게 요청한 건이라 빠른 처리 부탁드립니다. </p>
+								<div class="thumb">
+									<div class="thumb-list">
+										<picture>
+											<source srcset="../../assets/@temp/table_bg.png">
+											<img class="img-cover" src="../../assets/@temp/table_bg.png" alt="">
+										</picture>
+									</div>
+									<div class="thumb-list">
+										<picture>
+											<source srcset="../../assets/@temp/table_bg.png">
+											<img class="img-cover" src="../../assets/@temp/table_bg.png" alt="">
+										</picture>
+									</div>
+									<div class="thumb-list">
+										<picture>
+											<source srcset="../../assets/@temp/table_bg.png">
+											<img class="img-cover" src="../../assets/@temp/table_bg.png" alt="">
+										</picture>
+									</div>
+									<div class="thumb-list">
+										<picture>
+											<source srcset="../../assets/@temp/table_bg.png">
+											<img class="img-cover" src="../../assets/@temp/table_bg.png" alt="">
+										</picture>
+									</div>
+									<div class="thumb-list">
+										<picture>
+											<source srcset="../../assets/@temp/table_bg.png">
+											<img class="img-cover" src="../../assets/@temp/table_bg.png" alt="">
+										</picture>
+									</div>
+									<div class="thumb-list">
+										<picture>
+											<source srcset="../../assets/@temp/table_bg.png">
+											<img class="img-cover" src="../../assets/@temp/table_bg.png" alt="">
+										</picture>
+									</div>
+								</div>
+								<div class="row-attach">
+									<ul>
+										<li>
+											<div class="attach-name">
+												<button type="button">
+													<strong>하이브리드_v1.하이브리드_v1.0.pptx</strong>
+													<span>3.86MB</span>
+												</button>
+											</div>
+											<div class="attach-btn">
+												<button type="button" class="btn-ico btn-size24"><i class="i-download"></i><span class="blind">다운로드</span></button>
+												<button type="button" class="btn-ico btn-size24"><i class="i-view"></i><span class="blind">보기</span></button>
+											</div>
+										</li>
+										<li>
+											<div class="attach-name">
+												<button type="button">
+													<strong>하이브리드_v1.0.pptx</strong>
+													<span>3.86MB</span>
+												</button>
+											</div>
+											<div class="attach-btn">
+												<button type="button" class="btn-ico btn-size24"><i class="i-download"></i><span class="blind">다운로드</span></button>
+												<button type="button" class="btn-ico btn-size24"><i class="i-view"></i><span class="blind">보기</span></button>
+											</div>
+										</li>
+										<!-- <li>
+											<div class="attach-name">
+												<button type="button">
+													<strong>하이브리드_v1.하이브리드_v1.0.pptx</strong>
+													<span>3.86MB</span>
+												</button>
+											</div>
+											<div class="attach-btn">
+												<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
+											</div>
+										</li> -->
+									</ul>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+		<div class="column">
+			<h2>row-attach-file</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li>
+						<div class="d-flex gap20 mlauto">
+							<label class="btn-ico btn-size20" for="attach-picture"><input type="file" id="attach-picture"> <i class="i-picture"></i><span class="blind">사진업로드</span></label>
+							<button type="button" class="btn-ico btn-size20"><i class="i-emoji"></i><span class="blind">이모티콘</span></button>
+							<label class="btn-ico btn-size20" for="attach-file"><input type="file" id="attach-file"><i class="i-file"></i><span class="blind">파일업로드</span></label>
+						</div>
+					</li>
+					<li>
+						<div class="d-flex gap20 mlauto">
+							<button type="button" class="btn-ico btn-size30 btn-text"><i class="i-mail-reply"></i>답장</button>
+							<button type="button" class="btn-ico btn-size30 btn-text"><i class="i-mail-reply-all"></i>전체답장</button>
+							<button type="button" class="btn-ico btn-size30 btn-text"><i class="i-mail-relay"></i>전달</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+
+
+		<div class="column">
+			<h2>row-vote</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<div class="row-vote">
+					<div class="row-vote-title">
+						<strong>10/10일 회식 메뉴 선택해 주세요.</strong>
+						<div class="row-vote-status">
+							<dl>
+								<dt>진행중</dt>
+								<dd>2024.05.23 ~ 2024.05.29</dd>
+							</dl>
+						</div>
+						<div class="row-vote-name">
+							<dl>
+								<dt>작성자</dt>
+								<dd>김미자</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<ul class="row-vote-list">
+					<li>
+						<label class="inp">
+							<input type="radio" name="inp-switch001">
+							<b>이준구 부장</b>
+						</label>
+					</li>
+					<li>
+						<label class="inp">
+							<input type="radio" name="inp-switch001">
+							<b>이준구 부장</b>
+						</label>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+		</div>
+		<hr>
+
+
+		<div class="column">
+			<h2>row-mail</h2>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li class="flex-wrap">
+						<div class="group-title group-large-title">
+							<strong>메일제목메일제목메일제목메일제목메일제목</strong>
+							<div class="date">2024.5.31.15:49 (GMT +0900)</div>
+						</div>
+						<div class="group-cont">
+							<div class="d-flex gap20 j-end">
+								<button type="button" class="btn-ico btn-size30 btn-text"><i class="i-mail-reply"></i>답장</button>
+								<button type="button" class="btn-ico btn-size30 btn-text"><i class="i-mail-reply-all"></i>전체답장</button>
+								<button type="button" class="btn-ico btn-size30 btn-text"><i class="i-mail-relay"></i>전달</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- //row-list -->
+	</div>
+	<hr>
+
+
+
+
+
+	<div class="column">
+		<h2>group-collapse</h2>
+
+
+		<!-- row-section -->
+		<section class="row-section toggleCont">
+
+			<!-- row-list -->
+			<div class="row-list collapse-trigger">
+				<ul class="group">
+					<li class="group-header">
+						<button type="button" class="chevron-30 chevron-down toggleTrigger">
+							<div class="group-title">처리 내역</div>
+							<div class="group-cont">강용관 부장</div>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li class="flex-wrap">
+						<div class="group-title">진척율(%)</div>
+						<div class="group-cont">
+							<div class="progress-section">
+								<input type="radio" id="value-0" value="0" name="progress-bar" checked>
+								<input type="radio" id="value-20" value="20" name="progress-bar">
+								<input type="radio" id="value-40" value="40" name="progress-bar">
+								<input type="radio" id="value-60" value="60" name="progress-bar">
+								<input type="radio" id="value-80" value="80" name="progress-bar">
+								<input type="radio" id="value-100" value="100" name="progress-bar">
+								<div class="progress-bar">
+									<div class="progress-bar-inner"></div>
+								</div>
+							</div>
+							<div class="row-alert j-end px0">
+								<p>업무 완료 후에는 수정할 수 없습니다. </p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="group-title">담당자</div>
+						<div class="group-cont">강용관 부장</div>
+					</li>
+					<li>
+						<div class="group-title">최종 수정일</div>
+						<div class="group-cont">2024.05.30 13:02</div>
+					</li>
+					<li class="j-between">
+						<div class="group-title">관련업무</div>
+						<div class="group-cont">
+							<button type="button" class="btn-small btn-outline-black btn-inner-ico">추가<i class="i-plus"></i></button>
+						</div>
+					</li>
+					<li>
+						<div class="row-box-list">
+							<button type="button" class="btn-medium btn-red btn-inner-ico fw-700">나의 할일<i class="i-close"></i></button>
+							<button type="button" class="btn-medium btn-red btn-inner-ico fw-700">나의 할일<i class="i-close"></i></button>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<div class="divide-line"></div>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<ul class="group">
+					<li class="flex-wrap">
+						<div class="group-cont">
+							<textarea title="내용 입력" placeholder="내용을 입력해 주세요"></textarea>
+							<div class="row-alert j-end px0">
+								<p>업무 완료 후에는 수정할 수 없습니다. </p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //row-list -->
+
+			<div class="divide-line"></div>
+
+			<!-- row-list -->
+			<div class="row-list">
+				<div class="row-attach">
+					<div class="row-attach-title">
+						<div class="left">
+							<strong>첨부파일</strong>
+							<em>2</em>
+							<span>(3.86MB)</span>
+						</div>
+						<div class="right">
+							<button type="button" class="btn-small btn-outline-black">다운로드</button>
+							<button type="button" class="btn-small btn-outline-black">미리보기</button>
+						</div>
+					</div>
+					<ul>
+						<li>
+							<div class="attach-name">
+								<button type="button">
+									<strong>하이브리드_v1.하이브리드_v1.0.pptx</strong>
+									<span>3.86MB</span>
+								</button>
+							</div>
+							<div class="attach-btn">
+								<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
+							</div>
+						</li>
+						<li>
+							<div class="attach-name">
+								<button type="button">
+									<strong>하이브리드_v1.0.pptx</strong>
+									<span>3.86MB</span>
+								</button>
+							</div>
+							<div class="attach-btn">
+								<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //row-list -->
+
+		</section>
+		<!-- //row-section -->
+
+
+
+	</div>
+	<hr>
+
+	<div class="column">
+		<h2>accordion-content</h2>
+
+
+		<!-- row-list -->
+		<div class="row-list accordion-content">
+
+			<!-- acc-trigger -->
+			<button type="button" class="acc-title" data-controls="accordion-panel0" id="accordion-title0">
+				<div class="chevron-icon">
+					<picture>
+						<source srcset="../../assets/images/row/chevron-icon-team.svg">
+						<img src="../../assets/images/row/chevron-icon-team.svg" alt="">
+					</picture>
+					<span>전체주소록</span>
+				</div>
+			</button>
+			<!-- //acc-trigger -->
+
+			<!-- acc-panel -->
+			<div id="accordion-panel0" role="region" class="acc-panel">
+
+				<button type="button" class="acc-title" data-controls="accordion-panel1" id="accordion-title1">
+					<div class="chevron-icon">
+						<picture>
+							<source srcset="../../assets/images/section/user-photo.png">
+							<img src="../../assets/images/section/user-photo.png" alt="">
+						</picture>
+						<span>케이티<b>(비즈앤테크)</b></span>
+					</div>
+				</button>
+				<div id="accordion-panel1" role="region" class="acc-panel">
+					<div class="acc-panel-info">
+						<button type="button" class="btn-ico btn-size30 btn-round-red30"><i class="i-chat"></i><span class="blind">문자</span></button>
+						<button type="button" class="btn-ico btn-size30 btn-round-red30"><i class="i-call"></i><span class="blind">전화</span></button>
+						<button type="button" class="btn-ico btn-size30 btn-round-red30"><i class="i-mail"></i><span class="blind">메일</span></button>
+						<button type="button" class="btn-ico btn-size30 btn-round-red30"><i class="i-info"></i><span class="blind">정보</span></button>
+					</div>
+				</div>
+			</div>
+			<!-- //acc-panel -->
+
+		</div>
+		<!-- //row-list -->
+
+
+
+	</div>
+
+	<hr>
+
+
+	<div class="column">
+		<h2>vote</h2>
+
+		<!-- row-list -->
+		<div class="row-list mt10">
+			<ul class="group">
+				<li>
+					<div class="group-title">질문</div>
+					<div class="group-cont">
+						<input type="text" title="질문" placeholder="투표할 내용을 입력하세요">
+					</div>
+				</li>
+				<li class="j-between">
+					<div class="group-title">수신자</div>
+					<div class="group-cont">
+						<button type="button" class="btn-small btn-outline-black btn-inner-ico">추가<i class="i-plus"></i></button>
+					</div>
+				</li>
+				<li>
+					<div class="form px0">
+						<div class="input-wrap">
+							<input type="text" value="" title="문항" placeholder="1. 문항">
+							<label for="file-attach1" class="form-btn form-attach" title="첨부파일">
+								<input type="file" id="file-attach1">
+							</label>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="form px0">
+						<div class="input-wrap">
+							<input type="text" value="" title="문항" placeholder="1. 문항">
+							<label for="file-attach2" class="form-btn form-attach" title="첨부파일">
+								<input type="file" id="file-attach3">
+							</label>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="form px0">
+						<div class="input-wrap input-wrap-btn2">
+							<input type="text" value="" title="문항" placeholder="1. 문항">
+							<label for="file-attach3" class="form-btn form-attach" title="첨부파일">
+								<input type="file" id="file-attach3">
+							</label>
+							<button type="button" class="form-btn form-delete" title="항목 삭제"></button>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- //row-list -->
+
+	</div>
+
+	<hr>
+
+	<div class="column">
+		<h2>mail</h2>
+
+		<!-- row-list -->
+		<div class="row-list">
+			<ul class="group toggleCont pb0">
+				<li>
+					<div class="group-title">보낸 사람</div>
+					<div class="group-cont">홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+				</li>
+			</ul>
+			<ul class="group toggleCont py0">
+				<li class="collapse-trigger">
+					<div class="group-title">받는 사람</div>
+					<button type="button" class="chevron-30 chevron-down toggleTrigger">
+						<div class="group-cont">홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+					</button>
+				</li>
+				<li class="collapse-target">
+					<div class="group-title"></div>
+					<div class="group-cont">홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+				</li>
+				<li class="collapse-target">
+					<div class="group-title"></div>
+					<div class="group-cont">홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+				</li>
+			</ul>
+			<ul class="group toggleCont py0">
+
+				<li class="collapse-trigger">
+					<div class="group-title">참조</div>
+					<button type="button" class="chevron-30 chevron-down toggleTrigger">
+						<div class="group-cont">홍xx 과장홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+					</button>
+				</li>
+				<li class="collapse-target">
+					<div class="group-title"></div>
+					<div class="group-cont">홍xx 과장홍xx 과장홍xx 과장홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+				</li>
+				<li class="collapse-target">
+					<div class="group-title"></div>
+					<div class="group-cont">홍xx 과장홍xx 과장 <span class="link-address">gdhong@domain.com</span></div>
+				</li>
+			</ul>
+		</div>
+
 	</div>
 
 	<hr>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script><!-- 개발에서 제외해주세요 -->
+	<!-- //ui source -->
+
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<main>
+			<header>
+				<div class="main-header">
+					<div class="left"></div>
+					<div class="center">
+						<h1 class="logo">
+							<a href="#">
+								<picture>
+									<source srcset="../../assets/images/logo/logo-kt.svg">
+									<img src="../../assets/images/logo/logo-kt.svg" alt="KT 커스터마이징 EZ">
+								</picture>
+							</a>
+						</h1>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size30"><i class="i-refresh"></i><span class="blind">새로고침</span></button>
+					</div>
+				</div>
+			</header>
+
+			<hr class="hr-g">
+
+			<header>
+				<div class="main-header">
+					<div class="left"></div>
+					<div class="center">
+						<h1>더보기</h1>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size30"><i class="i-close"></i><span class="blind">닫기</span></button>
+					</div>
+				</div>
+			</header>
+
+			<hr class="hr-g">
+
+			<header>
+				<div class="main-header">
+					<div class="left">
+						<button type="button" class="btn-ico btn-size30"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
+					</div>
+					<div class="center">
+						<h1>프로필 수정</h1>
+					</div>
+					<div class="right">
+						<div class="target-percent percent-blue">60%</div>
+					</div>
+				</div>
+			</header>
+
+			<hr class="hr-g">
+
+			<header>
+				<div class="main-header">
+					<div class="left">
+						<button type="button" class="btn-ico btn-size30"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
+					</div>
+					<div class="center">
+						<h1>포틀릿 수정</h1>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size30"><i class="i-modify"></i><span class="blind">수정</span></button>
+					</div>
+				</div>
+			</header>
+
+			<hr class="hr-g">
+
+			<header>
+				<div class="main-header">
+					<div class="left">
+						<button type="button" class="btn-ico btn-size30"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
+					</div>
+					<div class="center">
+						<h1>설정</h1>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size30"><i class="i-close"></i><span class="blind">닫기</span></button>
+					</div>
+				</div>
+			</header>
+
+			<hr class="hr-g">
+
+			<header>
+				<div class="main-header">
+					<div class="left">
+						<button type="button" class="btn-ico btn-size30"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
+					</div>
+					<div class="center">
+						<h1>조직도</h1>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size30"><i class="i-search"></i><span class="blind">검색</span></button>
+					</div>
+				</div>
+			</header>
+
+			<hr class="hr-g">
+
+			<header class="bg-gray100">
+				<div class="main-header">
+					<div class="left">
+						<button type="button" class="btn-ico btn-size30"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
+					</div>
+					<div class="center">
+						<h1>상세정보</h1>
+					</div>
+					<div class="right">
+					</div>
+				</div>
+			</header>
+
+			<hr class="hr-g">
+
+			<header>
+				<div class="main-header">
+					<div class="left">
+					</div>
+					<div class="center">
+						<h1>To-Do</h1>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size30"><i class="i-close"></i><span class="blind">닫기</span></button>
+					</div>
+				</div>
+				<div class="sub-header">
+					<div class="left">
+						<button type="button" class="btn-ico btn-size24"><i class="i-menu"></i><span class="blind">메뉴</span></button>
+					</div>
+					<div class="center">
+						<h2>업무수신 요청</h2>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size24"><i class="i-search"></i><span class="blind">검색</span></button>
+						<button type="button" class="btn-ico btn-size24"><i class="i-modify"></i><span class="blind">수정</span></button>
+					</div>
+				</div>
+
+				<!-- form -->
+				<div class="form pt10 pb10">
+					<input type="date">
+					<div class="bul">~</div>
+					<input type="date">
+				</div>
+				<!-- //form -->
+
+				<!-- form -->
+				<div class="form">
+					<div class="input-wrap">
+						<input type="text" value="" placeholder="검색어를 입력해 주세요">
+						<button type="button" class="form-btn form-search" title="검색"></button>
+					</div>
+				</div>
+				<!-- //form -->
+
+			</header>
+
+			<hr class="hr-g">
+
+			<header>
+				<div class="main-header">
+					<div class="left">
+					</div>
+					<div class="center">
+						<h1>To-Do</h1>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size30"><i class="i-close"></i><span class="blind">닫기</span></button>
+					</div>
+				</div>
+				<div class="sub-header">
+					<div class="left">
+						<button type="button" class="btn-ico btn-size24"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
+					</div>
+					<div class="center">
+						<h2>To-Do</h2>
+					</div>
+					<div class="right">
+					</div>
+				</div>
+			</header>
+
+
+			<hr class="hr-g">
+
+			<header>
+				<div class="main-header">
+					<div class="left">
+					</div>
+					<div class="center">
+						<h1>밴드</h1>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size30"><i class="i-close"></i><span class="blind">닫기</span></button>
+					</div>
+				</div>
+				<div class="sub-header">
+					<div class="left">
+						<button type="button" class="btn-ico btn-size24"><i class="i-menu"></i><span class="blind">메뉴</span></button>
+					</div>
+					<div class="center">
+						<h2>나의 그룹</h2>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size24"><i class="i-search"></i><span class="blind">검색</span></button>
+						<button type="button" class="btn-ico btn-size24"><i class="i-group"></i><span class="blind">그룹생성</span></button>
+					</div>
+				</div>
+
+				<!-- form -->
+				<div class="form">
+					<div class="input-wrap">
+						<input type="text" value="" placeholder="검색어를 입력해 주세요">
+						<button type="button" class="form-btn form-search" title="검색"></button>
+					</div>
+				</div>
+				<!-- //form -->
+
+
+				<div class="band-status">
+					<div class="left">
+						<dl>
+							<div class="list list01">
+								<dt class="type01"><span class="blind">공개상태</span></dt>
+								<dd>공개</dd>
+							</div>
+							<div class="list list02">
+								<dt class="type01"><span class="blind">가입상태</span></dt>
+								<dd>가입</dd>
+							</div>
+						</dl>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-small btn-outline-black btn-inner-ico">회원추가<i class="i-plus"></i></button>
+					</div>
+				</div>
+			</header>
+
+			<hr class="hr-g">
+
+			<header>
+				<div class="main-header">
+					<div class="left">
+						<button type="button" class="btn-ico btn-size30"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
+					</div>
+					<div class="center">
+						<h1>포스트 상세</h1>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size30"><i class="i-modify"></i><span class="blind">수정</span></button>
+						<button type="button" class="btn-ico btn-size30"><i class="i-delete"></i><span class="blind">삭제</span></button>
+					</div>
+				</div>
+
+
+				<!-- form -->
+				<div class="form pb10">
+					<input type="text" value="" placeholder="기안자를 입력해 주세요">
+				</div>
+				<!-- //form -->
+
+
+				<!-- form -->
+				<div class="form">
+					<input type="text" value="" placeholder="문서 제목을 입력해 주세요">
+					<button type="button" class="btn-large btn-outline-red">검색</button>
+				</div>
+				<!-- //form -->
+			</header>
+
+			<hr class="hr-g">
+
+			<header>
+				<div class="main-header">
+					<div class="left">
+					</div>
+					<div class="center">
+						<h1>메일</h1>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size30"><i class="i-close"></i><span class="blind">닫기</span></button>
+					</div>
+				</div>
+				<div class="sub-header">
+					<div class="left">
+						<button type="button" class="btn-ico btn-size24"><i class="i-menu"></i><span class="blind">메뉴</span></button>
+					</div>
+					<div class="center">
+						<h2>받은 메일함</h2>
+					</div>
+					<div class="right">
+						<button type="button" class="btn-ico btn-size24"><i class="i-modify"></i><span class="blind">새 메일</span></button>
+					</div>
+				</div>
+
+				<!-- form -->
+				<div class="form">
+					<div class="input-wrap">
+						<input type="text" value="" placeholder="검색어를 입력해 주세요">
+						<button type="button" class="form-btn form-search" title="검색"></button>
+					</div>
+					<button type="button" class="btn-large btn-outline-black btn-inner-ico btn-ratio"><i class="i-filter"></i><span class="blind">필터</span></button>
+				</div>
+				<!-- //form -->
+
+			</header>
+
+
+		</main>
+	</div>
+	<!-- //wrap -->
+
+
+
+</body>
+
+</html>

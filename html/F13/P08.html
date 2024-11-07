@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT커스터마이징</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- 개발에서 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+	<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal01">data-micromodal-trigger="modal01"</button>
+
+	<!-- micromodal -->
+	<div class="micromodal-slide modal" id="modal01" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container modal__container__left" role="dialog" aria-modal="true">
+				<div class="modal__content">
+
+					<!-- main -->
+					<main>
+						<!-- header -->
+						<header>
+							<div class="main-header">
+								<div class="left">
+								</div>
+								<div class="center">
+									<h1>업무문서함으로 다운로드</h1>
+								</div>
+								<div class="right">
+									<button type="button" class="btn-ico btn-size30" data-micromodal-close><i class="i-close"></i><span class="blind">닫기</span></button>
+								</div>
+							</div>
+						</header>
+						<!-- //header -->
+
+						<!-- main-inner -->
+						<!-- content start -->
+						<div class="main-inner">
+
+							<div class="tab-content">
+								<ul class="tab-list overflow-list bg-white gap30 mb0">
+									<li class="tab tab-active"><a href="#" aria-selected="true">개인업무 폴더</a></li>
+									<li class="tab"><a href="#" aria-selected="false">부서업무 폴더함</a></li>
+								</ul>
+							</div>
+
+							<!-- section -->
+							<section class="section section-menu mt10">
+
+								<div class="jstree-work jstree-folder">
+									<div id="jstree">
+										<!-- in this example the tree is populated from inline HTML -->
+										<ul>
+											<li>개인 업무 폴더
+												<ul>
+													<li>개인 업무 폴더 1</li>
+													<li>개인 업무 폴더 2
+														<ul>
+															<li>개인 업무 폴더 1</li>
+															<li>개인 업무 폴더 2</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li>개인 업무 폴더 2</li>
+										</ul>
+									</div>
+								</div>
+
+								<script>
+									$(function() {
+										$(function() {
+											$("#jstree").jstree({
+												"checkbox": {
+													"keep_selected_style": false
+												},
+												"plugins": ["checkbox"]
+											});
+										});
+									});
+								</script>
+
+
+							</section>
+							<!-- //section -->
+
+
+						</div>
+						<!-- //content end -->
+						<!-- //main-inner -->
+
+					</main>
+					<!-- main -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<button type="button" class="btn-large btn-black" data-micromodal-trigger="modal02">data-micromodal-trigger="modal02"</button>
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide modal" id="modal02" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container modal__container__left" role="dialog" aria-modal="true">
+				<div class="modal__content">
+
+					<!-- main -->
+					<main>
+						<!-- header -->
+						<header>
+							<div class="main-header">
+								<div class="left">
+								</div>
+								<div class="center">
+									<h1>업무문서함으로 다운로드</h1>
+								</div>
+								<div class="right">
+									<button type="button" class="btn-ico btn-size30" data-micromodal-close><i class="i-close"></i><span class="blind">닫기</span></button>
+								</div>
+							</div>
+						</header>
+						<!-- //header -->
+
+						<!-- main-inner -->
+						<!-- content start -->
+						<div class="main-inner">
+
+							<div class="tab-content">
+								<ul class="tab-list overflow-list bg-white gap30 mb0">
+									<li class="tab tab-active"><a href="#" aria-selected="true">개인업무 폴더</a></li>
+									<li class="tab"><a href="#" aria-selected="false">부서업무 폴더함</a></li>
+								</ul>
+							</div>
+
+							<!-- row-list-title -->
+							<div class="row-list-title">
+								<label class="inp">
+									<input type="checkbox"><b>전체 선택</b>
+								</label>
+							</div>
+							<!-- row-list-title -->
+
+
+							<!-- row-list -->
+							<div class="row-list">
+								<a href="#" class="chevron chevron-30">
+									<div class="chevron-icon">
+										<picture>
+											<source srcset="../../assets/images/ico/ico-folder.svg">
+											<img class="img-cover" src="../../assets/images/ico/ico-folder.svg" alt="">
+										</picture>
+										<span>모바일 개인업무-1</span>
+									</div>
+								</a>
+								<a href="#" class="chevron chevron-30">
+									<div class="chevron-icon">
+										<picture>
+											<source srcset="../../assets/images/ico/ico-folder.svg">
+											<img class="img-cover" src="../../assets/images/ico/ico-folder.svg" alt="">
+										</picture>
+										<span>모바일 개인업무-2</span>
+									</div>
+								</a>
+								<a href="#" class="chevron chevron-30">
+									<div class="chevron-icon">
+										<picture>
+											<source srcset="../../assets/images/ico/ico-folder.svg">
+											<img class="img-cover" src="../../assets/images/ico/ico-folder.svg" alt="">
+										</picture>
+										<span>모바일 개인업무-3</span>
+									</div>
+								</a>
+								<div class="row-inp">
+									<label class="inp">
+										<input type="checkbox">
+										<b class="flex-column a-start">
+											<span>한글 파일 - 수정</span>
+											<i>97KB <u></u> 2024. 05. 23 </i>
+										</b>
+									</label>
+								</div>
+								<div class="row-inp">
+									<label class="inp">
+										<input type="checkbox">
+										<b class="flex-column a-start">
+											<span>한글 파일 - 수정</span>
+											<i>97KB <u></u> 2024. 05. 23 </i>
+										</b>
+									</label>
+								</div>
+								<div class="row-inp">
+									<label class="inp">
+										<input type="checkbox">
+										<b class="flex-column a-start">
+											<span>한글 파일 - 수정</span>
+											<i>97KB <u></u> 2024. 05. 23 </i>
+										</b>
+									</label>
+								</div>
+								<div class="row-inp">
+									<label class="inp">
+										<input type="checkbox">
+										<b class="flex-column a-start">
+											<span>한글 파일 - 수정</span>
+											<i>97KB <u></u> 2024. 05. 23 </i>
+										</b>
+									</label>
+								</div>
+								<div class="row-inp">
+									<label class="inp">
+										<input type="checkbox">
+										<b class="flex-column a-start">
+											<span>한글 파일 - 수정</span>
+											<i>97KB <u></u> 2024. 05. 23 </i>
+										</b>
+									</label>
+								</div>
+								<div class="row-inp">
+									<label class="inp">
+										<input type="checkbox">
+										<b class="flex-column a-start">
+											<span>한글 파일 - 수정</span>
+											<i>97KB <u></u> 2024. 05. 23 </i>
+										</b>
+									</label>
+								</div>
+							</div>
+							<!-- //row-list -->
+
+						</div>
+						<!-- //content end -->
+						<!-- //main-inner -->
+
+						<!-- bottom-btn -->
+						<div class="bottom-btn">
+							<!-- pagination -->
+							<div class="pagination" aria-label="pagination">
+								<a href="#" class="first" title="처음 페이지"></a>
+								<a href="#" class="prev" title="이전 페이지"></a>
+								<a href="#" class="active" title="현재 페이지">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#" class="next" title="다음 페이지"></a>
+								<a href="#" class="last" title="마지막 페이지"></a>
+							</div>
+							<!-- //pagination -->
+
+							<!-- pagination -->
+							<div class="pagination" aria-label="pagination">
+								<a href="#" class="first disabled" title="처음 페이지"></a>
+								<a href="#" class="prev disabled" title="이전 페이지"></a>
+								<a href="#" class="active" title="현재 페이지">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<span>...</span>
+								<a href="#">5</a>
+								<a href="#" class="next disabled" title="다음 페이지"></a>
+								<a href="#" class="last disabled" title="마지막 페이지"></a>
+							</div>
+							<!-- //pagination -->
+							<div class="btn-wrap">
+								<button type="button" class="btn-large btn-outline-red">취소</button>
+								<button type="button" class="btn-large btn-black">저장</button>
+							</div>
+						</div>
+						<!-- //bottom-btn -->
+
+					</main>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<script>
+		// micromodal
+		MicroModal.init({
+			onShow: function(modalPopup, element) {
+				const trigger = element;
+				const triggerRect = trigger.getBoundingClientRect();
+				const triggerPositionTop = triggerRect.top;
+				const triggerPositionRight = triggerRect.right;
+				const triggerPositionBottom = triggerRect.bottom;
+				const triggerPositionLeft = triggerRect.left;
+				const windowWidth = window.outerWidth;
+				const windowHeight = window.outerHeight;
+				if (modalPopup.classList.contains('micromodal-slide-dropdown')) {
+					const modalPopupBody = modalPopup.querySelector('.modal__container');
+					const modalPopupBodyWidth = modalPopupBody.clientWidth;
+					const modalPopupBodyHeight = modalPopupBody.clientHeight;
+
+					const padding = 10
+
+					// default (position right)
+					if (triggerPositionRight > windowWidth / 2) {
+						modalPopupBody.style.left = triggerPositionRight - modalPopupBodyWidth + 'px';
+
+					}
+					// reverse (position left)
+					else if (windowWidth / 2 > triggerPositionRight) {
+						modalPopupBody.style.left = triggerPositionLeft + 'px';
+					}
+
+					// default (position bottom)
+					if (windowHeight / 2 > triggerPositionTop) {
+						modalPopupBody.style.top = triggerPositionBottom + padding + 'px';
+
+						//overflow bottom
+						if (windowHeight < triggerPositionBottom + padding + modalPopupBodyHeight) {
+							modalPopupBody.style.overflow = 'auto'
+							modalPopupBody.style.maxHeight = windowHeight - triggerPositionBottom - padding + 'px'
+						}
+					}
+					// reverse (position top)
+					else if (windowHeight / 2 < triggerPositionTop) {
+						modalPopupBody.style.bottom = windowHeight - triggerPositionTop + padding + 'px';
+
+						//overflow top
+						if (windowHeight < windowHeight - triggerPositionTop + padding + modalPopupBodyHeight) {
+							modalPopupBody.style.overflow = 'auto'
+							modalPopupBody.style.maxHeight = windowHeight - (windowHeight - triggerPositionTop + padding) + 'px'
+						}
+					}
+				}
+			}, // [1]
+			onClose: function(modalPopup, element) {
+				const trigger = element;
+				if (modalPopup.classList.contains('micromodal-slide-dropdown')) {
+					const modalPopupBody = modalPopup.querySelector('.modal__container');
+					setTimeout(function() {
+						modalPopupBody.removeAttribute('style');
+					}, 300)
+				}
+			}, // [2]
+			// openTrigger: 'data-custom-open', // [3]
+			// closeTrigger: 'data-custom-close', // [4]
+			// openClass: 'is-open', // [5]
+			// disableScroll: true, // [6]
+			// disableFocus: false, // [7]
+			awaitOpenAnimation: true, // [8]
+			awaitCloseAnimation: true, // [9]
+			// debugMode: true // [10]
+		});
+		// document.addEventListener("DOMContentLoaded", function() {
+		// 	MicroModal.show('modal1', {
+		// 		// awaitCloseAnimation: true,
+		// 		onShow: function(modalPopup) {
+		// 			console.info(modalPopup.id + 'is shown')
+
+		// 		},
+		// 		onClose: function(modalPopup) {
+		// 			console.info(modalPopup.id + 'is hidden')
+		// 		}
+		// 	});
+		// });
+	</script>
+</body>
+
+</html>

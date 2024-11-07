@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT커스터마이징</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- 개발에서 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+	<!-- main -->
+	<main>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+				</div>
+				<div class="center">
+					<h1>주소록</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="btn-ico btn-size30"><i class="i-close"></i><span class="blind">닫기</span></button>
+				</div>
+			</div>
+			<div class="sub-header">
+				<div class="left">
+				</div>
+				<div class="center">
+					<h2>주소록</h2>
+				</div>
+				<div class="right">
+					<button type="button" class="btn-ico btn-size24"><i class="i-search"></i><span class="blind">검색</span></button>
+					<button type="button" class="btn-ico btn-size24"><i class="i-modify"></i><span class="blind">수정</span></button>
+				</div>
+			</div>
+
+
+			<!-- form -->
+			<div class="form">
+				<div class="input-wrap">
+					<input type="text" value="" placeholder="이름 또는 부서명을 입력해 주세요">
+					<button type="button" class="form-btn form-search" title="검색"></button>
+				</div>
+			</div>
+			<!-- //form -->
+
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+
+			<!-- row-list -->
+			<div class="row-list accordion-content">
+
+				<!-- acc-trigger -->
+				<button type="button" class="acc-title" data-controls="accordion-panel0" id="accordion-title0">
+					<div class="chevron-icon">
+						<picture>
+							<source srcset="../../assets/images/row/chevron-icon-team.svg">
+							<img src="../../assets/images/row/chevron-icon-team.svg" alt="">
+						</picture>
+						<span>전체주소록</span>
+					</div>
+				</button>
+				<!-- //acc-trigger -->
+
+				<!-- acc-panel -->
+				<div id="accordion-panel0" role="region" class="acc-panel">
+
+					<button type="button" class="acc-title" data-controls="accordion-panel1" id="accordion-title1">
+						<div class="chevron-icon">
+							<picture>
+								<source srcset="../../assets/images/section/user-photo.png">
+								<img src="../../assets/images/section/user-photo.png" alt="">
+							</picture>
+							<span>케이티<b>(비즈앤테크)</b></span>
+						</div>
+					</button>
+					<div id="accordion-panel1" role="region" class="acc-panel">
+						<div class="acc-panel-info">
+							<button type="button" class="btn-ico btn-size30 btn-round-red30"><i class="i-chat"></i><span class="blind">문자</span></button>
+							<button type="button" class="btn-ico btn-size30 btn-round-red30"><i class="i-call"></i><span class="blind">전화</span></button>
+							<button type="button" class="btn-ico btn-size30 btn-round-red30"><i class="i-mail"></i><span class="blind">메일</span></button>
+							<button type="button" class="btn-ico btn-size30 btn-round-red30"><i class="i-info"></i><span class="blind">정보</span></button>
+						</div>
+					</div>
+				</div>
+				<!-- //acc-panel -->
+
+			</div>
+			<!-- //row-list -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+	</main>
+	<!-- main -->
+</body>
+
+</html>

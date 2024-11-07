@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>KT커스터마이징</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-main.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<!-- 개발에서 제외해주세요(퍼블리싱 전용 스크립트) -->
+	<script src="../../assets/js/ui-temp.js"></script>
+	<!-- //개발에서 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+	<!-- main -->
+	<main>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left"></div>
+				<div class="center">
+					<h1 class="logo">
+						<a href="#">
+							<picture>
+								<source srcset="../../assets/images/logo/logo-kt.svg">
+								<img src="../../assets/images/logo/logo-kt.svg" alt="KT 커스터마이징 EZ">
+							</picture>
+						</a>
+					</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="btn-ico btn-size30"><i class="i-refresh"></i><span class="blind">새로고침</span></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+			<!-- section -->
+			<!-- main only -->
+			<section class="section-main">
+
+				<!-- card -->
+				<div class="card">
+					<div class="swiper shortcut-swiper">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut01.svg">
+											<img src="../../assets/images/main/ico-shortcut01.svg" alt="">
+										</picture>
+										<strong>1</strong>
+									</div>
+									<span>메일</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut01.svg">
+											<img src="../../assets/images/main/ico-shortcut01.svg" alt="">
+										</picture>
+									</div>
+									<span>메일</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut02.svg">
+											<img src="../../assets/images/main/ico-shortcut02.svg" alt="">
+										</picture>
+									</div>
+									<span>일정</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut03.svg">
+											<img src="../../assets/images/main/ico-shortcut03.svg" alt="">
+										</picture>
+									</div>
+									<span>
+										업무
+										<br>
+										문서함
+									</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut04.svg">
+											<img src="../../assets/images/main/ico-shortcut04.svg" alt="">
+										</picture>
+										<strong>+100</strong>
+									</div>
+									<span>전자결제</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut05.svg">
+											<img src="../../assets/images/main/ico-shortcut05.svg" alt="">
+										</picture>
+									</div>
+									<span>조직도</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut06.svg">
+											<img src="../../assets/images/main/ico-shortcut06.svg" alt="">
+										</picture>
+									</div>
+									<span>
+										온라인
+										<br>
+										투표
+									</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut07.svg">
+											<img src="../../assets/images/main/ico-shortcut07.svg" alt="">
+										</picture>
+									</div>
+									<span>To-Do</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut08.svg">
+											<img src="../../assets/images/main/ico-shortcut08.svg" alt="">
+										</picture>
+									</div>
+									<span>주소록</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut09.svg">
+											<img src="../../assets/images/main/ico-shortcut09.svg" alt="">
+										</picture>
+									</div>
+									<span>근태관리</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut10.svg">
+											<img src="../../assets/images/main/ico-shortcut10.svg" alt="">
+										</picture>
+									</div>
+									<span>게시판</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<div class="thumb">
+										<picture>
+											<source srcset="../../assets/images/main/ico-shortcut11.svg">
+											<img src="../../assets/images/main/ico-shortcut11.svg" alt="">
+										</picture>
+									</div>
+									<span>밴드</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<!-- //card -->
+
+				<!-- card -->
+				<div class="card">
+					<a href="#">
+						<figure class="card-weather">
+							<picture>
+								<source srcset="../../assets/images/figure/weather.svg">
+								<img src="../../assets/images/figure/weather.svg" alt="맑음">
+							</picture>
+							<figcaption>
+								<dl>
+									<div class="list">
+										<dt>최저</dt>
+										<dd>24°C</dd>
+									</div>
+									<div class="list">
+										<dt>최고</dt>
+										<dd>24°C</dd>
+									</div>
+								</dl>
+								<div class="card-weather-detail">
+									<span>
+										강수확률
+										<em>0%</em>
+									</span>
+									<span>
+										습도
+										<em>55%</em>
+									</span>
+								</div>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+				<!-- //card -->
+
+				<!-- card -->
+				<div class="card">
+					<a href="#">
+						<figure class="card-news">
+							<picture>
+								<source srcset="../../assets/images/figure/news.svg">
+								<img src="../../assets/images/figure/news.svg" alt="">
+							</picture>
+							<figcaption>
+								<div class="headline chevron-30">뉴스</div>
+								<p class="ellipsis">이달 중에 완료해야 다음 업무 이달 중에 완료해야 다음 업무</p>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+				<!-- //card -->
+
+				<!-- card -->
+				<div class="card-list overflow-list">
+					<div class="card">
+						<a href="#">
+							<figure class="card-anni">
+								<picture>
+									<source srcset="../../assets/images/figure/w-anniversary.svg">
+									<img src="../../assets/images/figure/w-anniversary.svg" alt="">
+								</picture>
+								<figcaption>
+									<div class="headline">결혼 기념일</div>
+									<p class="ellipsis">업무현신팀/강감찬 대리</p>
+								</figcaption>
+							</figure>
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<figure class="card-anni">
+								<picture>
+									<source srcset="../../assets/images/figure/b-anniversary.svg">
+									<img src="../../assets/images/figure/b-anniversary.svg" alt="">
+								</picture>
+								<figcaption>
+									<div class="headline">생일 축하합니다.</div>
+									<p class="ellipsis">업무현신팀/강감찬 대리</p>
+								</figcaption>
+							</figure>
+						</a>
+					</div>
+					<div class="card">
+						<a href="#">
+							<figure class="card-anni">
+								<picture>
+									<source srcset="../../assets/images/figure/b-anniversary.svg">
+									<img src="../../assets/images/figure/b-anniversary.svg" alt="">
+								</picture>
+								<figcaption>
+									<div class="headline">생일 축하합니다.</div>
+									<p class="ellipsis">업무현신팀/강감찬 대리</p>
+								</figcaption>
+							</figure>
+						</a>
+					</div>
+				</div>
+				<!-- //card -->
+
+				<!-- card -->
+				<div class="card">
+					<a href="#">
+						<figure class="card-work">
+							<picture>
+								<source srcset="../../assets/images/figure/work.svg">
+								<img src="../../assets/images/figure/work.svg" alt="">
+							</picture>
+							<figcaption>
+								<dl>
+									<div class="list">
+										<dt>출근</dt>
+										<dd>09:00</dd>
+									</div>
+									<div class="list">
+										<dt>퇴근</dt>
+										<dd>18:00</dd>
+									</div>
+								</dl>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+				<!-- //card -->
+
+				<!-- card -->
+				<div class="card toggleCont">
+					<button type="button" class="toggleTrigger">
+						<figure class="card-dashboard">
+							<picture>
+								<source srcset="../../assets/images/figure/dashboard.svg">
+								<img src="../../assets/images/figure/dashboard.svg" alt="">
+							</picture>
+							<figcaption>
+								<div class="headline chevron-30 chevron-down">대시보드</div>
+								<p class="ellipsis">나의 업무 진척율을 빠르게 파악할 수 있습니다</p>
+							</figcaption>
+						</figure>
+					</button>
+					<div class="card-dashboard-detail">
+						<ul>
+							<li class="list01">
+								<strong>To-do</strong>
+								<progress value="80" max="100" style="min-width: 200px"></progress>
+							</li>
+							<li class="list02">
+								<strong>일정</strong>
+								<progress value="80" max="100" style="min-width: 200px"></progress>
+							</li>
+							<li class="list03">
+								<strong>메일</strong>
+								<progress value="80" max="100" style="min-width: 200px"></progress>
+							</li>
+							<li class="list04">
+								<strong>전자결제</strong>
+								<progress value="80" max="100" style="min-width: 200px"></progress>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //card -->
+
+
+
+				<!-- card -->
+				<div class="card">
+					<a href="#">
+						<figure class="card-d-weather">
+							<figcaption>
+								<div class="headline chevron-30">날씨
+									<p class="ellipsis">서울 특별시 영등포구</p>
+								</div>
+							</figcaption>
+						</figure>
+					</a>
+					<div class="tab mt10">
+						<button type="button" class="btn-medium btn-round btn-black">오늘</button>
+						<button type="button" class="btn-medium btn-round btn-outline-black">내일</button>
+						<button type="button" class="btn-medium btn-round btn-outline-black">모레</button>
+					</div>
+					<div class="card-weather-today">
+						<div class="sunrise">
+							<picture>
+								<source srcset="../../assets/images/weather/w01.svg">
+								<img src="../../assets/images/weather/w01.svg" alt="">
+							</picture>
+							<dl>
+								<dt>오전</dt>
+								<dd>17°C</dd>
+							</dl>
+						</div>
+						<div class="sunset">
+							<picture>
+								<source srcset="../../assets/images/weather/w01.svg">
+								<img src="../../assets/images/weather/w01.svg" alt="">
+							</picture>
+							<dl>
+								<dt>오후</dt>
+								<dd>17°C</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="card-weather-week">
+						<dl class="overflow-list">
+							<div class="list">
+								<dt>6시</dt>
+								<dd>
+									<picture>
+										<source srcset="../../assets/images/weather/w01.svg">
+										<img src="../../assets/images/weather/w01.svg" alt="">
+									</picture>
+									<span>17°C</span>
+								</dd>
+							</div>
+							<div class="list">
+								<dt>6시</dt>
+								<dd>
+									<picture>
+										<source srcset="../../assets/images/weather/w02.svg">
+										<img src="../../assets/images/weather/w02.svg" alt="">
+									</picture>
+									<span>17°C</span>
+								</dd>
+							</div>
+							<div class="list">
+								<dt>6시</dt>
+								<dd>
+									<picture>
+										<source srcset="../../assets/images/weather/w03.svg">
+										<img src="../../assets/images/weather/w03.svg" alt="">
+									</picture>
+									<span>17°C</span>
+								</dd>
+							</div>
+							<div class="list">
+								<dt>6시</dt>
+								<dd>
+									<picture>
+										<source srcset="../../assets/images/weather/w04.svg">
+										<img src="../../assets/images/weather/w04.svg" alt="">
+									</picture>
+									<span>17°C</span>
+								</dd>
+							</div>
+							<div class="list">
+								<dt>6시</dt>
+								<dd>
+									<picture>
+										<source srcset="../../assets/images/weather/w05.svg">
+										<img src="../../assets/images/weather/w05.svg" alt="">
+									</picture>
+									<span>17°C</span>
+								</dd>
+							</div>
+							<div class="list">
+								<dt>6시</dt>
+								<dd>
+									<picture>
+										<source srcset="../../assets/images/weather/w06.svg">
+										<img src="../../assets/images/weather/w06.svg" alt="">
+									</picture>
+									<span>17°C</span>
+								</dd>
+							</div>
+							<div class="list">
+								<dt>6시</dt>
+								<dd>
+									<picture>
+										<source srcset="../../assets/images/weather/w07.svg">
+										<img src="../../assets/images/weather/w07.svg" alt="">
+									</picture>
+									<span>17°C</span>
+								</dd>
+							</div>
+							<div class="list">
+								<dt>6시</dt>
+								<dd>
+									<picture>
+										<source srcset="../../assets/images/weather/w08.svg">
+										<img src="../../assets/images/weather/w08.svg" alt="">
+									</picture>
+									<span>17°C</span>
+								</dd>
+							</div>
+							<div class="list">
+								<dt>6시</dt>
+								<dd>
+									<picture>
+										<source srcset="../../assets/images/weather/w09.svg">
+										<img src="../../assets/images/weather/w09.svg" alt="">
+									</picture>
+									<span>17°C</span>
+								</dd>
+							</div>
+							<div class="list">
+								<dt>6시</dt>
+								<dd>
+									<picture>
+										<source srcset="../../assets/images/weather/w10.svg">
+										<img src="../../assets/images/weather/w10.svg" alt="">
+									</picture>
+									<span>17°C</span>
+								</dd>
+							</div>
+							<div class="list">
+								<dt>6시</dt>
+								<dd>
+									<picture>
+										<source srcset="../../assets/images/weather/w11.svg">
+										<img src="../../assets/images/weather/w11.svg" alt="">
+									</picture>
+									<span>17°C</span>
+								</dd>
+							</div>
+							<div class="list">
+								<dt>6시</dt>
+								<dd>
+									<picture>
+										<source srcset="../../assets/images/weather/w12.svg">
+										<img src="../../assets/images/weather/w12.svg" alt="">
+									</picture>
+									<span>17°C</span>
+								</dd>
+							</div>
+						</dl>
+					</div>
+
+				</div>
+				<!-- //card -->
+
+
+			</section>
+			<!-- //section -->
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+		<!-- bottom-nav -->
+		<nav class="bottom-nav">
+			<ul>
+				<li class="list01">
+					<a href="#">
+						<picture>
+							<source srcset="../../assets/images/main/ico-bottom-nav01.svg">
+							<img src="../../assets/images/main/ico-bottom-nav01.svg" alt="">
+						</picture>
+						<span>홈</span>
+					</a>
+				</li>
+				<li class="list02">
+					<a href="#">
+						<picture>
+							<source srcset="../../assets/images/main/ico-bottom-nav02.svg">
+							<img src="../../assets/images/main/ico-bottom-nav02.svg" alt="">
+						</picture>
+						<span>출근</span>
+					</a>
+				</li>
+				<li class="list03">
+					<a href="#">
+						<picture>
+							<source srcset="../../assets/images/main/ico-bottom-nav03.svg">
+							<img src="../../assets/images/main/ico-bottom-nav03.svg" alt="">
+						</picture>
+						<span>퇴근</span>
+					</a>
+				</li>
+				<li class="list04">
+					<a href="#">
+						<picture>
+							<source srcset="../../assets/images/main/ico-bottom-nav04.svg">
+							<img src="../../assets/images/main/ico-bottom-nav04.svg" alt="">
+						</picture>
+						<span>더보기</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- //bottom-nav -->
+	</main>
+	<!-- main -->
+
+	<!-- shortcut-swiper -->
+	<script>
+		var swiper = new Swiper(".shortcut-swiper", {
+			slidesPerView: 4,
+			grid: {
+				rows: 3,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+		});
+		var swiper2 = new Swiper(".mySwiper2", {
+			loop: true,
+			autoplay: {
+				delay: 1,
+				disableOnInteraction: false,
+			},
+			spaceBetween: 15,
+			slidesPerView: "auto",
+			speed: 4000,
+			grabCursor: true,
+			mousewheelControl: true,
+			keyboardControl: true,
+		});
+	</script>
+</body>
+
+</html>
