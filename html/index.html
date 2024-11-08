@@ -1645,7 +1645,7 @@
 	</div>
 	<!-- /.content -->
 
-	<a class="vscodepath" href="vscode://file///C:/kthybrid//html/index.html"></a>
+	<a class="vscodepath" href="vscode://Users/finenuts/Desktop/woori/html/index.html"></a>
 
 	<!-- jQuery -->
 	<script src="../assets/plugins/jquery/jquery.min.js"></script>
@@ -1699,7 +1699,7 @@
 			var url = $(this).attr("href");
 			if ($(this).text().length) {
 				if ($(this).hasClass("link")) {
-					vsCode = "vscode://file///C:/kthybrid/"; //source file 경로
+					vsCode = "vscode:///Users/finenuts/Desktop/woori"; //source file 경로
 					var vsCodeHref = '<a class="vscodepath" href=' + '"' + vsCode + current_path + url + '" tabindex="-1"></a>';
 					$(this).after(vsCodeHref);
 				}
