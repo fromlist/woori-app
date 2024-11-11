@@ -48,3 +48,6 @@ td a.vscodepath{position:absolute;right:0;top:50%;transform:translateY(-50%);dis
     .section-index .table-col table tbody td.article {flex:1 1 100%;width:100%;font-size:16px;}
     .section-index .table-col table tbody td .link {display:block;}
 }
+.ui-guide h1 {font-size:24px;}
+.ui-guide h2 {font-size:18px;}
+.ui-guide p {font-size:14px;}
