@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-variable.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-guide.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+</head>
+
+<body>
+	<div class="ui-guide">
+		<h1>Toast</h1>
+		<div class="ui-guide-section">
+			<h2>Toast <span>Type</span></h2>
+			<div class="guide-column-list">
+				<button class="btn-large btn-outlined" id="alert">alert</button>
+				<button class="btn-large btn-outlined" id="success">Success</button>
+				<button class="btn-large btn-outlined" id="info">Info</button>
+				<button class="btn-large btn-outlined" id="warning">Warning</button>
+				<button class="btn-large btn-outlined" id="error">Error</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function() {
+			toastr.options = {
+				'closeButton': false,
+				'debug': false,
+				'newestOnTop': false,
+				'progressBar': false,
+				'positionClass': 'toast-bottom-center',
+				'preventDuplicates': false,
+				'showDuration': '500',
+				'hideDuration': '500',
+				'timeOut': '1500',
+				'extendedTimeOut': '500',
+				'showEasing': 'swing',
+				'hideEasing': 'linear',
+				'showMethod': 'fadeIn',
+				'hideMethod': 'fadeOut',
+			}
+			toastr.alert('', 'You clicked alert toast');
+			toastr.success('', 'You clicked Success toast');
+			toastr.info('', 'You clicked Info toast')
+			toastr.error('', 'You clicked Error Toast')
+			toastr.warning('', 'You clicked Warning Toast')
+		});
+
+		$('#alert').click(function(event) {
+			toastr.alert(`<div class="btn-toast-wrap"><button type="button" class="btn-small btn-ghost-white">Small 버튼명</button>`, 'You clicked alert toast', {
+				"timeOut": 0,
+				"extendedTimeOut": 0,
+				"preventDuplicates": true,
+				"disableTimeOut": true,
+			});
+		});
+		$('#success').click(function(event) {
+			toastr.success(``, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, veritatis accusamus obcaecati quis placeat natus inventore deleniti error animi sed libero debitis earum dolor facere corrupti voluptas, eaque, repudiandae suscipit?');
+		});
+		$('#info').click(function(event) {
+			toastr.info('', 'You clicked Info toast')
+		});
+		$('#error').click(function(event) {
+			toastr.error('', 'You clicked Error Toast')
+		});
+		$('#warning').click(function(event) {
+			toastr.warning('', 'You clicked Warning Toast')
+		});
+	</script>
+</body>
+
+</html>

@@ -28,6 +28,12 @@
 .btn-ghost:not([aria-disabled="true"]):active {background:var(--button-ghost-pressed);}
 .btn-ghost[aria-disabled="true"] {background:var(--button-ghost-disabled);color:var(--button-ghost-onDisabled);}
 
+.btn-ghost-white {color: var(--button-ghostw-onEnabled);border: 1px solid var(--button-ghostw-border);}
+
+
+
+
+
 .btn-round {border-radius:50px;}
 
 .anchor {display:inline-flex;color:var(--button-textBtn-Enabled);line-height:1;}
