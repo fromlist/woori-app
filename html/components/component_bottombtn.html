@@ -54,254 +54,84 @@
 	<link rel="stylesheet" href="../../assets/css/ui-style.css">
 	<link rel="stylesheet" href="../../assets/css/ui-content.css">
 	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
-	<link rel="stylesheet" href="../../assets/css/ui-guide.css">
 
 	<script src="../../assets/js/ui-script.js"></script>
 	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
-	<style>
-		ul {}
-	</style>
 </head>
 
 <body>
-	<div class="ui-guide">
-		<h1>Variables</h1>
-		<p>기본 컬러 팔레트 입니다.</p>
 
-		<div class="ui-guide-section">
-			<h2>Color variable</h2>
-			<ul>
-				<li style="color:var(--black-0);"><span>black-0</span><i></i></li>
-				<li style="color:var(--black-100);"><span>black-100</span><i></i></li>
-				<li style="color:var(--black-12);"><span>black-12</span><i></i></li>
-				<li style="color:var(--black-16);"><span>black-16</span><i></i></li>
-				<li style="color:var(--black-20);"><span>black-20</span><i></i></li>
-				<li style="color:var(--black-24);"><span>black-24</span><i></i></li>
-				<li style="color:var(--black-32);"><span>black-32</span><i></i></li>
-				<li style="color:var(--black-4);"><span>black-4</span><i></i></li>
-				<li style="color:var(--black-40);"><span>black-40</span><i></i></li>
-				<li style="color:var(--black-56);"><span>black-56</span><i></i></li>
-				<li style="color:var(--black-60);"><span>black-60</span><i></i></li>
-				<li style="color:var(--black-72);"><span>black-72</span><i></i></li>
-				<li style="color:var(--black-8);"><span>black-8</span><i></i></li>
-				<li style="color:var(--black-80);"><span>black-80</span><i></i></li>
-				<li style="color:var(--black-88);"><span>black-88</span><i></i></li>
-				<li style="color:var(--black-96);"><span>black-96</span><i></i></li>
-				<li style="color:var(--blue-100);"><span>blue-100</span><i></i></li>
-				<li style="color:var(--blue-200);"><span>blue-200</span><i></i></li>
-				<li style="color:var(--blue-300);"><span>blue-300</span><i></i></li>
-				<li style="color:var(--blue-400);"><span>blue-400</span><i></i></li>
-				<li style="color:var(--blue-50);"><span>blue-50</span><i></i></li>
-				<li style="color:var(--blue-500);"><span>blue-500</span><i></i></li>
-				<li style="color:var(--blue-600);"><span>blue-600</span><i></i></li>
-				<li style="color:var(--blue-700);"><span>blue-700</span><i></i></li>
-				<li style="color:var(--blue-800);"><span>blue-800</span><i></i></li>
-				<li style="color:var(--blue-900);"><span>blue-900</span><i></i></li>
-				<li style="color:var(--cyan-100);"><span>cyan-100</span><i></i></li>
-				<li style="color:var(--cyan-200);"><span>cyan-200</span><i></i></li>
-				<li style="color:var(--cyan-300);"><span>cyan-300</span><i></i></li>
-				<li style="color:var(--cyan-400);"><span>cyan-400</span><i></i></li>
-				<li style="color:var(--cyan-50);"><span>cyan-50</span><i></i></li>
-				<li style="color:var(--cyan-500);"><span>cyan-500</span><i></i></li>
-				<li style="color:var(--cyan-600);"><span>cyan-600</span><i></i></li>
-				<li style="color:var(--cyan-700);"><span>cyan-700</span><i></i></li>
-				<li style="color:var(--cyan-800);"><span>cyan-800</span><i></i></li>
-				<li style="color:var(--cyan-900);"><span>cyan-900</span><i></i></li>
-				<li style="color:var(--deepblue-100);"><span>deepblue-100</span><i></i></li>
-				<li style="color:var(--deepblue-200);"><span>deepblue-200</span><i></i></li>
-				<li style="color:var(--deepblue-300);"><span>deepblue-300</span><i></i></li>
-				<li style="color:var(--deepblue-400);"><span>deepblue-400</span><i></i></li>
-				<li style="color:var(--deepblue-50);"><span>deepblue-50</span><i></i></li>
-				<li style="color:var(--deepblue-500);"><span>deepblue-500</span><i></i></li>
-				<li style="color:var(--deepblue-600);"><span>deepblue-600</span><i></i></li>
-				<li style="color:var(--deepblue-700);"><span>deepblue-700</span><i></i></li>
-				<li style="color:var(--deepblue-800);"><span>deepblue-800</span><i></i></li>
-				<li style="color:var(--deepblue-900);"><span>deepblue-900</span><i></i></li>
-				<li style="color:var(--gray-200);"><span>gray-200</span><i></i></li>
-				<li style="color:var(--gray-300);"><span>gray-300</span><i></i></li>
-				<li style="color:var(--gray-400);"><span>gray-400</span><i></i></li>
-				<li style="color:var(--gray-50);"><span>gray-50</span><i></i></li>
-				<li style="color:var(--gray-500);"><span>gray-500</span><i></i></li>
-				<li style="color:var(--gray-600);"><span>gray-600</span><i></i></li>
-				<li style="color:var(--gray-700);"><span>gray-700</span><i></i></li>
-				<li style="color:var(--gray-800);"><span>gray-800</span><i></i></li>
-				<li style="color:var(--gray-900);"><span>gray-900</span><i></i></li>
-				<li style="color:var(--green-100);"><span>green-100</span><i></i></li>
-				<li style="color:var(--green-200);"><span>green-200</span><i></i></li>
-				<li style="color:var(--green-300);"><span>green-300</span><i></i></li>
-				<li style="color:var(--green-400);"><span>green-400</span><i></i></li>
-				<li style="color:var(--green-50);"><span>green-50</span><i></i></li>
-				<li style="color:var(--green-500);"><span>green-500</span><i></i></li>
-				<li style="color:var(--green-600);"><span>green-600</span><i></i></li>
-				<li style="color:var(--green-700);"><span>green-700</span><i></i></li>
-				<li style="color:var(--green-800);"><span>green-800</span><i></i></li>
-				<li style="color:var(--green-900);"><span>green-900</span><i></i></li>
-				<li style="color:var(--pink-100);"><span>pink-100</span><i></i></li>
-				<li style="color:var(--pink-200);"><span>pink-200</span><i></i></li>
-				<li style="color:var(--pink-300);"><span>pink-300</span><i></i></li>
-				<li style="color:var(--pink-400);"><span>pink-400</span><i></i></li>
-				<li style="color:var(--pink-50);"><span>pink-50</span><i></i></li>
-				<li style="color:var(--pink-500);"><span>pink-500</span><i></i></li>
-				<li style="color:var(--pink-600);"><span>pink-600</span><i></i></li>
-				<li style="color:var(--pink-700);"><span>pink-700</span><i></i></li>
-				<li style="color:var(--pink-800);"><span>pink-800</span><i></i></li>
-				<li style="color:var(--pink-900);"><span>pink-900</span><i></i></li>
-				<li style="color:var(--purple-100);"><span>purple-100</span><i></i></li>
-				<li style="color:var(--purple-200);"><span>purple-200</span><i></i></li>
-				<li style="color:var(--purple-300);"><span>purple-300</span><i></i></li>
-				<li style="color:var(--purple-400);"><span>purple-400</span><i></i></li>
-				<li style="color:var(--purple-50);"><span>purple-50</span><i></i></li>
-				<li style="color:var(--purple-500);"><span>purple-500</span><i></i></li>
-				<li style="color:var(--purple-600);"><span>purple-600</span><i></i></li>
-				<li style="color:var(--purple-700);"><span>purple-700</span><i></i></li>
-				<li style="color:var(--purple-800);"><span>purple-800</span><i></i></li>
-				<li style="color:var(--purple-900);"><span>purple-900</span><i></i></li>
-				<li style="color:var(--red-100);"><span>red-100</span><i></i></li>
-				<li style="color:var(--red-200);"><span>red-200</span><i></i></li>
-				<li style="color:var(--red-300);"><span>red-300</span><i></i></li>
-				<li style="color:var(--red-400);"><span>red-400</span><i></i></li>
-				<li style="color:var(--red-50);"><span>red-50</span><i></i></li>
-				<li style="color:var(--red-500);"><span>red-500</span><i></i></li>
-				<li style="color:var(--red-600);"><span>red-600</span><i></i></li>
-				<li style="color:var(--red-700);"><span>red-700</span><i></i></li>
-				<li style="color:var(--red-800);"><span>red-800</span><i></i></li>
-				<li style="color:var(--red-900);"><span>red-900</span><i></i></li>
-				<li style="color:var(--violet-100);"><span>violet-100</span><i></i></li>
-				<li style="color:var(--violet-200);"><span>violet-200</span><i></i></li>
-				<li style="color:var(--violet-300);"><span>violet-300</span><i></i></li>
-				<li style="color:var(--violet-400);"><span>violet-400</span><i></i></li>
-				<li style="color:var(--violet-50);"><span>violet-50</span><i></i></li>
-				<li style="color:var(--violet-500);"><span>violet-500</span><i></i></li>
-				<li style="color:var(--violet-600);"><span>violet-600</span><i></i></li>
-				<li style="color:var(--violet-700);"><span>violet-700</span><i></i></li>
-				<li style="color:var(--violet-800);"><span>violet-800</span><i></i></li>
-				<li style="color:var(--violet-900);"><span>violet-900</span><i></i></li>
-				<li style="color:var(--white-0);"><span>white-0</span><i></i></li>
-				<li style="color:var(--white-100);"><span>white-100</span><i></i></li>
-				<li style="color:var(--white-12);"><span>white-12</span><i></i></li>
-				<li style="color:var(--white-16);"><span>white-16</span><i></i></li>
-				<li style="color:var(--white-20);"><span>white-20</span><i></i></li>
-				<li style="color:var(--white-24);"><span>white-24</span><i></i></li>
-				<li style="color:var(--white-32);"><span>white-32</span><i></i></li>
-				<li style="color:var(--white-4);"><span>white-4</span><i></i></li>
-				<li style="color:var(--white-40);"><span>white-40</span><i></i></li>
-				<li style="color:var(--white-56);"><span>white-56</span><i></i></li>
-				<li style="color:var(--white-60);"><span>white-60</span><i></i></li>
-				<li style="color:var(--white-72);"><span>white-72</span><i></i></li>
-				<li style="color:var(--white-8);"><span>white-8</span><i></i></li>
-				<li style="color:var(--white-80);"><span>white-80</span><i></i></li>
-				<li style="color:var(--white-88);"><span>white-88</span><i></i></li>
-				<li style="color:var(--white-96);"><span>white-96</span><i></i></li>
-				<li style="color:var(--yellow-100);"><span>yellow-100</span><i></i></li>
-				<li style="color:var(--yellow-200);"><span>yellow-200</span><i></i></li>
-				<li style="color:var(--yellow-300);"><span>yellow-300</span><i></i></li>
-				<li style="color:var(--yellow-400);"><span>yellow-400</span><i></i></li>
-				<li style="color:var(--yellow-50);"><span>yellow-50</span><i></i></li>
-				<li style="color:var(--yellow-500);"><span>yellow-500</span><i></i></li>
-				<li style="color:var(--yellow-600);"><span>yellow-600</span><i></i></li>
-				<li style="color:var(--yellow-700);"><span>yellow-700</span><i></i></li>
-				<li style="color:var(--yellow-800);"><span>yellow-800</span><i></i></li>
-				<li style="color:var(--yellow-900);"><span>yellow-900</span><i></i></li>
-				<li style="color:var(--background-bg_blue);"><span>background-bg_blue</span><i></i></li>
-				<li style="color:var(--background-bg_cyan);"><span>background-bg_cyan</span><i></i></li>
-				<li style="color:var(--background-bg_deepBlue);"><span>background-bg_deepBlue</span><i></i></li>
-				<li style="color:var(--background-bg_deepGray);"><span>background-bg_deepGray</span><i></i></li>
-				<li style="color:var(--background-bg_disabled);"><span>background-bg_disabled</span><i></i></li>
-				<li style="color:var(--background-bg_gray);"><span>background-bg_gray</span><i></i></li>
-				<li style="color:var(--background-bg_lgithGray);"><span>background-bg_lgithGray</span><i></i></li>
-				<li style="color:var(--background-bg_lightBlue);"><span>background-bg_lightBlue</span><i></i></li>
-				<li style="color:var(--background-bg_lightCyan);"><span>background-bg_lightCyan</span><i></i></li>
-				<li style="color:var(--background-bg_lightPink);"><span>background-bg_lightPink</span><i></i></li>
-				<li style="color:var(--background-bg_lightPurple);"><span>background-bg_lightPurple</span><i></i></li>
-				<li style="color:var(--background-bg_lightRed);"><span>background-bg_lightRed</span><i></i></li>
-				<li style="color:var(--background-bg_lightViolet);"><span>background-bg_lightViolet</span><i></i></li>
-				<li style="color:var(--background-bg_lightYellow);"><span>background-bg_lightYellow</span><i></i></li>
-				<li style="color:var(--background-bg_pink);"><span>background-bg_pink</span><i></i></li>
-				<li style="color:var(--background-bg_purple);"><span>background-bg_purple</span><i></i></li>
-				<li style="color:var(--background-bg_red);"><span>background-bg_red</span><i></i></li>
-				<li style="color:var(--background-bg_violet);"><span>background-bg_violet</span><i></i></li>
-				<li style="color:var(--background-bg_white);"><span>background-bg_white</span><i></i></li>
-				<li style="color:var(--background-bg_yellow);"><span>background-bg_yellow</span><i></i></li>
-				<li style="color:var(--basic-black);"><span>basic-black</span><i></i></li>
-				<li style="color:var(--basic-white);"><span>basic-white</span><i></i></li>
-				<li style="color:var(--border-12);"><span>border-12</span><i></i></li>
-				<li style="color:var(--border-4);"><span>border-4</span><i></i></li>
-				<li style="color:var(--border-72);"><span>border-72</span><i></i></li>
-				<li style="color:var(--border-8);"><span>border-8</span><i></i></li>
-				<li style="color:var(--border-primary_enabled);"><span>border-primary_enabled</span><i></i></li>
-				<li style="color:var(--brandPrimary-blue400);"><span>brandPrimary-blue400</span><i></i></li>
-				<li style="color:var(--brandPrimary-blue500);"><span>brandPrimary-blue500</span><i></i></li>
-				<li style="color:var(--brandPrimary-blue600);"><span>brandPrimary-blue600</span><i></i></li>
-				<li style="color:var(--button-ghost-border);"><span>button-ghost-border</span><i></i></li>
-				<li style="color:var(--button-ghost-disabled);"><span>button-ghost-disabled</span><i></i></li>
-				<li style="color:var(--button-ghost-enabled);"><span>button-ghost-enabled</span><i></i></li>
-				<li style="color:var(--button-ghost-onDisabled);"><span>button-ghost-onDisabled</span><i></i></li>
-				<li style="color:var(--button-ghost-onEnabled);"><span>button-ghost-onEnabled</span><i></i></li>
-				<li style="color:var(--button-ghost-pressed);"><span>button-ghost-pressed</span><i></i></li>
-				<li style="color:var(--button-outlined-border);"><span>button-outlined-border</span><i></i></li>
-				<li style="color:var(--button-outlined-disabled);"><span>button-outlined-disabled</span><i></i></li>
-				<li style="color:var(--button-outlined-enabled);"><span>button-outlined-enabled</span><i></i></li>
-				<li style="color:var(--button-outlined-onDisabled);"><span>button-outlined-onDisabled</span><i></i></li>
-				<li style="color:var(--button-outlined-onEnabled);"><span>button-outlined-onEnabled</span><i></i></li>
-				<li style="color:var(--button-outlined-pressed);"><span>button-outlined-pressed</span><i></i></li>
-				<li style="color:var(--button-primary-disabled);"><span>button-primary-disabled</span><i></i></li>
-				<li style="color:var(--button-primary-enabled);"><span>button-primary-enabled</span><i></i></li>
-				<li style="color:var(--button-primary-onDisabled);"><span>button-primary-onDisabled</span><i></i></li>
-				<li style="color:var(--button-primary-onEnabled);"><span>button-primary-onEnabled</span><i></i></li>
-				<li style="color:var(--button-primary-pressed);"><span>button-primary-pressed</span><i></i></li>
-				<li style="color:var(--button-secondary-disabled);"><span>button-secondary-disabled</span><i></i></li>
-				<li style="color:var(--button-secondary-enabled);"><span>button-secondary-enabled</span><i></i></li>
-				<li style="color:var(--button-secondary-onDisabled);"><span>button-secondary-onDisabled</span><i></i></li>
-				<li style="color:var(--button-secondary-onEnabled);"><span>button-secondary-onEnabled</span><i></i></li>
-				<li style="color:var(--button-secondary-pressed);"><span>button-secondary-pressed</span><i></i></li>
-				<li style="color:var(--button-tertiary-disabled);"><span>button-tertiary-disabled</span><i></i></li>
-				<li style="color:var(--button-tertiary-enabled);"><span>button-tertiary-enabled</span><i></i></li>
-				<li style="color:var(--button-tertiary-onDisabled);"><span>button-tertiary-onDisabled</span><i></i></li>
-				<li style="color:var(--button-tertiary-onEnabled);"><span>button-tertiary-onEnabled</span><i></i></li>
-				<li style="color:var(--button-tertiary-pressed);"><span>button-tertiary-pressed</span><i></i></li>
-				<li style="color:var(--button-textBtn-Enabled);"><span>button-textBtn-Enabled</span><i></i></li>
-				<li style="color:var(--icon-default);"><span>icon-default</span><i></i></li>
-				<li style="color:var(--icon-disabled);"><span>icon-disabled</span><i></i></li>
-				<li style="color:var(--icon-gray_1);"><span>icon-gray_1</span><i></i></li>
-				<li style="color:var(--icon-gray_2);"><span>icon-gray_2</span><i></i></li>
-				<li style="color:var(--icon-white);"><span>icon-white</span><i></i></li>
-				<li style="color:var(--shadow-blue_1);"><span>shadow-blue_1</span><i></i></li>
-				<li style="color:var(--shadow-blue_2);"><span>shadow-blue_2</span><i></i></li>
-				<li style="color:var(--shadow-blue_3);"><span>shadow-blue_3</span><i></i></li>
-				<li style="color:var(--shadow-gray_1);"><span>shadow-gray_1</span><i></i></li>
-				<li style="color:var(--shadow-gray_2);"><span>shadow-gray_2</span><i></i></li>
-				<li style="color:var(--shadow-gray_3);"><span>shadow-gray_3</span><i></i></li>
-				<li style="color:var(--status-caution);"><span>status-caution</span><i></i></li>
-				<li style="color:var(--status-dimmed);"><span>status-dimmed</span><i></i></li>
-				<li style="color:var(--status-error);"><span>status-error</span><i></i></li>
-				<li style="color:var(--status-help);"><span>status-help</span><i></i></li>
-				<li style="color:var(--status-info);"><span>status-info</span><i></i></li>
-				<li style="color:var(--status-success);"><span>status-success</span><i></i></li>
-				<li style="color:var(--surface-surface);"><span>surface-surface</span><i></i></li>
-				<li style="color:var(--surface-surface0);"><span>surface-surface0</span><i></i></li>
-				<li style="color:var(--surface-surface100);"><span>surface-surface100</span><i></i></li>
-				<li style="color:var(--surface-surface200);"><span>surface-surface200</span><i></i></li>
-				<li style="color:var(--surface-surface300);"><span>surface-surface300</span><i></i></li>
-				<li style="color:var(--surface-surface400);"><span>surface-surface400</span><i></i></li>
-				<li style="color:var(--surface-surface50);"><span>surface-surface50</span><i></i></li>
-				<li style="color:var(--surface-surface500);"><span>surface-surface500</span><i></i></li>
-				<li style="color:var(--surface-surface700);"><span>surface-surface700</span><i></i></li>
-				<li style="color:var(--surface-surface800);"><span>surface-surface800</span><i></i></li>
-				<li style="color:var(--surface-surface900);"><span>surface-surface900</span><i></i></li>
-				<li style="color:var(--typograpy-black);"><span>typograpy-black</span><i></i></li>
-				<li style="color:var(--typograpy-body);"><span>typograpy-body</span><i></i></li>
-				<li style="color:var(--typograpy-caption);"><span>typograpy-caption</span><i></i></li>
-				<li style="color:var(--typograpy-disabled);"><span>typograpy-disabled</span><i></i></li>
-				<li style="color:var(--typograpy-gray);"><span>typograpy-gray</span><i></i></li>
-				<li style="color:var(--typograpy-placeholder);"><span>typograpy-placeholder</span><i></i></li>
-				<li style="color:var(--typograpy-title);"><span>typograpy-title</span><i></i></li>
-				<li style="color:var(--typograpy-white);"><span>typograpy-white</span><i></i></li>
-			</ul>
+	<!-- main -->
+	<main>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="btn-ico" aria-label=""></button>
+				</div>
+				<div class="center">
+					<h1>Layout</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="btn-ico" aria-label="전체메뉴"></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-primary">고객 명함 등록</button>
+			</div>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
 		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
 
 
-	</div>
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-primary">고객 명함 등록</button>
+			</div>
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-secondary">등록</button>
+				<button type="button" class="btn-large btn-primary">공유</button>
+			</div>
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-outlined">취소</button>
+				<button type="button" class="btn-large btn-primary">확인</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- main -->
 </body>
 
 </html>

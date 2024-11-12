@@ -195,7 +195,6 @@
     --button-tertiary-onDisabled:#C5CBD1;
     --button-tertiary-onEnabled:#0C0C0DB8;
     --button-tertiary-pressed:#8597A82E;
-
     --button-textBtn-Enabled:#989FA7;
     --icon-default:#0C0C0DE0;
     --icon-disabled:#0C0C0D14;
@@ -215,6 +214,7 @@
     --status-help:#B348E5;
     --status-info:#1AA3C1;
     --status-success:#00AD7C;
+    --status-focused:#2589F4;
     --surface-surface:#FFFFFF;
     --surface-surface0:#FFFFFF;
     --surface-surface100:#8295A71C;

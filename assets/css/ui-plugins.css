@@ -119,3 +119,5 @@ select.ql-ui {height:initial;appearance:auto;font-size:initial;font-weight:initi
 .toast-info .toast-title:before {background:url(../images/toastr/ico_info.svg) center center / contain no-repeat;}
 .toast-warning .toast-title:before {background:url(../images/toastr/ico_warning.svg) center center / contain no-repeat;}
 .toast-error .toast-title:before {background:url(../images/toastr/ico_error.svg) center center / contain no-repeat;}
+.toast-bottom-center {bottom:12px;}
+.toast-bottom-center.has-bottom-btn {bottom:76px;}

@@ -63,27 +63,56 @@
 </head>
 
 <body>
-	<div class="ui-guide">
-		<h1>Toast</h1>
-		<div class="ui-guide-section">
-			<h2>Toast <span>Type</span></h2>
-			<div class="guide-column-list">
-				<button class="btn-large btn-outlined" id="alert">alert</button>
-				<button class="btn-large btn-outlined" id="success">Success</button>
-				<button class="btn-large btn-outlined" id="info">Info</button>
-				<button class="btn-large btn-outlined" id="warning">Warning</button>
-				<button class="btn-large btn-outlined" id="error">Error</button>
+
+
+	<!-- main -->
+	<main>
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<div class="ui-guide">
+				<h1>Toast</h1>
+				<div class="ui-guide-section">
+					<h2>Toast <span>Type</span></h2>
+					<div class="guide-column-list">
+						<button class="btn-large btn-outlined" id="alert">alert</button>
+						<button class="btn-large btn-outlined" id="success">Success</button>
+						<button class="btn-large btn-outlined" id="info">Info</button>
+						<button class="btn-large btn-outlined" id="warning">Warning</button>
+						<button class="btn-large btn-outlined" id="error">Error</button>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+		<!-- bottom-btn -->
+		<!-- <div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-primary">고객 명함 등록</button>
+			</div>
+		</div> -->
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- main -->
+
 	<script>
 		$(document).ready(function() {
+			let toastPositionDef = 'toast-bottom-center';
+			$('html').each(function() {
+				if ($('main').find('.bottom-btn').length) {
+					toastPositionDef = 'toast-bottom-center has-bottom-btn'
+				}
+			})
 			toastr.options = {
 				'closeButton': false,
 				'debug': false,
 				'newestOnTop': false,
 				'progressBar': false,
-				'positionClass': 'toast-bottom-center',
+				'positionClass': toastPositionDef,
 				'preventDuplicates': false,
 				'showDuration': '500',
 				'hideDuration': '500',

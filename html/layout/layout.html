@@ -3,12 +3,23 @@
 
 <head>
 	<title>자산관리 영업지원 App</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
 
 	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
 	<!-- jstree -->
 
 	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
@@ -24,6 +35,12 @@
 	<!-- swiper -->
 	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
 	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
 	<!-- jquery-ui -->
 	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
 	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
@@ -31,24 +48,79 @@
 
 	<!-- ui source -->
 	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-variable.css">
 	<link rel="stylesheet" href="../../assets/css/ui-default.css">
 	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
 	<link rel="stylesheet" href="../../assets/css/ui-style.css">
 	<link rel="stylesheet" href="../../assets/css/ui-content.css">
 	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
-	<link rel="stylesheet" href="../../assets/css/ui-main.css">
 
 	<script src="../../assets/js/ui-script.js"></script>
-	<script src="../../assets/js/ui-temp.js"></script>
-	<!-- 개발에서 제외해주세요 -->
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
 </head>
 
 <body>
 
-	<div id="loader">
+	<!-- main -->
+	<main>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="btn-ico" aria-label=""></button>
+				</div>
+				<div class="center">
+					<h1>Layout</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="btn-ico" aria-label="전체메뉴"></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
 
-	</div>
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sunt amet. Officiis magni reprehenderit, eligendi sapiente assumenda expedita totam vel adipisci minus sint, ut sunt dolorum voluptatem repellat! Obcaecati, ab.</p>
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-secondary">등록</button>
+				<button type="button" class="btn-large btn-primary">공유</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- main -->
 </body>
 
 </html>
