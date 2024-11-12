@@ -391,7 +391,6 @@
 	</div>
 	<!-- /.content -->
 
-	<a class="vscodepath" href="vscode://Users/finenuts/Desktop/woori/html/index.html"></a>
 
 	<!-- jQuery -->
 	<script src="../assets/plugins/jquery/jquery.min.js"></script>
@@ -420,38 +419,6 @@
 				}
 			}
 		});
-		// $("td:nth-child(5)").on("clic k", function(event) {
-		// 	var tempElem = document.createElement("textarea");
-		// 	var text = $(this).siblings(".al").text();
-		// 	tempElem.value = text;
-		// 	document.body.appendChild(tempElem);
-
-		// 	tempElem.select();
-		// 	document.execCommand("copy");
-		// 	document.body.removeChild(tempElem);
-		// 	if (text.length > 1) {
-		// 		toastr.success(text);
-		// 	} else {
-		// 		toastr.error("파일명 복사 실패");
-		// 	}
-		// });
-		var current_pathAll = window.location.href;
-		var current_path = window.location.pathname;
-		var indexurl = current_path.split("/").pop();
-		current_path = current_path.slice(0, current_path.indexOf(indexurl));
-		var tdurl = $("tr td a");
-		var vsCode = "";
-		tdurl.each(function() {
-			var url = $(this).attr("href");
-			if ($(this).text().length) {
-				if ($(this).hasClass("link")) {
-					vsCode = "vscode:///Users/finenuts/Desktop/woori"; //source file 경로
-					var vsCodeHref = '<a class="vscodepath" href=' + '"' + vsCode + current_path + url + '" tabindex="-1"></a>';
-					$(this).after(vsCodeHref);
-				}
-			}
-		});
-
 
 
 		$('td a.link').on('click', function() {
