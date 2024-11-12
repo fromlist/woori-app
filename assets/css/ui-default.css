@@ -10,7 +10,7 @@ b {font-weight:500;}
 h1,h2,h3,h4,h5,h6 {font-size:inherit;line-height:1.5;}
 *,*:before,*:after {box-sizing:border-box;}
 img,fieldset,iframe,button{border:0;letter-spacing:inherit;}
-img {max-width:100%;}⁄
+img {max-width:100%;}
 ul,ol{list-style:none}
 ul li {list-style-type:inherit;list-style-position:inherit;}
 

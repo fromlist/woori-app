@@ -162,7 +162,7 @@
     --brandPrimary-blue600:#0871F3;
     --button-ghost-border:#0C0C0D1F;
     --button-ghost-disabled:#FFFFFF;
-    --button-ghost-enabled:#FFFFFF;
+    --button-ghost-enabled:#FFFFFF00;
     --button-ghost-onDisabled:#C5CBD1;
     --button-ghost-onEnabled:#495057;
     --button-ghost-pressed:#8597A82E;

@@ -46,6 +46,7 @@
 	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
 	<!-- //[plugins] -->
 
+	<!-- ui source -->
 	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
 	<link rel="stylesheet" href="../../assets/css/ui-variable.css">
 	<link rel="stylesheet" href="../../assets/css/ui-default.css">
@@ -58,173 +59,83 @@
 	<script src="../../assets/js/ui-script.js"></script>
 	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
-
+	<style>
+	</style>
 </head>
 
 <body>
-
-	<div>
+	<div class="ui-guide">
 		<h1>Button</h1>
-		<div class="column">
-			<div class="hr">
-				<h2>Size</h2>
-				<button type="button" class="btn-large btn-black">용어등록</button>
-				<button type="button" class="btn-medium btn-black">용어등록</button>
-				<button type="button" class="btn-small btn-black">용어등록</button>
-			</div>
-			<div class="hr">
-				<h2>color</h2>
-				<div class="d-flex gap10">
-					<button type="button" class="btn-large btn-black">용어등록</button>
-					<button type="button" class="btn-large btn-red">용어등록</button>
-					<button type="button" class="btn-large btn-gray">용어등록</button>
-					<button type="button" class="btn-large btn-outline-black">용어등록</button>
-					<button type="button" class="btn-large btn-outline-red">용어등록</button>
+		<p>Anchor, Button 혼용 가능합니다.</p>
 
-				</div>
+		<div class="ui-guide-section">
+			<h2>CTA <span>Color</span></h2>
+			<div class="guide-column-list">
+				<button type="button" class="btn-large btn-primary">btn-primary</button>
+				<button type="button" class="btn-large btn-secondary">btn-secondary</button>
+				<button type="button" class="btn-large btn-tertiary">btn-tertiary</button>
+				<button type="button" class="btn-large btn-outlined">btn-outlined</button>
+				<button type="button" class="btn-large btn-ghost">btn-ghost</button>
 			</div>
-			<div class="hr">
-				<h2>round</h2>
-				<div class="d-flex gap10">
-					<button type="button" class="btn-large btn-round btn-black">용어등록</button>
-					<button type="button" class="btn-large btn-round btn-red">용어등록</button>
-					<button type="button" class="btn-large btn-round btn-gray">용어등록</button>
-					<button type="button" class="btn-large btn-round btn-outline-black">용어등록</button>
-					<button type="button" class="btn-large btn-round btn-outline-red">용어등록</button>
+			<hr>
 
-				</div>
+			<h2>CTA <span>Inner Icon</span></h2>
+			<div class="guide-column-list">
+				<button type="button" class="btn-large btn-primary">
+					<i class="icon-check"></i>
+					<span>btn-primary</span>
+				</button>
+				<button type="button" class="btn-large btn-secondary">
+					<i class="icon-check"></i>
+					<span>btn-secondary</span>
+				</button>
+				<button type="button" class="btn-large btn-tertiary">
+					<i class="icon-check"></i>
+					<span>btn-tertiary</span>
+				</button>
+				<button type="button" class="btn-large btn-outlined">
+					<i class="icon-check"></i>
+					<span>btn-outlined</span>
+				</button>
+				<button type="button" class="btn-large btn-ghost">
+					<i class="icon-check"></i>
+					<span>btn-ghost</span>
+				</button>
+				<button type="button" class="btn-large btn-primary">
+					<span>btn-primary</span>
+					<i class="icon-check"></i>
+				</button>
+				<button type="button" class="btn-large btn-secondary">
+					<span>btn-secondary</span>
+					<i class="icon-check"></i>
+				</button>
+				<button type="button" class="btn-large btn-tertiary">
+					<span>btn-tertiary</span>
+					<i class="icon-check"></i>
+				</button>
+				<button type="button" class="btn-large btn-outlined">
+					<span>btn-outlined</span>
+					<i class="icon-check"></i>
+				</button>
+				<button type="button" class="btn-large btn-ghost">
+					<span>btn-ghost</span>
+					<i class="icon-check"></i>
+				</button>
 			</div>
-			<div class="hr">
-				<h2>disabled</h2>
-				<div class="d-flex gap10">
-					<button type="button" class="btn-large btn-black" disabled>용어등록</button>
-					<button type="button" class="btn-large btn-outline-black" disabled>용어등록</button>
-					<button type="button" class="btn-large btn-outline-red" disabled>용어등록</button>
-				</div>
+			<hr>
+			<h2>CTA <span>Disabled</span></h2>
+			<div class="guide-column-list">
+				<button type="button" class="btn-large btn-primary" aria-disabled="true">btn-primary</button>
+				<button type="button" class="btn-large btn-secondary" aria-disabled="true">btn-secondary</button>
+				<button type="button" class="btn-large btn-tertiary" aria-disabled="true">btn-tertiary</button>
+				<button type="button" class="btn-large btn-outlined" aria-disabled="true">btn-outlined</button>
+				<button type="button" class="btn-large btn-ghost" aria-disabled="true">btn-ghost</button>
 			</div>
-			<div class="hr">
-				<h2>Fluid</h2>
-				<button type="button" class="btn-medium btn-gray btn-inner-ico fw-700 btn-fluid">안병호 부장 &lt;gdhong@domain.com&gt; <i class="i-close"></i></button>
-			</div>
+			<hr>
 		</div>
 
 
-
-
-		<h1>Icons</h1>
-		<div class="column">
-			<style>
-				.btn-ico,
-				.chevron-30,
-				.chevron-24 {
-					outline: 1px dotted red;
-				}
-			</style>
-			<div class="hr">
-				<h2>btn-size30</h2>
-				<div class="d-flex gap10">
-					<button type="button" class="btn-ico btn-size30"><i class="i-refresh"></i><span class="blind">새로고침</span></button>
-					<button type="button" class="btn-ico btn-size30"><i class="i-close"></i><span class="blind">닫기</span></button>
-					<button type="button" class="btn-ico btn-size30"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
-					<button type="button" class="btn-ico btn-size30"><i class="i-modify"></i><span class="blind">수정</span></button>
-					<button type="button" class="btn-ico btn-size30"><i class="i-search"></i><span class="blind">검색</span></button>
-					<button type="button" class="btn-ico btn-size30"><i class="i-menu"></i><span class="blind">메뉴</span></button>
-					<button type="button" class="btn-ico btn-size30"><i class="i-delete"></i><span class="blind">삭제</span></button>
-					<br>
-					<button type="button" class="chevron-30">chevron-30</button>
-					<button type="button" class="chevron-30 chevron-down">chevron-30</button>
-					<button type="button" class="chevron-30 chevron-left">chevron-30</button>
-					<br>
-					<button type="button" class="btn-ico btn-size30 btn-round-red30"><i class="i-chat"></i><span class="blind">문자</span></button>
-					<button type="button" class="btn-ico btn-size30 btn-round-red30"><i class="i-call"></i><span class="blind">전화</span></button>
-					<button type="button" class="btn-ico btn-size30 btn-round-red30"><i class="i-mail"></i><span class="blind">메일</span></button>
-					<button type="button" class="btn-ico btn-size30 btn-round-red30"><i class="i-info"></i><span class="blind">정보</span></button>
-					<br>
-					<button type="button" class="btn-ico btn-size30 btn-text"><i class="i-mail-reply"></i>답장</button>
-					<button type="button" class="btn-ico btn-size30 btn-text"><i class="i-mail-reply-all"></i>전체답장</button>
-					<button type="button" class="btn-ico btn-size30 btn-text"><i class="i-mail-relay"></i>전달</button>
-
-				</div>
-				<hr>
-
-				<h2>btn-size24</h2>
-				<div class="d-flex gap10">
-					<button type="button" class="btn-ico btn-size24"><i class="i-refresh"></i><span class="blind">새로고침</span></button>
-					<button type="button" class="btn-ico btn-size24"><i class="i-close"></i><span class="blind">닫기</span></button>
-					<button type="button" class="btn-ico btn-size24"><i class="i-back"></i><span class="blind">뒤로가기</span></button>
-					<button type="button" class="btn-ico btn-size24"><i class="i-modify"></i><span class="blind">수정</span></button>
-					<button type="button" class="btn-ico btn-size24"><i class="i-search"></i><span class="blind">검색</span></button>
-					<button type="button" class="btn-ico btn-size24"><i class="i-menu"></i><span class="blind">메뉴</span></button>
-					<button type="button" class="btn-ico btn-size24"><i class="i-group"></i><span class="blind">그룹생성</span></button>
-					<br>
-					<button type="button" class="btn-ico btn-size24"><i class="i-search i-search-gray"></i><span class="blind">검색</span></button>
-					<button type="button" class="btn-ico btn-size24"><i class="i-download"></i><span class="blind">다운로드</span></button>
-					<button type="button" class="btn-ico btn-size24"><i class="i-view"></i><span class="blind">보기</span></button>
-
-					<br>
-					<button type="button" class="chevron-24">chevron-24</button>
-					<button type="button" class="chevron-24 chevron-down">chevron-24</button>
-					<button type="button" class="chevron-24 chevron-left">chevron-24</button>
-					<br>
-					<button type="button" class="btn-ico btn-size24"><i class="i-favorite"></i><span class="blind">즐겨찾기</span></button>
-					<button type="button" class="btn-ico btn-size24 btn-active"><i class="i-favorite"></i><span class="blind">즐겨찾기 활성화</span></button>
-				</div>
-				<hr>
-
-				<h2>btn-size20</h2>
-				<div class="d-flex gap10">
-					<button type="button" class="btn-ico btn-size20"><i class="i-more"></i><span class="blind">보기</span></button>
-					<button type="button" class="btn-ico btn-size20"><i class="i-remove"></i><span class="blind">삭제</span></button>
-					<button type="button" class="btn-ico btn-size20"><i class="i-camera"></i><span class="blind">카메라업로드</span></button>
-					<button type="button" class="btn-ico btn-size20"><i class="i-picture"></i><span class="blind">사진업로드</span></button>
-					<button type="button" class="btn-ico btn-size20"><i class="i-emoji"></i><span class="blind">이모티콘</span></button>
-					<button type="button" class="btn-ico btn-size20"><i class="i-file"></i><span class="blind">파일업로드</span></button>
-					<button type="button" class="btn-ico btn-size20"><i class="i-modify"></i><span class="blind">수정</span></button>
-					<button type="button" class="btn-ico btn-size20"><i class="i-delete"></i><span class="blind">삭제</span></button>
-
-				</div>
-				<hr>
-
-				<h2>btn-inner-ico</h2>
-				<div class="d-flex gap10">
-					<button type="button" class="btn-small btn-outline-black btn-inner-ico"><i class="i-dday"></i>오늘</button>
-					<button type="button" class="btn-small btn-outline-black btn-inner-ico">추가<i class="i-plus"></i></button>
-					<button type="button" class="btn-small btn-outline-black btn-inner-ico"><i class="i-edit"></i>편집</button>
-					<button type="button" class="btn-small btn-outline-black btn-inner-ico"><i class="i-cancel"></i>취소</button>
-					<button type="button" class="btn-small btn-outline-black btn-inner-ico">댓글<span class="fc-red600">4</span><i class="i-arrow"></i></button>
-					<button type="button" class="btn-small btn-outline-black btn-inner-ico"><i class="i-file"></i>파일 선택</button>
-					<button type="button" class="btn-small btn-outline-black btn-inner-ico"><i class="i-opinion"></i>의견</button>
-					<br>
-
-					<button type="button" class="btn-medium btn-inner-ico gap4"><i class="i-view"></i><span class="blind">조회수</span><b class="thumbsup-count">0</b></button>
-					<button type="button" class="btn-medium btn-inner-ico gap4"><i class="i-thumbsup"></i><span class="blind">좋아요</span><b class="thumbsup-count">0</b></button>
-
-					<button type="button" class="btn-medium btn-gray btn-inner-ico fw-700">안병호 부장<i class="i-close"></i></button>
-					<button type="button" class="btn-medium btn-red btn-inner-ico fw-700">나의 할일<i class="i-close"></i></button>
-
-
-				</div>
-				<h2>btn-ratio</h2>
-
-				<div class="d-flex gap10">
-					<button type="button" class="btn-large btn-outline-black btn-inner-ico btn-ratio"><i class="i-filter"></i><span class="blind">필터</span></button> > 46px
-					<div class="form">
-						<button type="button" class="btn-large btn-outline-black btn-inner-ico btn-ratio"><i class="i-filter"></i><span class="blind">필터</span></button> > 44px
-					</div>
-				</div>
-			</div>
-
-
-			<br>
-
-		</div>
 	</div>
-
-
-	</div>
-
-	<hr>
-
 </body>
 
 </html>
