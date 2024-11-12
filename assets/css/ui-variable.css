@@ -152,6 +152,7 @@
     --background-bg_yellow:#FFD138;
     --basic-black:#0C0C0DE0;
     --basic-white:#FFFFFF;
+    --border-0:#0C0C0D00;
     --border-12:#0C0C0D1F;
     --border-4:#0C0C0D0A;
     --border-72:#0C0C0DB8;
@@ -166,6 +167,13 @@
     --button-ghost-onDisabled:#C5CBD1;
     --button-ghost-onEnabled:#495057;
     --button-ghost-pressed:#8597A82E;
+    --button-ghostw-border:#FFFFFFB8;
+    --button-ghostw-border_disabled:#FFFFFF29;
+    --button-ghostw-disabled:#FFFFFF00;
+    --button-ghostw-enabled:#FFFFFF00;
+    --button-ghostw-onDisabled:#FFFFFF3D;
+    --button-ghostw-onEnabled:#FFFFFFF5;
+    --button-ghostw-pressed:#FFFFFF14;
     --button-outlined-border:#0C0C0D1F;
     --button-outlined-disabled:#8295A71C;
     --button-outlined-enabled:#FFFFFF;
@@ -187,7 +195,8 @@
     --button-tertiary-onDisabled:#C5CBD1;
     --button-tertiary-onEnabled:#0C0C0DB8;
     --button-tertiary-pressed:#8597A82E;
-    --button-textBtn-Enabled:#C5CBD1;
+
+    --button-textBtn-Enabled:#989FA7;
     --icon-default:#0C0C0DE0;
     --icon-disabled:#0C0C0D14;
     --icon-gray_1:#C5CBD1;
@@ -199,8 +208,9 @@
     --shadow-gray_1:#0C0C0D0A;
     --shadow-gray_2:#0C0C0D14;
     --shadow-gray_3:#0C0C0D1F;
+    --status-active:#3996F9;
     --status-caution:#FEBB10;
-    --status-dimmed:#0C0C0D66;
+    --status-dimmed:#0C0C0DB8;
     --status-error:#EE444A;
     --status-help:#B348E5;
     --status-info:#1AA3C1;

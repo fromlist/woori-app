@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 :root {
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Reset */
@@ -33,7 +34,7 @@ a:focus {text-decoration:none;}
 button {background:none;font-family:inherit;overflow:visible;text-align:inherit;font-weight:inherit;}
 /* button:hover, */
 /* a:hover, */
-button:focus,a:focus {}
+button:focus,a:focus {outline-offset:-2px;outline:2px solid #000;}
 em {font-style:normal;font-weight:700;}
 i {font-style:normal;}
 code {display:inline;color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;}
