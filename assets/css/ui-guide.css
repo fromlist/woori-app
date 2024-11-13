@@ -58,4 +58,4 @@ td a.vscodepath{position:absolute;right:0;top:50%;transform:translateY(-50%);dis
 .ui-guide .ui-guide-box {border:1px solid var(--black-20);border-radius:20px;padding:10px;}
 .ui-guide .ui-guide-box dl:not(:last-child) {margin-bottom:10px;}
 .ui-guide .ui-guide-box dl dt {font-size:16px;font-weight:700;}
-.ui-guide .ui-guide-box dl dd {display:flex;align-items:center;justify-content:space-between;margin-top:10px;}
+.ui-guide .ui-guide-box dl dd {margin-top:10px;}
