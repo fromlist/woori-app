@@ -144,12 +144,16 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
 .inp.inp-small .label-title {display:block;font-size:13px;line-height:1.6;color:var(--typograpy-body);margin:2px 0 1px;}
 .inp.inp-small .chevron-only {margin-top:2px;}
 
-.inp input[type="radio"] {position:relative;display:flex;align-items:center;justify-content:center;appearance:none;cursor:inherit;flex:0 0 22px;width:22px;height:22px;background:url(../images/form/form-radio.svg) center center no-repeat;transition:transform 0.3s ease;}
-.inp input[type="radio"]:not([disabled]):active {transform:scale(.8);}
-.inp input[type="radio"]:checked {background:url(../images/form/form-radio-checked.svg) center center no-repeat;}
-.inp input[type="radio"][disabled] {background:url(../images/form/form-radio-disabled.svg) center center no-repeat;}
-.inp input[type="radio"][disabled]:not(:checked):before {}
-.inp input[type="radio"][disabled]:checked:before {border-color:var(--graye6);}
+.inp.inp-large input[type="radio"] {position:absolute;left:0;top:0px;display:flex;align-items:flex-end;justify-content:center;appearance:none;cursor:inherit;flex:0 0 24px;width:24px;height:24px;background:url(../images/form/form-radio-large.svg) center center no-repeat;}
+.inp.inp-large input[type="radio"]:checked {background:url(../images/form/form-radio-large-checked.svg) center center no-repeat;}
+
+.inp.inp-tab {display:flex;padding:2px;background: var(--surface-surface100);border-radius:8px;}
+.inp.inp-tab label {position:relative;flex:1;display:flex;align-items:center;justify-content:center;}
+.inp.inp-tab input[type="radio"] {appearance:none;width:0;height:0;}
+.inp.inp-tab .label-title {flex:1 1 100%;text-align:center;padding:0 8px;font-size:16px;color:var(--typograpy-gray);line-height:44px;border-radius:8px;background-color:transparent;transition:background-color 0.3s ease;}
+.inp.inp-tab input[type="radio"]:checked ~ .label-title {background-color:var(--background-bg_white);}
+.inp.inp-tab input[type="radio"]:not(:checked):after {content:'';position:absolute;right:0;top:50%;width:1px;height:14px;background: var(--border-8);margin-top:-7px;}
+.inp.inp-tab label:last-child input[type="radio"]:after {display:none;}
 
 
 
