@@ -214,7 +214,7 @@
     --status-help:#B348E5;
     --status-info:#1AA3C1;
     --status-success:#00AD7C;
-    --status-focused:#2589F4;
+    --status-focused:#2658ED;
     --surface-surface:#FFFFFF;
     --surface-surface0:#FFFFFF;
     --surface-surface100:#8295A71C;
@@ -235,4 +235,5 @@
     --typograpy-title:#212528;
     --typograpy-white:#FFFFFF;
     --header-zIndex:100;
+    --tab-zIndex:10;
 }

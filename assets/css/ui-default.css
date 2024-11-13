@@ -38,8 +38,8 @@ code {display:inline;color:inherit;font-size:inherit;line-height:inherit;font-fa
 pre {color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;margin:0;white-space:break-spaces;}
 table caption {position:absolute;width:1px;height:1px;overflow:hidden;}
 
-button:focus,a:focus,
-input:focus {outline-offset:-1px;outline:1px solid var(--status-focused);}
+button:focus-visible,a:focus-visible,
+input:focus-visible {outline-offset:-1px;outline:1px solid var(--status-focused);}
 
 html {-webkit-text-size-adjust:none;}
 body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretendard';font-weight:400;}
