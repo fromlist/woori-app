@@ -251,3 +251,15 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
 .pagination a.next {margin-left:4px;background:url(../images/pagination/arrow-next.svg) no-repeat;}
 .pagination a.last {margin-left:4px;background:url(../images/pagination/arrow-last.svg) no-repeat;}
 .pagination a.active {color:var(--white);font-weight:700;border-radius:10px;background-color:var(--red400);}
+
+/* typography */
+.headline-large {font-size:24px;line-height:1.4;font-weight:700;}
+.headline-medium {font-size:22px;line-height:1.4;font-weight:700;}
+.headline-small {font-size:20px;line-height:1.4;font-weight:700;}
+.title-large {font-size:18px;line-height:1.5;font-weight:700;}
+.title-medium {font-size:16px;line-height:1.5;font-weight:700;}
+.title-small {font-size:14px;line-height:1.5;font-weight:700;}
+.body-xlarge {font-size:18px;line-height:1.6;font-weight:400;}
+.body-large {font-size:16px;line-height:1.6;font-weight:400;}
+.body-medium {font-size:14px;line-height:1.6;font-weight:400;}
+.body-small {font-size:13px;line-height:1.6;font-weight:400;}
