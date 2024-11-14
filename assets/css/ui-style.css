@@ -124,8 +124,8 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
 .inp {position:relative;}
 .inp.inp-large {padding-left:32px;}
 .inp.inp-large label {}
-.inp.inp-large input[type="checkbox"] {position:absolute;left:0;top:0px;display:flex;align-items:flex-end;justify-content:center;appearance:none;cursor:inherit;flex:0 0 27px;width:27px;height:27px;background:url(../images/form/form-checkbox-large.svg) center center no-repeat;}
-.inp.inp-large input[type="checkbox"]:checked {background:url(../images/form/form-checkbox-large-checked.svg) center center / contain no-repeat;}
+.inp.inp-large input[type="checkbox"] {position:absolute;left:0;top:0px;display:flex;align-items:flex-end;justify-content:center;appearance:none;cursor:inherit;flex:0 0 27px;width:27px;height:27px;background:url(../images/form/form-checkbox-large.svg) center center / 24px 24px no-repeat;}
+.inp.inp-large input[type="checkbox"]:checked {background:url(../images/form/form-checkbox-large-checked.svg) center center / 24px 24px no-repeat;}
 .inp.inp-large .label-title {display:block;font-size:18px;line-height:1.5;font-weight:700;color:var(--typograpy-title);}
 .inp.inp-large .label-subtitle {display:block;font-size:13px;color:var(--typograpy-body);margin-top:8px;}
 
