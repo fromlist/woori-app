@@ -149,22 +149,21 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
 
 .inp.inp-tab {display:flex;padding:2px;background: var(--surface-surface100);border-radius:8px;}
 .inp.inp-tab label {position:relative;flex:1;display:flex;align-items:center;justify-content:center;}
-.inp.inp-tab input[type="radio"] {appearance:none;width:0;height:0;}
-.inp.inp-tab .label-title {flex:1 1 100%;text-align:center;padding:0 8px;font-size:16px;color:var(--typograpy-gray);line-height:44px;border-radius:8px;background-color:transparent;transition:background-color 0.3s ease;}
-.inp.inp-tab input[type="radio"]:checked ~ .label-title {background-color:var(--background-bg_white);}
-.inp.inp-tab input[type="radio"]:not(:checked):after {content:'';position:absolute;right:0;top:50%;width:1px;height:14px;background: var(--border-8);margin-top:-7px;}
-.inp.inp-tab label:last-child input[type="radio"]:after {display:none;}
+.inp.inp-tab input[type="radio"] {position:relative;display:flex;align-items:center;justify-content:center;flex:1 1 100%;appearance:none;text-align:center;padding:0 8px;font-size:16px;color:var(--typograpy-gray);line-height:44px;border-radius:8px;background-color:transparent;transition:background-color 0.15s ease;}
+.inp.inp-tab input[type="radio"]:before {content:attr(aria-label);}
+.inp.inp-tab input[type="radio"]:checked {background-color:var(--background-bg_white);}
+.inp.inp-tab input[type="radio"]:after {content:'';position:absolute;left:0;top:50%;width:1px;height:14px;background: var(--border-8);margin-top:-7px;}
+.inp.inp-tab input[type="radio"]:checked + input[type="radio"]:after {display:none;}
+.inp.inp-tab input[type="radio"]:checked:after {display:none;}
+.inp.inp-tab input[type="radio"]:first-child:after {display:none;}
 
-
-
-.inp b {font-size:14px;font-weight:500;line-height:28px;white-space:nowrap;}
-
-/* inp-switch */
-.inp-switch {display:flex;align-items:center;justify-content:space-between;gap:10px;}
-.inp-switch b {font-size:16px;font-weight:700;color:var(--gray900);}
-.inp-switch input {display:flex;flex:0 0 56px;width:56px;height:30px;appearance:none;cursor:inherit;background:url(../images/form/form-toggle.svg) center center / contain no-repeat;}
-.inp-switch input:checked {background:url(../images/form/form-toggle-checked.svg) center center / contain no-repeat;}
-.inp-sorting b {display:flex;justify-content:space-between;align-items:center;flex:1 1 100%;}
+/* inp-toggle */
+.inp.inp-toggle label {display:flex;align-items:center;gap:8px;}
+.inp.inp-toggle .label-title {font-size:14px;color:var(--typography-gray);}
+.inp.inp-toggle input {position:relative;display:flex;flex:0 0 42px;width:42px;height:24px;appearance:none;cursor:inherit;background-color:var(--gray-400);border-radius:42px;transition:background-color 0.15s ease;}
+.inp.inp-toggle input:before {content:'';position:absolute;left:3px;top:3px;width:18px;height:18px;background-color:var(--basic-white);filter: drop-shadow(0px 0px 4px var(--shadow-gray_3));border-radius:18px;transition:left 0.15s ease;}
+.inp.inp-toggle input:checked {background-color:var(--brandPrimary-blue500);}
+.inp.inp-toggle input:checked:before {left:21px;}
 
 /* inp-btn */
 .inp-btn {position:relative;display:inline-flex;align-items:center;justify-content:center;padding:0 12px;vertical-align:top;}

@@ -226,14 +226,14 @@
     --surface-surface700:#0C172399;
     --surface-surface800:#070F16D1;
     --surface-surface900:#0B0F13E8;
-    --typograpy-black:#0C0C0DE0;
-    --typograpy-body:#495057;
-    --typograpy-caption:#989FA7;
-    --typograpy-disabled:#989FA7;
-    --typograpy-gray:#495057;
-    --typograpy-placeholder:#0C0C0D3D;
-    --typograpy-title:#212528;
-    --typograpy-white:#FFFFFF;
+    --typography-black:#0C0C0DE0;
+    --typography-body:#495057;
+    --typography-caption:#989FA7;
+    --typography-disabled:#989FA7;
+    --typography-gray:#495057;
+    --typography-placeholder:#0C0C0D3D;
+    --typography-title:#212528;
+    --typography-white:#FFFFFF;
     --header-zIndex:100;
     --tab-zIndex:10;
 }
