@@ -28,7 +28,6 @@
 	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
 	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
 	<!-- sortable -->
-
 	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
 	<!-- sweetalert2 -->
 	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
@@ -47,6 +46,7 @@
 	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
 	<!-- //[plugins] -->
 
+	<!-- ui source -->
 	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
 	<link rel="stylesheet" href="../../assets/css/ui-variable.css">
 	<link rel="stylesheet" href="../../assets/css/ui-default.css">
@@ -54,86 +54,34 @@
 	<link rel="stylesheet" href="../../assets/css/ui-style.css">
 	<link rel="stylesheet" href="../../assets/css/ui-content.css">
 	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../assets/css/ui-guide.css">
 
 	<script src="../../assets/js/ui-script.js"></script>
 	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
+	<style>
+		.ui-guide .ui-guide-box dl dd {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	</style>
 </head>
 
 <body>
+	<div class="ui-guide">
+		<h1>Typography</h1>
+		<p>Headline, Title, Body</p>
 
-	<!-- main -->
-	<main>
-
-		<!-- header -->
-		<header>
-			<div class="main-header">
-				<div class="left">
-					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
-				</div>
-				<div class="center">
-					<h1>내 명함 공유</h1>
-				</div>
-				<div class="right">
-					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
-				</div>
-			</div>
-		</header>
-		<!-- //header -->
-
-		<!-- main-inner -->
-		<!-- content start -->
-		<div class="main-inner">
-
-
-			<!-- container -->
-			<div id="container" class="container-center">
-
-				<!-- content -->
-				<div class="content">
-
-					<!-- init-business-card -->
-					<div class="init-business-card">
-						<picture>
-							<source setsrc="../../assets/images/PBWBU/init_business_card.svg">
-							<img src="../../assets/images/PBWBU/init_business_card.svg" alt="">
-						</picture>
-						<p class="description">내 명함을 등록하고 공유해 보세요.</p>
-					</div>
-					<!-- //init-business-card -->
-
-				</div>
-				<!-- //content -->
-
-			</div>
-			<!-- //container -->
-
-		</div>
-		<!-- //content end -->
-		<!-- //main-inner -->
-
-
-		<!-- bottom-btn -->
-		<div class="bottom-btn">
-			<div class="btn-wrap">
-				<button type="button" class="btn-large btn-primary"><i class="ico-add"></i>명함 등록</button>
+		<div class="ui-guide-section">
+			<div class="ui-guide-box">
+				<p class="description">메세지 타이틀 line1</p>
+				<p class="description info">메세지 타이틀 line1</p>
 			</div>
 		</div>
-		<!-- //bottom-btn -->
 
-	</main>
-	<!-- main -->
 
-	<script>
-		$(document).ready(function() {
-			toastr.warning('', '내 명함을 먼저 등록하고 공유 해주세요.', {
-				"timeOut": 0,
-				"extendedTimeOut": 0,
-				"preventDuplicates": true,
-				"disableTimeOut": true,
-			});
-		});
-	</script>
+	</div>
 </body>
 
 </html>

@@ -158,30 +158,27 @@
 	<!-- main -->
 
 	<script>
-		$(document).ready(function() {
-
-			function swalFire() {
-				Swal.fire({
-					showCancelButton: true,
-					showCloseButton: false,
-					reverseButtons: true,
-					title: '삭제하시겠습니까?',
-					confirmButtonText: '예',
-					cancelButtonText: '아니요',
-					customClass: {
-						actions: 'btn-wrap',
-						cancelButton: "btn-large btn-outlined",
-						confirmButton: "btn-large btn-primary",
-					},
-					buttonsStyling: false
-				}).then((result) => {
-					/* Read more about isConfirmed, isDenied below */
-					if (result.isConfirmed) {
-						toastr.success('', '삭제되었습니다.')
-					}
-				});
-			}
-		});
+		function swalFire() {
+			Swal.fire({
+				showCancelButton: true,
+				showCloseButton: false,
+				reverseButtons: true,
+				title: '삭제하시겠습니까?',
+				confirmButtonText: '예',
+				cancelButtonText: '아니요',
+				customClass: {
+					actions: 'btn-wrap',
+					cancelButton: "btn-large btn-outlined",
+					confirmButton: "btn-large btn-primary",
+				},
+				buttonsStyling: false
+			}).then((result) => {
+				/* Read more about isConfirmed, isDenied below */
+				if (result.isConfirmed) {
+					toastr.success('', '삭제되었습니다.')
+				}
+			});
+		}
 	</script>
 </body>
 

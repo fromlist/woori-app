@@ -6,4 +6,6 @@
 .group .group-content {margin-left:auto;}
 
 /* business-card */
-.init-business-card {border-radius:8px;border: 1.5px dashed var(--deepblue-300);background: var(--background-bg_white);box-shadow: 0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
+.init-business-card {border-radius:8px;border: 1.5px dashed var(--deepblue-300);background: var(--background-bg_white);box-shadow: 0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);padding:24px;}
+.init-business-card picture {margin-top:20px;align-items:center;justify-content:center;}
+.init-business-card p {text-align:center;}
