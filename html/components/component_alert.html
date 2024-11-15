@@ -69,11 +69,61 @@
 
 		<div class="ui-guide-section">
 			<div class="ui-guide-box">
-				<h2>Default</h2>
-
+				<div class="guide-column-list">
+					<button type="button" class="btn-large btn-primary" onclick="swalFire()">Alert1</button>
+					<button type="button" class="btn-large btn-primary" onclick="swalFire2()">Alert2</button>
+				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+		function swalFire() {
+			Swal.fire({
+				showCancelButton: true,
+				showCloseButton: false,
+				reverseButtons: true,
+				title: '삭제하시겠습니까?',
+				confirmButtonText: '예',
+				cancelButtonText: '아니요',
+				customClass: {
+					actions: 'btn-wrap',
+					cancelButton: "btn-large btn-outlined",
+					confirmButton: "btn-large btn-primary",
+				},
+				buttonsStyling: false
+			})
+		}
+	</script>
+
+	<script>
+		function swalFire2() {
+			Swal.fire({
+				showCloseButton: false,
+				reverseButtons: true,
+				confirmButtonText: '확인',
+				html: `
+    <picture class="d-flex j-center mt32">
+        <source srcset="../../assets/images/ico/ico_camera.svg">
+        <img src="../../assets/images/ico/ico_camera.svg" alt="">
+    </picture>
+    <strong class="title-large ac">명함 촬영 안내</strong>
+    <p class="fs-16 ac mt8">휴대폰 세로 모드로 촬영하세요.</p>
+    <picture class="d-flex j-center mt16">
+        <source srcset="../../assets/images/@temp/image_TMP.png">
+        <img src="../../assets/images/@temp/image_TMP.png" alt="">
+    </picture>
+                `,
+				customClass: {
+					actions: 'btn-wrap',
+					cancelButton: "btn-large btn-outlined",
+					confirmButton: "btn-large btn-primary",
+					title: 'fw-700 ac',
+				},
+				buttonsStyling: false
+			})
+		}
+	</script>
 </body>
+
 
 </html>

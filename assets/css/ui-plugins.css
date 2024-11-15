@@ -2,15 +2,15 @@
 
 
 /* sweetalert2 */
-div:where(.swal2-container) div:where(.swal2-popup) {width:calc(100vw - 60px);border-radius:12px;padding-bottom:0;overflow:hidden;}
+div:where(.swal2-container) div:where(.swal2-popup) {width:calc(100vw - 72px);border-radius:8px;padding-bottom:0;overflow:hidden;}
 
-div:where(.swal2-container) h2:where(.swal2-title) {font-size:18px;font-weight:700;color:var(--gray900);text-align:left;padding:20px 20px 4px;}
-div:where(.swal2-container) .swal2-html-container {margin:16px 20px;font-size:15px;line-height:inherit;color:var(--gray800);}
-div:where(.swal2-container) div:where(.swal2-actions) {display:flex;margin:0;border-top:1px solid var(--gray100);}
+div:where(.swal2-container) h2:where(.swal2-title) {font-size:18px;color:var(--typography-title);text-align:left;padding:24px 24px 8px;font-weight:400;}
+div:where(.swal2-container) .swal2-html-container {margin:8px 24px;font-size:16px;line-height:inherit;color:var(--typography-body);}
+div:where(.swal2-container) div:where(.swal2-actions).btn-wrap {margin:0;padding:16px;}
 div:where(.swal2-container) div:where(.swal2-actions) .btn-alert {flex:1;font-size:16px;font-weight:700;line-height:60px;color:var(--gray900);text-align:center;}
 div:where(.swal2-container) div:where(.swal2-actions) .btn-alert:not(:last-child) {border-right:1px solid var(--gray100);}
 
-div:where(.swal2-container) {z-index:calc(var(--header-zIndex) +  1001);}
+div:where(.swal2-container) {z-index:calc(var(--header-zIndex) +  1001);padding:0;transition:background-color .3s;}
 @keyframes swal2-show {
     0% {transform:scale(0.99)}
     45% {transform:scale(1.01)}
@@ -89,7 +89,7 @@ select.ql-ui {height:initial;appearance:auto;font-size:initial;font-weight:initi
 .jstree-work .jstree-default .jstree-closed>.jstree-ocl {background:url(../images/form/form-jstree-closed.svg) center center / 12px 12px no-repeat;}
 .jstree-work .jstree-default .jstree-open>.jstree-ocl {background:url(../images/form/form-jstree-open.svg) center center / 12px 12px no-repeat;}
 .jstree-work .jstree-anchor>.jstree-themeicon {display:none;}
-.jstree-work.jstree-folder .jstree-anchor>.jstree-themeicon {display: inline-block;background:url(../images/ico/ico-folder-16.svg) center center / 16px 16px no-repeat;}
+.jstree-work.jstree-folder .jstree-anchor>.jstree-themeicon {display:inline-block;background:url(../images/ico/ico-folder-16.svg) center center / 16px 16px no-repeat;}
 
 
 /* datepicker */
@@ -102,7 +102,7 @@ select.ql-ui {height:initial;appearance:auto;font-size:initial;font-weight:initi
 
 /* toastr */
 #toast-container.toast-bottom-center>div, #toast-container.toast-top-center>div {width:auto;margin:0 16px;}
-#toast-container>div {border-radius:8px;padding:10px 20px;box-shadow:none;-webkit-box-shadow:none;opacity:1;background: var(--surface-surface800);}
+#toast-container>div {border-radius:8px;padding:10px 20px;box-shadow:none;-webkit-box-shadow:none;opacity:1;background:var(--surface-surface800);}
 .toast-title,
 .toast-message {font-size:16px;color:var(--white-100);font-weight:400;}
 .toast-message {margin-top:10px;}

@@ -64,28 +64,82 @@
 
 	<!-- main -->
 	<main>
+
 		<!-- header -->
 		<header>
-            <div class="main-header">
-                <div class="left">
-                    <button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
-                </div>
-                <div class="center">
-                    <h1>Title</h1>
-                </div>
-                <div class="right">
-                    <button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
-                </div>
-            </div>
-        </header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>내 명함 공유</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
 		<!-- //header -->
 
 		<!-- main-inner -->
 		<!-- content start -->
 		<div class="main-inner">
-			<section>
 
-            </section>
+			<!-- container -->
+			<div id="container">
+				<!-- group -->
+				<div class="group py0">
+					<div class="group-content">
+						<button type="button" class="btn-noborder"><i class="ico-sort"></i>순서 설정</button>
+					</div>
+				</div>
+				<!-- //group -->
+				<!-- content -->
+				<div class="content">
+					<!-- group -->
+					<div class="group">
+						<div class="group-title">
+							<strong class="title-medium">별칭명</strong>
+						</div>
+						<div class="group-content">
+							<div class="btn-wrap gap4 p0">
+								<button type="button" class="btn-small btn-outlined btn-round" onclick="swalFire()"><i class="ico-delete"></i>삭제</button>
+								<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-modify"></i>수정</button>
+							</div>
+						</div>
+					</div>
+					<!-- //group -->
+					<div class="thumb pb16">
+						<picture>
+							<source setsrc="../../assets/@temp/thumb_w.png">
+							<img src="../../assets/@temp/thumb_w.png" alt="">
+						</picture>
+					</div>
+					<!-- group -->
+					<div class="group">
+						<div class="group-title">
+							<strong class="title-medium">별칭명</strong>
+						</div>
+						<div class="group-content">
+							<div class="btn-wrap gap4 p0">
+								<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-delete"></i>삭제</button>
+								<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-modify"></i>수정</button>
+							</div>
+						</div>
+					</div>
+					<!-- //group -->
+					<div class="thumb pb16">
+						<picture>
+							<source setsrc="../../assets/@temp/thumb_w.png">
+							<img src="../../assets/@temp/thumb_w.png" alt="">
+						</picture>
+					</div>
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
 		</div>
 		<!-- //content end -->
 		<!-- //main-inner -->
@@ -95,13 +149,40 @@
 		<div class="bottom-btn">
 			<div class="btn-wrap">
 				<button type="button" class="btn-large btn-secondary">등록</button>
-				<button type="button" class="btn-large btn-primary">공유</button>
+				<button type="button" class="btn-large btn-primary"><i class="ico-share"></i>공유</button>
 			</div>
 		</div>
 		<!-- //bottom-btn -->
 
 	</main>
 	<!-- main -->
+
+	<script>
+		$(document).ready(function() {
+
+			function swalFire() {
+				Swal.fire({
+					showCancelButton: true,
+					showCloseButton: false,
+					reverseButtons: true,
+					title: '삭제하시겠습니까?',
+					confirmButtonText: '예',
+					cancelButtonText: '아니요',
+					customClass: {
+						actions: 'btn-wrap',
+						cancelButton: "btn-large btn-outlined",
+						confirmButton: "btn-large btn-primary",
+					},
+					buttonsStyling: false
+				}).then((result) => {
+					/* Read more about isConfirmed, isDenied below */
+					if (result.isConfirmed) {
+						toastr.success('', '삭제되었습니다.')
+					}
+				});
+			}
+		});
+	</script>
 </body>
 
 </html>

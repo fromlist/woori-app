@@ -28,6 +28,7 @@
 	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
 	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
 	<!-- sortable -->
+
 	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
 	<!-- sweetalert2 -->
 	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
@@ -46,7 +47,6 @@
 	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
 	<!-- //[plugins] -->
 
-	<!-- ui source -->
 	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
 	<link rel="stylesheet" href="../../assets/css/ui-variable.css">
 	<link rel="stylesheet" href="../../assets/css/ui-default.css">
@@ -54,50 +54,85 @@
 	<link rel="stylesheet" href="../../assets/css/ui-style.css">
 	<link rel="stylesheet" href="../../assets/css/ui-content.css">
 	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
-	<link rel="stylesheet" href="../../assets/css/ui-guide.css">
 
 	<script src="../../assets/js/ui-script.js"></script>
 	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
-
 </head>
 
 <body>
 
-	<div class="ui-guide">
-		<h1>Toast</h1>
-		<div class="ui-guide-section">
-			<h2>Toast <span>Type</span></h2>
-			<div class="guide-column-list">
-				<button class="btn-large btn-outlined" id="alert">alert</button>
-				<button class="btn-large btn-outlined" id="success">Success</button>
-				<button class="btn-large btn-outlined" id="info">Info</button>
-				<button class="btn-large btn-outlined" id="warning">Warning</button>
-				<button class="btn-large btn-outlined" id="error">Error</button>
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>내 명함 공유</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+
+			<!-- container -->
+			<div id="container" class="container-center">
+
+				<!-- content -->
+				<div class="content">
+
+					<!-- init-business-card -->
+					<div class="init-business-card">
+						<picture>
+							<source setsrc="../../assets/images/PBWBU/init_business_card.svg">
+							<img src="../../assets/images/PBWBU/init_business_card.svg" alt="">
+						</picture>
+						<p class="description">내 명함을 등록하고 공유해 보세요.</p>
+					</div>
+					<!-- //init-business-card -->
+
+				</div>
+				<!-- //content -->
+
+			</div>
+			<!-- //container -->
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-primary"><i class="ico-add"></i>명함 등록</button>
 			</div>
 		</div>
-	</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- main -->
 
 	<script>
-		$('#alert').click(function(event) {
-			toastr.alert(`<div class="btn-toast-wrap"><button type="button" class="btn-small btn-ghost-white">Small 버튼명</button>`, 'You clicked alert toast', {
+		$(document).ready(function() {
+
+			toastr.warning('', '내 명함을 먼저 등록하고 공유 해주세요.', {
 				"timeOut": 0,
 				"extendedTimeOut": 0,
 				"preventDuplicates": true,
 				"disableTimeOut": true,
 			});
-		});
-		$('#success').click(function(event) {
-			toastr.success(``, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, veritatis accusamus obcaecati quis placeat natus inventore deleniti error animi sed libero debitis earum dolor facere corrupti voluptas, eaque, repudiandae suscipit?');
-		});
-		$('#info').click(function(event) {
-			toastr.info('', 'You clicked Info toast')
-		});
-		$('#warning').click(function(event) {
-			toastr.warning('', 'You clicked Warning Toast')
-		});
-		$('#error').click(function(event) {
-			toastr.error('', 'You clicked Error Toast')
 		});
 	</script>
 </body>

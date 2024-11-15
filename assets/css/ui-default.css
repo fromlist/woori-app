@@ -37,12 +37,13 @@ i {font-style:normal;}
 code {display:inline;color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;}
 pre {color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;margin:0;white-space:break-spaces;}
 table caption {position:absolute;width:1px;height:1px;overflow:hidden;}
+picture {display:flex;}
 
 button:focus-visible,a:focus-visible,
 input:focus-visible {outline-offset:-1px;outline:1px solid var(--status-focused);}
 
 html {-webkit-text-size-adjust:none;}
-body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretendard';font-weight:400;}
+body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretendard';font-weight:400;color:var(--typography-body);}
 
 /* hidden */ 
 .blind {position:absolute!important;color:transparent!important;opacity:0!important;width:1px!important;height:1px!important;font-size:1px!important;overflow:hidden!important;padding:0!important;border:0!important;}
