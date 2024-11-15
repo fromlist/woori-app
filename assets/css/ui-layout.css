@@ -40,6 +40,8 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 #container {flex:1 1 100%;}
 .container-center {display:flex;flex-direction:column;justify-content:center;}
 .content {padding:0 16px;}
+.modal__content .content {padding:0 24px;}
+.modal__content .content.content-fluid > * {margin:0 -24px;}
 
 /* bottom-btn */
 .bottom-btn {position:sticky;width:100%;left:0;bottom:0;background-color:var(--white-100);z-index:calc(var(--header-zIndex) - 100);}

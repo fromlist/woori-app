@@ -267,6 +267,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .pt15 {padding-top:15px!important;}
 .pt16 {padding-top:16px!important;}
 .pt20 {padding-top:20px!important;}
+.pt24 {padding-top:24px!important;}
 .pt25 {padding-top:25px!important;}
 .pt30 {padding-top:30px!important;}
 .pt35 {padding-top:35px!important;}
@@ -285,6 +286,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .pb16 {padding-bottom:16px!important;}
 .pb20 {padding-bottom:20px!important;}
 .pb25 {padding-bottom:25px!important;}
+.pb24 {padding-bottom:24px!important;}
 .pb30 {padding-bottom:30px!important;}
 .pb35 {padding-bottom:35px!important;}
 .pb40 {padding-bottom:40px!important;}
@@ -302,6 +304,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .pl16 {padding-left:16px!important;}
 .pl20 {padding-left:20px!important;}
 .pl25 {padding-left:25px!important;}
+.pl24 {padding-left:24px!important;}
 .pl30 {padding-left:30px!important;}
 .pl35 {padding-left:35px!important;}
 .pl40 {padding-left:40px!important;}
@@ -319,6 +322,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .pr16 {padding-right:16px!important;}
 .pr20 {padding-right:20px!important;}
 .pr25 {padding-right:25px!important;}
+.pr24 {padding-right:24px!important;}
 .pr30 {padding-right:30px!important;}
 .pr35 {padding-right:35px!important;}
 .pr40 {padding-right:40px!important;}
@@ -335,6 +339,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .p15 {padding:15px!important;}
 .p16 {padding:16px!important;}
 .p20 {padding:20px!important;}
+.p24 {padding:24px!important;}
 .p25 {padding:25px!important;}
 .p30 {padding:30px!important;}
 .p35 {padding:35px!important;}
@@ -353,6 +358,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .py15 {padding-top:15px!important;padding-bottom:15px!important;}
 .py16 {padding-top:16px!important;padding-bottom:16px!important;}
 .py20 {padding-top:20px!important;padding-bottom:20px!important;}
+.py24 {padding-top:24px!important;padding-bottom:24px!important;}
 .py25 {padding-top:25px!important;padding-bottom:25px!important;}
 .py30 {padding-top:30px!important;padding-bottom:30px!important;}
 .py35 {padding-top:35px!important;padding-bottom:35px!important;}
@@ -370,6 +376,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .px15 {padding-left:15px!important;padding-right:15px!important;}
 .px16 {padding-left:16px!important;padding-right:16px!important;}
 .px20 {padding-left:20px!important;padding-right:20px!important;}
+.px24 {padding-left:24px!important;padding-right:24px!important;}
 .px25 {padding-left:25px!important;padding-right:25px!important;}
 .px30 {padding-left:30px!important;padding-right:30px!important;}
 .px35 {padding-left:35px!important;padding-right:35px!important;}
