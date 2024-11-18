@@ -69,6 +69,7 @@
 			<div class="guide-column-list">
 				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-businesscard">modal-businesscard</button>
 				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-businesscard-regist">modal-businesscard-regist</button>
+				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-select">modal-select</button>
 
 			</div>
 		</div>
@@ -304,6 +305,37 @@
 		</div>
 	</div>
 	<!-- //micromodal -->
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-select">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large">필터</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content content-fluid">
+						<div class="select-option">
+							<ul>
+								<li class="select-all"><button type="button"><span>전체</span><i>10</i></button></li>
+								<li><button type="button"><span>키맨</span><i>2</i></button></li>
+								<li><button type="button"><span>내가 등록한 명함</span><i>5</i></button></li>
+								<li><button type="button"><span>내가 등록한 명함내가 등록한 명함내가 등록한 명함내가 등록한 명함</span><i>5</i></button></li>
+								<li class="is-selected"><button type="button" aria-label="선택됨"><span>PB 1팀</span><i>3</i></button></li>
+								<li class="is-selected"><button type="button" aria-label="선택됨"><span>내가 등록한 명함내가 등록한 명함내가 등록한 명함내가 등록한 명함</span><i>3</i></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
 	<script>
 		// toast
 		function toast_succes() {
