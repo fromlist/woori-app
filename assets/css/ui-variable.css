@@ -136,7 +136,7 @@
     --background-bg_deepGray:#E9ECEF;
     --background-bg_disabled:#0C0C0D0A;
     --background-bg_gray:#F1F3F5;
-    --background-bg_lgithGray:#F8F9FA;
+    --background-bg_lightGray:#F8F9FA;
     --background-bg_lightBlue:#EAF4FF;
     --background-bg_lightCyan:#E0F6FB;
     --background-bg_lightPink:#FFEBF2;
@@ -166,7 +166,7 @@
     --button-ghost-enabled:#FFFFFF00;
     --button-ghost-onDisabled:#C5CBD1;
     --button-ghost-onEnabled:#495057;
-    --button-ghost-pressed:#8597A82E;
+    --button-ghost-pressed:#FFFFFF29;
     --button-ghostw-border:#FFFFFFB8;
     --button-ghostw-border_disabled:#FFFFFF29;
     --button-ghostw-disabled:#FFFFFF00;
@@ -215,6 +215,9 @@
     --status-info:#1AA3C1;
     --status-success:#00AD7C;
     --status-focused:#2658ED;
+    --status-disabled_bg:#0C0C0D0A;
+    --status-disabled_font:#0C0C0D1F;
+
     --surface-surface:#FFFFFF;
     --surface-surface0:#FFFFFF;
     --surface-surface100:#8295A71C;

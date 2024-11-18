@@ -24,6 +24,7 @@ $(document).ready(function () {
 
     // micromodal
     MicroModal.init({
+
         onShow: function (modalPopup, element) {
             const trigger = element;
             const triggerRect = trigger.getBoundingClientRect();
@@ -31,8 +32,8 @@ $(document).ready(function () {
             const triggerPositionRight = triggerRect.right;
             const triggerPositionBottom = triggerRect.bottom;
             const triggerPositionLeft = triggerRect.left;
-            const windowWidth = window.outerWidth;
-            const windowHeight = window.outerHeight;
+            const windowWidth = $(window).outerWidth();
+            const windowHeight = $(window).outerHeight();
             if (modalPopup.classList.contains('micromodal-slide-dropdown')) {
                 const modalPopupBody = modalPopup.querySelector('.modal__container');
                 const modalPopupBodyWidth = modalPopupBody.clientWidth;
@@ -72,7 +73,7 @@ $(document).ready(function () {
                 }
             }
         }, // [1]
-        onClose: function (modalPopup, element) {
+        onClose: function (modalPopup, element,) {
             const trigger = element;
             if (modalPopup.classList.contains('micromodal-slide-dropdown')) {
                 const modalPopupBody = modalPopup.querySelector('.modal__container');
@@ -80,6 +81,7 @@ $(document).ready(function () {
                     modalPopupBody.removeAttribute('style');
                 }, 300)
             }
+
         }, // [2]
         // openTrigger: 'data-custom-open', // [3]
         // closeTrigger: 'data-custom-close', // [4]

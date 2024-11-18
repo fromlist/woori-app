@@ -96,6 +96,7 @@
 				<!-- //group -->
 				<!-- content -->
 				<div class="content">
+
 					<!-- group -->
 					<div class="group">
 						<div class="group-title">
@@ -109,12 +110,14 @@
 						</div>
 					</div>
 					<!-- //group -->
+
 					<div class="thumb pb16">
 						<picture>
 							<source setsrc="../../assets/@temp/thumb_w.png">
 							<img src="../../assets/@temp/thumb_w.png" alt="">
 						</picture>
 					</div>
+
 					<!-- group -->
 					<div class="group">
 						<div class="group-title">
@@ -128,6 +131,7 @@
 						</div>
 					</div>
 					<!-- //group -->
+
 					<div class="thumb pb16">
 						<picture>
 							<source setsrc="../../assets/@temp/thumb_w.png">
@@ -148,7 +152,7 @@
 		<!-- bottom-btn -->
 		<div class="bottom-btn">
 			<div class="btn-wrap">
-				<button type="button" class="btn-large btn-secondary">등록</button>
+				<button type="button" class="btn-large btn-secondary" data-micromodal-trigger="modal-businesscard-regist">등록</button>
 				<button type="button" class="btn-large btn-primary"><i class="ico-share"></i>공유</button>
 			</div>
 		</div>
@@ -168,8 +172,8 @@
 				</div>
 				<div class="modal__content">
 
-					<div class="content content-fluid">
-						<p class="description info p24">순서를 바꿀 명함을 끌어 순서를 변경하세요.</p>
+					<div class="content">
+						<p class="description info px8 py24">순서를 바꿀 명함을 끌어 순서를 변경하세요.</p>
 
 						<div id="sortingBusinessCard" class="businesscard-list">
 							<div class="list-group-item">
@@ -344,7 +348,96 @@
 					<!-- bottom-btn -->
 					<div class="bottom-btn">
 						<div class="btn-wrap">
-							<button type="button" class="btn-large btn-primary">저장</button>
+							<button type="button" class="btn-large btn-primary" onclick="toast_succes()" data-micromodal-close>저장</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard-regist" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large">명함 순서 설정</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+						<!-- group -->
+						<div class="group group-form">
+							<div class="group-title">
+								<strong class="title-medium">명함 스타일</strong>
+							</div>
+							<div class="group-content">
+								<div class="swiper">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="swiper-slide">
+											<div class="thumb">
+												<picture>
+													<source setsrc="../../assets/@temp/thumb_w.png">
+													<img src="../../assets/@temp/thumb_w.png" alt="">
+												</picture>
+											</div>
+                                            <div class="swiper-select">
+                                                <div class="left">
+                                                    <div class="tags tags-medium tags-lightGray">레이블</div>
+                                                </div>
+                                            </div>
+										</div>
+										<div class="swiper-slide">
+											<div class="thumb">
+												<picture>
+													<source setsrc="../../assets/@temp/thumb_w.png">
+													<img src="../../assets/@temp/thumb_w.png" alt="">
+												</picture>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="thumb">
+												<picture>
+													<source setsrc="../../assets/@temp/thumb_w.png">
+													<img src="../../assets/@temp/thumb_w.png" alt="">
+												</picture>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="thumb">
+												<picture>
+													<source setsrc="../../assets/@temp/thumb_w.png">
+													<img src="../../assets/@temp/thumb_w.png" alt="">
+												</picture>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="thumb">
+												<picture>
+													<source setsrc="../../assets/@temp/thumb_w.png">
+													<img src="../../assets/@temp/thumb_w.png" alt="">
+												</picture>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group -->
+					</div>
+
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" onclick="toast_succes()" data-micromodal-close>저장</button>
 						</div>
 					</div>
 					<!-- //bottom-btn -->
@@ -355,6 +448,7 @@
 	<!-- //micromodal -->
 
 	<script>
+		// alert popup
 		function swalFire() {
 			Swal.fire({
 				showCancelButton: true,
@@ -377,12 +471,31 @@
 			});
 		}
 
+		// sortable
 		var sortableOption = {
 			group: 'shared',
 			animation: 150,
 			handle: '.handler', // handle's class
 		}
 		sortableLeft = Sortable.create(sortingBusinessCard, sortableOption);
+
+		// toast
+		function toast_succes() {
+			toastr.success('', '저장되었습니다.')
+		}
+
+		// swiper
+		const keywordSwiper = new Swiper('.keyword-swiper .swiper', {
+			direction: "vertical",
+			loop: true,
+			spaceBetween: 16,
+			slidesPerView: 1,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false
+			},
+
+		});
 	</script>
 </body>
 
