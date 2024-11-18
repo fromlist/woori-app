@@ -89,7 +89,7 @@
 			<div id="container">
 				<!-- group -->
 				<div class="group py0">
-					<div class="group-content">
+					<div class="right">
 						<button type="button" class="btn-noborder" data-micromodal-trigger="modal-businesscard"><i class="ico-sort"></i>순서 설정</button>
 					</div>
 				</div>
@@ -99,42 +99,34 @@
 
 					<!-- group -->
 					<div class="group">
-						<div class="group-title">
-							<strong class="title-medium">별칭명</strong>
-						</div>
-						<div class="group-content">
-							<div class="btn-wrap gap4 p0">
-								<button type="button" class="btn-small btn-outlined btn-round" onclick="swalFire()"><i class="ico-delete"></i>삭제</button>
-								<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-modify"></i>수정</button>
-							</div>
+						<strong class="title-medium">별칭명</strong>
+						<div class="btn-wrap gap4 p0">
+							<button type="button" class="btn-small btn-outlined btn-round" onclick="swalFire()"><i class="ico-delete"></i>삭제</button>
+							<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-modify"></i>수정</button>
 						</div>
 					</div>
 					<!-- //group -->
 
 					<div class="thumb pb16">
 						<picture>
-							<source setsrc="../../assets/@temp/thumb_w.png">
+							<source srcset="../../assets/@temp/thumb_w.png">
 							<img src="../../assets/@temp/thumb_w.png" alt="">
 						</picture>
 					</div>
 
 					<!-- group -->
 					<div class="group">
-						<div class="group-title">
-							<strong class="title-medium">별칭명</strong>
-						</div>
-						<div class="group-content">
-							<div class="btn-wrap gap4 p0">
-								<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-delete"></i>삭제</button>
-								<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-modify"></i>수정</button>
-							</div>
+						<strong class="title-medium">별칭명</strong>
+						<div class="btn-wrap gap4 p0">
+							<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-delete"></i>삭제</button>
+							<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-modify"></i>수정</button>
 						</div>
 					</div>
 					<!-- //group -->
 
 					<div class="thumb pb16">
 						<picture>
-							<source setsrc="../../assets/@temp/thumb_w.png">
+							<source srcset="../../assets/@temp/thumb_w.png">
 							<img src="../../assets/@temp/thumb_w.png" alt="">
 						</picture>
 					</div>
@@ -152,7 +144,7 @@
 		<!-- bottom-btn -->
 		<div class="bottom-btn">
 			<div class="btn-wrap">
-				<button type="button" class="btn-large btn-secondary" data-micromodal-trigger="modal-businesscard-regist">등록</button>
+				<button type="button" class="btn-large btn-secondary" id="modalTrigger">등록</button>
 				<button type="button" class="btn-large btn-primary"><i class="ico-share"></i>공유</button>
 			</div>
 		</div>
@@ -162,7 +154,7 @@
 	<!-- main -->
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard" aria-hidden="true">
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 
@@ -173,7 +165,7 @@
 				<div class="modal__content">
 
 					<div class="content">
-						<p class="description info px8 py24">순서를 바꿀 명함을 끌어 순서를 변경하세요.</p>
+						<p class="description info mx8 my24">순서를 바꿀 명함을 끌어 순서를 변경하세요.</p>
 
 						<div id="sortingBusinessCard" class="businesscard-list">
 							<div class="list-group-item">
@@ -359,7 +351,7 @@
 	<!-- //micromodal -->
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard-regist" aria-hidden="true">
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard-regist">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 
@@ -370,66 +362,159 @@
 				<div class="modal__content">
 
 					<div class="content">
-						<!-- group -->
-						<div class="group group-form">
+						<!-- group-form -->
+						<div class="group-form">
 							<div class="group-title">
 								<strong class="title-medium">명함 스타일</strong>
 							</div>
 							<div class="group-content">
-								<div class="swiper">
+								<div class="swiper swiper-business-card">
 									<!-- Additional required wrapper -->
 									<div class="swiper-wrapper">
 										<!-- Slides -->
 										<div class="swiper-slide">
-											<div class="thumb">
-												<picture>
-													<source setsrc="../../assets/@temp/thumb_w.png">
-													<img src="../../assets/@temp/thumb_w.png" alt="">
-												</picture>
-											</div>
-                                            <div class="swiper-select">
-                                                <div class="left">
-                                                    <div class="tags tags-medium tags-lightGray">레이블</div>
-                                                </div>
-                                            </div>
-										</div>
-										<div class="swiper-slide">
-											<div class="thumb">
-												<picture>
-													<source setsrc="../../assets/@temp/thumb_w.png">
-													<img src="../../assets/@temp/thumb_w.png" alt="">
-												</picture>
+											<div class="card-select">
+												<div class="inp inp-large">
+													<span class="tags tags-medium tags-black-80">A타입</span>
+													<input type="radio" name="rad001" id="inp001">
+													<label for="inp001">
+														<picture>
+															<source srcset="../../assets/@temp/thumb_w.png">
+															<img src="../../assets/@temp/thumb_w.png" alt="">
+														</picture>
+													</label>
+												</div>
 											</div>
 										</div>
 										<div class="swiper-slide">
-											<div class="thumb">
-												<picture>
-													<source setsrc="../../assets/@temp/thumb_w.png">
-													<img src="../../assets/@temp/thumb_w.png" alt="">
-												</picture>
+											<div class="card-select">
+												<div class="inp inp-large">
+													<span class="tags tags-medium tags-black-80">B타입</span>
+													<input type="radio" name="rad001" id="inp002">
+													<label for="inp002">
+														<picture>
+															<source srcset="../../assets/@temp/thumb_w.png">
+															<img src="../../assets/@temp/thumb_w.png" alt="">
+														</picture>
+													</label>
+												</div>
 											</div>
 										</div>
 										<div class="swiper-slide">
-											<div class="thumb">
-												<picture>
-													<source setsrc="../../assets/@temp/thumb_w.png">
-													<img src="../../assets/@temp/thumb_w.png" alt="">
-												</picture>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="thumb">
-												<picture>
-													<source setsrc="../../assets/@temp/thumb_w.png">
-													<img src="../../assets/@temp/thumb_w.png" alt="">
-												</picture>
+											<div class="card-select">
+												<div class="inp inp-large">
+													<span class="tags tags-medium tags-black-80">C타입</span>
+													<input type="radio" name="rad001" id="inp003">
+													<label for="inp003">
+														<picture>
+															<source srcset="../../assets/@temp/thumb_w.png">
+															<img src="../../assets/@temp/thumb_w.png" alt="">
+														</picture>
+													</label>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<!-- //group-form -->
+
+
+
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">별칭 <i class="apos" aria-label="필수 입력">*</i></strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="text" placeholder="별칭">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">직급</strong>
+							</div>
+							<div class="group-content">
+								<div class="inp inp-tab">
+									<input type="radio" name="inp-tab01" aria-label="과장" checked>
+									<input type="radio" name="inp-tab01" aria-label="팀장">
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+
+						<!-- group -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">휴대폰 번호 노출 <i class="apos" aria-label="필수 입력">*</i></strong>
+								<div class="inp inp-toggle">
+									<label>
+										<input type="checkbox" aria-label="휴대폰 번호 노출">
+									</label>
+								</div>
+							</div>
+						</div>
 						<!-- //group -->
+
+						<div class="stroke my40"></div>
+
+						<!-- group -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">자격증</strong>
+								<p class="description info fs-13 fw-400">최대 <span class="fc-status-error">N</span>개 선택할 수 있습니다.</p>
+							</div>
+							<div class="group-content">
+								<div class="inp-column-list">
+									<div class="inp inp-medium">
+										<label>
+											<input type="checkbox">
+											<span class="label-title">선택안함</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="checkbox">
+											<span class="label-title">신용위험분석사(CRA)1차</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="checkbox">
+											<span class="label-title">공인신용분석사</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="checkbox">
+											<span class="label-title">CFP(국제공인재무설계사)</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="checkbox">
+											<span class="label-title">CDCS(국제공인신용장전문가자격증)</span>
+										</label>
+									</div>
+								</div>
+								<p class="description caution fs-13 fw-400">지점 주소와 전화번호는 우리금융 Portal Service &gt; 직원조회에서 본인이 속한 부점명으로 검색 후 결과에서 본인 정보를 클릭 후 수정할 수 있습니다.</p>
+
+							</div>
+						</div>
+						<!-- //group -->
+
 					</div>
 
 				</div>
@@ -485,16 +570,42 @@
 		}
 
 		// swiper
-		const keywordSwiper = new Swiper('.keyword-swiper .swiper', {
-			direction: "vertical",
-			loop: true,
-			spaceBetween: 16,
-			slidesPerView: 1,
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false
-			},
+		let swiperInit = false;
+		let swiperCheckedIndex = '';
+		let newSwiper = '';
 
+		function modalCardSwiper() {
+			if (swiperInit === false) {
+				newSwiper = new Swiper('.swiper-business-card', {
+					spaceBetween: 8,
+					observer: true,
+					slidesPerView: 1.07,
+					on: {
+						init: function() {
+							swiperInit = true;
+						},
+					},
+				});
+			} else {
+				const swiperCard = document.querySelectorAll('.swiper-business-card .swiper-slide');
+				swiperCard.forEach(function(items, index) {
+					const radio = items.querySelector('input[type="radio"]');
+					if (radio.checked === true) {
+						newSwiper.slideToLoop(index);
+					}
+				})
+			}
+		}
+
+		const modalTrigger = document.querySelector('#modalTrigger')
+		modalTrigger.addEventListener("click", function() {
+			MicroModal.show('modal-businesscard-regist', {
+				awaitOpenAnimation: true, // [8]
+				awaitCloseAnimation: true, // [9]
+				onShow: function(modal) {
+					modalCardSwiper();
+				}
+			});
 		});
 	</script>
 </body>
