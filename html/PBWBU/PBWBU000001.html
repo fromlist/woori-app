@@ -154,7 +154,7 @@
 	<!-- main -->
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard">
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard" aria-hidden="true">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 
@@ -351,7 +351,7 @@
 	<!-- //micromodal -->
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard-regist">
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard-regist" aria-hidden="true">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 
@@ -367,7 +367,7 @@
 							<div class="group-title">
 								<strong class="title-medium">명함 스타일</strong>
 							</div>
-							<div class="group-content">
+							<div class="group-content group-content-fluid">
 								<div class="swiper swiper-business-card">
 									<!-- Additional required wrapper -->
 									<div class="swiper-wrapper">
@@ -573,37 +573,32 @@
 		let swiperInit = false;
 		let swiperCheckedIndex = '';
 		let newSwiper = '';
+		let awaitAnimationTime = 300
+
 
 		function modalCardSwiper() {
-			if (swiperInit === false) {
-				newSwiper = new Swiper('.swiper-business-card', {
-					spaceBetween: 8,
-					observer: true,
-					slidesPerView: 1.07,
-					on: {
-						init: function() {
-							swiperInit = true;
-						},
-					},
-				});
-			} else {
-				const swiperCard = document.querySelectorAll('.swiper-business-card .swiper-slide');
-				swiperCard.forEach(function(items, index) {
-					const radio = items.querySelector('input[type="radio"]');
-					if (radio.checked === true) {
-						newSwiper.slideToLoop(index);
-					}
-				})
-			}
+			newSwiper = new Swiper('.swiper-business-card', {
+				spaceBetween: 8,
+				slidesPerView: 1.07,
+			});
 		}
 
 		const modalTrigger = document.querySelector('#modalTrigger')
 		modalTrigger.addEventListener("click", function() {
 			MicroModal.show('modal-businesscard-regist', {
+				// openTrigger: 'data-custom-open', // [3]
+				// closeTrigger: 'data-custom-close', // [4]
+				// openClass: 'is-open', // [5]
+				disableScroll: true, // [6]
+				disableFocus: true, // [7]
 				awaitOpenAnimation: true, // [8]
 				awaitCloseAnimation: true, // [9]
+				// debugMode: true // [10]
 				onShow: function(modal) {
-					modalCardSwiper();
+					modalCardSwiper()
+				},
+				onClose: function(modal) {
+
 				}
 			});
 		});
