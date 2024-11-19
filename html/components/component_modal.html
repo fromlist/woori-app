@@ -67,9 +67,14 @@
 		<h1>Modal</h1>
 		<div class="ui-guide-section">
 			<div class="guide-column-list">
-				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-businesscard">modal-businesscard</button>
-				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-businesscard-regist">modal-businesscard-regist</button>
+				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-layout">modal-layout</button>
 				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-select">modal-select</button>
+				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-alert">modal-alert (prevent close)</button>
+				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-alert1">modal-alert1</button>
+				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-alert2">modal-alert2</button>
+				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-alert3">modal-alert3</button>
+				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-alert4">modal-alert4</button>
+				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-alert5">modal-alert5</button>
 
 			</div>
 		</div>
@@ -77,7 +82,7 @@
 
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard">
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-layout">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 
@@ -88,23 +93,7 @@
 				<div class="modal__content">
 
 					<div class="content">
-						<p class="description info mx8 my24">순서를 바꿀 명함을 끌어 순서를 변경하세요.</p>
-
-						<div id="sortingBusinessCard" class="businesscard-list">
-							<div class="list-group-item">
-								<strong class="title-medium">Item 1</strong>
-								<button type="button" class="handler" aria-label="순서 이동"></button>
-							</div>
-							<div class="list-group-item">
-								<strong class="title-medium">Item 2</strong>
-								<button type="button" class="handler" aria-label="순서 이동"></button>
-							</div>
-							<div class="list-group-item">
-								<strong class="title-medium">Item 3</strong>
-								<button type="button" class="handler" aria-label="순서 이동"></button>
-							</div>
-
-						</div>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam necessitatibus autem consequatur iusto delectus facere, corporis ut culpa atque, omnis placeat dolorem rem repellendus eligendi tempore, reprehenderit neque alias sequi.
 					</div>
 
 				</div>
@@ -124,212 +113,55 @@
 
 
 
-	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard-regist">
-		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
-			<div class="modal__container" role="dialog" aria-modal="true">
-
-				<div class="modal__header">
-					<strong class="modal__title title-large">명함 순서 설정</strong>
-					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
-				</div>
-				<div class="modal__content">
-
-					<div class="content">
-						<!-- group-form -->
-						<div class="group-form">
-							<div class="group-title">
-								<strong class="title-medium">명함 스타일</strong>
-							</div>
-							<div class="group-content">
-								<div class="swiper swiper-business-card">
-									<!-- Additional required wrapper -->
-									<div class="swiper-wrapper">
-										<!-- Slides -->
-										<div class="swiper-slide">
-											<div class="card-select">
-												<div class="inp inp-large">
-													<span class="tags tags-medium tags-black-80">A타입</span>
-													<input type="radio" name="rad001" id="inp001">
-													<label for="inp001">
-														<picture>
-															<source srcset="../../assets/@temp/thumb_w.png">
-															<img src="../../assets/@temp/thumb_w.png" alt="">
-														</picture>
-													</label>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="card-select">
-												<div class="inp inp-large">
-													<span class="tags tags-medium tags-black-80">B타입</span>
-													<input type="radio" name="rad001" id="inp002">
-													<label for="inp002">
-														<picture>
-															<source srcset="../../assets/@temp/thumb_w.png">
-															<img src="../../assets/@temp/thumb_w.png" alt="">
-														</picture>
-													</label>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="card-select">
-												<div class="inp inp-large">
-													<span class="tags tags-medium tags-black-80">C타입</span>
-													<input type="radio" name="rad001" id="inp003">
-													<label for="inp003">
-														<picture>
-															<source srcset="../../assets/@temp/thumb_w.png">
-															<img src="../../assets/@temp/thumb_w.png" alt="">
-														</picture>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- //group-form -->
-
-
-
-
-						<!-- group-form -->
-						<div class="group-form mt40">
-							<div class="group-title">
-								<strong class="title-medium">별칭 <i class="apos" aria-label="필수 입력">*</i></strong>
-							</div>
-							<div class="group-content">
-								<div class="form">
-									<div class="label"></div>
-									<div class="input-wrap">
-										<input type="text" placeholder="별칭">
-									</div>
-									<p class="validate-text"></p>
-								</div>
-							</div>
-						</div>
-						<!-- //group-form -->
-
-						<!-- group-form -->
-						<div class="group-form mt40">
-							<div class="group-title">
-								<strong class="title-medium">직급</strong>
-							</div>
-							<div class="group-content">
-								<div class="inp inp-tab">
-									<input type="radio" name="inp-tab01" aria-label="과장" checked>
-									<input type="radio" name="inp-tab01" aria-label="팀장">
-								</div>
-							</div>
-						</div>
-						<!-- //group-form -->
-
-
-						<!-- group -->
-						<div class="group-form mt40">
-							<div class="group-title">
-								<strong class="title-medium">휴대폰 번호 노출 <i class="apos" aria-label="필수 입력">*</i></strong>
-								<div class="inp inp-toggle">
-									<label>
-										<input type="checkbox" aria-label="휴대폰 번호 노출">
-									</label>
-								</div>
-							</div>
-						</div>
-						<!-- //group -->
-
-						<div class="stroke my40"></div>
-
-						<!-- group -->
-						<div class="group-form mt40">
-							<div class="group-title">
-								<strong class="title-medium">자격증</strong>
-								<p class="description info fs-13 fw-400">최대 <span class="fc-status-error">N</span>개 선택할 수 있습니다.</p>
-							</div>
-							<div class="group-content">
-								<div class="inp-column-list">
-									<div class="inp inp-medium">
-										<label>
-											<input type="checkbox">
-											<span class="label-title">선택안함</span>
-										</label>
-									</div>
-									<div class="inp inp-medium">
-										<label>
-											<input type="checkbox">
-											<span class="label-title">신용위험분석사(CRA)1차</span>
-										</label>
-									</div>
-									<div class="inp inp-medium">
-										<label>
-											<input type="checkbox">
-											<span class="label-title">공인신용분석사</span>
-										</label>
-									</div>
-									<div class="inp inp-medium">
-										<label>
-											<input type="checkbox">
-											<span class="label-title">CFP(국제공인재무설계사)</span>
-										</label>
-									</div>
-									<div class="inp inp-medium">
-										<label>
-											<input type="checkbox">
-											<span class="label-title">CDCS(국제공인신용장전문가자격증)</span>
-										</label>
-									</div>
-								</div>
-								<p class="description caution fs-13 fw-400">지점 주소와 전화번호는 우리금융 Portal Service &gt; 직원조회에서 본인이 속한 부점명으로 검색 후 결과에서 본인 정보를 클릭 후 수정할 수 있습니다.</p>
-
-							</div>
-						</div>
-						<!-- //group -->
-
-					</div>
-
-				</div>
-				<div class="modal__footer">
-					<!-- bottom-btn -->
-					<div class="bottom-btn">
-						<div class="btn-wrap">
-							<button type="button" class="btn-large btn-primary" onclick="toast_succes()" data-micromodal-close>저장</button>
-						</div>
-					</div>
-					<!-- //bottom-btn -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //micromodal -->
-
-
 
 	<!-- micromodal -->
 	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-select">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 
-				<div class="modal__header">
-					<strong class="modal__title title-large">필터</strong>
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large j-start">필터</strong>
 					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
 				</div>
 				<div class="modal__content">
 					<div class="content content-fluid">
 						<div class="select-option">
 							<ul>
-								<li class="select-all"><button type="button"><span>전체</span><i>10</i></button></li>
-								<li><button type="button"><span>키맨</span><i>2</i></button></li>
-								<li><button type="button"><span>내가 등록한 명함</span><i>5</i></button></li>
-								<li><button type="button"><span>내가 등록한 명함 내가 등록한 명함 내가 등록한 명함</span><i>5</i></button></li>
-								<li class="select-active"><button type="button" aria-label="선택됨"><span>PB 1팀</span><i>3</i></button></li>
-								<li class="select-active"><button type="button" aria-label="선택됨"><span>내가 등록한 명함 내가 등록한 명함 내가 등록한 명함 내가 등록한 명함</span><i>3</i></button></li>
+								<li class="select-all"><button type="button"><span>전체</span><i class="badge">10</i></button></li>
+								<li><button type="button"><span>키맨</span><i class="badge">2</i></button></li>
+								<li><button type="button"><span>내가 등록한 명함</span><i class="badge">5</i></button></li>
+								<li><button type="button"><span>내가 등록한 명함 내가 등록한 명함 내가 등록한 명함 내가 등록한 명함</span><i class="badge">5</i></button></li>
+								<li class="select-active"><button type="button" aria-label="선택됨"><span>PB 1팀</span><i class="badge">3</i></button></li>
+								<li class="select-active"><button type="button" aria-label="선택됨"><span>내가 등록한 명함 내가 등록한 명함 내가 등록한 명함 내가 등록한 명함</span><i class="badge">3</i></button></li>
 							</ul>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-alert">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+				</div>
+				<div class="modal__content modal__content__alert">
+					<div class="content">
+						<p class="body-large">텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트</p>
+					</div>
+				</div>
+				<div class="modal__footer modal__footer_alert">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" data-micromodal-close>저장</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
 				</div>
 			</div>
 		</div>
