@@ -165,7 +165,7 @@
 				<div class="modal__content">
 
 					<div class="content">
-						<p class="description info mx8 my24">순서를 바꿀 명함을 끌어 순서를 변경하세요.</p>
+						<p class="description info body-large mx8 my24">순서를 바꿀 명함을 끌어 순서를 변경하세요.</p>
 
 						<div id="sortingBusinessCard" class="businesscard-list">
 							<div class="list-group-item">
@@ -340,7 +340,7 @@
 					<!-- bottom-btn -->
 					<div class="bottom-btn">
 						<div class="btn-wrap">
-							<button type="button" class="btn-large btn-primary" onclick="toast_succes()" data-micromodal-close>저장</button>
+							<button type="button" class="btn-large btn-primary" onclick="toastr.success('', '저장되었습니다.')" data-micromodal-close>저장</button>
 						</div>
 					</div>
 					<!-- //bottom-btn -->
@@ -474,7 +474,7 @@
 						<div class="group-form mt40">
 							<div class="group-title">
 								<strong class="title-medium">자격증</strong>
-								<p class="description info fs-13 fw-400">최대 <span class="fc-status-error">N</span>개 선택할 수 있습니다.</p>
+								<p class="description info body-small">최대 <span class="fc-status-error">N</span>개 선택할 수 있습니다.</p>
 							</div>
 							<div class="group-content">
 								<div class="inp-column-list">
@@ -509,8 +509,7 @@
 										</label>
 									</div>
 								</div>
-								<p class="description caution fs-13 fw-400">지점 주소와 전화번호는 우리금융 Portal Service &gt; 직원조회에서 본인이 속한 부점명으로 검색 후 결과에서 본인 정보를 클릭 후 수정할 수 있습니다.</p>
-
+								<p class="description caution body-small fw-400">지점 주소와 전화번호는 우리금융 Portal Service &gt; 직원조회에서 본인이 속한 부점명으로 검색 후 결과에서 본인 정보를 클릭 후 수정할 수 있습니다.</p>
 							</div>
 						</div>
 						<!-- //group -->
@@ -522,7 +521,7 @@
 					<!-- bottom-btn -->
 					<div class="bottom-btn">
 						<div class="btn-wrap">
-							<button type="button" class="btn-large btn-primary" onclick="toast_succes()" data-micromodal-close>저장</button>
+							<button type="button" class="btn-large btn-primary" onclick="toastr.success('', '저장되었습니다.')" data-micromodal-close>저장</button>
 						</div>
 					</div>
 					<!-- //bottom-btn -->
@@ -564,11 +563,6 @@
 		}
 		sortableLeft = Sortable.create(sortingBusinessCard, sortableOption);
 
-		// toast
-		function toast_succes() {
-			toastr.success('', '저장되었습니다.')
-		}
-
 		// swiper
 		let swiperInit = false;
 		let swiperCheckedIndex = '';
@@ -581,6 +575,7 @@
 				spaceBetween: 8,
 				slidesPerView: 1.07,
 			});
+			swiperInit = true;
 		}
 
 		const modalTrigger = document.querySelector('#modalTrigger')
@@ -595,7 +590,9 @@
 				awaitCloseAnimation: true, // [9]
 				// debugMode: true // [10]
 				onShow: function(modal) {
-					modalCardSwiper()
+					if (swiperInit === false) {
+						modalCardSwiper()
+					}
 				},
 				onClose: function(modal) {
 

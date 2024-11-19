@@ -32,7 +32,7 @@
 	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
 	<!-- sweetalert2 -->
 	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
-	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.js"></script>
 	<!-- swiper -->
 	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
 	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
@@ -72,6 +72,9 @@
 				<div class="guide-column-list">
 					<button type="button" class="btn-large btn-primary" onclick="swalFire()">Alert1</button>
 					<button type="button" class="btn-large btn-primary" onclick="swalFire2()">Alert2</button>
+					<button type="button" class="btn-large btn-primary" onclick="swalFire3()">Alert3</button>
+					<button type="button" class="btn-large btn-primary" onclick="swalFire4()">Alert4</button>
+					<button type="button" class="btn-large btn-primary" onclick="swalFire5()">Alert5</button>
 				</div>
 			</div>
 		</div>
@@ -98,28 +101,114 @@
 	<script>
 		function swalFire2() {
 			Swal.fire({
-				showCloseButton: false,
+				showCloseButton: true,
 				reverseButtons: true,
 				confirmButtonText: '확인',
-				html: `
-    <picture class="d-flex j-center mt32">
-        <source srcset="../../assets/images/ico/ico_camera.svg">
-        <img src="../../assets/images/ico/ico_camera.svg" alt="">
-    </picture>
-    <strong class="title-large ac">명함 촬영 안내</strong>
-    <p class="fs-16 ac mt8">휴대폰 세로 모드로 촬영하세요.</p>
-    <picture class="d-flex j-center mt16">
-        <source srcset="../../assets/images/@temp/image_TMP.png">
-        <img src="../../assets/images/@temp/image_TMP.png" alt="">
-    </picture>
-                `,
 				customClass: {
+					htmlContainer: 'mt40',
+					actions: 'btn-wrap pt40',
+					cancelButton: "btn-large btn-outlined",
+					confirmButton: "btn-large btn-primary",
+				},
+				buttonsStyling: false,
+				html: `
+                    <i class="icon-only icon-48 icon-camera bg-icon bg-icon-gray_1"></i>
+                    <strong class="title-large mt8">명함 촬영 안내</strong>
+                    <p class="body-large mt8">휴대폰 세로 모드로 촬영하세요.</p>
+                    <picture class="d-flex j-center mt16">
+                        <source srcset="../../assets/images/@temp/image_TMP.png">
+                        <img src="../../assets/images/@temp/image_TMP.png" alt="">
+                    </picture>
+                `,
+			})
+		}
+	</script>
+
+	<script>
+		function swalFire3() {
+			Swal.fire({
+				showCancelButton: false,
+				showCloseButton: false,
+				reverseButtons: true,
+				title: '<span class="description info fs-18 fc-typography-title">타이틀명타이틀명타이틀명타이틀명타이틀명타이틀명타이틀명타이틀명타이틀명타이틀명타이틀명타이틀명타이틀명타이틀명타이틀명타이틀명</span>',
+				confirmButtonText: '예',
+				cancelButtonText: '아니요',
+				customClass: {
+					actions: 'btn-wrap',
+					htmlContainer: 'al',
+					cancelButton: "btn-large btn-outlined",
+					confirmButton: "btn-large btn-primary",
+				},
+				buttonsStyling: false
+			})
+		}
+	</script>
+
+	<script>
+		function swalFire4() {
+			Swal.fire({
+				showCancelButton: true,
+				showCloseButton: true,
+				reverseButtons: true,
+				title: '타이틀명',
+				text: '텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트  텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트',
+				confirmButtonText: '예',
+				cancelButtonText: '아니요',
+				customClass: {
+					title: 'title-large',
+					htmlContainer: 'al',
+					actions: 'btn-wrap pt40',
+					cancelButton: "btn-large btn-outlined",
+					confirmButton: "btn-large btn-primary",
+				},
+				buttonsStyling: false
+			})
+		}
+	</script>
+	<script>
+		function swalFire5() {
+			Swal.fire({
+				showCloseButton: true,
+				reverseButtons: true,
+				confirmButtonText: '확인',
+				customClass: {
+					htmlContainer: 'mt40',
 					actions: 'btn-wrap',
 					cancelButton: "btn-large btn-outlined",
 					confirmButton: "btn-large btn-primary",
-					title: 'fw-700 ac',
 				},
-				buttonsStyling: false
+				buttonsStyling: false,
+				html: `
+                    <i class="icon-only icon-48 icon-caution bg-icon bg-icon-gray_1"></i>
+                    <strong class="title-large mt8">타이틀명</strong>
+                    <p class="body-large mt8">텍스트 텍스트</p>
+                `,
+			})
+		}
+	</script>
+	<script>
+		function swalInit() {
+			Swal.fire({
+				customClass: {
+					container: '...',
+					popup: '...',
+					header: '...',
+					title: '...',
+					closeButton: '...',
+					icon: '...',
+					image: '...',
+					htmlContainer: '...',
+					input: '...',
+					inputLabel: '...',
+					validationMessage: '...',
+					actions: '...',
+					confirmButton: '...',
+					denyButton: '...',
+					cancelButton: '...',
+					loader: '...',
+					footer: '....',
+					timerProgressBar: '....',
+				}
 			})
 		}
 	</script>

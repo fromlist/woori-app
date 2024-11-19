@@ -60,150 +60,57 @@
 	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
 	<style>
-		.ui-guide .ui-guide-box dl dd {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+		.ui-guide .guide-column-list {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		.ui-guide .guide-column-list>* {
+			width: 100%;
 		}
 	</style>
 </head>
 
 <body>
 	<div class="ui-guide">
-		<h1>Typography</h1>
-		<p>Headline, Title, Body</p>
+		<h1>Badge</h1>
 
 		<div class="ui-guide-section">
 			<div class="ui-guide-box">
-				<h2>Headline</h2>
-				<hr>
-				<dl>
-					<dt>Large</dt>
-					<dd>
-						<div class="left">
-							Pretendard Bold <br> 24px / 140%
-						</div>
-						<div class="right">
-							<h1 class="headline-large">헤드라인</h1>
-						</div>
-					</dd>
-				</dl>
-				<hr>
-				<dl>
-					<dt>Medium</dt>
-					<dd>
-						<div class="left">
-							Pretendard Bold <br> 22px / 140%
-						</div>
-						<div class="right">
-							<h1 class="headline-medium">헤드라인</h1>
-						</div>
-					</dd>
-				</dl>
-				<hr>
-				<dl>
-					<dt>Small</dt>
-					<dd>
-						<div class="left">
-							Pretendard Bold <br> 20px / 140%
-						</div>
-						<div class="right">
-							<h1 class="headline-small">헤드라인</h1>
-						</div>
-					</dd>
-				</dl>
+				<h2>Selector</h2>
+				<div class="guide-column-list">
+					<div class="select-option">
+						<ul>
+							<li class="select-all"><button type="button"><span>전체</span><i class="badge">10</i></button></li>
+							<li class="select-active"><button type="button" aria-label="선택됨"><span>PB 1팀</span><i class="badge">3</i></button></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 			<hr>
 			<div class="ui-guide-box">
-				<h2>Title</h2>
+				<h2>Tab</h2>
+				<div class="guide-column-list">
+					<div class="tab-content">
+						<ul class="tab-list tab-col overflow-list" role="tablist">
+							<li class="tab"><button type="button" data-controls="tab-subpanel01" role="tab" aria-selected="false">tab-sub01<i class="badge">10</i></button></li>
+							<li class="tab tab-active"><button type="button" data-controls="tab-subpanel02" role="tab" aria-selected="true">tab-sub02<i class="badge">10</i></button></li>
+						</ul>
+
+					</div>
+				</div>
 				<hr>
-				<dl>
-					<dt>Large</dt>
-					<dd>
-						<div class="left">
-							Pretendard Bold <br> 18px / 150%
-						</div>
-						<div class="right">
-							<h1 class="title-large">타이틀</h1>
-						</div>
-					</dd>
-				</dl>
-				<hr>
-				<dl>
-					<dt>Medium</dt>
-					<dd>
-						<div class="left">
-							Pretendard Bold <br> 16px / 150%
-						</div>
-						<div class="right">
-							<h1 class="title-medium">타이틀</h1>
-						</div>
-					</dd>
-				</dl>
-				<hr>
-				<dl>
-					<dt>Small</dt>
-					<dd>
-						<div class="left">
-							Pretendard Bold <br> 14px / 150%
-						</div>
-						<div class="right">
-							<h1 class="title-small">타이틀</h1>
-						</div>
-					</dd>
-				</dl>
-			</div>
-			<hr>
-			<div class="ui-guide-box">
-				<h2>Body</h2>
-				<hr>
-				<dl>
-					<dt>XLarge</dt>
-					<dd>
-						<div class="left">
-							Pretendard Regular <br> 18px / 160%
-						</div>
-						<div class="right">
-							<p class="body-xlarge">본문 텍스트입니다.</p>
-						</div>
-					</dd>
-				</dl>
-				<hr>
-				<dl>
-					<dt>Large</dt>
-					<dd>
-						<div class="left">
-							Pretendard Regular <br> 16px / 160%
-						</div>
-						<div class="right">
-							<p class="body-large">본문 텍스트입니다.</p>
-						</div>
-					</dd>
-				</dl>
-				<hr>
-				<dl>
-					<dt>Medium</dt>
-					<dd>
-						<div class="left">
-							Pretendard Regular <br> 14px / 160%
-						</div>
-						<div class="right">
-							<p class="body-medium">본문 텍스트입니다.</p>
-						</div>
-					</dd>
-				</dl>
-				<hr>
-				<dl>
-					<dt>Small</dt>
-					<dd>
-						<div class="left">
-							Pretendard Regular <br> 13px / 160%
-						</div>
-						<div class="right">
-							<p class="body-small">본문 텍스트입니다.</p>
-						</div>
-					</dd>
-				</dl>
+				<h2>Tab Overflow</h2>
+				<div class="guide-column-list">
+					<div class="tab-content">
+						<ul class="tab-list tab-col overflow-list" role="tablist">
+							<li class="tab"><button type="button" data-controls="tab-subpanel03" role="tab" aria-selected="false">tab-sub01<i class="badge">10</i></button></li>
+							<li class="tab"><button type="button" data-controls="tab-subpanel04" role="tab" aria-selected="false">tab-sub01<i class="badge">10</i></button></li>
+							<li class="tab"><button type="button" data-controls="tab-subpanel04" role="tab" aria-selected="false">tab-sub01<i class="badge">10</i></button></li>
+							<li class="tab tab-active"><button type="button" data-controls="tab-subpanel05" role="tab" aria-selected="true">tab-sub02<i class="badge">10</i></button></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 
