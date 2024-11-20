@@ -68,24 +68,110 @@
 
 <body>
 	<div class="ui-guide">
-		<h1>List Group</h1>
+		<h1>Group</h1>
 
 		<div class="ui-guide-section">
 			<div class="guide-column-list">
+				<h2>Group</h2>
 
 				<!-- group -->
-				<div class="group">
-					<div class="group-title">
-						<strong class="title-medium">별칭명</strong>
-					</div>
-					<div class="group-content">
-						<div class="btn-wrap gap4 p0">
-							<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-delete"></i>삭제</button>
-							<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-modify"></i>수정</button>
-						</div>
+				<div class="group py0">
+					<div class="right">
+						<button type="button" class="btn-noborder" data-micromodal-trigger="modal-businesscard"><i class="ico-sort"></i>순서 설정</button>
 					</div>
 				</div>
 				<!-- //group -->
+
+				<!-- group -->
+				<div class="group">
+					<strong class="title-medium">별칭명</strong>
+					<div class="btn-wrap gap4 p0">
+						<button type="button" class="btn-small btn-outlined btn-round" onclick="swalFire()"><i class="ico-delete"></i>삭제</button>
+						<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-modify"></i>수정</button>
+					</div>
+				</div>
+				<!-- //group -->
+				<hr>
+
+				<h2>Group Form</h2>
+
+				<!-- group-form -->
+				<div class="group-form">
+					<div class="group-title">
+						<strong class="title-medium">별칭 <i class="apos" aria-label="필수 입력">*</i></strong>
+					</div>
+					<div class="group-content">
+						<div class="form">
+							<div class="label"></div>
+							<div class="input-wrap">
+								<input type="text" placeholder="별칭">
+							</div>
+							<p class="validate-text"></p>
+						</div>
+					</div>
+				</div>
+				<!-- //group-form -->
+
+				<!-- group-form -->
+				<div class="group-form mt40">
+					<div class="group-title">
+						<strong class="title-medium">직급</strong>
+					</div>
+					<div class="group-content">
+						<div class="inp inp-tab">
+							<input type="radio" name="inp-tab01" aria-label="과장" checked>
+							<input type="radio" name="inp-tab01" aria-label="팀장">
+						</div>
+					</div>
+				</div>
+				<!-- //group-form -->
+
+				<div class="stroke my40"></div>
+
+				<!-- group -->
+				<div class="group-form mt40">
+					<div class="group-title">
+						<strong class="title-medium">자격증</strong>
+						<p class="description info body-small">최대 <span class="fc-status-error">N</span>개 선택할 수 있습니다.</p>
+					</div>
+					<div class="group-content">
+						<div class="inp-column-list">
+							<div class="inp inp-medium">
+								<label>
+									<input type="checkbox">
+									<span class="label-title">선택안함</span>
+								</label>
+							</div>
+							<div class="inp inp-medium">
+								<label>
+									<input type="checkbox">
+									<span class="label-title">신용위험분석사(CRA)1차</span>
+								</label>
+							</div>
+							<div class="inp inp-medium">
+								<label>
+									<input type="checkbox">
+									<span class="label-title">공인신용분석사</span>
+								</label>
+							</div>
+							<div class="inp inp-medium">
+								<label>
+									<input type="checkbox">
+									<span class="label-title">CFP(국제공인재무설계사)</span>
+								</label>
+							</div>
+							<div class="inp inp-medium">
+								<label>
+									<input type="checkbox">
+									<span class="label-title">CDCS(국제공인신용장전문가자격증)</span>
+								</label>
+							</div>
+						</div>
+						<p class="description caution body-small">지점 주소와 전화번호는 우리금융 Portal Service &gt; 직원조회에서 본인이 속한 부점명으로 검색 후 결과에서 본인 정보를 클릭 후 수정할 수 있습니다.</p>
+					</div>
+				</div>
+				<!-- //group -->
+
 
 			</div>
 
