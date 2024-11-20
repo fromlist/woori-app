@@ -19,7 +19,7 @@
 
 /* businesscard-list */
 .businesscard-list {}
-.businesscard-list .list-group-item {position:relative;display:flex;padding:24px 8px;align-items:center;justify-content:space-between;gap:16px;}
+.businesscard-list .list-group-item {position:relative;display:flex;padding:24px 8px;align-items:center;justify-content:space-between;gap:16px;border:1px solid transparent;}
 .businesscard-list .list-group-item:first-child:before {content:'';position:absolute;left:8px;right:8px;top:0;height:1px;background-color:var(--border-4);}
 .businesscard-list .list-group-item:after {content:'';position:absolute;left:8px;right:8px;bottom:0;height:1px;background-color:var(--border-4);}
 .businesscard-list .list-group-item .handler {flex:0 0 24px;width:24px;height:24px;
@@ -34,6 +34,7 @@
     mask-image:url(../images/ico/ico_sortable_handler.svg);
 }
 .businesscard-list .list-group-item.sortable-chosen {background-color:var(--background-bg_gray);border-radius:4px;opacity:0.95;border:1px solid var(--status-focused);box-shadow: 0px 1px 0px 0px var(--shadow-gray_3), 0px 2px 4px -1px var(--shadow-gray_3);}
+.businesscard-list .list-group-item.sortable-chosen:after {display:none;}
 .businesscard-list .list-group-item.sortable-chosen .handler {background-color:var(--icon-default);}
 .businesscard-list .list-group-item.sortable-chosen.sortable-ghost {border-color:transparent;}
 
