@@ -4,11 +4,10 @@
 <head>
 	<title>자산관리 영업지원 App</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
-
-	<!-- [plugins] -->
+<!-- [plugins] -->
 	<!-- dropzone -->
 	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
 	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
@@ -45,6 +44,8 @@
 	<!-- jquery-ui -->
 	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
 	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="../../assets/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
 	<!-- //[plugins] -->
 
 	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
@@ -286,6 +287,63 @@
 
 					<div class="content">
 
+						<!-- group -->
+						<div class="group-form mt16">
+							<div class="group-title">
+								<strong class="title-medium">고객 명함 이미지</strong>
+							</div>
+							<div class="group-content mt8">
+								<!-- upload-picture -->
+								<div class="upload-picture">
+									<div class="upload-type-select">
+										<button type="button" class="upload-gallery">갤러리</button>
+										<button type="button" class="upload-camera">카메라</button>
+									</div>
+								</div>
+								<!-- //upload-picture -->
+
+								<!-- upload-picture -->
+								<div class="upload-picture">
+									<picture>
+										<source srcset="../../assets/images/@temp/@business_card.png">
+										<img src="../../assets/images/@temp/@business_card.png" alt="">
+									</picture>
+									<div class="picture-dimmed">
+										<button type="button" class="btn-noborder btn-noborder-text-shadow px4 py6"><i class="ico-delete-shadow"></i>삭제</button>
+									</div>
+								</div>
+								<!-- //upload-picture -->
+
+								<!-- upload-picture -->
+								<div class="upload-picture">
+									<picture>
+										<source srcset="../../assets/@temp/thumb_h.png">
+										<img src="../../assets/@temp/thumb_h.png" alt="">
+									</picture>
+									<div class="picture-dimmed">
+										<button type="button" class="btn-noborder btn-noborder-text-shadow px4 py6"><i class="ico-delete-shadow"></i>삭제</button>
+									</div>
+								</div>
+								<!-- //upload-picture -->
+							</div>
+						</div>
+						<!-- //group -->
+
+
+
+						<!-- group -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">키맨</strong>
+								<div class="inp inp-toggle">
+									<label>
+										<input type="checkbox" aria-label="키맨">
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- //group -->
+
 						<!-- group-form -->
 						<div class="group-form mt40">
 							<div class="group-title">
@@ -439,7 +497,23 @@
 						</div>
 						<!-- //group-form -->
 
-						<p class="description caution body-small">개인정보 또는 부적절한 내용 작성을 금지하며, 마케팅 정보로 이용할 수 없습니다.</p>
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">메모</strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="input-wrap">
+										<textarea title="메모"></textarea>
+									</div>
+									<div class="textarea-length">0/300자</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<p class="description error body-small mt40">개인정보 또는 부적절한 내용 작성을 금지하며, 마케팅 정보로 이용할 수 없습니다.</p>
 
 					</div>
 

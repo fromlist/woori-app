@@ -4,7 +4,7 @@
 <head>
 	<title>자산관리 영업지원 App</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
 
@@ -28,6 +28,7 @@
 	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
 	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
 	<!-- sortable -->
+
 	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
 	<!-- sweetalert2 -->
 	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
@@ -44,6 +45,8 @@
 	<!-- jquery-ui -->
 	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
 	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="../../assets/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
 	<!-- //[plugins] -->
 
 	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
@@ -107,6 +110,17 @@
 							<div class="input-wrap">
 								<input type="text" disabled placeholder="Placeholder" value="Disabled" title="input">
 							</div>
+						</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>Textarea</dt>
+					<dd>
+						<div class="form">
+							<div class="input-wrap">
+								<textarea title="메모"></textarea>
+							</div>
+							<div class="textarea-length">0/300자</div>
 						</div>
 					</dd>
 				</dl>

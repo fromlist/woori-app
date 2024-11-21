@@ -353,7 +353,9 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 
 
 .py0 {padding-top:0px!important;padding-bottom:0px!important;}
+.py4 {padding-top:4px!important;padding-bottom:4px!important;}
 .py5 {padding-top:5px!important;padding-bottom:5px!important;}
+.py6 {padding-top:6px!important;padding-bottom:6px!important;}
 .py8 {padding-top:8px!important;padding-bottom:8px!important;}
 .py10 {padding-top:10px!important;padding-bottom:10px!important;}
 .py13 {padding-top:13px!important;padding-bottom:13px!important;}
@@ -371,7 +373,9 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .py100 {padding-top:100px!important;padding-bottom:100px!important;}
 
 .px0 {padding-left:0px!important;padding-right:0px!important;}
+.px4 {padding-left:4px!important;padding-right:4px!important;}
 .px5 {padding-left:5px!important;padding-right:5px!important;}
+.px6 {padding-left:6px!important;padding-right:6px!important;}
 .px8 {padding-left:8px!important;padding-right:8px!important;}
 .px10 {padding-left:10px!important;padding-right:10px!important;}
 .px13 {padding-left:13px!important;padding-right:13px!important;}

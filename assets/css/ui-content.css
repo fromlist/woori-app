@@ -75,7 +75,23 @@
 .business-card-customer figure .due-date span {}
 .business-card-customer figure .thumb {position:relative;}
 .business-card-customer figure .thumb button {position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;}
-.business-card-customer figure .thumb picture {width:120px;height:74px;opacity:0.8;}
+.business-card-customer figure .thumb picture {width:120px;height:74px;}
 .business-card-customer figure .thumb picture img {width:100%;height:100%;border-radius:8px;}
 .business-card-customer figure .thumb.thumb-nodata picture {border-radius:8px;border:1px solid var(--border-8);background:url(../images/PBWBU/ico_business_card_empty.svg) center center / 28px 28px no-repeat var(--background-bg_lightGray);}
 .business-card-customer figure .thumb.thumb-nodata picture img {display:none;}
+
+/* upload-picture */
+.upload-picture {position:relative;display:flex;align-items:center;justify-content:center;}
+.upload-picture .upload-type-select {display:flex;gap:16px;padding:35px 26px;flex:1;height:53vw;border-radius:8px;border: 1px solid var(--border-8);background: var(--black-56);box-shadow: 0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
+.upload-picture .upload-type-select button {display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;font-size:16px;font-weight:500;color:var(--white-100);line-height:1;height:100%;flex:1;}
+.upload-picture .upload-type-select button:before {content:'';width:48px;flex:0 0 48px;height:48px;}
+.upload-picture .upload-type-select .upload-gallery:before {background:url(../images/common/img_upload_gallery.svg) center center / contain no-repeat;}
+.upload-picture .upload-type-select .upload-camera:before {background:url(../images/common/img_upload_camera.svg) center center / contain no-repeat;}
+.upload-picture picture {flex:1 1 100%;}
+.upload-picture picture img {border-radius:8px;border: 1px solid var(--border-8);width:100%;}
+.upload-picture .picture-dimmed {position:absolute;left:0;top:0;width:100%;height:100%;display:flex;justify-content:flex-end;background: var(--black-16);border-radius:8px;padding:12px 16px;}
+.upload-picture .upload-picture-anchor {display:block;width:100%;}
+
+/* pinch-zoom-wrap */
+.pinch-zoom-wrap {display:flex;height:calc(100vh - 96px);}
+.pinch-zoom-container {width:100%!important;}

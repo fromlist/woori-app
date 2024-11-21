@@ -3,6 +3,7 @@ $(function () {
     toggleActiveClass.init();
     tabContent.init();
     accordionContent.init();
+    formStyle.init();
 });
 
 // global toggle
@@ -121,6 +122,28 @@ const accordionContent = {
             }
         });
     }
+}
+
+// global form
+const formStyle = {
+    init: function () {
+        formStyle.textareaResize();
+    },
+
+    textareaResize: function () {
+        $.each($('textarea'), function () {
+            if (!$(this).is('[readonly]')) {
+                const offset = this.offsetHeight - this.clientHeight;
+                const resizeTextarea = function (el) {
+                    $(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+                    $(el).addClass('areaResize')
+                };
+                $(document).on('keyup input', 'textarea', function () {
+                    resizeTextarea(this);
+                });
+            }
+        });
+    },
 }
 
 

@@ -7,7 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
-<!-- [plugins] -->
+
+	<!-- [plugins] -->
 	<!-- dropzone -->
 	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
 	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
@@ -92,41 +93,23 @@
 				<!-- content -->
 				<div class="content">
 
-					<!-- sort-wrap -->
-					<div class="sort-wrap">
-
-						<!-- form -->
-						<div class="form">
-							<div class="label"></div>
-							<div class="input-wrap input-btn">
-								<input type="text" placeholder="이름, 회사명으로 검색해 보세요." title="검색">
-								<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
-							</div>
-							<p class="validate-text"></p>
-						</div>
-						<!-- //form -->
-
+					<!-- upload-picture -->
+					<div class="upload-picture mt16">
+						<button type="button" class="upload-picture-anchor" id="modalTrigger" aria-label="이미지 확대보기">
+							<picture>
+								<source srcset="../../assets/images/@temp/@business_card.png">
+								<img src="../../assets/images/@temp/@business_card.png" alt="">
+							</picture>
+						</button>
 					</div>
-					<!-- sort-wrap -->
-
-
-					<!-- division-center -->
-					<div class="division-center">
-
-						<div class="no-result">
-							<i class="icon-only icon-48 icon-caution bg-icon bg-icon-gray_1"></i>
-							<p class="body-medium fw-500">검색 결과가 없습니다.</p>
-						</div>
-
-					</div>
-					<!-- //division-center -->
+					<!-- //upload-picture -->
 
 
 				</div>
 				<!-- //content -->
-
 			</div>
 			<!-- //container -->
+
 
 		</div>
 		<!-- //content end -->
@@ -136,14 +119,87 @@
 		<!-- bottom-btn -->
 		<div class="bottom-btn">
 			<div class="btn-wrap">
-				<button type="button" class="btn-large btn-primary"><i class="ico-add"></i>고객 명함 등록</button>
+				<button type="button" class="btn-large btn-outlined">삭제</button>
+				<button type="button" class="btn-large btn-primary">수정</button>
 			</div>
 		</div>
 		<!-- //bottom-btn -->
 
 	</main>
 	<!-- main -->
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-picture-resize">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
 
+				<div class="modal__header">
+					<strong class="modal__title title-large">이미지</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content content-fluid">
+						<div class="pinch-zoom-wrap">
+							<div class="pinch-zoom">
+								<picture>
+									<source srcset="../../assets/@temp/thumb_h.png">
+									<img src="../../assets/@temp/thumb_h.png" alt="">
+								</picture>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<script type="text/javascript">
+		var pz = '';
+		let myElement = document.querySelector('.pinch-zoom');
+		var pzInit = false;
+
+
+
+		const modalTrigger = document.querySelector('#modalTrigger')
+		modalTrigger.addEventListener("click", function() {
+			MicroModal.show('modal-picture-resize', {
+				// openTrigger: 'data-custom-open', // [3]
+				// closeTrigger: 'data-custom-close', // [4]
+				// openClass: 'is-open', // [5]
+				disableScroll: true, // [6]
+				disableFocus: true, // [7]
+				awaitOpenAnimation: true, // [8]
+				awaitCloseAnimation: true, // [9]
+				// debugMode: true // [10]
+				onShow: function(modal) {
+					if (pzInit === false) {
+						pz = new PinchZoom.default(myElement, {
+							draggableUnzoomed: false,
+							minZoom: 1,
+							maxZoom: 2,
+							onZoomStart: function(object, event) {
+								// Do something on zoom start
+								// You can use any Pinchzoom method by calling object.method()
+							},
+							onZoomEnd: function(object, event) {
+								// Do something on zoom end
+							}
+						})
+						pzInit = true;
+					}
+					console.log('onshow');
+
+				},
+				onClose: function(modal) {
+					console.log('onclose');
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>
