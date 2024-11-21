@@ -220,7 +220,7 @@
 		<!-- bottom-btn -->
 		<div class="bottom-btn">
 			<div class="btn-wrap">
-				<button type="button" class="btn-large btn-primary"><i class="ico-add"></i>고객 명함 등록</button>
+				<button type="button" class="btn-large btn-primary" data-micromodal-trigger="modal-businesscard-customer-regist"><i class="ico-add"></i>고객 명함 등록</button>
 			</div>
 		</div>
 		<!-- //bottom-btn -->
@@ -272,8 +272,195 @@
 	</div>
 	<!-- //micromodal -->
 
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard-customer-regist" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large">고객 명함 등록 </strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">이름 <i class="apos" aria-label="필수 입력">*</i></strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="text" title="이름">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">회사 <i class="apos" aria-label="필수 입력">*</i></strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="text" title="회사">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">부서 <i class="apos" aria-label="필수 입력">*</i></strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="text" title="부서">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">휴대폰 번호 <i class="apos" aria-label="필수 입력">*</i></strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="tel" title="휴대폰 번호" placeholder="‘-’ 없이 숫자만 입력">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">직책</strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="tel" title="직책">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">이메일</strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="email" title="이메일">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">전화번호</strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="tel" title="전화번호">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">팩스번호</strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="tel" title="팩스번호">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">주소</strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="text" title="주소">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<p class="description caution body-small">개인정보 또는 부적절한 내용 작성을 금지하며, 마케팅 정보로 이용할 수 없습니다.</p>
+
+					</div>
+
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" onclick="toastr.success('', '저장되었습니다.')" data-micromodal-close>저장</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
 	<script>
-		
+
 	</script>
 </body>
 

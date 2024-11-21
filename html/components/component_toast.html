@@ -72,7 +72,7 @@
 				<button class="btn-large btn-outlined" id="alert">alert</button>
 				<button class="btn-large btn-outlined" id="success">Success</button>
 				<button class="btn-large btn-outlined" id="info">Info</button>
-				<button class="btn-large btn-outlined" id="warning">Warning</button>
+				<button class="btn-large btn-outlined" id="caution">caution</button>
 				<button class="btn-large btn-outlined" id="error">Error</button>
 			</div>
 		</div>
@@ -93,8 +93,8 @@
 		$('#info').click(function(event) {
 			toastr.info('', 'You clicked Info toast')
 		});
-		$('#warning').click(function(event) {
-			toastr.warning('', 'You clicked Warning Toast')
+		$('#caution').click(function(event) {
+			toastr.caution('', 'You clicked Caution Toast')
 		});
 		$('#error').click(function(event) {
 			toastr.error('', 'You clicked Error Toast')

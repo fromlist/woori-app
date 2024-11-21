@@ -92,15 +92,15 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .btn-toast-wrap {display:flex;justify-content:flex-end;}
 .toast-success .toast-title,
 .toast-info .toast-title,
-.toast-warning .toast-title,
+.toast-caution .toast-title,
 .toast-error .toast-title {position:relative;padding-left:24px;}
 .toast-success .toast-title:before,
 .toast-info .toast-title:before,
-.toast-warning .toast-title:before,
+.toast-caution .toast-title:before,
 .toast-error .toast-title:before {content:'';position:absolute;left:0;top:3px;width:20px;height:20px;}
 .toast-success .toast-title:before {background:url(../images/toastr/ico_success.svg) center center / contain no-repeat;}
 .toast-info .toast-title:before {background:url(../images/toastr/ico_info.svg) center center / contain no-repeat;}
-.toast-warning .toast-title:before {background:url(../images/toastr/ico_warning.svg) center center / contain no-repeat;}
+.toast-caution .toast-title:before {background:url(../images/toastr/ico_caution.svg) center center / contain no-repeat;}
 .toast-error .toast-title:before {background:url(../images/toastr/ico_error.svg) center center / contain no-repeat;}
 .toast-bottom-center {bottom:12px;}
 .toast-bottom-center.has-bottom-btn {bottom:76px;}
