@@ -35,7 +35,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .modal__header .modal__close {position:absolute;right:0;top:0;width:24px;height:24px;padding:14.5px 16px;display:flex;align-items:center;justify-content:center;box-sizing:content-box;}
 .modal__header .modal__close:before {content:'';flex:0 0 24px;width:24px;height:24px;background:url(../images/ico/ico_close.svg) center center / contain no-repeat;}
 .modal__header__alert .title-large {justify-content:flex-start;}
-.modal__header__alert .modal__close {position:static;padding:0;}
+.modal__header__alert .modal__close {position:static;padding:0;margin-left:auto;}
 
 .modal__content__alert {padding:16px 0 0;}
 .modal__content__alert .body-large {padding:0 8px;}

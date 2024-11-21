@@ -72,7 +72,7 @@
 					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
 				</div>
 				<div class="center">
-					<h1>내 명함 공유</h1>
+					<h1>고객 명함 관리</h1>
 				</div>
 				<div class="right">
 					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
@@ -85,26 +85,41 @@
 		<!-- content start -->
 		<div class="main-inner">
 
-
 			<!-- container -->
 			<div id="container">
 
 				<!-- content -->
 				<div class="content">
 
+					<!-- sort-wrap -->
+					<div class="sort-wrap">
+
+						<!-- form -->
+						<div class="form">
+							<div class="label"></div>
+							<div class="input-wrap input-btn">
+								<input type="text" placeholder="이름, 회사명으로 검색해 보세요." title="검색">
+								<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
+							</div>
+							<p class="validate-text"></p>
+						</div>
+						<!-- //form -->
+
+					</div>
+					<!-- sort-wrap -->
+
+
 					<!-- division-center -->
 					<div class="division-center">
-						<!-- init-regist -->
-						<div class="init-regist">
-							<picture>
-								<source srcset="../../assets/images/PBWBU/init_business_card.svg">
-								<img src="../../assets/images/PBWBU/init_business_card.svg" alt="">
-							</picture>
-							<p class="description body-large fw-500 ac">내 명함을 등록하고 공유해 보세요.</p>
+
+						<div class="no-result">
+							<i class="icon-only icon-48 icon-caution bg-icon bg-icon-gray_1"></i>
+							<p class="body-medium fw-500">검색 결과가 없습니다.</p>
 						</div>
-						<!-- //init-regist -->
+
 					</div>
 					<!-- //division-center -->
+
 
 				</div>
 				<!-- //content -->
@@ -120,7 +135,7 @@
 		<!-- bottom-btn -->
 		<div class="bottom-btn">
 			<div class="btn-wrap">
-				<button type="button" class="btn-large btn-primary"><i class="ico-add"></i>명함 등록</button>
+				<button type="button" class="btn-large btn-primary"><i class="ico-add"></i>고객 명함 등록</button>
 			</div>
 		</div>
 		<!-- //bottom-btn -->
@@ -129,14 +144,10 @@
 	<!-- main -->
 
 	<script>
-		$(document).ready(function() {
-			toastr.warning('', '내 명함을 먼저 등록하고 공유 해주세요.', {
-				"timeOut": 0,
-				"extendedTimeOut": 0,
-				"preventDuplicates": true,
-				"disableTimeOut": true,
-			});
-		});
+		$('.input-search').click(function() {
+			$('.form').addClass('form-invalid')
+			$('.validate-text').text('asdf');
+		})
 	</script>
 </body>
 

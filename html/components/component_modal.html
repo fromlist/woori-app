@@ -69,6 +69,7 @@
 			<div class="guide-column-list">
 				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-layout">modal-layout</button>
 				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-select">modal-select</button>
+				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-select-filter">modal-select-filter</button>
 				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-alert1">modal-alert1 (prevent close)</button>
 				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-alert2">modal-alert2 (text only)</button>
 				<button class="btn-large btn-outlined" data-micromodal-trigger="modal-alert3">modal-alert3 (text title)</button>
@@ -133,6 +134,50 @@
 							</ul>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-select-filter">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content content-fluid">
+						<div class="select-option">
+							<strong class="title-large">필터</strong>
+							<ul>
+								<li class="select-all"><button type="button"><span>전체</span><i class="badge">10</i></button></li>
+								<li><button type="button"><span>키맨</span><i class="badge">2</i></button></li>
+								<li><button type="button"><span>내가 등록한 명함</span><i class="badge">5</i></button></li>
+								<li><button type="button"><span>내가 등록한 명함 내가 등록한 명함 내가 등록한 명함 내가 등록한 명함</span><i class="badge">5</i></button></li>
+								<li class="select-active"><button type="button" aria-label="선택됨"><span>PB 1팀</span><i class="badge">3</i></button></li>
+							</ul>
+							<div class="stroke4"></div>
+							<strong class="title-large">정렬</strong>
+							<ul>
+								<li class="select-active"><button type="button" aria-label="선택됨"><span>최신순</span></button></li>
+								<li><button type="button"><span>이름순</span></button></li>
+								<li><button type="button"><span>회사명순</span></button></li>
+								<li><button type="button"><span>만료일</span></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" data-micromodal-close="">저장</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
 				</div>
 			</div>
 		</div>

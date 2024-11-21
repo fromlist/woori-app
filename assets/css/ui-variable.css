@@ -47,10 +47,10 @@
     --deepblue-900:#162C8D;
     --gray-200:#F1F3F5;
     --gray-300:#E9ECEF;
-    --gray-400:#DEE2E6;
+    --gray-400:#CFD4D9;
     --gray-50:#F8F9FA;
-    --gray-500:#C5CBD1;
-    --gray-600:#989FA7;
+    --gray-500:#A4A9AE;
+    --gray-600:#777E85;
     --gray-700:#495057;
     --gray-800:#343A40;
     --gray-900:#212528;
@@ -195,11 +195,11 @@
     --button-tertiary-onDisabled:#C5CBD1;
     --button-tertiary-onEnabled:#0C0C0DB8;
     --button-tertiary-pressed:#8597A82E;
-    --button-textBtn-Enabled:#989FA7;
+    --button-textBtn-Enabled:#777E85;
     --icon-default:#0C0C0DE0;
     --icon-disabled:#0C0C0D14;
-    --icon-gray_1:#C5CBD1;
-    --icon-gray_2:#989FA7;
+    --icon-gray_1:#CFD4D9;
+    --icon-gray_2:#A4A9AE;
     --icon-white:#FFFFFF;
     --shadow-blue_1:#EAF4FF;
     --shadow-blue_2:#D1EAFF;

@@ -63,15 +63,38 @@
 
 <body>
 	<div class="ui-guide">
-		<h1>Form</h1>
-		<p>Toggle</p>
+		<h1>List</h1>
 
 		<div class="ui-guide-section">
 			<div class="ui-guide-box">
-
+				<h2>Sorting list</h2>
+				<div id="sortingBusinessCard" class="businesscard-list">
+					<div class="list-group-item">
+						<strong class="title-medium">Item 1</strong>
+						<button type="button" class="handler" aria-label="순서 이동"></button>
+					</div>
+					<div class="list-group-item">
+						<strong class="title-medium">Item 2</strong>
+						<button type="button" class="handler" aria-label="순서 이동"></button>
+					</div>
+					<div class="list-group-item">
+						<strong class="title-medium">Item 3</strong>
+						<button type="button" class="handler" aria-label="순서 이동"></button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+
+	<script>
+		// sortable
+		var sortableOption = {
+			group: 'shared',
+			animation: 150,
+			handle: '.handler', // handle's class
+		}
+		sortableLeft = Sortable.create(sortingBusinessCard, sortableOption);
+	</script>
 </body>
 
 </html>

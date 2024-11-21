@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- dropzone -->
+	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
+	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../assets/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../assets/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../assets/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../assets/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../assets/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+
+	<link rel="stylesheet" href="../../assets/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../assets/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../assets/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../assets/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+
+	<script src="../../assets/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../assets/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../assets/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../assets/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../assets/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../assets/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../assets/css/ui-variable.css">
+	<link rel="stylesheet" href="../../assets/css/ui-default.css">
+	<link rel="stylesheet" href="../../assets/css/ui-layout.css">
+	<link rel="stylesheet" href="../../assets/css/ui-style.css">
+	<link rel="stylesheet" href="../../assets/css/ui-content.css">
+	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
+
+	<script src="../../assets/js/ui-script.js"></script>
+	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>고객 명함 관리</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<!-- sort-wrap -->
+					<div class="sort-wrap">
+
+						<!-- form -->
+						<div class="form">
+							<div class="label"></div>
+							<div class="input-wrap input-btn">
+								<input type="text" placeholder="이름, 회사명으로 검색해 보세요." title="검색">
+								<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
+							</div>
+							<p class="validate-text"></p>
+						</div>
+						<!-- //form -->
+
+						<!-- sort-list -->
+						<div class="sort-list">
+							<div class="filter">
+								<span>전체</span>
+								<i class="badge">3</i>
+							</div>
+							<div class="division mx10"></div>
+							<div class="sort">
+								<span>최신순</span>
+								<button type="button" class="btn-border" data-micromodal-trigger="modal-select-filter" aria-label="정렬"><i class="ico-sorting"></i></button>
+								<button type="button" class="btn-border is-active" data-micromodal-trigger="modal-select-filter" aria-label="정렬"><i class="ico-sorting"></i></button>
+							</div>
+						</div>
+						<!-- sort-list -->
+
+					</div>
+					<!-- sort-wrap -->
+
+
+					<!-- business-card-customer -->
+					<div class="business-card-customer-list">
+						<div class="business-card-customer">
+							<a href="#">
+								<strong class="title-medium">김성민</strong>
+								<div class="company">
+									<span>디지털공통개발부 UI/UX팀</span>
+									<div class="division mx8"></div>
+									<span>과장</span>
+								</div>
+								<div class="body-medium fw-400">파인너츠</div>
+								<div class="tags tags-small tags-lightBlue">키맨</div>
+							</a>
+							<figure>
+								<div class="due-date">
+									<strong class="body-small">만료일</strong>
+									<span>2024.11.26</span>
+								</div>
+								<div class="thumb thumb-nodata">
+									<!-- <button type="button" class="btn-small btn-black btn-round">연장하기</button> -->
+									<picture>
+										<source srcset="">
+										<img src="" alt="">
+									</picture>
+								</div>
+							</figure>
+						</div>
+
+						<div class="business-card-customer">
+							<a href="#">
+								<strong class="title-medium">이름</strong>
+								<div class="company">
+									<span>부서명</span>
+									<div class="division mx8"></div>
+									<span>직책</span>
+								</div>
+								<div class="body-medium fw-400">회사명</div>
+
+							</a>
+							<figure>
+								<div class="due-date">
+									<strong class="body-small">만료일</strong>
+									<div class="tags tags-small tags-lightBlue">D-30</div>
+								</div>
+								<div class="thumb">
+									<button type="button" class="btn-small btn-black btn-round" onclick="toastr.success(``, '연장되었습니다.');">연장하기</button>
+									<picture>
+										<source srcset="../../assets/@temp/thumb_w.png">
+										<img src="../../assets/@temp/thumb_w.png" alt="">
+									</picture>
+								</div>
+							</figure>
+						</div>
+
+						<div class="business-card-customer">
+							<a href="#">
+								<strong class="title-medium">이름</strong>
+								<div class="company">
+									<span>부서명</span>
+									<div class="division mx8"></div>
+									<span>직책</span>
+								</div>
+								<div class="body-medium fw-400">회사명</div>
+
+							</a>
+							<figure>
+								<div class="due-date">
+									<div class="tags tags-small tags-lightRed">삭제예정</div>
+								</div>
+								<div class="thumb">
+									<button type="button" class="btn-small btn-black btn-round" onclick="toastr.success(``, '연장되었습니다.');">연장하기</button>
+									<picture>
+										<source srcset="../../assets/@temp/thumb_w.png">
+										<img src="../../assets/@temp/thumb_w.png" alt="">
+									</picture>
+								</div>
+							</figure>
+						</div>
+					</div>
+					<!-- //business-card-customer -->
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-primary"><i class="ico-add"></i>고객 명함 등록</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- main -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-select-filter">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content content-fluid">
+						<div class="select-option">
+							<strong class="title-large">필터</strong>
+							<ul>
+								<li class="select-all"><button type="button"><span>전체</span><i class="badge">10</i></button></li>
+								<li><button type="button"><span>키맨</span><i class="badge">2</i></button></li>
+								<li><button type="button"><span>내가 등록한 명함</span><i class="badge">5</i></button></li>
+								<li><button type="button"><span>내가 등록한 명함 내가 등록한 명함 내가 등록한 명함 내가 등록한 명함</span><i class="badge">5</i></button></li>
+								<li class="select-active"><button type="button" aria-label="선택됨"><span>PB 1팀</span><i class="badge">3</i></button></li>
+							</ul>
+							<div class="stroke4"></div>
+							<strong class="title-large">정렬</strong>
+							<ul>
+								<li class="select-active"><button type="button" aria-label="선택됨"><span>최신순</span></button></li>
+								<li><button type="button"><span>이름순</span></button></li>
+								<li><button type="button"><span>회사명순</span></button></li>
+								<li><button type="button"><span>만료일</span></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" data-micromodal-close="">저장</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<script>
+		
+	</script>
+</body>
+
+</html>
