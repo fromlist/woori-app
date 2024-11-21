@@ -291,7 +291,7 @@
 								<div class="upload-picture">
 									<div class="upload-type-select">
 										<button type="button" class="upload-gallery">갤러리</button>
-										<button type="button" class="upload-camera">카메라</button>
+										<button type="button" class="upload-camera" onclick="swalFire()">카메라</button>
 									</div>
 								</div>
 								<!-- //upload-picture -->
@@ -528,7 +528,29 @@
 
 
 	<script>
-
+		function swalFire() {
+			Swal.fire({
+				showCloseButton: true,
+				reverseButtons: true,
+				confirmButtonText: '확인',
+				customClass: {
+					htmlContainer: 'mt40',
+					actions: 'btn-wrap pt40',
+					cancelButton: "btn-large btn-outlined",
+					confirmButton: "btn-large btn-primary",
+				},
+				buttonsStyling: false,
+				html: `
+                    <i class="icon-only icon-48 icon-camera bg-icon bg-icon-gray_1"></i>
+                    <strong class="title-large mt8">명함 촬영 안내</strong>
+                    <p class="body-large mt8">휴대폰 세로 모드로 촬영하세요.</p>
+                    <picture class="d-flex j-center mt16">
+                        <source srcset="../../assets/images/@temp/image_TMP.png">
+                        <img src="../../assets/images/@temp/image_TMP.png" alt="">
+                    </picture>
+                `,
+			})
+		}
 	</script>
 </body>
 
