@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
-<!-- [plugins] -->
+	<!-- [plugins] -->
 	<!-- dropzone -->
 	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
 	<script src="../../assets/plugins/dropzone/5.9.3/dropzone.min.js"></script>
@@ -107,18 +107,14 @@
 						<!-- //form -->
 
 						<!-- sort-list -->
-						<div class="sort-list">
-							<div class="filter">
+						<button class="sort-list" data-micromodal-trigger="modal-select-filter" aria-label="정렬">
+							<span class="filter">
 								<span>전체</span>
-								<i class="badge">3</i>
-							</div>
-							<div class="division mx10"></div>
-							<div class="sort">
-								<span>최신순</span>
-								<button type="button" class="btn-border" data-micromodal-trigger="modal-select-filter" aria-label="정렬"><i class="ico-sorting"></i></button>
-								<button type="button" class="btn-border is-active" data-micromodal-trigger="modal-select-filter" aria-label="정렬"><i class="ico-sorting"></i></button>
-							</div>
-						</div>
+								<i class="badge ml0">3</i>
+							</span>
+							<span class="division mx8"></span>
+							<span class="sort">최신순</button>
+						</button>
 						<!-- sort-list -->
 
 					</div>
@@ -132,10 +128,10 @@
 								<strong class="title-medium">김성민</strong>
 								<div class="company">
 									<span>디지털공통개발부 UI/UX팀</span>
-									<div class="division mx8"></div>
+									<div class="division h12 mx8"></div>
 									<span>과장</span>
 								</div>
-								<div class="body-medium fw-400">파인너츠</div>
+								<div class="company-name">파인너츠</div>
 								<div class="tags tags-small tags-lightBlue">키맨</div>
 							</a>
 							<figure>
@@ -158,11 +154,10 @@
 								<strong class="title-medium">이름</strong>
 								<div class="company">
 									<span>부서명</span>
-									<div class="division mx8"></div>
+									<div class="division h12 mx8"></div>
 									<span>직책</span>
 								</div>
-								<div class="body-medium fw-400">회사명</div>
-
+								<div class="company-name">회사명</div>
 							</a>
 							<figure>
 								<div class="due-date">
@@ -184,11 +179,10 @@
 								<strong class="title-medium">이름</strong>
 								<div class="company">
 									<span>부서명</span>
-									<div class="division mx8"></div>
+									<div class="division h12 mx8"></div>
 									<span>직책</span>
 								</div>
-								<div class="body-medium fw-400">회사명</div>
-
+								<div class="company-name">회사명</div>
 							</a>
 							<figure>
 								<div class="due-date">

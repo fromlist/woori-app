@@ -51,11 +51,21 @@
 /* sort-wrap */
 .sort-wrap {padding:8px 0;}
 .sort-wrap .sort-list:not(:first-child) {margin-top:12px;}
-.sort-wrap .sort-list {display:flex;align-items:center;justify-content:flex-end;}
+.sort-wrap .sort-list {display:flex;align-items:center;justify-content:flex-end;padding:8px 16px;margin-left:auto;border-radius: 24px;border: 1px solid var(--border-8);}
 .sort-wrap .sort-list .filter {display:flex;align-items:center;gap:2px;}
-.sort-wrap .sort-list .filter span {font-size:14px;font-weight:500;color:var(var(--typography-gray));}
-.sort-wrap .sort-list .sort {display:flex;align-items:center;gap:16px;}
-.sort-wrap .sort-list .sort span {font-size:14px;font-weight:500;color:var(var(--typography-gray));}
+.sort-wrap .sort-list .filter span {font-size:14px;font-weight:500;color:var(--typography-gray);}
+.sort-wrap .sort-list .sort {display:flex;align-items:center;gap:12px;font-size:14px;font-weight:500;color:var(--typography-gray);}
+.sort-wrap .sort-list .sort:after {content:'';flex:0 0 16px;width:16px;height:16px;
+    -webkit-mask-position:center center;
+    mask-position:center center;
+    -webkit-mask-size:contain;
+    mask-size:contain;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    background-color:var(--icon-gray_2);
+    -webkit-mask-image:url(../images/ico/ico_dropdown.svg);
+    mask-image:url(../images/ico/ico_dropdown.svg);
+}
 
 /* business-card-customer */
 .business-card-customer-list {padding:0 8px;}
@@ -67,7 +77,7 @@
 .business-card-customer a > *:not(:last-child) {margin-bottom:8px;}
 .business-card-customer a .company {display:flex;align-items:center;padding:0 4px;flex-wrap:wrap;}
 .business-card-customer a .company span {font-size:14px;color:var(--typography-caption);line-height:1;}
-.business-card-customer a .body-medium {padding:0 4px;}
+.business-card-customer a .company-name {font-size:14px;font-weight:500;color:var(--typography-gray);line-height:1;padding:0 4px;}
 .business-card-customer a .tags {}
 .business-card-customer figure {text-align:right;}
 .business-card-customer figure .due-date {margin-bottom:6px;display:flex;align-items:center;justify-content:flex-end;}

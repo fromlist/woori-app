@@ -354,6 +354,7 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
 .stroke4 {background:var(--border-8);height:4px;}
 /* division */
 .division {display:flex;content:'';width:1px;height:18px;align-items:center;justify-content:center;background-color:var(--border-8);}
+.division.h12 {height:12px;}
 /* icon */
 .icon-only {display:inline-flex;align-items:center;justify-content:center;vertical-align:top;white-space:nowrap;
     -webkit-mask-position:center center;

@@ -39,7 +39,6 @@ main {display:flex;flex-direction:column;}
 main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 #container {flex:1 1 100%;}
 .content {padding:0 16px;height:100%;flex:1 1 100%;display:flex;flex-direction:column;}
-.content-fluid {padding:0;}
 .division-center {flex:1 1 100%;display:flex;justify-content:center;flex-direction:column;}
 
 .modal__content .content.content-fluid > * {margin:0 -16px;}
