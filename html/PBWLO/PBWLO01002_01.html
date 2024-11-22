@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
-
 	<!-- [plugins] -->
 	<!-- dropzone -->
 	<link rel="stylesheet" href="../../assets/plugins/dropzone/5.9.3/dropzone.min.css">
@@ -49,7 +48,6 @@
 	<script src="../../assets/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
 	<!-- //[plugins] -->
 
-	<!-- ui source -->
 	<link rel="stylesheet" href="../../assets/css/ui-fonts.css">
 	<link rel="stylesheet" href="../../assets/css/ui-variable.css">
 	<link rel="stylesheet" href="../../assets/css/ui-default.css">
@@ -57,57 +55,104 @@
 	<link rel="stylesheet" href="../../assets/css/ui-style.css">
 	<link rel="stylesheet" href="../../assets/css/ui-content.css">
 	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
-	<link rel="stylesheet" href="../../assets/css/ui-guide.css">
 
 	<script src="../../assets/js/ui-script.js"></script>
 	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
-	<style>
-		.ui-guide .guide-column-list {
-			display: block;
-		}
-	</style>
 </head>
 
 <body>
-	<div class="ui-guide">
-		<h1>Button Inner Icon</h1>
-		<p>Anchor, Button 혼용 가능합니다.</p>
 
-		<div class="ui-guide-section">
-			<h2>Button <span>Large</span></h2>
-			<div class="guide-column-list">
-				<button type="button" class="btn-large btn-primary"><i class="ico-share"></i><span>공유</span></button>
-				<button type="button" class="btn-large btn-primary"><i class="ico-check"></i><span>Check</span></button>
-				<button type="button" class="btn-large btn-primary"><i class="ico-add"></i><span>명함 등록</span></button>
-				<button type="button" class="btn-large btn-primary"><i class="ico-bio-auth"></i><span>생체인증 로그인</span></button>
-				<button type="button" class="btn-large btn-primary"><i class="ico-refresh"></i><span>다시 시도</span></button>
-				<button type="button" class="btn-large btn-primary"><i class="ico-login02"></i><span>통합 로그인</span></button>
+	<!-- main -->
+	<main>
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<!-- division-center -->
+					<div class="division-center">
+
+						<div class="login login-bio">
+
+							<picture>
+								<source srcset="../../assets/@temp/thumb_w.png">
+								<img src="../../assets/@temp/thumb_w.png" alt="">
+							</picture>
+
+							<!-- tab-content -->
+							<div class="tab-content tab-fluid">
+								<ul class="tab-list tab-col overflow-list my24" role="tablist">
+									<li class="tab tab-active"><button type="button" data-controls="tab-subpanel01" role="tab">생체인증 로그인</button></li>
+									<li class="tab"><button type="button" data-controls="tab-subpanel02" role="tab">통합 로그인</button></li>
+								</ul>
+								<div id="tab-subpanel01" class="tabpanel">
+									<h3 class="blind">생체인증 로그인</h3>
+
+									<div class="form">
+										<div class="input-wrap input-btn">
+											<input type="tel" placeholder="행번을 입력하세요." title="행번 입력">
+											<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+										</div>
+										<p class="validate-text"></p>
+									</div>
+
+									<div class="form">
+										<div class="input-wrap input-btn">
+											<input type="password" placeholder="비밀번호를 입력하세요." title="비밀번호 입력">
+											<button type="button" class="input-password" aria-label="비밀번호 표시"></button>
+										</div>
+										<p class="validate-text"></p>
+									</div>
+
+									<div class="btn-wrap">
+										<button type="button" class="btn-large btn-primary"><i class="ico-bio-auth"></i><span>생체인증 로그인</span></button>
+									</div>
+
+									<div class="d-flex j-center mt24">
+										<button type="button" class="btn-small btn-outlined btn-round">RM 로그인</button>
+									</div>
+
+
+								</div>
+								<div id="tab-subpanel02" class="tabpanel">
+									<h3 class="blind">통합 로그인</h3>
+								</div>
+							</div>
+							<!-- //tab-content -->
+
+
+						</div>
+					</div>
+					<!-- //division-center -->
+
+
+				</div>
+				<!-- //content -->
+
 			</div>
-			<hr>
-			<h2>Button <span>Medium</span></h2>
-			<div class="guide-column-list">
-			</div>
-			<hr>
-			<h2>Button <span>Small</span></h2>
-			<div class="guide-column-list">
-				<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-delete"></i>삭제</button>
-				<button type="button" class="btn-small btn-outlined btn-round"><i class="ico-modify"></i>수정</button>
-			</div>
-			<hr>
-			<h2>Button <span>Noborder</span></h2>
-			<div class="guide-column-list">
-				<button type="button" class="btn-noborder"><i class="ico-order"></i>순서 설정</button>
-				<button type="button" class="btn-noborder btn-noborder-text-shadow px4 py6"><i class="ico-delete-shadow"></i>삭제</button>
-			</div>
-			<h2>Button <span>Border</span></h2>
-			<div class="guide-column-list">
-				<button type="button" class="btn-border" aria-label="정렬"><i class="ico-sorting"></i></button>
-				<button type="button" class="btn-border is-active" aria-label="정렬"><i class="ico-sorting"></i></button>
-			</div>
+			<!-- //container -->
+
+
+
 		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
 
-	</div>
+
+
+	</main>
+	<!-- main -->
+
+	<script>
+
+	</script>
 </body>
 
 </html>

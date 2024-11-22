@@ -20,6 +20,7 @@ input[type="number"]::-webkit-inner-spin-button {appearance:none;} */
 /* input[type=number] {-moz-appearance:textfield;} */
 input,select,button,label,textarea,a {}
 input,textarea,button {font-size:inherit;font-family:inherit;color:inherit;line-height:inherit;}
+input,textarea {background-clip: padding-box;}
 input[type="password"] {font-family:inherit;}
 select {font-size:inherit;color:inherit;line-height:inherit;font-family:inherit;}
 input:disabled,select:disabled,button:disabled,label:disabled,a:disabled,textarea:disabled {cursor:default;opacity:1;}
@@ -37,7 +38,7 @@ i {font-style:normal;}
 code {display:inline;color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;}
 pre {color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;margin:0;white-space:break-spaces;}
 table caption {position:absolute;width:1px;height:1px;overflow:hidden;}
-picture {display:flex;}
+picture {display:flex;flex-direction:column;}
 
 button:focus-visible,a:focus-visible,
 input:focus-visible {outline-offset:-1px;outline:1px solid var(--status-focused);}

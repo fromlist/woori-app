@@ -8,7 +8,7 @@ body,
 header {position:sticky;left:0;top:0;width:100%;z-index:var(--header-zIndex);background-color:var(--white-100);}
 .main-header {position:relative;display:flex;align-items:center;justify-content:space-between;padding:0 54px 0 60px;}
 .main-header .center {display:flex;flex:1 1 100%;justify-content:center;}
-.main-header .center h1 {line-height:52px;font-size:16px;font-weight:700;color:var(--typography-title);
+.main-header .center h1 {height:52px;line-height:52px;font-size:16px;font-weight:700;color:var(--typography-title);
     display:-webkit-inline-box !important;
     -webkit-box-orient:vertical !important;
     overflow:hidden !important;
@@ -39,9 +39,10 @@ main {display:flex;flex-direction:column;}
 main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 #container {flex:1 1 100%;}
 .content {padding:0 16px;height:100%;flex:1 1 100%;display:flex;flex-direction:column;}
-.division-center {flex:1 1 100%;display:flex;justify-content:center;flex-direction:column;}
+.division-center {flex:1 1 100%;display:flex;justify-content:center;flex-direction:column;padding: 16px 0;}
 
-.modal__content .content.content-fluid > * {margin:0 -16px;}
+.content.content-fluid > * {margin:0 -16px;}
+.content .tab-fluid .tab-list {margin:0 -16px;}
 
 /* bottom-btn */
 .bottom-btn {position:sticky;width:100%;left:0;bottom:0;background-color:var(--white-100);z-index:calc(var(--header-zIndex) - 1);}
