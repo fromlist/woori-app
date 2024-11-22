@@ -56,120 +56,120 @@
 	<link rel="stylesheet" href="../../assets/css/ui-style.css">
 	<link rel="stylesheet" href="../../assets/css/ui-content.css">
 	<link rel="stylesheet" href="../../assets/css/ui-plugins.css">
-	<link rel="stylesheet" href="../../assets/css/ui-guide.css">
 
 	<script src="../../assets/js/ui-script.js"></script>
 	<script src="../../assets/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
-
 </head>
 
 <body>
-	<div class="ui-guide">
-		<h1>Form</h1>
-		<p>Checkbox</p>
 
-		<div class="ui-guide-section">
-			<div class="ui-guide-box">
-				<h2>Large</h2>
-				<dl>
-					<dt></dt>
-					<dd>
-						<div class="inp-column-list">
-							<div class="inp inp-large">
-								<label>
-									<input type="checkbox">
-									<span class="label-title">텍스트를 입력해주세요</span>
-								</label>
-							</div>
-							<div class="stroke my16"></div>
-							<div class="inp inp-large">
-								<label>
-									<input type="checkbox">
-									<span class="label-title">텍스트를 입력해주세요</span>
-									<span class="label-subtitle">서브텍스트를 입력해주세요</span>
-								</label>
-							</div>
-							<div class="stroke my16"></div>
-							<div class="inp inp-large">
-								<label>
-									<input type="checkbox">
-									<span class="label-title">텍스트를 입력해주세요 텍스트를 입력해주세요 텍스트를 입력해주세요</span>
-									<span class="label-subtitle">서브텍스트를 입력해주세요 서브텍스트를 입력해주세요 서브텍스트를 입력해주세요</span>
-								</label>
-							</div>
-						</div>
-					</dd>
-				</dl>
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>서비스 이용 동의</h1>
+				</div>
+				<div class="right">
+				</div>
 			</div>
-			<hr>
-			<div class="ui-guide-box">
-				<h2>Medium</h2>
-				<dl>
-					<dt></dt>
-					<dd>
-						<div class="inp-column-list">
-							<div class="inp inp-medium">
-								<label>
-									<input type="checkbox">
-									<span class="label-title">텍스트를 입력해주세요</span>
-								</label>
-							</div>
-							<div class="stroke my16"></div>
-							<div class="inp inp-medium">
-								<label>
-									<input type="checkbox">
-									<span class="label-title">텍스트를 입력해주세요</span>
-									<span class="label-subtitle">서브텍스트를 입력해주세요</span>
-								</label>
-							</div>
-							<div class="stroke my16"></div>
-							<div class="inp inp-medium">
-								<label>
-									<input type="checkbox">
-									<span class="label-title">텍스트를 입력해주세요 텍스트를 입력해주세요 텍스트를 입력해주세요</span>
-									<span class="label-subtitle">서브텍스트를 입력해주세요 서브텍스트를 입력해주세요 서브텍스트를 입력해주세요</span>
-								</label>
-							</div>
-						</div>
-					</dd>
-				</dl>
-			</div>
-		</div>
-		<hr>
-		<div class="ui-guide-box">
-			<h2>Small</h2>
-			<dl>
-				<dt></dt>
-				<dd>
-					<div class="inp-column-list">
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<div class="inp-check-all mt40">
 						<div class="inp inp-small">
 							<label>
 								<input type="checkbox">
-								<span class="label-title">텍스트를 입력해주세요</span>
-							</label>
-							<a href="#" class="chevron-only" aria-label="상세 내용 보기"></a>
-						</div>
-						<div class="stroke my16"></div>
-						<div class="inp inp-small">
-							<label>
-								<input type="checkbox">
-								<span class="label-title">텍스트를 입력해주세요 텍스트를 입력해주세요 텍스트를 입력해주세요 텍스트를 입력해주세요</span>
-							</label>
-							<a href="#" class="chevron-only" aria-label="상세 내용 보기"></a>
-						</div>
-						<div class="stroke my16"></div>
-						<div class="inp inp-small">
-							<label>
-								<input type="checkbox">
-								<span class="label-title">텍스트를 입력해주세요</span>
+								<span class="label-title">전체 동의</span>
 							</label>
 						</div>
 					</div>
-				</dd>
-			</dl>
+					<div class="inp-column-list mt8">
+						<div class="inp inp-medium">
+							<label>
+								<input type="checkbox">
+								<span class="label-title">서비스 이용 약관</span>
+							</label>
+						</div>
+						<div class="stroke my16"></div>
+						<div class="inp inp-medium">
+							<label>
+								<input type="checkbox">
+								<span class="label-title">App-Push 이용 동의</span>
+							</label>
+						</div>
+					</div>
+
+				</div>
+				<!-- //content -->
+
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-primary" data-micromodal-trigger="modal-privacy">동의</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-privacy" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large">서비스 이용 동의서</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+                        
+					</div>
+
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary">전체 동의</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
 		</div>
 	</div>
+	<!-- //micromodal -->
+
 </body>
 
 </html>

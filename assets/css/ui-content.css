@@ -133,3 +133,11 @@
 .info-anchor ul li {flex:0 1 60px;;}
 .info-anchor ul li button {display:flex;width:100%;flex-direction:column;align-items:center;gap:8px;}
 .info-anchor ul li button span {font-size:12px;color:var(--typography-caption);}
+
+/* privacy-wrap */
+.privacy-wrap {padding:0 12px;}
+.privacy-wrap > * {margin-top:24px;}
+.privacy-wrap .title-large {margin-top:40px;}
+.privacy-wrap ol {list-style:number;}
+.privacy-wrap ol li {}
+.privacy-wrap ol li::marker  {text-indent:10px!important;}
