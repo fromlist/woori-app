@@ -43,6 +43,7 @@ td a.vscodepath{position:absolute;right:0;top:50%;transform:translateY(-50%);dis
     .section-index .table-col table tbody {display:block;}
     .section-index .table-col table tbody tr {display:flex;flex-wrap:wrap;gap:0 8px;padding:10px;border-bottom:1px solid #E0E0E0;}
     .section-index .table-col table tbody td {display:block;border-bottom:0;padding:0;height:auto;color:#666;font-size:12px;}
+    .section-index .table-col table tbody td:not(:empty):not(.al):after {content:'\003E';margin-left:8px;}
     .section-index .table-col table tbody td:empty {display:none;}
     .section-index .table-col table tbody td.article {flex:1 1 100%;width:100%;font-size:16px;}
     .section-index .table-col table tbody td .link {display:block;}

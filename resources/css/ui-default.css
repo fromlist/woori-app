@@ -20,7 +20,7 @@ input[type="number"]::-webkit-inner-spin-button {appearance:none;} */
 /* input[type=number] {-moz-appearance:textfield;} */
 input,select,button,label,textarea,a {}
 input,textarea,button {font-size:inherit;font-family:inherit;color:inherit;line-height:inherit;}
-input,textarea {background-clip: padding-box;}
+input,textarea {background-clip: padding-box;font-weight:inherit;}
 input[type="password"] {font-family:inherit;}
 select {font-size:inherit;color:inherit;line-height:inherit;font-family:inherit;}
 input:disabled,select:disabled,button:disabled,label:disabled,a:disabled,textarea:disabled {cursor:default;opacity:1;}
