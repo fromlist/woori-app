@@ -3,11 +3,12 @@
 /* group */
 .group {display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;}
 .group .right {margin-left:auto;}
+.group.group-fluid {margin:0 -16px;}
 
 .group-form {}
 .group-form .group-title {display:flex;align-items:center;justify-content:space-between;}
 .group-form .group-content {margin-top:4px;}
-.content .group-form .group-content-fluid {margin:0 -16px;}
+.group-form .group-content-fluid {margin:0 -16px;}
 
 .group-title strong {display:flex;align-items:center;padding:0 4px;}
 .group-title .apos {color:var(--status-error);margin-left:2px;}
