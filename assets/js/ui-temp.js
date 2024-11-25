@@ -92,4 +92,9 @@ $(document).ready(function () {
         awaitCloseAnimation: true, // [9]
         // debugMode: true // [10]
     });
+
+    $('.left .header-btn').on('click', function () {
+        window.location.href = '/html'
+        console.log(window.location.href)
+    })
 });

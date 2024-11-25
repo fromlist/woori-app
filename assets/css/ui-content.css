@@ -138,7 +138,7 @@
 .privacy-wrap {padding:0 12px;}
 .privacy-wrap > * {margin-top:22px;}
 .privacy-wrap .title-large {margin-top:40px;}
-.privacy-wrap ol {list-style:number;margin-left:16px;}
+.privacy-wrap ol {list-style:lower-hexadecimal;margin-left:16px;}
 .privacy-wrap ol li {}
 .privacy-wrap ol li::marker  {}
 
