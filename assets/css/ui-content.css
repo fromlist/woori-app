@@ -136,8 +136,12 @@
 
 /* privacy-wrap */
 .privacy-wrap {padding:0 12px;}
-.privacy-wrap > * {margin-top:24px;}
+.privacy-wrap > * {margin-top:22px;}
 .privacy-wrap .title-large {margin-top:40px;}
-.privacy-wrap ol {list-style:number;}
+.privacy-wrap ol {list-style:number;margin-left:16px;}
 .privacy-wrap ol li {}
-.privacy-wrap ol li::marker  {text-indent:10px!important;}
+.privacy-wrap ol li::marker  {}
+
+/* step-end */
+.step-end {display:flex;flex-direction:column;align-items:center;background-color:var(--white-100);padding:48px;width: fit-content;margin: 0 auto;}
+.step-end p {text-align:center;margin-top:16px;font-weight:700;}
