@@ -70,34 +70,35 @@
 		<div class="ui-guide-section">
 			<div class="ui-guide-box">
 				<div class="guide-column-list">
-					<button type="button" class="btn-large btn-primary" onclick="swalFire()">Alert1</button>
+					<button type="button" class="btn-large btn-primary" onclick="swalFire('삭제하시겠습니까', '예', true, '아니요');">Alert1</button>
 					<button type="button" class="btn-large btn-primary" onclick="swalFire2()">Alert2</button>
-					<button type="button" class="btn-large btn-primary" onclick="swalFire3()">Alert3</button>
-					<button type="button" class="btn-large btn-primary" onclick="swalFire4()">Alert4</button>
-					<button type="button" class="btn-large btn-primary" onclick="swalFire5()">Alert5</button>
+					<button type="button" class="btn-large btn-primary" onclick="swalFire3('삭제하시겠습니까', '예', true, '아니요');">Alert3</button>
+					<button type="button" class="btn-large btn-primary" onclick="swalFire4('삭제하시겠습니까', '예', true, '아니요')">Alert4</button>
+					<button type="button" class="btn-large btn-primary" onclick="swalFire5('삭제하시겠습니까', '예', '확인')">Alert5</button>
+					<button type="button" class="btn-large btn-primary" onclick="swalFire6('삭제하시겠습니까', '예', '확인')">Alert6</button>
+
 				</div>
 			</div>
 		</div>
 	</div>
 	<script>
-		function swalFire() {
+		function swalFire(title, confirmButtonText, showCancelButton, cancelButtonText) {
 			Swal.fire({
-				showCancelButton: true,
+				showCancelButton: showCancelButton,
 				showCloseButton: false,
 				reverseButtons: true,
-				title: '삭제하시겠습니까?',
-				confirmButtonText: '예',
-				cancelButtonText: '아니요',
+				title: title,
+				confirmButtonText: confirmButtonText,
+				cancelButtonText: cancelButtonText,
 				customClass: {
 					actions: 'btn-wrap',
-					cancelButton: "btn-large btn-outlined",
+					cancelButton: " btn-large btn-outlined",
 					confirmButton: "btn-large btn-primary",
 				},
 				buttonsStyling: false
 			})
 		}
 	</script>
-
 	<script>
 		function swalFire2() {
 			Swal.fire({
@@ -112,27 +113,27 @@
 				},
 				buttonsStyling: false,
 				html: `
-                    <i class="icon-only icon-48 icon-camera bg-icon bg-icon-gray_1"></i>
-                    <strong class="title-large mt8">명함 촬영 안내</strong>
-                    <p class="body-large mt8">휴대폰 세로 모드로 촬영하세요.</p>
-                    <picture class="d-flex j-center mt16">
-                        <source srcset="../../resources/images/@temp/image_TMP.png">
-                        <img src="../../resources/images/@temp/image_TMP.png" alt="">
-                    </picture>
-                `,
+						<i class="icon-only icon-48 icon-camera bg-icon bg-icon-gray_1"></i>
+						<strong class="title-large mt8">명함 촬영 안내</strong>
+						<p class="body-large mt8">휴대폰 세로 모드로 촬영하세요.</p>
+						<picture class="d-flex j-center mt16">
+							<source srcset="../../resources/images/@temp/image_TMP.png">
+							<img src="../../resources/images/@temp/image_TMP.png" alt="">
+						</picture>
+						`,
 			})
 		}
 	</script>
 
 	<script>
-		function swalFire3() {
+		function swalFire3(title, confirmButtonText, showCancelButton, cancelButtonText) {
 			Swal.fire({
-				showCancelButton: false,
+				showCancelButton: showCancelButton,
 				showCloseButton: false,
 				reverseButtons: true,
-				title: '<span class="description info body-xlarge">삭제하시겠습니까?</span>',
-				confirmButtonText: '예',
-				cancelButtonText: '아니요',
+				title: `<span class="description info body-xlarge">${title}</span>`,
+				confirmButtonText: confirmButtonText,
+				cancelButtonText: cancelButtonText,
 				customClass: {
 					actions: 'btn-wrap',
 					htmlContainer: 'al',
@@ -141,17 +142,18 @@
 				},
 				buttonsStyling: false
 			})
+			console.log(title, confirmButtonText, showCancelButton, cancelButtonText)
 		}
 	</script>
 
 	<script>
-		function swalFire4() {
+		function swalFire4(title, text, showCancelButton, confirmButtonText, cancelButtonText) {
 			Swal.fire({
-				showCancelButton: true,
+				showCancelButton: showCancelButton,
 				showCloseButton: true,
 				reverseButtons: true,
-				title: '타이틀명',
-				text: '텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트  텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트 텍스트',
+				title: title,
+				text: text,
 				confirmButtonText: '예',
 				cancelButtonText: '아니요',
 				customClass: {
@@ -166,11 +168,11 @@
 		}
 	</script>
 	<script>
-		function swalFire5() {
+		function swalFire5(title, text, confirmButtonText) {
 			Swal.fire({
 				showCloseButton: true,
 				reverseButtons: true,
-				confirmButtonText: '확인',
+				confirmButtonText: confirmButtonText,
 				customClass: {
 					htmlContainer: 'mt40',
 					actions: 'btn-wrap',
@@ -180,8 +182,29 @@
 				buttonsStyling: false,
 				html: `
                     <i class="icon-only icon-48 icon-caution bg-icon bg-icon-gray_1"></i>
-                    <strong class="title-large mt8">타이틀명</strong>
-                    <p class="body-large mt8">텍스트 텍스트</p>
+                    <strong class="title-large mt8">${title}</strong>
+                    <p class="body-large mt8">${text}</p>
+                `,
+			})
+		}
+	</script>
+	<script>
+		function swalFire6(title, text, confirmButtonText) {
+			Swal.fire({
+				showCloseButton: true,
+				reverseButtons: true,
+				confirmButtonText: confirmButtonText,
+				customClass: {
+					htmlContainer: 'mt40',
+					actions: 'btn-wrap',
+					cancelButton: "btn-large btn-outlined",
+					confirmButton: "btn-large btn-primary",
+				},
+				buttonsStyling: false,
+				html: `
+                    <i class="icon-only icon-48 icon-locked bg-icon bg-icon-gray_1"></i>
+                    <strong class="title-large mt8">${title}</strong>
+                    <p class="body-large mt8">${text}</p>
                 `,
 			})
 		}

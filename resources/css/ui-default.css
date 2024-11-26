@@ -38,7 +38,8 @@ i {font-style:normal;}
 code {display:inline;color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;}
 pre {color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;margin:0;white-space:break-spaces;}
 table caption {position:absolute;width:1px;height:1px;overflow:hidden;}
-picture {display:flex;flex-direction:column;}
+picture {}
+picture img {display:flex;}
 
 button:focus-visible,a:focus-visible,
 input:focus-visible {outline-offset:-1px;outline:1px solid var(--status-focused);}

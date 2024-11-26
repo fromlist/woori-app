@@ -1,42 +1,28 @@
 
 $(function () {
-    toggleActiveClass.init();
+    bsCardResize.init();
     tabContent.init();
     accordionContent.init();
     formStyle.init();
 });
 
-// global toggle
-const toggleActiveClass = {
-    init: function () {
-        CLASS_TOGGLE_ACTIVE = 'is-toggle';
-        toggleActiveClass.onClick();
-        let par = '';
-        let togglePar = '';
 
+// global tab
+const bsCardResize = {
+    init: function () {
+        const windowWidth = $(window).outerWidth();
+        const bsCard = $('.bs-card');
+        const bsCardwWidth = 360;
+        const percent = windowWidth / bsCardwWidth;
+        // console.log(percent)
+        bsCard.css('zoom', percent);
+        bsCardResize.onResize();
     },
-    open: function () {
-        par.addClass(CLASS_TOGGLE_ACTIVE);
-        par.find('.toggleTrigger .blind').attr('aria-hidden', 'false');
-    },
-    close: function () {
-        par.removeClass(CLASS_TOGGLE_ACTIVE);
-        par.find('.toggleTrigger .blind').attr('aria-hidden', 'true');
-        par.find('.toggleTrigger').focus();
-    },
-    onClick: function () {
-        $(document).on('click', '.toggleTrigger', function (e) {
-            par = $(this).closest('.toggleCont');
-            if (par.hasClass(CLASS_TOGGLE_ACTIVE)) {
-                if (!par.hasClass('disableToggle')) {
-                    toggleActiveClass.close();
-                }
-            } else {
-                toggleActiveClass.open();
-            }
+    onResize: function () {
+        $(window).resize(function () {
+            bsCardResize.init();
         })
     }
-
 }
 
 

@@ -109,11 +109,81 @@
 					</div>
 					<!-- //group -->
 
-					<div class="thumb pb16">
-						<picture>
-							<source srcset="../../resources/@temp/thumb_w.png">
-							<img src="../../resources/@temp/thumb_w.png" alt="">
-						</picture>
+					<div class="bs-card-wrap pb16">
+						<div class="bs-card ">
+							<div class="bs-typeA">
+								<div class="top">
+									<div class="left">
+										<picture>
+											<source srcset="../../resources/images/bs_card/bs_a_logo01.svg">
+											<img src="../../resources/images/bs_card/bs_a_logo01.svg" alt="우리 마음속 첫번째 금융">
+										</picture>
+									</div>
+									<div class="right">
+										<picture>
+											<source srcset="../../resources/images/bs_card/bs_a_aff.svg">
+											<img src="../../resources/images/bs_card/bs_a_aff.svg" alt="우리금융그룹">
+										</picture>
+									</div>
+								</div>
+								<div class="line">
+									<picture>
+										<source srcset="../../resources/images/bs_card/bs_a_line.svg">
+										<img src="../../resources/images/bs_card/bs_a_line.svg">
+									</picture>
+								</div>
+								<div class="center">
+									<div class="title">
+										<div class="left">
+											<picture>
+												<source srcset="../../resources/images/bs_card/bs_a_logo02.svg">
+												<img src="../../resources/images/bs_card/bs_a_logo02.svg" alt="우리금융그룹">
+											</picture>
+										</div>
+										<div class="right">
+											<dl>
+												<dt>김우리</dt>
+												<dd>직위/호칭</dd>
+												<dd>소속</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="info">
+										<div class="left">
+											<div class="location">04632 서울특별시 중구 소공로 51</div>
+											<div class="email">woori@woorifg.com</div>
+										</div>
+										<div class="right">
+											<div class="contact">
+												<div class="row">
+													<div class="th">Mobile</div>
+													<div class="td">010.1234.5678</div>
+												</div>
+												<div class="row">
+													<div class="th">Tel</div>
+													<div class="td">02.1234.5678</div>
+												</div>
+												<div class="row">
+													<div class="th">내선</div>
+													<div class="td">123</div>
+												</div>
+												<div class="row">
+													<div class="th">Fax</div>
+													<div class="td">0505.001.6161</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="bottom">
+									<ul>
+										<li>CFP(국제공인재무설계사)</li>
+										<li>신용위험분석사(CRA)2차</li>
+										<li>신용위험분석사(CRA)1차</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 
 					<!-- group -->
@@ -510,9 +580,20 @@
 
 				</div>
 				<div class="modal__footer">
+					<!-- 등록 -->
 					<!-- bottom-btn -->
 					<div class="bottom-btn">
 						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" onclick="toastr.success('', '저장되었습니다.')" data-micromodal-close>저장</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+
+					<!-- 수정 -->
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-outlined">삭제</button>
 							<button type="button" class="btn-large btn-primary" onclick="toastr.success('', '저장되었습니다.')" data-micromodal-close>저장</button>
 						</div>
 					</div>
@@ -592,6 +673,7 @@
 			});
 		});
 	</script>
+
 </body>
 
 </html>
