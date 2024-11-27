@@ -4,7 +4,6 @@
 .group {display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;}
 .group .right {margin-left:auto;}
 .group.group-fluid {margin:0 -16px;}
-.group > .title-medium {padding-left:4px;}
 
 .group-form {}
 .group-form .group-title {display:flex;align-items:center;justify-content:space-between;}
@@ -41,14 +40,15 @@
 .businesscard-list .list-group-item.sortable-chosen.sortable-ghost {border-color:transparent;}
 
 /* business-swiper */
-.swiper-business-card {padding:0 16px;}
+.swiper-business-card {padding:0 16px;overflow:hidden;}
 .card-select {}
 .card-select .inp.inp-large {padding-left:0;}
-.card-select label {position:absolute;left:0;top:0;width:100%;height:100%;border-radius:8px;background-color: var(--black-4);}
+.card-select label {}
 .card-select .tags {position:absolute;left:12px;bottom:12px;z-index:var(--tab-zIndex);}
-.card-select input[type="radio"] {left:auto;right:12px;top:12px;z-index:var(--tab-zIndex);}
+.card-select input[type="radio"] {}
 /* .card-select picture img{width:100%;border-radius:8px;border:1px solid var(--border-8);opacity:0.8;background-color:var(--background-bg_ligthGray);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);} */
 .card-select input[type="radio"]:checked ~ label picture img {border-color:var(--status-active);}
+.swiper-business-card.swiper-cards .swiper-slide {border-radius:8px;}
 
 
 /* sort-wrap */
@@ -75,13 +75,14 @@
 .business-card-customer {display:flex;justify-content:space-between;gap:16px;padding:16px 0;}
 .business-card-customer:not(:last-child) {border-bottom:1px solid var(--border-4);}
 
-.business-card-customer a {flex:1 1 100%;}
-.business-card-customer a .title-medium {padding:0 4px;}
-.business-card-customer a > *:not(:last-child) {margin-bottom:8px;}
-.business-card-customer a .company {display:flex;align-items:center;padding:0 4px;flex-wrap:wrap;}
-.business-card-customer a .company span {font-size:14px;color:var(--typography-caption);line-height:1;}
-.business-card-customer a .company-name {font-size:14px;font-weight:500;color:var(--typography-gray);line-height:1;padding:0 4px;}
-.business-card-customer a .tags {}
+.business-card-customer > button {flex:1 1 100%;}
+.business-card-customer > button .title-medium {padding:0 4px;}
+.business-card-customer > button > *:not(:last-child) {margin-bottom:8px;}
+.business-card-customer > button .company {display:flex;align-items:center;padding:0 4px;flex-wrap:wrap;}
+.business-card-customer > button .company span {font-size:14px;color:var(--typography-caption);line-height:1;}
+.business-card-customer > button .company-name {font-size:14px;font-weight:500;color:var(--typography-gray);line-height:1;padding:0 4px;}
+.business-card-customer > button .tags {}
+.business-card-customer > button .divide-list {padding-left:4px;}
 .business-card-customer figure {text-align:right;}
 .business-card-customer figure .due-date {margin-bottom:6px;display:flex;align-items:center;justify-content:flex-end;}
 .business-card-customer figure .due-date .body-small {font-weight:500;padding-right:4px;}
@@ -100,7 +101,7 @@
 .upload-picture .upload-type-select .upload-camera:before {background:url(../images/common/img_upload_camera.svg) center center / contain no-repeat;}
 .upload-picture picture {flex:1 1 100%;}
 .upload-picture picture img {border-radius:8px;border:1px solid var(--border-8);width:100%;}
-.upload-picture .picture-dimmed {position:absolute;left:0;top:0;width:100%;height:100%;display:flex;justify-content:flex-end;background:var(--black-16);border-radius:8px;padding:12px 16px;}
+.upload-picture .picture-dimmed {position:absolute;left:0;top:0;width:100%;height:100%;display:flex;justify-content:flex-end;background:var(--black-16);border-radius:8px;padding:12px 16px;align-items: flex-start;}
 .upload-picture .upload-picture-anchor {display:block;width:100%;}
 
 /* pinch-zoom-wrap */

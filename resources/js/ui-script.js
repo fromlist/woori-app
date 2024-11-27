@@ -4,6 +4,7 @@ $(function () {
     tabContent.init();
     accordionContent.init();
     formStyle.init();
+    $swal;
 });
 
 
@@ -195,3 +196,78 @@ $(document).ready(function () {
     }
 
 });
+
+// sweetalert
+const $swal = {
+    fire01(title, confirmButtonText, showCancelButton, cancelButtonText) {
+        Swal.fire({
+            showCancelButton: showCancelButton,
+            showCloseButton: false,
+            reverseButtons: true,
+            title: title,
+            confirmButtonText: confirmButtonText,
+            cancelButtonText: cancelButtonText,
+            customClass: {
+                actions: 'btn-wrap',
+                cancelButton: " btn-large btn-outlined",
+                confirmButton: "btn-large btn-primary",
+            },
+            buttonsStyling: false
+        })
+    },
+    fire02(title, status, confirmButtonText, showCancelButton, cancelButtonText) {
+        Swal.fire({
+            showCancelButton: showCancelButton,
+            showCloseButton: false,
+            reverseButtons: true,
+            title: `<span class="description ${status} body-xlarge">${title}</span>`,
+            confirmButtonText: confirmButtonText,
+            cancelButtonText: cancelButtonText,
+            customClass: {
+                actions: 'btn-wrap',
+                htmlContainer: 'al',
+                cancelButton: "btn-large btn-outlined",
+                confirmButton: "btn-large btn-primary",
+            },
+            buttonsStyling: false
+        })
+    },
+    fire03(title, text, showCancelButton, confirmButtonText, cancelButtonText) {
+        Swal.fire({
+            showCancelButton: showCancelButton,
+            showCloseButton: true,
+            reverseButtons: true,
+            title: title,
+            text: text,
+            confirmButtonText: '예',
+            cancelButtonText: '아니요',
+            customClass: {
+                title: 'title-large',
+                htmlContainer: 'al',
+                actions: 'btn-wrap pt40',
+                cancelButton: "btn-large btn-outlined",
+                confirmButton: "btn-large btn-primary",
+            },
+            buttonsStyling: false
+        })
+    },
+    fire04(title, text, icon, confirmButtonText) {
+        Swal.fire({
+            showCloseButton: true,
+            reverseButtons: true,
+            confirmButtonText: confirmButtonText,
+            customClass: {
+                htmlContainer: 'mt40',
+                actions: 'btn-wrap',
+                cancelButton: "btn-large btn-outlined",
+                confirmButton: "btn-large btn-primary",
+            },
+            buttonsStyling: false,
+            html: `
+                <i class="icon-only icon-48 ${icon} bg-icon bg-icon-gray_1"></i>
+                <strong class="title-large mt8">${title}</strong>
+                <p class="body-large mt8">${text}</p>
+            `,
+        })
+    }
+}
