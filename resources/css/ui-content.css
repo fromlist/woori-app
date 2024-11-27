@@ -144,7 +144,7 @@
 .bs-card .center {padding:0 18px 10px;}
 
 .bs-card .title {display:flex;justify-content:space-between;gap:10px;}
-.bs-card .title .left {display:flex;gap:8px;}
+.bs-card .title .left {display:flex;gap:8px;align-items:flex-start;}
 .bs-card .title figure picture img {width:46px;height:58px;object-fit:cover;border:1px solid var(--border-8);background-color:var(--background-bg_gray);}
 .bs-card .title .right {flex:0;white-space:nowrap;word-break:break-word;}
 

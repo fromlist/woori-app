@@ -5,7 +5,7 @@
 }
 
 /* Reset */
-html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,input,textarea,i,u,em,strong,b,a,button,th,td,code,figure,figcaption{margin:0;padding:0;}
+html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,input,textarea,i,u,em,strong,b,a,button,th,td,code,figure,figcaption,picture,object{margin:0;padding:0;}
 h1,h2,h3,h4,h5,strong {font-weight:700;}
 b {font-weight:500;}
 h1,h2,h3,h4,h5,h6 {font-size:inherit;line-height:1.5;}
@@ -40,6 +40,7 @@ pre {color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;fon
 table caption {position:absolute;width:1px;height:1px;overflow:hidden;}
 picture {}
 picture img {display:flex;}
+object {display:block;}
 
 button:focus-visible,a:focus-visible,
 input:focus-visible {outline-offset:-1px;outline:1px solid var(--status-focused);}
