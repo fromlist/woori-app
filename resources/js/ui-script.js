@@ -10,10 +10,10 @@ $(function () {
 // global tab
 const bsCardResize = {
     init: function () {
-        const windowWidth = $(window).outerWidth();
         const bsCard = $('.bs-card');
+        const bsParent = $('.bs-card-wrap').parent('').outerWidth();
         const bsCardwWidth = 360;
-        let percent = (windowWidth / bsCardwWidth).toFixed(1);
+        let percent = (bsParent / bsCardwWidth).toFixed(1);
         // console.log(percent)
         bsCard.css('zoom', percent);
         bsCardResize.onResize();

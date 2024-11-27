@@ -52,7 +52,7 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .btn-wrap {display:flex;gap:8px;padding:12px 16px;justify-content: center;align-items: center;}
 .btn-wrap > *:only-child {flex:1 1 100%;}
 .btn-wrap > * {flex:1;}
-.btn-wrap .btn-secondary {flex:0 1 100px;}
+.btn-wrap .btn-outlined {flex:0 1 100px;}
 .content .btn-wrap {padding:16px 0;}
 
 /* select-option */

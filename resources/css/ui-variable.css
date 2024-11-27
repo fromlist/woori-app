@@ -185,11 +185,12 @@
     --button-primary-onDisabled:#FFFFFFB8;
     --button-primary-onEnabled:#FFFFFF;
     --button-primary-pressed:#1D61AA;
+    --button-secondary-border:#3996F9;
     --button-secondary-disabled:#D7E4F2B2;
-    --button-secondary-enabled:#D4E8FF99;
+    --button-secondary-enabled:#FFF;
     --button-secondary-onDisabled:#B1C6E1;
     --button-secondary-onEnabled:#1563C1;
-    --button-secondary-pressed:#C0D5ED99;
+    --button-secondary-pressed:#7484950D;
     --button-tertiary-disabled:#0C0C0D0A;
     --button-tertiary-enabled:#8295A71C;
     --button-tertiary-onDisabled:#C5CBD1;
