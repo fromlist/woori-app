@@ -13,14 +13,16 @@ const bsCardResize = {
         const windowWidth = $(window).outerWidth();
         const bsCard = $('.bs-card');
         const bsCardwWidth = 360;
-        const percent = windowWidth / bsCardwWidth;
+        let percent = (windowWidth / bsCardwWidth).toFixed(1);
         // console.log(percent)
         bsCard.css('zoom', percent);
         bsCardResize.onResize();
     },
     onResize: function () {
         $(window).resize(function () {
-            bsCardResize.init();
+            setTimeout(function () {
+                bsCardResize.init();
+            }, 300)
         })
     }
 }
