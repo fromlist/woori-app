@@ -80,9 +80,10 @@
 .business-card-customer > button > *:not(:last-child) {margin-bottom:8px;}
 .business-card-customer > button .company {display:flex;align-items:center;padding:0 4px;flex-wrap:wrap;}
 .business-card-customer > button .company span {font-size:14px;color:var(--typography-caption);line-height:1;}
-.business-card-customer > button .company-name {font-size:14px;font-weight:500;color:var(--typography-gray);line-height:1;padding:0 4px;}
+.business-card-customer > button .company-name {display:block;font-size:14px;font-weight:500;color:var(--typography-gray);line-height:1;padding:0 4px;}
 .business-card-customer > button .tags {}
-.business-card-customer > button .divide-list {padding-left:4px;}
+.business-card-customer > button .divide-list {padding-left:4px;margin-bottom:0;}
+.business-card-customer > button .divide-list span {margin-bottom:8px;}
 .business-card-customer figure {text-align:right;}
 .business-card-customer figure .due-date {margin-bottom:6px;display:flex;align-items:center;justify-content:flex-end;}
 .business-card-customer figure .due-date .body-small {font-weight:500;padding-right:4px;}
