@@ -4,8 +4,45 @@ $(function () {
     tabContent.init();
     accordionContent.init();
     formStyle.init();
+    toggle.init()
+    switchClass.init()
     $swal;
 });
+
+const toggle = {
+    init: function () {
+        $toggleCont = $('[data-toggle="toggle-trigger"]');
+        $toggleClass = 'is-toggled';
+        toggle.onClick();
+    },
+    onClick: function () {
+        $toggleCont.on('click', function () {
+            const toggleWrap = $(this).closest('[data-toggle="toggle-wrap"]');
+            if (toggleWrap.hasClass($toggleClass)) {
+                toggleWrap.removeClass($toggleClass);
+            } else {
+                toggleWrap.addClass($toggleClass);
+            }
+        })
+    }
+}
+
+const switchClass = {
+    init: function () {
+        $switchClassBefore = $toggleCont.data('switch-before');
+        $switchClassAfter = $toggleCont.data('switch-after');
+        switchClass.onClick();
+    },
+    onClick: function () {
+        $toggleCont.on('click', function () {
+            if ($(this).hasClass($switchClassBefore)) {
+                $(this).removeClass($switchClassBefore).addClass($switchClassAfter);
+            } else {
+                $(this).removeClass($switchClassAfter).addClass($switchClassBefore);
+            }
+        })
+    }
+}
 
 
 // global tab
