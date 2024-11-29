@@ -46,6 +46,7 @@ button:focus-visible,a:focus-visible,
 input:focus-visible {outline-offset:-1px;outline:1px solid var(--status-focused);}
 
 html {-webkit-text-size-adjust:none;}
+
 body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretendard';font-weight:500;color:var(--typography-body);}
 
 /* hidden */ 
