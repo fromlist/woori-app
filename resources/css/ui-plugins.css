@@ -13,7 +13,7 @@ div:where(.swal2-container) div:where(.swal2-actions) .btn-alert {flex:1;font-si
 div:where(.swal2-container) div:where(.swal2-actions) .btn-alert:not(:last-child) {border-right:1px solid var(--gray100);}
 
 div:where(.swal2-container) {z-index:calc(var(--header-zIndex) +  1001);padding:0;transition:background-color .3s;}
-div:where(.swal2-container).swal2-backdrop-show, div:where(.swal2-container).swal2-noanimation {background:var(--status-dimmed);}
+div:where(.swal2-container).swal2-backdrop-show, div:where(.swal2-container).swal2-noanimation {background-color:var(--status-dimmed);}
 @keyframes swal2-show {
     0% {transform:scale(0.99)}
     45% {transform:scale(1.01)}
@@ -44,7 +44,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 
 .modal__footer_alert .btn-wrap {padding-top:40px;}
 
-.modal__overlay {display:block;background:var(--status-dimmed);}
+.modal__overlay {display:block;background-color:var(--status-dimmed);}
 
 
 .micromodal-slide .modal__container, .micromodal-slide .modal__overlay {will-change:initial;}
@@ -87,7 +87,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 
 /* toastr */
 #toast-container.toast-bottom-center>div, #toast-container.toast-top-center>div {width:auto;margin:0 16px;}
-#toast-container>div {border-radius:8px;padding:10px 20px;box-shadow:none;-webkit-box-shadow:none;opacity:1;background:var(--surface-surface800);}
+#toast-container>div {border-radius:8px;padding:10px 20px;box-shadow:none;-webkit-box-shadow:none;opacity:1;background-color:var(--surface-surface800);}
 .toast-title,
 .toast-message {font-size:16px;color:var(--white-100);font-weight:400;}
 .toast-message {margin-top:10px;}

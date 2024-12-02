@@ -9,6 +9,7 @@ $(function () {
     $swal;
     toastr.init();
     microModalFunc.init();
+    stickyContent();
 });
 
 const toggle = {
@@ -200,6 +201,45 @@ const toastr = {
         }
     }
 }
+
+const stickyContent = function () {
+    const headerEl = document.querySelector('header');
+    const sentinalEl = document.querySelector('.sticky-sentinal');
+    const stickyEl = document.querySelector('.sticky-content')
+    // Initial state
+    const handler = (entries) => {
+        if (!entries[0].isIntersecting) {
+            stickyEl.classList.add('enabled');
+            stickyEl.style.top = sentinalEl.offsetTop + 'px';
+        } else {
+            stickyEl.classList.remove('enabled');
+        }
+    }
+
+    const observer = new window.IntersectionObserver(handler);
+    if (sentinalEl != null) {
+        observer.observe(sentinalEl);
+
+        // Initial state
+        var scrollPos = 0;
+        // adding scroll event
+        window.addEventListener('scroll', function () {
+            // detects new state and compares it with the new one
+            if ((document.body.getBoundingClientRect()).top > scrollPos) {
+                document.body.setAttribute('data-scroll-direction', 'UP');
+                stickyEl.style.top = sentinalEl.offsetTop + 'px';
+            }
+            else {
+                document.body.setAttribute('data-scroll-direction', 'DOWN');
+                stickyEl.removeAttribute('style');
+
+            }
+            // saves the new position for iteration.
+            scrollPos = (document.body.getBoundingClientRect()).top;
+        });
+    }
+}
+
 
 const microModalFunc = {
     init: function () {
