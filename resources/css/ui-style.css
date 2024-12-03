@@ -199,8 +199,9 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
     background-color:var(--icon-default);
     
 }
+.input-wrap.input-btn input:placeholder-shown {padding-right:16px}
 .input-wrap.input-btn input:not(:placeholder-shown) ~ button {opacity:1;}
-.input-wrap.input-btn input:placeholder-shown ~ button.input-search {opacity:1;}
+/* .input-wrap.input-btn input:placeholder-shown ~ button.input-search {opacity:1;} */
 .input-wrap.input-btn .input-remove {-webkit-mask-image:url(../images/btn/ico_close.svg);mask-image:url(../images/btn/ico_close.svg);}
 .input-wrap.input-btn .input-search {-webkit-mask-image:url(../images/btn/ico_search.svg);mask-image:url(../images/btn/ico_search.svg);}
 .input-wrap.input-btn .input-password {-webkit-mask-image:url(../images/btn/ico_password.svg);mask-image:url(../images/btn/ico_password.svg);}
