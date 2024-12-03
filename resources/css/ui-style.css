@@ -116,7 +116,8 @@ i.ico-order {-webkit-mask-image:url(../images/ico/ico_order.svg);mask-image:url(
 i.ico-add {-webkit-mask-image:url(../images/ico/ico_add.svg);mask-image:url(../images/ico/ico_add.svg);}
 
 i.ico-sorting {-webkit-mask-image:url(../images/ico/ico_sorting.svg);mask-image:url(../images/ico/ico_sorting.svg);}
-i.ico-bio-auth {-webkit-mask-image:url(../images/ico/ico_bio_auth.svg);mask-image:url(../images/ico/ico_bio_auth.svg);}
+i.ico-bio-auth-ios {-webkit-mask-image:url(../images/ico/ico_bio_auth_ios.svg);mask-image:url(../images/ico/ico_bio_auth_ios.svg);}
+i.ico-bio-auth-android {-webkit-mask-image:url(../images/ico/ico_bio_auth_android.svg);mask-image:url(../images/ico/ico_bio_auth_android.svg);}
 i.ico-refresh {-webkit-mask-image:url(../images/ico/ico_refresh.svg);mask-image:url(../images/ico/ico_refresh.svg);}
 i.ico-login02 {-webkit-mask-image:url(../images/ico/ico_login02.svg);mask-image:url(../images/ico/ico_login02.svg);}
 i.ico-memo {-webkit-mask-image:url(../images/ico/ico_memo.svg);mask-image:url(../images/ico/ico_memo.svg);}
@@ -293,7 +294,7 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
 .inp-check-all {border-radius:4px;border:1px solid var(--border-8);background-color:var(--background-bg_lightGray);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
 .inp-check-all .inp {padding:16px 16px 16px 50px;}
 .inp-check-all .inp input {left:16px;top:16px;}
-.inp-check-all .inp .label-title {font-size:18px;font-weight:700;color:var(--typography-title);line-height:1.5;margin:0;}
+.inp-check-all .inp .label-title {font-size: 20px;font-weight:700;color:var(--typography-title);line-height:1.5;margin:0;}
 
 /* form */
 .form {flex:1;}

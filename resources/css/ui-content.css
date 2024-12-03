@@ -180,7 +180,7 @@
 .info-anchor ul li button span {font-size:14px;color:var(--typography-caption);}
 
 /* privacy-wrap */
-.privacy-wrap {padding:0 12px;}
+.privacy-wrap {padding:0 12px;font-size:16px;}
 .privacy-wrap > * {margin-top:22px;}
 .privacy-wrap .title-large {margin-top:40px;}
 .privacy-wrap ol {list-style:lower-hexadecimal;margin-left:16px;}
@@ -189,7 +189,7 @@
 
 /* step-end */
 .step-end {display:inline-flex;flex-direction:column;align-items:center;background-color:var(--white-100);padding:48px;margin:0 auto;}
-.step-end p {text-align:center;margin-top:16px;font-weight:700;}
+.step-end p {text-align:center;margin-top: 24px;font-weight:700;}
 
 /* memo-list */
 .memo-list {}
