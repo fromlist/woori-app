@@ -28,7 +28,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 /* micromodal */
 .modal {font-family:inherit;}
 .micromodal-slide.is-open {position:relative;z-index:calc(var(--header-zIndex) +  1000);}
-.modal__container {padding:0;max-width:none;max-height: calc(100% - 40px);flex:1 1 100%;background-color:var(--white-100);border-radius:20px 20px 0 0;display:flex;flex-direction:column;}
+.modal__container {padding:0;max-width:none;max-height:calc(100% - 40px);flex:1 1 100%;background-color:var(--white-100);border-radius:20px 20px 0 0;display:flex;flex-direction:column;}
 .modal__content {margin:0;line-height:inherit;color:inherit;padding:0;border-radius:0;flex:1 1 calc(100% - 56px);overflow-y:auto;}
 
 .modal__header {position:sticky;top:0;left:0;width:100%;padding:14.5px 16px;background-color:var(--white-100);border-radius:20px 20px 0 0;}
@@ -87,9 +87,9 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 
 /* toastr */
 #toast-container.toast-bottom-center>div, #toast-container.toast-top-center>div {width:auto;margin:0 16px;}
-#toast-container>div {border-radius:8px;padding:10px 20px;box-shadow:none;-webkit-box-shadow:none;opacity:1;background-color:var(--surface-surface800);}
+#toast-container>div {border-radius:8px;padding:16px;box-shadow:none;-webkit-box-shadow:none;opacity:1;background-color:var(--surface-surface800);}
 .toast-title,
-.toast-message {font-size:16px;color:var(--white-100);font-weight:400;}
+.toast-message {font-size:18px;color:var(--white-100);font-weight:400;padding:0 4px;}
 .toast-message {margin-top:10px;}
 .btn-toast-wrap {display:flex;justify-content:flex-end;}
 .toast-success .toast-title,
@@ -99,7 +99,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .toast-success .toast-title:before,
 .toast-info .toast-title:before,
 .toast-caution .toast-title:before,
-.toast-error .toast-title:before {content:'';position:absolute;left:0;top:3px;width:20px;height:20px;}
+.toast-error .toast-title:before {content:'';position:absolute;left:0;top:5px;width:18px;height:18px;}
 .toast-success .toast-title:before {background:url(../images/toastr/ico_success.svg) center center / contain no-repeat;}
 .toast-info .toast-title:before {background:url(../images/toastr/ico_info.svg) center center / contain no-repeat;}
 .toast-caution .toast-title:before {background:url(../images/toastr/ico_caution.svg) center center / contain no-repeat;}

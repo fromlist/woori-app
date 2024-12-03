@@ -7,7 +7,7 @@ $(function () {
     toggle.init()
     switchClass.init()
     $swal;
-    toastr.init();
+    toastrCont.init();
     microModalFunc.init();
     stickyContent();
 });
@@ -175,7 +175,7 @@ const formStyle = {
     },
 }
 
-const toastr = {
+const toastrCont = {
     init: function () {
         let toastPositionDef = 'toast-bottom-center';
         $('html').each(function () {
