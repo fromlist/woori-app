@@ -16,7 +16,7 @@ const toggle = {
     init: function () {
         $toggleCont = $('[data-toggle="toggle-trigger"]');
         $toggleClass = 'is-toggled';
-        toggle.onClick();
+        this.onClick();
     },
     onClick: function () {
         $toggleCont.on('click', function () {
@@ -32,17 +32,39 @@ const toggle = {
 
 const switchClass = {
     init: function () {
-        $switchClassBefore = $toggleCont.data('switch-before');
-        $switchClassAfter = $toggleCont.data('switch-after');
-        switchClass.onClick();
+        this.onClick();
     },
     onClick: function () {
-        $toggleCont.on('click', function () {
-            if ($(this).hasClass($switchClassBefore)) {
-                $(this).removeClass($switchClassBefore).addClass($switchClassAfter);
-            } else {
-                $(this).removeClass($switchClassAfter).addClass($switchClassBefore);
+        $toggleCont.on('click', function (e) {
+
+            const $switchBefore = this.dataset.switchBefore;
+            const $switchAfter = this.dataset.switchAfter;
+
+            if ($switchBefore || $switchAfter) {
+                if (this.classList.contains($switchBefore)) {
+                    this.classList.add($switchAfter);
+                    this.classList.remove($switchBefore);
+                } else {
+                    this.classList.add($switchBefore);
+                    this.classList.remove($switchAfter);
+                }
             }
+            const $switchInner = this.querySelectorAll("*");
+
+            $switchInner.forEach(function (items) {
+                if (items.dataset.switchInnerBefore || items.dataset.switchInnerAfter) {
+                    const $switchInnerBefore = items.dataset.switchInnerBefore;
+                    const $switchInnerAfter = items.dataset.switchInnerAfter;
+                    if (items.classList.contains($switchInnerBefore)) {
+                        items.classList.add($switchInnerAfter);
+                        items.classList.remove($switchInnerBefore);
+                    } else {
+                        items.classList.add($switchInnerBefore);
+                        items.classList.remove($switchInnerAfter);
+                    }
+                }
+            });
+
         })
     }
 }
@@ -57,7 +79,7 @@ const bsCardResize = {
         let percent = (bsParent / bsCardwWidth).toFixed(1);
         // console.log(percent)
         bsCard.css('zoom', percent);
-        bsCardResize.onResize();
+        this.onResize();
     },
     onResize: function () {
         $(window).resize(function () {
@@ -73,12 +95,12 @@ const bsCardResize = {
 const tabContent = {
     init: function () {
         $tabList = $('.tab-list li');
-        $trigger = $tabList.find('button') //toggle;
-        tabContent.onClick();
-        tabContent.afterLoadTab();
+        $tabTrigger = $tabList.find('button') //toggle;
+        this.onClick();
+        this.afterLoadTab();
     },
     onClick: function () {
-        $trigger.on('click', function () {
+        $tabTrigger.on('click', function () {
             const $parent = $(this).closest('li');
             // 선택 탭 활성화
             $parent.addClass('tab-active');
@@ -99,8 +121,8 @@ const tabContent = {
         })
     },
     afterLoadTab: function () {
-        $trigger = $tabList.find('button:not(.link), a:not(.link)')
-        $trigger.each(function () {
+        $tabTrigger = $tabList.find('button:not(.link), a:not(.link)')
+        $tabTrigger.each(function () {
             const $parent = $(this).closest('li');
             if ($parent.hasClass('tab-active')) {
                 $(this).attr({
@@ -121,12 +143,12 @@ const tabContent = {
 const accordionContent = {
     init: function () {
         $accordionList = $('.accordion-content .acc-title');
-        $trigger = $accordionList;
-        accordionContent.onClick();
-        accordionContent.afterLoad();
+        $accTrigger = $accordionList;
+        this.onClick();
+        this.afterLoad();
     },
     onClick: function () {
-        $trigger.on('click', function () {
+        $accTrigger.on('click', function () {
             const parent = $(this).closest('.acc-title')
             if (parent.hasClass('acc-active')) {
                 parent.removeClass('acc-active');
@@ -140,7 +162,7 @@ const accordionContent = {
         })
     },
     afterLoad: function () {
-        $trigger.each(function () {
+        $accTrigger.each(function () {
             const parent = $(this).closest('.acc-title')
             if (parent.hasClass('acc-active')) {
                 $(this).attr('aria-expanded', 'false');
@@ -156,7 +178,7 @@ const accordionContent = {
 // global form
 const formStyle = {
     init: function () {
-        formStyle.textareaResize();
+        this.textareaResize();
     },
 
     textareaResize: function () {
@@ -390,8 +412,8 @@ const $swal = {
             cancelButtonText: cancelButtonText,
             customClass: {
                 actions: 'btn-wrap',
-                cancelButton: " btn-large btn-outlined",
-                confirmButton: "btn-large btn-primary",
+                cancelButton: " btn-medium btn-outlined",
+                confirmButton: "btn-medium btn-primary",
             },
             buttonsStyling: false,
             allowOutsideClick: false,
@@ -409,8 +431,8 @@ const $swal = {
             customClass: {
                 actions: 'btn-wrap',
                 htmlContainer: 'al',
-                cancelButton: "btn-large btn-outlined",
-                confirmButton: "btn-large btn-primary",
+                cancelButton: "btn-medium btn-outlined",
+                confirmButton: "btn-medium btn-primary",
             },
             buttonsStyling: false,
             allowOutsideClick: false,
@@ -430,8 +452,8 @@ const $swal = {
                 title: 'title-large',
                 htmlContainer: 'al',
                 actions: 'btn-wrap pt40',
-                cancelButton: "btn-large btn-outlined",
-                confirmButton: "btn-large btn-primary",
+                cancelButton: "btn-medium btn-outlined",
+                confirmButton: "btn-medium btn-primary",
             },
             buttonsStyling: false,
             // allowOutsideClick: false,
@@ -446,8 +468,8 @@ const $swal = {
             customClass: {
                 htmlContainer: 'mt40',
                 actions: 'btn-wrap',
-                cancelButton: "btn-large btn-outlined",
-                confirmButton: "btn-large btn-primary",
+                cancelButton: "btn-medium btn-outlined",
+                confirmButton: "btn-medium btn-primary",
             },
             buttonsStyling: false,
             // allowOutsideClick: false,

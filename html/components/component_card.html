@@ -66,8 +66,7 @@
 
 <body>
 	<div class="ui-guide">
-		<h1>Form</h1>
-		<p>Radio</p>
+		<h1>Card Style</h1>
 
 		<div class="ui-guide-section">
 
@@ -77,94 +76,140 @@
 				<div class="card-select">
 					<div class="inp inp-large">
 						<span class="tags tags-medium tags-black-80">A타입</span>
-						<input type="radio" name="rad001" id="inp001">
-						<label for="inp001">
-							<picture>
-								<source srcset="../../resources/@temp/thumb_w.png">
-								<img src="../../resources/@temp/thumb_w.png" alt="">
-							</picture>
-						</label>
+						<label><input type="radio" name="rad001"></label>
+						<!-- bs-card-wrap -->
+						<div class="bs-card-wrap">
+							<div class="bs-card ">
+								<div class="bs-typeA">
+									<div class="top">
+										<div class="left">
+											<picture>
+												<source srcset="../../resources/images/bs_card/bs_a_top_logo01.svg">
+												<img src="../../resources/images/bs_card/bs_a_top_logo01.svg" alt="우리 마음속 첫번째 금융">
+											</picture>
+										</div>
+										<div class="right">
+											<picture>
+												<source srcset="../../resources/images/bs_card/bs_a_aff.svg">
+												<img src="../../resources/images/bs_card/bs_a_aff.svg" alt="우리금융그룹">
+											</picture>
+										</div>
+									</div>
+									<div class="line">
+										<picture>
+											<source srcset="../../resources/images/bs_card/bs_a_line.svg">
+											<img src="../../resources/images/bs_card/bs_a_line.svg" alt="">
+										</picture>
+									</div>
+									<div class="center">
+										<div class="title">
+											<div class="left">
+												<picture>
+													<source srcset="../../resources/images/bs_card/bs_a_center_logo01.svg">
+													<img src="../../resources/images/bs_card/bs_a_center_logo01.svg" alt="우리금융그룹">
+												</picture>
+											</div>
+											<div class="right">
+												<dl>
+													<dt>김우리</dt>
+													<dd>직위/호칭</dd>
+													<dd>소속</dd>
+												</dl>
+											</div>
+										</div>
+										<div class="info">
+											<div class="left">
+												<div class="location">04632 서울특별시 중구 소공로 51</div>
+												<div class="email">woori@woorifg.com</div>
+											</div>
+											<div class="right">
+												<div class="contact">
+													<div class="row">
+														<div class="th">Mobile</div>
+														<div class="td">010.1234.5678</div>
+													</div>
+													<div class="row">
+														<div class="th">Tel</div>
+														<div class="td">02.1234.5678</div>
+													</div>
+													<div class="row">
+														<div class="th">내선</div>
+														<div class="td">123</div>
+													</div>
+													<div class="row">
+														<div class="th">Fax</div>
+														<div class="td">0505.001.6161</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="bottom">
+										<ul>
+											<li>CFP(국제공인재무설계사)</li>
+											<li>신용위험분석사(CRA)2차</li>
+											<li>신용위험분석사(CRA)1차</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //bs-card-wrap -->
 					</div>
 				</div>
 				<!-- //card-select -->
-
 			</div>
 
 			<hr>
 
 			<div class="ui-guide-box">
-				<h2>Business Card Customer List</h2>
+				<h2>Business Card</h2>
 
 
 				<!-- business-card-customer -->
 				<div class="business-card-customer-list">
 					<div class="business-card-customer">
-						<a href="#">
+						<button>
 							<strong class="title-medium">김성민</strong>
-							<div class="company">
+							<span class="divide-list">
 								<span>디지털공통개발부 UI/UX팀</span>
-								<div class="division h12 mx8"></div>
+								<span class="division h12 mx8"></span>
 								<span>과장</span>
-							</div>
-							<div class="company-name">파인너츠</div>
-							<div class="tags tags-small tags-lightBlue">키맨</div>
-						</a>
+							</span>
+							<span class="company-name">파인너츠</span>
+							<span class="tags tags-small tags-lightBlue">키맨</span>
+						</button>
 						<figure>
 							<div class="due-date">
 								<strong class="body-small">만료일</strong>
 								<span>2024.11.26</span>
 							</div>
 							<div class="thumb thumb-nodata">
-								<!-- <button type="button" class="btn-small btn-black btn-round">연장하기</button> -->
+								<!-- <button type="button" class="btn-xsmall btn-black btn-round">연장하기</button> -->
 								<picture>
-									<source srcset="">
-									<img src="" alt="">
+									<source srcset="../../resources/images/PBWBU/ico_business_card_empty.svg">
+									<img src="../../resources/images/PBWBU/ico_business_card_empty.svg" alt="">
 								</picture>
 							</div>
 						</figure>
 					</div>
-
 					<div class="business-card-customer">
-						<a href="#">
+						<button>
 							<strong class="title-medium">이름</strong>
-							<div class="company">
+							<span class="divide-list">
 								<span>부서명</span>
-								<div class="division h12 mx8"></div>
+								<span class="division h12 mx8"></span>
 								<span>직책</span>
-							</div>
-							<div class="company-name">회사명</div>
-						</a>
+							</span>
+							<span class="company-name">회사명</span>
+						</button>
 						<figure>
 							<div class="due-date">
 								<strong class="body-small">만료일</strong>
 								<div class="tags tags-small tags-lightBlue">D-30</div>
 							</div>
 							<div class="thumb">
-								<button type="button" class="btn-small btn-black btn-round" onclick="toastr.success(``, '연장되었습니다.');">연장하기</button>
-								<picture>
-									<source srcset="../../resources/@temp/thumb_w.png">
-									<img src="../../resources/@temp/thumb_w.png" alt="">
-								</picture>
-							</div>
-						</figure>
-					</div>
-
-					<div class="business-card-customer">
-						<a href="#">
-							<strong class="title-medium">이름</strong>
-							<div class="company">
-								<span>부서명</span>
-								<div class="division h12 mx8"></div>
-								<span>직책</span>
-							</div>
-							<div class="company-name">회사명</div>
-						</a>
-						<figure>
-							<div class="due-date">
-								<div class="tags tags-small tags-lightRed">삭제예정</div>
-							</div>
-							<div class="thumb">
-								<button type="button" class="btn-small btn-black btn-round" onclick="toastr.success(``, '연장되었습니다.');">연장하기</button>
+								<button type="button" class="btn-xsmall btn-black btn-round" onclick="toastr.success(``, '연장되었습니다.');">연장하기</button>
 								<picture>
 									<source srcset="../../resources/@temp/thumb_w.png">
 									<img src="../../resources/@temp/thumb_w.png" alt="">
@@ -211,11 +256,26 @@
 								<dd>-888.88%</dd>
 							</div>
 						</dl>
-                        <dl class="expect-reason">
-                            <dt>추천사유</dt>
-                            <dd>텍스트가 들어갑니다 텍스트가 들어갑니다 텍스트가 들어갑니다 텍스트가 들어갑니다</dd>
-                        </dl>
-                        
+						<dl class="expect-reason">
+							<dt>추천사유</dt>
+							<dd>텍스트가 들어갑니다 텍스트가 들어갑니다 텍스트가 들어갑니다 텍스트가 들어갑니다</dd>
+						</dl>
+						<div class="btn-wrap" data-toggle="toggle-wrap">
+							<button type="button" class="btn-small btn-secondary btn-round" data-toggle="toggle-trigger" data-switch-before="btn-secondary" data-switch-after="btn-primary">
+								비교담기
+								<i class="ico-compare" data-switch-inner="true" data-switch-inner-before="ico-compare" data-switch-inner-after="ico-check"></i>
+								<span class="toggle-off blind">선택</span>
+								<span class="toggle-on blind">선택해제</span>
+							</button>
+						</div>
+						<div class="favorite-btn-wrap" data-toggle="toggle-wrap">
+							<button type="button" data-toggle="toggle-trigger">
+								<i class="icon-only icon-36 icon-fav bg-icon" data-switch-inner="true" data-switch-inner-before="icon-fav bg-gray-300" data-switch-inner-after="icon-fav-active bg-blue-300"></i>
+								<span class="toggle-off blind">관심펀드 등록</span>
+								<span class="toggle-on blind">관심펀드 등록해제</span>
+							</button>
+						</div>
+
 					</div>
 				</div>
 

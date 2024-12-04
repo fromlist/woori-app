@@ -191,11 +191,6 @@
     --button-secondary-onDisabled:#FFFFFF;
     --button-secondary-onEnabled:#2589F4;
     --button-secondary-pressed:#7484950D ;
-    --button-tertiary-disabled:#0C0C0D0A;
-    --button-tertiary-enabled:#8295A71C;
-    --button-tertiary-onDisabled:#C5CBD1;
-    --button-tertiary-onEnabled:#0C0C0DB8;
-    --button-tertiary-pressed:#8597A82E;
     --button-textBtn-Enabled:#777E85;
     --icon-default:#0C0C0DE0;
     --icon-disabled:#0C0C0D14;
@@ -432,11 +427,6 @@
 .fc-button-secondary-onDisabled{color:var(--button-secondary-onDisabled)!important;}
 .fc-button-secondary-onEnabled{color:var(--button-secondary-onEnabled)!important;}
 .fc-button-secondary-pressed{color:var(--button-secondary-pressed)!important;}
-.fc-button-tertiary-disabled{color:var(--button-tertiary-disabled)!important;}
-.fc-button-tertiary-enabled{color:var(--button-tertiary-enabled)!important;}
-.fc-button-tertiary-onDisabled{color:var(--button-tertiary-onDisabled)!important;}
-.fc-button-tertiary-onEnabled{color:var(--button-tertiary-onEnabled)!important;}
-.fc-button-tertiary-pressed{color:var(--button-tertiary-pressed)!important;}
 .fc-button-textBtn-Enabled{color:var(--button-textBtn-Enabled)!important;}
 .fc-icon-default{color:var(--icon-default)!important;}
 .fc-icon-disabled{color:var(--icon-disabled)!important;}
@@ -670,11 +660,6 @@
 .bg-button-secondary-onDisabled{background-color:var(--button-secondary-onDisabled)!important;}
 .bg-button-secondary-onEnabled{background-color:var(--button-secondary-onEnabled)!important;}
 .bg-button-secondary-pressed{background-color:var(--button-secondary-pressed)!important;}
-.bg-button-tertiary-disabled{background-color:var(--button-tertiary-disabled)!important;}
-.bg-button-tertiary-enabled{background-color:var(--button-tertiary-enabled)!important;}
-.bg-button-tertiary-onDisabled{background-color:var(--button-tertiary-onDisabled)!important;}
-.bg-button-tertiary-onEnabled{background-color:var(--button-tertiary-onEnabled)!important;}
-.bg-button-tertiary-pressed{background-color:var(--button-tertiary-pressed)!important;}
 .bg-button-textBtn-Enabled{background-color:var(--button-textBtn-Enabled)!important;}
 .bg-icon-default{background-color:var(--icon-default)!important;}
 .bg-icon-disabled{background-color:var(--icon-disabled)!important;}
