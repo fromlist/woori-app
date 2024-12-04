@@ -91,12 +91,12 @@ div.btn-xsmall .btn-inner {display:flex;padding:6px 0 6px 12px;}
 .btn-xsmall i {display:block;
     -webkit-mask-position:center center;-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;mask-position:center center;mask-repeat:no-repeat;mask-size:contain;
 }
-.btn-large i {width:20px;height:20px;}
-.btn-medium i {width:20px;height:20px;}
-.btn-small i {width:16px;height:16px;}
-.btn-xsmall i {width:16px;height:16px;}
-.btn-noborder i {width:16px;height:16px;}
-.btn-border i {width:24px;height:24px;
+.btn-large i {flex:0 0 20px;width:20px;height:20px;}
+.btn-medium i {flex:0 0 20px;width:20px;height:20px;}
+.btn-small i {flex:0 0 16px;width:16px;height:16px;}
+.btn-xsmall i {flex:0 0 16px;width:16px;height:16px;}
+.btn-noborder i {flex:0 0 16px;width:16px;height:16px;}
+.btn-border i {flex:0 0 24px;width:24px;height:24px;
     -webkit-mask-position:center center;-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;mask-position:center center;mask-repeat:no-repeat;mask-size:contain;
 }
 
@@ -435,6 +435,7 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
 /* division */
 .division {display:inline-block;content:'';width:1px;height:18px;background-color:var(--border-8);vertical-align:top;}
 .division.h12 {height:12px;}
+.division.h14 {height:14px;}
 
 /* divide-list */
 .divide-list {display:block;font-size:0;word-break:keep-all;}
@@ -522,6 +523,11 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
 .is-toggled [data-toggle="toggle-trigger"] .toggle-off {display:none;}
 .is-toggled [data-toggle="toggle-trigger"] .toggle-on {display:block;}
 
+
+/* clip */
+.clip {display:inline-flex;align-items:center;font-size:15px;font-weight:700;color:var(--white-100);line-height:26px;padding:0 8px;gap:4px;vertical-align:top;}
+.clip-recommend {border-radius: 0px 0px 8px 8px;background: linear-gradient(180deg, #F1BE17 0%, #FABB3B 100%);box-shadow: 0px 1px 0px 0px var(--shadow-gray_3, rgba(12, 12, 13, 0.12)), 0px 2px 4px -1px var(--shadow-gray_3);}
+.clip-recommend:before {content:'';flex:0 0 12px;width:12px;height:12px;background:url(../images/clip/clip-recommend.svg) center center / contain no-repeat;}
 
 /* dropDown */
 .dropDown {position:relative;z-index:var(--dropdown-zIndex);}
