@@ -35,35 +35,40 @@ const switchClass = {
         this.onClick();
     },
     onClick: function () {
-        $toggleCont.on('click', function (e) {
+        $toggleCont.on('click', function () {
 
             const $switchBefore = this.dataset.switchBefore;
             const $switchAfter = this.dataset.switchAfter;
-
-            if ($switchBefore || $switchAfter) {
-                if (this.classList.contains($switchBefore)) {
-                    this.classList.add($switchAfter);
-                    this.classList.remove($switchBefore);
-                } else {
-                    this.classList.add($switchBefore);
-                    this.classList.remove($switchAfter);
-                }
-            }
             const $switchInner = this.querySelectorAll("*");
 
+            // target switch class
+            if ($switchBefore !== undefined && !$switchAfter !== undefined) {
+                const $switchBeforeArray = this.dataset.switchBefore.split(/\s+/);
+                const $switchAfterArray = this.dataset.switchAfter.split(/\s+/);
+                if (this.classList.contains(...$switchBeforeArray)) {
+                    this.classList.add(...$switchAfterArray);
+                    this.classList.remove(...$switchBeforeArray);
+                } else {
+                    this.classList.add(...$switchBeforeArray);
+                    this.classList.remove(...$switchAfterArray);
+                }
+            }
+
+            // target inner switch class
             $switchInner.forEach(function (items) {
-                if (items.dataset.switchInnerBefore || items.dataset.switchInnerAfter) {
-                    const $switchInnerBefore = items.dataset.switchInnerBefore;
-                    const $switchInnerAfter = items.dataset.switchInnerAfter;
-                    if (items.classList.contains($switchInnerBefore)) {
-                        items.classList.add($switchInnerAfter);
-                        items.classList.remove($switchInnerBefore);
+                if (items.dataset.switchInnerBefore && items.dataset.switchInnerAfter) {
+                    const $switchInnerBefore = items.dataset.switchInnerBefore.split(/\s+/);
+                    const $switchInnerAfter = items.dataset.switchInnerAfter.split(/\s+/);
+                    if (items.classList.contains(...$switchInnerBefore)) {
+                        items.classList.add(...$switchInnerAfter);
+                        items.classList.remove(...$switchInnerBefore);
                     } else {
-                        items.classList.add($switchInnerBefore);
-                        items.classList.remove($switchInnerAfter);
+                        items.classList.add(...$switchInnerBefore);
+                        items.classList.remove(...$switchInnerAfter);
                     }
                 }
             });
+
 
         })
     }

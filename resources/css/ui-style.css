@@ -449,6 +449,9 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
     mask-size:contain;
     -webkit-mask-repeat:no-repeat;
     mask-repeat:no-repeat;
+    background-position:center center;
+    background-size:contain;
+    background-repeat:no-repeat;
     background-color:red;
 }
 .icon-48 {flex:0 0 48px;width:48px;height:48px;}
@@ -505,12 +508,12 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
     mask-image:url(../images/icon_only/icon_locked.svg);
 }
 .icon-fav {
-    -webkit-mask-image:url(../images/icon_only/icon_fav.svg);
-    mask-image:url(../images/icon_only/icon_fav.svg);
+    background-color:initial;
+    background-image:url(../images/icon_only/icon_fav.svg);
 }
 .icon-fav-active {
-    -webkit-mask-image:url(../images/icon_only/icon_fav_active.svg);
-    mask-image:url(../images/icon_only/icon_fav_active.svg);
+    background-color:initial;
+    background-image:url(../images/icon_only/icon_fav_active.svg);
 }
 
 /* toggle-trigger */
