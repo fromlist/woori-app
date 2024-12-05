@@ -265,6 +265,32 @@ const stickyContent = function () {
             scrollPos = (document.body.getBoundingClientRect()).top;
         });
     }
+
+    const snackbarEl = document.querySelector('.snackbar-content')
+
+    if (snackbarEl != null) {
+        const snackbaElClose = snackbarEl.querySelector('[data-snackbar-close]')
+
+        var timer = null;
+        var close = 1500;
+        window.addEventListener('scroll', function () {
+            if (!snackbarEl.classList.contains('snackbar-disabled')) {
+                if (timer !== null) {
+                    clearTimeout(timer);
+                    snackbarEl.classList.remove('is-sticky')
+                }
+                timer = setTimeout(function () {
+                    snackbarEl.classList.add('is-sticky')
+                }, close);
+            }
+        }, close);
+        snackbaElClose.addEventListener('click', function () {
+            snackbarEl.classList.remove('is-sticky');
+            snackbarEl.classList.add('snackbar-disabled');
+            clearTimeout(timer);
+        });
+    }
+
 }
 
 

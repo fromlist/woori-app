@@ -400,6 +400,7 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
 .tags-small {font-size:15px;font-weight:500;line-height:1;padding:4px 8px;border-radius:4px;}
 .tags-medium {font-size:16px;font-weight:500;line-height:1;padding:8px 12px;border-radius:8px;}
 .tags-large {font-size:18px;font-weight:500;line-height:1;padding:10px 12px;border-radius:8px;}
+.tags-round {border-radius:50px;}
 
 .tags-lightBlue {color:var(--blue-600);background-color:var(--background-bg_lightBlue)}
 .tags-lightGray {color:var(--typography-gray);background-color:var(--background-bg_lightGray)}
@@ -421,6 +422,17 @@ select[disabled] {background-color:var(--graye6);color:var(--graya7);}
 .tags-red {color:var(--typography-white);background-color:var(--background-bg_red);}
 .tags-yellow {color:var(--typography-white);background-color:var(--background-bg_yellow);}
 .tags-pink {color:var(--typography-white);background-color:var(--background-bg_pink);}
+
+.tags-red-100 {color:var(--red-900);background-color:var(--red-100);}
+.tags-FFF4EB {color:#EE601E;background-color:#FFF4EB;}
+.tags-F3773D {color:var(--typography-white);background-color:#F3773D;}
+.tags-green-50 {color:var(--green-600);background-color:var(--green-50);}
+.tags-green-300 {color:var(--typography-white);background-color:var(--green-300);}
+.tags-red-800 {color:var(--typography-white);background-color:var(--red-800);}
+
+
+
+
 
 /* badge */
 .badge {display:inline-block;font-size:15px;font-weight:500;color:var(--typography-gray);line-height:1;padding:4px 6px;border-radius:50px;background-color:var(--background-bg_lightGray);vertical-align:middle;margin-left:8px;min-width:23px;}

@@ -92,3 +92,8 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .sticky-content {padding:8px 0;}
 .sticky-content {position:static;background-color:var(--white-100);z-index:var(--sticky-zIndex);top:0;transition:top 0.3s ease;}
 [data-scroll-direction="UP"] .sticky-content {position:sticky;}
+
+/* snackbar-content */
+.snackbar-content {position:absolute;padding:16px;transition:bottom 0.3s ease,opacity 0.3s ease;bottom:-10px;opacity:0;z-index:-1;}
+.snackbar-content .snackbar-content-inner {border-radius:8px;background-color:var(--white-100);padding:10px 8px;}
+.snackbar-content.is-sticky {position:sticky;bottom:0;z-index:var(--sticky-zIndex);opacity:1;}
