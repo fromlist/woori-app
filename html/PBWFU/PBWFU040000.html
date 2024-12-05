@@ -43,7 +43,7 @@
 	<script src="../../resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
 	<!-- apexcharts -->
 	<link rel="stylesheet" type="text/css" href="../../resources/plugins/apexcharts/3.50.0/apexcharts.css">
-	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.js"></script>
 	<!-- //[plugins] -->
 
 	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
@@ -183,9 +183,110 @@
 						<div class="stroke stroke4 stroke-fluid"></div>
 						<div class="fund-detail-info">
 							<h4 class="headline-small">자산구성</h4>
-
+							<div id="chart1"></div>
+							<span class="divide-list">
+								<span>2024-01-21</span>
+								<span class="division h14 mx8"></span>
+								<span>자료제공 : 제로인</span>
+							</span>
 						</div>
 						<div class="stroke stroke4 stroke-fluid"></div>
+						<div class="fund-detail-info">
+							<h4 class="headline-small">상위 10위</h4>
+							<div class="top10-list">
+								<dl>
+									<div class="list">
+										<dt>NVDIA</dt>
+										<dd>9.62%</dd>
+									</div>
+									<div class="list">
+										<dt>NVDIA</dt>
+										<dd>9.62%</dd>
+									</div>
+									<div class="list">
+										<dt>NVDIA</dt>
+										<dd>9.62%</dd>
+									</div>
+								</dl>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn-xsmall btn-outlined btn-round">전체보기</button>
+							</div>
+						</div>
+						<div class="stroke stroke4 stroke-fluid"></div>
+						<div class="fund-detail-info">
+							<h4 class="headline-small">수익률 추이</h4>
+							<div class="chart-wrap">
+								<div class="btn-wrap">
+									<button type="button" class="btn-xsmall btn-outlined btn-round"><i class="ico-grid"></i>표 보기</button>
+								</div>
+								<div id="chart2"></div>
+								<span class="divide-list">
+									<span>2024-01-21</span>
+									<span class="division h14 mx8"></span>
+									<span>자료제공 : 제로인</span>
+								</span>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn-xsmall btn-outlined btn-round">기간별 수익률/기준가 보기</button>
+							</div>
+							<p class="description info body-small fc-typography-caption">역외펀드의 경우, 데이터 제공업체로부터 제공받은 가장 최신의 수익률을 기반으로 안내하고 있으나 당일자 실제 수익률과는 차이가 있을 수 있습니다.</p>
+						</div>
+						<div class="stroke stroke4 stroke-fluid"></div>
+						<div class="fund-detail-info">
+							<h4 class="headline-small">수수료 및 보수</h4>
+
+							<div class="table-layout">
+								<div class="table">
+									<div class="tbody">
+										<div class="tr">
+											<div class="th">
+												<div class="group gap2 py0 j-start">
+													<div>선취 수수료</div>
+													<button type="button" class="d-flex" data-tippy="펀드 매수 시 지불하는 수수료입니다."><i class="icon-only icon-14 icon-info bg-icon bg-status-info"></i></button>
+												</div>
+
+											</div>
+											<div class="td">
+												납입 금액의 0.5%
+											</div>
+										</div>
+										<div class="tr">
+											<div class="th">총 보수</div>
+											<div class="td">연1.341%
+												<p class="fc-typography-caption fs-14 fw-400">(판매 0.325%, 운용 0.85%, 수탁 0.05%, 사무 0.02%, 기타 0.096%)</p>
+											</div>
+										</div>
+										<div class="tr">
+											<div class="th">
+												<div class="group gap2 py0 j-start">
+													<div>환매 수수료</div>
+													<button type="button" class="d-flex" data-tippy="계약기간 이전 중도에 펀드를 환매할 시 발생하는 수수료 입니다."><i class="icon-only icon-14 icon-info bg-icon bg-status-info"></i></button>
+
+												</div>
+											</div>
+											<div class="td">
+												없음
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="btn-wrap">
+								<button type="button" class="btn-xsmall btn-outlined btn-round">전체보기</button>
+							</div>
+							<ul class="dot-list">
+								<li>재간접형펀드, 모자형 펀드는 피투자펀드보수가 추가 발생하므로, 상품별 투자설명서를 확인하시기 바랍니다.</li>
+								<li>재간접형펀드, 모자형 펀드는 피투자펀드보수가 추가 발생하므로, 상품별 투자설명서를 확인하시기 바랍니다.</li>
+								<li>재간접형펀드, 모자형 펀드는 피투자펀드보수가 추가 발생하므로, 상품별 투자설명서를 확인하시기 바랍니다.</li>
+							</ul>
+						</div>
+						<div class="stroke stroke4 stroke-fluid"></div>
+						<div class="content-fluid px0">
+							<a href="#" class="anchor chevron anchor-fluid"><strong class="title-medium px4">매매 기준일</strong></a>
+							<div class="stroke stroke-fluid px0"></div>
+						</div>
 
 					</div>
 					<!-- //fund-detail -->
@@ -401,7 +502,105 @@
 	</div>
 	<!-- //micromodal -->
 
+	<script>
+		var options1 = {
+			chart: {
+				type: 'donut',
+				height: 250,
+				toolbar: {
+					show: false,
+				}
+			},
+			series: [60.32, 30.64, 5.21],
+			labels: ['해외주식', '유동성', '해외채권'],
+			colors: ['#2658ED', '#64BFD4', '#D378F2'],
+			plotOptions: {
+				pie: {
+					startAngle: -90,
+					endAngle: 90,
+					offsetY: 10,
+					donut: {
+						size: '65%'
+					}
+				}
+			},
+			grid: {
+				padding: {
+					bottom: -100
+				}
+			},
+			legend: {
+				position: 'bottom',
+				onItemHover: {
+					highlightDataSeries: true
+				},
+				formatter: function(val, opts) {
+					return [val, "", opts.w.globals.series[opts.seriesIndex], ]
+				}
+			}
+		};
 
+		var chart1 = new ApexCharts(document.querySelector("#chart1"), options1);
+		chart1.render();
+	</script>
+	<script>
+		var options2 = {
+			series: [{
+					name: "Index1",
+					data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+
+				},
+				{
+					name: "Index2",
+					data: [1, 32, 26, 42, 40, 53, 60, 82, 18]
+				}
+			],
+			chart: {
+				height: 180,
+				type: 'line',
+				zoom: {
+					enabled: false
+				},
+				toolbar: {
+					show: false,
+				}
+			},
+			colors: ['#7163EE', '#F35E9C'],
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				curve: 'smooth',
+				width: [2, 2]
+			},
+			markers: {
+				size: 4,
+			},
+			grid: {
+				row: {
+					// colors: ['#E9ECEF', 'transparent'], // takes an array which will be repeated on columns
+					// opacity: 0.5
+				},
+			},
+			xaxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+			}
+		};
+
+		var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+		chart2.render();
+	</script>
+	<style>
+		#chart1 .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center,
+		#chart1 .apexcharts-legend.apx-legend-position-top.apexcharts-align-center {
+			flex-direction: column;
+		}
+
+		#chart2 .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center,
+		#chart2 .apexcharts-legend.apx-legend-position-top.apexcharts-align-center {
+			justify-content: flex-start;
+		}
+	</style>
 
 </body>
 

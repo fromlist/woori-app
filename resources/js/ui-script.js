@@ -10,6 +10,7 @@ $(function () {
     toastrCont.init();
     microModalFunc.init();
     // stickyContent();
+    tippyContent.init();
 });
 
 const toggle = {
@@ -202,6 +203,7 @@ const formStyle = {
     },
 }
 
+// toastr
 const toastrCont = {
     init: function () {
         let toastPositionDef = 'toast-bottom-center';
@@ -229,6 +231,8 @@ const toastrCont = {
     }
 }
 
+
+//sticky
 const stickyContent = function () {
     const headerEl = document.querySelector('header');
     const sentinalEl = document.querySelector('.sticky-sentinal');
@@ -294,6 +298,8 @@ const stickyContent = function () {
 }
 
 
+
+// micromodal
 const microModalFunc = {
     init: function () {
         // micromodal
@@ -369,6 +375,26 @@ const microModalFunc = {
     }
 }
 
+// tippy tooltip
+const tippyContent = {
+    init: function () {
+        //tooltip 제외 텍스트 없는 아이콘들
+        const tippyWrap = document.querySelectorAll('[data-tippy]')
+        tippyWrap.forEach(function (tippyButton) {
+            const tippyContent = tippyButton.dataset.tippy
+            console.dir(tippyContent)
+            tippy(tippyButton, {
+                onTrigger(instance, event) {
+                    instance.setContent(tippyContent);
+                },
+                content: tippyContent,
+                trigger: 'click',
+                zIndex: 'calc(var(--nav-zIndex) - 9)'
+            });
+
+        })
+    },
+}
 
 /*** layerpopup focus out prevent ***/
 $(document).ready(function () {
