@@ -95,5 +95,5 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 
 /* snackbar-content */
 .snackbar-content {position:absolute;padding:16px;transition:bottom 0.3s ease,opacity 0.3s ease;bottom:-10px;opacity:0;z-index:-1;}
-.snackbar-content .snackbar-content-inner {border-radius:8px;background-color:var(--white-100);padding:10px 8px;}
-.snackbar-content.is-sticky {position:sticky;bottom:0;z-index:var(--sticky-zIndex);opacity:1;}
+.snackbar-content .snackbar-content-inner {border-radius:8px;background-color:var(--white-100);padding:10px 8px;box-shadow: 0px -2px 40px -1px var(--shadow-gray_3);}
+.snackbar-content.is-sticky {position:fixed;bottom:0;z-index:var(--sticky-zIndex);opacity:1;}

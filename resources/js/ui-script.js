@@ -9,7 +9,7 @@ $(function () {
     $swal;
     toastrCont.init();
     microModalFunc.init();
-    stickyContent();
+    // stickyContent();
 });
 
 const toggle = {

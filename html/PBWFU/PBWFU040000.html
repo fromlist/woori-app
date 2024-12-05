@@ -8,9 +8,6 @@
 
 	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
 	<!-- [plugins] -->
-	<!-- dropzone -->
-	<link rel="stylesheet" href="../../resources/plugins/dropzone/5.9.3/dropzone.min.css">
-	<script src="../../resources/plugins/dropzone/5.9.3/dropzone.min.js"></script>
 	<!-- highlight -->
 	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
 	<script src="../../resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
@@ -20,14 +17,12 @@
 	<script src="../../resources/plugins/quill/2.0.2/quill.js"></script>
 	<script src="../../resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
 	<!-- jstree -->
-
 	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
 	<script src="../../resources/plugins/jstree/3.3.16/jstree.min.js"></script>
 	<!-- micromodal -->
 	<link rel="stylesheet" href="../../resources/plugins/micromodal/0.4.10/micromodal.css">
 	<script src="../../resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
 	<!-- sortable -->
-
 	<script src="../../resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
 	<!-- sweetalert2 -->
 	<link rel="stylesheet" href="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
@@ -46,6 +41,9 @@
 	<script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
 	<!-- pinch-zoom -->
 	<script src="../../resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
 	<!-- //[plugins] -->
 
 	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
@@ -98,16 +96,99 @@
 							background-color: var(--background-bg_lightGray);
 						}
 					</style>
-					<div class="fund-detail">
-						<div class="fund-detail-title">
-							<div class="tag-wrap">
-								<div class="tags tags-medium tags-blue">#글로벌</div>
-								<div class="tags tags-medium tags-violet">#보통위험</div>
 
+
+					<!-- tab-content -->
+					<div class="tab-content tab-fluid">
+						<ul class="tab-list tab-col overflow-list" role="tablist">
+							<li class="tab tab-active"><a role="tab" href="#">펀드</a></li>
+							<li class="tab"><a role="tab" href="#">커뮤니티<i class="badge">8,999</i></a></li>
+						</ul>
+					</div>
+					<!-- //tab-content -->
+
+					<!-- fund-detail -->
+					<div class="fund-detail">
+
+						<div class="fund-detail-title">
+							<div class="tag-wrap tags-wrap-top">
+								<div class="tags tags-medium tags-lightPurple">레이블</div>
+							</div>
+							<div class="tags tags-medium tags-green-50">레이블</div>
+							<h2 class="headline-medium">신한글로벌탄소중립솔루션증권투자신탁(H)(주식)</h2>
+							<div class="favorite-btn-wrap is-toggled" data-toggle="toggle-wrap">
+								<button type="button" data-toggle="toggle-trigger" id="success">
+									<i class="icon-only icon-36 bg-icon icon-fav-active" data-switch-inner="true" data-switch-inner-before="icon-fav" data-switch-inner-after="icon-fav-active"></i>
+									<span class="toggle-off blind">관심펀드 등록</span>
+									<span class="toggle-on blind">관심펀드 등록해제</span>
+								</button>
+							</div>
+							<p class="body-xlarge fw-400" style="word-break: keep-all;">국내 상장 최우량 리츠/인프라에 투자하여 지속 가능한 자본수익과 안정적인 월배당을 목표로 하는 ETF</p>
+							<div class="tags-wrap tags-wrap-bottom">
+								<div class="tags tags-medium tags-white">친환경 · 탄소중립</div>
+								<div class="tags tags-medium tags-white">채권 · 인컴 · 단기</div>
+								<div class="tags tags-medium tags-white">채권 · 인컴 · 초단기</div>
 							</div>
 						</div>
+
+						<div class="fund-detail-rate">
+							<div class="rate-inner">
+								<h3 class="title-large fw-700">수익률</h3>
+								<dl class="expect-list">
+									<div class="list">
+										<dt>1개월</dt>
+										<dd>-888.88%</dd>
+									</div>
+									<div class="list rise">
+										<dt>3개월</dt>
+										<dd>+888.88%</dd>
+									</div>
+									<div class="list">
+										<dt>6개월</dt>
+										<dd>-888.88%</dd>
+									</div>
+									<div class="list">
+										<dt>12개월</dt>
+										<dd>-888.88%</dd>
+									</div>
+								</dl>
+							</div>
+							<div class="stroke stroke-dashed"></div>
+							<div class="rate-status">
+								<h3 class="title-large fw-700">기준가</h3>
+								<dl class="status-list">
+									<dt>1,813.84</dt>
+									<dd class="rise" aria-label="상승">888.8%</dd>
+									<dd class="fall" aria-label="하락">888.8%</dd>
+									<dd class="steady" aria-label="보합">-</dd>
+								</dl>
+							</div>
+						</div>
+
+						<div class="fund-desc-list">
+							<ul>
+								<li>비예금상품은 원금손실이 발생할 수 있습니다.</li>
+								<li>과거수익률이 미래 수익률을 보장하지 않습니다.</li>
+								<li>투자대상, 투자에 따른 위험, 위험등급, 수수료는 금융소지자보호법 제 19조 제1항에서 규정하고 있는 중요한 사항입니다.</li>
+								<li>텍스트가 들어갑니다.</li>
+							</ul>
+						</div>
+
+						<div class="fund-detail-info">
+							<h4 class="headline-small">상품 특징</h4>
+							<p>
+								<pre>텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다 &#10;&#10;텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다 &#10;&#10; 텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다</pre>
+							</p>
+						</div>
+						<div class="stroke stroke4 stroke-fluid"></div>
+						<div class="fund-detail-info">
+							<h4 class="headline-small">자산구성</h4>
+
+						</div>
+						<div class="stroke stroke4 stroke-fluid"></div>
+
 					</div>
-					<div style="height:200vh;"></div>
+					<!-- //fund-detail -->
 
 				</div>
 				<!-- //content -->
