@@ -9,7 +9,7 @@ $(function () {
     $swal;
     toastrCont.init();
     microModalFunc.init();
-    // stickyContent();
+    stickyContent();
     tippyContent.init();
 });
 
@@ -298,7 +298,6 @@ const stickyContent = function () {
 }
 
 
-
 // micromodal
 const microModalFunc = {
     init: function () {
@@ -382,11 +381,12 @@ const tippyContent = {
         const tippyWrap = document.querySelectorAll('[data-tippy]')
         tippyWrap.forEach(function (tippyButton) {
             const tippyContent = tippyButton.dataset.tippy
-            console.dir(tippyContent)
+            // console.dir(tippyContent)
             tippy(tippyButton, {
                 onTrigger(instance, event) {
                     instance.setContent(tippyContent);
                 },
+                allowHTML: true,
                 content: tippyContent,
                 trigger: 'click',
                 zIndex: 'calc(var(--nav-zIndex) - 9)'

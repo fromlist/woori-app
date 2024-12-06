@@ -44,6 +44,10 @@
 	<!-- apexcharts -->
 	<link rel="stylesheet" type="text/css" href="../../resources/plugins/apexcharts/3.50.0/apexcharts.css">
 	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/aos/3.0.0-beta.6/aos.css" />
+	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+
 	<!-- //[plugins] -->
 
 	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
@@ -111,27 +115,29 @@
 					<div class="fund-detail">
 
 						<div class="fund-detail-title">
-							<div class="tag-wrap tags-wrap-top">
+							<div class="tag-wrap tag-wrap-top">
 								<div class="tags tags-medium tags-lightPurple">레이블</div>
+								<div class="tags tags-medium tags-green-50">레이블</div>
 							</div>
-							<div class="tags tags-medium tags-green-50">레이블</div>
 							<h2 class="headline-medium">신한글로벌탄소중립솔루션증권투자신탁(H)(주식)</h2>
-							<div class="favorite-btn-wrap is-toggled" data-toggle="toggle-wrap">
+
+							<div class="favorite-btn-wrap" data-toggle="toggle-wrap">
 								<button type="button" data-toggle="toggle-trigger" id="success">
-									<i class="icon-only icon-36 bg-icon icon-fav-active" data-switch-inner="true" data-switch-inner-before="icon-fav" data-switch-inner-after="icon-fav-active"></i>
+									<i class="icon-only icon-36 bg-icon icon-fav" data-switch-inner="true" data-switch-inner-before="icon-fav" data-switch-inner-after="icon-fav-active"></i>
 									<span class="toggle-off blind">관심펀드 등록</span>
 									<span class="toggle-on blind">관심펀드 등록해제</span>
 								</button>
 							</div>
-							<p class="body-xlarge fw-400" style="word-break: keep-all;">국내 상장 최우량 리츠/인프라에 투자하여 지속 가능한 자본수익과 안정적인 월배당을 목표로 하는 ETF</p>
-							<div class="tags-wrap tags-wrap-bottom">
+
+							<p class="body-xlarge fw-400">국내 상장 최우량 리츠/인프라에 투자하여 지속 가능한 자본수익과 안정적인 월배당을 목표로 하는 ETF</p>
+							<div class="tag-wrap tag-wrap-bottom">
 								<div class="tags tags-medium tags-white">친환경 · 탄소중립</div>
 								<div class="tags tags-medium tags-white">채권 · 인컴 · 단기</div>
 								<div class="tags tags-medium tags-white">채권 · 인컴 · 초단기</div>
 							</div>
 						</div>
 
-						<div class="fund-detail-rate">
+						<div class="fund-detail-rate mt16">
 							<div class="rate-inner">
 								<h3 class="title-large fw-700">수익률</h3>
 								<dl class="expect-list">
@@ -153,20 +159,20 @@
 									</div>
 								</dl>
 							</div>
-							<div class="stroke stroke-dashed"></div>
+							<div class="stroke stroke-dashed my32"></div>
 							<div class="rate-status">
 								<h3 class="title-large fw-700">기준가</h3>
 								<dl class="status-list">
 									<dt>1,813.84</dt>
 									<dd class="rise" aria-label="상승">888.8%</dd>
-									<dd class="fall" aria-label="하락">888.8%</dd>
-									<dd class="steady" aria-label="보합">-</dd>
+									<!-- <dd class="fall" aria-label="하락">888.8%</dd>
+									<dd class="steady" aria-label="보합">000.0%</dd> -->
 								</dl>
 							</div>
 						</div>
 
-						<div class="fund-desc-list">
-							<ul>
+						<div class="fund-desc-list mt16">
+							<ul class="dot-list">
 								<li>비예금상품은 원금손실이 발생할 수 있습니다.</li>
 								<li>과거수익률이 미래 수익률을 보장하지 않습니다.</li>
 								<li>투자대상, 투자에 따른 위험, 위험등급, 수수료는 금융소지자보호법 제 19조 제1항에서 규정하고 있는 중요한 사항입니다.</li>
@@ -174,37 +180,43 @@
 							</ul>
 						</div>
 
-						<div class="fund-detail-info">
+						<div class="fund-detail-info content-fluid mt40">
 							<h4 class="headline-small">상품 특징</h4>
-							<p>
-								<pre>텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다 &#10;&#10;텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다 &#10;&#10; 텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다</pre>
-							</p>
+							<pre class="body-large fw-400 px8">텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다 &#10;&#10;텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다 &#10;&#10; 텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다</pre>
 						</div>
+
 						<div class="stroke stroke4 stroke-fluid"></div>
-						<div class="fund-detail-info">
+
+						<div class="fund-detail-info content-fluid">
 							<h4 class="headline-small">자산구성</h4>
-							<div id="chart1"></div>
-							<span class="divide-list">
-								<span>2024-01-21</span>
-								<span class="division h14 mx8"></span>
-								<span>자료제공 : 제로인</span>
-							</span>
+							<div id="chart1" data-aos data-aos-id="chart1"></div>
+							<div class="group pb8">
+								<div class="right">
+									<span class="divide-list">
+										<span class="fs-14">2024-01-21</span>
+										<span class="division h14 mx8"></span>
+										<span class="fs-14">자료제공 : 제로인</span>
+									</span>
+								</div>
+							</div>
 						</div>
+
 						<div class="stroke stroke4 stroke-fluid"></div>
-						<div class="fund-detail-info">
+
+						<div class="fund-detail-info content-fluid">
 							<h4 class="headline-small">상위 10위</h4>
 							<div class="top10-list">
 								<dl>
 									<div class="list">
-										<dt>NVDIA</dt>
+										<dt>1. NVDIA</dt>
 										<dd>9.62%</dd>
 									</div>
 									<div class="list">
-										<dt>NVDIA</dt>
+										<dt>2. NVDIA</dt>
 										<dd>9.62%</dd>
 									</div>
 									<div class="list">
-										<dt>NVDIA</dt>
+										<dt>3. NVDIA</dt>
 										<dd>9.62%</dd>
 									</div>
 								</dl>
@@ -213,27 +225,50 @@
 								<button type="button" class="btn-xsmall btn-outlined btn-round">전체보기</button>
 							</div>
 						</div>
+
 						<div class="stroke stroke4 stroke-fluid"></div>
-						<div class="fund-detail-info">
+
+						<div class="fund-detail-info content-fluid">
 							<h4 class="headline-small">수익률 추이</h4>
-							<div class="chart-wrap">
-								<div class="btn-wrap">
+							<!-- tab-content -->
+							<div class="tab-content">
+								<ul class="tab-list tab-button" role="tablist">
+									<li class="tab tab-active"><a role="tab" href="#">1개월</a></li>
+									<li class="tab"><a role="tab" href="#">3개월</a></li>
+									<li class="tab"><a role="tab" href="#">6개월</a></li>
+									<li class="tab"><a role="tab" href="#">12개월</a></li>
+								</ul>
+							</div>
+							<!-- //tab-content -->
+							<div class="fund-rate mt24">
+								<h5 class="headline-small"><span>3개월 수익률</span><strong class="rise">+ 888.88%</strong></h5>
+								<h5 class="headline-small"><span>3개월 수익률</span><strong class="fall">- 888.88%</strong></h5>
+								<h5 class="headline-small"><span>3개월 수익률</span><strong class="steady">0.00%</strong></h5>
+							</div>
+							<div class="chart-wrap mt16">
+								<div class="btn-wrap py0 bg-transparent">
 									<button type="button" class="btn-xsmall btn-outlined btn-round"><i class="ico-grid"></i>표 보기</button>
 								</div>
-								<div id="chart2"></div>
-								<span class="divide-list">
-									<span>2024-01-21</span>
-									<span class="division h14 mx8"></span>
-									<span>자료제공 : 제로인</span>
-								</span>
+								<div id="chart2" data-aos data-aos-id="chart2"></div>
+								<div class="group pb0">
+									<div class="right">
+										<span class="divide-list">
+											<span class="fs-14">캡션텍스트</span>
+											<span class="division h14 mx8"></span>
+											<span class="fs-14">캡션텍스트</span>
+										</span>
+									</div>
+								</div>
 							</div>
-							<div class="btn-wrap">
+							<div class="btn-wrap mt16">
 								<button type="button" class="btn-xsmall btn-outlined btn-round">기간별 수익률/기준가 보기</button>
 							</div>
-							<p class="description info body-small fc-typography-caption">역외펀드의 경우, 데이터 제공업체로부터 제공받은 가장 최신의 수익률을 기반으로 안내하고 있으나 당일자 실제 수익률과는 차이가 있을 수 있습니다.</p>
+							<p class="description info body-small fc-typography-caption mt16">역외펀드의 경우, 데이터 제공업체로부터 제공받은 가장 최신의 수익률을 기반으로 안내하고 있으나 당일자 실제 수익률과는 차이가 있을 수 있습니다.</p>
 						</div>
+
 						<div class="stroke stroke4 stroke-fluid"></div>
-						<div class="fund-detail-info">
+
+						<div class="fund-detail-info content-fluid">
 							<h4 class="headline-small">수수료 및 보수</h4>
 
 							<div class="table-layout">
@@ -261,7 +296,7 @@
 											<div class="th">
 												<div class="group gap2 py0 j-start">
 													<div>환매 수수료</div>
-													<button type="button" class="d-flex" data-tippy="계약기간 이전 중도에 펀드를 환매할 시 발생하는 수수료 입니다."><i class="icon-only icon-14 icon-info bg-icon bg-status-info"></i></button>
+													<button type="button" class="d-flex" data-tippy="계약기간 이전 중도에 펀드를 환매할 시 <br> 발생하는 수수료 입니다."><i class="icon-only icon-14 icon-info bg-icon bg-status-info"></i></button>
 
 												</div>
 											</div>
@@ -276,16 +311,51 @@
 							<div class="btn-wrap">
 								<button type="button" class="btn-xsmall btn-outlined btn-round">전체보기</button>
 							</div>
-							<ul class="dot-list">
+							<ul class="dot-list px0">
 								<li>재간접형펀드, 모자형 펀드는 피투자펀드보수가 추가 발생하므로, 상품별 투자설명서를 확인하시기 바랍니다.</li>
 								<li>재간접형펀드, 모자형 펀드는 피투자펀드보수가 추가 발생하므로, 상품별 투자설명서를 확인하시기 바랍니다.</li>
 								<li>재간접형펀드, 모자형 펀드는 피투자펀드보수가 추가 발생하므로, 상품별 투자설명서를 확인하시기 바랍니다.</li>
 							</ul>
 						</div>
+
 						<div class="stroke stroke4 stroke-fluid"></div>
+
 						<div class="content-fluid px0">
 							<a href="#" class="anchor chevron anchor-fluid"><strong class="title-medium px4">매매 기준일</strong></a>
-							<div class="stroke stroke-fluid px0"></div>
+							<div class="stroke px0"></div>
+							<a href="#" class="anchor chevron anchor-fluid"><strong class="title-medium px4">투자설명서 및 약관</strong></a>
+							<div class="stroke px0"></div>
+							<a href="#" class="anchor chevron anchor-fluid"><strong class="title-medium px4">투자에 따른 위험</strong></a>
+						</div>
+
+						<div class="stroke stroke4 stroke-fluid"></div>
+
+						<div class="fund-detail-info content-fluid">
+							<h4 class="headline-small">펀드 정보</h4>
+
+							<div class="stroke px0"></div>
+							<dl class="group pb0">
+								<dt class="fs-18 fw-400 px-4">펀드유형</dt>
+								<dd class="fs-18 fw-400 fc-status-info">주식형, 재간접투자</dd>
+							</dl>
+							<dl class="group pb0">
+								<dt class="fs-18 fw-400 px-4">투자 국가</dt>
+								<dd class="fs-18 fw-400 fc-status-info">글로벌</dd>
+							</dl>
+							<dl class="group pb0">
+								<dt class="fs-18 fw-400 px-4">펀드 설정일</dt>
+								<dd class="fs-18 fw-400 fc-status-info">2021-09-23</dd>
+							</dl>
+							<dl class="group pb0">
+								<dt class="fs-18 fw-400 px-4">펀드 섹터</dt>
+								<dd class="fs-18 fw-400 fc-status-info">글로벌주식</dd>
+							</dl>
+							<dl class="group">
+								<dt class="fs-18 fw-400 px-4">운용사</dt>
+								<dd class="fs-18 fw-400 fc-status-info">신한자산운용</dd>
+							</dl>
+							<div class="stroke px0"></div>
+
 						</div>
 
 					</div>
@@ -303,8 +373,8 @@
 
 		<div class="snackbar-content">
 			<div class="snackbar-content-inner">
-				<button type="button" class="btn-xsmall btn-outlined btn-round" data-snackbar-close>반도체<i class="ico-close-16"></i></button>
-				<strong clsss="d-block fs-15 fc-red-600 fw-500">행내한</strong>
+				<button type="button" class="snackbar-content-close" aria-label="팝업 닫기" data-snackbar-close><i class="ico-close-16"></i></button>
+				<strong class="block fs-15 fc-red-600 fw-500">행내한</strong>
 				<p class="fs-14 fc-typography-body ">본자료는 행내한 자료로 직원의 정보제공이 목적이며 펀드 권유나 가입을 위해서는 별도의 절차를 거쳐야 합니다. <br> 외부로 유출되거나 투자권유 등에 활용되지 않도록 각별히 유의하시기 바랍니다. </p>
 			</div>
 
@@ -501,7 +571,12 @@
 		</div>
 	</div>
 	<!-- //micromodal -->
+	<script>
+		AOS.init({
+			once: true, // whether animation should happen only once - while scrolling down
 
+		});
+	</script>
 	<script>
 		var options1 = {
 			chart: {
@@ -526,11 +601,12 @@
 			},
 			grid: {
 				padding: {
-					bottom: -100
+					bottom: -80
 				}
 			},
 			legend: {
 				position: 'bottom',
+				fontSize: '15px',
 				onItemHover: {
 					highlightDataSeries: true
 				},
@@ -541,7 +617,12 @@
 		};
 
 		var chart1 = new ApexCharts(document.querySelector("#chart1"), options1);
-		chart1.render();
+
+		document.addEventListener('aos:in:chart1', ({
+			detail
+		}) => {
+			chart1.render();
+		});
 	</script>
 	<script>
 		var options2 = {
@@ -588,9 +669,22 @@
 		};
 
 		var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
-		chart2.render();
+
+		document.addEventListener('aos:in:chart2', ({
+			detail
+		}) => {
+			chart2.render();
+		});
 	</script>
 	<style>
+		.apexcharts-legend-marker {
+			border-radius: 4px !important;
+		}
+
+		#chart1 .apexcharts-legend {
+			padding: 0;
+		}
+
 		#chart1 .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center,
 		#chart1 .apexcharts-legend.apx-legend-position-top.apexcharts-align-center {
 			flex-direction: column;
