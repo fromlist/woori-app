@@ -189,7 +189,9 @@
 
 						<div class="fund-detail-info content-fluid">
 							<h4 class="headline-small">자산구성</h4>
-							<div id="chart1" data-aos data-aos-id="chart1"></div>
+							<div style="height:250px;">
+								<div id="chart1" data-aos data-aos-id="chart1"></div>
+							</div>
 							<div class="group pb8">
 								<div class="right">
 									<span class="divide-list">
@@ -249,7 +251,9 @@
 								<div class="btn-wrap py0 bg-transparent">
 									<button type="button" class="btn-xsmall btn-outlined btn-round"><i class="ico-grid"></i>표 보기</button>
 								</div>
-								<div id="chart2" data-aos data-aos-id="chart2"></div>
+								<div style="height:180px;">
+									<div id="chart2" data-aos data-aos-id="chart2"></div>
+								</div>
 								<div class="group pb0">
 									<div class="right">
 										<span class="divide-list">
@@ -261,7 +265,7 @@
 								</div>
 							</div>
 							<div class="btn-wrap mt16">
-								<button type="button" class="btn-xsmall btn-outlined btn-round">기간별 수익률/기준가 보기</button>
+								<button type="button" class="btn-xsmall btn-outlined btn-round" data-micromodal-trigger="modal-popup01">기간별 수익률/기준가 보기</button>
 							</div>
 							<p class="description info body-small fc-typography-caption mt16">역외펀드의 경우, 데이터 제공업체로부터 제공받은 가장 최신의 수익률을 기반으로 안내하고 있으나 당일자 실제 수익률과는 차이가 있을 수 있습니다.</p>
 						</div>
@@ -321,11 +325,11 @@
 						<div class="stroke stroke4 stroke-fluid"></div>
 
 						<div class="content-fluid px0">
-							<a href="#" class="anchor chevron anchor-fluid"><strong class="title-medium px4">매매 기준일</strong></a>
+							<button type="button" class="anchor chevron anchor-fluid" data-micromodal-trigger="modal-popup02"><strong class="title-medium px4">매매 기준일</strong></button>
 							<div class="stroke px0"></div>
-							<a href="#" class="anchor chevron anchor-fluid"><strong class="title-medium px4">투자설명서 및 약관</strong></a>
+							<button type="button" class="anchor chevron anchor-fluid" data-micromodal-trigger="modal-popup03"><strong class="title-medium px4">투자설명서 및 약관</strong></button>
 							<div class="stroke px0"></div>
-							<a href="#" class="anchor chevron anchor-fluid"><strong class="title-medium px4">투자에 따른 위험</strong></a>
+							<button type="button" class="anchor chevron anchor-fluid" data-micromodal-trigger="modal-popup04"><strong class="title-medium px4">투자에 따른 위험</strong></button>
 						</div>
 
 						<div class="stroke stroke4 stroke-fluid"></div>
@@ -385,198 +389,215 @@
 	<!-- //main -->
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-filter">
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-popup01">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 				<div class="modal__header">
-					<strong class="modal__title title-large">검색 조건</strong>
+					<strong class="modal__title title-large">기간별 기준가/수익률</strong>
 					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
 				</div>
 				<div class="modal__content">
-					<div class="content">
+					<div class="content content-fluid">
 
-						<!-- form -->
-						<div class="form">
-							<div class="label"></div>
-							<div class="input-wrap input-btn">
-								<input type="search" placeholder="펀드명, 키워드로 검색해 보세요." title="검색">
-								<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
-							</div>
-							<p class="validate-text"></p>
+						<strong class="title-large py16 px24">3개월</strong>
+
+						<div class="table-col">
+							<table>
+								<caption>기간별 기준가/수익률 3개월</caption>
+								<colgroup>
+									<col style="width:30%">
+									<col style="width:30%">
+									<col style="">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">기준일</th>
+										<th scope="col">기준가</th>
+										<th scope="col">수익률</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+								</tbody>
+
+							</table>
 						</div>
-						<!-- //form -->
-
-
-						<!-- group-form -->
-						<div class="group-form py16 mt16">
-							<div class="group-title">
-								<strong class="title-large">운용사별</strong>
-							</div>
-							<div class="group-content">
-								<div class="inp inp-board">
-									<input type="checkbox" aria-label="전체">
-									<input type="checkbox" aria-label="우리자산">
-									<input type="checkbox" aria-label="KB자산">
-									<input type="checkbox" aria-label="신한자산">
-									<input type="checkbox" aria-label="하나UBS">
-									<input type="checkbox" aria-label="기타">
-								</div>
-							</div>
-						</div>
-						<!-- //group-form -->
-
-
-						<!-- group-form -->
-						<div class="group-form py16 mt16">
-							<div class="group-title">
-								<strong class="title-large">투자지역</strong>
-							</div>
-							<div class="group-content">
-								<div class="inp inp-board">
-									<input type="checkbox" aria-label="전체">
-									<input type="checkbox" aria-label="우리자산">
-									<input type="checkbox" aria-label="KB자산">
-									<input type="checkbox" aria-label="신한자산">
-									<input type="checkbox" aria-label="하나UBS">
-									<input type="checkbox" aria-label="기타">
-								</div>
-							</div>
-						</div>
-						<!-- //group-form -->
-
-						<!-- group-form -->
-						<div class="group-form py16 mt16">
-							<div class="group-title">
-								<strong class="title-large">펀드유형</strong>
-							</div>
-							<div class="group-content">
-								<div class="inp inp-board">
-									<input type="checkbox" aria-label="전체">
-									<input type="checkbox" aria-label="우리자산">
-									<input type="checkbox" aria-label="KB자산">
-									<input type="checkbox" aria-label="신한자산">
-									<input type="checkbox" aria-label="하나UBS">
-									<input type="checkbox" aria-label="기타">
-								</div>
-							</div>
-						</div>
-						<!-- //group-form -->
-
-						<!-- group-form -->
-						<div class="group-form py16 mt16">
-							<div class="group-title">
-								<strong class="title-large">기타</strong>
-							</div>
-							<div class="group-content">
-								<div class="inp inp-board">
-									<input type="checkbox" aria-label="전체">
-									<input type="checkbox" aria-label="우리자산">
-									<input type="checkbox" aria-label="KB자산">
-									<input type="checkbox" aria-label="신한자산">
-									<input type="checkbox" aria-label="하나UBS">
-									<input type="checkbox" aria-label="기타">
-								</div>
-							</div>
-						</div>
-						<!-- //group-form -->
-
-
 
 					</div>
-				</div>
-				<div class="modal__footer">
-					<!-- bottom-btn -->
-					<div class="bottom-btn">
-						<div class="btn-wrap">
-							<button type="button" class="btn-large btn-outlined">초기화</button>
-							<button type="button" class="btn-large btn-primary" data-micromodal-close>검색</button>
-						</div>
-					</div>
-					<!-- //bottom-btn -->
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- //micromodal -->
+
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-select-filter">
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-popup02">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 				<div class="modal__header">
-					<strong class="modal__title title-large"></strong>
+					<strong class="modal__title title-large">매매 기준일</strong>
 					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
 				</div>
 				<div class="modal__content">
 					<div class="content">
 
+						<strong class="title-large py16">매수 방법</strong>
 
-
-						<!-- group-form -->
-						<div class="group-form">
-							<div class="group-title py16 px8">
-								<strong class="title-large px0">정렬</strong>
-							</div>
-							<div class="group-content mt0">
-								<div class="inp inp-tab">
-									<input type="radio" aria-label="수익률순">
-									<input type="radio" aria-label="판매순">
-								</div>
-							</div>
+						<div class="box-gray">
+							<ul class="dot-list px0">
+								<li>17시00분 이전~제03영업일기준가</li>
+								<li>17시00분 이후~제04영업일기준가</li>
+								<li>역외펀드의 경우 15시 00분 이후-신청불가</li>
+							</ul>
 						</div>
-						<!-- //group-form -->
 
-						<!-- group-form -->
-						<div class="group-form mt16">
-							<div class="group-title py16 px8">
-								<strong class="title-large px0">개월수</strong>
-							</div>
-							<div class="group-content mt0">
-								<div class="inp inp-tab">
-									<input type="radio" aria-label="1개월">
-									<input type="radio" aria-label="3개월">
-									<input type="radio" aria-label="3개월">
-									<input type="radio" aria-label="12개월">
-								</div>
-							</div>
-						</div>
-						<!-- //group-form -->
+						<strong class="title-large py16">매수 방법</strong>
 
-						<!-- group-form -->
-						<div class="group-form mt16">
-							<div class="group-title py16 px8">
-								<strong class="title-large px0">필터</strong>
-							</div>
-							<div class="group-content mt0">
-								<div class="inp inp-tab">
-									<input type="radio" aria-label="전체">
-									<input type="radio" aria-label="추천펀드">
-								</div>
-							</div>
+						<div class="box-gray">
+							<ul class="dot-list px0">
+								<li>17시00분 이전~제03영업일기준가, 제08영업일 출금</li>
+								<li>17시00분 이후~제04영업일기준가, 제09영업일 출금</li>
+								<li>역외펀드의 경우 15시 00분 이후-신청불가</li>
+							</ul>
 						</div>
-						<!-- //group-form -->
+
+						<div class="vertical-step content-fluid mt24">
+							<div class="vertical-step-title">
+								<div class="tags tags-small tags-round tags-lightCyan">예시</div>
+								<div class="vertical-step-desc">17시 이전 매수신청, 기준가별점 2영업일, 매매완료 4영업일인 경우</div>
+							</div>
+							<ol>
+								<li>매입신청</li>
+								<li>1영업일</li>
+								<li>2영업일 기준가결정</li>
+								<li>3영업일</li>
+								<li>4영업일 매수완료</li>
+							</ol>
+						</div>
 
 					</div>
-				</div>
-				<div class="modal__footer">
-					<!-- bottom-btn -->
-					<div class="bottom-btn">
-						<div class="btn-wrap">
-							<button type="button" class="btn-large btn-primary" data-micromodal-close>조회</button>
-						</div>
-					</div>
-					<!-- //bottom-btn -->
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- //micromodal -->
-	<script>
-		AOS.init({
-			once: true, // whether animation should happen only once - while scrolling down
 
-		});
-	</script>
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-popup03">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header">
+					<strong class="modal__title title-large">투자설명서 및 약관</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+
+						<div class="content-fluid px0">
+							<button type="button" class="anchor chevron anchor-fluid w100 py16"><strong class="title-medium fw-500" data-micromodal-trigger="modal-popup04">집합투자 규약</strong></button>
+							<button type="button" class="anchor chevron anchor-fluid w100 py16"><strong class="title-medium fw-500">투자설명서</strong></button>
+							<button type="button" class="anchor chevron anchor-fluid w100 py16"><strong class="title-medium fw-500">간이설명서</strong></button>
+							<button type="button" class="anchor chevron anchor-fluid w100 py16"><strong class="title-medium fw-500">자산운용보고서</strong></button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-popup04">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header">
+					<strong class="modal__title title-large">투자에 따른 위험</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+
+						<p class="description error body-small fc-typography-caption">해당 펀드는 연금손실위험, 시장위험, 신용위험, 펀드해지위험이 있을 수 있으므로 신중하게 투자해 주세요.</p>
+
+						<strong class="title-large py16 px8 mt24">원금손실위험</strong>
+
+						<div class="box-gray">
+							<p class="body-medium fw-400">펀드는 운용 실적에 따라 텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다</p>
+						</div>
+
+						<strong class="title-large py16 px8 mt8">시장위험</strong>
+
+						<div class="box-gray">
+							<p class="body-medium fw-400">펀드는 운용 실적에 따라 텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다</p>
+						</div>
+
+						<strong class="title-large py16 px8 mt8">신용위험</strong>
+
+						<div class="box-gray">
+							<p class="body-medium fw-400">펀드는 운용 실적에 따라 텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다</p>
+						</div>
+
+						<strong class="title-large py16 px8 mt8">펀드해지위험</strong>
+
+						<div class="box-gray">
+							<p class="body-medium fw-400">펀드는 운용 실적에 따라 텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
 	<script>
 		var options1 = {
 			chart: {

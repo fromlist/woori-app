@@ -46,6 +46,9 @@
 	<!-- apexcharts -->
 	<link rel="stylesheet" type="text/css" href="../../resources/plugins/apexcharts/3.50.0/apexcharts.css">
 	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/aos/3.0.0-beta.6/aos.css" />
+	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
 	<!-- //[plugins] -->
 
 	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
@@ -142,11 +145,18 @@
 
 						<!-- fund-card-list -->
 						<div class="fund-card-list mt24">
-							<div class="fund-card" data-toggle="toggle-wrap">
+							<div class="fund-card" data-toggle="toggle-wrap" data-aos>
 								<div class="clip clip-recommend">추천</div>
 								<div class="tag-wrap">
-									<div class="tags tags-small tags-lightRed">#높은위험</div>
+									<div class="tags tags-small tags-lightRed">#매우높은위험</div>
+									<div class="tags tags-small tags-FFF4EB">#높은위험</div>
 									<div class="tags tags-small tags-lightYellow">#원금손실가능</div>
+									<div class="tags tags-small tags-green-50">#보통위험</div>
+									<div class="tags tags-small tags-lightBlue">#낮은위험</div>
+									<div class="tags tags-small tags-lightViolet">#매우낮은위험</div>
+									<div class="tags tags-small tags-lightPurple">#글로벌</div>
+									<div class="tags tags-small tags-red-100">#원금손실가능</div>
+
 								</div>
 								<a href="#" class="fund-title headline-small">피델리티글로벌배당인컴증권자투자신탁(주식-재간접형)</a>
 								<div class="divide-list">
@@ -193,7 +203,7 @@
 								</div>
 
 							</div>
-							<div class="fund-card" data-toggle="toggle-wrap">
+							<div class="fund-card" data-toggle="toggle-wrap" data-aos>
 								<div class="clip clip-recommend">추천</div>
 								<div class="tag-wrap">
 									<div class="tags tags-small tags-lightRed">#높은위험</div>
@@ -515,13 +525,13 @@
 			if ($(this).closest('.favorite-btn-wrap').hasClass('is-toggled')) {
 				toastr.caution(`<div class="btn-toast-wrap"><a href="#" class="btn-xsmall btn-ghost-white">바로가기<i class="ico-chevron"></i></a>`, '관심펀드에서 삭제되었습니다.', {
 					"extendedTimeOut": 0,
-					"preventDuplicates": true,
+					"preventDuplicates": false,
 					"disableTimeOut": true,
 				});
 			} else {
 				toastr.success(`<div class="btn-toast-wrap"><a href="#" class="btn-xsmall btn-ghost-white">바로가기<i class="ico-chevron"></i></a>`, '관심펀드에 등록되었습니다', {
 					"extendedTimeOut": 0,
-					"preventDuplicates": true,
+					"preventDuplicates": false,
 					"disableTimeOut": true,
 				});
 			}

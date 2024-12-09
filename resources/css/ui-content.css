@@ -502,11 +502,11 @@
 /* func-card-list */
 .fund-card-list {}
 .fund-card-list .fund-card:not(:last-child) {margin-bottom:16px;}
-.fund-card {position:relative;border-radius:16px;background-color:var(--surface-surface);box-shadow:0px 8px 16px -4px rgba(0, 0, 0, 0.05);padding:40px 24px 24px;border:2px solid transparent;
-    --fund-zIndex:1;
+.fund-card {position:relative;border-radius:16px;background-color:var(--surface-surface);box-shadow:0px 8px 16px -4px rgba(0, 0, 0, 0.05);padding:24px;border:2px solid transparent;--fund-zIndex:1;
 }
-.fund-card .clip {position:absolute;top:-2px;left:22px;z-index:var(--fund-zIndex);}
-.fund-card .tag-wrap {display:flex;gap:4px;}
+.fund-card .clip {position:relative;top:-26px;z-index:var(--fund-zIndex);}
+
+.fund-card .tag-wrap {display:flex;gap:4px;flex-wrap:wrap;padding-right:38px;}
 .fund-card .fund-title {margin-top:14px;padding:0 4px;}
 .fund-card .divide-list {padding:0 4px;margin-top:8px;}
 .fund-card .divide-list .divide01 {color:var(--typography-gray)}
@@ -525,6 +525,16 @@
 .fund-card .favorite-btn-wrap {position:absolute;top:10px;right:10px;z-index:var(--fund-zIndex)}
 .fund-card .favorite-btn-wrap button {display:flex;width:58px;height:52px;align-items:center;justify-content:center;}
 .fund-card.is-toggled {border-color:var(--border-primary_enabled);}
+.fund-card.aos-animate .clip {animation:hithere 1s;}
+.fund-card.is-toggled .clip {top:-24px;}
+@keyframes hithere {
+    30% { transform: scale(1.02); }
+    40%, 60% { transform: rotate(-5deg) scale(1.02); }
+    50% { transform: rotate(5deg) scale(1.02); }
+    70% { transform: rotate(0deg) scale(1.02); }
+    100% { transform: scale(1); }
+}
+  
 
 /* fund-detail */
 .fund-detail {position:relative;padding-top:64px;}
@@ -549,7 +559,6 @@
 .fund-detail-rate .status-list {display:flex;gap:16px;align-items:center;justify-content:center;}
 .fund-detail-rate .status-list dt {font-size:30px;color:var(--typography-black);font-weight:700;}
 .fund-detail-rate .status-list dd {display:flex;font-size:18px;}
-.fund-detail-rate .status-list dd:after {content:'';flex:0 0 14px;width:14px;height:14px;background:url(../images/ico/ico_link_12_gr.svg) center center / contain no-repeat;}
 .fund-detail-rate .status-list dd.rise {display:flex;align-items:center;gap:2px;color:var(--red-600)}
 .fund-detail-rate .status-list dd.rise:before {content:'';flex:0 0 14px;width:14px;height:14px;background:url(../images/ico/ico_triangle_up.svg) center center / contain no-repeat;}
 .fund-detail-rate .status-list dd.fall {display:flex;align-items:center;gap:2px;color:var(--deepblue-600)}
@@ -583,3 +592,13 @@
 .table-layout .tbody .tr .td {display:table-cell;font-size:18px;font-weight:400;color:var(--status-info);text-align:center;}
 .table-layout .tbody .tr .th,
 .table-layout .tbody .tr .td {border-bottom:1px solid var(--border-4);padding-top:12px;padding-bottom:12px;;}
+
+.box-gray {border-radius:8px;background-color:var(--surface-surface50);padding:16px;}
+
+.vertical-step {padding:24px 16px;background-color:var(--surface-surface50);}
+.vertical-step .vertical-step-title {display:flex;gap:8px;align-items:flex-start;}
+.vertical-step ol {padding:16px 24px;}
+.vertical-step ol li {position:relative;font-size:16px;color:var(--typography-caption);line-height:1;display:flex;align-items:flex-start;gap:8px;}
+.vertical-step ol li:not(:last-child) {padding-bottom:20px;}
+.vertical-step ol li:before {content:'';position:relative;flex:0 0 14px;width:14px;height:14px;background:url(../images/PBWFU/ico-step-bul.svg) center center / contain no-repeat;z-index:1;}
+.vertical-step ol li:after {content:'';position:absolute;left:7px;top:0;width:1px;height:100%;background-color:var(--cyan-100);z-index:0;}

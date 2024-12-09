@@ -320,8 +320,17 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .select-option ul li.select-active button {background-color:var(--background-bg_gray);padding-right:52px;}
 .select-option ul li.select-active button:after {content:'';position:absolute;right:24px;top:50%;margin-top:-14px;display:block;width:28px;height:28px;background:url(../images/ico/ico_select_option.svg) center center / contain no-repeat;}
 
+
 .select-option .title-large {padding:16px 24px;}
 .select-option .stroke4 {margin:16px 0;}
+
+.micromodal-slide-select .content {padding-bottom:0;}
+.micromodal-slide-select .select-option ul {margin-bottom:0;}
+.micromodal-slide-select .select-option ul li button {height:48px;padding:0 16px;}
+.micromodal-slide-select .select-option ul li button span {font-size:16px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.micromodal-slide-select .select-option ul li.select-active button {padding-right:52px;}
+
+
 
 /* no-result */
 .no-result {display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;}
@@ -332,8 +341,8 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 [data-scroll-direction="UP"] .sticky-content {position:sticky;}
 
 /* snackbar-content */
-.snackbar-content {position:absolute;padding:16px;transition:bottom 0.3s ease,opacity 0.3s ease;bottom:-10px;opacity:0;z-index:-1;}
-.snackbar-content .snackbar-content-inner {position:relative;border-radius:8px;background-color:var(--white-100);padding: 10px 14px;box-shadow: 0px -2px 40px -1px var(--shadow-gray_3);}
+.snackbar-content {position:fixed;padding:16px;transition:bottom 0.3s ease,opacity 0.3s ease;bottom:-10px;opacity:0;z-index:-1;}
+.snackbar-content .snackbar-content-inner {position:relative;border-radius:8px;background-color:var(--white-100);padding:10px 14px;box-shadow:0px -2px 40px -1px var(--shadow-gray_3);}
 .snackbar-content.is-sticky {position:fixed;bottom:0;z-index:var(--sticky-zIndex);opacity:1;}
 .snackbar-content .snackbar-content-close {position:absolute;width:28px;height:28px;top:0;right:0;
     -webkit-mask-position:center center;
@@ -343,6 +352,6 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
     -webkit-mask-repeat:no-repeat;
     mask-repeat:no-repeat;
     background-color:var(--icon-gray_2);
-    -webkit-mask-image: url(../images/snackbar/ico_snackbar_close.svg);
-    mask-image: url(../images/snackbar/ico_snackbar_close.svg);
+    -webkit-mask-image:url(../images/snackbar/ico_snackbar_close.svg);
+    mask-image:url(../images/snackbar/ico_snackbar_close.svg);
 }

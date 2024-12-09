@@ -11,6 +11,10 @@ $(function () {
     microModalFunc.init();
     stickyContent();
     tippyContent.init();
+    AOS.init({
+        once: true,
+        offset: 150,
+    });
 });
 
 const toggle = {
@@ -311,18 +315,35 @@ const microModalFunc = {
                 const triggerPositionRight = triggerRect.right;
                 const triggerPositionBottom = triggerRect.bottom;
                 const triggerPositionLeft = triggerRect.left;
+                const triggerWidth = triggerRect.width;
                 const windowWidth = $(window).outerWidth();
                 const windowHeight = $(window).outerHeight();
-                if (modalPopup.classList.contains('micromodal-slide-dropdown')) {
+
+                modalPopup.querySelectorAll('.select-option ul').forEach(function (items) {
+                    if (items.childElementCount > 4) {
+                        modalPopup.classList.remove('micromodal-slide-select')
+                        modalPopup.classList.add('micromodal-slide-bottom');
+                    }
+                })
+
+                const dropDown = modalPopup.classList.contains('micromodal-slide-dropdown');
+                const selectBox = modalPopup.classList.contains('micromodal-slide-select');
+
+                if (dropDown || selectBox) {
                     const modalPopupBody = modalPopup.querySelector('.modal__container');
                     const modalPopupBodyWidth = modalPopupBody.clientWidth;
                     const modalPopupBodyHeight = modalPopupBody.clientHeight;
 
-                    const padding = 10
+                    let padding = 10;
 
                     // default (position right)
                     if (triggerPositionRight > windowWidth / 2) {
-                        modalPopupBody.style.left = triggerPositionRight - modalPopupBodyWidth + 'px';
+                        if (selectBox) {
+                            modalPopupBody.style.width = triggerWidth + 'px'
+                            modalPopupBody.style.left = triggerPositionRight - triggerWidth + 'px';
+                        } else {
+                            modalPopupBody.style.left = triggerPositionRight - modalPopupBodyWidth + 'px';
+                        }
 
                     }
                     // reverse (position left)
@@ -351,15 +372,15 @@ const microModalFunc = {
                         }
                     }
                 }
+                trigger.classList.add('is-modal-open');
             }, // [1]
             onClose: function (modalPopup, element,) {
                 const trigger = element;
-                if (modalPopup.classList.contains('micromodal-slide-dropdown')) {
-                    const modalPopupBody = modalPopup.querySelector('.modal__container');
-                    setTimeout(function () {
-                        modalPopupBody.removeAttribute('style');
-                    }, 300)
-                }
+                const modalPopupBody = modalPopup.querySelector('.modal__container');
+                setTimeout(function () {
+                    modalPopupBody.removeAttribute('style');
+                }, 300)
+                trigger.classList.remove('is-modal-open');
 
             }, // [2]
             // openTrigger: 'data-custom-open', // [3]
@@ -396,66 +417,6 @@ const tippyContent = {
     },
 }
 
-/*** layerpopup focus out prevent ***/
-$(document).ready(function () {
-
-    const focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable], video";
-
-    // dropdown open key event
-    $(document).on('keydown', '.dropDown.is-dropdown, .toggleCont.is-toggle', function (event, target) {
-        trapTabKey($(this), event);
-    })
-
-
-    //focusout prevent event
-    function trapTabKey(obj, evt, target) {
-        // if tab or shift-tab pressed
-        if (evt.which == 9) {
-            // get list of all children elements in given object
-            const o = obj.find('*');
-            // get list of focusable items
-            let focusableItems;
-            focusableItems = o.filter(focusableElementsString).filter(':visible')
-            // get currently focused item
-            let focusedItem;
-            focusedItem = $(':focus');
-            // get the number of focusable items
-            var numberOfFocusableItems;
-            numberOfFocusableItems = focusableItems.length
-            // get the index of the currently focused item
-            var focusedItemIndex;
-            focusedItemIndex = focusableItems.index(focusedItem);
-
-            if (evt.shiftKey) {
-                //back tab
-                // if focused on first item and user preses back-tab, go to the last focusable item
-                if (focusedItemIndex == 0) {
-                    focusableItems.get(numberOfFocusableItems - 1).focus();
-                    evt.preventDefault();
-                }
-            } else {
-                //forward tab
-                // if focused on the last item and user preses tab, go to the first focusable item
-                if (focusedItemIndex == numberOfFocusableItems - 1) {
-                    focusableItems.get(0).focus();
-                    evt.preventDefault();
-                }
-            }
-        }
-        if (evt.which == 27) {
-            //dropDown
-            if (obj.hasClass('dropDown')) {
-                obj.removeClass('is-dropdown').find('.trigger').focus();
-            }
-            //toggle
-            if (obj.hasClass('toggleCont')) {
-                obj.removeClass('is-toggle').find('.toggleTrigger').focus();
-                console.log(obj)
-            }
-        }
-    }
-
-});
 
 // sweetalert
 const $swal = {
