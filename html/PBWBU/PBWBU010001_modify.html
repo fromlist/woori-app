@@ -17,14 +17,12 @@
 	<script src="../../resources/plugins/quill/2.0.2/quill.js"></script>
 	<script src="../../resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
 	<!-- jstree -->
-
 	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
 	<script src="../../resources/plugins/jstree/3.3.16/jstree.min.js"></script>
 	<!-- micromodal -->
 	<link rel="stylesheet" href="../../resources/plugins/micromodal/0.4.10/micromodal.css">
 	<script src="../../resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
 	<!-- sortable -->
-
 	<script src="../../resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
 	<!-- sweetalert2 -->
 	<link rel="stylesheet" href="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
@@ -102,7 +100,7 @@
 						<div class="form">
 							<div class="label"></div>
 							<div class="input-wrap input-btn">
-								<input type="search" placeholder="이름, 회사명으로 검색해 보세요." title="검색">
+								<input type="search" placeholder="이름, 회사명으로 검색해 보세요." aria-label="검색">
 								<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
 							</div>
 							<p class="validate-text"></p>
@@ -129,13 +127,13 @@
 						<div class="business-card-customer">
 							<button data-micromodal-trigger="modal-businesscard-customer-modify">
 								<strong class="title-medium">김성민</strong>
-								<div class="divide-list">
+								<span class="divide-list">
 									<span>디지털공통개발부 UI/UX팀</span>
-									<div class="division h14 mx8"></div>
+									<span class="division h14 mx8"></span>
 									<span>과장</span>
-								</div>
-								<div class="company-name">파인너츠</div>
-								<div class="tags tags-small tags-lightBlue">키맨</div>
+								</span>
+								<span class="company-name">파인너츠</span>
+								<span class="tags tags-small tags-lightBlue">키맨</span>
 							</button>
 							<figure>
 								<div class="due-date">
@@ -155,12 +153,12 @@
 						<div class="business-card-customer">
 							<button>
 								<strong class="title-medium">이름</strong>
-								<div class="divide-list">
+								<span class="divide-list">
 									<span>부서명</span>
-									<div class="division h14 mx8"></div>
+									<span class="division h14 mx8"></span>
 									<span>직책</span>
-								</div>
-								<div class="company-name">회사명</div>
+								</span>
+								<span class="company-name">회사명</span>
 							</button>
 							<figure>
 								<div class="due-date">
@@ -180,12 +178,12 @@
 						<div class="business-card-customer">
 							<button>
 								<strong class="title-medium">이름</strong>
-								<div class="divide-list">
+								<span class="divide-list">
 									<span>부서명</span>
-									<div class="division h14 mx8"></div>
+									<span class="division h14 mx8"></span>
 									<span>직책</span>
-								</div>
-								<div class="company-name">회사명</div>
+								</span>
+								<span class="company-name">회사명</span>
 							</button>
 							<figure>
 								<div class="due-date">
@@ -350,7 +348,7 @@
 								<div class="form">
 									<div class="label"></div>
 									<div class="input-wrap">
-										<input type="search" title="이름" placeholder="">
+										<input type="search" aria-label="이름" placeholder="">
 									</div>
 									<p class="validate-text"></p>
 								</div>
@@ -367,7 +365,7 @@
 								<div class="form">
 									<div class="label"></div>
 									<div class="input-wrap">
-										<input type="search" title="회사" placeholder="">
+										<input type="search" aria-label="회사" placeholder="">
 									</div>
 									<p class="validate-text"></p>
 								</div>
@@ -384,7 +382,7 @@
 								<div class="form">
 									<div class="label"></div>
 									<div class="input-wrap input-btn">
-										<input type="tel" title="휴대폰 번호" placeholder="‘-’ 없이 숫자만 입력">
+										<input type="tel" aria-label="휴대폰 번호" placeholder="‘-’ 없이 숫자만 입력">
 										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 									</div>
 									<p class="validate-text"></p>
@@ -402,7 +400,7 @@
 								<div class="form">
 									<div class="label"></div>
 									<div class="input-wrap">
-										<input type="search" title="부서" placeholder="">
+										<input type="search" aria-label="부서" placeholder="">
 									</div>
 									<p class="validate-text"></p>
 								</div>
@@ -419,7 +417,7 @@
 								<div class="form">
 									<div class="label"></div>
 									<div class="input-wrap">
-										<input type="search" title="직책" placeholder="">
+										<input type="search" aria-label="직책" placeholder="">
 									</div>
 									<p class="validate-text"></p>
 								</div>
@@ -436,7 +434,7 @@
 								<div class="form">
 									<div class="label"></div>
 									<div class="input-wrap input-btn">
-										<input type="email" title="이메일" placeholder="">
+										<input type="email" aria-label="이메일" placeholder="">
 										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 									</div>
 									<p class="validate-text"></p>
@@ -454,7 +452,7 @@
 								<div class="form">
 									<div class="label"></div>
 									<div class="input-wrap input-btn">
-										<input type="tel" title="전화번호" placeholder="">
+										<input type="tel" aria-label="전화번호" placeholder="">
 										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 									</div>
 									<p class="validate-text"></p>
@@ -472,7 +470,7 @@
 								<div class="form">
 									<div class="label"></div>
 									<div class="input-wrap input-btn">
-										<input type="tel" title="팩스번호" placeholder="">
+										<input type="tel" aria-label="팩스번호" placeholder="">
 										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 									</div>
 									<p class="validate-text"></p>
@@ -490,7 +488,7 @@
 								<div class="form">
 									<div class="label"></div>
 									<div class="input-wrap">
-										<input type="search" title="주소" placeholder="">
+										<input type="search" aria-label="주소" placeholder="">
 									</div>
 									<p class="validate-text"></p>
 								</div>

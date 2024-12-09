@@ -17,14 +17,12 @@
 	<script src="../../resources/plugins/quill/2.0.2/quill.js"></script>
 	<script src="../../resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
 	<!-- jstree -->
-
 	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
 	<script src="../../resources/plugins/jstree/3.3.16/jstree.min.js"></script>
 	<!-- micromodal -->
 	<link rel="stylesheet" href="../../resources/plugins/micromodal/0.4.10/micromodal.css">
 	<script src="../../resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
 	<!-- sortable -->
-
 	<script src="../../resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
 	<!-- sweetalert2 -->
 	<link rel="stylesheet" href="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
@@ -988,7 +986,7 @@
 								<div class="form">
 									<div class="label"></div>
 									<div class="input-wrap">
-										<input type="search" title="별칭" placeholder="예) 자주쓰는 명함, OO고객 전용">
+										<input type="search" aria-label="별칭" placeholder="예) 자주쓰는 명함, OO고객 전용">
 									</div>
 									<p class="validate-text"></p>
 								</div>
@@ -1084,7 +1082,7 @@
 					<div class="bottom-btn">
 						<div class="btn-wrap">
 							<button type="button" class="btn-large btn-outlined" onclick="$swal.fire02('삭제하시겠습니까', 'caution', '예',  true, '아니요');">삭제</button>
-							<button type=" button" class="btn-large btn-primary" onclick="toastr.success('', '저장되었습니다.')" data-micromodal-close>저장</button>
+							<button type="button" class="btn-large btn-primary" onclick="toastr.success('', '저장되었습니다.')" data-micromodal-close>저장</button>
 						</div>
 					</div>
 					<!-- //bottom-btn -->
