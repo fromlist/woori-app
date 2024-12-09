@@ -189,8 +189,8 @@ const accordionContent = {
 const formStyle = {
     init: function () {
         this.textareaResize();
+        this.inputRemove()
     },
-
     textareaResize: function () {
         $.each($('textarea'), function () {
             if (!$(this).is('[readonly]')) {
@@ -205,6 +205,12 @@ const formStyle = {
             }
         });
     },
+    inputRemove: function () {
+        $(document).on('click', '.input-remove,.input-remove-small', function () {
+            var inputText = $(this).closest('.input-wrap').find('input')
+            inputText.val('').focus();
+        })
+    }
 }
 
 // toastr
@@ -306,18 +312,22 @@ const stickyContent = function () {
 const microModalFunc = {
     init: function () {
         // micromodal
+        let modalTrigger = '';
         MicroModal.init({
 
-            onShow: function (modalPopup, element) {
-                const trigger = element;
-                const triggerRect = trigger.getBoundingClientRect();
-                const triggerPositionTop = triggerRect.top;
-                const triggerPositionRight = triggerRect.right;
-                const triggerPositionBottom = triggerRect.bottom;
-                const triggerPositionLeft = triggerRect.left;
-                const triggerWidth = triggerRect.width;
+            onShow: function (modalPopup, trigger, event) {
+                modalTrigger = event.target;
+                const triggerPositionTop = $(modalTrigger).offset().top;
+                const triggerPositionLeft = $(modalTrigger).offset().left;
+                const triggerPositionBottom = $(modalTrigger).offset().top + $(modalTrigger).outerHeight();
+                const triggerPositionRight = $(modalTrigger).offset().left + $(modalTrigger).outerWidth()
+                const triggerWidth = $(modalTrigger).outerWidth();
                 const windowWidth = $(window).outerWidth();
                 const windowHeight = $(window).outerHeight();
+
+
+                let scrollPosition = $(window).scrollTop();
+                let scrollLeftPosition = $(window).scrollLeft();
 
                 modalPopup.querySelectorAll('.select-option ul').forEach(function (items) {
                     if (items.childElementCount > 4) {
@@ -352,35 +362,36 @@ const microModalFunc = {
                     }
 
                     // default (position bottom)
-                    if (windowHeight / 2 > triggerPositionTop) {
-                        modalPopupBody.style.top = triggerPositionBottom + padding + 'px';
+                    // console.log('windowHeight / 2 ' + windowHeight / 2)
 
-                        //overflow bottom
-                        if (windowHeight < triggerPositionBottom + padding + modalPopupBodyHeight) {
-                            modalPopupBody.style.overflow = 'auto'
-                            modalPopupBody.style.maxHeight = windowHeight - triggerPositionBottom - padding + 'px'
-                        }
+                    if (windowHeight / 2 > triggerPositionTop - scrollPosition) {
+                        modalPopupBody.style.top = triggerPositionBottom + padding - scrollPosition + 'px';
+
+                        // //overflow bottom
+                        // if (windowHeight < triggerPositionBottom + padding + modalPopupBodyHeight) {
+                        //     modalPopupBody.style.overflow = 'auto'
+                        //     modalPopupBody.style.maxHeight = windowHeight - triggerPositionBottom - padding + 'px'
+                        // }
                     }
                     // reverse (position top)
-                    else if (windowHeight / 2 < triggerPositionTop) {
-                        modalPopupBody.style.bottom = windowHeight - triggerPositionTop + padding + 'px';
+                    else if (windowHeight / 2 < triggerPositionTop - scrollPosition) {
+                        modalPopupBody.style.bottom = windowHeight - triggerPositionTop + padding + scrollPosition + 'px';
 
                         //overflow top
-                        if (windowHeight < windowHeight - triggerPositionTop + padding + modalPopupBodyHeight) {
-                            modalPopupBody.style.overflow = 'auto'
-                            modalPopupBody.style.maxHeight = windowHeight - (windowHeight - triggerPositionTop + padding) + 'px'
-                        }
+                        // if (windowHeight < windowHeight - triggerPositionTop + padding + modalPopupBodyHeight) {
+                        //     modalPopupBody.style.overflow = 'auto'
+                        //     modalPopupBody.style.maxHeight = windowHeight - (windowHeight - triggerPositionTop + padding) + 'px'
+                        // }
                     }
                 }
-                trigger.classList.add('is-modal-open');
+                modalTrigger.classList.add('is-modal-open');
             }, // [1]
-            onClose: function (modalPopup, element,) {
-                const trigger = element;
+            onClose: function (modalPopup, trigger, event) {
                 const modalPopupBody = modalPopup.querySelector('.modal__container');
                 setTimeout(function () {
                     modalPopupBody.removeAttribute('style');
                 }, 300)
-                trigger.classList.remove('is-modal-open');
+                modalTrigger.classList.remove('is-modal-open');
 
             }, // [2]
             // openTrigger: 'data-custom-open', // [3]
