@@ -39,6 +39,7 @@ i {font-style:normal;}
 code {display:inline;color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;}
 pre {color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;margin:0;white-space:break-spaces;}
 table caption {position:absolute;width:1px;height:1px;overflow:hidden;}
+table .caption-visible {position:static;width:auto;height:auto;}
 picture {}
 picture img {display:flex;}
 object {display:block;}
@@ -145,6 +146,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .mt5 {margin-top:5px!important;}
 .mt8 {margin-top:8px!important;}
 .mt10 {margin-top:10px!important;}
+.mt12 {margin-top:12px!important;}
 .mt14 {margin-top:14px!important;}
 .mt15 {margin-top:15px!important;}
 .mt16 {margin-top:16px!important;}
@@ -168,6 +170,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .mb5 {margin-bottom:5px!important;}
 .mb8 {margin-bottom:8px!important;}
 .mb10 {margin-bottom:10px!important;}
+.mb12 {margin-bottom:12px!important;}
 .mb14 {margin-bottom:14px!important;}
 .mb15 {margin-bottom:15px!important;}
 .mb16 {margin-bottom:16px!important;}
@@ -190,6 +193,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .ml5 {margin-left:5px!important;}
 .ml8 {margin-left:8px!important;}
 .ml10 {margin-left:10px!important;}
+.ml12 {margin-left:12px!important;}
 .ml15 {margin-left:15px!important;}
 .ml16 {margin-left:16px!important;}
 .ml20 {margin-left:20px!important;}
@@ -211,6 +215,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .mr5 {margin-right:5px!important;}
 .mr8 {margin-right:8px!important;}
 .mr10 {margin-right:10px!important;}
+.mr12 {margin-right:12px!important;}
 .mr15 {margin-right:15px!important;}
 .mr16 {margin-right:16px!important;}
 .mr20 {margin-right:20px!important;}
@@ -232,6 +237,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .m5 {margin:5px!important;}
 .m8 {margin:8px!important;}
 .m10 {margin:10px!important;}
+.m12 {margin:12px!important;}
 .m15 {margin:15px!important;}
 .m16 {margin:16px!important;}
 .m20 {margin:20px!important;}
@@ -251,6 +257,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .my5 {margin-top:5px!important;margin-bottom:5px!important;}
 .my8 {margin-top:8px!important;margin-bottom:8px!important;}
 .my10 {margin-top:10px!important;margin-bottom:10px!important;}
+.my12 {margin-top:12px!important;margin-bottom:12px!important;}
 .my13 {margin-top:13px!important;margin-bottom:13px!important;}
 .my15 {margin-top:15px!important;margin-bottom:15px!important;}
 .my16 {margin-top:16px!important;margin-bottom:16px!important;}
@@ -271,6 +278,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .mx5 {margin-left:5px!important;margin-right:5px!important;}
 .mx8 {margin-left:8px!important;margin-right:8px!important;}
 .mx10 {margin-left:10px!important;margin-right:10px!important;}
+.mx12 {margin-left:12px!important;margin-right:12px!important;}
 .mx13 {margin-left:13px!important;margin-right:13px!important;}
 .mx15 {margin-left:15px!important;margin-right:15px!important;}
 .mx16 {margin-left:16px!important;margin-right:16px!important;}
@@ -291,6 +299,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .pt5 {padding-top:5px!important;}
 .pt8 {padding-top:8px!important;}
 .pt10 {padding-top:10px!important;}
+.pt12 {padding-top:12px!important;}
 .pt13 {padding-top:13px!important;}
 .pt15 {padding-top:15px!important;}
 .pt16 {padding-top:16px!important;}
@@ -311,6 +320,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .pb5 {padding-bottom:5px!important;}
 .pb8 {padding-bottom:8px!important;}
 .pb10 {padding-bottom:10px!important;}
+.pb12 {padding-bottom:12px!important;}
 .pb13 {padding-bottom:13px!important;}
 .pb15 {padding-bottom:15px!important;}
 .pb16 {padding-bottom:16px!important;}
@@ -331,6 +341,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .pl5 {padding-left:5px!important;}
 .pl8 {padding-left:8px!important;}
 .pl10 {padding-left:10px!important;}
+.pl12 {padding-left:12px!important;}
 .pl13 {padding-left:13px!important;}
 .pl15 {padding-left:15px!important;}
 .pl16 {padding-left:16px!important;}
@@ -351,6 +362,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .pr5 {padding-right:5px!important;}
 .pr8 {padding-right:8px!important;}
 .pr10 {padding-right:10px!important;}
+.pr12 {padding-right:12px!important;}
 .pr13 {padding-right:13px!important;}
 .pr15 {padding-right:15px!important;}
 .pr16 {padding-right:16px!important;}
@@ -371,6 +383,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .p5 {padding:5px!important;}
 .p8 {padding:8px!important;}
 .p10 {padding:10px!important;}
+.p12 {padding:12px!important;}
 .p13 {padding:13px!important;}
 .p15 {padding:15px!important;}
 .p16 {padding:16px!important;}
@@ -393,6 +406,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .py6 {padding-top:6px!important;padding-bottom:6px!important;}
 .py8 {padding-top:8px!important;padding-bottom:8px!important;}
 .py10 {padding-top:10px!important;padding-bottom:10px!important;}
+.py12 {padding-top:12px!important;padding-bottom:12px!important;}
 .py13 {padding-top:13px!important;padding-bottom:13px!important;}
 .py15 {padding-top:15px!important;padding-bottom:15px!important;}
 .py16 {padding-top:16px!important;padding-bottom:16px!important;}
@@ -414,6 +428,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .px6 {padding-left:6px!important;padding-right:6px!important;}
 .px8 {padding-left:8px!important;padding-right:8px!important;}
 .px10 {padding-left:10px!important;padding-right:10px!important;}
+.px12 {padding-left:12px!important;padding-right:12px!important;}
 .px13 {padding-left:13px!important;padding-right:13px!important;}
 .px15 {padding-left:15px!important;padding-right:15px!important;}
 .px16 {padding-left:16px!important;padding-right:16px!important;}

@@ -102,9 +102,53 @@
 						<div class="group-content">
 							<div class="form">
 								<div class="input-wrap input-btn">
-									<input type="tel" pattern="\d*" placeholder="통합고객번호" aria-label="통합고객번호">
+									<input type="button" aria-label="통합고객번호" placeholder="" data-micromodal-trigger="modal-number-search">
 									<button type="button" class="input-remove-small" aria-label="입력 내용 삭제"></button>
-									<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
+									<button type="button" class="input-search" data-micromodal-trigger="modal-number-search" aria-label="입력 내용 검색"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-title">
+							<strong class="title-medium">대상기간</strong>
+						</div>
+						<div class="group-content">
+							<div class="form">
+								<div class="input-wrap input-datepicker">
+									<button type="button" aria-label="대상기간 시작일" data-micromodal-trigger="modal-datepicker-year">2023-11</button>
+									<div class="bul">-</div>
+									<button type="button" aria-label="대상기간 종료일" data-micromodal-trigger="modal-datepicker-year">2024-10</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-title">
+							<strong class="title-medium">처리구분</strong>
+						</div>
+						<div class="group-content">
+							<div class="form">
+								<div class="inp-group">
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad002">
+											<span class="label-title">전점 동일인</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad002">
+											<span class="label-title">자점 동일인</span>
+										</label>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -126,7 +170,8 @@
 		<!-- bottom-btn -->
 		<div class="bottom-btn">
 			<div class="btn-wrap">
-				<button type="button" class="btn-large btn-primary" data-micromodal-trigger="modal-businesscard-customer-regist"><i class="ico-add"></i>고객 명함 등록</button>
+				<button type="button" class="btn-large btn-outlined">초기화</button>
+				<button type="button" class="btn-large btn-primary">조회</button>
 			</div>
 		</div>
 		<!-- //bottom-btn -->
@@ -136,29 +181,135 @@
 
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard-customer-regist" aria-hidden="true">
+	<div class="micromodal-slide micromodal-slide-bottom micromodal-slide-bottom-full modal" id="modal-number-search">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
-
 				<div class="modal__header">
-					<strong class="modal__title title-large">고객 명함 등록 </strong>
+					<strong class="modal__title title-medium">통합고객번호 검색</strong>
 					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
 				</div>
 				<div class="modal__content">
+					<div class="content pb0">
 
-					<div class="content">
-
-					</div>
-
-				</div>
-				<div class="modal__footer">
-					<!-- bottom-btn -->
-					<div class="bottom-btn">
-						<div class="btn-wrap">
-							<button type="button" class="btn-large btn-primary" data-micromodal-close>저장</button>
+						<!-- tab-content -->
+						<div class="tab-content mb32">
+							<ul class="tab-list tab-col overflow-list" role="tablist">
+								<li class="tab tab-active"><a role="tab" href="#">법인/사업자번호</a></li>
+								<li class="tab"><a role="tab" href="#">고객명</a></li>
+								<li class="tab"><a role="tab" href="#">계좌번호</a></li>
+							</ul>
 						</div>
+						<!-- //tab-content -->
+
+						<div class="group-form mb8">
+							<div class="group-content">
+								<div class="form">
+									<div class="inp-group">
+										<div class="inp inp-medium">
+											<label>
+												<input type="radio" name="rad003">
+												<span class="label-title">법인</span>
+											</label>
+										</div>
+										<div class="inp inp-medium">
+											<label>
+												<input type="radio" name="rad003">
+												<span class="label-title">사업자</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- form -->
+						<div class="form">
+							<div class="label"></div>
+							<div class="input-wrap input-btn">
+								<input type="tel" placeholder="‘-’ 없이 숫자만 입력해주세요." aria-label="검색">
+								<button type="button" class="input-remove-small" aria-label="입력 내용 삭제"></button>
+								<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
+							</div>
+							<p class="validate-text"></p>
+						</div>
+						<!-- //form -->
+
+
+						<!-- division-center -->
+						<div class="division-center content-fluid bg-background-bg_lightGray px16 py40">
+
+							<!-- customer-card-list -->
+							<div class="customer-card-list">
+								<strong class="search-result">검색결과</strong>
+								<a href="#" class="customer-card">
+									<strong class="title-medium">홍길동</strong>
+									<dl class="group">
+										<dt>실명번호</dt>
+										<dd>1013456123</dd>
+									</dl>
+									<dl class="group">
+										<dt>실명번호구분</dt>
+										<dd>사업자등록번호</dd>
+									</dl>
+									<dl class="group">
+										<dt>통합고객번호</dt>
+										<dd>10219022371</dd>
+									</dl>
+									<dl class="group">
+										<dt>여권발급국가</dt>
+										<dd>99</dd>
+									</dl>
+									<dl class="group">
+										<dt>잠재고객여부</dt>
+										<dd>Y</dd>
+									</dl>
+								</a>
+
+								<a href="#" class="customer-card" data-micromodal-close>
+									<strong class="title-medium">홍길동</strong>
+									<dl class="group">
+										<dt>실명번호</dt>
+										<dd>1013456123</dd>
+									</dl>
+									<dl class="group">
+										<dt>실명번호구분</dt>
+										<dd>사업자등록번호</dd>
+									</dl>
+									<dl class="group">
+										<dt>통합고객번호</dt>
+										<dd>10219022371</dd>
+									</dl>
+									<dl class="group">
+										<dt>여권발급국가</dt>
+										<dd>99</dd>
+									</dl>
+									<dl class="group">
+										<dt>잠재고객여부</dt>
+										<dd>Y</dd>
+									</dl>
+								</a>
+							</div>
+							<!-- //customer-card-list -->
+
+						</div>
+						<!-- //division-center -->
+
+
+
+
+						<!-- division-center -->
+						<div class="division-center content-fluid bg-background-bg_lightGray">
+
+							<div class="no-result">
+								<i class="icon-only icon-48 icon-noresult bg-icon-gray_1"></i>
+								<p class="body-medium fw-400">검색 결과가 없습니다.</p>
+							</div>
+
+						</div>
+						<!-- //division-center -->
+
+
 					</div>
-					<!-- //bottom-btn -->
 				</div>
 			</div>
 		</div>
@@ -166,6 +317,71 @@
 	<!-- //micromodal -->
 
 
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker-year" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+						<div class="datepicker-wrap pt16">
+							<div class="year">
+								<div class="swiper swiper-year">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="swiper-slide">2023</div>
+										<div class="swiper-slide">2024</div>
+										<div class="swiper-slide">2025</div>
+										<div class="swiper-slide">2026</div>
+										<div class="swiper-slide">2027</div>
+									</div>
+								</div>
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+							<div class="month">
+								<button type="button" class="btn-small btn-outlined btn-round">1</button>
+								<button type="button" class="btn-small btn-outlined btn-round">2</button>
+								<button type="button" class="btn-small btn-outlined btn-round">3</button>
+								<button type="button" class="btn-small btn-outlined btn-round">4</button>
+								<button type="button" class="btn-small btn-outlined btn-round">5</button>
+								<button type="button" class="btn-small btn-outlined btn-round">6</button>
+								<button type="button" class="btn-small btn-outlined btn-round">7</button>
+								<button type="button" class="btn-small btn-outlined btn-round">8</button>
+								<button type="button" class="btn-small btn-outlined btn-round">9</button>
+								<button type="button" class="btn-small btn-outlined btn-round">10</button>
+								<button type="button" class="btn-small btn-outlined btn-round">11</button>
+								<button type="button" class="btn-small btn-outlined btn-round">12</button>
+							</div>
+							<div class="stroke my24"></div>
+							<p class="description info body-small fc-typography-caption">대상기간은 전월/전전월 기준 1년 이내만 가능합니다.</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<script>
+		const newSwiper = new Swiper('.year .swiper', {
+			spaceBetween: 1,
+			observer: true,
+			navigation: {
+				nextEl: '.year .swiper-button-next',
+				prevEl: '.year .swiper-button-prev',
+			},
+		});
+	</script>
 </body>
 
 </html>

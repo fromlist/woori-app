@@ -74,7 +74,7 @@
 					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
 				</div>
 				<div class="center">
-					<h1>고객 명함 관리</h1>
+					<h1>기업정보 조회</h1>
 				</div>
 				<div class="right">
 					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
@@ -93,57 +93,124 @@
 				<!-- content -->
 				<div class="content">
 
-					<!-- sort-wrap -->
-					<div class="sort-wrap">
 
-						<!-- form -->
-						<div class="form">
-							<div class="label"></div>
-							<div class="input-wrap input-btn">
-								<input type="search" placeholder="이름, 회사명으로 검색해 보세요." aria-label="검색">
-								<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
+					<!-- group-form -->
+					<div class="group-form mt16">
+						<div class="group-title">
+							<strong class="title-medium">검색대상</strong>
+						</div>
+						<div class="group-content">
+							<div class="form">
+								<button class="select" data-micromodal-trigger="modal-select-list" data-placeholder="선택하세요"><span>기업명</span></button>
 							</div>
-							<p class="validate-text"></p>
+							<div class="form">
+								<div class="input-wrap">
+									<input type="search" placeholder="검색어를 2자 이상 입력해주세요." aria-label="검색대상">
+								</div>
+							</div>
 						</div>
-						<!-- //form -->
-
 					</div>
-					<!-- sort-wrap -->
+					<!-- //group-form -->
+
+					<div class="stroke my24"></div>
 
 
-					<!-- division-center -->
-					<div class="division-center">
-
-						<div class="no-result">
-							<i class="icon-only icon-48 icon-noresult bg-icon-gray_1"></i>
-							<p class="body-medium fw-400">검색 결과가 없습니다.</p>
+					<!-- group-form -->
+					<div class="group-form mt16">
+						<div class="group-content">
+							<div class="form">
+								<button type="button" class="anchor chevron anchor-fluid anchor-border" data-micromodal-trigger="modal-job"><span class="body-large fw-700">업종 전체</span></button>
+							</div>
+							<div class="form">
+								<button type="button" class="anchor chevron anchor-fluid anchor-border" data-micromodal-trigger="modal-region"><span class="body-large fw-700">지역 전체</span></button>
+							</div>
 						</div>
-
 					</div>
-					<!-- //division-center -->
+					<!-- //group-form -->
 
+
+					<!-- group-form -->
+					<div class="group-form mt40 py16">
+						<div class="group-title">
+							<strong class="title-medium fw-500">최근 조회 기업</strong>
+						</div>
+						<div class="group-content mt12">
+							<ul class="overflow-list content-fluid">
+								<li>
+									<div class="btn-xsmall btn-outlined btn-round">
+										<button class="btn-inner">삼성중공업(주)</button>
+										<button aria-label="검색어 삭제"><i class="ico-close-16"></i></button>
+									</div>
+								</li>
+								<li>
+									<div class="btn-xsmall btn-outlined btn-round">
+										<button class="btn-inner">(주)우리이앤지</button>
+										<button aria-label="검색어 삭제"><i class="ico-close-16"></i></button>
+									</div>
+								</li>
+								<li>
+									<div class="btn-xsmall btn-outlined btn-round">
+										<button class="btn-inner">삼성전자(주)</button>
+										<button aria-label="검색어 삭제"><i class="ico-close-16"></i></button>
+									</div>
+								</li>
+								<li>
+									<div class="btn-xsmall btn-outlined btn-round">
+										<button class="btn-inner">키워드</button>
+										<button aria-label="검색어 삭제"><i class="ico-close-16"></i></button>
+									</div>
+								</li>
+								<li>
+									<div class="btn-xsmall btn-outlined btn-round">
+										<button class="btn-inner">키워드</button>
+										<button aria-label="검색어 삭제"><i class="ico-close-16"></i></button>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //group-form -->
 
 				</div>
 				<!-- //content -->
-
 			</div>
 			<!-- //container -->
+
 
 		</div>
 		<!-- //content end -->
 		<!-- //main-inner -->
 
 
-		<!-- bottom-btn -->
-		<div class="bottom-btn">
-			<div class="btn-wrap">
-				<button type="button" class="btn-large btn-primary"><i class="ico-add"></i>고객 명함 등록</button>
-			</div>
-		</div>
-		<!-- //bottom-btn -->
-
 	</main>
 	<!-- //main -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-select modal" id="modal-select-list">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header modal__header__alert">
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close=""></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content content-fluid">
+						<div class="select-option">
+							<ul>
+								<li class="select-active"><button type="button" aria-label="선택됨" data-micromodal-close><span>기업명</span></button></li>
+								<li><button type="button" data-micromodal-close><span>대표자명</span></button></li>
+								<li><button type="button" data-micromodal-close><span>법인번호</span></button></li>
+								<li><button type="button" data-micromodal-close><span>사업자번호</span></button></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
 
 </body>
 
