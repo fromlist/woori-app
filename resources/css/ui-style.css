@@ -337,7 +337,7 @@ div.btn-xsmall .btn-inner {display:flex;padding:6px 0 6px 12px;}
     flex:0 0 12px;
     width:12px;
 }
-.chevron-only {display:flex;width:16px;height:16px;flex:0 0 16px;background:url(../images/arrow/ic_arw_link_gray_16.svg) center center / contain no-repeat;}
+.chevron-only {display:flex;width:16px;height:16px;flex:0 0 16px;background:url(../images/arrow/ico_chevron_only.svg) center center / contain no-repeat;}
 
 /* button inner icon */
 .btn-large i,

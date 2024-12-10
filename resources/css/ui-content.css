@@ -618,3 +618,35 @@
 .customer-contribution-title {display:block;font-size:18px;font-weight:500;color:var(--typography-gray);margin-bottom:24px;text-align:center;}
 .customer-contribution {padding:40px 24px;background-color:var(--background-bg_white);}
 .customer-contribution .headline-small {text-align:center;}
+
+/* accordion-select */
+.accordion-select {}
+.accordion-select .accordion-select-all {position:relative;display:flex;background-color:var(--surface-surface50);font-size:18px;font-weight:500;color:var(--typography-black);padding:24px;width:100%;}
+.accordion-select .accordion-select-all:before {content:'';position:absolute;left:24px;right:24px;bottom:0;background-color:var(--border-4);height:1px;}
+.accordion-select .accordion-select-all.is-selected {font-weight:700;padding-right:52px;}
+.accordion-select .accordion-select-all.is-selected:after {content:'';position:absolute;right:24px;top:50%;margin-top:-14px;display:block;width:28px;height:28px;background:url(../images/ico/ico_select_option.svg) center center / contain no-repeat;}
+
+.accordion-select .dep01 {position:relative;left:0;transition:left 0.3s ease;}
+.accordion-select .accordion-select-list {}
+.accordion-select .accordion-select-list > li {}
+.accordion-select .accordion-select-list > li > button:before {content:'';position:absolute;left:24px;right:24px;bottom:0;background-color:var(--border-4);height:1px;}
+.accordion-select .accordion-select-list > li > button {position:relative;font-size:18px;font-weight:500;color:var(--typography-body);padding:24px;width:100%;}
+
+.accordion-select .dep01.dep02-show {left:-100%;}
+.accordion-select .dep01.dep02-show .accordion-select-list > li:not(.is-selected) {display:none;}
+
+.accordion-select .dep02 {display:none;position:absolute;left:100%;top:0;width:100%;transition:left 0.3s ease;}
+
+
+.accordion-select .history-back {}
+.accordion-select .history-back button {display:flex;align-items:center;width:100%;padding:16px 24px;font-size:18px;font-weight:700;color:var(--typography-title);gap:16px;}
+.accordion-select .history-back button:before {content:'';flex:0 0 12px;width:12px;height:24px;background:url(../images/arrow/ico_history_back.svg) center center / contain no-repeat;}
+
+.accordion-select .dep02 button {position:relative;display:flex;font-size:16px;font-weight:500;color:var(--typography-black);line-height:24px;padding:16px;width:100%;gap:16px;}
+.accordion-select .dep02 button:before {content:'';flex:0 0 24px;width:24px;height:24px;}
+.accordion-select .dep02 button:after {content:'';position:absolute;width:calc(100vw - 48px);right:24px;bottom:0;background-color:var(--surface-surface50);height:1px;}
+.accordion-select .dep02 button:not(:only-child):before {background:url(../images/arrow/ico_acc_up.svg) center center / contain no-repeat;}
+
+.accordion-select .dep02 .is-acc > button:not(:only-child):before {background:url(../images/arrow/ico_chevron_down.svg) center center / contain no-repeat;}
+.accordion-select .dep02 ul ul {padding-left:16px;}
+.accordion-select .dep02 li:not(.is-acc) ul {display:none;}
