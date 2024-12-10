@@ -444,6 +444,8 @@
 						dep02List.addClass('is-acc');
 						dep02List.siblings('li').removeClass('is-acc')
 					}
+					dep02AccTrigger.removeClass('is-checked');
+					$(this).addClass('is-checked');
 				})
 			},
 			reset: function() {

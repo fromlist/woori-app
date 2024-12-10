@@ -637,6 +637,10 @@
 
 .accordion-select .dep02 {display:none;position:absolute;left:100%;top:0;width:100%;transition:left 0.3s ease;}
 
+.accordion-select .dep02 ul,
+.accordion-select .dep02 li {position:relative;}
+.accordion-select .dep02 ul:after {content:'';position:absolute;width:calc(100vw - 48px);right:24px;top:0;background-color:var(--surface-surface50);height:1px;}
+.accordion-select .dep02 li:after {content:'';position:absolute;width:calc(100vw - 48px);right:24px;bottom:0;background-color:var(--surface-surface50);height:1px;}
 
 .accordion-select .history-back {}
 .accordion-select .history-back button {display:flex;align-items:center;width:100%;padding:16px 24px;font-size:18px;font-weight:700;color:var(--typography-title);gap:16px;}
@@ -644,9 +648,12 @@
 
 .accordion-select .dep02 button {position:relative;display:flex;font-size:16px;font-weight:500;color:var(--typography-black);line-height:24px;padding:16px;width:100%;gap:16px;}
 .accordion-select .dep02 button:before {content:'';flex:0 0 24px;width:24px;height:24px;}
-.accordion-select .dep02 button:after {content:'';position:absolute;width:calc(100vw - 48px);right:24px;bottom:0;background-color:var(--surface-surface50);height:1px;}
+
 .accordion-select .dep02 button:not(:only-child):before {background:url(../images/arrow/ico_acc_up.svg) center center / contain no-repeat;}
 
 .accordion-select .dep02 .is-acc > button:not(:only-child):before {background:url(../images/arrow/ico_chevron_down.svg) center center / contain no-repeat;}
 .accordion-select .dep02 ul ul {padding-left:16px;}
 .accordion-select .dep02 li:not(.is-acc) ul {display:none;}
+
+.accordion-select .dep02 button.is-checked {padding-right:52px;}
+.accordion-select .dep02 button.is-checked:after {content:'';position:absolute;right:24px;top:50%;margin-top:-14px;display:block;width:28px;height:28px;background:url(../images/ico/ico_select_option.svg) center center / contain no-repeat;}
