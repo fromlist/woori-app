@@ -250,6 +250,7 @@
 .body-large {display:block;font-size:18px;line-height:1.6;font-weight:500;color:var(--typography-body);}
 .body-medium {display:block;font-size:16px;line-height:1.6;font-weight:500;color:var(--typography-body);}
 .body-small {display:block;font-size:15px;line-height:1.6;font-weight:500;color:var(--typography-body);}
+.body-caption {display:block;font-size:14px;line-height:1.6;font-weight:400;color:var(--typography-caption);}
 
 
 /* button */
@@ -875,7 +876,7 @@ button.select.is-modal-open:after {background:url(../images/form/select-chevron-
 .table-row table td {background-color:var(--white-100);border-bottom:1px solid var(--border-12);}
 .table-row table tr:first-child > * {border-top:1px solid var(--border-12);}
 .table-row table tr:not(:last-child) > * {border-bottom:1px solid var(--border-4);}
-.table-row table .caption-visible {font-size:14px;font-weight:400;color:var(--typography-caption);text-align:left;}
+.table-row table .caption-visible {font-size:14px;font-weight:400;color:var(--typography-caption);text-align:left;background-color:inherit}
 
 .table-inner {}
 .overflow-visible {position:relative;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;/* flex-direction: column; */}
