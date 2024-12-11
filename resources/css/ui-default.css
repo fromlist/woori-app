@@ -39,7 +39,7 @@ i {font-style:normal;}
 code {display:inline;color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;}
 pre {color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;margin:0;white-space:break-spaces;}
 table caption {position:absolute;width:1px;height:1px;overflow:hidden;}
-table .caption-visible {position:static;width:auto;height:auto;}
+table .caption-visible {position:static;width:auto;height:auto;padding: inherit;}
 picture {}
 picture img {display:flex;}
 object {display:block;}
@@ -293,6 +293,27 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .mx50 {margin-left:50px!important;margin-right:50px!important;}
 .mx70 {margin-left:70px!important;margin-right:70px!important;}
 .mx100 {margin-left:100px!important;margin-right:100px!important;}
+
+.mx-0 {margin-left:-0px!important;margin-right:-0px!important;}
+.mx-4 {margin-left:-4px!important;margin-right:-4px!important;}
+.mx-5 {margin-left:-5px!important;margin-right:-5px!important;}
+.mx-8 {margin-left:-8px!important;margin-right:-8px!important;}
+.mx-10 {margin-left:-10px!important;margin-right:-10px!important;}
+.mx-12 {margin-left:-12px!important;margin-right:-12px!important;}
+.mx-13 {margin-left:-13px!important;margin-right:-13px!important;}
+.mx-15 {margin-left:-15px!important;margin-right:-15px!important;}
+.mx-16 {margin-left:-16px!important;margin-right:-16px!important;}
+.mx-20 {margin-left:-20px!important;margin-right:-20px!important;}
+.mx-24 {margin-left:-24px!important;margin-right:-24px!important;}
+.mx-25 {margin-left:-25px!important;margin-right:-25px!important;}
+.mx-30 {margin-left:-30px!important;margin-right:-30px!important;}
+.mx-32 {margin-left:-32px!important;margin-right:-32px!important;}
+.mx-35 {margin-left:-35px!important;margin-right:-35px!important;}
+.mx-40 {margin-left:-40px!important;margin-right:-40px!important;}
+.mx-45 {margin-left:-45px!important;margin-right:-45px!important;}
+.mx-50 {margin-left:-50px!important;margin-right:-50px!important;}
+.mx-70 {margin-left:-70px!important;margin-right:-70px!important;}
+.mx-100 {margin-left:-100px!important;margin-right:-100px!important;}
 
 .pt0 {padding-top:0px!important;}
 .pt4 {padding-top:4px!important;}

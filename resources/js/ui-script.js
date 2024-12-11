@@ -139,6 +139,16 @@ const tabContent = {
                     'aria-selected': 'true'
                 })
                 $('#' + $(this).attr('data-controls')).addClass('tab-active').attr({ 'aria-selected': 'true' });
+
+                const scroll = this.closest('.tab-list')
+                const scrollPadding = $(scroll).css('padding-left').replace("px", "");
+
+                const scrollPosition = scroll.scrollLeft;
+                const scrollPositionLeft = $(this).offset().left;
+                scroll.scrollTo({
+                    left: scrollPositionLeft - scrollPadding,
+                    behavior: 'smooth',
+                })
             } else {
                 $(this).attr({
                     'aria-selected': 'false'
