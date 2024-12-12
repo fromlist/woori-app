@@ -98,7 +98,7 @@
 					<dt>Readonly</dt>
 					<dd>
 						<div class="form">
-							<div class="input-wrap">
+							<div class="input-wrap readonly">
 								<input type="text" readonly placeholder="Placeholder" value="Readonly" aria-label="input">
 							</div>
 						</div>
@@ -108,7 +108,7 @@
 					<dt>Disabled</dt>
 					<dd>
 						<div class="form">
-							<div class="input-wrap">
+							<div class="input-wrap disabled">
 								<input type="text" disabled placeholder="Placeholder" value="Disabled" aria-label="input">
 							</div>
 						</div>
@@ -138,7 +138,7 @@
 				<h2>Input Inner Button</h2>
 				<hr>
 				<dl>
-					<dt>Remove Text</dt>
+					<dt>Remove Button</dt>
 					<dd>
 						<div class="form">
 							<div class="input-wrap input-btn">
@@ -149,7 +149,7 @@
 					</dd>
 				</dl>
 				<dl>
-					<dt>Search Text</dt>
+					<dt>Search Button(Browser default)</dt>
 					<dd>
 						<div class="form">
 							<div class="input-wrap">
@@ -170,30 +170,45 @@
 					</dd>
 				</dl>
 				<dl>
-					<dl>
-						<dt>Type Tel <span>With Button</span></dt>
-						<dd>
-							<div class="form">
-								<div class="input-wrap input-btn">
-									<input type="tel" placeholder="Placeholder" value="Text">
-									<button type="button" class="input-remove-small" aria-label="입력 내용 삭제"></button>
-									<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
-								</div>
+					<dt>Type Tel <span>With Button</span></dt>
+					<dd>
+						<div class="form">
+							<div class="input-wrap input-btn">
+								<input type="tel" placeholder="Placeholder" value="Text">
+								<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+								<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
 							</div>
-						</dd>
-					</dl>
-					<dl>
-						<dt>password</dt>
-						<dd>
-							<div class="form">
-								<div class="input-wrap input-btn">
-									<input type="password" placeholder="Placeholder" value="Text">
-									<button type="button" class="input-remove-small" aria-label="입력 내용 삭제"></button>
-									<button type="button" class="input-password" aria-label="비밀번호 표시"></button>
-								</div>
+						</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>password</dt>
+					<dd>
+						<div class="form">
+							<div class="input-wrap input-btn">
+								<input type="password" placeholder="Placeholder" value="Text">
+								<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+								<button type="button" class="input-password" aria-label="비밀번호 표시"></button>
 							</div>
-						</dd>
-					</dl>
+						</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>inner label</dt>
+					<dd>
+						<div class="form">
+							<div class="form">
+								<div class="label">예치금액 <span class="right">5억5000만원</span></div>
+								<div class="input-wrap input-placeholder">
+									<input type="tel" class="ar" placeholder="금액입력" aria-label="예치금액">
+									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+									<div class="visible-placeholder">원</div>
+								</div>
+								<p class="validate-text"></p>
+							</div>
+						</div>
+					</dd>
+				</dl>
 			</div>
 		</div>
 

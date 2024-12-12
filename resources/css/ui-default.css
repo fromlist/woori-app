@@ -44,8 +44,7 @@ picture {}
 picture img {display:flex;}
 object {display:block;}
 
-button:focus-visible,a:focus-visible,
-input:focus-visible {outline-offset:-1px;outline:1px solid var(--status-focused);}
+button:focus-visible,a:focus-visible {outline-offset:-1px;outline:1px solid var(--status-focused);}
 
 html {-webkit-text-size-adjust:none;}
 
