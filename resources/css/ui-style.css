@@ -884,6 +884,5 @@ button.select.is-modal-open:after {background:url(../images/form/select-chevron-
 .overflow-visible table {min-width:768px;padding:0 24px;}
 .overflow-visible:after {content:'';width:10px;background: url(../images/arrow/arrow_date_next.svg) center center / 10px 20px no-repeat, linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);position:sticky;right:0;top:0;display: flex;flex: 0 0 60px;margin-left:-60px;opacity:1;transition:opacity 0.3s ease;}
 .overflow-visible.scroll-end:after {opacity:0;}
-
-.clone-head-table-wrap .caption-visible,
-.clone-column-table-wrap .caption-visible {}
+.overflow-visible .column01-sticky tr > *:first-child {position:sticky;left:0;z-index:1;}
+.overflow-visible .column01-sticky tr:first-child > *:first-child {z-index:2;}
