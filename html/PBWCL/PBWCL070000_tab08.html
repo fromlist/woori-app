@@ -119,10 +119,10 @@
 								<li class="tab"><a role="tab" href="#">기업신용</a></li>
 								<li class="tab"><a role="tab" href="#">재무정보</a></li>
 								<li class="tab"><a role="tab" href="#">종합의견</a></li>
-								<li class="tab tab-active"><a role="tab" href="#">연혁</a></li>
+								<li class="tab"><a role="tab" href="#">연혁</a></li>
 								<li class="tab"><a role="tab" href="#">경영진현황</a></li>
 								<li class="tab"><a role="tab" href="#">거래처현황</a></li>
-								<li class="tab"><a role="tab" href="#">주요주주현황</a></li>
+								<li class="tab tab-active"><a role="tab" href="#">주요주주현황</a></li>
 							</ul>
 						</div>
 						<!-- //tab-content -->
@@ -132,11 +132,69 @@
 
 							<!-- customer-contribution -->
 							<div class="customer-contribution">
-								<h2 class="headline-small">연혁</h2>
-
-								<p class="body-large mt24">삼성중공업(주)(이하 ‘동사’)는 1974년 8월 설립된 유가증권시장 상장법인으로 유조선, 가스운반선원유시추선외를 주력제품(사업)으로 하는 강선건조업을 영위중이며, 2019년 12월말 현재 총자산 000000000백만원, 자기자본 00000000백만원 이하 텍스트가들어갑니다. 텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다텍스트가들어갑니다</p>
-
-								<div class="body-caption mt8">(2020년도 1분기 분기보고서 기준)</div>
+								<h2 class="headline-small">주요주주 현황</h2>
+								<div class="caption-visible mt24">기준일자 : 2022-08-16</div>
+								<div class="table-col content-fluid overflow-visible px0 mx-24">
+									<table>
+										<caption>주요주주 현황</caption>
+										<thead>
+											<tr>
+												<th scope="col" rowspan="2">주주명</th>
+												<th scope="colgroup" colspan="3">지분율</th>
+												<th scope="col" rowspan="2">경영실권자와의 관계</th>
+											</tr>
+											<tr>
+												<th scope="col">보통주</th>
+												<th scope="col">우선주</th>
+												<th scope="col">합계</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>삼성전자</td>
+												<td>00.00</td>
+												<td>미등기</td>
+												<td>대표이사</td>
+												<td>타인</td>
+											</tr>
+											<tr>
+												<td>삼성전자</td>
+												<td>00.00</td>
+												<td>미등기</td>
+												<td>대표이사</td>
+												<td>타인</td>
+											</tr>
+											<tr>
+												<td>삼성전자</td>
+												<td>00.00</td>
+												<td>미등기</td>
+												<td>대표이사</td>
+												<td>타인</td>
+											</tr>
+											<tr>
+												<td>삼성전자</td>
+												<td>00.00</td>
+												<td>미등기</td>
+												<td>대표이사</td>
+												<td>타인</td>
+											</tr>
+											<tr>
+												<td>삼성전자</td>
+												<td>00.00</td>
+												<td>미등기</td>
+												<td>대표이사</td>
+												<td>타인</td>
+											</tr>
+											<tr>
+												<td>삼성전자</td>
+												<td>00.00</td>
+												<td>미등기</td>
+												<td>대표이사</td>
+												<td>타인</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 							<!-- //customer-contribution -->
 
@@ -161,6 +219,16 @@
 	</main>
 	<!-- //main -->
 
+
+	<script>
+		$(function() {
+			$('.overflow-visible').freezeTable({
+				columnNum: 1,
+				columnBorderWidth: 24,
+				'scrollable': true,
+			});
+		});
+	</script>
 
 </body>
 

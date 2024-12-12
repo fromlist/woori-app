@@ -866,6 +866,7 @@ button.select.is-modal-open:after {background:url(../images/form/select-chevron-
 .table-col table tbody td {font-size:16px;font-weight:400;color:var(--typography-body);padding:12px 8px;text-align:center;}
 .table-col table tbody th,
 .table-col table tbody td {background-color:var(--white-100);border-bottom:1px solid var(--border-12);}
+.caption-visible {font-size:14px;font-weight:400;color:var(--typography-caption);text-align:left;background-color:inherit;}
 .table-col table .caption-visible {font-size:14px;font-weight:400;color:var(--typography-caption);text-align:left;background-color:inherit;}
 
 .table-row {overflow-x:auto;}
