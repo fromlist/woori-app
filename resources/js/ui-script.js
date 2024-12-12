@@ -11,6 +11,7 @@ $(function () {
     microModalFunc.init();
     stickyContent();
     tippyContent.init();
+    tableInnerScroll.init();
     AOS.init({
         once: true,
         offset: 150,
@@ -518,5 +519,37 @@ const $swal = {
                 <p class="body-large mt8">${text}</p>
             `,
         })
+    }
+}
+
+const tableInnerScroll = {
+    init: function () {
+        $scrollWrap = document.querySelectorAll('.table-col.overflow-visible');
+        if ($scrollWrap != null) {
+            $scrollWrap.forEach(function (items) {
+                $scrollPosition = items.scrollLeft;
+                if (items.scrollWidth <= $scrollPosition + items.offsetWidth) {
+                    items.classList.add('scroll-end')
+                } else {
+                    items.classList.remove('scroll-end')
+
+                }
+            })
+        }
+        tableInnerScroll.onScroll();
+    },
+    onScroll: function () {
+        if ($scrollWrap != null) {
+            $scrollWrap.forEach(function (items) {
+                items.addEventListener('scroll', () => {
+                    $scrollPosition = items.scrollLeft;
+                    if (items.scrollWidth <= $scrollPosition + items.offsetWidth) {
+                        items.classList.add('scroll-end')
+                    } else {
+                        items.classList.remove('scroll-end')
+                    }
+                }, false)
+            });
+        }
     }
 }
