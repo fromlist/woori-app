@@ -441,16 +441,17 @@ input:not([type="checkbox"],[type="radio"],[type="file"])[disabled] {color:var(-
 
 /* input-datepicker */
 .input-wrap.input-datepicker {font-size:18px;line-height:22px;font-weight:700;color:var(--typography-black);gap:4px;}
-.input-wrap.input-datepicker button {display:flex;align-items:center;justify-content:center;gap:16px;flex:1;text-align:center;padding:14px 8px;}
+.input-wrap.input-datepicker button {display:flex;align-items:center;justify-content:center;gap:16px;flex:1;text-align:center;padding: 14px 0px;z-index:auto;opacity:1;background-color:transparent;width: auto;height: auto;}
+.input-wrap.input-datepicker button:only-child {justify-content:space-between;}
 .input-wrap.input-datepicker button:after {content:'';flex:0 0 24px;width:24px;height:24px;background:url(../images/form/form-datepicker.svg) center center / contain no-repeat;}
-.input-wrap.input-datepicker:focus-within {outline-offset:-1px;outline:1px solid var(--status-focused);}
+
 
 input[type="search"] {-webkit-appearance:none;align-items:center;}
 input[type="search"]::-webkit-search-cancel-button {-webkit-appearance:none;width:24px;height:24px;flex:0 0 24px;margin-right:0;margin-left:0;background:url(../images/btn/btn_close_small.svg) center center no-repeat;;align-items:center;}
 input[type="file"]:not(.inp-file) {appearance:none;-webkit-appearance:none;position:absolute;opacity:0;z-index:-100;width:0!important;height:0!important;padding:0!important;}
 input[type="file"]::-webkit-file-upload-button {display:none;}
 
-[data-datepicker]{background-image:url(../images/form/form-datepcier.svg);background-position:right center;background-size:24px 24px;background-repeat:no-repeat;}
+[data-datepicker]{background-image:url(../images/form/form-datepicker.svg);background-position:right center;background-size:24px 24px;background-repeat:no-repeat;}
 
 
 
@@ -575,6 +576,10 @@ button.select.is-modal-open:after {background:url(../images/form/select-chevron-
 .form + .form {margin-top:8px;}
 
 .form-wrap {display:flex;gap:8px;}
+
+/* shortcut-button-wrap */
+.shortcut-button-wrap {display:flex;align-items:center;justify-content:center;gap:4px;margin-top:12px;}
+.shortcut-button-wrap button {flex:1;}
 
 
 /* tab-content */ 
