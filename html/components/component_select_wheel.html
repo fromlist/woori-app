@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="../../resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../resources/css/ui-variable.css">
+	<link rel="stylesheet" href="../../resources/css/ui-default.css">
+	<link rel="stylesheet" href="../../resources/css/ui-layout.css">
+	<link rel="stylesheet" href="../../resources/css/ui-style.css">
+	<link rel="stylesheet" href="../../resources/css/ui-content.css">
+	<link rel="stylesheet" href="../../resources/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../resources/css/ui-guide.css">
+
+	<script src="../../resources/js/ui-script.js"></script>
+	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
+</head>
+
+<body>
+
+	<div class="ui-guide" style="background-color:var(--white-100)">
+		<h1>Wheel</h1>
+		<div class="ui-guide-section">
+			<h2>Time</h2>
+			<div class="time-wheel">
+				<div class="swiper swiper-hours">
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">00</div>
+						<div class="swiper-slide">01</div>
+						<div class="swiper-slide">02</div>
+						<div class="swiper-slide">03</div>
+						<div class="swiper-slide">04</div>
+						<div class="swiper-slide">05</div>
+						<div class="swiper-slide">06</div>
+						<div class="swiper-slide">07</div>
+						<div class="swiper-slide">08</div>
+						<div class="swiper-slide">09</div>
+						<div class="swiper-slide">10</div>
+						<div class="swiper-slide">11</div>
+						<div class="swiper-slide">12</div>
+						<div class="swiper-slide">13</div>
+						<div class="swiper-slide">14</div>
+						<div class="swiper-slide">15</div>
+						<div class="swiper-slide">16</div>
+						<div class="swiper-slide">17</div>
+						<div class="swiper-slide">18</div>
+						<div class="swiper-slide">19</div>
+						<div class="swiper-slide">20</div>
+						<div class="swiper-slide">21</div>
+						<div class="swiper-slide">22</div>
+						<div class="swiper-slide">23</div>
+						<div class="swiper-slide">24</div>
+					</div>
+				</div>
+				<!-- Slider main container -->
+				<div class="bul">:</div>
+				<div class="swiper swiper-minutes">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">00</div>
+						<div class="swiper-slide">10</div>
+						<div class="swiper-slide">20</div>
+						<div class="swiper-slide">30</div>
+						<div class="swiper-slide">40</div>
+						<div class="swiper-slide">50</div>
+						<div class="swiper-slide">60</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<style>
+		.time-wheel {
+			display: flex;
+			align-items: center;
+		}
+
+		.time-wheel .swiper {
+			width: 100%;
+			height: 300px;
+			line-height: 300px;
+		}
+
+		.time-wheel .swiper .swiper-slide {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--white-100);
+			position: relative;
+			z-index: -1;
+		}
+
+		.time-wheel .swiper .swiper-slide-active {
+			background-color: var(--white-100);
+			position: relative;
+			z-index: 5
+		}
+	</style>
+
+	<script>
+		const swiperHours = new Swiper('.swiper-hours', {
+			// Optional parameters
+			slidesPerView: 1,
+			direction: 'vertical',
+			freeMode: {
+				enabled: true,
+				sticky: true,
+			},
+		});
+
+		const swiperMinutes = new Swiper('.swiper-minutes', {
+			// Optional parameters
+			slidesPerView: 1,
+			direction: 'vertical',
+			freeMode: {
+				enabled: true,
+				sticky: true,
+			},
+		});
+	</script>
+</body>
+
+</html>

@@ -437,13 +437,13 @@ input:not([type="checkbox"],[type="radio"],[type="file"])[disabled] {color:var(-
 .input-placeholder input:not(:placeholder-shown) {padding-right:12px;}
 .input-placeholder .input-remove {display:none;}
 .input-placeholder input:not(:placeholder-shown) ~ .input-remove {display:flex;}
-.input-placeholder .visible-placeholder {font-size:18px;font-weight:400;color:var(--typography-black);margin-left:10px;}
+.input-placeholder .visible-placeholder {font-size:18px;font-weight:400;color:var(--typography-black);margin-left:10px;white-space:nowrap;}
 
 /* input-datepicker */
 .input-wrap.input-datepicker {font-size:18px;line-height:22px;font-weight:700;color:var(--typography-black);gap:4px;}
 .input-wrap.input-datepicker button {display:flex;align-items:center;justify-content:center;gap:16px;flex:1;text-align:center;padding: 14px 0px;z-index:auto;opacity:1;background-color:transparent;width: auto;height: auto;}
 .input-wrap.input-datepicker button:only-child {justify-content:space-between;}
-.input-wrap.input-datepicker button:after {content:'';flex:0 0 24px;width:24px;height:24px;background:url(../images/form/form-datepicker.svg) center center / contain no-repeat;}
+.input-wrap.input-datepicker button:after {content:'';flex:0 0 24px;width:24px;height:24px;background:url(../images/form/form-datepicker.svg) center center / contain no-repeat;margin-left:auto;}
 
 
 input[type="search"] {-webkit-appearance:none;align-items:center;}
@@ -810,6 +810,10 @@ button.select.is-modal-open:after {background:url(../images/form/select-chevron-
 .icon-noresult {
     -webkit-mask-image:url(../images/icon_only/icon_noresult.svg);
     mask-image:url(../images/icon_only/icon_noresult.svg);
+}
+.icon-won {
+    -webkit-mask-image:url(../images/icon_only/icon_won.svg);
+    mask-image:url(../images/icon_only/icon_won.svg);
 }
 
 /* toggle-trigger */

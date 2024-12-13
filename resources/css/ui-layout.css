@@ -283,8 +283,8 @@ header {position:sticky;left:0;top:0;width:100%;z-index:var(--header-zIndex);bac
 main {position:relative;min-height:100vh;}
 main {display:flex;flex-direction:column;}
 main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
-#container {flex:1 1 100%;}
-.content {padding:0 16px 24px;height:100%;flex:1 1 100%;display:flex;flex-direction:column;max-width:100vw;}
+#container {flex:1 1 100%;display: flex;flex-direction: column;width: 100%;}
+.content {padding:0 16px 24px;height:100%;flex:1 1 100%;display:flex;flex-direction:column;}
 .content-fluid:not(.content) {margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px;}
 .content-fluid:not(.content).px24 {margin-left:-24px;margin-right:-24px;}
 .division-center {flex:1 1 100%;display:flex;justify-content:center;flex-direction:column;padding:16px 0;}
@@ -390,3 +390,8 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .datepicker-wrap .ui-datepicker-calendar tbody tr:not(:last-child) > * {}
 .datepicker-wrap .ui-datepicker-calendar td.ui-datepicker-other-month {color:var(--gray-400);}
 .datepicker-wrap .ui-datepicker-calendar td button {width:100%;height:100%;border-radius:8px;}
+.datepicker-wrap .ui-datepicker td span,
+.datepicker-wrap .ui-datepicker td a {padding:0;text-align:center;border:0;background:none;font-weight:inherit;color:inherit;}
+
+/* box */
+.box {padding:60px 24px;}

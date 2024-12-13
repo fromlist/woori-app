@@ -469,18 +469,18 @@
 .keyword-list button .steady:before {content:'';flex:0 0 12px;width:12px;height:12px;background:url(../images/ico/ico_steady.svg) center center / contain no-repeat;}
 .keyword-list button .flag {flex:0 0 18px;width:18px;height:18px;}
 
-.keyword-list button .flag-korea {background:url(../images/flag/ico_korea.svg) center center / contain no-repeat;}
-.keyword-list button .flag-usa {background:url(../images/flag/ico_usa.svg) center center / contain no-repeat;}
-.keyword-list button .flag-europe {background:url(../images/flag/ico_europe.svg) center center / contain no-repeat;}
-.keyword-list button .flag-japan {background:url(../images/flag/ico_japan.svg) center center / contain no-repeat;}
-.keyword-list button .flag-china {background:url(../images/flag/ico_china.svg) center center / contain no-repeat;}
-.keyword-list button .flag-india {background:url(../images/flag/ico_india.svg) center center / contain no-repeat;}
-.keyword-list button .flag-vietnam {background:url(../images/flag/ico_vietnam.svg) center center / contain no-repeat;}
-.keyword-list button .flag-asia {background:url(../images/flag/ico_asia.svg) center center / contain no-repeat;}
-.keyword-list button .flag-south-america {background:url(../images/flag/ico_south_america.svg) center center / contain no-repeat;}
-.keyword-list button .flag-global {background:url(../images/flag/ico_global.svg) center center / contain no-repeat;}
-.keyword-list button .flag-emerging {background:url(../images/flag/ico_emerging.svg) center center / contain no-repeat;}
-.keyword-list button .flag-foreign {background:url(../images/flag/ico_foreign.svg) center center / contain no-repeat;}
+.keyword-list button .flag-kr {background:url(../images/flag/flag_kr.svg) center center / contain no-repeat;}
+.keyword-list button .flag-us {background:url(../images/flag/flag_us.svg) center center / contain no-repeat;}
+.keyword-list button .flag-europe {background:url(../images/flag/flag_europe.svg) center center / contain no-repeat;}
+.keyword-list button .flag-jp {background:url(../images/flag/flag_jp.svg) center center / contain no-repeat;}
+.keyword-list button .flag-cn {background:url(../images/flag/flag_cn.svg) center center / contain no-repeat;}
+.keyword-list button .flag-in {background:url(../images/flag/flag_in.svg) center center / contain no-repeat;}
+.keyword-list button .flag-vn {background:url(../images/flag/flag_vn.svg) center center / contain no-repeat;}
+.keyword-list button .flag-asia {background:url(../images/flag/flag_asia.svg) center center / contain no-repeat;}
+.keyword-list button .flag-south-america {background:url(../images/flag/flag_br.svg) center center / contain no-repeat;}
+.keyword-list button .flag-global {background:url(../images/flag/flag_global.svg) center center / contain no-repeat;}
+.keyword-list button .flag-emerging {background:url(../images/flag/flag_emerging.svg) center center / contain no-repeat;}
+.keyword-list button .flag-foreign {background:url(../images/flag/flag_foreign.svg) center center / contain no-repeat;}
 
 /* change-history */
 .change-history {padding:16px 0;}
@@ -616,8 +616,8 @@
 /* customer-contribution-list */
 .customer-contribution-list {}
 .customer-contribution-title {display:block;font-size:18px;font-weight:500;color:var(--typography-gray);margin-bottom:24px;text-align:center;}
-.customer-contribution {padding:40px 24px;background-color:var(--background-bg_white);}
-.customer-contribution .headline-small {text-align:center;}
+.box {padding:40px 24px;background-color:var(--background-bg_white);}
+.box .headline-small {text-align:center;}
 
 /* accordion-select */
 .accordion-select {}
@@ -671,3 +671,26 @@
 .grade-wrap dl .list {padding:8px;}
 .grade-wrap dl .list dt {font-size:15px;font-weight:700;line-height:1;}
 .grade-wrap dl .list dd {font-size:15px;font-weight:400;margin-top:8px;}
+
+/* loan-calculator */
+.loan-calculator {padding:40px 24px 32px;}
+.loan-calculator .list {display:flex;padding:0 8px;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+.loan-calculator .list:not(:last-child) {margin-bottom:12px;}
+.loan-calculator dt {font-size:16px;font-weight:500;}
+.loan-calculator dd {font-size:15px;font-weight:400;text-align:right;}
+.loan-calculator .loan-status {color:var(--gray-600);}
+.loan-calculator .loan-payment {color:var(--typography-black);}
+.loan-calculator .loan-payment dt {font-size:18px;}
+.loan-calculator .loan-total {color:var(--typography-black);}
+.loan-calculator .loan-total .list {flex-direction:column;}
+.loan-calculator .loan-total dt {display:flex;align-items:center;font-size:20px;width:100%;gap:8px;}
+.loan-calculator .loan-total dd {font-size:26px;font-weight:700;line-height:1.4;width:100%;margin-top:16px;}
+
+.loan-monthly-list {padding:24px 16px;}
+.loan-monthly-list .list {border-radius:8px;background-color:var(--surface-surface50);padding:16px 20px;}
+.loan-monthly-list .list:not(:last-child) {margin-bottom:8px;}
+.loan-monthly-list dt {font-size:16px;font-weight:700;color:var(--typography-title);line-height:1.5;}
+.loan-monthly-list dd {display:flex;align-items:center;justify-content:space-between;font-size:16px;font-weight:400;}
+.loan-monthly-list dd .left {color:var(--gray-600);}
+.loan-monthly-list dd .right {}
+.loan-monthly-list dd:not(:last-child) {margin-bottom:4px;}
