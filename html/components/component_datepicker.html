@@ -177,6 +177,18 @@
 		});
 	</script>
 	<script>
+		function onShow(modal) {
+			console.info(`${modal.id} is shown`)
+		}
+
+		function onClose(modal) {
+			console.info(`${modal.id} is hidden`)
+		}
+		MicroModal.init();
+		// MicroModal.show('modal-datepicker', {
+		// 	onShow: onShow,
+		// 	onClose: onClose
+		// });
 		$(".jquery-datepicker").datepicker({
 			dateFormat: 'yy-mm-dd',
 			prevText: '이전 달',
@@ -191,7 +203,11 @@
 			// minDate: 0,
 			showButtonPanel: true,
 			closeText: "닫기",
-			showOtherMonths: true
+			showOtherMonths: true,
+			onSelect: function(input, date) {
+				// MicroModal.close('modal-datepicker');
+				// console.log(modalPopup)
+			},
 		});
 	</script>
 </body>
