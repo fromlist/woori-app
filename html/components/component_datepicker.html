@@ -92,6 +92,7 @@
 	</div>
 
 
+
 	<!-- micromodal -->
 	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker-year" aria-hidden="true">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
@@ -140,14 +141,15 @@
 					</div>
 
 				</div>
-
 			</div>
 		</div>
 	</div>
 	<!-- //micromodal -->
 
+
+
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker" aria-hidden="false">
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker" aria-hidden="true">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 
@@ -177,37 +179,43 @@
 		});
 	</script>
 	<script>
-		function onShow(modal) {
-			console.info(`${modal.id} is shown`)
-		}
-
-		function onClose(modal) {
-			console.info(`${modal.id} is hidden`)
-		}
-		MicroModal.init();
-		// MicroModal.show('modal-datepicker', {
-		// 	onShow: onShow,
-		// 	onClose: onClose
-		// });
-		$(".jquery-datepicker").datepicker({
-			dateFormat: 'yy-mm-dd',
-			prevText: '이전 달',
-			nextText: '다음 달',
-			monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-			monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-			dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-			dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-			showMonthAfterYear: true,
-			yearSuffix: '년',
-			// minDate: 0,
-			showButtonPanel: true,
-			closeText: "닫기",
-			showOtherMonths: true,
-			onSelect: function(input, date) {
-				// MicroModal.close('modal-datepicker');
-				// console.log(modalPopup)
-			},
+		const modalTrigger = document.querySelector('[data-micromodal-trigger="modal-datepicker"]')
+		modalTrigger.addEventListener("click", function(event) {
+			MicroModal.show('modal-datepicker', {
+				// openTrigger: 'data-custom-open', // [3]
+				// closeTrigger: 'data-custom-close', // [4]
+				// openClass: 'is-open', // [5]
+				disableScroll: true, // [6]
+				disableFocus: true, // [7]
+				awaitOpenAnimation: true, // [8]
+				awaitCloseAnimation: true, // [9]
+				// debugMode: true // [10]
+				onShow: function(modalPopup) {
+					$(".jquery-datepicker").datepicker({
+						dateFormat: 'yy-mm-dd',
+						prevText: '이전 달',
+						nextText: '다음 달',
+						monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+						monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+						dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+						dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+						dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+						showMonthAfterYear: true,
+						yearSuffix: '년',
+						// minDate: 0,
+						showButtonPanel: true,
+						closeText: "닫기",
+						showOtherMonths: true,
+						onSelect: function(input, date) {
+							MicroModal.close('modal-datepicker');
+							modalTrigger.innerText = input;
+						},
+					});
+				},
+				onClose: function(modalPopup) {
+					// console.log($(".jquery-datepicker").datepicker("refresh"))
+				}
+			});
 		});
 	</script>
 </body>
