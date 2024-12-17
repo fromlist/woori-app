@@ -383,7 +383,7 @@ i.ico-keyword {-webkit-mask-image:url(../images/ico/ico-keyword.svg);mask-image:
 i.ico-chevron {-webkit-mask-image:url(../images/arrow/ico_chevron.svg);mask-image:url(../images/arrow/ico_chevron.svg);flex:0 0 7px;width:7px;height:14px;background-color:var(--icon-gray_2);}
 i.ico-compare {-webkit-mask-image:url(../images/ico/ico_compare.svg);mask-image:url(../images/ico/ico_compare.svg);}
 i.ico-grid {-webkit-mask-image:url(../images/ico/ico_grid.svg);mask-image:url(../images/ico/ico_grid.svg);}
-
+i.ico-reply {-webkit-mask-image:url(../images/ico/ico_reply.svg);mask-image:url(../images/ico/ico_reply.svg);}
 
 /* fab */
 .fab {display:flex;width:52px;height:52px;box-shadow:0px 6px 24px -8px var(--shadow-gray_3, rgba(12, 12, 13, 0.12));backdrop-filter:blur(8px);align-items:center;justify-content:center;}
@@ -804,6 +804,14 @@ button.select.is-modal-open:after {background:url(../images/form/select-chevron-
 .icon-fav-active {
     background-color:initial;
     background-image:url(../images/icon_only/icon_fav_active.svg);
+}
+.icon-fav2 {
+    -webkit-mask-image:url(../images/icon_only/icon_fav.svg);
+    mask-image:url(../images/icon_only/icon_fav.svg);
+}
+.icon-fav-active2 {
+    -webkit-mask-image:url(../images/icon_only/icon_fav_active2.svg);
+    mask-image:url(../images/icon_only/icon_fav_active2.svg);
 }
 .icon-noresult {
     -webkit-mask-image:url(../images/icon_only/icon_noresult.svg);
