@@ -380,17 +380,18 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 
 .jquery-datepicker .ui-datepicker .ui-datepicker-title {margin:0 52px;line-height:52px;}
 
-.jquery-datepicker .ui-datepicker table {table-layout:fixed;margin:0 auto;font-size:inherit;}
+.jquery-datepicker .ui-datepicker table {table-layout:fixed;margin:0 auto;font-size:inherit;border-collapse:separate;}
 
 .jquery-datepicker .ui-datepicker-calendar thead th {color:var(--gray-400);}
 .jquery-datepicker .ui-datepicker-calendar tbody td {color:var(--typography-black);}
 .jquery-datepicker .ui-datepicker-calendar thead th,
 .jquery-datepicker .ui-datepicker-calendar tbody td {font-size:16px;font-weight:500;line-height:40px;border:4px solid transparent;text-align:center;padding:0;}
 .jquery-datepicker .ui-datepicker-calendar tbody tr:not(:last-child) > * {}
-.jquery-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month {color:var(--gray-400);}
-
+.jquery-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month {}
+.jquery-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month span,
+.jquery-datepicker .ui-datepicker-calendar td.ui-datepicker-other-month a {color:var(--gray-400);}
 .jquery-datepicker .ui-datepicker td span,
-.jquery-datepicker .ui-datepicker td a {padding:0;text-align:center;border:0;background:none;font-weight:inherit;color:inherit;width:40px;height:100%;border-radius:8px;margin: 0 auto;}
+.jquery-datepicker .ui-datepicker td a {padding:0;text-align:center;border:0;background:none;font-weight:inherit;color:inherit;width:40px;height:100%;border-radius:8px;margin:0 auto;}
 
 .jquery-datepicker .ui-state-active,
 .jquery-datepicker .ui-widget-content .ui-state-active,
@@ -403,3 +404,6 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .jquery-datepicker .ui-widget-header .ui-state-disabled {opacity:1;}
 
 .jquery-datepicker .ui-datepicker .ui-datepicker-buttonpane {display:flex;margin:0;}
+
+.jquery-datepicker tbody .ui-datepicker-week-end:first-child {color:var(--red-400);}
+.jquery-datepicker tbody .ui-datepicker-week-end:last-child {color:var(--blue-400);}

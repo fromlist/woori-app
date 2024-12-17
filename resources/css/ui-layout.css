@@ -312,14 +312,19 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 
 /* select-option */
 .select-option {}
-.select-option ul {margin-bottom:16px;}
-.select-option ul li {}
-.select-option ul li button {position:relative;display:block;width:100%;padding:0 24px;height:60px;}
-.select-option ul li button span {display:inline;font-size:18px;font-weight:500;color:var(--typography-title);vertical-align:middle;line-height:25px;}
-.select-option ul li.select-all button {}
-.select-option ul li.select-all button span {font-weight:700;}
-.select-option ul li.select-active button {background-color:var(--background-bg_gray);padding-right:52px;}
-.select-option ul li.select-active button:after {content:'';position:absolute;right:24px;top:50%;margin-top:-14px;display:block;width:28px;height:28px;background:url(../images/ico/ico_select_option.svg) center center / contain no-repeat;}
+.select-option ul {}
+.select-option ul:not(:last-child) {margin-bottom:16px;}
+.select-option li {}
+.select-option li button {position:relative;display:block;width:100%;padding:0 24px;height:60px;}
+.select-option li button span {display:inline;font-size:18px;font-weight:500;color:var(--typography-title);vertical-align:middle;line-height:25px;}
+.select-option li.select-all button {}
+.select-option li.select-all button span {font-weight:700;}
+.select-option li.select-active button {background-color:var(--background-bg_gray);padding-right:52px;}
+.select-option li.select-active button:after {content:'';position:absolute;right:24px;top:50%;margin-top:-14px;display:block;width:28px;height:28px;background:url(../images/ico/ico_select_option.svg) center center / contain no-repeat;}
+
+.select-exchange li button {display:flex;align-items:center;}
+.select-exchange li span {width:140px;margin-right:24px;}
+.select-exchange li strong {font-size:18px;font-weight:700;color:var(--typography-title);}
 
 
 .select-option .title-large {padding:16px 24px;}
@@ -330,7 +335,6 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .micromodal-slide-select .select-option ul li button {height:48px;padding:0 16px;}
 .micromodal-slide-select .select-option ul li button span {font-size:16px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .micromodal-slide-select .select-option ul li.select-active button {padding-right:52px;}
-
 
 
 /* no-result */
