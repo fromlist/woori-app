@@ -248,18 +248,15 @@
 								<h5 class="headline-small"><span>3개월 수익률</span><strong class="steady">0.00%</strong></h5>
 							</div>
 							<div class="chart-wrap mt16">
-								<div class="btn-wrap py0 bg-transparent">
-									<button type="button" class="btn-xsmall btn-outlined btn-round"><i class="ico-grid"></i>표 보기</button>
-								</div>
 								<div style="height:180px;">
 									<div id="chart2" data-aos data-aos-id="chart2"></div>
 								</div>
 								<div class="group pb0">
 									<div class="right">
 										<span class="divide-list">
-											<span class="fs-14">캡션텍스트</span>
+											<span class="fs-14">2024-11-13 기준</span>
 											<span class="division h14 mx8"></span>
-											<span class="fs-14">캡션텍스트</span>
+											<span class="fs-14">자료제공: 제로인</span>
 										</span>
 									</div>
 								</div>
@@ -310,10 +307,7 @@
 								</div>
 							</div>
 
-							<div class="btn-wrap">
-								<button type="button" class="btn-xsmall btn-outlined btn-round">전체보기</button>
-							</div>
-							<ul class="dot-list px0">
+							<ul class="dot-list p0 mt24">
 								<li>재간접형펀드, 모자형 펀드는 피투자펀드보수가 추가 발생하므로, 상품별 투자설명서를 확인하시기 바랍니다.</li>
 								<li>재간접형펀드, 모자형 펀드는 피투자펀드보수가 추가 발생하므로, 상품별 투자설명서를 확인하시기 바랍니다.</li>
 								<li>재간접형펀드, 모자형 펀드는 피투자펀드보수가 추가 발생하므로, 상품별 투자설명서를 확인하시기 바랍니다.</li>
@@ -328,6 +322,8 @@
 							<button type="button" class="anchor chevron anchor-fluid" data-micromodal-trigger="modal-popup03"><strong class="title-medium px4">투자설명서 및 약관</strong></button>
 							<div class="stroke px0"></div>
 							<button type="button" class="anchor chevron anchor-fluid" data-micromodal-trigger="modal-popup04"><strong class="title-medium px4">투자에 따른 위험</strong></button>
+							<div class="stroke px0"></div>
+							<button type="button" class="anchor chevron anchor-fluid" data-micromodal-trigger="modal-popup04"><strong class="title-medium px4">클래스 비교</strong></button>
 						</div>
 
 						<div class="stroke stroke4 stroke-fluid"></div>
@@ -646,13 +642,17 @@
 	<script>
 		var options2 = {
 			series: [{
-					name: "Index1",
+					name: "신한글로벌탄소중립솔루션증권투자신탁(H)(주식)",
 					data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
 
 				},
 				{
-					name: "Index2",
+					name: "BM",
 					data: [1, 32, 26, 42, 40, 53, 60, 82, 18]
+				},
+				{
+					name: "유형평균",
+					data: [100, 320, 260, 420, 400, 530, 600, 820, 180]
 				}
 			],
 			chart: {
@@ -665,7 +665,7 @@
 					show: false,
 				}
 			},
-			colors: ['#7163EE', '#F35E9C'],
+			colors: ['#7163EE', '#F35E9C', '#1AA3C1'],
 			dataLabels: {
 				enabled: false
 			},

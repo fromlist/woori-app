@@ -517,6 +517,9 @@
 .fund-card .expect-list .list.rise dd {color:var(--red-600);}
 .fund-card .expect-list .list.fall dd {color:var(--deepblue-600);}
 .fund-card .expect-list .list.steady dd {color:var(--gray-500);}
+.fund-card .sales-list {display:flex;align-items:center;justify-content:space-between;gap:8px;border-radius:8px;background-color:var(--surface-surface50);padding:12px 14px;margin-top:8px;}
+.fund-card .sales-list dt {font-size:16px;font-weight:700;color:var(--typography-gray);line-height:1;}
+.fund-card .sales-list dd {font-size:18px;font-weight:500;color:var(--typography-gray);line-height:1;}
 .fund-card .expect-reason {border-radius:8px;background-color:var(--surface-surface50);padding:12px 12px 14px;margin-top:8px;}
 .fund-card .expect-reason dt {font-size:16px;color:var(--typography-gray);line-height:1;}
 .fund-card .expect-reason dd {font-size:16px;font-weight:400;color:var(--gray-600);margin-top:8px;}

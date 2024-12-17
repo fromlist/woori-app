@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="../../resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../resources/css/ui-variable.css">
+	<link rel="stylesheet" href="../../resources/css/ui-default.css">
+	<link rel="stylesheet" href="../../resources/css/ui-layout.css">
+	<link rel="stylesheet" href="../../resources/css/ui-style.css">
+	<link rel="stylesheet" href="../../resources/css/ui-content.css">
+	<link rel="stylesheet" href="../../resources/css/ui-plugins.css">
+
+	<script src="../../resources/js/ui-script.js"></script>
+	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>수익률 BEST</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="관심 펀드"><i class="i-favorite"></i></button>
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<div class="fund-result">
+
+						<!-- sort-wrap -->
+						<div class="sort-wrap py0 mb24">
+
+							<!-- sort-list -->
+							<button class="sort-list" data-micromodal-trigger="modal-select-filter" aria-label="정렬">
+								<span class="filter">
+									<span class="sort">3개월</span>
+							</button>
+							<!-- sort-list -->
+
+						</div>
+						<!-- sort-wrap -->
+
+						<!-- fund-card-list -->
+						<div class="fund-card-list mt24">
+							<div class="fund-card" data-toggle="toggle-wrap" data-aos>
+								<div class="tag-wrap">
+									<div class="tags tags-small tags-lightRed">#매우높은위험</div>
+									<div class="tags tags-small tags-FFF4EB">#높은위험</div>
+									<div class="tags tags-small tags-lightYellow">#원금손실가능</div>
+									<div class="tags tags-small tags-green-50">#보통위험</div>
+									<div class="tags tags-small tags-lightBlue">#낮은위험</div>
+									<div class="tags tags-small tags-lightViolet">#매우낮은위험</div>
+									<div class="tags tags-small tags-lightPurple">#글로벌</div>
+									<div class="tags tags-small tags-red-100">#원금손실가능</div>
+
+								</div>
+								<a href="#" class="fund-title headline-small">피델리티글로벌배당인컴증권자투자신탁(주식-재간접형)</a>
+								<div class="divide-list">
+									<span class="divide01">글로벌</span>
+									<div class="division h14 mx8"></div>
+									<span class="divide01">계열사</span>
+								</div>
+								<dl class="expect-list">
+									<div class="list">
+										<dt>1개월</dt>
+										<dd>-888.88%</dd>
+									</div>
+									<div class="list rise">
+										<dt>3개월</dt>
+										<dd>+888.88%</dd>
+									</div>
+									<div class="list">
+										<dt>6개월</dt>
+										<dd>-888.88%</dd>
+									</div>
+									<div class="list">
+										<dt>12개월</dt>
+										<dd>-888.88%</dd>
+									</div>
+								</dl>
+								<div class="compare-btn-wrap">
+									<button type="button" class="btn-small btn-secondary btn-round" data-toggle="toggle-trigger" data-switch-before="btn-secondary" data-switch-after="btn-primary">
+										비교담기
+										<i class="ico-compare" data-switch-inner="true" data-switch-inner-before="ico-compare" data-switch-inner-after="ico-check"></i>
+										<span class="toggle-off blind">선택</span>
+										<span class="toggle-on blind">선택해제</span>
+									</button>
+								</div>
+								<div class="favorite-btn-wrap" data-toggle="toggle-wrap">
+									<button type="button" data-toggle="toggle-trigger">
+										<i class="icon-only icon-36 icon-fav " data-switch-inner="true" data-switch-inner-before="icon-fav" data-switch-inner-after="icon-fav-active"></i>
+										<span class="toggle-off blind">관심펀드 등록</span>
+										<span class="toggle-on blind">관심펀드 등록해제</span>
+									</button>
+								</div>
+
+							</div>
+							<div class="fund-card" data-toggle="toggle-wrap" data-aos>
+								<div class="tag-wrap">
+									<div class="tags tags-small tags-lightRed">#높은위험</div>
+									<div class="tags tags-small tags-lightYellow">#원금손실가능</div>
+								</div>
+								<a href="#" class="fund-title headline-small">피델리티글로벌배당인컴증권자투자신탁(주식-재간접형)</a>
+								<div class="divide-list">
+									<span class="divide01">글로벌</span>
+									<div class="division h14 mx8"></div>
+									<span class="divide01">계열사</span>
+								</div>
+								<dl class="expect-list">
+									<div class="list">
+										<dt>1개월</dt>
+										<dd>-888.88%</dd>
+									</div>
+									<div class="list rise">
+										<dt>3개월</dt>
+										<dd>+888.88%</dd>
+									</div>
+									<div class="list">
+										<dt>6개월</dt>
+										<dd>-888.88%</dd>
+									</div>
+									<div class="list">
+										<dt>12개월</dt>
+										<dd>-888.88%</dd>
+									</div>
+								</dl>
+								<dl class="sales-list">
+									<dt>월 판매액</dt>
+									<dd>7.33억</dd>
+								</dl>
+								<div class="compare-btn-wrap">
+									<button type="button" class="btn-small btn-secondary btn-round" data-toggle="toggle-trigger" data-switch-before="btn-secondary" data-switch-after="btn-primary">
+										비교담기
+										<i class="ico-compare" data-switch-inner="true" data-switch-inner-before="ico-compare" data-switch-inner-after="ico-check"></i>
+										<span class="toggle-off blind">선택</span>
+										<span class="toggle-on blind">선택해제</span>
+									</button>
+								</div>
+								<div class="favorite-btn-wrap" data-toggle="toggle-wrap">
+									<button type="button" data-toggle="toggle-trigger" id="success">
+										<i class="icon-only icon-36 icon-fav " data-switch-inner="true" data-switch-inner-before="icon-fav" data-switch-inner-after="icon-fav-active"></i>
+										<span class="toggle-off blind">관심펀드 등록</span>
+										<span class="toggle-on blind">관심펀드 등록해제</span>
+									</button>
+								</div>
+
+							</div>
+						</div>
+						<!-- //fund-card-list -->
+
+					</div>
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="bottom-btn-title">
+				<strong class="title-medium">2개의 펀드를 담아 비교하세요.</strong>
+			</div>
+			<div class="btn-wrap btn-nowrap">
+				<button type="button" class="btn-xsmall btn-primary btn-round"><span>피델리티글로벌배당인컴증권</span><i class="ico-close-16"></i></button>
+				<button type="button" class="btn-xsmall btn-outlined btn-round">비교할 펀드 추가</button>
+			</div>
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-primary">비교하기</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+
+
+	</main>
+	<!-- //main -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-select-filter">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+
+
+
+
+						<!-- group-form -->
+						<div class="group-form mt16">
+							<div class="group-title py16 px8">
+								<strong class="title-large px0">기간</strong>
+							</div>
+							<div class="group-content mt0">
+								<div class="inp-group">
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">1개월</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">3개월</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">3개월</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">12개월</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+					</div>
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" data-micromodal-close>조회</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<script>
+		$('#success').click(function(event) {
+			if ($(this).closest('.favorite-btn-wrap').hasClass('is-toggled')) {
+				toastr.caution(`<div class="btn-toast-wrap"><a href="#" class="btn-xsmall btn-ghost-white">바로가기<i class="ico-chevron"></i></a>`, '관심펀드에서 삭제되었습니다.', {
+					"extendedTimeOut": 0,
+					"preventDuplicates": false,
+					"disableTimeOut": true,
+				});
+			} else {
+				toastr.success(`<div class="btn-toast-wrap"><a href="#" class="btn-xsmall btn-ghost-white">바로가기<i class="ico-chevron"></i></a>`, '관심펀드에 등록되었습니다', {
+					"extendedTimeOut": 0,
+					"preventDuplicates": false,
+					"disableTimeOut": true,
+				});
+			}
+		});
+	</script>
+</body>
+
+</html>
