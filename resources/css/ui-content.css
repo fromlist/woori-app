@@ -751,72 +751,62 @@ button.flag-fluid span {margin-top:0;}
 .label-list .list03:before {background-color:var(--purple-500);}
 
 /* exchange-wrap */
-.exchange-wrap {background-color: var(--background-bg_lightGray);padding:16px;}
+.exchange-wrap {background-color:var(--background-bg_lightGray);padding:16px;}
 .exchange-list {padding:16px 20px;border-radius:16px;background-color:var(--surface-surface);}
 .exchange-list:not(:last-child) {margin-bottom:8px;}
 
 /* community-wrap */
 .community-wrap {}
 .community-wrap > .dep01 {}
-.community-wrap .dep01 > li {}
-.community-wrap .dep02 > li {}
+.community-wrap .dep01 > li {position:relative;padding-left:58px;}
+.community-wrap .dep01 > li:not(:last-child) {margin-bottom:12px;}
 
-.comment-wrap {position:relative;padding-left:58px;}
-.comment-wrap .comment-user {display:flex;margin:6px 0 2px 12px;align-items:center;gap:8px;}
-.comment-wrap .comment-user .avartar {position:absolute;left:0;top:0;width:54px;height:54px;background-repeat:no-repeat;background-size:contain;background-position:center center;}
-.comment-wrap .comment-user .avartar01 {background:url(../images/avatar/profile_type1.svg) center center / contain no-repeat;}
-.comment-wrap .comment-user .avartar02 {background:url(../images/avatar/profile_type2.svg) center center / contain no-repeat;}
-.comment-wrap .comment-user .avartar03 {background:url(../images/avatar/profile_type3.svg) center center / contain no-repeat;}
-.comment-wrap .comment-user .avartar04 {background:url(../images/avatar/profile_type4.svg) center center / contain no-repeat;}
-.comment-wrap .comment-user .avartar05 {background:url(../images/avatar/profile_type5.svg) center center / contain no-repeat;}
-.comment-wrap .comment-user .avartar06 {background:url(../images/avatar/profile_type6.svg) center center / contain no-repeat;}
-.comment-wrap .comment-user .name {font-size:20px;font-weight:700;color:var(--typography-title);line-height:1.5;padding-right:4px;}
-.comment-wrap .comment-user .date {font-size:14px;font-weight:400;color:var(--typography-caption);line-height:1.6;}
-.comment-wrap .comment-user .btn-more {display:flex;flex:0 0 42px;width:42px;height:42px;align-items:center;justify-content:center;border-radius:8px;margin-left:auto;}
-.comment-wrap .comment-user .btn-more:active {background-color:var(--surface-surface100);}
-.comment-wrap .comment-user .btn-more:before {content:'';width:100%;height:100%;background:url(../images/btn/btn_more.svg) center center / contain no-repeat;}
-.comment-wrap .divide-list {margin-left:12px;}
+.comment-wrap {position:relative;padding:12px 0;}
+.comment-wrap .comment-user {margin:0 0 8px 12px;}
+.comment-wrap .avartar {position:absolute;left:-58px;top:0;width:54px;height:54px;background-repeat:no-repeat;background-size:contain;background-position:center center;}
+.comment-wrap .avartar01 {background:url(../images/avatar/profile_type1.svg) center center / contain no-repeat;}
+.comment-wrap .avartar02 {background:url(../images/avatar/profile_type2.svg) center center / contain no-repeat;}
+.comment-wrap .avartar03 {background:url(../images/avatar/profile_type3.svg) center center / contain no-repeat;}
+.comment-wrap .avartar04 {background:url(../images/avatar/profile_type4.svg) center center / contain no-repeat;}
+.comment-wrap .avartar05 {background:url(../images/avatar/profile_type5.svg) center center / contain no-repeat;}
+.comment-wrap .avartar06 {background:url(../images/avatar/profile_type6.svg) center center / contain no-repeat;}
+.comment-wrap .comment-user-info {}
+.comment-wrap .name {font-size:20px;font-weight:700;color:var(--typography-title);line-height:1.5;}
+.comment-wrap .date {font-size:14px;font-weight:400;color:var(--gray-400);line-height:1;}
+.comment-wrap .btn-more {position:absolute;right:0;top:0;display:flex;width:42px;height:42px;align-items:center;justify-content:center;border-radius:8px;margin-left:auto;}
+.comment-wrap .btn-more:active {background-color:var(--surface-surface100);}
+.comment-wrap .btn-more:before {content:'';width:100%;height:100%;background:url(../images/btn/btn_more.svg) center center / contain no-repeat;}
+.comment-wrap .divide-list {}
 .comment-wrap .divide-list span {font-size:14px;}
-.comment-wrap .comment-desc {margin-top:8px;}
-.comment-wrap .comment-desc .comment-desc-inner {padding:6px 12px;border-radius:8px;background-color:var(--surface-surface50);}
-.comment-wrap .comment-desc p {display:-webkit-inline-box!important;-webkit-box-orient:vertical!important;overflow:hidden!important;text-overflow:ellipsis!important;vertical-align:top;-webkit-line-clamp:3;word-break:break-all;}
+.comment-wrap .tags {margin-bottom:8px;}
+.comment-wrap .comment-desc {}
+.comment-wrap .comment-desc-inner {padding:6px 12px;border-radius:8px;background-color:var(--surface-surface50);}
+.comment-wrap .comment-desc p {display:-webkit-inline-box!important;-webkit-box-orient:vertical!important;overflow:hidden!important;text-overflow:ellipsis!important;vertical-align:top;-webkit-line-clamp:3;word-break:break-all;font-size:16px;}
 .comment-wrap .comment-desc.is-toggled p {-webkit-line-clamp:none;}
 .comment-wrap .comment-desc .comment-toggle-wrap {margin-top:4px;}
-.comment-wrap .comment-btn-wrap {}
+.comment-wrap .comment-btn-wrap {display:flex;align-items:center;justify-content:space-between;margin-top:8px;}
 .comment-wrap .comment-btn-wrap {}
 
-<div class="community-wrap">
-							<ul class="dep01">
-								<li>
-									<div class="comment-wrap">
-										<div class="comment-user">
-											<div class="avartar avartar01"></div>
-											<strong class="name">나우리</strong>
-											<span class="date">2024-12-17 16:33:51</span>
-											<button type="button" data-micromodal-trigger="modal-edit" aria-label="수정 및 삭제"></button>
-										</div>
-                                        <div class="divide-list">
-                                            <span>부서명</span>
-                                            <div class="division h14 mx8"></div>
-                                            <span>부서명</span>
-                                        </div>
-										<div class="comment-desc" data-toggle="toggle-wrap">
-											<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
-											<div class="comment-toggle-wrap">
-												<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
-													<span class="toggle-off">더보기</span>
-													<span class="toggle-on">접기</span>
-												</button>
-											</div>
-										</div>
-										<div class="comment-btn-wrap" data-toggle="toggle-wrap">
-											<div class="left">
-												<button type="button" data-toggle="toggle-trigger">
-													<i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" data-switch-inner="true" data-switch-inner-before="icon-fav2 bg-icon-gray_2" data-switch-inner-after="icon-fav-active2 bg-blue-500"></i>
-													<span class="toggle-off blind">좋아요</span>
-													<span class="toggle-on blind">좋아요 해제</span>
-												</button>
-												<button type="button" class="btn-noborder"><i class="ico-reply"></i>답글</button>
-											</div>
-										</div>
-									</div>
+.community-wrap .dep02 > li:not(:last-child) .comment-wrap {border-bottom:1px solid var(--border-4);}
+.community-wrap .dep02 > li {padding-left:38px;}
+
+.community-wrap .dep02 .comment-wrap {padding:8px 0;}
+.community-wrap .dep02 .comment-wrap:before {content:'';position:absolute;flex:0 0 16px;width:16px;height:16px;top:16px;left:-20px;background:url(../images/arrow/arrow_reply.svg) center center / contain no-repeat;}
+.community-wrap .dep02 .comment-wrap .comment-user {margin:0 0 8px 4px;}
+.community-wrap .dep02 .comment-wrap .avartar {position:static;width:24px;height:24px;flex:0 0 24px;}
+.community-wrap .dep02 .comment-wrap .comment-user-profile {display:flex;align-items:center;gap:4px;}
+.community-wrap .dep02 .comment-wrap .name {font-size:16px;}
+.community-wrap .dep02 .comment-wrap .date {font-size:13px;}
+.community-wrap .dep02 .comment-wrap .btn-more {position:absolute;right:0;top:0;display:flex;width:42px;height:42px;align-items:center;justify-content:center;border-radius:8px;margin-left:auto;}
+.community-wrap .dep02 .comment-wrap .btn-more:active {background-color:var(--surface-surface100);}
+.community-wrap .dep02 .comment-wrap .btn-more:before {content:'';width:100%;height:100%;background:url(../images/btn/btn_more.svg) center center / contain no-repeat;}
+.community-wrap .dep02 .comment-wrap .divide-list {}
+.community-wrap .dep02 .comment-wrap .divide-list span {font-size:13px;}
+.community-wrap .dep02 .comment-wrap .tags {margin-bottom:8px;}
+.community-wrap .dep02 .comment-wrap .comment-desc {}
+.community-wrap .dep02 .comment-wrap .comment-desc-inner {padding:0 4px;border-radius:0;background-color:transparent;}
+.community-wrap .dep02 .comment-wrap .comment-desc p {display:-webkit-inline-box!important;-webkit-box-orient:vertical!important;overflow:hidden!important;text-overflow:ellipsis!important;vertical-align:top;-webkit-line-clamp:3;word-break:break-all;font-size:15px;}
+.community-wrap .dep02 .comment-wrap .comment-desc.is-toggled p {-webkit-line-clamp:none;}
+.community-wrap .dep02 .comment-wrap .comment-desc .comment-toggle-wrap {margin-top:4px;}
+.community-wrap .dep02 .comment-wrap .comment-btn-wrap {display:flex;align-items:center;justify-content:space-between;margin-top:8px;}
+.community-wrap .dep02 .comment-wrap .comment-btn-wrap {}

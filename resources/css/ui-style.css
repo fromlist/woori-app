@@ -399,7 +399,7 @@ i.ico-reply {-webkit-mask-image:url(../images/ico/ico_reply.svg);mask-image:url(
 
 
 /* form */ 
-input:not([type="checkbox"],[type="radio"],[type="file"]) {font-size:18px;font-weight:700;color:var(--typography-black);background-color:transparent;border:0;width:100%;height:52px;caret-color:var(--status-focused);outline:0;border-radius:8px;}
+input:not([type="checkbox"],[type="radio"],[type="file"]) {font-size:18px;font-weight:700;color:var(--typography-black);background-color:transparent;border:0;width:100%;height:50px;line-height:1;caret-color:var(--status-focused);outline:0;}
 input:not([type="checkbox"],[type="radio"],[type="file"])::placeholder {color:var(--typography-placeholder);font-weight:700;}
 input:not([type="checkbox"],[type="radio"],[type="file"])[readonly] {color:var(--typography-gray);}
 input:not([type="checkbox"],[type="radio"],[type="file"])[disabled] {color:var(--typography-placeholder);}
@@ -412,7 +412,7 @@ input:not([type="checkbox"],[type="radio"],[type="file"])[disabled] {color:var(-
 
 /* input-wrap has input-button */
 .input-wrap input {}
-.input-wrap button {flex:0 0 52px;width:52px;height:52px;opacity:0;transition:opacity 0.3s ease;
+.input-wrap button {flex:0 0 52px;width:52px;height:50px;opacity:0;transition:opacity 0.3s ease;
     -webkit-mask-position:center center;
     mask-position:center center;
     -webkit-mask-size:24px 24px;
@@ -458,10 +458,8 @@ input[type="file"]::-webkit-file-upload-button {display:none;}
 
 
 
-textarea {display:block;min-height:110px;font-size:18px;font-weight:400;color:var(--typography-body);background-color:transparent;border:0;flex:1 1 100%;border-radius:8px;padding:12px;width:100%;caret-color:var(--status-focused);max-height:224px;}
+textarea {display:block;min-height:98px;font-size:18px;font-weight:400;color:var(--typography-body);background-color:transparent;border:0;flex:1 1 100%;padding:16px;width:100%;caret-color:var(--status-focused);max-height:224px;outline:0;margin:0 -16px;}
 textarea::placeholder {color:var(--typography-placeholder);font-weight:700;}
-textarea[readonly] {color:var(--typography-gray);border:1px solid var(--border-4);}
-textarea[disabled] {color:var(--typography-placeholder);border:1px solid var(--border-4);background-color:var(--status-disabled_bg);}
 .textarea-length {display:flex;margin-top:4px;justify-content:space-between;}
 .textarea-length .left {font-size:15px;font-weight:400;color:var(--typography-caption);line-height:1.6;}
 
@@ -541,6 +539,10 @@ button.select.is-modal-open:after {background:url(../images/form/select-chevron-
 .inp-round input[type="radio"]:checked {background-color:var(--button-primary-enabled);border-color:transparent;color:var(--button-primary-onEnabled);}
 .inp-round input[type="radio"]:disabled {border-color:var(--border-4);color:var(--button-outlined-disabled);}
 
+/* inp-image */
+.inp-image {display:flex;gap:12px;}
+.inp-image picture {display:flex;border-radius:50%;}
+.inp-image input:checked ~ picture {outline:2px solid var(--status-active);}
 
 /* inp-check-all */
 .inp-check-all {border-radius:4px;border:1px solid var(--border-8);background-color:var(--background-bg_lightGray);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
@@ -730,14 +732,14 @@ button.select.is-modal-open:after {background:url(../images/form/select-chevron-
 .stroke.stroke-fluid {margin-left:-16px;margin-right:-16px;}
 .stroke4 {border-width:4px}
 /* division */
-.division {display:inline-block;content:'';width:1px;height:18px;background-color:var(--border-8);vertical-align:top;}
+.division {display:inline-block;content:'';width:1px;height:18px;background-color:var(--border-8);vertical-align: middle;}
 .division.h12 {height:12px;}
 .division.h14 {height:14px;}
 
 /* divide-list */
-.divide-list {display:block;font-size:0;word-break:keep-all;}
-.divide-list span {font-size:16px;font-weight:400;color:var(--typography-caption);line-height:1;}
-.divide-list > *:not(.division) {display:inline;vertical-align:top;}
+.divide-list {display: flex;font-size:0;word-break:keep-all;flex-wrap: wrap;align-items: center;}
+.divide-list span {font-size:16px;font-weight:400;color:var(--typography-caption);}
+.divide-list > *:not(.division) {display:inline;vertical-align: middle;}
 
 /* icon */
 .icon-only {display:inline-flex;align-items:center;justify-content:center;vertical-align:top;white-space:nowrap;
