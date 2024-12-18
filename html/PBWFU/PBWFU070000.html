@@ -74,10 +74,9 @@
 					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
 				</div>
 				<div class="center">
-					<h1>이달의 추천펀드</h1>
+					<h1>나의 관심펀드</h1>
 				</div>
 				<div class="right">
-					<button type="button" class="header-btn" aria-label="관심 펀드"><i class="i-favorite"></i></button>
 					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
 				</div>
 			</div>
@@ -100,11 +99,20 @@
 						}
 					</style>
 
-					<div class="fund-result">
+					<p class="description info body-small fc-typography-caption mt16">관심펀드는 최대 10개까지 등록할 수 있습니다. <br> 상위 5개의 펀드를 메인에서 비교 분석해 줍니다.</p>
+
+					<div class="group content-fluid">
+						<div class="right">
+							<button type="button" class="btn-xsmall btn-outlined btn-round" data-micromodal-trigger="modal-businesscard"><i class="ico-order"></i>순서 설정</button>
+						</div>
+					</div>
+
+					<div class="fund-result pt0">
 
 						<!-- fund-card-list -->
 						<div class="fund-card-list">
 							<div class="fund-card" data-toggle="toggle-wrap" data-aos>
+								<div class="clip clip-recommend">추천</div>
 								<div class="tag-wrap">
 									<div class="tags tags-small tags-lightRed">#매우높은위험</div>
 									<div class="tags tags-small tags-FFF4EB">#높은위험</div>
@@ -152,15 +160,13 @@
 										<span class="toggle-on blind">선택해제</span>
 									</button>
 								</div>
-								<div class="favorite-btn-wrap" data-toggle="toggle-wrap">
-									<button type="button" data-toggle="toggle-trigger">
-										<i class="icon-only icon-36 icon-fav " data-switch-inner="true" data-switch-inner-before="icon-fav" data-switch-inner-after="icon-fav-active"></i>
-										<span class="toggle-off blind">관심펀드 등록</span>
-										<span class="toggle-on blind">관심펀드 등록해제</span>
+								<div class="favorite-btn-wrap">
+									<button type="button" aria-label="관심펀드 삭제">
+										<i class="icon-only icon-28 icon-close bg-icon-default"></i>
 									</button>
 								</div>
-
 							</div>
+
 							<div class="fund-card" data-toggle="toggle-wrap" data-aos>
 								<div class="tag-wrap">
 									<div class="tags tags-small tags-lightRed">#높은위험</div>
@@ -203,10 +209,8 @@
 									</button>
 								</div>
 								<div class="favorite-btn-wrap" data-toggle="toggle-wrap">
-									<button type="button" data-toggle="toggle-trigger" id="success">
-										<i class="icon-only icon-36 icon-fav " data-switch-inner="true" data-switch-inner-before="icon-fav" data-switch-inner-after="icon-fav-active"></i>
-										<span class="toggle-off blind">관심펀드 등록</span>
-										<span class="toggle-on blind">관심펀드 등록해제</span>
+									<button type="button" aria-label="관심펀드 삭제">
+										<i class="icon-only icon-28 icon-close bg-icon-default"></i>
 									</button>
 								</div>
 
@@ -247,63 +251,44 @@
 	</main>
 	<!-- //main -->
 
+
+
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-select-filter">
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard" aria-hidden="true">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
+
 				<div class="modal__header">
-					<strong class="modal__title title-large"></strong>
+					<strong class="modal__title title-large">펀드 순서 설정</strong>
 					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
 				</div>
 				<div class="modal__content">
-					<div class="content">
 
+					<div class="content px24">
+						<p class="description info body-large my24">순서를 바꿀 펀드를 끌어 순서를 변경하세요. 상위 3개의 펀드는 메인>펀드 탭에서 수익률 비교 차트로 조회할 수 있습니다.</p>
 
-
-
-						<!-- group-form -->
-						<div class="group-form mt16">
-							<div class="group-title py16 px8">
-								<strong class="title-large px0">기간</strong>
+						<div id="sortingBusinessCard" class="businesscard-list">
+							<div class="list-group-item">
+								<strong class="title-medium">피델리티글로벌배당인컴증권자투자신탁(주식-재간접형)</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
 							</div>
-							<div class="group-content mt0">
-								<div class="inp-group">
-									<div class="inp inp-medium">
-										<label>
-											<input type="radio" name="rad001">
-											<span class="label-title">1개월</span>
-										</label>
-									</div>
-									<div class="inp inp-medium">
-										<label>
-											<input type="radio" name="rad001">
-											<span class="label-title">3개월</span>
-										</label>
-									</div>
-									<div class="inp inp-medium">
-										<label>
-											<input type="radio" name="rad001">
-											<span class="label-title">3개월</span>
-										</label>
-									</div>
-									<div class="inp inp-medium">
-										<label>
-											<input type="radio" name="rad001">
-											<span class="label-title">12개월</span>
-										</label>
-									</div>
-								</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 2</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
 							</div>
 						</div>
-						<!-- //group-form -->
-
 					</div>
+
 				</div>
 				<div class="modal__footer">
 					<!-- bottom-btn -->
 					<div class="bottom-btn">
 						<div class="btn-wrap">
-							<button type="button" class="btn-large btn-primary" data-micromodal-close>조회</button>
+							<button type="button" class="btn-large btn-primary" onclick="toastr.success('', '저장되었습니다.')" data-micromodal-close>저장</button>
 						</div>
 					</div>
 					<!-- //bottom-btn -->
@@ -313,23 +298,14 @@
 	</div>
 	<!-- //micromodal -->
 
-
 	<script>
-		$('#success').click(function(event) {
-			if ($(this).closest('.favorite-btn-wrap').hasClass('is-toggled')) {
-				toastr.caution(`<div class="btn-toast-wrap"><a href="#" class="btn-xsmall btn-ghost-white">바로가기<i class="ico-chevron"></i></a>`, '관심펀드에서 삭제되었습니다.', {
-					"extendedTimeOut": 0,
-					"preventDuplicates": false,
-					"disableTimeOut": true,
-				});
-			} else {
-				toastr.success(`<div class="btn-toast-wrap"><a href="#" class="btn-xsmall btn-ghost-white">바로가기<i class="ico-chevron"></i></a>`, '관심펀드에 등록되었습니다', {
-					"extendedTimeOut": 0,
-					"preventDuplicates": false,
-					"disableTimeOut": true,
-				});
-			}
-		});
+		// sortable
+		var sortableOption = {
+			group: 'shared',
+			animation: 150,
+			handle: '.handler', // handle's class
+		}
+		sortableLeft = Sortable.create(sortingBusinessCard, sortableOption);
 	</script>
 </body>
 
