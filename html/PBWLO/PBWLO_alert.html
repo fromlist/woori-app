@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
 
 	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
-
 	<!-- [plugins] -->
 	<!-- highlight -->
 	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
@@ -50,7 +49,6 @@
 	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
 	<!-- //[plugins] -->
 
-	<!-- ui source -->
 	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
 	<link rel="stylesheet" href="../../resources/css/ui-variable.css">
 	<link rel="stylesheet" href="../../resources/css/ui-default.css">
@@ -58,54 +56,62 @@
 	<link rel="stylesheet" href="../../resources/css/ui-style.css">
 	<link rel="stylesheet" href="../../resources/css/ui-content.css">
 	<link rel="stylesheet" href="../../resources/css/ui-plugins.css">
-	<link rel="stylesheet" href="../../resources/css/ui-guide.css">
 
 	<script src="../../resources/js/ui-script.js"></script>
 	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
-	<style>
-		.ui-guide .ui-guide-box dl dd {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
-	</style>
 </head>
 
 <body>
-	<div class="ui-guide">
-		<h1>Typography</h1>
-		<p>Headline, Title, Body</p>
 
-		<div class="ui-guide-section">
-			<h2>Description</h2>
-			<div class="ui-guide-box">
-				<p class="description success title-medium">description info</p>
-				<p class="description info title-medium">description info</p>
-				<p class="description caution title-medium">description caution</p>
-				<p class="description error title-medium">description error</p>
+	<!-- main -->
+	<main>
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<br>
+					<button type="button" class="btn-large btn-outlined" onclick="$swal.fire04('로그인에 실패했습니다.', '행번 또는 비밀번호가 <br> 일치하지 않습니다.', 'icon-caution', '확인')">로그인에 실패했습니다.</button>
+					<br>
+					<button type="button" class="btn-large btn-outlined" onclick="$swal.fire04('로그인에 실패했습니다.', '통합 로그인해주세요.', 'icon-caution', '확인')">로그인에 실패했습니다.</button>
+					<br>
+					<button type="button" class="btn-large btn-outlined" onclick="$swal.fire04('로그인에 3회 실패했습니다.', '통합 로그인 또는 생체인증 <br> 로그인을 다시 인증해주세요.', 'icon-caution', '확인')">로그인에 3회 실패했습니다.</button>
+					<br>
+					<button type="button" class="btn-large btn-outlined" onclick="$swal.fire04('로그인에 실패했습니다.', '행번 또는 비밀번호가 <br> 일치하지 않습니다. <br> 통합 로그인 또는 생체인증 <br> 로그인을 다시 인증해주세요.', 'icon-caution', '확인')">로그인에 실패했습니다.</button>
+					<br>
+					<button type="button" class="btn-large btn-outlined" onclick="$swal.fire04('로그인에 실패했습니다.', '행번으로 로그인해주세요.', 'icon-caution', '확인')">로그인에 실패했습니다.</button>
+					<br>
+					<button type="button" class="btn-large btn-outlined" onclick="$swal.fire04('로그인에 5회 실패했습니다.', '포탈 또는 모바일 오피스에서 <br> 비밀번호를 초기화해 주세요.', 'icon-caution', '확인')">로그인에 5회 실패했습니다.</button>
+					<br>
+
+					<button type="button" class="btn-large btn-outlined" onclick="$swal.fire02('서비스 이용 대상이 아닙니다', 'caution', '확인');">서비스 이용 대상이 아닙니다</button>
+					<br>
+					<button type="button" class="btn-large btn-outlined" onclick="$swal.fire02('로그인에 실패했습니다.', 'error', '확인');">로그인에 실패했습니다.</button>
+
+
+				</div>
+				<!-- //content -->
+
 			</div>
-			<h2>Size</h2>
-			<div class="ui-guide-box">
-				<h3 class="description info headline-large">headline-large</h3>
-				<h3 class="description info headline-medium">headline-medium</h3>
-				<h3 class="description info headline-small">headline-small</h3>
-				<h3 class="description info title-large">title-large</h3>
-				<h3 class="description info title-medium">title-medium</h3>
-				<h3 class="description info title-small">title-small</h3>
-				<p class="description info body-xlarge">body-xlarge</p>
-				<p class="description info body-large">body-large</p>
-				<p class="description info body-medium">body-medium</p>
-				<p class="description info body-small">body-small</p>
-			</div>
+			<!-- //container -->
 
 
-			<h2 class="headline-small inner-ico"><i class="ico-keyword bg-yellow-500"></i>추천 키워드</h2>
 
 		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
 
 
-	</div>
+	</main>
+	<!-- //main -->
+
 </body>
 
 </html>

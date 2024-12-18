@@ -465,7 +465,7 @@ const $swal = {
             showCancelButton: showCancelButton,
             showCloseButton: false,
             reverseButtons: true,
-            title: `<span class="description ${status} body-xlarge">${title}</span>`,
+            title: `<span class="description ${status} body-large">${title}</span>`,
             confirmButtonText: confirmButtonText,
             cancelButtonText: cancelButtonText,
             customClass: {
@@ -516,7 +516,7 @@ const $swal = {
             html: `
                 <i class="icon-only icon-48 ${icon} bg-icon-gray_1"></i>
                 <strong class="title-large mt8">${title}</strong>
-                <p class="body-large mt8">${text}</p>
+                <p class="body-large mt8 fw-400">${text}</p>
             `,
         })
     }
