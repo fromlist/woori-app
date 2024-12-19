@@ -278,7 +278,7 @@
 							showButtonPanel: true,
 							closeText: "닫기",
 							onSelect: function(input, date) {
-								MicroModal.close('modal-datepicker-month');
+								MicroModal.close('modal-datepicker-month2');
 								button.innerText = input;
 							},
 						});
@@ -313,9 +313,7 @@
 				closeText: "닫기",
 				showOtherMonths: true,
 				onSelect: function(date, dp) {},
-				onChangeMonthYear: function(year, month, dp) {
-					console.log(month)
-				},
+				onChangeMonthYear: function(year, month, dp) {},
 				beforeShowDay: function(date) {
 					var formattedDate = $.datepicker.formatDate('yy-mm-dd', date);
 
@@ -376,8 +374,9 @@
 				})
 			}
 
+
 			$(document).on('click', '.ui-datepicker-next', function() {
-				$('body').find('.datepicker-wrap').find('.ui-datepicker:visible tbody').hide('slide', {
+				$('body').find('.datepicker-wrap').find('.ui-datepicker:visible table').hide('slide', {
 					direction: 'left'
 				}, 1).show('slide', {
 					direction: 'right'
@@ -385,7 +384,7 @@
 			})
 
 			$(document).on('click', '.ui-datepicker-prev', function() {
-				$('body').find('.datepicker-wrap').find('.ui-datepicker:visible tbody').hide('slide', {
+				$('body').find('.datepicker-wrap').find('.ui-datepicker:visible table').hide('slide', {
 					direction: 'right'
 				}, 1).show('slide', {
 					direction: 'left'
