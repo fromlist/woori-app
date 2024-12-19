@@ -810,3 +810,42 @@ button.flag-fluid span {margin-top:0;}
 .community-wrap .dep02 .comment-wrap .comment-desc .comment-toggle-wrap {margin-top:4px;}
 .community-wrap .dep02 .comment-wrap .comment-btn-wrap {display:flex;align-items:center;justify-content:space-between;margin-top:8px;}
 .community-wrap .dep02 .comment-wrap .comment-btn-wrap {}
+
+/* fund-diff */
+.fund-diff {}
+.fund-diff .fund-diff-title {padding:8px 16px 0;}
+.fund-diff .fund-diff-title ul {position:relative;margin-top:32px;display:flex;gap:16px;padding-bottom:46px;}
+.fund-diff .fund-diff-title ul:after {content:'';position:absolute;left:50%;top:0;height:100%;border-left:1px dashed var(--border-4);}
+.fund-diff .fund-diff-title ul li {flex:1;}
+.fund-diff .fund-diff-title .tags-wrap {text-align:center;}
+.fund-diff .fund-diff-title .title-medium {padding:0;margin-top:16px;}
+.fund-diff .fund-diff-title .tags-bottom {margin-top:8px;}
+.fund-diff-detail {}
+.fund-diff-detail .fund-diff-inner {background-color:var(--background-bg_white);padding:32px 16px 48px;}
+.fund-diff-detail .title-large {text-align:center;margin-bottom:24px;}
+.fund-diff-detail .diff-table {position:relative;}
+.fund-diff-detail .diff-table:after {content:'';position:absolute;left:50%;top:0;height:100%;border-left:1px dashed var(--border-4);}
+.fund-diff-detail .diff-table table {table-layout:fixed;}
+.fund-diff-detail .diff-table th {}
+.fund-diff-detail .diff-table th strong {display:block;border-radius:4px;border: 1px solid var(--border-8);text-align:center;font-size:15px;font-weight:500;color:var(--typography-title);padding:3px 8px;}
+.fund-diff-detail .diff-table tr > * {vertical-align:top;}
+.fund-diff-detail .diff-table tr > *:first-child {border-right:12px solid transparent;}
+.fund-diff-detail .diff-table tr > *:last-child {border-left:12px solid transparent;}
+.fund-diff-detail .diff-table tr:not(:last-child) > th {border-bottom:16px solid transparent;}
+.fund-diff-detail .diff-table tr:not(:last-child) > td {border-bottom:32px solid transparent;}
+.fund-diff-detail .diff-table td {font-size:18px;font-weight:400;color:var(--typography-body);text-align:center;}
+.fund-diff-detail .diff-table p {font-size:16px;text-align:left;}
+
+.fund-diff-detail .diff-table dl {font-size:15px;font-weight:400;color:var(--typography-caption);text-align:left;padding:0 4px;}
+
+.fund-diff-detail .diff-table dl.price dt {font-size:20px;font-weight:700;color:var(--typography-black);line-height:1;text-align:center;}
+.fund-diff-detail .diff-table dl.price dd {font-size:18px;font-weight:400;line-height:1;margin-top:8px;text-align:center;}
+.fund-diff-detail .diff-table dl.price dd span {justify-content:center;}
+.fund-diff-detail .diff-table dl.price .rise {display:flex;align-items:center;gap:2px;color:var(--red-600);}
+.fund-diff-detail .diff-table dl.price .rise:before {content:'';flex:0 0 12px;width:12px;height:12px;background:url(../images/ico/ico_triangle_up.svg) center center / contain no-repeat;}
+.fund-diff-detail .diff-table dl.price .fall {display:flex;align-items:center;gap:2px;color:var(--deepblue-600);}
+.fund-diff-detail .diff-table dl.price .fall:before {content:'';flex:0 0 12px;width:12px;height:12px;background:url(../images/ico/ico_triangle_down.svg) center center / contain no-repeat;}
+.fund-diff-detail .diff-table dl.price .steady {display:flex;align-items:center;gap:2px;color:var(--gray-500);}
+.fund-diff-detail .diff-table dl.price .steady:before {content:'';flex:0 0 12px;width:12px;height:12px;background:url(../images/ico/ico_steady.svg) center center / contain no-repeat;}
+.fund-diff-detail .diff-table dl.group-list {}
+.fund-diff-detail .diff-table dl.group-list .list {display:flex;justify-content:space-between;gap:8px;}

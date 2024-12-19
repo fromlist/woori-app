@@ -576,7 +576,7 @@ button.select.is-modal-open:after {background:url(../images/form/select-chevron-
 .form-exchange .ex-input-wrap {flex:1}
 .form-exchange .ex-input-wrap input {height:36px;text-align:right;font-size:24px;font-weight:700;color:var(--typography-title);}
 .form-exchange .ex-input-wrap span {display:block;font-size:16px;line-height:1;font-weight:500;color:var(--typography-caption);margin-top:8px;text-align:right;}
-.form-exchange .sum {position:absolute;left:50%;top:-23px;margin-left:-23px;width:46px;height:46px;background:url(../images/common/arrow_sum.svg) center center / contain no-repeat;}
+.form-exchange .sum {position:absolute;left:50%;top:-32px;margin-left:-12px;width:24px;height:24px;background:url(../images/common/arrow_sum.svg) center center / contain no-repeat;}
 .ex-input-wrap .anchor-fluid {width:auto;padding:0;margin-left:auto;font-size:20px;font-weight:700;color:var(--typography-black);}
 .ex-input-wrap .anchor-fluid:empty:before {content:attr(aria-placeholder);color:var(--typography-disabled);}
 
