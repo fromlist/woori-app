@@ -1,43 +1,305 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 
 <head>
+	<title>자산관리 영업지원 App</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>jQuery UI Datepicker - Animations</title>
-	<link rel="stylesheet" href="../../themes/base/all.css">
-	<link rel="stylesheet" href="../demos.css">
-	<script src="../../external/requirejs/require.js"></script>
-	<script src="../bootstrap.js" data-modules="effect effect-bounce effect-blind effect-bounce effect-clip effect-drop effect-fold effect-slide">
-		$("#datepicker").datepicker();
-		$("#anim").on("change", function() {
-			$("#datepicker").datepicker("option", "showAnim", $(this).val());
-		});
-	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="../../resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../resources/css/ui-variable.css">
+	<link rel="stylesheet" href="../../resources/css/ui-default.css">
+	<link rel="stylesheet" href="../../resources/css/ui-layout.css">
+	<link rel="stylesheet" href="../../resources/css/ui-style.css">
+	<link rel="stylesheet" href="../../resources/css/ui-content.css">
+	<link rel="stylesheet" href="../../resources/css/ui-plugins.css">
+	<link rel="stylesheet" href="../../resources/css/ui-guide.css">
+
+	<script src="../../resources/js/ui-script.js"></script>
+	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+
 </head>
 
 <body>
 
-	<p>Date: <input type="text" id="datepicker" size="30"></p>
+	<div class="ui-guide">
+		<h1>Modal</h1>
+		<div class="ui-guide-section">
+			<h2>Year</h2>
+			<div class="guide-column-list">
+				<div class="input-wrap input-datepicker">
+					<button type="button" aria-label="대상기간 시작일" data-micromodal-trigger="modal-datepicker-year">2023-11</button>
+					<div class="bul">-</div>
+					<button type="button" aria-label="대상기간 종료일" data-micromodal-trigger="modal-datepicker-year">2024-10</button>
+				</div>
+			</div>
+		</div>
+		<hr>
 
-	<p>Animations:<br>
-		<select id="anim">
-			<option value="show">Show (default)</option>
-			<option value="slideDown">Slide down</option>
-			<option value="fadeIn">Fade in</option>
-			<option value="blind">Blind (UI Effect)</option>
-			<option value="bounce">Bounce (UI Effect)</option>
-			<option value="clip">Clip (UI Effect)</option>
-			<option value="drop">Drop (UI Effect)</option>
-			<option value="fold">Fold (UI Effect)</option>
-			<option value="slide">Slide (UI Effect)</option>
-			<option value="">None</option>
-		</select>
-	</p>
+		<div class="ui-guide-section">
+			<h2>datepicker</h2>
+			<div class="guide-column-list">
+				<div class="input-wrap input-datepicker">
+					<button type="button" aria-label="날짜 선택" data-micromodal-trigger="modal-datepicker"></button>
+				</div>
+			</div>
+		</div>
 
-	<div class="demo-description">
-		<p>Use different animations when opening or closing the datepicker. Choose an animation from the dropdown, then click on the input to see its effect. You can use one of the three standard animations or any of the UI Effects.</p>
+		<div class="ui-guide-section">
+			<h2>datepicker inline</h2>
+			<div class="guide-column-list">
+				<div aria-label="날짜 선택" id="my_date_picker"></div>
+			</div>
+		</div>
 	</div>
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker-year" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+						<div class="datepicker-wrap pt16">
+							<div class="year">
+								<div class="swiper swiper-year">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="swiper-slide">2023</div>
+										<div class="swiper-slide">2024</div>
+										<div class="swiper-slide">2025</div>
+										<div class="swiper-slide">2026</div>
+										<div class="swiper-slide">2027</div>
+									</div>
+								</div>
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+							<div class="month">
+								<button type="button" class="btn-small btn-outlined btn-round">1</button>
+								<button type="button" class="btn-small btn-outlined btn-round">2</button>
+								<button type="button" class="btn-small btn-outlined btn-round">3</button>
+								<button type="button" class="btn-small btn-outlined btn-round">4</button>
+								<button type="button" class="btn-small btn-outlined btn-round">5</button>
+								<button type="button" class="btn-small btn-outlined btn-round">6</button>
+								<button type="button" class="btn-small btn-outlined btn-round">7</button>
+								<button type="button" class="btn-small btn-outlined btn-round">8</button>
+								<button type="button" class="btn-small btn-outlined btn-round">9</button>
+								<button type="button" class="btn-small btn-outlined btn-round">10</button>
+								<button type="button" class="btn-small btn-outlined btn-round">11</button>
+								<button type="button" class="btn-small btn-outlined btn-round">12</button>
+							</div>
+							<div class="stroke my24"></div>
+							<p class="description info body-small fc-typography-caption">대상기간은 전월/전전월 기준 1년 이내만 가능합니다.</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+						<div class="jquery-datepicker"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<script>
+		const newSwiper1 = new Swiper('.year .swiper', {
+			spaceBetween: 1,
+			observer: true,
+			navigation: {
+				nextEl: '.year .swiper-button-next',
+				prevEl: '.year .swiper-button-prev',
+			},
+		});
+	</script>
+	<script>
+		const modalTrigger = document.querySelector('[data-micromodal-trigger="modal-datepicker"]')
+		modalTrigger.addEventListener("click", function(event) {
+			MicroModal.show('modal-datepicker', {
+				// openTrigger: 'data-custom-open', // [3]
+				// closeTrigger: 'data-custom-close', // [4]
+				// openClass: 'is-open', // [5]
+				disableScroll: true, // [6]
+				disableFocus: true, // [7]
+				awaitOpenAnimation: true, // [8]
+				awaitCloseAnimation: true, // [9]
+				// debugMode: true // [10]
+				onShow: function(modalPopup) {
+					$(".jquery-datepicker").datepicker({
+						dateFormat: 'yy-mm-dd',
+						prevText: '이전 달',
+						nextText: '다음 달',
+						monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+						monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+						dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+						dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+						dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+						showMonthAfterYear: true,
+						yearSuffix: '년',
+						// minDate: 0,
+						showButtonPanel: true,
+						closeText: "닫기",
+						showOtherMonths: true,
+						onSelect: function(input, date) {
+							MicroModal.close('modal-datepicker');
+							modalTrigger.innerText = input;
+						},
+					});
+				},
+				onClose: function(modalPopup) {
+					// console.log($(".jquery-datepicker").datepicker("refresh"))
+				}
+			});
+		});
+	</script>
+	<style>
+		.available {
+			background: red;
+		}
+
+		.booked {
+			background: green;
+		}
+
+		.housefull {
+			background: blue;
+		}
+	</style>
+	<script>
+		$(function() {
+			var available = ["2024-12-15", "2024-12-23", "2024-12-30"];
+			var booked = ["2024-12-16", "2024-12-24", "2024-12-29"];
+			var houseFull = ["2024-13-17", "2024-12-25", "2024-12-28"];
+
+			$("#my_date_picker").datepicker({
+				firstDay: 1,
+				showOtherMonths: true,
+				beforeShowDay: function(date) {
+					var formattedDate = $.datepicker.formatDate('yy-mm-dd', date);
+					if (available.indexOf(formattedDate) !== -1) {
+						return [true, 'available'];
+					} else if (booked.indexOf(formattedDate) !== -1) {
+						return [true, 'booked'];
+					} else if (houseFull.indexOf(formattedDate) !== -1) {
+						return [true, 'housefull'];
+					}
+					return [true, ''];
+				}
+			});
+			$(document).on('click', '.ui-datepicker-next', function() {
+				// $(".ui-datepicker-title>span").hide().show(100);
+				$(".ui-datepicker-calendar").hide('slide', {
+					direction: 'left'
+				}, 100).show('slide', {
+					direction: 'right'
+				}, 100)
+			})
+
+			$(document).on('click', '.ui-datepicker-prev', function() {
+				// $(".ui-datepicker-title>span").hide().show(100);
+				$(".ui-datepicker-calendar").hide('slide', {
+					direction: 'right'
+				}, 100).show('slide', {
+					direction: 'left'
+				}, 100)
+			})
+
+			$('#my_date_picker').swipe({
+				swipeRight: function() {
+					$('#my_date_picker').find("[data-handler='prev']").click();
+				},
+				swipeLeft: function() {
+					$('#my_date_picker').find("[data-handler='next']").click();
+				}
+			})
+
+
+			// function addCustomColumn() {
+			// 	// Add a new column to the datepicker table header
+			// 	$(".ui-datepicker-calendar thead tr").prepend('<th class="custom-header">02</th>');
+
+			// 	// Add a new column to each row in the datepicker table body
+			// 	$(".ui-datepicker-calendar tbody tr").each(function() {
+			// 		$(this).prepend('<td class="custom-column"><a>02</a></td>');
+			// 	});
+			// }
+
+			// // Call the function after the datepicker is initialized
+			// addCustomColumn();
+		});
+	</script>
 </body>
 
 </html>
