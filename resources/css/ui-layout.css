@@ -404,7 +404,7 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .datepicker-wrap .calendar-wrap .swiper strong {display:block;font-size:26px;font-weight:500;color:var(--typography-black);line-height:52px;text-align:center;}
 .datepicker-wrap .calendar-wrap .swiper-button-prev,
 .datepicker-wrap .calendar-wrap .swiper-button-next {top:0;margin-top:0;}
-.datepicker-wrap .ui-datepicker-calendar {table-layout:fixed;margin:0 auto;width:auto;}
+.datepicker-wrap .ui-datepicker-calendar {table-layout:fixed;}
 .datepicker-wrap .ui-datepicker-calendar caption {position:static;width:auto;height:auto;font-size:26px;font-weight:500;color:var(--typography-black);line-height:52px;text-align:center;}
 
 .datepicker-wrap .ui-datepicker-calendar thead th {color:var(--gray-400);}

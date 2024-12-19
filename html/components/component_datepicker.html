@@ -47,6 +47,11 @@
 	<!-- AOS -->
 	<link rel="stylesheet" type="text/css" href="../../resources/plugins/aos/3.0.0-beta.6/aos.css">
 	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="../../resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="../../resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+
 	<!-- //[plugins] -->
 
 	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
@@ -62,7 +67,7 @@
 	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
 
-</head>
+</head> 
 
 <body>
 
@@ -72,9 +77,9 @@
 			<h2>Year</h2>
 			<div class="guide-column-list">
 				<div class="input-wrap input-datepicker">
-					<button type="button" aria-label="대상기간 시작일" data-micromodal-trigger="modal-datepicker-year">2023-11</button>
+					<button type="button" aria-label="대상기간 시작일" data-micromodal-trigger="modal-datepicker-month">2023-11</button>
 					<div class="bul">-</div>
-					<button type="button" aria-label="대상기간 종료일" data-micromodal-trigger="modal-datepicker-year">2024-10</button>
+					<button type="button" aria-label="대상기간 종료일" data-micromodal-trigger="modal-datepicker-month">2024-10</button>
 				</div>
 			</div>
 		</div>
@@ -92,7 +97,9 @@
 		<div class="ui-guide-section">
 			<h2>datepicker inline</h2>
 			<div class="guide-column-list">
-				<div aria-label="날짜 선택" id="my_date_picker"></div>
+				<div class="datepicker-wrap">
+					<div aria-label="날짜 선택" id="my_date_picker" class="datepicker-trigger"></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -100,7 +107,7 @@
 
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker-year" aria-hidden="true">
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker-month" aria-hidden="true">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 
@@ -111,38 +118,8 @@
 				<div class="modal__content">
 
 					<div class="content">
-						<div class="datepicker-wrap pt16">
-							<div class="year">
-								<div class="swiper swiper-year">
-									<!-- Additional required wrapper -->
-									<div class="swiper-wrapper">
-										<!-- Slides -->
-										<div class="swiper-slide">2023</div>
-										<div class="swiper-slide">2024</div>
-										<div class="swiper-slide">2025</div>
-										<div class="swiper-slide">2026</div>
-										<div class="swiper-slide">2027</div>
-									</div>
-								</div>
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
-							</div>
-							<div class="month">
-								<button type="button" class="btn-small btn-outlined btn-round">1</button>
-								<button type="button" class="btn-small btn-outlined btn-round">2</button>
-								<button type="button" class="btn-small btn-outlined btn-round">3</button>
-								<button type="button" class="btn-small btn-outlined btn-round">4</button>
-								<button type="button" class="btn-small btn-outlined btn-round">5</button>
-								<button type="button" class="btn-small btn-outlined btn-round">6</button>
-								<button type="button" class="btn-small btn-outlined btn-round">7</button>
-								<button type="button" class="btn-small btn-outlined btn-round">8</button>
-								<button type="button" class="btn-small btn-outlined btn-round">9</button>
-								<button type="button" class="btn-small btn-outlined btn-round">10</button>
-								<button type="button" class="btn-small btn-outlined btn-round">11</button>
-								<button type="button" class="btn-small btn-outlined btn-round">12</button>
-							</div>
-							<div class="stroke my24"></div>
-							<p class="description info body-small fc-typography-caption">대상기간은 전월/전전월 기준 1년 이내만 가능합니다.</p>
+						<div class="datepicker-wrap">
+							<div class="jquery-datepicker-month datepicker-trigger"></div>
 						</div>
 					</div>
 
@@ -165,7 +142,9 @@
 				</div>
 				<div class="modal__content">
 					<div class="content">
-						<div class="jquery-datepicker"></div>
+						<div class="datepicker-wrap">
+							<div class="jquery-datepicker datepicker-trigger"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -173,131 +152,204 @@
 	</div>
 	<!-- //micromodal -->
 
+	<script>
+		const modalTrigger1 = document.querySelectorAll('[data-micromodal-trigger="modal-datepicker"]')
+		modalTrigger1.forEach(function(button) {
 
-	<script>
-		const newSwiper1 = new Swiper('.year .swiper', {
-			spaceBetween: 1,
-			observer: true,
-			navigation: {
-				nextEl: '.year .swiper-button-next',
-				prevEl: '.year .swiper-button-prev',
-			},
-		});
-	</script>
-	<script>
-		const modalTrigger = document.querySelector('[data-micromodal-trigger="modal-datepicker"]')
-		modalTrigger.addEventListener("click", function(event) {
-			MicroModal.show('modal-datepicker', {
-				// openTrigger: 'data-custom-open', // [3]
-				// closeTrigger: 'data-custom-close', // [4]
-				// openClass: 'is-open', // [5]
-				disableScroll: true, // [6]
-				disableFocus: true, // [7]
-				awaitOpenAnimation: true, // [8]
-				awaitCloseAnimation: true, // [9]
-				// debugMode: true // [10]
-				onShow: function(modalPopup) {
-					$(".jquery-datepicker").datepicker({
-						dateFormat: 'yy-mm-dd',
-						prevText: '이전 달',
-						nextText: '다음 달',
-						monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-						monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-						dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-						dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-						dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-						showMonthAfterYear: true,
-						yearSuffix: '년',
-						// minDate: 0,
-						showButtonPanel: true,
-						closeText: "닫기",
-						showOtherMonths: true,
-						onSelect: function(input, date) {
-							MicroModal.close('modal-datepicker');
-							modalTrigger.innerText = input;
-						},
-					});
-				},
-				onClose: function(modalPopup) {
-					// console.log($(".jquery-datepicker").datepicker("refresh"))
-				}
+			button.addEventListener("click", function(event) {
+				MicroModal.show('modal-datepicker', {
+					// openTrigger: 'data-custom-open', // [3]
+					// closeTrigger: 'data-custom-close', // [4]
+					// openClass: 'is-open', // [5]
+					disableScroll: true, // [6]
+					disableFocus: true, // [7]
+					awaitOpenAnimation: true, // [8]
+					awaitCloseAnimation: true, // [9]
+					// debugMode: true // [10]
+					onShow: function(modalPopup) {
+						$(".jquery-datepicker").datepicker({
+							dateFormat: 'yy-mm-dd',
+							prevText: '이전 달',
+							nextText: '다음 달',
+							monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+							dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+							dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+							showMonthAfterYear: true,
+							yearSuffix: '년',
+							// minDate: 0,
+							showButtonPanel: true,
+							closeText: "닫기",
+							showOtherMonths: true,
+							onSelect: function(input, date) {
+								MicroModal.close('modal-datepicker');
+								button.innerText = input;
+							},
+						});
+					},
+					onClose: function(modalPopup) {
+						// console.log($(".jquery-datepicker").datepicker("refresh"))
+					}
+				});
 			});
-		});
+		})
 	</script>
-	<style>
-		.available {
-			background: red;
-		}
 
-		.booked {
-			background: green;
-		}
+	<script>
+		const modalTrigger2 = document.querySelectorAll('[data-micromodal-trigger="modal-datepicker-month"]')
+		modalTrigger2.forEach(function(button) {
+			button.addEventListener("click", function(event) {
+				MicroModal.show('modal-datepicker-month', {
+					// openTrigger: 'data-custom-open', // [3]
+					// closeTrigger: 'data-custom-close', // [4]
+					// openClass: 'is-open', // [5]
+					disableScroll: true, // [6]
+					disableFocus: true, // [7]
+					awaitOpenAnimation: true, // [8]
+					awaitCloseAnimation: true, // [9]
+					// debugMode: true // [10]
+					onShow: function() {
+						$('.jquery-datepicker-month').monthpicker({
+							dateFormat: 'yy-mm',
+							prevText: '이전 달',
+							nextText: '다음 달',
+							monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+							monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+							dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+							dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+							showMonthAfterYear: true,
+							yearSuffix: '년',
+							// minDate: 0,
+							showButtonPanel: true,
+							closeText: "닫기",
+							showOtherMonths: true,
+							onSelect: function(input, date) {
+								MicroModal.close('modal-datepicker-month');
+								button.innerText = input;
+							},
+						});
+					},
+					onClose: function() {
+						$(".jquery-datepicker-month").datepicker("destroy")
+					}
+				});
+			});
+		})
+	</script>
 
-		.housefull {
-			background: blue;
-		}
-	</style>
 	<script>
 		$(function() {
-			var available = ["2024-12-15", "2024-12-23", "2024-12-30"];
-			var booked = ["2024-12-16", "2024-12-24", "2024-12-29"];
-			var houseFull = ["2024-13-17", "2024-12-25", "2024-12-28"];
+			const schedule01 = ["2024-12-15", "2024-12-16", "2024-12-17", "2024-12-19"]; // 개인 일정
+			const schedule02 = ["2024-12-15", "2024-12-16", "2024-12-18", "2024-12-20"]; // 고객 생일
+			const schedule03 = ["2024-12-15", "2024-12-17", "2024-12-18", "2024-12-21"]; // 수신 만기
 
 			$("#my_date_picker").datepicker({
-				firstDay: 1,
+				dateFormat: 'yy-mm-dd',
+				prevText: '이전 달',
+				nextText: '다음 달',
+				monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+				monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+				dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+				dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+				dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+				showMonthAfterYear: true,
+				yearSuffix: '년',
+				// minDate: 0,
+				showButtonPanel: true,
+				closeText: "닫기",
 				showOtherMonths: true,
+				onSelect: function(date, dp) {},
+				onChangeMonthYear: function(month, year, dp) {},
 				beforeShowDay: function(date) {
 					var formattedDate = $.datepicker.formatDate('yy-mm-dd', date);
-					if (available.indexOf(formattedDate) !== -1) {
-						return [true, 'available'];
-					} else if (booked.indexOf(formattedDate) !== -1) {
-						return [true, 'booked'];
-					} else if (houseFull.indexOf(formattedDate) !== -1) {
-						return [true, 'housefull'];
+
+					if (schedule01.indexOf(formattedDate) !== -1 && schedule02.indexOf(formattedDate) !== -1 && schedule03.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_01 schedule_02 schedule_03'];
+					}
+					if (schedule01.indexOf(formattedDate) !== -1 && schedule03.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_01 schedule_03'];
+					}
+					if (schedule01.indexOf(formattedDate) !== -1 && schedule02.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_01 schedule_02'];
+					}
+					if (schedule02.indexOf(formattedDate) !== -1 && schedule03.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_02 schedule_03'];
+					}
+					if (schedule01.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_01'];
+					}
+					if (schedule02.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_02'];
+					}
+					if (schedule03.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_03'];
 					}
 					return [true, ''];
+
+				},
+				onUpdateDatepicker: function() {
+					addTags()
 				}
 			});
+
+			function addTags() {
+
+				const datepickerWrap = document.querySelectorAll('.ui-datepicker-calendar td a');
+				datepickerWrap.forEach(function(div) {
+					const scheduleWrap = document.createElement('div');
+					scheduleWrap.classList.add('schedule-wrap');
+					div.appendChild(scheduleWrap)
+				})
+
+				//개인 일정
+				const schedule_01 = document.querySelectorAll('.schedule_01 .schedule-wrap');
+				schedule_01.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label01" aria-title="개인 일정"></div>');
+				})
+
+				//고객 생일
+				const schedul_02 = document.querySelectorAll('.schedule_02 .schedule-wrap');
+				schedul_02.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label02 aria-title="고객 생일"></div>');
+				})
+
+				//수신 만기
+				const schedul_03 = document.querySelectorAll('.schedule_03 .schedule-wrap');
+				schedul_03.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label03" aria-title="수신 만기"></div>');
+				})
+			}
+
+
 			$(document).on('click', '.ui-datepicker-next', function() {
 				// $(".ui-datepicker-title>span").hide().show(100);
 				$(".ui-datepicker-calendar").hide('slide', {
 					direction: 'left'
 				}, 100).show('slide', {
 					direction: 'right'
-				}, 100)
+				}, 0)
 			})
 
 			$(document).on('click', '.ui-datepicker-prev', function() {
-				// $(".ui-datepicker-title>span").hide().show(100);
 				$(".ui-datepicker-calendar").hide('slide', {
 					direction: 'right'
 				}, 100).show('slide', {
 					direction: 'left'
-				}, 100)
+				}, 0)
 			})
 
-			$('#my_date_picker').swipe({
+
+			$('.datepicker-trigger').swipe({
 				swipeRight: function() {
-					$('#my_date_picker').find("[data-handler='prev']").click();
+					$(this).find("[data-handler='prev']").click();
 				},
 				swipeLeft: function() {
-					$('#my_date_picker').find("[data-handler='next']").click();
+					$(this).find("[data-handler='next']").click();
 				}
 			})
 
-
-			// function addCustomColumn() {
-			// 	// Add a new column to the datepicker table header
-			// 	$(".ui-datepicker-calendar thead tr").prepend('<th class="custom-header">02</th>');
-
-			// 	// Add a new column to each row in the datepicker table body
-			// 	$(".ui-datepicker-calendar tbody tr").each(function() {
-			// 		$(this).prepend('<td class="custom-column"><a>02</a></td>');
-			// 	});
-			// }
-
-			// // Call the function after the datepicker is initialized
-			// addCustomColumn();
 		});
 	</script>
 </body>

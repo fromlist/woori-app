@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="../../resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../resources/css/ui-variable.css">
+	<link rel="stylesheet" href="../../resources/css/ui-default.css">
+	<link rel="stylesheet" href="../../resources/css/ui-layout.css">
+	<link rel="stylesheet" href="../../resources/css/ui-style.css">
+	<link rel="stylesheet" href="../../resources/css/ui-content.css">
+	<link rel="stylesheet" href="../../resources/css/ui-plugins.css">
+
+	<script src="../../resources/js/ui-script.js"></script>
+	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>전체 메모</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<div class="memo-user-info">
+						<strong class="title-medium px4">나고객</strong>
+						<div class="group pt0 j-start gap8">
+							<div class="divide-list px4">
+								<span>부서명</span>
+								<div class="division h14 mx8"></div>
+								<span>직책</span>
+							</div>
+							<div class="body-medium fw-400">회사명</div>
+						</div>
+					</div>
+
+					<!-- memo-list -->
+					<div class="memo-list">
+						<div class="memo-inner is-toggled">
+							<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+							<div class="memo-btn">
+								<div class="right">
+									<button type="button" class="btn-noborder" data-micromodal-trigger="modal-memo-write"><i class="ico-modify"></i>수정</button>
+									<button type="button" class="btn-noborder"><i class="ico-delete"></i>삭제</button>
+								</div>
+							</div>
+							<dl>
+								<dt>작성자이름</dt>
+								<dd>2024-11-06 10:48</dd>
+							</dl>
+							<div class="divide-list">
+								<span>부서명</span>
+								<div class="division h14 mx8"></div>
+								<span>부서명</span>
+							</div>
+						</div>
+						<div class="memo-inner is-toggled">
+							<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+							<div class="memo-btn">
+								<div class="right">
+									<button type="button" class="btn-noborder"><i class="ico-modify"></i>수정</button>
+									<button type="button" class="btn-noborder"><i class="ico-delete"></i>삭제</button>
+								</div>
+							</div>
+							<dl>
+								<dt>작성자이름</dt>
+								<dd>2024-11-06 10:48</dd>
+							</dl>
+							<div class="divide-list">
+								<span>부서명</span>
+								<div class="division h14 mx8"></div>
+								<span>부서명</span>
+							</div>
+						</div>
+					</div>
+					<!-- //memo-list -->
+
+				</div>
+				<!-- //content -->
+
+
+
+
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+	</main>
+	<!-- //main -->
+
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-memo-write">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large">메모</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content pt16">
+
+						<div class="inp inp-medium">
+							<label>
+								<input type="checkbox">
+								<span class="label-title">나만보기</span>
+							</label>
+						</div>
+
+						<div class="form mt10">
+							<div class="input-wrap">
+								<textarea aria-label="메모"></textarea>
+							</div>
+							<div class="textarea-length">
+								<div class="left">0/300자</div>
+								<div class="right">
+									<button type="button" class="btn-xsmall btn-primary btn-round">저장</button>
+								</div>
+							</div>
+						</div>
+
+						<p class="description error body-small mt10 fc-typography-caption">개인정보 또는 부적절한 내용 작성을 금지하며, 마케팅 정보로 이용할 수 없습니다.</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+</body>
+
+</html>
