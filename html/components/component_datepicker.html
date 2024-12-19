@@ -88,6 +88,13 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="ui-guide-section">
+			<h2>datepicker inline</h2>
+			<div class="guide-column-list">
+				<div aria-label="날짜 선택" id="my_date_picker"></div>
+			</div>
+		</div>
 	</div>
 
 
@@ -215,6 +222,82 @@
 					// console.log($(".jquery-datepicker").datepicker("refresh"))
 				}
 			});
+		});
+	</script>
+	<style>
+		.available {
+			background: red;
+		}
+
+		.booked {
+			background: green;
+		}
+
+		.housefull {
+			background: blue;
+		}
+	</style>
+	<script>
+		$(function() {
+			var available = ["2024-12-15", "2024-12-23", "2024-12-30"];
+			var booked = ["2024-12-16", "2024-12-24", "2024-12-29"];
+			var houseFull = ["2024-13-17", "2024-12-25", "2024-12-28"];
+
+			$("#my_date_picker").datepicker({
+				firstDay: 1,
+				showOtherMonths: true,
+				beforeShowDay: function(date) {
+					var formattedDate = $.datepicker.formatDate('yy-mm-dd', date);
+					if (available.indexOf(formattedDate) !== -1) {
+						return [true, 'available'];
+					} else if (booked.indexOf(formattedDate) !== -1) {
+						return [true, 'booked'];
+					} else if (houseFull.indexOf(formattedDate) !== -1) {
+						return [true, 'housefull'];
+					}
+					return [true, ''];
+				}
+			});
+			$(document).on('click', '.ui-datepicker-next', function() {
+				// $(".ui-datepicker-title>span").hide().show(100);
+				$(".ui-datepicker-calendar").hide('slide', {
+					direction: 'left'
+				}, 100).show('slide', {
+					direction: 'right'
+				}, 100)
+			})
+
+			$(document).on('click', '.ui-datepicker-prev', function() {
+				// $(".ui-datepicker-title>span").hide().show(100);
+				$(".ui-datepicker-calendar").hide('slide', {
+					direction: 'right'
+				}, 100).show('slide', {
+					direction: 'left'
+				}, 100)
+			})
+
+			$('#my_date_picker').swipe({
+				swipeRight: function() {
+					$('#my_date_picker').find("[data-handler='prev']").click();
+				},
+				swipeLeft: function() {
+					$('#my_date_picker').find("[data-handler='next']").click();
+				}
+			})
+
+
+			// function addCustomColumn() {
+			// 	// Add a new column to the datepicker table header
+			// 	$(".ui-datepicker-calendar thead tr").prepend('<th class="custom-header">02</th>');
+
+			// 	// Add a new column to each row in the datepicker table body
+			// 	$(".ui-datepicker-calendar tbody tr").each(function() {
+			// 		$(this).prepend('<td class="custom-column"><a>02</a></td>');
+			// 	});
+			// }
+
+			// // Call the function after the datepicker is initialized
+			// addCustomColumn();
 		});
 	</script>
 </body>
