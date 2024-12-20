@@ -1,0 +1,13 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="solar:clock-circle-linear" clip-path="url(#clip0_4200_39760)">
+<g id="Group">
+<path id="Vector" d="M7.99998 14.6654C11.6819 14.6654 14.6666 11.6806 14.6666 7.9987C14.6666 4.3168 11.6819 1.33203 7.99998 1.33203C4.31808 1.33203 1.33331 4.3168 1.33331 7.9987C1.33331 11.6806 4.31808 14.6654 7.99998 14.6654Z" stroke="#CFD4D9" stroke-width="1.5"/>
+<path id="Vector_2" d="M8 5.33203V7.9987L9.66667 9.66536" stroke="#CFD4D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_4200_39760">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

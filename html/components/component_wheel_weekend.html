@@ -97,7 +97,6 @@
 				const nextChild = entry.target.nextElementSibling;
 
 				if (entry.isIntersecting) {
-					console.log(entries)
 					entry.target.querySelector('input').checked = true;
 					entry.target.classList.add('center');
 					if (prevChild != null) {
@@ -120,6 +119,7 @@
 		}, {
 			root: document.querySelector('.select-spinner'),
 			rootMargin: `-50% 0px`,
+			threshold: [0, 0.25, 0.5, 0.75, 1]
 		});
 		let box = document.querySelectorAll(`.scroll-items`);
 		box.forEach(function(item) {

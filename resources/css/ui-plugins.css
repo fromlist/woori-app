@@ -412,7 +412,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .datepicker-wrap .ui-widget-content .ui-state-disabled,
 .datepicker-wrap .ui-widget-header .ui-state-disabled {opacity:1;}
 
-.datepicker-wrap .ui-datepicker .ui-datepicker-buttonpane {display:flex;margin:0;}
+.datepicker-wrap .ui-datepicker .ui-datepicker-buttonpane {display:flex;margin:0;border:0;}
 
 .datepicker-wrap-month .ui-widget.ui-widget-content {height:auto;}
 .datepicker-wrap-month .ui-datepicker .ui-datepicker-header {font-size:0;gap:0;}
