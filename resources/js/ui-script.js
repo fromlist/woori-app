@@ -25,7 +25,7 @@ const toggle = {
         this.onClick();
     },
     onClick: function () {
-        $toggleCont.on('click', function () {
+        $(document).on('click', '[data-toggle="toggle-trigger"]', function () {
             const toggleWrap = $(this).closest('[data-toggle="toggle-wrap"]');
             if (toggleWrap.hasClass($toggleClass)) {
                 toggleWrap.removeClass($toggleClass);
@@ -41,7 +41,7 @@ const switchClass = {
         this.onClick();
     },
     onClick: function () {
-        $toggleCont.on('click', function () {
+        $(document).on('click', '[data-toggle="toggle-trigger"]', function () {
 
             const $switchBefore = this.dataset.switchBefore;
             const $switchAfter = this.dataset.switchAfter;
@@ -294,7 +294,6 @@ const stickyContent = function () {
     const snackbarEl = document.querySelector('.snackbar-content')
 
     if (snackbarEl != null) {
-        const snackbaElClose = snackbarEl.querySelector('[data-snackbar-close]')
 
         var timer = null;
         var close = 1500;
@@ -309,11 +308,15 @@ const stickyContent = function () {
                 }, close);
             }
         }, close);
-        snackbaElClose.addEventListener('click', function () {
-            snackbarEl.classList.remove('is-sticky');
-            snackbarEl.classList.add('snackbar-disabled');
-            clearTimeout(timer);
-        });
+
+        const snackbaElClose = snackbarEl.querySelector('[data-snackbar-close]')
+        if (snackbaElClose != null) {
+            snackbaElClose.addEventListener('click', function () {
+                snackbarEl.classList.remove('is-sticky');
+                snackbarEl.classList.add('snackbar-disabled');
+                clearTimeout(timer);
+            });
+        }
     }
 
 }

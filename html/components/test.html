@@ -61,244 +61,141 @@
 	<script src="../../resources/js/ui-script.js"></script>
 	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
+	<style>
+		.scroll-container {
+			/* sizing and layout */
+			--itemHeight: 60px;
+			--itemGap: 10px;
+			--containerHeight: calc((var(--itemHeight) * 7) + (var(--itemGap) * 6));
+			width: 400px;
+			height: var(--containerHeight);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			row-gap: var(--itemGap);
+			border-radius: 4px;
+			/* scrolling */
+			overflow-y: scroll;
+			scroll-snap-type: y mandatory;
+			overscroll-behavior-y: none;
+			/* paint */
+			--topBit: calc((var(--containerHeight) - var(--itemHeight))/2);
+			--footBit: calc((var(--containerHeight) + var(--itemHeight))/2);
+			background: linear-gradient(rgb(254 251 240), rgb(254 251 240) var(--topBit), rgb(229 50 34 / .5) var(--topBit), rgb(229 50 34 / .5) var(--footBit), rgb(254 251 240) var(--footBit));
+			box-shadow: 0 0 10px #eee;
+		}
 
+		/* items inside scroll container */
+		.scroll-items {
+			/* sizing and layout */
+			width: 90%;
+			flex: 0 0 var(--itemHeight);
+			box-sizing: border-box;
+			padding-inline: 20px;
+			border-radius: inherit;
+
+			/* paint and font */
+			background: linear-gradient(to right, rgb(242 194 66), rgb(235 122 51));
+			box-shadow: 0 0 4px rgb(235 122 51);
+			font: 16pt/var(--itemHeight) 'poppins';
+			color: white;
+
+			scroll-snap-align: center;
+			pointer-events: none;
+
+		}
+
+		.scroll-items:first-of-type {
+			margin-block-start: var(--topBit);
+		}
+
+		.scroll-items:last-of-type {
+			margin-block-end: var(--topBit);
+		}
+
+		input {
+			appearance: none;
+		}
+
+		span {
+			/* contains airport code */
+			float: right;
+		}
+
+		.scroll-items:has(:checked) {
+			/* if radio checked */
+			background: rgb(229 50 34);
+		}
+
+		h1 {
+			font-size: 18pt;
+		}
+
+		body {
+			height: 100vh;
+			display: grid;
+			place-content: center;
+			place-items: center;
+			row-gap: 30px;
+			margin: 0;
+			font-family: 'crimson text';
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+		}
+	</style>
 </head>
 
 <body>
+	<div class="wrapper"><select multiple class="form-control" size="5">
+			<option value="">One</option>
+			<option value="">Two</option>
+			<option value="">Three</option>
+			<option value="">Four</option>
+			<option value="">Five</option>
+			<option value="">Six</option>
+			<option value="">Seven</option>
+			<option value="">Eight</option>
+			<option value="">Nine</option>
+			<option value="">Ten</option>
+		</select></div>
 
-	<div class="ui-guide">
-		<h1>Modal</h1>
-		<div class="ui-guide-section">
-			<h2>Year</h2>
-			<div class="guide-column-list">
-				<div class="input-wrap input-datepicker">
-					<button type="button" aria-label="대상기간 시작일" data-micromodal-trigger="modal-datepicker-year">2023-11</button>
-					<div class="bul">-</div>
-					<button type="button" aria-label="대상기간 종료일" data-micromodal-trigger="modal-datepicker-year">2024-10</button>
-				</div>
-			</div>
-		</div>
-		<hr>
-
-		<div class="ui-guide-section">
-			<h2>datepicker</h2>
-			<div class="guide-column-list">
-				<div class="input-wrap input-datepicker">
-					<button type="button" aria-label="날짜 선택" data-micromodal-trigger="modal-datepicker"></button>
-				</div>
-			</div>
-		</div>
-
-		<div class="ui-guide-section">
-			<h2>datepicker inline</h2>
-			<div class="guide-column-list">
-				<div aria-label="날짜 선택" id="my_date_picker"></div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker-year" aria-hidden="true">
-		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
-			<div class="modal__container" role="dialog" aria-modal="true">
-
-				<div class="modal__header modal__header__alert">
-					<strong class="modal__title title-large"></strong>
-					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
-				</div>
-				<div class="modal__content">
-
-					<div class="content">
-						<div class="datepicker-wrap pt16">
-							<div class="year">
-								<div class="swiper swiper-year">
-									<!-- Additional required wrapper -->
-									<div class="swiper-wrapper">
-										<!-- Slides -->
-										<div class="swiper-slide">2023</div>
-										<div class="swiper-slide">2024</div>
-										<div class="swiper-slide">2025</div>
-										<div class="swiper-slide">2026</div>
-										<div class="swiper-slide">2027</div>
-									</div>
-								</div>
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
-							</div>
-							<div class="month">
-								<button type="button" class="btn-small btn-outlined btn-round">1</button>
-								<button type="button" class="btn-small btn-outlined btn-round">2</button>
-								<button type="button" class="btn-small btn-outlined btn-round">3</button>
-								<button type="button" class="btn-small btn-outlined btn-round">4</button>
-								<button type="button" class="btn-small btn-outlined btn-round">5</button>
-								<button type="button" class="btn-small btn-outlined btn-round">6</button>
-								<button type="button" class="btn-small btn-outlined btn-round">7</button>
-								<button type="button" class="btn-small btn-outlined btn-round">8</button>
-								<button type="button" class="btn-small btn-outlined btn-round">9</button>
-								<button type="button" class="btn-small btn-outlined btn-round">10</button>
-								<button type="button" class="btn-small btn-outlined btn-round">11</button>
-								<button type="button" class="btn-small btn-outlined btn-round">12</button>
-							</div>
-							<div class="stroke my24"></div>
-							<p class="description info body-small fc-typography-caption">대상기간은 전월/전전월 기준 1년 이내만 가능합니다.</p>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //micromodal -->
-
-
-
-	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker" aria-hidden="true">
-		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
-			<div class="modal__container" role="dialog" aria-modal="true">
-
-				<div class="modal__header modal__header__alert">
-					<strong class="modal__title title-large"></strong>
-					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
-				</div>
-				<div class="modal__content">
-					<div class="content">
-						<div class="jquery-datepicker"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //micromodal -->
-
-
+	<h1>Scroll to select</h1>
+	<section class=scroll-container>
+		<label class=scroll-items>Madrid <span>MAD</span><input type=radio name=items /></label>
+		<label class=scroll-items>Malta <span>MLA</span><input type=radio name=items /></label>
+		<label class=scroll-items>Manchester <span>MAN</span><input type=radio name=items /></label>
+		<label class=scroll-items>Manilla <span>MNL</span><input type=radio name=items /></label>
+		<label class=scroll-items>Marseille <span>MRS</span><input type=radio name=items /></label>
+		<label class=scroll-items>Mauritius <span>MRU</span><input type=radio name=items /></label>
+		<label class=scroll-items>Medford <span>MFR</span><input type=radio name=items /></label>
+		<label class=scroll-items>Medina <span>MED</span><input type=radio name=items /></label>
+		<label class=scroll-items>Melbourne <span>MEL</span><input type=radio name=items /></label>
+		<label class=scroll-items>Memphis <span>MEM</span><input type=radio name=items /></label>
+		<label class=scroll-items>Miami <span>MIA</span><input type=radio name=items /></label>
+		<label class=scroll-items>Milan <span>MXP</span><input type=radio name=items /></label>
+		<label class=scroll-items>Mildura <span>MQL</span><input type=radio name=items /></label>
+		<label class=scroll-items>Milwaukee <span>MKE</span><input type=radio name=items /></label>
+		<label class=scroll-items>Missoula <span>MSO</span><input type=radio name=items /></label>
+		<label class=scroll-items>Moline <span>MLI</span><input type=radio name=items /></label>
+		<label class=scroll-items>Monterey <span>MRY</span><input type=radio name=items /></label>
+		<label class=scroll-items>Montpellier <span>MPL</span><input type=radio name=items /></label>
+		<label class=scroll-items>Montrose <span>MTJ</span><input type=radio name=items /></label>
+		<label class=scroll-items>Mulhouse <span>MLH</span><input type=radio name=items /></label>
+		<label class=scroll-items>Munich <span>MUC</span><input type=radio name=items /></label>
+		<label class=scroll-items>Muscat <span>MCT</span><input type=radio name=items /></label>
+		<label class=scroll-items>Myrtle Beach <span>MYR</span><input type=radio name=items /></label>
+	</section>
 	<script>
-		const newSwiper1 = new Swiper('.year .swiper', {
-			spaceBetween: 1,
-			observer: true,
-			navigation: {
-				nextEl: '.year .swiper-button-next',
-				prevEl: '.year .swiper-button-prev',
-			},
-		});
-	</script>
-	<script>
-		const modalTrigger = document.querySelector('[data-micromodal-trigger="modal-datepicker"]')
-		modalTrigger.addEventListener("click", function(event) {
-			MicroModal.show('modal-datepicker', {
-				// openTrigger: 'data-custom-open', // [3]
-				// closeTrigger: 'data-custom-close', // [4]
-				// openClass: 'is-open', // [5]
-				disableScroll: true, // [6]
-				disableFocus: true, // [7]
-				awaitOpenAnimation: true, // [8]
-				awaitCloseAnimation: true, // [9]
-				// debugMode: true // [10]
-				onShow: function(modalPopup) {
-					$(".jquery-datepicker").datepicker({
-						dateFormat: 'yy-mm-dd',
-						prevText: '이전 달',
-						nextText: '다음 달',
-						monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-						monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-						dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-						dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-						dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-						showMonthAfterYear: true,
-						yearSuffix: '년',
-						// minDate: 0,
-						showButtonPanel: true,
-						closeText: "닫기",
-						showOtherMonths: true,
-						onSelect: function(input, date) {
-							MicroModal.close('modal-datepicker');
-							modalTrigger.innerText = input;
-						},
-					});
-				},
-				onClose: function(modalPopup) {
-					// console.log($(".jquery-datepicker").datepicker("refresh"))
-				}
+		let observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				with(entry) if (isIntersecting) target.children[1].checked = true;
 			});
+		}, {
+			root: document.querySelector(`.scroll-container`),
+			rootMargin: `-51% 0px -49% 0px`
 		});
-	</script>
-	<style>
-		.available {
-			background: red;
-		}
-
-		.booked {
-			background: green;
-		}
-
-		.housefull {
-			background: blue;
-		}
-	</style>
-	<script>
-		$(function() {
-			var available = ["2024-12-15", "2024-12-23", "2024-12-30"];
-			var booked = ["2024-12-16", "2024-12-24", "2024-12-29"];
-			var houseFull = ["2024-13-17", "2024-12-25", "2024-12-28"];
-
-			$("#my_date_picker").datepicker({
-				firstDay: 1,
-				showOtherMonths: true,
-				beforeShowDay: function(date) {
-					var formattedDate = $.datepicker.formatDate('yy-mm-dd', date);
-					if (available.indexOf(formattedDate) !== -1) {
-						return [true, 'available'];
-					} else if (booked.indexOf(formattedDate) !== -1) {
-						return [true, 'booked'];
-					} else if (houseFull.indexOf(formattedDate) !== -1) {
-						return [true, 'housefull'];
-					}
-					return [true, ''];
-				}
-			});
-			$(document).on('click', '.ui-datepicker-next', function() {
-				// $(".ui-datepicker-title>span").hide().show(100);
-				$(".ui-datepicker-calendar").hide('slide', {
-					direction: 'left'
-				}, 100).show('slide', {
-					direction: 'right'
-				}, 100)
-			})
-
-			$(document).on('click', '.ui-datepicker-prev', function() {
-				// $(".ui-datepicker-title>span").hide().show(100);
-				$(".ui-datepicker-calendar").hide('slide', {
-					direction: 'right'
-				}, 100).show('slide', {
-					direction: 'left'
-				}, 100)
-			})
-
-			$('#my_date_picker').swipe({
-				swipeRight: function() {
-					$('#my_date_picker').find("[data-handler='prev']").click();
-				},
-				swipeLeft: function() {
-					$('#my_date_picker').find("[data-handler='next']").click();
-				}
-			})
-
-
-			// function addCustomColumn() {
-			// 	// Add a new column to the datepicker table header
-			// 	$(".ui-datepicker-calendar thead tr").prepend('<th class="custom-header">02</th>');
-
-			// 	// Add a new column to each row in the datepicker table body
-			// 	$(".ui-datepicker-calendar tbody tr").each(function() {
-			// 		$(this).prepend('<td class="custom-column"><a>02</a></td>');
-			// 	});
-			// }
-
-			// // Call the function after the datepicker is initialized
-			// addCustomColumn();
-		});
+		document.querySelectorAll(`.scroll-items`).forEach(item => observer.observe(item));
 	</script>
 </body>
 

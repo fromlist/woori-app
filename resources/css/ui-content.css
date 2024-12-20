@@ -759,18 +759,22 @@ button.flag-fluid span {margin-top:0;}
 .community-wrap {}
 .community-wrap > .dep01 {}
 .community-wrap .dep01 > li {position:relative;padding-left:58px;}
-.community-wrap .dep01 > li:not(:last-child) {margin-bottom:12px;}
+.community-wrap .dep01 > li:before {content:'';position:absolute;left:27px;width:2px;height:100%;background-color:var(--border-4);z-index:-1;}
+.community-wrap .dep01 > li:not(:last-child) {padding-bottom:12px;}
 
 .comment-wrap {position:relative;padding:12px 0;}
 .comment-wrap .comment-user {margin:0 0 8px 12px;}
 .comment-wrap .avartar {position:absolute;left:-58px;top:0;width:54px;height:54px;background-repeat:no-repeat;background-size:contain;background-position:center center;}
+.comment-wrap .avartar-nodata {background-color:var(--surface-surface);border-radius:50%;display:flex;align-items:center;justify-content:center;}
 .comment-wrap .avartar01 {background:url(../images/avatar/profile_type1.svg) center center / contain no-repeat;}
 .comment-wrap .avartar02 {background:url(../images/avatar/profile_type2.svg) center center / contain no-repeat;}
 .comment-wrap .avartar03 {background:url(../images/avatar/profile_type3.svg) center center / contain no-repeat;}
 .comment-wrap .avartar04 {background:url(../images/avatar/profile_type4.svg) center center / contain no-repeat;}
 .comment-wrap .avartar05 {background:url(../images/avatar/profile_type5.svg) center center / contain no-repeat;}
 .comment-wrap .avartar06 {background:url(../images/avatar/profile_type6.svg) center center / contain no-repeat;}
-.comment-wrap .comment-user-info {}
+
+.comment-wrap .comment-user-info .body-medium {padding:0 12px;}
+
 .comment-wrap .name {font-size:20px;font-weight:700;color:var(--typography-title);line-height:1.5;}
 .comment-wrap .date {font-size:14px;font-weight:400;color:var(--gray-400);line-height:1;}
 .comment-wrap .btn-more {position:absolute;right:0;top:0;display:flex;width:42px;height:42px;align-items:center;justify-content:center;border-radius:8px;margin-left:auto;}

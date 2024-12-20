@@ -841,6 +841,10 @@ button.select.is-modal-open:after {background:url(../images/form/select-chevron-
     -webkit-mask-image:url(../images/icon_only/icon_close.svg);
     mask-image:url(../images/icon_only/icon_close.svg);
 }
+.icon-nodata {
+    -webkit-mask-image:url(../images/icon_only/icon_nodata.svg);
+    mask-image:url(../images/icon_only/icon_nodata.svg);
+}
 
 /* toggle-trigger */
 [data-toggle="toggle-trigger"] .toggle-off {display:block;}
