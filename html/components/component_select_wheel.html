@@ -123,7 +123,22 @@
 		.time-wheel {
 			display: flex;
 			align-items: center;
+			position: relative;
 		}
+
+		.time-wheel:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			height: 30px;
+			background-color: var(--surface-surface100, rgba(130, 149, 167, 0.11));
+			z-index: 10000;
+		}
+
+
 
 		.time-wheel .swiper {
 			width: 100%;
@@ -150,22 +165,39 @@
 	<script>
 		const swiperHours = new Swiper('.swiper-hours', {
 			// Optional parameters
-			slidesPerView: 1,
+			slidesPerView: 5,
+			grabCursor: true,
 			direction: 'vertical',
+			cubeEffect: {
+				shadow: true,
+				slideShadows: true,
+				shadowOffset: 20,
+				shadowScale: 0.94,
+			},
 			freeMode: {
 				enabled: true,
 				sticky: true,
 			},
+			loop: true
 		});
 
 		const swiperMinutes = new Swiper('.swiper-minutes', {
 			// Optional parameters
-			slidesPerView: 1,
+			slidesPerView: 5,
+			grabCursor: true,
 			direction: 'vertical',
+			cubeEffect: {
+				shadow: true,
+				slideShadows: true,
+				shadowOffset: 20,
+				shadowScale: 0.94,
+			},
 			freeMode: {
 				enabled: true,
 				sticky: true,
+
 			},
+			loop: true
 		});
 	</script>
 </body>
