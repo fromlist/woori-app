@@ -47,6 +47,10 @@
 	<!-- AOS -->
 	<link rel="stylesheet" type="text/css" href="../../resources/plugins/aos/3.0.0-beta.6/aos.css">
 	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="../../resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="../../resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
 	<!-- //[plugins] -->
 
 	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
@@ -119,9 +123,9 @@
 						<div class="group-content">
 							<div class="form">
 								<div class="input-wrap input-datepicker">
-									<button type="button" aria-label="대상기간 시작일" data-micromodal-trigger="modal-datepicker-year">2023-11</button>
+									<button type="button" aria-label="대상기간 시작일" data-micromodal-trigger="modal-datepicker-month1">2023-11</button>
 									<div class="bul">-</div>
-									<button type="button" aria-label="대상기간 종료일" data-micromodal-trigger="modal-datepicker-year">2024-10</button>
+									<button type="button" aria-label="대상기간 종료일" data-micromodal-trigger="modal-datepicker-month2">2024-10</button>
 								</div>
 							</div>
 						</div>
@@ -317,71 +321,132 @@
 	<!-- //micromodal -->
 
 
-
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker-year" aria-hidden="true">
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker-month1" aria-hidden="true">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 
-				<div class="modal__header">
+				<div class="modal__header modal__header__alert">
 					<strong class="modal__title title-large"></strong>
 					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
 				</div>
 				<div class="modal__content">
 
 					<div class="content">
-						<div class="datepicker-wrap pt16">
-							<div class="year">
-								<div class="swiper swiper-year">
-									<!-- Additional required wrapper -->
-									<div class="swiper-wrapper">
-										<!-- Slides -->
-										<div class="swiper-slide">2023</div>
-										<div class="swiper-slide">2024</div>
-										<div class="swiper-slide">2025</div>
-										<div class="swiper-slide">2026</div>
-										<div class="swiper-slide">2027</div>
-									</div>
-								</div>
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
-							</div>
-							<div class="month">
-								<button type="button" class="btn-small btn-outlined btn-round">1</button>
-								<button type="button" class="btn-small btn-outlined btn-round">2</button>
-								<button type="button" class="btn-small btn-outlined btn-round">3</button>
-								<button type="button" class="btn-small btn-outlined btn-round">4</button>
-								<button type="button" class="btn-small btn-outlined btn-round">5</button>
-								<button type="button" class="btn-small btn-outlined btn-round">6</button>
-								<button type="button" class="btn-small btn-outlined btn-round">7</button>
-								<button type="button" class="btn-small btn-outlined btn-round">8</button>
-								<button type="button" class="btn-small btn-outlined btn-round">9</button>
-								<button type="button" class="btn-small btn-outlined btn-round">10</button>
-								<button type="button" class="btn-small btn-outlined btn-round">11</button>
-								<button type="button" class="btn-small btn-outlined btn-round">12</button>
-							</div>
+						<div class="datepicker-wrap datepicker-wrap-month">
+							<div class="datepicker-trigger" id="datepicker_month1"></div>
+
 							<div class="stroke my24"></div>
 							<p class="description info body-small fc-typography-caption">대상기간은 전월/전전월 기준 1년 이내만 가능합니다.</p>
+
 						</div>
 					</div>
 
 				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
 
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker-month2" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+						<div class="datepicker-wrap datepicker-wrap-month">
+							<div class="datepicker-trigger" id="datepicker_month2"></div>
+
+							<div class="stroke my24"></div>
+							<p class="description info body-small fc-typography-caption">대상기간은 전월/전전월 기준 1년 이내만 가능합니다.</p>
+
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</div>
 	<!-- //micromodal -->
 
 	<script>
-		const newSwiper = new Swiper('.year .swiper', {
-			spaceBetween: 1,
-			observer: true,
-			navigation: {
-				nextEl: '.year .swiper-button-next',
-				prevEl: '.year .swiper-button-prev',
-			},
-		});
+		const monthTrigger1 = document.querySelectorAll('[data-micromodal-trigger="modal-datepicker-month1"]')
+		monthTrigger1.forEach(function(button) {
+			button.addEventListener("click", function(event) {
+				MicroModal.show('modal-datepicker-month1', {
+					// openTrigger: 'data-custom-open', // [3]
+					// closeTrigger: 'data-custom-close', // [4]
+					// openClass: 'is-open', // [5]
+					disableScroll: true, // [6]
+					disableFocus: true, // [7]
+					awaitOpenAnimation: true, // [8]
+					awaitCloseAnimation: true, // [9]
+					// debugMode: true // [10]
+					onShow: function() {
+						$('#datepicker_month1').monthpicker({
+							dateFormat: 'yy-mm',
+							prevText: '이전 달',
+							nextText: '다음 달',
+							monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+							monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							showMonthAfterYear: true,
+							showButtonPanel: true,
+							closeText: "닫기",
+							onSelect: function(input, date) {
+								MicroModal.close('modal-datepicker-month1');
+								button.innerText = input;
+							},
+						});
+					},
+					onClose: function() {
+						// $("#datepicker_month").datepicker("destroy")
+					}
+				});
+			});
+		})
+
+		const monthTrigger2 = document.querySelectorAll('[data-micromodal-trigger="modal-datepicker-month2"]')
+		monthTrigger2.forEach(function(button) {
+			button.addEventListener("click", function(event) {
+				MicroModal.show('modal-datepicker-month2', {
+					// openTrigger: 'data-custom-open', // [3]
+					// closeTrigger: 'data-custom-close', // [4]
+					// openClass: 'is-open', // [5]
+					disableScroll: true, // [6]
+					disableFocus: true, // [7]
+					awaitOpenAnimation: true, // [8]
+					awaitCloseAnimation: true, // [9]
+					// debugMode: true // [10]
+					onShow: function() {
+						$('#datepicker_month2').monthpicker({
+							dateFormat: 'yy-mm',
+							prevText: '이전 달',
+							nextText: '다음 달',
+							monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+							monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							showMonthAfterYear: true,
+							showButtonPanel: true,
+							closeText: "닫기",
+							onSelect: function(input, date) {
+								MicroModal.close('modal-datepicker-month2');
+								button.innerText = input;
+							},
+						});
+					},
+					onClose: function() {
+						// $("#datepicker_month").datepicker("destroy")
+					}
+				});
+			});
+		})
 	</script>
+
 </body>
 
 </html>

@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
 
 	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
-
 	<!-- [plugins] -->
 	<!-- highlight -->
 	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
@@ -48,6 +47,10 @@
 	<!-- AOS -->
 	<link rel="stylesheet" type="text/css" href="../../resources/plugins/aos/3.0.0-beta.6/aos.css">
 	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="../../resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="../../resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
 	<!-- //[plugins] -->
 
 	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
@@ -67,137 +70,61 @@
 
 <body>
 
-	<div class="ui-guide" style="background-color:var(--white-100)">
-		<h1>Wheel</h1>
-		<div class="ui-guide-section">
-			<h2>Time</h2>
-			<div class="time-wheel">
-				<div class="swiper swiper-hours">
-					<div class="swiper-wrapper">
-						<!-- Slides -->
-						<div class="swiper-slide">00</div>
-						<div class="swiper-slide">01</div>
-						<div class="swiper-slide">02</div>
-						<div class="swiper-slide">03</div>
-						<div class="swiper-slide">04</div>
-						<div class="swiper-slide">05</div>
-						<div class="swiper-slide">06</div>
-						<div class="swiper-slide">07</div>
-						<div class="swiper-slide">08</div>
-						<div class="swiper-slide">09</div>
-						<div class="swiper-slide">10</div>
-						<div class="swiper-slide">11</div>
-						<div class="swiper-slide">12</div>
-						<div class="swiper-slide">13</div>
-						<div class="swiper-slide">14</div>
-						<div class="swiper-slide">15</div>
-						<div class="swiper-slide">16</div>
-						<div class="swiper-slide">17</div>
-						<div class="swiper-slide">18</div>
-						<div class="swiper-slide">19</div>
-						<div class="swiper-slide">20</div>
-						<div class="swiper-slide">21</div>
-						<div class="swiper-slide">22</div>
-						<div class="swiper-slide">23</div>
-						<div class="swiper-slide">24</div>
-					</div>
-				</div>
-				<!-- Slider main container -->
-				<div class="bul">:</div>
-				<div class="swiper swiper-minutes">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">00</div>
-						<div class="swiper-slide">10</div>
-						<div class="swiper-slide">20</div>
-						<div class="swiper-slide">30</div>
-						<div class="swiper-slide">40</div>
-						<div class="swiper-slide">50</div>
-						<div class="swiper-slide">60</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
+	<div class="select-spinner">
+		<section class="scroll-container">
+			<label class="scroll-items"><input type="radio" name="items3" /><span>일</span></label>
+			<label class="scroll-items"><input type="radio" name="items3" /><span>월</span></label>
+			<label class="scroll-items"><input type="radio" name="items3" /><span>화</span></label>
+			<label class="scroll-items"><input type="radio" name="items3" /><span>수</span></label>
+			<label class="scroll-items"><input type="radio" name="items3" /><span>목</span></label>
+			<label class="scroll-items"><input type="radio" name="items3" /><span>금</span></label>
+			<label class="scroll-items"><input type="radio" name="items3" /><span>토</span></label>
+		</section>
+		<section class="scroll-container">
+			<label class="scroll-items"><input type="radio" name="items4" /><span>요일</span></label>
+		</section>
 	</div>
-	<style>
-		.time-wheel {
-			display: flex;
-			align-items: center;
-			position: relative;
-		}
-
-		.time-wheel:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 100%;
-			height: 30px;
-			background-color: var(--surface-surface100, rgba(130, 149, 167, 0.11));
-			z-index: 10000;
-		}
 
 
 
-		.time-wheel .swiper {
-			width: 100%;
-			height: 300px;
-			line-height: 300px;
-		}
 
-		.time-wheel .swiper .swiper-slide {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: var(--white-100);
-			position: relative;
-			z-index: -1;
-		}
 
-		.time-wheel .swiper .swiper-slide-active {
-			background-color: var(--white-100);
-			position: relative;
-			z-index: 5
-		}
-	</style>
 
 	<script>
-		const swiperHours = new Swiper('.swiper-hours', {
-			// Optional parameters
-			slidesPerView: 5,
-			grabCursor: true,
-			direction: 'vertical',
-			cubeEffect: {
-				shadow: true,
-				slideShadows: true,
-				shadowOffset: 20,
-				shadowScale: 0.94,
-			},
-			freeMode: {
-				enabled: true,
-				sticky: true,
-			},
-			loop: true
+		let observer = new IntersectionObserver(function(entries) {
+			entries.forEach(function(entry) {
+				const prevChild = entry.target.previousElementSibling;
+				const nextChild = entry.target.nextElementSibling;
+
+				if (entry.isIntersecting) {
+					console.log(entries)
+					entry.target.querySelector('input').checked = true;
+					entry.target.classList.add('center');
+					if (prevChild != null) {
+						prevChild.classList.add('outside');
+					}
+					if (nextChild != null) {
+						nextChild.classList.add('outside');
+					}
+				} else {
+					entry.target.classList.remove('center');
+					if (prevChild != null) {
+						prevChild.classList.remove('outside');
+					}
+					if (nextChild != null) {
+						nextChild.classList.remove('outside');
+					}
+				}
+
+			})
+		}, {
+			root: document.querySelector('.select-spinner'),
+			rootMargin: `-50% 0px`,
 		});
+		let box = document.querySelectorAll(`.scroll-items`);
+		box.forEach(function(item) {
+			observer.observe(item)
 
-		const swiperMinutes = new Swiper('.swiper-minutes', {
-			// Optional parameters
-			slidesPerView: 5,
-			grabCursor: true,
-			direction: 'vertical',
-			cubeEffect: {
-				shadow: true,
-				slideShadows: true,
-				shadowOffset: 20,
-				shadowScale: 0.94,
-			},
-			freeMode: {
-				enabled: true,
-				sticky: true,
-
-			},
-			loop: true
 		});
 	</script>
 </body>
