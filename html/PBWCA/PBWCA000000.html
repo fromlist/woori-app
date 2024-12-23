@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="../../resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="../../resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="../../resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../resources/css/ui-variable.css">
+	<link rel="stylesheet" href="../../resources/css/ui-default.css">
+	<link rel="stylesheet" href="../../resources/css/ui-layout.css">
+	<link rel="stylesheet" href="../../resources/css/ui-style.css">
+	<link rel="stylesheet" href="../../resources/css/ui-content.css">
+	<link rel="stylesheet" href="../../resources/css/ui-plugins.css">
+
+	<script src="../../resources/js/ui-script.js"></script>
+	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>영업캘린더</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+				<!-- content -->
+				<div class="content">
+
+					<!-- inp-group -->
+					<div class="inp-group mt16 px0 gap16">
+						<div class="inp inp-medium">
+							<label>
+								<input type="checkbox" class="type-red" id="chk01" checked>
+								<span class="label-title">개인 일정</span>
+							</label>
+						</div>
+						<div class="inp inp-medium">
+							<label>
+								<input type="checkbox" class="type-purple" id="chk02" checked>
+								<span class="label-title">고객 생일</span>
+							</label>
+						</div>
+						<div class="inp inp-medium">
+							<label>
+								<input type="checkbox" class="type-cyan" id="chk03" checked>
+								<span class="label-title">수신 만기</span>
+							</label>
+						</div>
+					</div>
+					<!-- //inp-group -->
+
+					<!-- datepicker-wrap -->
+					<div class="datepicker-wrap">
+						<div aria-label="날짜 선택" class="datepicker-trigger" id="datepicker_schedule"></div>
+					</div>
+					<!-- //datepicker-wrap -->
+
+					<!-- schedule-section -->
+					<div class="schedule-section content-fluid pt40 pb24 mb-24">
+						<div class="tags-wrap mb24">
+							<div class="tags tags-medium tags-lightBlue">2024년 11월 17일 목요일</div>
+						</div>
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-birth bg-purple-600" aria-label="생일"></i>
+								<strong class="title-medium">홍길동 생일</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-user bg-icon-gray_1"></i>
+										16842121654866
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-wallet bg-cyan-500" aria-label="수신만기"></i>
+								<strong class="title-medium">홍길동 수신만기</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-won bg-black-88"></i>
+										1,000,000,000,000원
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-birth bg-purple-600" aria-label="생일"></i>
+								<strong class="title-medium">홍길동 생일</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-user bg-icon-gray_1"></i>
+										16842121654866
+									</div>
+								</div>
+							</div>
+						</a>
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-calendar" aria-label="개인일정"></i>
+								<strong class="title-medium">일정 제목이 길어질 경우에는 이렇게 노출됩니다.</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner fc-typography-body">
+										<i class="icon-only icon-16 icon-time bg-icon-gray_1"></i>
+										하루종일
+									</div>
+									<span class="division h12 mx10"></span>
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-location bg-icon-gray_1"></i>
+										12층 3번 회의실
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-calendar-repeat" aria-title="개인일정 반복"></i>
+								<strong class="title-medium">일정 제목</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-time bg-icon-gray_1"></i>
+										오후 2:00 - 오후 4:30
+									</div>
+									<span class="division h12 mx10"></span>
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-location bg-icon-gray_1"></i>
+										12층 3번 회의실
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+
+					</div>
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+
+	</main>
+	<!-- //main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-country">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large">환율정보 조회</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+
+						<div class="flag flag-us px8 py16"><strong>USD</strong><span>미국 달러</span></div>
+						<div class="table-col px8">
+							<table>
+								<caption>환율정보 조회</caption>
+								<tbody>
+									<tr>
+										<th scope="row" class="al">고시기준일</th>
+										<td class="ar">2024-11-18</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">고시시각</th>
+										<td class="ar">17:18:29</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">매매기준율</th>
+										<td class="ar">9,999.99원</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">전신환매도율</th>
+										<td class="ar">9,999.99원</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">전신환매입율</th>
+										<td class="ar">9,999.99원</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">현찰매입율</th>
+										<td class="ar">9,999.99원</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">대미환산율</th>
+										<td class="ar">1,000배</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">미불당환산율</th>
+										<td class="ar">1,000배</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">본지점매도율</th>
+										<td class="ar">9,999.99원</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">본지점매입율</th>
+										<td class="ar">9,999.99원</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" data-micromodal-close>환율계산하기</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<script>
+		$(function() {
+			const schedule01 = ["2024-12-15", "2024-12-16", "2024-12-17", "2024-12-19"]; // 개인 일정
+			const schedule02 = ["2024-12-15", "2024-12-16", "2024-12-18", "2024-12-20"]; // 고객 생일
+			const schedule03 = ["2024-12-15", "2024-12-17", "2024-12-18", "2024-12-21"]; // 수신 만기
+
+			$("#datepicker_schedule").datepicker({
+				dateFormat: 'yy-mm-dd',
+				prevText: '이전 달',
+				nextText: '다음 달',
+				monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+				monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+				dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+				dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+				dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+				showMonthAfterYear: true,
+				yearSuffix: '.',
+				// minDate: 0,
+				showButtonPanel: false,
+				closeText: "닫기",
+				showOtherMonths: true,
+				onSelect: function(date, dp) {},
+				onChangeMonthYear: function(year, month, dp) {},
+				beforeShowDay: function(date) {
+					var formattedDate = $.datepicker.formatDate('yy-mm-dd', date);
+
+					if (schedule01.indexOf(formattedDate) !== -1 && schedule02.indexOf(formattedDate) !== -1 && schedule03.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_01 schedule_02 schedule_03'];
+					}
+					if (schedule01.indexOf(formattedDate) !== -1 && schedule03.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_01 schedule_03'];
+					}
+					if (schedule01.indexOf(formattedDate) !== -1 && schedule02.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_01 schedule_02'];
+					}
+					if (schedule02.indexOf(formattedDate) !== -1 && schedule03.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_02 schedule_03'];
+					}
+					if (schedule01.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_01'];
+					}
+					if (schedule02.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_02'];
+					}
+					if (schedule03.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_03'];
+					}
+					return [true, ''];
+
+				},
+				onUpdateDatepicker: function() {
+					addTags()
+				}
+			});
+
+			function addTags() {
+
+				const datepickerWrap = document.querySelectorAll('.ui-datepicker-calendar td a');
+				datepickerWrap.forEach(function(div) {
+					const scheduleWrap = document.createElement('div');
+					scheduleWrap.classList.add('schedule-wrap');
+					div.appendChild(scheduleWrap)
+				})
+
+				//개인 일정
+				const schedule_01 = document.querySelectorAll('.schedule_01 .schedule-wrap');
+				schedule_01.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label01" aria-title="개인 일정"></div>');
+				})
+
+				//고객 생일
+				const schedul_02 = document.querySelectorAll('.schedule_02 .schedule-wrap');
+				schedul_02.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label02 aria-title="고객 생일"></div>');
+				})
+
+				//수신 만기
+				const schedul_03 = document.querySelectorAll('.schedule_03 .schedule-wrap');
+				schedul_03.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label03" aria-title="수신 만기"></div>');
+				})
+			}
+
+
+			$(document).on('click', '.ui-datepicker-next', function() {
+				$('body').find('.datepicker-wrap').find('.ui-datepicker:visible table').hide('slide', {
+					direction: 'left'
+				}, 1).show('slide', {
+					direction: 'right'
+				}, 250)
+			})
+
+			$(document).on('click', '.ui-datepicker-prev', function() {
+				$('body').find('.datepicker-wrap').find('.ui-datepicker:visible table').hide('slide', {
+					direction: 'right'
+				}, 1).show('slide', {
+					direction: 'left'
+				}, 250)
+			})
+
+
+			$('.datepicker-wrap').swipe({
+				swipeLeft: function() {
+					$(this).find("[data-handler='next']").trigger('click');
+				},
+				swipeRight: function() {
+					$(this).find("[data-handler='prev']").trigger('click');
+				}
+			})
+
+			$('#chk01').on('change', function() {
+				if (!$(this).is(':checked')) {
+					$('.ui-datepicker-calendar .schedule_01').removeClass('schedule_01')
+					$('.ui-datepicker-calendar .label01').css({
+						'display': 'none'
+					});
+				} else {
+					$('.ui-datepicker-calendar .label01').closest('td').addClass('schedule_01')
+					// $('.ui-datepicker-calendar .schedule_01').removeClass('schedule_01')
+					$('.ui-datepicker-calendar .label01').css({
+						'display': 'block'
+					});
+				}
+			})
+			$('#chk02').on('change', function() {
+				if (!$(this).is(':checked')) {
+					$('.ui-datepicker-calendar .schedule_02').removeClass('schedule_02')
+					$('.ui-datepicker-calendar .label02').css({
+						'display': 'none'
+					});
+				} else {
+					$('.ui-datepicker-calendar .label02').closest('td').addClass('schedule_02')
+					// $('.ui-datepicker-calendar .schedule_02').removeClass('schedule_02')
+					$('.ui-datepicker-calendar .label02').css({
+						'display': 'block'
+					});
+				}
+			})
+			$('#chk03').on('change', function() {
+				if (!$(this).is(':checked')) {
+					$('.ui-datepicker-calendar .schedule_03').removeClass('schedule_03')
+					$('.ui-datepicker-calendar .label03').css({
+						'display': 'none'
+					});
+				} else {
+					$('.ui-datepicker-calendar .label03').closest('td').addClass('schedule_03')
+					// $('.ui-datepicker-calendar .schedule_03').removeClass('schedule_03')
+					$('.ui-datepicker-calendar .label03').css({
+						'display': 'block'
+					});
+				}
+			})
+		});
+	</script>
+</body>
+
+</html>
