@@ -294,6 +294,8 @@ const stickyContent = function () {
     const snackbarEl = document.querySelector('.snackbar-content')
 
     if (snackbarEl != null) {
+        const snackbarWrapper = document.querySelector('.content');
+        snackbarWrapper.style.paddingBottom = snackbarEl.clientHeight + 'px';
 
         var timer = null;
         var close = 1500;
@@ -309,9 +311,9 @@ const stickyContent = function () {
             }
         }, close);
 
-        const snackbaElClose = snackbarEl.querySelector('[data-snackbar-close]')
-        if (snackbaElClose != null) {
-            snackbaElClose.addEventListener('click', function () {
+        const snackbarElClose = snackbarEl.querySelector('[data-snackbar-close]')
+        if (snackbarElClose != null) {
+            snackbarElClose.addEventListener('click', function () {
                 snackbarEl.classList.remove('is-sticky');
                 snackbarEl.classList.add('snackbar-disabled');
                 clearTimeout(timer);
@@ -402,9 +404,14 @@ const microModalFunc = {
             }, // [1]
             onClose: function (modalPopup, trigger, event) {
                 const modalPopupBody = modalPopup.querySelector('.modal__container');
-                setTimeout(function () {
-                    modalPopupBody.removeAttribute('style');
-                }, 300)
+                const dropDown = modalPopup.classList.contains('micromodal-slide-dropdown');
+                const selectBox = modalPopup.classList.contains('micromodal-slide-select');
+
+                if (dropDown || selectBox) {
+                    setTimeout(function () {
+                        modalPopupBody.removeAttribute('style');
+                    }, 300)
+                }
                 modalTrigger.classList.remove('is-modal-open');
 
             }, // [2]

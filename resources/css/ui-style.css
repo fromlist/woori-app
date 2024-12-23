@@ -397,7 +397,7 @@ i.ico-grid {-webkit-mask-image:url(../images/ico/ico_grid.svg);mask-image:url(..
 i.ico-reply {-webkit-mask-image:url(../images/ico/ico_reply.svg);mask-image:url(../images/ico/ico_reply.svg);}
 i.ico-gototop {-webkit-mask-image:url(../images/ico/ico_gototop.svg);mask-image:url(../images/ico/ico_gototop.svg);}
 i.ico-calendar {-webkit-mask-image:url(../images/ico/ico_calendar.svg);mask-image:url(../images/ico/ico_calendar.svg);}
-i.ico-schedule {-webkit-mask-image:url(../images/ico/ico-schedule.svg);mask-image:url(../images/ico/ico-schedule.svg);}
+i.ico-search {-webkit-mask-image:url(../images/ico/ico_search.svg);mask-image:url(../images/ico/ico_search.svg);}
 
 
 
@@ -455,7 +455,7 @@ input:not([type="checkbox"],[type="radio"],[type="file"])[disabled] {color:var(-
 
 /* input-datepicker */
 .input-wrap.input-datepicker {font-size:18px;line-height:22px;font-weight:700;color:var(--typography-black);gap:4px;}
-.input-wrap.input-datepicker button {display:flex;align-items:center;justify-content:center;gap:16px;flex:1;text-align:center;padding:14px 0px;z-index:auto;opacity:1;background-color:transparent;width:auto;height:auto;}
+.input-wrap.input-datepicker button {display:flex;align-items:center;justify-content:center;gap:8px;flex:1;text-align:center;padding:14px 0px;z-index:auto;opacity:1;background-color:transparent;width:auto;height:auto;}
 .input-wrap.input-datepicker button:after {content:'';flex:0 0 24px;width:24px;height:24px;background:url(../images/form/form-datepicker.svg) center center / contain no-repeat;}
 .input-wrap.input-datepicker button:only-child {text-align:left;}
 .input-wrap.input-datepicker button:only-child:after {margin-left:auto;}
@@ -484,6 +484,9 @@ button.select:after {content:'';flex:0 0 24px;width:24px;height:24px;background:
 
 button.select.is-modal-open {outline:2px solid var(--status-focused);padding:16px;outline-offset:-1px;}
 button.select.is-modal-open:after {background:url(../images/form/select-chevron-up.svg) center center / contain no-repeat;}
+
+.input-divide {display:flex;align-items:center;gap:8px;}
+.input-divide .bul {font-size:20px;font-weight:500;color:var(--icon-gray_2);}
 
 
 /* input type cheeckbox */
@@ -543,6 +546,13 @@ input[type="checkbox"].type-cyan:checked {background:url(../images/form/form_cya
 .inp-toggle input:before {content:'';position:absolute;left:3px;top:3px;width:18px;height:18px;background-color:var(--basic-white);filter:drop-shadow(0px 0px 4px var(--shadow-gray_3));border-radius:18px;transition:left 0.15s ease;}
 .inp-toggle input:checked {background-color:var(--brandPrimary-blue500);}
 .inp-toggle input:checked:before {left:21px;}
+
+/* inp-toggle-text */
+.inp-toggle-text {position:relative;display:flex;gap:2px;border-radius:50px;background-color:var(--surface-surface100);padding:4px;}
+.inp-toggle-text input {flex:1;display:flex;align-items:center;justify-content:center;height:40px;appearance:none;background-color:transparent;border-radius:22px;transition:background-color 0.3s ease;}
+.inp-toggle-text input:before {content:attr(aria-label);font-size:18px;font-weight:500;color:var(--typography-disabled);}
+.inp-toggle-text input:checked {background:var(--button-outlined-enabled);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
+.inp-toggle-text input:checked:before {font-weight:700;color:var(--typography-black);}
 
 /* inp-column-list */
 .inp-column-list {display:flex;flex-direction:column;padding:24px 8px;}
@@ -992,7 +1002,7 @@ input[type="checkbox"].type-cyan:checked {background:url(../images/form/form_cya
 }
 .select-spinner:before {content:'';width:100%;height:var(--itemHeight);position:absolute;left:0;top:50%;transform:translateY(-50%);background-color:var(--surface-surface100);z-index:-1;}
 
-.select-spinner .scroll-container::-webkit-scrollbar {display: none;}
+.select-spinner .scroll-container::-webkit-scrollbar {display:none;}
 .select-spinner .scroll-container {flex:1 1 100%;display:flex;flex-direction:column;align-items:center;row-gap:var(--itemGap);overflow-y:scroll;scroll-snap-type:y mandatory;overscroll-behavior-y:none;
     height:var(--containerHeight);
 }

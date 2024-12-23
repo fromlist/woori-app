@@ -875,3 +875,26 @@ button.flag-fluid span {margin-top:0;}
 .schedule-list > *:not(:last-child) {margin-bottom:12px;}
 .schedule-list .schedule-content .schedule-detail {display:flex;align-items:center;padding-left:4px;flex-wrap:wrap;}
 .schedule-list .schedule-content .schedule-detail-inner {display:flex;align-items:center;gap:4px;font-size:15px;color:var(--typography-caption);font-weight:400;}
+
+
+.table-schedule {display:table;width:100%;table-layout:auto;}
+.table-schedule .tbody {display:table-row-group;}
+.table-schedule .tbody .tr {display:table-row;}
+.table-schedule .tbody .tr .th {display:table-cell;white-space:nowrap;padding-right:8px;padding-left:4px;vertical-align:middle;font-size:18px;font-weight:400;}
+.table-schedule .tbody .tr .td {display:table-cell;font-size:18px;font-weight:400;color:var(--status-info);text-align:center;}
+.table-schedule .tbody .tr .th,
+.table-schedule .tbody .tr .td {padding-top:16px;padding-bottom:16px;;}
+
+/* schedule-regist */
+.schedule-regist {}
+.schedule-regist dl {display:flex;align-items:center;gap:10px;padding:0 4px;border-radius:8px;background-color:transparent;transition:background-color 0.3s ease;}
+.schedule-regist dl.is-wrap-active {background-color:var(--surface-surface50);}
+.schedule-regist dl dt {}
+.schedule-regist dl dd {font-size:18px;font-weight:500;color:var(--typography-gray);line-height:52px;}
+.schedule-regist dl dd button {width:100%;}
+.schedule-regist dl dd .is-active {color:var(--status-active);}
+.schedule-regist dl dd:nth-child(2) {flex:0 0 130px;white-space:nowrap;text-align:left;}
+.schedule-regist dl dd:nth-child(2) button {display:flex;width:100%;align-items:center;justify-content:space-between;}
+.schedule-regist dl dd:nth-child(3) {flex:1;white-space:nowrap;text-align:right;}
+.schedule-regist-target {display:none;padding:24px 16px;}
+.schedule-regist-target .datepicker-wrap .ui-widget.ui-widget-content {padding:24px 4px;}
