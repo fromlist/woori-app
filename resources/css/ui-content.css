@@ -909,6 +909,7 @@ button.flag-fluid span {margin-top:0;}
 /*message-text text,textTrigger*/
 .chatgroup {padding-top:24px;}
 .chatbody {padding:0 20px;}
+.chatbody:after {content:'';display:block;clear:both;}
 .chatbody:not(:last-child) {margin-bottom:64px;}
 .message-text {position:relative;display:table;border-radius:16px;background-color:var(--surface-surface);box-shadow: 0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
 .message-text > *:not(:last-child) {margin-bottom:24px;}
@@ -971,12 +972,30 @@ button.flag-fluid span {margin-top:0;}
     mask-image:url(../images/arrow/arrow_swiper_next.svg);
 
 }
+.message-text {max-width:100%;}
+.message-text:not(:last-child) {margin-bottom:8px;}
+.message-text.left {float:left;clear:both;padding:24px 16px;}
+.message-text.right {float:right;clear:both;padding:8px 16px;background-color:var(--deepblue-500);}
+.message-text.right .text {color:var(--typography-white);}
+.message-text.right {}
 /* message-text */
 
-/* [class^="message"].left {max-width:calc(100% - 20px);} */
-/* [class^="message"].right {max-width:calc(100% - 20px);} */
-/* [class^="message"] + [class^="message"] {margin-top: 8px;} */
-/* [class^="message"].left + .right {margin-top:8px;} */
+
+.chatbody [class^="message"]:nth-child(1) {-webkit-animation-delay:0s;animation-delay:0s;}
+.chatbody [class^="message"]:nth-child(2) {-webkit-animation-delay:0.3s;animation-delay:0.3s;}
+.chatbody [class^="message"]:nth-child(3) {-webkit-animation-delay:0.6s;animation-delay:0.6s;}
+.chatbody [class^="message"]:nth-child(4) {-webkit-animation-delay:0.9s;animation-delay:0.9s;}
+.chatbody [class^="message"]:nth-child(5) {-webkit-animation-delay:1.2s;animation-delay:1.2s;}
+.chatbody [class^="message"]:nth-child(6) {-webkit-animation-delay:1.5s;animation-delay:1.5s;}
+.chatbody [class^="message"]:nth-child(7) {-webkit-animation-delay:1.8s;animation-delay:1.8s;}
+.chatbody [class^="message"]:nth-child(8) {-webkit-animation-delay:2.1s;animation-delay:2.1s;}
+.chatbody [class^="message"]:nth-child(9) {-webkit-animation-delay:2.4s;animation-delay:2.4s;}
+.chatbody [class^="message"]:nth-child(10) {-webkit-animation-delay:2.7s;animation-delay:2.7s;}
+.chatbody [class^="message"]:nth-child(11) {-webkit-animation-delay:3.0s;animation-delay:3.0s;}
+.chatbody [class^="message"]:nth-child(12) {-webkit-animation-delay:3.3s;animation-delay:3.3s;}
+.chatbody [class^="message"]:nth-child(13) {-webkit-animation-delay:3.6s;animation-delay:3.6s;}
+
+
 
 /*default animation*/
 [class^="message"].left {animation:slide-in-fwd-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) backwards;}
