@@ -891,13 +891,17 @@ button.flag-fluid span {margin-top:0;}
 .schedule-regist dl.is-wrap-active {background-color:var(--surface-surface50);}
 .schedule-regist dl dt {}
 .schedule-regist dl dd {font-size:18px;font-weight:500;color:var(--typography-gray);line-height:52px;}
-.schedule-regist dl dd button {width:100%;}
+.schedule-regist dl dd .schedule-regist-trigger {width:100%;}
 .schedule-regist dl dd .is-active {color:var(--status-active);}
 .schedule-regist dl dd:nth-child(2) {flex:0 0 130px;white-space:nowrap;text-align:left;}
-.schedule-regist dl dd:nth-child(2) button {display:flex;width:100%;align-items:center;justify-content:space-between;}
+.schedule-regist dl dd:nth-child(2) .schedule-regist-trigger {display:flex;width:100%;align-items:center;justify-content:space-between;}
 .schedule-regist dl dd:nth-child(3) {flex:1;white-space:nowrap;text-align:right;}
 .schedule-regist-target {display:none;padding:24px 16px;}
 .schedule-regist-target .datepicker-wrap .ui-widget.ui-widget-content {padding:24px 4px;}
 
 /* staff-list */
 .staff-list {padding:40px 16px 64px;background-color:var(--background-bg_gray);}
+
+/* schedule-section-title */
+.schedule-section-title {display:flex;padding:24px;align-items:center;gap:8px;}
+.schedule-section-title .headline-medium {padding:0;}
