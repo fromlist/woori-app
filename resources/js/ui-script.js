@@ -333,6 +333,9 @@ const microModalFunc = {
 
             onShow: function (modalPopup, trigger, event) {
                 modalTrigger = event.target;
+                if (modalTrigger.tagName !== "BUTTON") {
+                    modalTrigger = modalTrigger.closest('button');
+                }
                 const triggerPositionTop = $(modalTrigger).offset().top;
                 const triggerPositionLeft = $(modalTrigger).offset().left;
                 const triggerPositionBottom = $(modalTrigger).offset().top + $(modalTrigger).outerHeight();

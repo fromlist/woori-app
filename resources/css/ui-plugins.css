@@ -301,7 +301,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 
 .micromodal-slide .modal__container, .micromodal-slide .modal__overlay {will-change:initial;}
 .micromodal-slide-bottom .modal__overlay {display:flex;align-items:flex-end;}
-.micromodal-slide-bottom .modal__container {overflow:none;}
+.micromodal-slide-bottom .modal__container {overflow:hidden;}
 .micromodal-slide-bottom .modal__content {/* background-color:var(--white-100); *//* padding:30px 16px 20px; *//* border-radius:20px 20px 0 0; *//* max-height:80vh; *//* overflow-y:auto; */}
 .micromodal-slide-bottom.micromodal-slide-bottom-full .modal__container {height:100%;}
 

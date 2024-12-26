@@ -607,7 +607,7 @@
 
 /* customer-card-list */
 .customer-card-list {}
-.customer-card-list .search-result {display:block;text-align:center;font-size:18px;font-weight:500;color:var(--typography-graygray);line-height:1;margin-bottom:24px;}
+.customer-card-list .search-result {display:block;text-align:center;font-size:18px;font-weight:500;color:var(--typography-gray);line-height:1;margin-bottom:24px;}
 .customer-card-list .customer-card {display:block;border-radius:16px;background-color:var(--surface-surface);box-shadow:0px 8px 16px -4px rgba(0, 0, 0, 0.05);padding:24px;width:100%;}
 .customer-card-list .customer-card:not(:last-child) {margin-bottom:8px;}
 .customer-card-list .customer-card .title-medium {margin-bottom:12px;}
@@ -898,3 +898,6 @@ button.flag-fluid span {margin-top:0;}
 .schedule-regist dl dd:nth-child(3) {flex:1;white-space:nowrap;text-align:right;}
 .schedule-regist-target {display:none;padding:24px 16px;}
 .schedule-regist-target .datepicker-wrap .ui-widget.ui-widget-content {padding:24px 4px;}
+
+/* staff-list */
+.staff-list {padding:40px 16px 64px;background-color:var(--background-bg_gray);}

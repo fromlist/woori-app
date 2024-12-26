@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="../../resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="../../resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="../../resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../resources/css/ui-variable.css">
+	<link rel="stylesheet" href="../../resources/css/ui-default.css">
+	<link rel="stylesheet" href="../../resources/css/ui-layout.css">
+	<link rel="stylesheet" href="../../resources/css/ui-style.css">
+	<link rel="stylesheet" href="../../resources/css/ui-content.css">
+	<link rel="stylesheet" href="../../resources/css/ui-plugins.css">
+
+	<script src="../../resources/js/ui-script.js"></script>
+	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>일정등록</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+				<!-- content -->
+				<div class="content">
+
+
+					<!-- group-form -->
+					<div class="group-form mt16">
+						<div class="group-title">
+							<strong class="title-medium">제목 <i class="apos" aria-label="필수 입력">*</i></strong>
+						</div>
+						<div class="group-content">
+							<div class="form">
+								<div class="label"></div>
+								<div class="input-wrap">
+									<input type="search" placeholder="제목을 입력하세요." aria-label="제목">
+								</div>
+								<p class="validate-text"></p>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-title">
+							<strong class="title-medium">일시 <i class="apos" aria-label="필수 입력">*</i></strong>
+							<div class="inp inp-toggle">
+								<label>
+									<span class="label-title">하루종일</span>
+									<input type="checkbox">
+								</label>
+							</div>
+						</div>
+						<div class="group-content mt16">
+							<div class="schedule-regist">
+								<dl>
+									<dt>
+										<div class="tags tags-small tags-lightGray tags-round">시작</div>
+									</dt>
+									<dd>
+										<button type="button" class="schedule-regist-trigger" data-anchor="dp01"><span>12월 7일</span><span>월요일</span></button>
+									</dd>
+									<dd>
+										<button type="button" class="schedule-regist-trigger" data-anchor="dp02">오후 2시</button>
+									</dd>
+								</dl>
+								<div class="schedule-regist-picker">
+									<div class="schedule-regist-target" id="dp01">
+										<div class="datepicker-wrap">
+											<div id="datepicker_schedule01"></div>
+										</div>
+									</div>
+
+									<div class="schedule-regist-target" id="dp02">
+										<div class="inp inp-toggle-text">
+											<input type="radio" name="dp02" aria-label="오전" checked>
+											<input type="radio" name="dp02" aria-label="오후">
+										</div>
+										<div class="form mt24">
+											<div class="input-divide">
+												<div class="input-wrap">
+													<input type="number" placeholder="">
+												</div>
+												<div class="bul">:</div>
+												<div class="input-wrap">
+													<input type="number" placeholder="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<dl>
+									<dt>
+										<div class="tags tags-small tags-lightGray tags-round">종료</div>
+									</dt>
+									<dd>
+										<button type="button" class="schedule-regist-trigger" data-anchor="dp03"><span>12월 7일</span><span>월요일</span></button>
+									</dd>
+									<dd>
+										<button type="button" class="schedule-regist-trigger" data-anchor="dp04">오후 3시</button>
+									</dd>
+								</dl>
+
+								<div class="schedule-regist-picker">
+									<div class="schedule-regist-target" id="dp03">
+										<div class="datepicker-wrap">
+											<div id="datepicker_schedule02"></div>
+										</div>
+									</div>
+
+									<div class="schedule-regist-target" id="dp04">
+										<div class="inp inp-toggle-text">
+											<input type="radio" name="dp04" aria-label="오전" checked>
+											<input type="radio" name="dp04" aria-label="오후">
+										</div>
+										<div class="form mt24">
+											<div class="input-divide">
+												<div class="input-wrap">
+													<input type="number" placeholder="">
+												</div>
+												<div class="bul">:</div>
+												<div class="input-wrap">
+													<input type="number" placeholder="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-title">
+							<strong class="title-medium">장소</strong>
+						</div>
+						<div class="group-content">
+							<div class="form">
+								<div class="label"></div>
+								<div class="input-wrap">
+									<input type="search" placeholder="장소를 입력하세요." aria-label="장소">
+								</div>
+								<p class="validate-text"></p>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-title">
+							<strong class="title-medium">반복</strong>
+						</div>
+						<div class="group-content">
+							<button type="button" class="anchor chevron anchor-fluid anchor-border" data-micromodal-trigger="modal-repeat"><span class="body-large fw-700">3주 마다, 수요일</span></button>
+							<button type="button" class="anchor chevron anchor-fluid anchor-border" data-micromodal-trigger="modal-repeat"><span class="body-large fw-700">3주 마다, 수요일, 3회</span></button>
+							<button type="button" class="anchor chevron anchor-fluid anchor-border" data-micromodal-trigger="modal-repeat"><span class="body-large fw-700">3주 마다, 수요일, 2023-12-07까지</span></button>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-title">
+							<strong class="title-medium">공유</strong>
+							<button type="button" aria-label="공유직원 선택" data-micromodal-trigger="modal-staff"><i class="icon-only icon-24 icon-add bg-icon-default"></i></button>
+						</div>
+						<!-- 직원 선택 전 -->
+						<div class="group-content">
+							<div class="form">
+								<div class="label"></div>
+								<div class="input-wrap disabled">
+									<input type="search" placeholder="공유할 직원을 선택하세요." aria-label="제목" disabled>
+								</div>
+								<p class="validate-text"></p>
+							</div>
+						</div>
+						<!-- //직원 선택 전 -->
+
+						<!-- 직원 선택 후 -->
+						<div class="group-content">
+							<div class="form">
+								<div class="label"></div>
+								<div class="input-wrap input-btn-wrap">
+									<button type="button" class="btn-xsmall btn-outlined btn-round"><span>무궁화꽃이피었습니다최대열일곱글자가노출됩니다.</span><i class="ico-close-16"></i></button>
+									<button type="button" class="btn-xsmall btn-outlined btn-round"><span>김우리 부부장(자산관리플랫폼부)</span><i class="ico-close-16"></i></button>
+								</div>
+								<p class="validate-text"></p>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-title">
+							<strong class="title-medium">메모</strong>
+						</div>
+						<div class="group-content">
+							<div class="form">
+								<div class="input-wrap">
+									<textarea aria-label="메모"></textarea>
+								</div>
+								<div class="textarea-length">0/300자</div>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-title">
+							<strong class="title-medium">Push 알림</strong>
+						</div>
+						<div class="group-content">
+							<button type="button" class="anchor chevron anchor-fluid anchor-border" data-micromodal-trigger="modal-alarm"><span class="body-large fw-700">없음</span></button>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-outlined">취소</button>
+				<button type="button" class="btn-large btn-primary">등록</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+
+	</main>
+	<!-- //main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom micromodal-slide-bottom-full modal" id="modal-repeat" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+
+
+						<!-- group-form -->
+						<div class="group-form">
+							<div class="group-title">
+								<strong class="title-medium">반복 주기</strong>
+							</div>
+							<div class="group-content">
+								<button class="select" data-micromodal-trigger="modal-select-list" data-placeholder="선택하세요"><span>매주</span></button>
+							</div>
+
+
+							<!-- 매주 반복 -->
+							<div class="group-content">
+								<div class="inp-group py24 gap16">
+									<div class="inp inp-medium inp-combi pl0">
+										<div class="form">
+											<div class="label"></div>
+											<div class="input-wrap input-placeholder input-inner-text">
+												<input type="number" class="ac pr0" placeholder="1" aria-label="주" value="1">
+												<div class="visible-placeholder">주 마다</div>
+											</div>
+											<p class="validate-text"></p>
+										</div>
+									</div>
+									<div class="inp inp-medium inp-combi pl0">
+										<div class="form">
+											<div class="label"></div>
+											<div class="input-wrap input-placeholder input-inner-text">
+												<button type="button" class="text-button ac" data-placeholder="월요일"></button>
+												<div class="visible-placeholder">에 반복</div>
+											</div>
+											<p class="validate-text"></p>
+										</div>
+									</div>
+									<!-- 선택 시 활성화 -->
+									<div class="select-spinner" id="spinner01">
+										<section class="scroll-container" style="flex:1 1 70%;">
+											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>일</span></label>
+											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>월</span></label>
+											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>화</span></label>
+											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>수</span></label>
+											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>목</span></label>
+											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>금</span></label>
+											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>토</span></label>
+										</section>
+										<section class="scroll-container" style="flex:1 1 30%;">
+											<label class="scroll-items"><input type="radio" name="items2" class="blind"><span class="j-start">요일</span></label>
+										</section>
+									</div>
+									<!-- 선택 시 활성화 -->
+								</div>
+							</div>
+							<!-- //매주 반복 -->
+
+
+						</div>
+						<!-- //group-form -->
+
+						<div class="stroke stroke-fluid my16"></div>
+
+						<!-- group-form -->
+						<div class="group-form">
+							<div class="group-title">
+								<strong class="title-medium">반복 설정</strong>
+							</div>
+							<div class="group-content">
+								<div class="inp-group py24 gap0">
+									<div class="inp inp-medium inp-combi">
+										<label>
+											<input type="radio" name="rad003">
+											<span class="label-title">지정 안함</span>
+										</label>
+									</div>
+									<div class="inp inp-medium inp-combi">
+										<label>
+											<input type="radio" name="rad003">
+											<span class="label-title">반복 횟수 지정</span>
+										</label>
+										<!-- 반복 횟수 지정 체크 시 활성화 -->
+										<div class="form">
+											<div class="label"></div>
+											<div class="input-wrap input-placeholder">
+												<input type="number" class="ac pr0" placeholder="1" aria-label="회">
+												<div class="visible-placeholder">회</div>
+											</div>
+										</div>
+										<!-- //반복 횟수 지정 체크 시 활성화 -->
+									</div>
+									<div class="inp inp-medium inp-combi">
+										<label>
+											<input type="radio" name="rad003">
+											<span class="label-title">종료일 지정</span>
+										</label>
+										<!-- 종료일 지정 체크 시 활성화 -->
+										<div class="form">
+											<div class="label"></div>
+											<strong class="title-medium ar px0 fw-500">2023-12-07</strong>
+										</div>
+										<!-- //종료일 지정 체크 시 활성화 -->
+									</div>
+									<!-- 종료일 지정 체크 시 활성화 -->
+
+									<div class="datepicker-wrap">
+										<div aria-label="날짜 선택" class="datepicker-trigger" id="datepicker"></div>
+									</div>
+									<!-- //종료일 지정 체크 시 활성화 -->
+
+								</div>
+							</div>
+							<!-- //매일 반복 -->
+
+						</div>
+						<!-- //group-form -->
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-staff" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large">일정 공유</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+
+
+						<!-- group-form -->
+						<div class="group-form">
+							<div class="group-title">
+								<strong class="title-medium">직원 검색</strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap input-placeholder">
+										<input type="search" placeholder="이름 입력" aria-label="이름">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap input-placeholder">
+										<input type="search" placeholder="부서명 입력" aria-label="부서명">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap input-placeholder">
+										<input type="search" placeholder="담당업무 입력" aria-label="담당업무">
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+
+						</div>
+						<!-- //group-form -->
+
+
+						<!-- btn-wrap -->
+						<div class="btn-wrap pt24">
+							<button type="button" class="btn-medium btn-secondary">검색</button>
+						</div>
+						<!-- //btn-wrap -->
+
+						<div class="staff-list content-fluid mb-24">
+							<div class="inp-box">
+								<div class="inp inp-medium">
+									<label>
+										<input type="checkbox">
+										<span class="label-title">
+											<span class="user">
+												<i class="icon-only icon-16 icon-user2"></i>
+												<span>김우리</span>
+												<span>부부장</span>
+											</span>
+											<span class="section">자산관리플랫폼부</span>
+										</span>
+									</label>
+								</div>
+								<div class="inp inp-medium">
+									<label>
+										<input type="checkbox">
+										<span class="label-title">
+											<span class="user">
+												<i class="icon-only icon-16 icon-user2"></i>
+												<span>김우리</span>
+												<span>부부장</span>
+											</span>
+											<span class="section">자산관리플랫폼부 자산관리플랫폼부</span>
+										</span>
+									</label>
+								</div>
+								<div class="inp inp-medium">
+									<label>
+										<input type="checkbox">
+										<span class="label-title">
+											<span class="user">
+												<i class="icon-only icon-16 icon-user2"></i>
+												<span>김우리</span>
+												<span>부부장</span>
+											</span>
+											<span class="section">자산관리플랫폼부 자산관리플랫폼부</span>
+										</span>
+									</label>
+								</div>
+								<div class="inp inp-medium">
+									<label>
+										<input type="checkbox">
+										<span class="label-title">
+											<span class="user">
+												<i class="icon-only icon-16 icon-user2"></i>
+												<span>김우리</span>
+												<span>부부장</span>
+											</span>
+											<span class="section">자산관리플랫폼부 자산관리플랫폼부</span>
+										</span>
+									</label>
+								</div>
+								<div class="inp inp-medium">
+									<label>
+										<input type="checkbox">
+										<span class="label-title">
+											<span class="user">
+												<i class="icon-only icon-16 icon-user2"></i>
+												<span>김우리</span>
+												<span>부부장</span>
+											</span>
+											<span class="section">자산관리플랫폼부 자산관리플랫폼부</span>
+										</span>
+									</label>
+								</div>
+								<div class="inp inp-medium">
+									<label>
+										<input type="checkbox">
+										<span class="label-title">
+											<span class="user">
+												<i class="icon-only icon-16 icon-user2"></i>
+												<span>김우리</span>
+												<span>부부장</span>
+											</span>
+											<span class="section">자산관리플랫폼부 자산관리플랫폼부</span>
+										</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" data-micromodal-close="">선택</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-alarm" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large">알림 설정</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close=""></button>
+				</div>
+				<div class="modal__content modal__content__alert">
+					<div class="content">
+						<div class="inp-round flex-wrap">
+							<div class="inp">
+								<label>
+									<input type="radio" name="rad00_alarm" aria-label="없음">
+								</label>
+							</div>
+							<div class="inp">
+								<label>
+									<input type="radio" name="rad00_alarm" aria-label="30분 전">
+								</label>
+							</div>
+							<div class="inp">
+								<label>
+									<input type="radio" name="rad00_alarm" aria-label="1시간 전">
+								</label>
+							</div>
+							<div class="inp">
+								<label>
+									<input type="radio" name="rad00_alarm" aria-label="2시간 전">
+								</label>
+							</div>
+							<div class="inp">
+								<label>
+									<input type="radio" name="rad00_alarm" aria-label="3시간 전">
+								</label>
+							</div>
+						</div>
+						<p class="description caution body-small fc-typography-caption fs14 mt16">APP에서 등록한 일정의 알림은 APP에서만 발송됩니다</p>
+					</div>
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" data-micromodal-close="">저장</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-select modal" id="modal-select-list">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header modal__header__alert">
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close=""></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content content-fluid">
+						<div class="select-option">
+							<ul>
+								<li class="select-active"><button type="button" aria-label="선택됨" data-micromodal-close><span>반복없음</span></button></li>
+								<li><button type="button" data-micromodal-close><span>매일</span></button></li>
+								<li><button type="button" data-micromodal-close><span>매주</span></button></li>
+								<li><button type="button" data-micromodal-close><span>매월</span></button></li>
+								<li><button type="button" data-micromodal-close><span>매년</span></button></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<script>
+		const inpCombiRadio = $('.inp-combi input[type="radio"]')
+
+		inpCombiRadio.on('change', function() {
+			const inpCombiRadioName = $(this).attr('name')
+			const inpCombi = $(this).closest('.inp-combi');
+			const inpCombiText = inpCombi.find('.input-wrap')
+
+			if ($(this).is(':checked')) {
+				const inpCombiSiblings = $(this).closest('.inp-combi').siblings('')
+				const inpCombiSiblingsText = inpCombiSiblings.find('.input-wrap')
+
+				if (inpCombiSiblings.find(`[name=${inpCombiRadioName}]`).length) {
+					inpCombiSiblingsText.removeClass('input-inner-text')
+				}
+				inpCombiText.addClass('input-inner-text')
+			}
+		})
+	</script>
+
+
+	<script>
+		$('.schedule-regist-trigger').on('click', function() {
+
+
+			const identify = $(this).data('anchor');
+			const identifyWrap = $(this).closest('dl');
+
+			if (!$(this).hasClass('is-active')) {
+				$('.schedule-regist-trigger').each(function() {
+					const falseIdentify = $(this).data('anchor');
+					$(this).removeClass('is-active');
+					$(`#${falseIdentify}`).stop().slideUp('150');
+					const falseIdentifyWrap = $(this).closest('dl');
+					falseIdentifyWrap.removeClass('is-wrap-active')
+				})
+				$(this).addClass('is-active');
+				$(`#${identify}`).stop().slideDown('150');
+				if (!identifyWrap.hasClass('is-wrap-active')) {
+					identifyWrap.addClass('is-wrap-active');
+				};
+			} else {
+				$(this).removeClass('is-active');
+				$(`#${identify}`).stop().slideUp('150');
+				identifyWrap.removeClass('is-wrap-active');
+			}
+		});
+		$("#datepicker_schedule01").datepicker({
+			dateFormat: 'yy-mm-dd',
+			prevText: '이전 달',
+			nextText: '다음 달',
+			monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+			monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+			dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+			dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+			showMonthAfterYear: true,
+			yearSuffix: '.',
+			// minDate: 0,
+			showButtonPanel: false,
+			closeText: "닫기",
+			showOtherMonths: true,
+			onSelect: function(input, date) {
+				// dp01.innerText = input;
+			},
+		});
+
+		$("#datepicker_schedule02").datepicker({
+			dateFormat: 'yy-mm-dd',
+			prevText: '이전 달',
+			nextText: '다음 달',
+			monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+			monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+			dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+			dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+			showMonthAfterYear: true,
+			yearSuffix: '.',
+			// minDate: 0,
+			showButtonPanel: false,
+			closeText: "닫기",
+			showOtherMonths: true,
+			onSelect: function(input, date) {
+				// dp03.innerText = input;
+			},
+		});
+
+
+		$("#datepicker").datepicker({
+			dateFormat: 'yy-mm-dd',
+			prevText: '이전 달',
+			nextText: '다음 달',
+			monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+			monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+			dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+			dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+			showMonthAfterYear: true,
+			yearSuffix: '.',
+			// minDate: 0,
+			showButtonPanel: false,
+			closeText: "닫기",
+			showOtherMonths: true,
+			onSelect: function(input, date) {
+				MicroModal.close('modal-datepicker');
+				modalTrigger.innerText = input;
+			},
+		});
+
+
+
+		$(document).on('click', '.ui-datepicker-next', function() {
+			$('body').find('.datepicker-wrap').find('.ui-datepicker:visible table').hide('slide', {
+				direction: 'left'
+			}, 1).show('slide', {
+				direction: 'right'
+			}, 250)
+		})
+
+		$(document).on('click', '.ui-datepicker-prev', function() {
+			$('body').find('.datepicker-wrap').find('.ui-datepicker:visible table').hide('slide', {
+				direction: 'right'
+			}, 1).show('slide', {
+				direction: 'left'
+			}, 250)
+		})
+
+
+		$('.datepicker-wrap').swipe({
+			swipeLeft: function() {
+				$(this).find("[data-handler='next']").trigger('click');
+			},
+			swipeRight: function() {
+				$(this).find("[data-handler='prev']").trigger('click');
+			}
+		})
+	</script>
+
+	<!-- wheel -->
+	<script>
+		const spinnerWrap1 = document.querySelector('#spinner01')
+		let observer1 = new IntersectionObserver(function(entries) {
+			entries.forEach(function(entry) {
+				const prevChild = entry.target.previousElementSibling;
+				const nextChild = entry.target.nextElementSibling;
+
+				if (entry.isIntersecting) {
+					entry.target.querySelector('input').checked = true;
+					entry.target.classList.add('center');
+					if (prevChild != null) {
+						prevChild.classList.add('outside');
+					}
+					if (nextChild != null) {
+						nextChild.classList.add('outside');
+					}
+				} else {
+					entry.target.classList.remove('center');
+					if (prevChild != null) {
+						prevChild.classList.remove('outside');
+					}
+					if (nextChild != null) {
+						nextChild.classList.remove('outside');
+					}
+				}
+
+			})
+		}, {
+			root: spinnerWrap1,
+			rootMargin: `-50% 0px`,
+			threshold: [0, 0.25, 0.5, 0.75, 1]
+		});
+		let box1 = spinnerWrap1.querySelectorAll(`.scroll-items`);
+		box1.forEach(function(item) {
+			observer1.observe(item)
+
+		});
+	</script>
+</body>
+
+</html>
