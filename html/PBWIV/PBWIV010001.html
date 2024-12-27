@@ -115,7 +115,7 @@
 									<!-- <div class="stock steady" aria-label="등락폭(보합)">00.00</div> -->
 
 									<div class="tags tags-small tags-red-100" aria-label="등락율">+99.99%</div>
-									<!-- <div class="tags tags-small tags-deepBlue" aria-label="등락율">00.00</div> -->
+									<!-- <div class="tags tags-small tags-deepBlue" aria-label="등락율">-00.00</div> -->
 									<!-- <div class="tags tags-small tags-lightGray" aria-label="등락율">00.00</div> -->
 								</dd>
 							</dl>
@@ -129,17 +129,34 @@
 							</button>
 						</div>
 
-						<div class="stock-graph py32 px16 mt24">
+						<div class="stock-graph pt24 pb32 px16 mt24">
 
-							<div class="">
+							<div class="stock-rate">
+								<dl>
+									<dt>
+										1주일 전보다
+									</dt>
+									<dd>
+										<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
+										<!-- <div class="stock fall" aria-label="등락폭(하락)">888.88</div> -->
+										<!-- <div class="stock steady" aria-label="등락폭(보합)">00.00</div> -->
+
+										<div class="tags tags-small tags-red-100" aria-label="등락율">+99.99%</div>
+										<!-- <div class="tags tags-small tags-deepBlue" aria-label="등락율">-00.00</div> -->
+										<!-- <div class="tags tags-small tags-lightGray" aria-label="등락율">00.00</div> -->
+									</dd>
+								</dl>
+							</div>
+
+							<div class="mt32">
 								<div style="height:180px;">
 									<div id="chart2" data-aos="" data-aos-id="chart2" class="aos-init aos-animate" style="min-height: 195px;"></div>
 								</div>
 							</div>
 
 							<!-- tab-content -->
-							<div class="tab-content">
-								<ul class="tab-list tab-button" role="tablist">
+							<div class="tab-content mt24">
+								<ul class="tab-list tab-button2" role="tablist">
 									<li class="tab tab-active"><a role="tab" href="#" aria-selected="true">1주일</a></li>
 									<li class="tab"><a role="tab" href="#" aria-selected="false">3개월</a></li>
 									<li class="tab"><a role="tab" href="#" aria-selected="false">1년</a></li>
@@ -149,7 +166,7 @@
 							</div>
 							<!-- //tab-content -->
 
-							<div class="stroke px0 mt24"></div>
+							<div class="stroke px0 mt32"></div>
 							<dl class="group pb0">
 								<dt class="fs-18 fw-400 px-4">기초종가</dt>
 								<dd class="fs-18 fw-400 fc-status-info">9999.99</dd>

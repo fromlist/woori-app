@@ -97,18 +97,11 @@
 				<!-- content -->
 				<div class="content">
 
-
-					<style>
-						body {
-							background-color: var(--background-bg_lightGray);
-						}
-					</style>
-
 					<!-- tab-content -->
 					<div class="tab-content tab-fluid">
 						<ul class="tab-list tab-col overflow-list px24" role="tablist">
-							<li class="tab tab-active"><a role="tab" href="#">주요지수</a></li>
-							<li class="tab"><a role="tab" href="#">주가지수</a></li>
+							<li class="tab"><a role="tab" href="#">주요지수</a></li>
+							<li class="tab tab-active"><a role="tab" href="#">주가지수</a></li>
 							<li class="tab"><a role="tab" href="#">채권금리</a></li>
 							<li class="tab"><a role="tab" href="#">환율/원자재</a></li>
 							<li class="tab"><a role="tab" href="#">경제지표</a></li>
@@ -118,21 +111,19 @@
 					</div>
 					<!-- //tab-content -->
 
-					<div class="stock-index pt16">
-						<div class="body-caption px4 ar">2024-10-15 기준</div>
+					<div class="stock-index">
+						<div class="body-caption px4 ar mt16">2024-10-15 기준</div>
 
-						<div class="stock-index-core mt8">
+						<div class="stock-index-list content-fluid px0 mt16">
 							<ul>
 								<li>
 									<a href="#">
 										<dl>
-											<dt>코스피</dt>
+											<dt>KOSPI <i class="live-on" aria-label="실시간"></i></dt>
 											<dd>
 												<strong>9,999.99</strong>
-												<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
-											</dd>
-											<dd>
-												<div class="tags tags-small tags-red-100" aria-label="등락율">+99.99%</div>
+												<div class="stock rise" aria-label="등락폭(상승)">00.00</div>
+												<div class="tags tags-small tags-red-100" aria-label="등락율">+00.00</div>
 											</dd>
 										</dl>
 									</a>
@@ -140,13 +131,11 @@
 								<li>
 									<a href="#">
 										<dl>
-											<dt>코스닥</dt>
+											<dt>KOSDAQ <i class="live-on" aria-label="실시간"></i></dt>
 											<dd>
 												<strong>9,999.99</strong>
-												<div class="stock fall" aria-label="등락폭(하락)">888.88</div>
-											</dd>
-											<dd>
-												<div class="tags tags-small tags-deepBlue" aria-label="등락율">00.00</div>
+												<div class="stock fall" aria-label="등락폭(하락)">100.00</div>
+												<div class="tags tags-small tags-deepBlue" aria-label="등락율">-00.00</div>
 											</dd>
 										</dl>
 									</a>
@@ -154,12 +143,10 @@
 								<li>
 									<a href="#">
 										<dl>
-											<dt>미국 USD</dt>
+											<dt>KOSPI200 <i class="live-off" aria-label="비 실시간"></i></dt>
 											<dd>
 												<strong>9,999.99</strong>
 												<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
-											</dd>
-											<dd>
 												<div class="tags tags-small tags-lightGray" aria-label="등락율">00.00</div>
 											</dd>
 										</dl>
@@ -167,49 +154,6 @@
 								</li>
 							</ul>
 						</div>
-
-						<div class="stock-index-list mt16">
-							<ul>
-								<li>
-									<a href="#">
-										<dl>
-											<dt>코스피200</dt>
-											<dd>9,999.99</dd>
-										</dl>
-										<div>
-											<div class="stock rise" aria-label="등락폭(상승)">00.00</div>
-											<div class="tags tags-small tags-red-100" aria-label="등락율">00.00</div>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<dl>
-											<dt>코스피200</dt>
-											<dd>9,999.99</dd>
-										</dl>
-										<div>
-											<div class="stock fall" aria-label="등락폭(하락)">100.00</div>
-											<div class="tags tags-small tags-deepBlue" aria-label="등락율">00.00</div>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<dl>
-											<dt>코스피200</dt>
-											<dd>9,999.99</dd>
-										</dl>
-										<div>
-											<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
-											<div class="tags tags-small tags-lightGray" aria-label="등락율">00.00</div>
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<p class="description caution body-small fc-typography-caption mt16">장 시작(8:30~9:30)과 장마감(15:00~16:00)중에는 일부 투자금액이 맞지 않을 수 있습니다.</p>
 					</div>
 
 

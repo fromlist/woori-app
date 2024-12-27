@@ -665,6 +665,15 @@ input[type="checkbox"].type-cyan:checked {background:url(../images/form/form_cya
 .tab-content .tab-button li:first-child button:after,
 .tab-content .tab-button li:first-child a:after {display:none;}
  
+
+.tab-content .tab-button2 {position:relative;display:flex;z-index:var(--tab-zIndex);gap:4px;}
+.tab-content .tab-button2 li {flex:1;}
+.tab-content .tab-button2 li button,
+.tab-content .tab-button2 li a {position:relative;display:flex;font-size:15px;line-height:32px;align-items:center;justify-content:center;color:var(--button-ghost-onEnabled);padding:0 10px;white-space:nowrap;border-radius:8px;}
+.tab-content .tab-button2 li.tab-active button,
+.tab-content .tab-button2 li.tab-active a {color:var(--button-primary-onEnabled);background-color:var(--button-primary-enabled);}
+
+
 .modal__content .tab-content .tab-col {border-bottom:0;}
 
 /* overflow-list */
