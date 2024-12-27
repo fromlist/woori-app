@@ -924,6 +924,14 @@ input[type="checkbox"].type-cyan:checked {background:url(../images/form/form_cya
     background-color:initial;
     background-image:url(../images/icon_only/icon_user2.svg);
 }
+.icon-thumbsup {
+    -webkit-mask-image:url(../images/icon_only/icon_thumbsup.svg);
+    mask-image:url(../images/icon_only/icon_thumbsup.svg);
+}
+.icon-thumbsdown {
+    -webkit-mask-image:url(../images/icon_only/icon_thumbsdown.svg);
+    mask-image:url(../images/icon_only/icon_thumbsdown.svg);
+}
 
 /* toggle-trigger */
 [data-toggle="toggle-trigger"] .toggle-off {display:block;}

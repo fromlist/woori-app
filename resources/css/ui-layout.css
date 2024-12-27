@@ -295,6 +295,8 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 /* bottom-btn */
 .bottom-btn {position:sticky;width:100%;left:0;bottom:0;background-color:inherit;z-index:calc(var(--header-zIndex) - 1);}
 .bottom-btn-title {padding:24px 24px 8px 24px;background-color:var(--white-100);border-radius:8px 8px 0 0;}
+.content .bottom-btn {width:auto;margin:auto -16px -24px;background-color:var(--background-bg_white);}
+.content .bottom-btn .btn-wrap {padding:12px 16px;}
 
 
 /* btn-wrap */
