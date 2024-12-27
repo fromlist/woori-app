@@ -367,9 +367,9 @@
 
 /* bs-card */
 .bs-card-wrap {position:relative;}
-.bs-card-wrap input[type="radio"] {appearance:none;position:absolute;left:0;top:0;width:100%;height:100%;}
-.bs-card-wrap input[type="radio"]:checked ~ .bs-card {outline:2px solid var(--status-focused);}
-.bs-card {position:relative;border-radius:8px;border:1px solid var(--border-8);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);-webkit-text-size-adjust:auto;}
+.bs-card-wrap input[type="radio"] {appearance:none;position:absolute;left:0;top:0;width:100%;height:100%;z-index:1;}
+.bs-card-wrap input[type="radio"]:checked ~ .bs-card {box-shadow:0px 0px 2px 2px var(--status-focused)}
+.bs-card {position:relative;border-radius:8px;border:1px solid var(--border-8);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);-webkit-text-size-adjust:auto;transition:box-shadow 0.3s ease;}
 .bs-card .bs-typeA {background-color:var(--background-bg_lightGray);border-radius:inherit;}
 .bs-card .bs-typeA .title figure {margin-top:-8px;}
 .bs-card .bs-typeB {background-color:#F7F7F1;border-radius:inherit;}
