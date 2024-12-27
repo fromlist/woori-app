@@ -333,8 +333,10 @@ const microModalFunc = {
 
             onShow: function (modalPopup, trigger, event) {
                 modalTrigger = event.target;
-                if (modalTrigger.tagName !== "BUTTON") {
+                // console.log(modalTrigger)
+                if (modalTrigger.tagName == "SPAN") {
                     modalTrigger = modalTrigger.closest('button');
+                    // console.log(modalTrigger)
                 }
                 const triggerPositionTop = $(modalTrigger).offset().top;
                 const triggerPositionLeft = $(modalTrigger).offset().left;

@@ -305,6 +305,7 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .btn-wrap > * {flex:1;}
 .btn-wrap .btn-outlined {flex:0 1 100px;}
 .btn-wrap .anchor {flex:0 0 auto;}
+.btn-wrap.flex-column > * {flex:auto;}
 .content .btn-wrap {padding:16px 0;}
 
 .btn-nowrap {}

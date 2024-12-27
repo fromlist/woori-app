@@ -765,7 +765,7 @@ input[type="checkbox"].type-cyan:checked {background:url(../images/form/form_cya
 
 .tags-deepGray {color:var(--red-600);background-color:var(--background-bg_deepGray);}
 .tags-gray {color:var(--typography-gray);background-color:var(--background-bg_gray);}
-
+.tags-deepBlue {color:var(--deepblue-600);background-color:var(--deepblue-100);}
 
 
 /* badge */
