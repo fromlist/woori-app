@@ -1129,3 +1129,8 @@ i.live-off {display:inline-block;width:9px;height:9px;background:url(../images/P
 .news-article .related-products ul li {}
 .news-article .related-products ul li:not(:last-child) {margin-bottom:4px;}
 .news-article p {font-size:18px;font-weight:400;color:var(--typography-body);padding:0 4px;}
+
+
+/* stock-analyze */
+.stock-analyze {text-align:center;font-size:18px;font-weight:400;color:var(--brandPrimary-blue500);line-height:1;}
+.stock-analyze .top {display:flex;align-items:center;justify-content:center;}
