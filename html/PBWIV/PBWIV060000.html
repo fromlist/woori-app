@@ -112,7 +112,7 @@
 					<!-- //tab-content -->
 
 					<div class="stock-index">
-						<div class="stock-index-list content-fluid px0">
+						<div class="stock-index-list">
 							<h2 class="headline-small ac mt40">섹터지수</h2>
 							<div class="px24 mt24 mb40">
 								<div class="table-col content-fluid overflow-visible px0 mx-24">
@@ -210,9 +210,29 @@
 							<div class="stroke stroke4"></div>
 							<h2 class="headline-small ac mt40">지표별 수익률</h2>
 
-							<div id="chart">
-
-
+							<div class="chart-wrap mt32">
+								<div style="height:180px;">
+									chart 예시
+									<div id="chart2" data-aos data-aos-id="chart2"></div>
+								</div>
+								<!-- tab-content -->
+								<div class="tab-content mt32">
+									<ul class="tab-list tab-button" role="tablist">
+										<li class="tab tab-active"><a role="tab" href="#">1개월</a></li>
+										<li class="tab"><a role="tab" href="#">3개월</a></li>
+										<li class="tab"><a role="tab" href="#">1년</a></li>
+										<li class="tab"><a role="tab" href="#">3년</a></li>
+										<li class="tab"><a role="tab" href="#">5년</a></li>
+									</ul>
+								</div>
+								<!-- //tab-content -->
+								<div class="group pb0 mt32">
+									<div class="right">
+										<span class="divide-list">
+											<span class="fs-14">자료제공: 제로인</span>
+										</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -234,6 +254,82 @@
 	<!-- //main -->
 
 
+	<script>
+		var options2 = {
+			series: [{
+					name: "신한글로벌탄소중립솔루션증권투자신탁(H)(주식)",
+					data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+
+				},
+				{
+					name: "BM",
+					data: [1, 32, 26, 42, 40, 53, 60, 82, 18]
+				},
+				{
+					name: "유형평균",
+					data: [100, 320, 260, 420, 400, 530, 600, 820, 180]
+				}
+			],
+			chart: {
+				height: 180,
+				type: 'line',
+				zoom: {
+					enabled: false
+				},
+				toolbar: {
+					show: false,
+				}
+			},
+			colors: ['#7163EE', '#F35E9C', '#1AA3C1'],
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				curve: 'smooth',
+				width: [2, 2]
+			},
+			markers: {
+				size: 4,
+			},
+			grid: {
+				row: {
+					// colors: ['#E9ECEF', 'transparent'], // takes an array which will be repeated on columns
+					// opacity: 0.5
+				},
+			},
+			xaxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+			}
+		};
+
+		var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+
+		document.addEventListener('aos:in:chart2', ({
+			detail
+		}) => {
+			chart2.render();
+		});
+	</script>
+	<style>
+		.apexcharts-legend-marker {
+			border-radius: 4px !important;
+		}
+
+		#chart1 .apexcharts-legend {
+			padding: 0;
+		}
+
+		#chart1 .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center,
+		#chart1 .apexcharts-legend.apx-legend-position-top.apexcharts-align-center {
+			flex-direction: column;
+		}
+
+		#chart2 .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center,
+		#chart2 .apexcharts-legend.apx-legend-position-top.apexcharts-align-center {
+			justify-content: flex-start;
+			flex-direction: column;
+		}
+	</style>
 </body>
 
 </html>

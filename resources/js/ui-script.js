@@ -300,7 +300,7 @@ const stickyContent = function () {
         var timer = null;
         var close = 1500;
         window.addEventListener('scroll', function () {
-            if (!snackbarEl.classList.contains('snackbar-disabled')) {
+            if (!snackbarEl.classList.contains('`snackbar-disabled`')) {
                 if (timer !== null) {
                     clearTimeout(timer);
                     snackbarEl.classList.remove('is-sticky')
@@ -311,6 +311,7 @@ const stickyContent = function () {
             }
         }, close);
 
+        // snackbar disabled button
         const snackbarElClose = snackbarEl.querySelector('[data-snackbar-close]')
         if (snackbarElClose != null) {
             snackbarElClose.addEventListener('click', function () {
@@ -318,6 +319,12 @@ const stickyContent = function () {
                 snackbarEl.classList.add('snackbar-disabled');
                 clearTimeout(timer);
             });
+        }
+
+        const mainContainer = document.querySelector('main');
+        const bottomBtn = mainContainer.querySelector('.bottom-btn')
+        if (bottomBtn != null) {
+            snackbarEl.style.bottom = bottomBtn.clientHeight + 'px';
         }
     }
 

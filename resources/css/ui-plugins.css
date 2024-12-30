@@ -405,7 +405,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .datepicker-wrap .ui-datepicker-calendar td a {position:relative;padding:0;text-align:center;border:0;background:none;font-weight:inherit;color:inherit;width:40px;height:100%;border-radius:8px;margin:0 auto;}
 
 .datepicker-wrap .ui-widget-content .ui-state-active {background-color:var(--brandPrimary-blue600);color:var(--typography-white);}
-.datepicker-wrap .ui-widget-content .ui-datepicker-today .ui-state-default {border: 2px solid var(--blue-100);color: var(--brandPrimary-blue600);line-height:36px;}
+.datepicker-wrap .ui-widget-content .ui-datepicker-today .ui-state-default {border:2px solid var(--blue-100);color:var(--brandPrimary-blue600);line-height:36px;}
 .datepicker-wrap .ui-widget-content .ui-datepicker-current-day.ui-datepicker-today .ui-state-active {line-height:36px;color:var(--typography-white);}
 
 
@@ -420,7 +420,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .datepicker-wrap-month .ui-datepicker .ui-datepicker-header span {font-size:26px;font-weight:500;color:var(--typography-black);}
 .datepicker-wrap-month .ui-datepicker .ui-datepicker-month {display:none;}
 .datepicker-wrap-month .ui-datepicker-calendar td span,
-.datepicker-wrap-month .ui-datepicker-calendar td a {display:flex;text-align:center;height:40px;width:100%;align-items:center;justify-content:center;border-radius:50px;background-color: var(--button-outlined-enabled);color: var(--button-outlined-onEnabled);border-color: var(--button-outlined-border);border-style: solid;border-width: 1px;}
+.datepicker-wrap-month .ui-datepicker-calendar td a {display:flex;text-align:center;height:40px;width:100%;align-items:center;justify-content:center;border-radius:50px;background-color:var(--button-outlined-enabled);color:var(--button-outlined-onEnabled);border-color:var(--button-outlined-border);border-style:solid;border-width:1px;}
 
 
 /* .datepicker-wrap tbody {position:relative!important;} */

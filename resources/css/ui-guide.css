@@ -50,8 +50,8 @@ td a.vscodepath{position:absolute;right:0;top:50%;transform:translateY(-50%);dis
 }
 .ui-guide {background-color:var(--surface-surface100);padding:12px;}
 .ui-guide h1:not([class]) {font-size:24px;}
-.ui-guide h2:not([class]) {font-size:20px;margin-bottom:10px;display: flex;justify-content: space-between;}
-.ui-guide h2:not([class]) span {font-weight: 400;}
+.ui-guide h2:not([class]) {font-size:20px;margin-bottom:10px;display:flex;justify-content:space-between;}
+.ui-guide h2:not([class]) span {font-weight:400;}
 .ui-guide p:not([class])  {font-size:14px;}
 
 .ui-guide .ui-guide-section {margin-top:20px;}
