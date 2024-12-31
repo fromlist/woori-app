@@ -297,37 +297,47 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .micromodal-slide-select .modal__container,
 .micromodal-slide-dropdown .modal__container {border-radius:6px;box-shadow:0px 2px 30px -4px rgba(0, 0, 0, 0.15);}
 
-
-
 .micromodal-slide .modal__container, .micromodal-slide .modal__overlay {will-change:initial;}
 .micromodal-slide-bottom .modal__overlay {display:flex;align-items:flex-end;}
 .micromodal-slide-bottom .modal__container {overflow:hidden;}
 .micromodal-slide-bottom .modal__content {/* background-color:var(--white-100); *//* padding:30px 16px 20px; *//* border-radius:20px 20px 0 0; *//* max-height:80vh; *//* overflow-y:auto; */}
 .micromodal-slide-bottom.micromodal-slide-bottom-full .modal__container {height:100%;}
 
+.micromodal-slide-left .modal__overlay {align-items:flex-start;}
+.micromodal-slide-left .modal__container {height:100%;max-height:100%;border-radius:0;}
+
 /* .micromodal-slide-dropdown .modal__container {position:absolute;background-color:var(--white);padding:10px 24px;border-radius:12px;} */
-
-
-
-
-@keyframes mmslideIn {
-    from {
-        transform:translateY(5%);
-    }
-
-    to {
-        transform:translateY(0);
-    }
+.micromodal-slide-left[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeLeftIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
-@keyframes mmslideOut {
-    from {
-        transform:translateY(0);
-    }
+.micromodal-slide-left[aria-hidden="false"] .modal__container {
+    animation: mmslideLeftIn .3s cubic-bezier(0, 0, .2, 1);
+}
 
-    to {
-        transform:translateY(5%);
-    }
+.micromodal-slide-left[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeLeftOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide-left[aria-hidden="true"] .modal__container {
+    animation: mmslideLeftOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+@keyframes mmslideIn {
+    from {transform:translateY(5%);}
+    to {transform:translateY(0);}
+}
+@keyframes mmslideOut {
+    from {transform:translateY(0);}
+    to {transform:translateY(5%);}
+}
+@keyframes mmslideLeftIn {
+    from {transform:translateX(100%);}
+    to {transform:translateX(0);}
+}
+@keyframes mmslideLeftOut {
+    from {transform:translateX(0);}
+    to {transform:translateX(100%);}
 }
 
 /* jstree icons */

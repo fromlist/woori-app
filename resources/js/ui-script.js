@@ -16,6 +16,8 @@ $(function () {
         once: true,
         offset: 150,
     });
+    gnb.init();
+
 });
 
 const toggle = {
@@ -575,3 +577,96 @@ const tableInnerScroll = {
         }
     }
 }
+
+var ui = {
+    menuCenter: function ($el, menuCenterOption) {
+        var snbwrap = menuCenterOption.scrollWrap;
+        var targetPos = menuCenterOption.scrollTarget.position();
+        var box = menuCenterOption.scrollWrap.parent();
+        var boxHalf = box.width() / 2;
+        var pos;
+        var scrollLeft2 = snbwrap.scrollLeft();
+        // console.log(targetPos)
+        var selectTargetPos = targetPos.left + menuCenterOption.scrollTarget.outerWidth() / 2;
+        pos = selectTargetPos - boxHalf + scrollLeft2;
+        if (menuCenterOption.animation === true) {
+            setTimeout(function () {
+                snbwrap.stop().animate({
+                    scrollLeft: pos
+                }, 100)
+            })
+        } else {
+            snbwrap.scrollLeft(pos);
+        }
+    }
+}
+
+var gnb = {
+    init: function () {
+        $gnbWrap = $('.gnb').closest('.modal__container');
+        $gnbScrollWrap = $gnbWrap.find('.modal__content');
+        gnb.oneDepthInit();
+        gnb.scrollDown();
+    },
+
+    oneDepthInit: function () {
+        const gnbNavigation = $gnbWrap.find('.gnb-menu-nav')
+        gnbNavigation.find('a').unbind('click').bind({
+            'click': function (e) {
+                e.preventDefault();
+                const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu').outerHeight();
+                var targetId = $(this).attr('href');
+                var targetY = $(targetId).offset().top - $stickyHeight + $gnbScrollWrap.scrollTop();
+                $gnbScrollWrap.stop().animate({ scrollTop: targetY }, 300, function () {
+                });
+            }
+        });
+        var $el = $('.gnb .menu');
+        var menuCenterOption = {
+            scrollWrap: $el,
+            scrollTarget: $el.find('li.tab-active'),
+            animation: true
+        };
+        ui.menuCenter($el, menuCenterOption);
+    },
+    // gnb scroll 시 1뎁스 메뉴 좌우스크롤 및 active
+    scrollDown: function () {
+        $gnbScrollWrap.off().on('scroll', function () {
+            //vertical scroll
+            var $scrollDistance = Math.ceil($(this).scrollTop());
+            const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu').outerHeight();
+            var $gnbHeight = $gnbScrollWrap.find('.gnb-menu-list').outerHeight();
+            const baseline = $scrollDistance + $gnbScrollWrap.outerHeight();
+            // menu auto scroll
+            $('.gnb').find('.gnb-menu-list .gnb-menu-section').each(function (i) {
+                const targetY = $(this).position().top - $stickyHeight + $gnbScrollWrap.scrollTop();
+                // console.log('$scrollDistance ' + $scrollDistance)
+                // console.log('targetY ' + targetY)
+                // console.log('baseline ' + baseline)
+                console.log($(this).offset().top)
+                if (targetY <= $scrollDistance) {
+                    $('.gnb .menu > li').siblings('').removeClass('tab-active').eq(i).addClass('tab-active');
+                    if ($scrollDistance >= targetY) {
+                        // $('.gnb .menu > li.tab-active').removeClass('tab-active')
+                        // $('.gnb .menu > li:last-child').addClass('tab-active');
+                    }
+                } else {
+
+                }
+
+            })
+
+            //scroll down active menu
+            var $el = $('.gnb .menu');
+            var menuCenterOption = {
+                scrollWrap: $el,
+                scrollTarget: $el.find('li.tab-active'),
+                animation: true
+            };
+            ui.menuCenter($el, menuCenterOption);
+
+        })
+    },
+
+}
+
