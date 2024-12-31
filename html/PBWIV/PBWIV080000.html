@@ -116,20 +116,32 @@
 						<div class="inp-group gap16 px0">
 							<div class="inp inp-medium">
 								<label>
-									<input type="checkbox" class="type-red" id="chk01" checked>
-									<span class="label-title">개인 일정</span>
+									<input type="checkbox" class="type-black" id="chk01" checked>
+									<span class="label-title">한국</span>
 								</label>
 							</div>
 							<div class="inp inp-medium">
 								<label>
-									<input type="checkbox" class="type-purple" id="chk02" checked>
-									<span class="label-title">고객 생일</span>
+									<input type="checkbox" class="" id="chk02" checked>
+									<span class="label-title">미국</span>
 								</label>
 							</div>
 							<div class="inp inp-medium">
 								<label>
-									<input type="checkbox" class="type-cyan" id="chk03" checked>
-									<span class="label-title">수신 만기</span>
+									<input type="checkbox" class="type-red700" id="chk03" checked>
+									<span class="label-title">중국</span>
+								</label>
+							</div>
+							<div class="inp inp-medium">
+								<label>
+									<input type="checkbox" class="type-red900" id="chk04" checked>
+									<span class="label-title">일본</span>
+								</label>
+							</div>
+							<div class="inp inp-medium">
+								<label>
+									<input type="checkbox" class="type-deepblue" id="chk05" checked>
+									<span class="label-title">유럽</span>
 								</label>
 							</div>
 						</div>
@@ -250,9 +262,11 @@
 
 	<script>
 		$(function() {
-			const schedule01 = ["2024-12-15", "2024-12-16", "2024-12-17", "2024-12-19"]; // 개인 일정
-			const schedule02 = ["2024-12-15", "2024-12-16", "2024-12-18", "2024-12-20"]; // 고객 생일
-			const schedule03 = ["2024-12-15", "2024-12-17", "2024-12-18", "2024-12-21"]; // 수신 만기
+			const schedule04 = ["2025-01-15", "2025-01-16", "2025-01-17", "2025-01-19"]; // 개인 일정
+			const schedule05 = ["2025-01-15", "2025-01-16", "2025-01-18", "2025-01-20"]; // 고객 생일
+			const schedule06 = ["2025-01-15", "2025-01-17", "2025-01-18", "2025-01-21"]; // 수신 만기
+			const schedule07 = ["2025-01-15", "2025-01-17", "2025-01-18", "2025-01-21"]; // 수신 만기
+			const schedule08 = ["2025-01-15", "2025-01-17", "2025-01-18", "2025-01-21"]; // 수신 만기
 
 			$("#datepicker_schedule").datepicker({
 				dateFormat: 'yy-mm-dd',
@@ -269,32 +283,43 @@
 				showButtonPanel: false,
 				closeText: "닫기",
 				showOtherMonths: true,
-				onSelect: function(date, dp) {},
+				onSelect: function(date, dp) {
+					selectedDate = $.datepicker.formatDate("yy-mm-dd", $(this).datepicker('getDate'));
+					console.log(selectedDate)
+
+				},
 				onChangeMonthYear: function(year, month, dp) {},
 				beforeShowDay: function(date) {
 					var formattedDate = $.datepicker.formatDate('yy-mm-dd', date);
 
-					if (schedule01.indexOf(formattedDate) !== -1 && schedule02.indexOf(formattedDate) !== -1 && schedule03.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_01 schedule_02 schedule_03'];
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule06.indexOf(formattedDate) !== -1 && schedule07.indexOf(formattedDate) !== -1 && schedule08.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_05 schedule_06 schedule_07 schedule_08'];
 					}
-					if (schedule01.indexOf(formattedDate) !== -1 && schedule03.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_01 schedule_03'];
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule06.indexOf(formattedDate) !== -1 && schedule07.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_05 schedule_06 schedule_07'];
 					}
-					if (schedule01.indexOf(formattedDate) !== -1 && schedule02.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_01 schedule_02'];
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule06.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_05 schedule_06'];
 					}
-					if (schedule02.indexOf(formattedDate) !== -1 && schedule03.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_02 schedule_03'];
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule07.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_05 schedule_07'];
 					}
-					if (schedule01.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_01'];
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule08.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_05 schedule_08'];
 					}
-					if (schedule02.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_02'];
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule08.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_08'];
 					}
-					if (schedule03.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_03'];
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule07.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_07'];
 					}
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule06.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_06'];
+					}
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_05'];
+					}
+					//...5팩토리얼 (120개)
 					return [true, ''];
 
 				},
@@ -312,22 +337,34 @@
 					div.appendChild(scheduleWrap)
 				})
 
-				//개인 일정
-				const schedule_01 = document.querySelectorAll('.schedule_01 .schedule-wrap');
-				schedule_01.forEach(function(item) {
-					item.insertAdjacentHTML('beforeend', '<div class="sc-label label01" aria-title="개인 일정"></div>');
+				//한국
+				const schedule_04 = document.querySelectorAll('.schedule_04 .schedule-wrap');
+				schedule_04.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label04" aria-title="한국"></div>');
 				})
 
-				//고객 생일
-				const schedule_02 = document.querySelectorAll('.schedule_02 .schedule-wrap');
-				schedule_02.forEach(function(item) {
-					item.insertAdjacentHTML('beforeend', '<div class="sc-label label02 aria-title="고객 생일"></div>');
+				//미국
+				const schedule_05 = document.querySelectorAll('.schedule_05 .schedule-wrap');
+				schedule_05.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label05 aria-title="미국"></div>');
 				})
 
-				//수신 만기
-				const schedule_03 = document.querySelectorAll('.schedule_03 .schedule-wrap');
-				schedule_03.forEach(function(item) {
-					item.insertAdjacentHTML('beforeend', '<div class="sc-label label03" aria-title="수신 만기"></div>');
+				//중국
+				const schedule_06 = document.querySelectorAll('.schedule_06 .schedule-wrap');
+				schedule_06.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label06" aria-title="중국"></div>');
+				})
+
+				//일본
+				const schedule_07 = document.querySelectorAll('.schedule_07 .schedule-wrap');
+				schedule_07.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label06" aria-title="일본"></div>');
+				})
+
+				//유럽
+				const schedule_08 = document.querySelectorAll('.schedule_08 .schedule-wrap');
+				schedule_08.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label08" aria-title="유럽"></div>');
 				})
 			}
 

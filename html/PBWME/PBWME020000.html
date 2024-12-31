@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
 
 	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
-
 	<!-- [plugins] -->
 	<!-- highlight -->
 	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
@@ -61,100 +60,87 @@
 	<link rel="stylesheet" href="../../resources/css/ui-style.css">
 	<link rel="stylesheet" href="../../resources/css/ui-content.css">
 	<link rel="stylesheet" href="../../resources/css/ui-plugins.css">
-	<link rel="stylesheet" href="../../resources/css/ui-guide.css">
 
 	<script src="../../resources/js/ui-script.js"></script>
 	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
-
 </head>
 
 <body>
-	<div class="ui-guide">
-		<h1>Form</h1>
-		<p>Toggle</p>
 
-		<div class="ui-guide-section">
-			<div class="ui-guide-box">
-				<h2>Text Position <span>Checkbox</span></h2>
-				<dl>
-					<dt></dt>
-					<dd>
-						<div class="inp inp-toggle">
-							<label>
-								<span class="label-title">레이블</span>
-								<input type="checkbox">
-							</label>
-						</div>
-					</dd>
-					<dd>
-						<div class="inp inp-toggle">
-							<label>
-								<input type="checkbox">
-								<span class="label-title">레이블</span>
-							</label>
-						</div>
-					</dd>
-					<dd>
-						<div class="inp inp-toggle">
-							<label>
-								<span class="label-title">레이블</span>
-								<input type="checkbox">
-								<span class="label-title">레이블</span>
-							</label>
-						</div>
-					</dd>
-				</dl>
-			</div>
-			<hr>
-			<div class="ui-guide-box">
-				<h2>inp-toggle-group</h2>
-				<dl>
-					<dt></dt>
-					<dd>
-						<div class="inp-toggle-group">
-							<div class="inp inp-toggle">
-								<label>
-									<span class="label-title">레이블</span>
-									<input type="checkbox">
-								</label>
-							</div>
-							<div class="inp inp-toggle">
-								<label>
-									<input type="checkbox">
-									<span class="label-title">레이블</span>
-								</label>
-							</div>
-							<div class="inp inp-toggle">
-								<label>
-									<span class="label-title">레이블</span>
-									<input type="checkbox">
-									<span class="label-title">레이블</span>
-								</label>
-							</div>
-						</div>
-					</dd>
-				</dl>
-			</div>
+	<!-- main -->
+	<main>
 
-			<hr>
-
-			<div class="ui-guide-box">
-				<h2> <span>Radio</span></h2>
-				<dl>
-					<dt></dt>
-					<dd>
-						<div class="inp inp-toggle-text">
-							<input type="radio" name="toggle" aria-label="오전">
-							<input type="radio" name="toggle" aria-label="오후">
-						</div>
-					</dd>
-				</dl>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>서비스 이용 동의서</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
 			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+
+					<!-- privacy-wrap -->
+					<div class="privacy-wrap">
+						<strong class="title-large">서비스 이용 약관</strong>
+						<ol>
+							<li>나는 은행에 관한 모든 정보를 업무에 한하여 이용한다.</li>
+							<li>나는 전산시스템 접근을 위해 부여된 사용 아이디 및 비밀번호를 오직 나만이 사용할 것이며, 타인에게 누설하지 않는다.</li>
+							<li>나는 은행 내 정보(고객정보 포함) 등을 주의 깊게 열람, 사용함으로써 무단 변조, 복사, 훼손, 분실 외부유출 등으로부터 안전하게 관리하며, 권한 없는 자에게 정보를 누설하지 않고, 제3자 개인정보 열람 및 정보 제공(유출)을 하지 않는다.</li>
+							<li>나는 개인정보보호법 제21조를 준수하여, 수집한 개인 정보(고객 명함 등)는 목적 달성 시(고객과 거래관계 종료 발생)</li>
+							<li>텍스트 텍스트</li>
+							<li>텍스트 텍스트</li>
+							<li><span class="fc-status-error">나는 App-Push 알림 발송 시,</span> 영업 관련 내부 자료 및 마케팅 자료를 보내지 아니하며, 실적 집계 등 영업본부(영업점) 별 과도한 순위경쟁으로 인한 불건전 영업 행위를 유발하지 않는다.</li>
+							<li>텍스트 텍스트</li>
+						</ol>
+						<strong class="title-large">App-Push 이용 동의서</strong>
+						<ol>
+							<li>나는 업무에 필요한 App-Push 알림 수신을 동의한다.</li>
+							<li>App-Push 알림을 통하여 받은 정보를 대회 또는 제3자에게 유출하지 않는다.</li>
+						</ol>
+						<p>나는 은행의 전산 시스템을 이용하여 작성, 전송되는 모든 자료는 은행의 중요한 재산임을 인식하여 상기사항을 숙지하고 이를 준수할 것을 동의합니다.</p>
+						<p>[위의 내용을 서약한 임직원에 한해 <span class="fc-status-error">RM WON</span>이용이 가능합니다.]</p>
+					</div>
+					<!-- //privacy-wrap -->
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
 
 
 		</div>
-	</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-primary">전체 동의</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- //main -->
 </body>
 
 </html>

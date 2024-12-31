@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
 
 	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
-
 	<!-- [plugins] -->
 	<!-- highlight -->
 	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
@@ -61,100 +60,67 @@
 	<link rel="stylesheet" href="../../resources/css/ui-style.css">
 	<link rel="stylesheet" href="../../resources/css/ui-content.css">
 	<link rel="stylesheet" href="../../resources/css/ui-plugins.css">
-	<link rel="stylesheet" href="../../resources/css/ui-guide.css">
 
 	<script src="../../resources/js/ui-script.js"></script>
 	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
-
 </head>
 
 <body>
-	<div class="ui-guide">
-		<h1>Form</h1>
-		<p>Toggle</p>
 
-		<div class="ui-guide-section">
-			<div class="ui-guide-box">
-				<h2>Text Position <span>Checkbox</span></h2>
-				<dl>
-					<dt></dt>
-					<dd>
-						<div class="inp inp-toggle">
-							<label>
-								<span class="label-title">레이블</span>
-								<input type="checkbox">
-							</label>
-						</div>
-					</dd>
-					<dd>
-						<div class="inp inp-toggle">
-							<label>
-								<input type="checkbox">
-								<span class="label-title">레이블</span>
-							</label>
-						</div>
-					</dd>
-					<dd>
-						<div class="inp inp-toggle">
-							<label>
-								<span class="label-title">레이블</span>
-								<input type="checkbox">
-								<span class="label-title">레이블</span>
-							</label>
-						</div>
-					</dd>
-				</dl>
-			</div>
-			<hr>
-			<div class="ui-guide-box">
-				<h2>inp-toggle-group</h2>
-				<dl>
-					<dt></dt>
-					<dd>
-						<div class="inp-toggle-group">
-							<div class="inp inp-toggle">
-								<label>
-									<span class="label-title">레이블</span>
-									<input type="checkbox">
-								</label>
-							</div>
-							<div class="inp inp-toggle">
-								<label>
-									<input type="checkbox">
-									<span class="label-title">레이블</span>
-								</label>
-							</div>
-							<div class="inp inp-toggle">
-								<label>
-									<span class="label-title">레이블</span>
-									<input type="checkbox">
-									<span class="label-title">레이블</span>
-								</label>
-							</div>
-						</div>
-					</dd>
-				</dl>
-			</div>
+	<!-- main -->
+	<main>
 
-			<hr>
-
-			<div class="ui-guide-box">
-				<h2> <span>Radio</span></h2>
-				<dl>
-					<dt></dt>
-					<dd>
-						<div class="inp inp-toggle-text">
-							<input type="radio" name="toggle" aria-label="오전">
-							<input type="radio" name="toggle" aria-label="오후">
-						</div>
-					</dd>
-				</dl>
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>서비스 해지</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
 			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+
+					<p class="description caution body-small fc-typography-caption fw-400 mt40">이용 해지하실 경우, 자동으로 로그아웃 되며, 로그인 시 재동의를 하셔야만 서비스를 이용할 수 있습니다.</p>
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
 
 
 		</div>
-	</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-primary" onclick="$swal.fire01('서비스 이용이 해지되었습니다.', '확인');">이용 해지</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- //main -->
 </body>
 
 </html>
