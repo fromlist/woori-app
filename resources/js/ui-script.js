@@ -614,11 +614,10 @@ var gnb = {
         gnbNavigation.find('a').unbind('click').bind({
             'click': function (e) {
                 e.preventDefault();
-                const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu').outerHeight();
+                const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu-nav').outerHeight();
                 var targetId = $(this).attr('href');
                 var targetY = $(targetId).offset().top - $stickyHeight + $gnbScrollWrap.scrollTop();
-                $gnbScrollWrap.stop().animate({ scrollTop: targetY }, 300, function () {
-                });
+                $gnbScrollWrap.stop().animate({ scrollTop: targetY }, 150);
             }
         });
         var $el = $('.gnb .menu');
@@ -634,26 +633,16 @@ var gnb = {
         $gnbScrollWrap.off().on('scroll', function () {
             //vertical scroll
             var $scrollDistance = Math.ceil($(this).scrollTop());
-            const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu').outerHeight();
-            var $gnbHeight = $gnbScrollWrap.find('.gnb-menu-list').outerHeight();
-            const baseline = $scrollDistance + $gnbScrollWrap.outerHeight();
+            const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu-nav').outerHeight();
             // menu auto scroll
+
+            let num = new Array;
+
             $('.gnb').find('.gnb-menu-list .gnb-menu-section').each(function (i) {
                 const targetY = $(this).position().top - $stickyHeight + $gnbScrollWrap.scrollTop();
-                // console.log('$scrollDistance ' + $scrollDistance)
-                // console.log('targetY ' + targetY)
-                // console.log('baseline ' + baseline)
-                console.log($(this).offset().top)
                 if (targetY <= $scrollDistance) {
                     $('.gnb .menu > li').siblings('').removeClass('tab-active').eq(i).addClass('tab-active');
-                    if ($scrollDistance >= targetY) {
-                        // $('.gnb .menu > li.tab-active').removeClass('tab-active')
-                        // $('.gnb .menu > li:last-child').addClass('tab-active');
-                    }
-                } else {
-
                 }
-
             })
 
             //scroll down active menu

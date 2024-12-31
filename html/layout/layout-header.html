@@ -73,32 +73,66 @@
 </head>
 
 <body>
-	<!-- wrap -->
-	<div id="wrap">
-		<main>
-			<header>
-				<div class="main-header">
-					<div class="left">
-						<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
-					</div>
-					<div class="center">
-						<h1>Title</h1>
-					</div>
-					<div class="right">
-						<button type="button" class="header-btn" aria-label="메뉴 열기" data-micromodal-trigger="modal-menu"><i class="i-menu"></i></button>
-					</div>
-				</div>
-			</header>
 
-		</main>
-	</div>
-	<!-- //wrap -->
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>고객 명함 관리</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기" data-micromodal-trigger="modal-menu"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-primary" data-micromodal-trigger="modal-businesscard-customer-regist"><i class="ico-add"></i>고객 명함 등록</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- //main -->
 
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom  modal" id="modal-menu" aria-hidden="">
+	<div class="micromodal-slide micromodal-slide-left modal" id="modal-menu" aria-hidden="true">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
+
 				<div class="main-header">
 					<div class="left">
 						<button type="button" class="header-btn" aria-label="홈으로 가기"><i class="i-home"></i></button>
@@ -110,7 +144,10 @@
 						<button type="button" class="header-btn" aria-label="메뉴 닫기" data-micromodal-close><i class="i-close"></i></button>
 					</div>
 				</div>
+
 				<div class="modal__content">
+
+					<!-- gnb -->
 					<div class="gnb">
 						<div class="gnb-user-info">
 							<div class="gnb-user-name">
@@ -240,7 +277,7 @@
 									<li class="tab"><a role="tab" href="#gnb-list06">정보+</a></li>
 									<li class="tab"><a role="tab" href="#gnb-list07">공지</a></li>
 									<li class="tab"><a role="tab" href="#gnb-list08">관리</a></li>
-									<li class="tab blind"><a role="tab" href="#gnb-list09">기타</a></li>
+									<li class="tab"><a role="tab" href="#gnb-list09" class="blind">기타</a></li>
 								</ul>
 							</div>
 						</div>
@@ -325,11 +362,13 @@
 							<button type="button" class="btn-xsmall btn-outlined btn-round">로그아웃</button>
 						</div>
 					</div>
+					<!-- //gnb -->
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- //micromodal -->
+
 
 </body>
 

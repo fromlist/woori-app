@@ -284,7 +284,6 @@ header {position:sticky;left:0;top:0;width:100%;z-index:var(--header-zIndex);bac
 
 /* gnb */
 .gnb {}
-/* .gnb:after {content:'';display:block;width:100%;height:100vh;} */
 .gnb > * {background-color:var(--surface-surface);}
 .gnb-user-info {display:flex;align-items:flex-end;justify-content:space-between;padding:16px 24px;}
 .gnb-user-info .gnb-user-name {display:flex;align-items:center;gap:6px;}
@@ -339,7 +338,6 @@ header {position:sticky;left:0;top:0;width:100%;z-index:var(--header-zIndex);bac
 .gnb-menu-search {position:sticky;top:0;z-index:var(--sticky-zIndex);}
 .gnb-menu-nav {position:sticky;top:84px;z-index:var(--sticky-zIndex);}
 
-.absolute {position:absolute;left:0;top:0;font-size:20px;color:red;z-index:1111111;}
 
 /* main */
 main {position:relative;min-height:100vh;}
