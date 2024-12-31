@@ -654,10 +654,11 @@ var gnb = {
         })
     },
     sizeCheck: function () {
-        const $gnbScrollHeight = $gnbScrollWrap.outerHeight();
-        const $gnbHeight = $gnbWrap.find('.gnb').outerHeight();
-        const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu-nav').outerHeight();
-        $('.gnb').find('.gnb-menu-list .gnb-menu-section[id]').each(function (i) {
+
+        const $gnbScrollHeight = $gnbScrollWrap.outerHeight(); // device height - header height
+        const $gnbHeight = $gnbWrap.find('.gnb').outerHeight(); // gnb outerheight
+        const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu-nav').outerHeight(); // sticky height
+        $('.gnb').find('.gnb-menu-list .gnb-menu-section[id]').each(function () {
             const $targetY = $(this).position().top;
             if ($targetY > $gnbHeight + $stickyHeight - $gnbScrollHeight) {
                 $('.gnb').css('padding-bottom', $targetY - ($gnbHeight + $stickyHeight - $gnbScrollHeight))
