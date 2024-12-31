@@ -283,7 +283,7 @@ header {position:sticky;left:0;top:0;width:100%;z-index:var(--header-zIndex);bac
 .header-btn .i-close {background:url(../images/header/ico_close.svg) center center / 24px 24px no-repeat;}
 
 /* gnb */
-.gnb {}
+.gnb {min-height:100%;display:flex;flex-direction:column;}
 .gnb > * {background-color:var(--surface-surface);}
 .gnb-user-info {display:flex;align-items:flex-end;justify-content:space-between;padding:16px 24px;}
 .gnb-user-info .gnb-user-name {display:flex;align-items:center;gap:6px;}
@@ -296,7 +296,9 @@ header {position:sticky;left:0;top:0;width:100%;z-index:var(--header-zIndex);bac
 .gnb-menu-search .gnb-menu-search-recent dl {}
 .gnb-menu-search .gnb-menu-search-recent dl dt {font-size:18px;font-weight:500;color:var(--typography-title);line-height:1;padding:0 4px;}
 .gnb-menu-search .gnb-menu-search-recent dl dd {display:flex;margin-top:16px;flex-wrap:wrap;gap:8px;}
-.gnb-menu-search .gnb-menu-search-result {padding:0 16px;}
+.gnb-menu-search .gnb-menu-search-recent dl dd p {padding:0 4px;font-size:15px;font-weight:400;color:var(--typography-caption);}
+.gnb-menu-search .gnb-menu-search-result {padding:0 16px;flex:1 1 100%;display:flex;flex-direction:column;}
+.gnb-menu-search .gnb-menu-search-result li:not(:last-child) {border-bottom:1px solid var(--border-4);}
 .gnb-menu-search .gnb-menu-search-result strong {display:block;font-size:20px;font-weight:700;color:var(--typography-title);line-height:1.5;padding:16px;}
 .gnb-menu-search .gnb-menu-search-result a {position:relative;display:flex;padding:24px 34px 24px 16px;font-size:18px;font-weight:500;line-height:1.5;flex-wrap:wrap;}
 .gnb-menu-search .gnb-menu-search-result a .bul {display:inline-block;flex:0 0 8px;width:8px;height:27px;background:url(../images/arrow/arrow_bul.svg) center center / 8px 16px no-repeat;margin:0 8px;}
@@ -335,7 +337,7 @@ header {position:sticky;left:0;top:0;width:100%;z-index:var(--header-zIndex);bac
 .gnb-footer {padding:40px 10px;text-align:center;}
 
 /* gnb sticky */
-.gnb-menu-search {position:sticky;top:0;z-index:var(--sticky-zIndex);}
+.gnb-menu-search {position:sticky;top:0;z-index:var(--sticky-zIndex);flex:1 1 100%;display:flex;flex-direction:column;}
 .gnb-menu-nav {position:sticky;top:84px;z-index:var(--sticky-zIndex);}
 
 

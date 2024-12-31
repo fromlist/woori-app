@@ -664,7 +664,7 @@ var gnb = {
                 $('.gnb').css('padding-bottom', $targetY - ($gnbHeight + $stickyHeight - $gnbScrollHeight))
             }
         });
-    }
+    },
 
 }
 
