@@ -16,7 +16,6 @@ $(function () {
         once: true,
         offset: 150,
     });
-    gnb.init();
 
 });
 
@@ -578,7 +577,14 @@ const tableInnerScroll = {
     }
 }
 
-var ui = {
+
+var gnb = {
+    init: function () {
+        $gnbWrap = $('.gnb').closest('.modal__container');
+        $gnbScrollWrap = $gnbWrap.find('.modal__content');
+        gnb.oneDepthInit();
+        gnb.scrollDown();
+    },
     menuCenter: function ($el, menuCenterOption) {
         var snbwrap = menuCenterOption.scrollWrap;
         var targetPos = menuCenterOption.scrollTarget.position();
@@ -586,7 +592,6 @@ var ui = {
         var boxHalf = box.width() / 2;
         var pos;
         var scrollLeft2 = snbwrap.scrollLeft();
-        // console.log(targetPos)
         var selectTargetPos = targetPos.left + menuCenterOption.scrollTarget.outerWidth() / 2;
         pos = selectTargetPos - boxHalf + scrollLeft2;
         if (menuCenterOption.animation === true) {
@@ -598,15 +603,6 @@ var ui = {
         } else {
             snbwrap.scrollLeft(pos);
         }
-    }
-}
-
-var gnb = {
-    init: function () {
-        $gnbWrap = $('.gnb').closest('.modal__container');
-        $gnbScrollWrap = $gnbWrap.find('.modal__content');
-        gnb.oneDepthInit();
-        gnb.scrollDown();
     },
 
     oneDepthInit: function () {
@@ -620,13 +616,14 @@ var gnb = {
                 $gnbScrollWrap.stop().animate({ scrollTop: targetY }, 150);
             }
         });
-        var $el = $('.gnb .menu');
+        var $el = $('.gnb .gnb-menu-nav ul');
         var menuCenterOption = {
             scrollWrap: $el,
             scrollTarget: $el.find('li.tab-active'),
             animation: true
         };
-        ui.menuCenter($el, menuCenterOption);
+        gnb.menuCenter($el, menuCenterOption);
+
     },
     // gnb scroll 시 1뎁스 메뉴 좌우스크롤 및 active
     scrollDown: function () {
@@ -636,26 +633,37 @@ var gnb = {
             const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu-nav').outerHeight();
             // menu auto scroll
 
-            let num = new Array;
 
-            $('.gnb').find('.gnb-menu-list .gnb-menu-section').each(function (i) {
-                const targetY = $(this).position().top - $stickyHeight + $gnbScrollWrap.scrollTop();
-                if (targetY <= $scrollDistance) {
-                    $('.gnb .menu > li').siblings('').removeClass('tab-active').eq(i).addClass('tab-active');
+            $('.gnb').find('.gnb-menu-list .gnb-menu-section[id]').each(function (i) {
+                const $targetY = $(this).position().top - $stickyHeight + $gnbScrollWrap.scrollTop();
+                if ($targetY <= $scrollDistance) {
+                    $('.gnb .gnb-menu-nav li').siblings('').removeClass('tab-active').eq(i).addClass('tab-active');
+
                 }
             })
 
             //scroll down active menu
-            var $el = $('.gnb .menu');
+            var $el = $('.gnb .gnb-menu-nav ul');
             var menuCenterOption = {
                 scrollWrap: $el,
                 scrollTarget: $el.find('li.tab-active'),
                 animation: true
             };
-            ui.menuCenter($el, menuCenterOption);
+            gnb.menuCenter($el, menuCenterOption);
 
         })
     },
+    sizeCheck: function () {
+        const $gnbScrollHeight = $gnbScrollWrap.outerHeight();
+        const $gnbHeight = $gnbWrap.find('.gnb').outerHeight();
+        const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu-nav').outerHeight();
+        $('.gnb').find('.gnb-menu-list .gnb-menu-section[id]').each(function (i) {
+            const $targetY = $(this).position().top;
+            if ($targetY > $gnbHeight + $stickyHeight - $gnbScrollHeight) {
+                $('.gnb').css('padding-bottom', $targetY - ($gnbHeight + $stickyHeight - $gnbScrollHeight))
+            }
+        });
+    }
 
 }
 
