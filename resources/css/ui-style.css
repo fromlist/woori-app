@@ -785,7 +785,9 @@ input[type="checkbox"].type-blue:checked {background:url(../images/form/form_blu
 .tags-yellow {color:var(--typography-white);background-color:var(--background-bg_yellow);}
 .tags-pink {color:var(--typography-white);background-color:var(--background-bg_pink);}
 
+.tags-red-50 {color:var(--red-700);background-color:var(--red-50);}
 .tags-red-100 {color:var(--red-900);background-color:var(--red-100);}
+.tags-red-200 {color:var(--red-900);background-color:var(--red-200);}
 .tags-FFF4EB {color:#EE601E;background-color:#FFF4EB;}
 .tags-F3773D {color:var(--typography-white);background-color:#F3773D;}
 .tags-green-50 {color:var(--green-600);background-color:var(--green-50);}
@@ -795,6 +797,43 @@ input[type="checkbox"].type-blue:checked {background:url(../images/form/form_blu
 .tags-deepGray {color:var(--red-600);background-color:var(--background-bg_deepGray);}
 .tags-gray {color:var(--typography-gray);background-color:var(--background-bg_gray);}
 .tags-deepBlue {color:var(--deepblue-600);background-color:var(--deepblue-100);}
+.tags-deepBlue-50 {color:var(--blue-400);background-color:var(--deepblue-50);}
+.tags-deepBlue-900 {color:var(--typography-white);background-color:var(--deepblue-900);}
+
+.tags-white {color:var(--typography-caption);background-color:var(--background-bg_white);}
+.tags-gray-800 {color:var(--typography-white);background-color:var(--gray-800);}
+
+.tags .flag {gap:3px;align-items:center;font-size:16px;font-weight:700;}
+.tags .flag strong:before {flex:0 0 12px;width:12px;height:12px;}
+
+/* flag */
+.flag strong {display:flex;font-size:26px;font-weight:700;color:var(--typography-title);line-height:36px;gap:8px;align-items:center;}
+.flag strong:before {content:'';flex:0 0 24px;width:24px;height:24px;background-size:contain;background-position:center center;background-repeat:no-repeat;}
+.flag-asia strong:before{background-image:url(../images/flag/flag_asia.svg)}
+.flag-au strong:before{background-image:url(../images/flag/flag_au.svg)}
+.flag-br strong:before{background-image:url(../images/flag/flag_br.svg)}
+.flag-ca strong:before{background-image:url(../images/flag/flag_ca.svg)}
+.flag-ch strong:before{background-image:url(../images/flag/flag_ch.svg)}
+.flag-cn strong:before{background-image:url(../images/flag/flag_cn.svg)}
+.flag-dk strong:before{background-image:url(../images/flag/flag_dk.svg)}
+.flag-emerging strong:before{background-image:url(../images/flag/flag_emerging.svg)}
+.flag-eu strong:before{background-image:url(../images/flag/flag_eu.svg)}
+.flag-europe strong:before{background-image:url(../images/flag/flag_europe.svg)}
+.flag-foreign strong:before{background-image:url(../images/flag/flag_foreign.svg)}
+.flag-gb strong:before{background-image:url(../images/flag/flag_gb.svg)}
+.flag-global strong:before{background-image:url(../images/flag/flag_global.svg)}
+.flag-hk strong:before{background-image:url(../images/flag/flag_hk.svg)}
+.flag-in strong:before{background-image:url(../images/flag/flag_in.svg)}
+.flag-jp strong:before{background-image:url(../images/flag/flag_jp.svg)}
+.flag-kr strong:before{background-image:url(../images/flag/flag_kr.svg)}
+.flag-no strong:before{background-image:url(../images/flag/flag_no.svg)}
+.flag-nz strong:before{background-image:url(../images/flag/flag_nz.svg)}
+.flag-ph strong:before{background-image:url(../images/flag/flag_ph.svg)}
+.flag-se strong:before{background-image:url(../images/flag/flag_se.svg)}
+.flag-sg strong:before{background-image:url(../images/flag/flag_sg.svg)}
+.flag-th strong:before{background-image:url(../images/flag/flag_th.svg)}
+.flag-us strong:before{background-image:url(../images/flag/flag_us.svg)}
+.flag-vn strong:before{background-image:url(../images/flag/flag_vn.svg)}
 
 
 /* badge */
@@ -981,6 +1020,10 @@ input[type="checkbox"].type-blue:checked {background:url(../images/form/form_blu
 .icon-player-next {
     -webkit-mask-image:url(../images/icon_only/icon_player_next.svg);
     mask-image:url(../images/icon_only/icon_player_next.svg);
+}
+.icon-star {
+    -webkit-mask-image:url(../images/icon_only/icon_star.svg);
+    mask-image:url(../images/icon_only/icon_star.svg);
 }
 
 /* toggle-trigger */

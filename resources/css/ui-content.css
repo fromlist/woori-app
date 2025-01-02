@@ -706,8 +706,6 @@ div.flag {display:flex;align-items:center;gap:8px;}
 span.flag {display:block;}
 span.flag span {margin-top:8px;}
 button.flag {}
-.flag strong {display:flex;font-size:26px;font-weight:700;color:var(--typography-title);line-height:36px;gap:8px;align-items:center;}
-.flag strong:before {content:'';flex:0 0 24px;width:24px;height:24px;background-size:contain;background-position:center center;background-repeat:no-repeat;}
 button.flag strong:after {content:'';flex:0 0 10px;width:10px;height:20px;background:url(../images/arrow/ico_chevron.svg) center center / contain no-repeat;}
 .flag span {display:block;font-size:16px;font-weight:500;color:var(--typography-caption);line-height:1;}
 button.flag span {display:block;margin-top:8px;}
@@ -716,31 +714,6 @@ button.flag-fluid:after {content:'';flex:0 0 10px;width:10px;height:20px;backgro
 button.flag-fluid strong:after {display:none;}
 button.flag-fluid span {margin-top:0;}
 
-.flag-asia strong:before{background-image:url(../images/flag/flag_asia.svg)}
-.flag-au strong:before{background-image:url(../images/flag/flag_au.svg)}
-.flag-br strong:before{background-image:url(../images/flag/flag_br.svg)}
-.flag-ca strong:before{background-image:url(../images/flag/flag_ca.svg)}
-.flag-ch strong:before{background-image:url(../images/flag/flag_ch.svg)}
-.flag-cn strong:before{background-image:url(../images/flag/flag_cn.svg)}
-.flag-dk strong:before{background-image:url(../images/flag/flag_dk.svg)}
-.flag-emerging strong:before{background-image:url(../images/flag/flag_emerging.svg)}
-.flag-eu strong:before{background-image:url(../images/flag/flag_eu.svg)}
-.flag-europe strong:before{background-image:url(../images/flag/flag_europe.svg)}
-.flag-foreign strong:before{background-image:url(../images/flag/flag_foreign.svg)}
-.flag-gb strong:before{background-image:url(../images/flag/flag_gb.svg)}
-.flag-global strong:before{background-image:url(../images/flag/flag_global.svg)}
-.flag-hk strong:before{background-image:url(../images/flag/flag_hk.svg)}
-.flag-in strong:before{background-image:url(../images/flag/flag_in.svg)}
-.flag-jp strong:before{background-image:url(../images/flag/flag_jp.svg)}
-.flag-kr strong:before{background-image:url(../images/flag/flag_kr.svg)}
-.flag-no strong:before{background-image:url(../images/flag/flag_no.svg)}
-.flag-nz strong:before{background-image:url(../images/flag/flag_nz.svg)}
-.flag-ph strong:before{background-image:url(../images/flag/flag_ph.svg)}
-.flag-se strong:before{background-image:url(../images/flag/flag_se.svg)}
-.flag-sg strong:before{background-image:url(../images/flag/flag_sg.svg)}
-.flag-th strong:before{background-image:url(../images/flag/flag_th.svg)}
-.flag-us strong:before{background-image:url(../images/flag/flag_us.svg)}
-.flag-vn strong:before{background-image:url(../images/flag/flag_vn.svg)}
 
 /* label-list */
 .label-list {display:flex;gap:16px;}
@@ -1134,3 +1107,23 @@ i.live-off {display:inline-block;width:9px;height:9px;background:url(../images/P
 /* stock-analyze */
 .stock-analyze {text-align:center;font-size:18px;font-weight:400;color:var(--brandPrimary-blue500);line-height:1;}
 .stock-analyze .top {display:flex;align-items:center;justify-content:center;}
+
+
+/* eco-section */
+.eco-section {background-color:var(--background-bg_lightGray);}
+.eco-section .tags-wrap {display:flex;flex-direction:column;gap:8px;align-items:center;}
+.eco-section .eco-list {display:block;padding:14px 16px 16px;background-color:var(--surface-surface);border-radius:12px;box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
+.eco-section .eco-list:not(:last-child) {margin-bottom:16px;}
+.eco-list .eco-title {display:flex;align-items:center;gap:6px;}
+
+.eco-list .eco-title .title-medium {padding:0;}
+.eco-list > *:not(:last-child) {margin-bottom:8px;}
+.eco-list .eco-content dl {display:flex;align-items:center;gap:16px;}
+.eco-list .eco-content dl:not(:last-child) {margin-bottom:2px;}
+.eco-list .eco-content dl .list {display:flex;gap:6px;}
+.eco-list .eco-content dt {font-size:14px;font-weight:400;color:var(--typography-caption);}
+.eco-list .eco-content dd {font-size:14px;font-weight:400;color:var(--typography-black);}
+.eco-list .eco-content dd.rise {color:var(--red-600);}
+.eco-list .eco-content dd.fall {color:var(--blue-600);}
+.eco-list .eco-content dd.steady {color:var(--typography-disabled);}
+.eco-list .eco-content dd .star-rate {display:flex;align-items:center;}

@@ -102,63 +102,24 @@
 						}
 					</style>
 
-					<!-- snackbar-content -->
-					<div class="snackbar-content is-sticky">
-						<a href="#" class="fab fab-secondary fab-circle" aria-label="일정 검색"><i class="ico-search bg-icon-default"></i></a>
-					</div>
-					<!-- //snackbar-content -->
-
-					<!-- datepicker-wrap -->
-					<div class="datepicker-wrap datepicker-weekend content-fluid pt16 pb8 bg-surface-surface">
-
-						<!-- inp-group -->
-						<div class="inp-group gap16 px0">
-							<div class="inp inp-medium">
-								<label>
-									<input type="checkbox" class="type-black" id="chk04" checked>
-									<span class="label-title">한국</span>
-								</label>
+					<!-- sticky-content -->
+					<div class="sticky-sentinal"></div>
+					<div class="sticky-content content-fluid">
+						<div class="sticky-content-inner">
+							<!-- form -->
+							<div class="form">
+								<div class="label"></div>
+								<div class="input-wrap input-btn">
+									<input type="text" placeholder="펀드명으로 검색해 보세요." aria-label="검색">
+									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+									<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
+								</div>
+								<p class="validate-text"></p>
 							</div>
-							<div class="inp inp-medium">
-								<label>
-									<input type="checkbox" class="type-blue" id="chk05" checked>
-									<span class="label-title">미국</span>
-								</label>
-							</div>
-							<div class="inp inp-medium">
-								<label>
-									<input type="checkbox" class="type-red700" id="chk06" checked>
-									<span class="label-title">중국</span>
-								</label>
-							</div>
-							<div class="inp inp-medium">
-								<label>
-									<input type="checkbox" class="type-red900" id="chk07" checked>
-									<span class="label-title">일본</span>
-								</label>
-							</div>
-							<div class="inp inp-medium">
-								<label>
-									<input type="checkbox" class="type-deepblue" id="chk08" checked>
-									<span class="label-title">유럽</span>
-								</label>
-							</div>
-						</div>
-						<!-- //inp-group -->
-
-						<div aria-label="날짜 선택" class="datepicker-trigger" id="datepicker_schedule"></div>
-
-
-						<div class="datepicker-arrow">
-							<button type="button" class="arrow-prev" aria-label="이전 주"></button>
-							<button type="button" class="arrow-next" aria-label="다음 주"></button>
-						</div>
-
-						<div class="datepicker-unfold">
-							<button type="button" aria-label="달력 펼치기"></button>
+							<!-- //form -->
 						</div>
 					</div>
-					<!-- //datepicker-wrap -->
+					<!-- //sticky-content -->
 
 					<!-- eco-section -->
 					<div class="eco-section content-fluid pt40">
@@ -510,6 +471,8 @@
 					</div>
 					<!-- //eco-section -->
 
+
+
 				</div>
 				<!-- //content -->
 			</div>
@@ -525,307 +488,6 @@
 	</main>
 	<!-- //main -->
 
-
-	<script>
-		var datepickerWeekend = {
-			init: function() {
-				$datepicker = $('.datepicker-weekend');
-				$selectDay = $datepicker.find('[aria-current=true]');
-				$selectWeek = $selectDay.closest('tr');
-				$selectWeek.addClass('thisWeek')
-			},
-			select: function() {
-				setTimeout(function() {
-					$datepicker.addClass('datepicker-collapsed');
-					$selectWeek.addClass('thisWeek');
-					$selectWeek.siblings('tr').hide();
-				}, 0)
-			},
-
-			// 오른으로 스와이프
-			selectPrev: function() {
-				if ($selectWeek.is(':first-child')) {
-					$datepicker.find("[data-handler='prev']").trigger('click');
-					if ($datepicker.find('table tbody tr:nth-last-child(1) td').hasClass('ui-datepicker-unselectable')) {
-						$datepicker.find('table tbody tr:nth-last-child(2)').addClass('thisWeek').siblings('').removeClass('thisWeek');
-					} else {
-						$datepicker.find('table tbody tr:nth-last-child(1)').addClass('thisWeek').siblings('').removeClass('thisWeek');
-					}
-					$datepicker.find('table .thisWeek a').trigger('click');
-				} else {
-					$selectWeek.prev('').addClass('thisWeek').siblings('').removeClass('thisWeek');
-				}
-
-				$datepicker.find('table .thisWeek a').trigger('click');
-				$datepicker.find('table tbody tr').each(function() {
-					if (!$(this).hasClass('thisWeek')) {
-						$(this).css('display', 'none');
-					} else {
-						$(this).removeClass('selectNext').addClass('selectPrev');
-						$(this).css('display', 'table-row')
-					}
-				})
-			},
-
-			// 왼쪽으로 스와이프
-			selectNext: function() {
-				if ($selectWeek.is(':last-child')) {
-					$datepicker.find("[data-handler='next']").trigger('click');
-					if ($datepicker.find('table tbody tr:nth-child(1) td').hasClass('ui-datepicker-unselectable')) {
-						$datepicker.find('table tbody tr:nth-child(2)').addClass('thisWeek').siblings('').removeClass('thisWeek');
-					} else {
-						$datepicker.find('table tbody tr:nth-child(1)').addClass('thisWeek').siblings('').removeClass('thisWeek');
-					}
-				} else {
-					$selectWeek.next('').addClass('thisWeek').siblings('').removeClass('thisWeek');
-				}
-
-				$datepicker.find('table .thisWeek a').trigger('click');
-				$datepicker.find('table tbody tr').each(function() {
-					if (!$(this).hasClass('thisWeek')) {
-						$(this).css('display', 'none');
-					} else {
-						$(this).removeClass('selectPrev').addClass('selectNext');
-						$(this).css('display', 'table-row')
-					}
-				})
-
-			},
-			unFold: function() {
-				$('.datepicker-unfold button').on('click', function() {
-					$datepicker.removeClass('datepicker-collapsed');
-					$datepicker.find('table tbody tr').each(function() {
-						$(this).css('display', 'table-row')
-					});
-					$('html, body').stop().animate({
-						scrollTop: 0
-					}, 300);
-				})
-				$('.datepicker-arrow .arrow-prev').on('click', function() {
-					datepickerWeekend.selectPrev();
-				});
-				$('.datepicker-arrow .arrow-next').on('click', function() {
-					datepickerWeekend.selectNext();
-				});
-			}
-		}
-		datepickerWeekend.unFold();
-
-
-		$(function() {
-			const schedule04 = ["2025-01-15", "2025-01-16", "2025-01-17", "2025-01-19"]; // 개인 일정
-			const schedule05 = ["2025-01-15", "2025-01-16", "2025-01-18", "2025-01-20"]; // 고객 생일
-			const schedule06 = ["2025-01-15", "2025-01-17", "2025-01-18", "2025-01-21"]; // 수신 만기
-			const schedule07 = ["2025-01-15", "2025-01-17", "2025-01-18", "2025-01-21"]; // 수신 만기
-			const schedule08 = ["2025-01-15", "2025-01-17", "2025-01-18", "2025-01-21"]; // 수신 만기
-
-			$("#datepicker_schedule").datepicker({
-				dateFormat: 'yy-mm-dd',
-				prevText: '이전 달',
-				nextText: '다음 달',
-				monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-				monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-				dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-				dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-				dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-				showMonthAfterYear: true,
-				yearSuffix: '.',
-				// minDate: 0,
-				showButtonPanel: false,
-				closeText: "닫기",
-				showOtherMonths: true,
-				onSelect: function(date, dp) {
-					datepickerWeekend.select();
-				},
-				onChangeMonthYear: function(year, month, dp) {},
-				beforeShowDay: function(date) {
-					var formattedDate = $.datepicker.formatDate('yy-mm-dd', date);
-
-					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule06.indexOf(formattedDate) !== -1 && schedule07.indexOf(formattedDate) !== -1 && schedule08.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_04 schedule_05 schedule_06 schedule_07 schedule_08'];
-					}
-					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule06.indexOf(formattedDate) !== -1 && schedule07.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_04 schedule_05 schedule_06 schedule_07'];
-					}
-					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule06.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_04 schedule_05 schedule_06'];
-					}
-					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule07.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_04 schedule_05 schedule_07'];
-					}
-					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule08.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_04 schedule_05 schedule_08'];
-					}
-					if (schedule04.indexOf(formattedDate) !== -1 && schedule08.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_04 schedule_08'];
-					}
-					if (schedule04.indexOf(formattedDate) !== -1 && schedule07.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_04 schedule_07'];
-					}
-					if (schedule04.indexOf(formattedDate) !== -1 && schedule06.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_04 schedule_06'];
-					}
-					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1) {
-						return [true, 'schedule_04 schedule_05'];
-					}
-					//...5팩토리얼 (120개)
-					return [true, ''];
-
-				},
-				onUpdateDatepicker: function() {
-					addTags()
-					datepickerWeekend.init();
-				}
-			});
-
-			function addTags() {
-
-				const datepickerWrap = document.querySelectorAll('.ui-datepicker-calendar td a');
-				datepickerWrap.forEach(function(div) {
-					const scheduleWrap = document.createElement('div');
-					scheduleWrap.classList.add('schedule-wrap');
-					div.appendChild(scheduleWrap)
-				})
-
-				//한국
-				const schedule_04 = document.querySelectorAll('.schedule_04 .schedule-wrap');
-				schedule_04.forEach(function(item) {
-					item.insertAdjacentHTML('beforeend', '<div class="sc-label label04" aria-title="한국"></div>');
-				})
-
-				//미국
-				const schedule_05 = document.querySelectorAll('.schedule_05 .schedule-wrap');
-				schedule_05.forEach(function(item) {
-					item.insertAdjacentHTML('beforeend', '<div class="sc-label label05 aria-title="미국"></div>');
-				})
-
-				//중국
-				const schedule_06 = document.querySelectorAll('.schedule_06 .schedule-wrap');
-				schedule_06.forEach(function(item) {
-					item.insertAdjacentHTML('beforeend', '<div class="sc-label label06" aria-title="중국"></div>');
-				})
-
-				//일본
-				const schedule_07 = document.querySelectorAll('.schedule_07 .schedule-wrap');
-				schedule_07.forEach(function(item) {
-					item.insertAdjacentHTML('beforeend', '<div class="sc-label label07" aria-title="일본"></div>');
-				})
-
-				//유럽
-				const schedule_08 = document.querySelectorAll('.schedule_08 .schedule-wrap');
-				schedule_08.forEach(function(item) {
-					item.insertAdjacentHTML('beforeend', '<div class="sc-label label08" aria-title="유럽"></div>');
-				})
-			}
-
-
-			$(document).on('click', '.ui-datepicker-next', function() {
-				$('body').find('.datepicker-wrap').find('.ui-datepicker:visible table').hide('slide', {
-					direction: 'left'
-				}, 1).show('slide', {
-					direction: 'right'
-				}, 250)
-			})
-
-			$(document).on('click', '.ui-datepicker-prev', function() {
-				$('body').find('.datepicker-wrap').find('.ui-datepicker:visible table').hide('slide', {
-					direction: 'right'
-				}, 1).show('slide', {
-					direction: 'left'
-				}, 250)
-			})
-
-
-			$('.datepicker-wrap').swipe({
-				swipeLeft: function() {
-					if ($(this).hasClass('datepicker-collapsed')) {
-						datepickerWeekend.selectNext();
-					} else {
-						$(this).find("[data-handler='next']").trigger('click');
-					}
-				},
-				swipeRight: function() {
-					if ($(this).hasClass('datepicker-collapsed')) {
-						datepickerWeekend.selectPrev();
-					} else {
-						$(this).find("[data-handler='prev']").trigger('click');
-					}
-				}
-			})
-
-			$('#chk04').on('change', function() {
-				if (!$(this).is(':checked')) {
-					$('.ui-datepicker-calendar .schedule_04').removeClass('schedule_04')
-					$('.ui-datepicker-calendar .label04').css({
-						'display': 'none'
-					});
-				} else {
-					$('.ui-datepicker-calendar .label04').closest('td').addClass('schedule_04')
-					// $('.ui-datepicker-calendar .schedule_04').removeClass('schedule_04')
-					$('.ui-datepicker-calendar .label04').css({
-						'display': 'block'
-					});
-				}
-			})
-			$('#chk05').on('change', function() {
-				if (!$(this).is(':checked')) {
-					$('.ui-datepicker-calendar .schedule_05').removeClass('schedule_05')
-					$('.ui-datepicker-calendar .label05').css({
-						'display': 'none'
-					});
-				} else {
-					$('.ui-datepicker-calendar .label05').closest('td').addClass('schedule_05')
-					// $('.ui-datepicker-calendar .schedule_05').removeClass('schedule_05')
-					$('.ui-datepicker-calendar .label05').css({
-						'display': 'block'
-					});
-				}
-			})
-			$('#chk06').on('change', function() {
-				if (!$(this).is(':checked')) {
-					$('.ui-datepicker-calendar .schedule_06').removeClass('schedule_06')
-					$('.ui-datepicker-calendar .label06').css({
-						'display': 'none'
-					});
-				} else {
-					$('.ui-datepicker-calendar .label06').closest('td').addClass('schedule_06')
-					// $('.ui-datepicker-calendar .schedule_06').removeClass('schedule_06')
-					$('.ui-datepicker-calendar .label06').css({
-						'display': 'block'
-					});
-				}
-			})
-			$('#chk07').on('change', function() {
-				if (!$(this).is(':checked')) {
-					$('.ui-datepicker-calendar .schedule_07').removeClass('schedule_07')
-					$('.ui-datepicker-calendar .label07').css({
-						'display': 'none'
-					});
-				} else {
-					$('.ui-datepicker-calendar .label07').closest('td').addClass('schedule_07')
-					// $('.ui-datepicker-calendar .schedule_07').removeClass('schedule_07')
-					$('.ui-datepicker-calendar .label07').css({
-						'display': 'block'
-					});
-				}
-			})
-			$('#chk08').on('change', function() {
-				if (!$(this).is(':checked')) {
-					$('.ui-datepicker-calendar .schedule_08').removeClass('schedule_08')
-					$('.ui-datepicker-calendar .label08').css({
-						'display': 'none'
-					});
-				} else {
-					$('.ui-datepicker-calendar .label08').closest('td').addClass('schedule_08')
-					// $('.ui-datepicker-calendar .schedule_08').removeClass('schedule_08')
-					$('.ui-datepicker-calendar .label08').css({
-						'display': 'block'
-					});
-				}
-			})
-
-		});
-	</script>
 </body>
 
 </html>

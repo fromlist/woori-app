@@ -451,18 +451,35 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 /* datepicker collapsed */
 .datepicker-weekend.datepicker-collapsed {position:sticky;top:var(--header-height);background-color:var(--surface-surface);z-index:var(--sticky-zIndex);}
 .datepicker-weekend.datepicker-collapsed .inp-group {display:none;}
-.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content {height:auto;overflow:hidden;padding-top:0;}
+.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content {height:48px;overflow:hidden;padding-top:0;background-color:#ECF6FF;border-radius:8px;padding:0 16px;}
 .datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content .ui-datepicker-header {height:0;overflow:hidden;margin:0;}
+.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table {overflow:hidden;}
 .datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table thead {display:none;}
 .datepicker-weekend .ui-widget-content .ui-state-active {border-color:transparent;background-color:transparent;color:var(--typography-body);}
 .datepicker-weekend .ui-widget-content .ui-datepicker-current-day.ui-datepicker-today .ui-state-active {color:var(--brandPrimary-blue600);}
+.datepicker-weekend.datepicker-collapsed .ui-datepicker-calendar td.ui-datepicker-other-month {color:var(--typography-black);}
+
+.datepicker-weekend:not(.datepicker-collapsed) .thisWeek td {background-color:#ECF6FF;border-radius:0;}
+.datepicker-weekend:not(.datepicker-collapsed) .thisWeek td:first-child {border-radius:8px 0 0 8px;}
+.datepicker-weekend:not(.datepicker-collapsed) .thisWeek td:last-child {border-radius:0 8px 8px 0;}
+
 .datepicker-weekend.datepicker-collapsed tbody .thisWeek .ui-datepicker-week-end:first-child > * {color: var(--red-400)!important;}
 .datepicker-weekend.datepicker-collapsed tbody .thisWeek .ui-datepicker-week-end:last-child > * {color: var(--blue-400)!important;}
+.datepicker-weekend.datepicker-collapsed tbody .thisWeek * {pointer-events:none;}
+
 .datepicker-weekend .thisWeek.selectPrev {animation: dpslideLeftIn .3s cubic-bezier(0, 0, .2, 1);}
 .datepicker-weekend .thisWeek.selectNext {animation: dpslideRightIn .3s cubic-bezier(0, 0, .2, 1);}
-.datepicker-weekend .thisWeek td {background-color:#ECF6FF;border-radius:0;}
-.datepicker-weekend .thisWeek td:first-child {border-radius:8px 0 0 8px;}
-.datepicker-weekend .thisWeek td:last-child {border-radius:0 8px 8px 0;}
+
+.datepicker-weekend .datepicker-unfold {display:none;}
+.datepicker-weekend.datepicker-collapsed .datepicker-unfold {display:flex;align-items:center;justify-content:center;margin-top:8px;}
+.datepicker-weekend.datepicker-collapsed .datepicker-unfold button {flex:0 0 40px;width:40px;height:40px;background:url(../images/btn/btn_unfold.svg) center center / contain no-repeat;}
+
+.datepicker-weekend .datepicker-arrow {display:none;}
+.datepicker-weekend.datepicker-weekend.datepicker-collapsed .datepicker-arrow {display:block;}
+.datepicker-weekend .datepicker-arrow button {position:absolute;width:16px;height:48px;top:16px;}
+.datepicker-weekend .datepicker-arrow .arrow-prev {background:url(../images/arrow/arrow_datepicker_prev.svg) center center / 6px 12px no-repeat;left:16px;}
+.datepicker-weekend .datepicker-arrow .arrow-next {background:url(../images/arrow/arrow_datepicker_next.svg) center center / 6px 12px no-repeat;right:16px;}
+
 
 @keyframes dpslideLeftIn {
     from {transform:translateX(-100%);}
