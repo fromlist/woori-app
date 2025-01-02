@@ -263,7 +263,7 @@
 	<script>
 		var datepickerWeekend = {
 			init: function() {
-				$datepicker = $('.ui-datepicker');
+				$datepicker = $('.datepicker-weekend');
 				$selectDay = $datepicker.find('[aria-current=true]');
 				$selectWeek = $selectDay.closest('tr');
 				$selectWeek.addClass('thisWeek')
@@ -275,19 +275,56 @@
 					$selectWeek.siblings('tr').hide(0);
 				}, 0)
 			},
-			collapseDatepicker: function() {
+
+			// 오른으로 스와이프
+			selectPrev: function() {
+				if ($selectWeek.is(':first-child')) {
+					$datepicker.find("[data-handler='prev']").trigger('click');
+					if ($datepicker.find('table tbody tr:nth-last-child(1) td').hasClass('ui-datepicker-unselectable')) {
+						$datepicker.find('table tbody tr:nth-last-child(2)').addClass('thisWeek').siblings('').removeClass('thisWeek');
+					} else {
+						$datepicker.find('table tbody tr:nth-last-child(1)').addClass('thisWeek').siblings('').removeClass('thisWeek');
+					}
+					$datepicker.find('table .thisWeek a').trigger('click');
+				} else {
+					$selectWeek.prev('').addClass('thisWeek').siblings('').removeClass('thisWeek');
+				}
+
+				$datepicker.find('table .thisWeek a').trigger('click');
+				$datepicker.find('table tbody tr').each(function() {
+					if (!$(this).hasClass('thisWeek')) {
+						$(this).css('display', 'none');
+					} else {
+						$(this).removeClass('selectNext').addClass('selectPrev');
+						$(this).css('display', 'table-row')
+					}
+				})
+			},
+
+			// 왼쪽으로 스와이프
+			selectNext: function() {
+				if ($selectWeek.is(':last-child')) {
+					$datepicker.find("[data-handler='next']").trigger('click');
+					if ($datepicker.find('table tbody tr:nth-child(1) td').hasClass('ui-datepicker-unselectable')) {
+						$datepicker.find('table tbody tr:nth-child(2)').addClass('thisWeek').siblings('').removeClass('thisWeek');
+					} else {
+						$datepicker.find('table tbody tr:nth-child(1)').addClass('thisWeek').siblings('').removeClass('thisWeek');
+					}
+				} else {
+					$selectWeek.next('').addClass('thisWeek').siblings('').removeClass('thisWeek');
+				}
+
+				$datepicker.find('table .thisWeek a').trigger('click');
+				$datepicker.find('table tbody tr').each(function() {
+					if (!$(this).hasClass('thisWeek')) {
+						$(this).css('display', 'none');
+					} else {
+						$(this).removeClass('selectPrev').addClass('selectNext');
+						$(this).css('display', 'table-row')
+					}
+				})
 
 			}
-		}
-
-		function selectWeek() {
-			setTimeout(function() {
-				const datepicker = $('.ui-datepicker');
-				const selectDay = datepicker.find('[aria-current=true]');
-				const selectWeek = selectDay.closest('tr');
-				// datepicker.addClass('datepicker-collapsed')
-				// selectWeek.siblings('tr').hide(0);
-			}, 0)
 		}
 
 		$(function() {
@@ -416,10 +453,18 @@
 
 			$('.datepicker-wrap').swipe({
 				swipeLeft: function() {
-					$(this).find("[data-handler='next']").trigger('click');
+					if ($(this).hasClass('datepicker-collapsed')) {
+						datepickerWeekend.selectNext();
+					} else {
+						$(this).find("[data-handler='next']").trigger('click');
+					}
 				},
 				swipeRight: function() {
-					$(this).find("[data-handler='prev']").trigger('click');
+					if ($(this).hasClass('datepicker-collapsed')) {
+						datepickerWeekend.selectPrev();
+					} else {
+						$(this).find("[data-handler='prev']").trigger('click');
+					}
 				}
 			})
 

@@ -530,7 +530,7 @@
 											<div class="card-select">
 												<div class="inp inp-large">
 													<span class="tags tags-medium tags-black-80">A타입</span>
-													<label><input type="radio" name="rad001"></label>
+													<label><input type="radio" name="radbsCard"></label>
 													<!-- bs-card-wrap -->
 													<div class="bs-card-wrap">
 														<div class="bs-card ">
@@ -619,7 +619,7 @@
 											<div class="card-select">
 												<div class="inp inp-large">
 													<span class="tags tags-medium tags-black-80">A사진 타입</span>
-													<label><input type="radio" name="rad001"></label>
+													<label><input type="radio" name="radbsCard"></label>
 													<!-- bs-card-wrap -->
 													<div class="bs-card-wrap">
 														<div class="bs-card ">
@@ -715,7 +715,7 @@
 												<div class="inp inp-large">
 													<span class="tags tags-medium tags-black-80">위비프렌즈 타입</span>
 													<!-- 화면에 표시되는 input은 추후 숨길 예정, 개발 작업 시 swiper-slide-active slide 안 input에 checked 시키게끔 작업 부탁드립니다. -->
-													<label><input type="radio" name="rad001"></label>
+													<label><input type="radio" name="radbsCard"></label>
 													<!-- bs-card-wrap -->
 													<div class="bs-card-wrap">
 														<div class="bs-card ">
@@ -802,7 +802,7 @@
 											<div class="card-select">
 												<div class="inp inp-large">
 													<span class="tags tags-medium tags-black-80">TC타입</span>
-													<label><input type="radio" name="rad001"></label>
+													<label><input type="radio" name="radbsCard"></label>
 													<!-- bs-card-wrap -->
 													<div class="bs-card-wrap">
 														<div class="bs-card ">
@@ -889,7 +889,7 @@
 											<div class="card-select">
 												<div class="inp inp-large">
 													<span class="tags tags-medium tags-black-80">TC사진 타입</span>
-													<label><input type="radio" name="rad001"></label>
+													<label><input type="radio" name="radbsCard" checked></label>
 													<!-- bs-card-wrap -->
 													<div class="bs-card-wrap">
 														<div class="bs-card ">
@@ -1138,6 +1138,27 @@
 			spaceBetween: 1,
 			effect: 'cards',
 			observer: true,
+			on: {
+				//기본 0번 slide에 checked 삽입
+				//slide change 시 실행(등록, 수정페이지에 삽입)
+				slideChange: function() {
+					const index_currentSlide = this.realIndex;
+					const currentSlide = this.slides[index_currentSlide]
+					currentSlide.querySelector('input').checked = true;
+				},
+				//수정페이지에 삽입
+				slidesUpdated: function() {
+					const slides = this.el.querySelectorAll('.swiper-slide')
+					slides.forEach(function(slide, index) {
+						const checkbox = slide.querySelector('input[type="radio"]')
+						if (checkbox.checked == true) {
+							if (index > 0) {
+								newSwiper.slideTo(index, 300)
+							}
+						}
+					})
+				}
+			}
 		});
 	</script>
 

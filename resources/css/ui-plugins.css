@@ -449,11 +449,26 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .sc-label.label08 {background-color:var(--deepblue-900);}
 
 /* datepicker collapsed */
+.datepicker-weekend.datepicker-collapsed {position:sticky;top:var(--header-height);background-color:var(--surface-surface);z-index:var(--sticky-zIndex);}
+.datepicker-weekend.datepicker-collapsed .inp-group {display:none;}
+.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content {height:auto;overflow:hidden;padding-top:0;}
+.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content .ui-datepicker-header {height:0;overflow:hidden;margin:0;}
+.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table thead {display:none;}
+.datepicker-weekend .ui-widget-content .ui-state-active {border-color:transparent;background-color:transparent;color:var(--typography-body);}
+.datepicker-weekend .ui-widget-content .ui-datepicker-current-day.ui-datepicker-today .ui-state-active {color:var(--brandPrimary-blue600);}
+.datepicker-weekend.datepicker-collapsed tbody .thisWeek .ui-datepicker-week-end:first-child > * {color: var(--red-400)!important;}
+.datepicker-weekend.datepicker-collapsed tbody .thisWeek .ui-datepicker-week-end:last-child > * {color: var(--blue-400)!important;}
+.datepicker-weekend .thisWeek.selectPrev {animation: dpslideLeftIn .3s cubic-bezier(0, 0, .2, 1);}
+.datepicker-weekend .thisWeek.selectNext {animation: dpslideRightIn .3s cubic-bezier(0, 0, .2, 1);}
 .datepicker-weekend .thisWeek td {background-color:#ECF6FF;border-radius:0;}
 .datepicker-weekend .thisWeek td:first-child {border-radius:8px 0 0 8px;}
 .datepicker-weekend .thisWeek td:last-child {border-radius:0 8px 8px 0;}
-.datepicker-weekend .ui-widget.ui-widget-content.datepicker-collapsed {height:64px;overflow:hidden;}
-.datepicker-weekend .ui-widget.ui-widget-content.datepicker-collapsed .ui-datepicker-header {display:none;}
-.datepicker-weekend .ui-widget.ui-widget-content.datepicker-collapsed thead {display:none;}
-.datepicker-weekend .ui-widget-content .ui-state-active {border-color:transparent;background-color:transparent;color:var(--typography-body);}
-.datepicker-weekend .ui-widget-content .ui-datepicker-current-day.ui-datepicker-today .ui-state-active {color:var(--brandPrimary-blue600);}
+
+@keyframes dpslideLeftIn {
+    from {transform:translateX(-100%);}
+    to {transform:translateX(0);opacity:1;}
+}
+@keyframes dpslideRightIn {
+    from {transform:translateX(100%);}
+    to {transform:translateX(0);opacity:1;}
+}

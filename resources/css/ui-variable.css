@@ -235,6 +235,7 @@
     --header-zIndex:100;
     --sticky-zIndex:50;
     --tab-zIndex:10;
+    --header-height:52px;
 }
 .fc-black-0{color:var(--black-0)!important;}
 .fc-black-100{color:var(--black-100)!important;}

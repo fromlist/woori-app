@@ -280,7 +280,7 @@
 .swiper-business-card {padding:0 16px;overflow:hidden;}
 .card-select {}
 .card-select .inp.inp-large {padding-left:0;}
-.card-select label {}
+.card-select label {position:absolute;left:0;top:0;z-index:100;}
 .card-select .tags {position:absolute;left:12px;bottom:12px;z-index:var(--tab-zIndex);}
 .card-select input[type="radio"] {}
 /* .card-select picture img{width:100%;border-radius:8px;border:1px solid var(--border-8);opacity:0.8;background-color:var(--background-bg_lightGray);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);} */
