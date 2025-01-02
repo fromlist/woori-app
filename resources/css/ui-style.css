@@ -1025,6 +1025,31 @@ input[type="checkbox"].type-blue:checked {background:url(../images/form/form_blu
     -webkit-mask-image:url(../images/icon_only/icon_star.svg);
     mask-image:url(../images/icon_only/icon_star.svg);
 }
+.icon-alarm {
+    -webkit-mask-image:url(../images/icon_only/icon_alarm.svg);
+    mask-image:url(../images/icon_only/icon_alarm.svg);
+}
+.icon-nav01 {
+    -webkit-mask-image:url(../images/icon_only/icon_nav01.svg);
+    mask-image:url(../images/icon_only/icon_nav01.svg);
+}
+.icon-nav02 {
+    -webkit-mask-image:url(../images/icon_only/icon_nav02.svg);
+    mask-image:url(../images/icon_only/icon_nav02.svg);
+}
+.icon-nav03 {
+    -webkit-mask-image:url(../images/icon_only/icon_nav03.svg);
+    mask-image:url(../images/icon_only/icon_nav03.svg);
+}
+.icon-nav04 {
+    -webkit-mask-image:url(../images/icon_only/icon_nav04.svg);
+    mask-image:url(../images/icon_only/icon_nav04.svg);
+}
+.icon-nav05 {
+    -webkit-mask-image:url(../images/icon_only/icon_nav05.svg);
+    mask-image:url(../images/icon_only/icon_nav05.svg);
+}
+
 
 /* toggle-trigger */
 [data-toggle="toggle-trigger"] .toggle-off {display:block;}
