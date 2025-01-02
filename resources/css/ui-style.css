@@ -539,12 +539,13 @@ input[type="checkbox"].type-purple {background:url(../images/form/form_purple.sv
 input[type="checkbox"].type-purple:checked {background:url(../images/form/form_purple_checked.svg) center center / 24px 24px no-repeat;}
 input[type="checkbox"].type-cyan {background:url(../images/form/form_cyan.svg) center center / 24px 24px no-repeat;}
 input[type="checkbox"].type-cyan:checked {background:url(../images/form/form_cyan_checked.svg) center center / 24px 24px no-repeat;}
-
 input[type="checkbox"].type-black {background:url(../images/form/form_black.svg) center center / 24px 24px no-repeat;}
 input[type="checkbox"].type-black:checked {background:url(../images/form/form_black_checked.svg) center center / 24px 24px no-repeat;}
-
 input[type="checkbox"].type-deepblue {background:url(../images/form/form_deepblue.svg) center center / 24px 24px no-repeat;}
 input[type="checkbox"].type-deepblue:checked {background:url(../images/form/form_deepblue_checked.svg) center center / 24px 24px no-repeat;}
+input[type="checkbox"].type-blue {background:url(../images/form/form_blue.svg) center center / 24px 24px no-repeat;}
+input[type="checkbox"].type-blue:checked {background:url(../images/form/form_blue_checked.svg) center center / 24px 24px no-repeat;}
+
 
 .inp-combi {min-height:52px;flex:1 1 100%;width:100%;align-items:center;}
 .inp-combi label {display:block;flex:1 0 50%;}

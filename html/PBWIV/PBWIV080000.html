@@ -110,37 +110,37 @@
 					<!-- //snackbar-content -->
 
 					<!-- datepicker-wrap -->
-					<div class="datepicker-wrap content-fluid pt16 pb40 bg-surface-surface">
+					<div class="datepicker-wrap datepicker-weekend content-fluid pt16 pb40 bg-surface-surface">
 
 						<!-- inp-group -->
 						<div class="inp-group gap16 px0">
 							<div class="inp inp-medium">
 								<label>
-									<input type="checkbox" class="type-black" id="chk01" checked>
+									<input type="checkbox" class="type-black" id="chk04" checked>
 									<span class="label-title">한국</span>
 								</label>
 							</div>
 							<div class="inp inp-medium">
 								<label>
-									<input type="checkbox" class="" id="chk02" checked>
+									<input type="checkbox" class="type-blue" id="chk05" checked>
 									<span class="label-title">미국</span>
 								</label>
 							</div>
 							<div class="inp inp-medium">
 								<label>
-									<input type="checkbox" class="type-red700" id="chk03" checked>
+									<input type="checkbox" class="type-red700" id="chk06" checked>
 									<span class="label-title">중국</span>
 								</label>
 							</div>
 							<div class="inp inp-medium">
 								<label>
-									<input type="checkbox" class="type-red900" id="chk04" checked>
+									<input type="checkbox" class="type-red900" id="chk07" checked>
 									<span class="label-title">일본</span>
 								</label>
 							</div>
 							<div class="inp inp-medium">
 								<label>
-									<input type="checkbox" class="type-deepblue" id="chk05" checked>
+									<input type="checkbox" class="type-deepblue" id="chk08" checked>
 									<span class="label-title">유럽</span>
 								</label>
 							</div>
@@ -261,6 +261,35 @@
 
 
 	<script>
+		var datepickerWeekend = {
+			init: function() {
+				$datepicker = $('.ui-datepicker');
+				$selectDay = $datepicker.find('[aria-current=true]');
+				$selectWeek = $selectDay.closest('tr');
+				$selectWeek.addClass('thisWeek')
+			},
+			select: function() {
+				setTimeout(function() {
+					$datepicker.addClass('datepicker-collapsed');
+					$selectWeek.addClass('thisWeek');
+					$selectWeek.siblings('tr').hide(0);
+				}, 0)
+			},
+			collapseDatepicker: function() {
+
+			}
+		}
+
+		function selectWeek() {
+			setTimeout(function() {
+				const datepicker = $('.ui-datepicker');
+				const selectDay = datepicker.find('[aria-current=true]');
+				const selectWeek = selectDay.closest('tr');
+				// datepicker.addClass('datepicker-collapsed')
+				// selectWeek.siblings('tr').hide(0);
+			}, 0)
+		}
+
 		$(function() {
 			const schedule04 = ["2025-01-15", "2025-01-16", "2025-01-17", "2025-01-19"]; // 개인 일정
 			const schedule05 = ["2025-01-15", "2025-01-16", "2025-01-18", "2025-01-20"]; // 고객 생일
@@ -284,9 +313,7 @@
 				closeText: "닫기",
 				showOtherMonths: true,
 				onSelect: function(date, dp) {
-					selectedDate = $.datepicker.formatDate("yy-mm-dd", $(this).datepicker('getDate'));
-					console.log(selectedDate)
-
+					datepickerWeekend.select();
 				},
 				onChangeMonthYear: function(year, month, dp) {},
 				beforeShowDay: function(date) {
@@ -325,6 +352,7 @@
 				},
 				onUpdateDatepicker: function() {
 					addTags()
+					datepickerWeekend.init();
 				}
 			});
 
@@ -358,7 +386,7 @@
 				//일본
 				const schedule_07 = document.querySelectorAll('.schedule_07 .schedule-wrap');
 				schedule_07.forEach(function(item) {
-					item.insertAdjacentHTML('beforeend', '<div class="sc-label label06" aria-title="일본"></div>');
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label07" aria-title="일본"></div>');
 				})
 
 				//유럽
@@ -395,48 +423,77 @@
 				}
 			})
 
-			$('#chk01').on('change', function() {
+			$('#chk04').on('change', function() {
 				if (!$(this).is(':checked')) {
-					$('.ui-datepicker-calendar .schedule_01').removeClass('schedule_01')
-					$('.ui-datepicker-calendar .label01').css({
+					$('.ui-datepicker-calendar .schedule_04').removeClass('schedule_04')
+					$('.ui-datepicker-calendar .label04').css({
 						'display': 'none'
 					});
 				} else {
-					$('.ui-datepicker-calendar .label01').closest('td').addClass('schedule_01')
-					// $('.ui-datepicker-calendar .schedule_01').removeClass('schedule_01')
-					$('.ui-datepicker-calendar .label01').css({
+					$('.ui-datepicker-calendar .label04').closest('td').addClass('schedule_04')
+					// $('.ui-datepicker-calendar .schedule_04').removeClass('schedule_04')
+					$('.ui-datepicker-calendar .label04').css({
 						'display': 'block'
 					});
 				}
 			})
-			$('#chk02').on('change', function() {
+			$('#chk05').on('change', function() {
 				if (!$(this).is(':checked')) {
-					$('.ui-datepicker-calendar .schedule_02').removeClass('schedule_02')
-					$('.ui-datepicker-calendar .label02').css({
+					$('.ui-datepicker-calendar .schedule_05').removeClass('schedule_05')
+					$('.ui-datepicker-calendar .label05').css({
 						'display': 'none'
 					});
 				} else {
-					$('.ui-datepicker-calendar .label02').closest('td').addClass('schedule_02')
-					// $('.ui-datepicker-calendar .schedule_02').removeClass('schedule_02')
-					$('.ui-datepicker-calendar .label02').css({
+					$('.ui-datepicker-calendar .label05').closest('td').addClass('schedule_05')
+					// $('.ui-datepicker-calendar .schedule_05').removeClass('schedule_05')
+					$('.ui-datepicker-calendar .label05').css({
 						'display': 'block'
 					});
 				}
 			})
-			$('#chk03').on('change', function() {
+			$('#chk06').on('change', function() {
 				if (!$(this).is(':checked')) {
-					$('.ui-datepicker-calendar .schedule_03').removeClass('schedule_03')
-					$('.ui-datepicker-calendar .label03').css({
+					$('.ui-datepicker-calendar .schedule_06').removeClass('schedule_06')
+					$('.ui-datepicker-calendar .label06').css({
 						'display': 'none'
 					});
 				} else {
-					$('.ui-datepicker-calendar .label03').closest('td').addClass('schedule_03')
-					// $('.ui-datepicker-calendar .schedule_03').removeClass('schedule_03')
-					$('.ui-datepicker-calendar .label03').css({
+					$('.ui-datepicker-calendar .label06').closest('td').addClass('schedule_06')
+					// $('.ui-datepicker-calendar .schedule_06').removeClass('schedule_06')
+					$('.ui-datepicker-calendar .label06').css({
 						'display': 'block'
 					});
 				}
 			})
+			$('#chk07').on('change', function() {
+				if (!$(this).is(':checked')) {
+					$('.ui-datepicker-calendar .schedule_07').removeClass('schedule_07')
+					$('.ui-datepicker-calendar .label07').css({
+						'display': 'none'
+					});
+				} else {
+					$('.ui-datepicker-calendar .label07').closest('td').addClass('schedule_07')
+					// $('.ui-datepicker-calendar .schedule_07').removeClass('schedule_07')
+					$('.ui-datepicker-calendar .label07').css({
+						'display': 'block'
+					});
+				}
+			})
+			$('#chk08').on('change', function() {
+				if (!$(this).is(':checked')) {
+					$('.ui-datepicker-calendar .schedule_08').removeClass('schedule_08')
+					$('.ui-datepicker-calendar .label08').css({
+						'display': 'none'
+					});
+				} else {
+					$('.ui-datepicker-calendar .label08').closest('td').addClass('schedule_08')
+					// $('.ui-datepicker-calendar .schedule_08').removeClass('schedule_08')
+					$('.ui-datepicker-calendar .label08').css({
+						'display': 'block'
+					});
+				}
+			})
+
 		});
 	</script>
 </body>
