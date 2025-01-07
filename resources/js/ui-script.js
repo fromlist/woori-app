@@ -530,7 +530,7 @@ const $swal = {
             confirmButtonText: confirmButtonText,
             customClass: {
                 htmlContainer: 'mt40',
-                actions: 'btn-wrap',
+                actions: 'btn-wrap pt40',
                 cancelButton: "btn-medium btn-outlined",
                 confirmButton: "btn-medium btn-primary",
             },

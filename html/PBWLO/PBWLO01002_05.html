@@ -92,46 +92,32 @@
 							</picture>
 
 							<!-- tab-content -->
-							<div class="tab-content tab-fluid">
-								<ul class="tab-list tab-col overflow-list my24" role="tablist">
-									<li class="tab tab-active"><button type="button" data-controls="tab-subpanel01" role="tab">생체인증 등록</button></li>
-									<li class="tab"><button type="button" data-controls="tab-subpanel02" role="tab">통합 로그인</button></li>
-								</ul>
-								<div id="tab-subpanel01" class="tabpanel">
-									<h3 class="blind">생체인증 등록</h3>
+							<p class="title-large my24 ac">통합로그인에 실패했습니다. <br> 비밀번호를 입력해주세요.</p>
 
-									<div class="form">
-										<div class="input-wrap input-btn">
-											<input type="tel" placeholder="행번을 입력하세요." aria-label="행번 입력">
-											<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
-										</div>
-										<p class="validate-text"></p>
-									</div>
-
-									<div class="form">
-										<div class="input-wrap input-btn">
-											<input type="password" placeholder="비밀번호를 입력하세요." aria-label="비밀번호 입력">
-											<button type="button" class="input-password" aria-label="비밀번호 표시"></button>
-										</div>
-										<p class="validate-text"></p>
-									</div>
-
-									<div class="btn-wrap my24">
-										<button type="button" class="btn-large btn-primary"><i class="ico-bio-auth-ios"></i>생체인증 등록</button>
-										<button type="button" class="btn-large btn-primary"><i class="ico-bio-auth-android"></i>생체인증 등록</button>
-									</div>
-
-									<div class="btn-wrap p0">
-										<button type="button" class="btn-xsmall btn-outlined btn-round">RM 로그인</button>
-									</div>
-
-
+							<div class="form">
+								<div class="input-wrap input-btn">
+									<input type="tel" placeholder="행번을 입력하세요." aria-label="행번 입력" value="90195181" readonly>
+									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 								</div>
-								<div id="tab-subpanel02" class="tabpanel">
-									<h3 class="blind">통합 로그인</h3>
-								</div>
+								<p class="validate-text"></p>
 							</div>
-							<!-- //tab-content -->
+
+							<div class="form">
+								<div class="input-wrap input-btn">
+									<input type="password" placeholder="비밀번호를 입력하세요." aria-label="비밀번호 입력">
+									<button type="button" class="input-password" aria-label="비밀번호 표시"></button>
+								</div>
+								<p class="validate-text"></p>
+							</div>
+
+							<div class="btn-wrap my24">
+								<button type="button" class="btn-large btn-primary"><i class="ico-login02"></i>로그인</button>
+							</div>
+
+							<div class="btn-wrap py0">
+								<a href="#" class="anchor underline fs-15">로그인 재설정</a>
+							</div>
+
 
 
 						</div>

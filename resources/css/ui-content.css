@@ -525,6 +525,9 @@
 .fund-card .expect-reason {border-radius:8px;background-color:var(--surface-surface50);padding:12px 12px 14px;margin-top:8px;}
 .fund-card .expect-reason dt {font-size:16px;color:var(--typography-gray);line-height:1;}
 .fund-card .expect-reason dd {font-size:16px;font-weight:400;color:var(--gray-600);margin-top:8px;}
+.fund-card .expect-desc {border-radius:8px;background-color:var(--surface-surface50);padding:12px 12px 14px;margin-top:8px;text-align:center;}
+.fund-card .expect-desc p {font-size:16px;font-weight:500;color:var(--typography-disabled);line-height:1;}
+
 .fund-card .compare-btn-wrap {position:relative;display:flex;justify-content:flex-end;margin-top:16px;z-index:var(--fund-zIndex);}
 .fund-card .favorite-btn-wrap {position:absolute;top:10px;right:10px;z-index:var(--fund-zIndex)}
 .fund-card .favorite-btn-wrap button {display:flex;width:58px;height:52px;align-items:center;justify-content:center;}
@@ -559,6 +562,8 @@
 .fund-detail-rate .expect-list .list.rise dd {color:var(--red-600);}
 .fund-detail-rate .expect-list .list.fall dd {color:var(--deepblue-600);}
 .fund-detail-rate .expect-list .list.steady dd {color:var(--gray-500);}
+.fund-detail-rate .expect-desc {margin-top:16px;padding:0 8px;text-align:center;}
+.fund-detail-rate .expect-desc p {font-size:16px;font-weight:500;color:var(--typography-disabled);line-height:1;}
 
 .fund-detail-rate .status-list {display:flex;gap:16px;align-items:center;justify-content:center;}
 .fund-detail-rate .status-list dt {font-size:30px;color:var(--typography-black);font-weight:700;}

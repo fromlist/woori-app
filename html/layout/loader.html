@@ -3,14 +3,20 @@
 
 <head>
 	<title>자산관리 영업지원 App</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
 
 	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
-
 	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
 	<!-- jstree -->
-
 	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
 	<script src="../../resources/plugins/jstree/3.3.16/jstree.min.js"></script>
 	<!-- micromodal -->
@@ -24,9 +30,17 @@
 	<!-- swiper -->
 	<link rel="stylesheet" href="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
 	<script src="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../resources/plugins/toastr/2.1.4/toastr.min.js"></script>
 	<!-- jquery-ui -->
 	<link rel="stylesheet" type="text/css" href="../../resources/plugins/jquery-ui/jquery-ui.css">
 	<script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="../../resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
 	<!-- apexcharts -->
 	<link rel="stylesheet" type="text/css" href="../../resources/plugins/apexcharts/3.50.0/apexcharts.css">
 	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
@@ -39,40 +53,37 @@
 	<script src="../../resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
 	<!-- //[plugins] -->
 
-	<!-- ui source -->
 	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../resources/css/ui-variable.css">
 	<link rel="stylesheet" href="../../resources/css/ui-default.css">
 	<link rel="stylesheet" href="../../resources/css/ui-layout.css">
 	<link rel="stylesheet" href="../../resources/css/ui-style.css">
 	<link rel="stylesheet" href="../../resources/css/ui-content.css">
 	<link rel="stylesheet" href="../../resources/css/ui-plugins.css">
-	<link rel="stylesheet" href="../../resources/css/ui-main.css">
 
 	<script src="../../resources/js/ui-script.js"></script>
-	<script src="../../resources/js/ui-temp.js"></script>
-	<!-- 개발에서 제외해주세요 -->
+	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
 </head>
 
+
 <body>
 
-	<div class="loading-wrap">
-		<div id="loader">
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
+	<div class="loader-wrap">
+		<canvas id="loader" style="width:360px"></canvas>
 	</div>
+	<script type="module">
+		import {DotLottie} from "../../resources/plugins/dotlottie-web/+esm.js";
 
+		new DotLottie({
+			autoplay: true,
+			loop: true,
+			canvas: document.getElementById("loader"),
+			loop: true,
+			autoplay: true,
+			src: "../../resources/lottie/loader.lottie", // or .json file
+		});
+	</script>
 </body>
 
 </html>

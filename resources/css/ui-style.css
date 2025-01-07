@@ -809,6 +809,7 @@ input[type="checkbox"].type-blue:checked {background:url(../images/form/form_blu
 /* flag */
 .flag strong {display:flex;font-size:26px;font-weight:700;color:var(--typography-title);line-height:36px;gap:8px;align-items:center;}
 .flag strong:before {content:'';flex:0 0 24px;width:24px;height:24px;background-size:contain;background-position:center center;background-repeat:no-repeat;}
+.flag.noflag strong:before {display:none;}
 .flag-asia strong:before{background-image:url(../images/flag/flag_asia.svg)}
 .flag-au strong:before{background-image:url(../images/flag/flag_au.svg)}
 .flag-br strong:before{background-image:url(../images/flag/flag_br.svg)}

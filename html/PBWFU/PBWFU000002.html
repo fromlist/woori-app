@@ -113,7 +113,7 @@
 								<div class="label"></div>
 								<div class="input-wrap input-btn">
 									<input type="text" placeholder="펀드명으로 검색해 보세요." aria-label="검색">
-                                    <button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 									<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
 								</div>
 								<p class="validate-text"></p>
@@ -198,7 +198,7 @@
 									</button>
 								</div>
 								<div class="favorite-btn-wrap" data-toggle="toggle-wrap">
-									<button type="button" data-toggle="toggle-trigger">
+									<button type="button" data-toggle="toggle-trigger" id="error">
 										<i class="icon-only icon-36 icon-fav " data-switch-inner="true" data-switch-inner-before="icon-fav" data-switch-inner-after="icon-fav-active"></i>
 										<span class="toggle-off blind">관심펀드 등록</span>
 										<span class="toggle-on blind">관심펀드 등록해제</span>
@@ -256,6 +256,33 @@
 									</button>
 								</div>
 
+							</div>
+							<div class="fund-card" data-toggle="toggle-wrap" data-aos>
+
+								<dl class="expect-list">
+									<div class="list">
+										<dt>1개월</dt>
+										<dd>-888.88%</dd>
+									</div>
+									<div class="list">
+										<dt>3개월</dt>
+										<dd>-</dd>
+									</div>
+									<div class="list">
+										<dt>6개월</dt>
+										<dd>-</dd>
+									</div>
+									<div class="list rise">
+										<dt>12개월</dt>
+										<dd>+888.88%</dd>
+									</div>
+								</dl>
+								<div class="expect-desc">
+									<p>수익률 미수신</p>
+								</div>
+								<div class="expect-desc">
+									<p>설정기간 1개월 미경과</p>
+								</div>
 							</div>
 						</div>
 						<!-- //fund-card-list -->
@@ -420,6 +447,13 @@
 					"disableTimeOut": true,
 				});
 			}
+		});
+		$('#error').click(function(event) {
+			toastr.error(`<div class="btn-toast-wrap"><a href="#" class="btn-xsmall btn-ghost-white">바로가기<i class="ico-chevron"></i></a>`, '더 이상 등록할 수 없습니다.', {
+				"extendedTimeOut": 0,
+				"preventDuplicates": false,
+				"disableTimeOut": true,
+			});
 		});
 	</script>
 </body>

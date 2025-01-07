@@ -269,7 +269,7 @@ header {position:sticky;left:0;top:0;width:100%;z-index:var(--header-zIndex);bac
 .main-header .logo a {height:inherit;align-items:center;justify-content:center;}
 
 .main-header .left,
-.main-header .right {position:absolute;display:flex;align-items:center;justify-content:center;}
+.main-header .right {position:absolute;display:flex;align-items:center;justify-content:center;top:0;}
 .main-header .left {left:8px;}
 .main-header .right {display:flex;gap:2px;right:12px;}
 
@@ -503,3 +503,6 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 
 /* box */
 .box {padding:60px 24px;}
+
+/* loader-wrap */
+.loader-wrap {position:fixed;left:0;top:0;width:100%;height:100%;z-index:var(--loader-zIndex);display:flex;align-items:center;justify-content:center;overflow:hidden;background-color:var(--surface-surface);}
