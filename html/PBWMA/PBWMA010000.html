@@ -75,10 +75,10 @@
 		<header>
 			<div class="main-header">
 				<div class="left">
-					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+					<button type="button" class="header-logo-btn"><i></i>PB WON</button>
 				</div>
 				<div class="center">
-					<h1>영업캘린더</h1>
+					<h1><span class="blind">PBWON 홈</span></h1>
 				</div>
 				<div class="right">
 					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
@@ -93,36 +93,73 @@
 
 			<!-- container -->
 			<div id="container">
+
 				<!-- content -->
 				<div class="content">
 
-					<p class="description info body-small fc-typography-caption mt16">알림의 조회 기간은 14일입니다.</p>
+					<!-- main-fund-section -->
+					<div class="main-fund-section">
+						<div class="main-section-title">
+							<strong class="headline-small">나의 관심 펀드 수익률</strong>
+							<a href="#" aria-label="설정" class="p4">
+								<i class="icon-only icon-24 icon-setting bg-icon-gray_1"></i>
+							</a>
+						</div>
 
-					<div class="alarm-list mt16">
-						<ul>
-							<li class="unread">
-								<a href="#" aria-label="읽지 않음">
-									<strong>제목이 노출됩니다.</strong>
-									<div class="text">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</div>
-									<div class="date">2024-11-06 10:48</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<strong>제목이 노출됩니다.</strong>
-									<div class="text">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</div>
-									<div class="date">2024-11-06 10:48</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<strong>제목이 노출됩니다.제목이 노출됩니다.제목이 노출됩니다.제목이 노출됩니다.제목이 노출됩니다.</strong>
-									<div class="text">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</div>
-									<div class="date">2024-11-06 10:48</div>
-								</a>
-							</li>
-						</ul>
+						<div class="main-fund-content mt24">
+							<!-- tab-content -->
+							<div class="tab-content">
+								<ul class="tab-list tab-button" role="tablist">
+									<li class="tab tab-active"><a role="tab" href="#">1개월</a></li>
+									<li class="tab"><a role="tab" href="#">3개월</a></li>
+									<li class="tab"><a role="tab" href="#">6개월</a></li>
+									<li class="tab"><a role="tab" href="#">12개월</a></li>
+								</ul>
+							</div>
+							<!-- //tab-content -->
+
+							<div class="chart-wrap mt16">
+								<div style="height:180px;">
+									<div id="chart2" data-aos data-aos-id="chart2"></div>
+
+								</div>
+								<div class="group pb16 px24">
+									<div class="right">
+										<span class="divide-list">
+											<span class="fs-14">2024-11-13 기준</span>
+											<span class="division h14 mx8"></span>
+											<span class="fs-14">자료제공: 제로인</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
 					</div>
+					<!-- //main-fund-section -->
+
+
+					<div class="btn-wrap content-fluid py24 bg-background-bg_lightGray">
+						<div class="ac">
+							<button type="button" class="btn-medium btn-primary btn-round">펀드 VS 지수 수익률 비교해보기</button>
+						</div>
+					</div>
+
+
+					<div class="main-fund-banner content-fluid">
+						<figure>
+							<picture>
+								<source srcset="../../resources/images/PBWMA/image_fund01.png 2x">
+								<img src="../../resources/images/PBWMA/image_fund01.png" alt="">
+							</picture>
+							<figcaption>
+								<span class="body-medium">수익률 Best 키워드의 펀드가 궁금하신가요?</span>
+								<strong class="headline-small mt8">투자성향 분석 없이 <br> 원하는 펀드를 찾아 보세요!</strong>
+								<a href="#" class="btn-medium btn-secondary btn-round mt24">펀드 찾기<i class="ico-search"></i></a>
+							</figcaption>
+						</figure>
+					</div>
+
 
 				</div>
 				<!-- //content -->
@@ -139,8 +176,8 @@
 
 			<div class="main-nav">
 				<ul>
-					<li class="list01">
-						<a href="#">
+					<li class="list01 is-current">
+						<a href="#" aria-current="page">
 							<div class="icon"><i class="icon-only icon-32 icon-nav01 bg-icon-gray_1"></i></div>
 							<strong>펀드</strong>
 						</a>
@@ -163,8 +200,8 @@
 							<strong>금융+</strong>
 						</a>
 					</li>
-					<li class="list05 is-current">
-						<a href="#" aria-current="page">
+					<li class="list05">
+						<a href="#">
 							<div class="icon"><i class="icon-only icon-32 icon-nav05 bg-icon-gray_1"></i></div>
 							<strong>알림</strong>
 						</a>
@@ -175,9 +212,66 @@
 		</div>
 		<!-- //bottom-btn -->
 
+
+
 	</main>
 	<!-- //main -->
+	<script>
+		var options2 = {
+			series: [{
+					name: "신한글로벌탄소중립솔루션증권투자신탁(H)(주식)",
+					data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
 
+				},
+				{
+					name: "BM",
+					data: [1, 32, 26, 42, 40, 53, 60, 82, 18]
+				},
+				{
+					name: "유형평균",
+					data: [100, 320, 260, 420, 400, 530, 600, 820, 180]
+				}
+			],
+			chart: {
+				height: 180,
+				type: 'line',
+				zoom: {
+					enabled: false
+				},
+				toolbar: {
+					show: false,
+				}
+			},
+			colors: ['#7163EE', '#F35E9C', '#1AA3C1'],
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				curve: 'smooth',
+				width: [2, 2]
+			},
+			markers: {
+				size: 4,
+			},
+			grid: {
+				row: {
+					// colors: ['#E9ECEF', 'transparent'], // takes an array which will be repeated on columns
+					// opacity: 0.5
+				},
+			},
+			xaxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+			}
+		};
+
+		var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+
+		document.addEventListener('aos:in:chart2', ({
+			detail
+		}) => {
+			chart2.render();
+		});
+	</script>
 </body>
 
 </html>

@@ -401,6 +401,7 @@ i.ico-reply {-webkit-mask-image:url(../images/ico/ico_reply.svg);mask-image:url(
 i.ico-gototop {-webkit-mask-image:url(../images/ico/ico_gototop.svg);mask-image:url(../images/ico/ico_gototop.svg);}
 i.ico-calendar {-webkit-mask-image:url(../images/ico/ico_calendar.svg);mask-image:url(../images/ico/ico_calendar.svg);}
 i.ico-search {-webkit-mask-image:url(../images/ico/ico_search.svg);mask-image:url(../images/ico/ico_search.svg);}
+/* i.ico-chevron {-webkit-mask-image:url(../images/ico/ico_chevron.svg);mask-image:url(../images/ico/ico_chevron.svg);} */
 
 
 
@@ -1049,6 +1050,10 @@ input[type="checkbox"].type-blue:checked {background:url(../images/form/form_blu
 .icon-nav05 {
     -webkit-mask-image:url(../images/icon_only/icon_nav05.svg);
     mask-image:url(../images/icon_only/icon_nav05.svg);
+}
+.icon-setting {
+    -webkit-mask-image:url(../images/icon_only/icon_setting.svg);
+    mask-image:url(../images/icon_only/icon_setting.svg);
 }
 
 
