@@ -509,6 +509,9 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 /* loader-wrap */
 .loader-wrap {position:fixed;left:0;top:0;width:100%;height:100%;z-index:var(--loader-zIndex);display:flex;align-items:center;justify-content:center;overflow:hidden;background-color:var(--surface-surface);}
 
+/* chart-wrap */
+.chart-wrap {background-color:var(--background-bg_lightGray);border-radius:8px;}
+
 /* main */
 .visual-headline {position:relative;height:203px;display:flex;align-items:flex-end;padding:0 4px 3px;}
 .visual-headline figure {flex:1 1 100%;}
@@ -599,7 +602,6 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .main-notice-list a .date {font-size:14px;font-weight:400;color:var(--typography-caption);text-align:right;margin-top:2px;}
 
 .main-fund-section {padding:32px 0;}
-.main-fund-content .chart-wrap {background-color:var(--background-bg_lightGray);border-radius:8px;}
 
 .main-fund-banner {position:relative;background-color:var(--background-bg_gray);padding:32px 16px 64px;}
 .main-fund-banner picture {position:absolute;right:0;bottom:0;}

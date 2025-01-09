@@ -97,20 +97,27 @@
 				<!-- content -->
 				<div class="content">
 
-					<!-- sort-wrap -->
-					<div class="sort-wrap">
-
-						<!-- form -->
-						<div class="form">
-							<div class="label"></div>
-							<div class="input-wrap input-btn">
-								<input type="text" placeholder="이름, 회사명으로 검색해 보세요." aria-label="검색">
-                                <button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
-								<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
+					<!-- sticky-content -->
+					<div class="sticky-sentinal"></div>
+					<div class="sticky-content content-fluid">
+						<div class="sticky-content-inner">
+							<!-- form -->
+							<div class="form">
+								<div class="label"></div>
+								<div class="input-wrap input-btn">
+									<input type="text" placeholder="이름, 회사명으로 검색해 보세요." aria-label="검색">
+									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+									<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
+								</div>
+								<p class="validate-text"></p>
 							</div>
-							<p class="validate-text"></p>
+							<!-- //form -->
 						</div>
-						<!-- //form -->
+					</div>
+					<!-- //sticky-content -->
+
+					<!-- sort-wrap -->
+					<div class="sort-wrap pt4">
 
 						<!-- sort-list -->
 						<button class="sort-list" data-micromodal-trigger="modal-select-filter" aria-label="정렬">

@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-	<title>자산관리 영업지원 App</title>
+	<title>펀드/지수 비교</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
 
@@ -78,10 +78,9 @@
 					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
 				</div>
 				<div class="center">
-					<h1>펀드 찾기 </h1>
+					<h1>고객기여도 조회</h1>
 				</div>
 				<div class="right">
-					<button type="button" class="header-btn" aria-label="관심 펀드"><i class="i-favorite"></i></button>
 					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
 				</div>
 			</div>
@@ -98,41 +97,46 @@
 				<!-- content -->
 				<div class="content">
 
-					<style>
-						body {
-							background-color: var(--background-bg_lightGray);
-						}
-					</style>
+					<!-- snackbar-content -->
+					<div class="snackbar-content is-sticky">
+						<a href="#" class="fab fab-secondary fab-circle" aria-label="펀드/지수 검색"><i class="ico-search bg-icon-default"></i></a>
+					</div>
+					<!-- //snackbar-content -->
 
-					<!-- sticky-content -->
-					<div class="sticky-sentinal"></div>
-					<div class="sticky-content content-fluid">
-						<div class="sticky-content-inner">
-							<!-- form -->
-							<div class="form">
-								<div class="label"></div>
-								<div class="input-wrap input-btn">
-									<input type="text" placeholder="펀드명으로 검색해 보세요." aria-label="검색">
-									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
-									<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
-								</div>
-								<p class="validate-text"></p>
+					<div class="chart-diff pt40">
+						<strong class="title-small ac">펀드 vs 지수, 차트로 비교하세요!</strong>
+						<!-- tab-content -->
+						<div class="tab-content mt24">
+							<ul class="tab-list tab-button" role="tablist">
+								<li class="tab tab-active"><a role="tab" href="#">1개월</a></li>
+								<li class="tab"><a role="tab" href="#">3개월</a></li>
+								<li class="tab"><a role="tab" href="#">1년</a></li>
+								<li class="tab"><a role="tab" href="#">2년</a></li>
+								<li class="tab"><a role="tab" href="#">3년</a></li>
+							</ul>
+						</div>
+						<!-- //tab-content -->
+						<div class="chart-wrap mt24">
+							<div style="height:180px;">
+								<div id="chart2" data-aos data-aos-id="chart2"></div>
 							</div>
-							<!-- //form -->
-						</div>
-					</div>
-					<!-- //sticky-content -->
-
-					<!-- division-center -->
-					<div class="division-center">
-
-						<div class="no-result">
-							<i class="icon-only icon-48 icon-noresult bg-icon-gray_1"></i>
-							<p class="body-medium fw-400">검색 결과가 없습니다.</p>
+							<div class="group pb16 px24">
+								<div class="right">
+									<span class="divide-list">
+										<span class="fs-14">2024-11-13 기준</span>
+										<span class="division h14 mx8"></span>
+										<span class="fs-14">자료제공: 제로인</span>
+									</span>
+								</div>
+							</div>
 						</div>
 
+						<div class="btn-wrap my16">
+							<button type="button" class="btn-xsmall btn-outlined btn-round" data-micromodal-trigger="modal-diff">기간별 수익률/기준가 보기</button>
+						</div>
+
+						<p class="description info body-small fc-typography-caption mt16">역외펀드의 경우, 데이터 제공업체로부터 제공받은 가장 최신의 수익률을 기반으로 안내하고 있으나 당일자 실제 수익률과는 차이가 있을 수 있습니다.</p>
 					</div>
-					<!-- //division-center -->
 
 
 				</div>
@@ -145,127 +149,91 @@
 		<!-- //content end -->
 		<!-- //main-inner -->
 
-		<!-- bottom-btn -->
-		<div class="bottom-btn">
-			<div class="btn-wrap">
-				<button type="button" class="btn-medium btn-primary">비교하기</button>
-			</div>
-		</div>
-		<!-- //bottom-btn -->
-
 
 
 	</main>
 	<!-- //main -->
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-select-filter">
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-diff">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 				<div class="modal__header">
-					<strong class="modal__title title-large"></strong>
+					<strong class="modal__title title-large">기간별 기준가/수익률</strong>
 					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
 				</div>
 				<div class="modal__content">
-					<div class="content">
+					<div class="content content-fluid">
 
+						<strong class="title-large py16 px24">3개월</strong>
 
+						<div class="table-col">
+							<table>
+								<caption>기간별 기준가/수익률 3개월</caption>
+								<colgroup>
+									<col style="width:30%">
+									<col style="width:30%">
+									<col style="">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">기준일</th>
+										<th scope="col">기준가</th>
+										<th scope="col">수익률</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+								</tbody>
 
-						<!-- group-form -->
-						<div class="group-form">
-							<div class="group-title py16 px8">
-								<strong class="title-large px0">정렬</strong>
-							</div>
-							<div class="group-content mt0">
-								<div class="inp-group">
-									<div class="inp inp-medium">
-										<label>
-											<input type="radio" name="rad001">
-											<span class="label-title">수익률순</span>
-										</label>
-									</div>
-									<div class="inp inp-medium">
-										<label>
-											<input type="radio" name="rad001">
-											<span class="label-title">판매순</span>
-										</label>
-									</div>
-								</div>
-							</div>
+							</table>
 						</div>
-						<!-- //group-form -->
-
-						<!-- group-form -->
-						<div class="group-form mt16">
-							<div class="group-title py16 px8">
-								<strong class="title-large px0">기간</strong>
-							</div>
-							<div class="group-content mt0">
-								<div class="inp-group">
-									<div class="inp inp-medium">
-										<label>
-											<input type="radio" name="rad001">
-											<span class="label-title">1개월</span>
-										</label>
-									</div>
-									<div class="inp inp-medium">
-										<label>
-											<input type="radio" name="rad001">
-											<span class="label-title">3개월</span>
-										</label>
-									</div>
-									<div class="inp inp-medium">
-										<label>
-											<input type="radio" name="rad001">
-											<span class="label-title">3개월</span>
-										</label>
-									</div>
-									<div class="inp inp-medium">
-										<label>
-											<input type="radio" name="rad001">
-											<span class="label-title">12개월</span>
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- //group-form -->
-
-						<!-- group-form -->
-						<div class="group-form mt16">
-							<div class="group-title py16 px8">
-								<strong class="title-large px0">필터</strong>
-							</div>
-							<div class="group-content mt0">
-
-								<div class="inp-group">
-									<div class="inp inp-medium">
-										<label>
-											<input type="radio" name="rad003">
-											<span class="label-title">전체</span>
-										</label>
-									</div>
-									<div class="inp inp-medium">
-										<label>
-											<input type="radio" name="rad003">
-											<span class="label-title">추천펀드</span>
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- //group-form -->
 
 					</div>
-				</div>
-				<div class="modal__footer">
-					<!-- bottom-btn -->
-					<div class="bottom-btn">
-						<div class="btn-wrap">
-							<button type="button" class="btn-large btn-primary" data-micromodal-close>조회</button>
-						</div>
-					</div>
-					<!-- //bottom-btn -->
 				</div>
 			</div>
 		</div>
@@ -273,21 +241,61 @@
 	<!-- //micromodal -->
 
 
+
 	<script>
-		$('#success').click(function(event) {
-			if ($(this).closest('.favorite-btn-wrap').hasClass('is-toggled')) {
-				toastr.caution(`<div class="btn-toast-wrap"><a href="#" class="btn-xsmall btn-ghost-white">바로가기<i class="ico-chevron"></i></a>`, '관심펀드에서 삭제되었습니다.', {
-					"extendedTimeOut": 0,
-					"preventDuplicates": false,
-					"disableTimeOut": true,
-				});
-			} else {
-				toastr.success(`<div class="btn-toast-wrap"><a href="#" class="btn-xsmall btn-ghost-white">바로가기<i class="ico-chevron"></i></a>`, '관심펀드에 등록되었습니다', {
-					"extendedTimeOut": 0,
-					"preventDuplicates": false,
-					"disableTimeOut": true,
-				});
+		var options2 = {
+			series: [{
+					name: "신한글로벌탄소중립솔루션증권투자신탁(H)(주식)",
+					data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+
+				},
+				{
+					name: "BM",
+					data: [1, 32, 26, 42, 40, 53, 60, 82, 18]
+				},
+				{
+					name: "유형평균",
+					data: [100, 320, 260, 420, 400, 530, 600, 820, 180]
+				}
+			],
+			chart: {
+				height: 180,
+				type: 'line',
+				zoom: {
+					enabled: false
+				},
+				toolbar: {
+					show: false,
+				}
+			},
+			colors: ['#7163EE', '#F35E9C', '#1AA3C1'],
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				curve: 'smooth',
+				width: [2, 2]
+			},
+			markers: {
+				size: 4,
+			},
+			grid: {
+				row: {
+					// colors: ['#E9ECEF', 'transparent'], // takes an array which will be repeated on columns
+					// opacity: 0.5
+				},
+			},
+			xaxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
 			}
+		};
+
+		var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+
+		document.addEventListener('aos:in:chart2', ({
+			detail
+		}) => {
+			chart2.render();
 		});
 	</script>
 </body>

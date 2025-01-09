@@ -591,7 +591,7 @@
 .fund-detail-info .fund-rate h5 .fall {color:var(--deepblue-600);}
 .fund-detail-info .fund-rate h5 .steady {color:var(--gray-500);}
 
-.fund-detail-info .chart-wrap {padding:16px 0;border-radius:8px;background-color:var(--background-bg_lightGray);}
+.fund-detail-info .chart-wrap {padding:16px 0;}
 .fund-detail-info .chart-wrap .btn-wrap {justify-content:flex-end;padding-right:16px;}
 
 .table-layout {display:table;width:100%;table-layout:auto;border-top:1px solid var(--border-4);}
