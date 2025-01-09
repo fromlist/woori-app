@@ -894,20 +894,7 @@ button.flag-fluid span {margin-top:0;}
 .message-text {position:relative;display:table;border-radius:16px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
 .message-text > *:not(:last-child) {margin-bottom:24px;}
 .message-text .text {font-size:18px;font-weight:400;color:var(--typography-black);padding:0 4px;}
-.message-text .btn-link {padding-right:8px;}
-.message-text .btn-link li:not(:last-child) {margin-bottom:12px;}
-.message-text .btn-link button {display:flex;align-items:center;justify-content:space-between;font-size:16px;font-weight:400;color:var(--button-secondary-onEnabled);padding:8px 14px 8px 20px;gap:16px;border-radius:22px;border:1px solid var(--button-secondary-border);width:100%;}
-.message-text .btn-link button:after {content:'';flex:0 0 8px;width:8px;height:16px;
-    -webkit-mask-position:center center;
-    mask-position:center center;
-    -webkit-mask-size:contain;
-    mask-size:contain;
-    -webkit-mask-repeat:no-repeat;
-    mask-repeat:no-repeat;
-    background-color:var(--button-secondary-onEnabled);
-    -webkit-mask-image:url(../images/arrow/ico_chevron.svg);
-    mask-image:url(../images/arrow/ico_chevron.svg);
-}
+
 .message-text .description + .description {margin-top:8px;}
 
 .chatbody-intro .message-text {margin-top:50px;padding:48px 16px 32px;}
@@ -920,6 +907,8 @@ button.flag-fluid span {margin-top:0;}
 .chatbody-notice .message-text .swiper-slide {padding:16px 16px 32px;border-radius:16px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
 .chatbody-notice .btn-link {margin-top:16px;}
 .chatbody-notice .btn-link li:not(:last-child) {margin-bottom:8px;}
+
+
 
 .chatbody-notice .swiper-button-prev,
 .chatbody-notice .swiper-button-next {width:28px;height:28px;margin-top:0;transform:translateY(-50%);}
@@ -969,16 +958,46 @@ button.flag-fluid span {margin-top:0;}
 .message-text .number-list-title {display:flex;align-items:center;gap:10px;margin-bottom:10px;}
 .message-text .number-list-title i {display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--typography-white);line-height:27px;min-width:27px;flex:0 1 27px;background-color:var(--brandPrimary-blue500);border-radius:50px;}
 .message-text .number-list-title .date {font-size:14px;font-weight:400;color:var(--typography-caption);}
+
+.btn-link {padding-right:8px;}
+.btn-link li:not(:last-child) {margin-bottom:12px;}
+.btn-link button {display:flex;align-items:center;justify-content:space-between;font-size:16px;font-weight:400;color:var(--button-secondary-onEnabled);padding:8px 14px 8px 20px;gap:16px;border-radius:22px;border:1px solid var(--button-secondary-border);width:100%;}
+.btn-link button:after {content:'';flex:0 0 8px;width:8px;height:16px;
+    -webkit-mask-position:center center;
+    mask-position:center center;
+    -webkit-mask-size:contain;
+    mask-size:contain;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    background-color:var(--button-secondary-onEnabled);
+    -webkit-mask-image:url(../images/arrow/ico_chevron.svg);
+    mask-image:url(../images/arrow/ico_chevron.svg);
+}
+
+.file-attach-list a {display:inline-flex;border-radius:4px;background-color:var(--surface-surface50);padding:4px 8px;gap:10px;}
+.file-attach-list a:before {content:'';display:table-cell;flex:0 0 16px;width:16px;height:22px;background:url(../images/PBWAI/ico_file_attach.svg) center center / 16px 16px no-repeat;}
+.file-attach-list a:after {content:'';display:table-cell;flex:0 0 20px;width:20px;height:22px;background:url(../images/PBWAI/ico_file_attach_download.svg) center center / 20px 20px no-repeat;}
+.file-attach-list a.link:after {flex:0 0 6px;width:6px;height:22px;
+    -webkit-mask-position:center center;
+    mask-position:center center;
+    -webkit-mask-size:6px 12px;
+    mask-size:6px 12px;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    background-color:var(--icon-default);
+    -webkit-mask-image:url(../images/arrow/ico_chevron.svg);
+    mask-image:url(../images/arrow/ico_chevron.svg);
+}
+.file-attach-list li:not(:last-child) {margin-bottom:4px;}
+.file-attach-list a span {font-size:14px;font-weight:400;color:var(--typography-black);line-height:22px;}
+
+.message-link {}
+.message-link li {}
+.message-link li a {display:inline-flex;font-size:15px;font-weight:400;color:var(--blue-400);border-radius:4px;background-color:var(--surface-surface50);padding:4px 8px;gap:4px;}
+.message-link li:not(:last-child) {margin-bottom:4px;}
+.message-link li a:before {content:'';flex:0 0 24px;width:24px;height:24px;background:url(../images/PBWAI/ico_link.svg) center center / contain no-repeat;}
+
 .message-text .file-attach-list {margin-top:10px;}
-.message-text .file-attach-list a {display:inline-flex;border-radius:4px;background-color:var(--surface-surface50);padding:4px 8px;gap:10px;}
-.message-text .file-attach-list a:before {content:'';display:table-cell;flex:0 0 16px;width:16px;height:22px;background:url(../images/PBWAI/ico_file_attach.svg) center center / 16px 16px no-repeat;}
-.message-text .file-attach-list a:after {content:'';display:table-cell;flex:0 0 20px;width:20px;height:22px;background:url(../images/PBWAI/ico_file_attach_download.svg) center center / 20px 20px no-repeat;}
-.message-text .file-attach-list li:not(:last-child) {margin-bottom:4px;}
-.message-text .file-attach-list a span {font-size:14px;font-weight:400;color:var(--typography-black);line-height:22px;}
-.message-text .message-link {}
-.message-text .message-link li {}
-.message-text .message-link li a {display:inline-flex;font-size:15px;font-weight:400;color:var(--blue-400);border-radius:4px;background-color:var(--surface-surface50);padding:4px 8px;gap:4px;}
-.message-text .message-link li a:before {content:'';flex:0 0 24px;width:24px;height:24px;background:url(../images/PBWAI/ico_link.svg) center center / contain no-repeat;}
 
 .message-footer {display:flex;align-items:center;justify-content:space-between;}
 .message-footer .btn-rating-wrap {display:flex;padding:6px 12px;align-items:center;justify-content:center;gap:24px;}
@@ -1157,3 +1176,33 @@ i.live-off {display:inline-block;width:9px;height:9px;background:url(../images/P
 .alarm-list ul li.unread strong {font-weight:700;color:var(--brandPrimary-blue600);}
 .alarm-list ul li.unread strong:before {content:'';position:absolute;left:-10px;top:5px;width:6px;height:6px;background-color:var(--yellow-600);border-radius:50%;}
 
+
+/* notice-list */
+.notice-list {}
+.notice-list ul {}
+.notice-list ul li {}
+.notice-list ul li a {position:relative;display:block;border-bottom:1px solid var(--border-8);padding:16px 25px 16px 16px;}
+.notice-list ul li a:after {content:'';position:absolute;right:8px;top:16px;flex:0 0 9px;width:9px;height:18px;
+    -webkit-mask-position:center center;
+    mask-position:center center;
+    -webkit-mask-size:contain;
+    mask-size:contain;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    -webkit-mask-image:url(../images/arrow/ico_chevron.svg);
+    mask-image:url(../images/arrow/ico_chevron.svg);
+    background-color:var(--icon-default);
+}
+.notice-list .tag-wrap {margin-bottom:8px;}
+.notice-list .text {font-size:16px;font-weight:400;color:var(--gray-600);}
+.notice-list .date {font-size:14px;font-weight:400;color:var(--typography-caption);margin-top:4px;}
+
+.notice-wrap {}
+.notice-title {padding:0 8px;}
+.notice-title-inner {display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;}
+.notice-title-inner .date {font-size:14px;font-weight:400;color:var(--typography-caption);}
+.notice-content {padding:0 8px;}
+.notice-content .file-attach-list {margin-bottom:16px;}
+.notice-content picture {display:flex;margin-bottom:16px;}
+.notice-content .text {margin-bottom:16px;}
+.notice-content pre {font-size:16px;font-weight:400;color:var(--typography-body);}

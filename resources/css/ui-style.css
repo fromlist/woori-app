@@ -1055,6 +1055,10 @@ input[type="checkbox"].type-blue:checked {background:url(../images/form/form_blu
     -webkit-mask-image:url(../images/icon_only/icon_setting.svg);
     mask-image:url(../images/icon_only/icon_setting.svg);
 }
+.icon-notebook {
+    -webkit-mask-image:url(../images/icon_only/icon_notebook.svg);
+    mask-image:url(../images/icon_only/icon_notebook.svg);
+}
 
 
 /* toggle-trigger */
