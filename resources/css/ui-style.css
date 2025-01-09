@@ -270,6 +270,7 @@ div.btn-medium .btn-inner {display:flex;padding:14px 0 14px 16px;}
 div.btn-small .btn-inner {display:flex;padding:6px 0 6px 12px;} */
 div.btn-xsmall {padding:0 12px 0 0;}
 div.btn-xsmall .btn-inner {display:flex;padding:6px 0 6px 12px;}
+div.btn-xsmall .btn-inner span {white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 
 .btn-noborder {display:inline-flex;align-items:center;justify-content:center;font-size:16px;font-weight:400;padding:4px;white-space:nowrap;text-align:center;vertical-align:top;gap:4px;line-height:1;border-radius:8px;}
 
@@ -304,6 +305,8 @@ div.btn-xsmall .btn-inner {display:flex;padding:6px 0 6px 12px;}
 .btn-noborder.btn-noborder-text-shadow:active {background-color:var(--surface-surface300);}
 
 .btn-round {border-radius:50px;}
+
+.text-ellipsis span {display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 
 .anchor {display:inline-flex;color:var(--button-textBtn-Enabled);line-height:1;font-weight:400;}
 .anchor.chevron {align-items:center;gap:8px;white-space:nowrap;}

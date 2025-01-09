@@ -358,9 +358,10 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 
 /* bottom-btn */
 .bottom-btn {position:sticky;width:100%;left:0;bottom:0;background-color:inherit;z-index:calc(var(--header-zIndex) - 1);}
-.bottom-btn-title {padding:24px 24px 8px 24px;background-color:var(--white-100);border-radius:8px 8px 0 0;}
-.content .bottom-btn {width:auto;margin:auto -16px -24px;background-color:var(--background-bg_white);}
+.bottom-btn-title {padding:24px 24px 8px 24px;background-color:var(--white-100);border-radius:20px 20px 0 0;box-shadow: 0px -2px 40px -1px var(--shadow-gray_3);}
+.content .bottom-btn {width:auto;margin:24px -16px -24px;}
 .content .bottom-btn .btn-wrap {padding:12px 16px;}
+.content .bottom-btn .btn-wrap.btn-nowrap {padding:8px 16px;}
 
 .financial-player {background-color:var(--surface-surface900);border-radius:10px 10px 0 0;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;}
 .financial-player-title {display:flex;gap:8px;align-items:center;justify-content:center;}
@@ -427,9 +428,12 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .content .btn-wrap {padding:16px 0;}
 
 .btn-nowrap {}
-.btn-nowrap button {flex:0 0 calc(50% - 4px)!important;white-space:inherit;max-width:calc(50% - 4px);}
+.btn-nowrap:not(.overflow-list) button {flex:0 0 calc(50% - 4px);white-space:inherit;max-width:calc(50% - 4px);}
 .btn-nowrap button span {white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .btn-nowrap button.btn-outlined {border-style:dashed;color:var(--typography-placeholder);}
+.btn-nowrap.overflow-list {justify-content:flex-start;}
+.btn-nowrap.overflow-list button.btn-primary {max-width:169px;flex:0;}
+.btn-nowrap.overflow-list button.btn-outlined {max-width:calc((100vw - 44px) / 3);flex:1 0 100%;}
 
 /* select-option */
 .select-option {}
