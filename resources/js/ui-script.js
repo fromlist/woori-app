@@ -357,7 +357,7 @@ const tippyContent = {
 
 // sweetalert
 const $swal = {
-    fire01(title, confirmButtonText, showCancelButton, cancelButtonText) {
+    fire01(title, confirmButtonText, showCancelButton, cancelButtonText, callback, fallback) {
         Swal.fire({
             showCancelButton: showCancelButton,
             showCloseButton: false,
@@ -373,9 +373,15 @@ const $swal = {
             buttonsStyling: false,
             allowOutsideClick: false,
 
-        })
+        }).then(function (result) {
+            if (result.isConfirmed) {
+                if (callback) { callback(); }
+            } else if (result.isDismissed) {
+                if (fallback) { fallback(); }
+            }
+        });
     },
-    fire02(title, status, confirmButtonText, showCancelButton, cancelButtonText) {
+    fire02(title, status, confirmButtonText, showCancelButton, cancelButtonText, callback, fallback) {
         Swal.fire({
             showCancelButton: showCancelButton,
             showCloseButton: false,
@@ -392,9 +398,15 @@ const $swal = {
             buttonsStyling: false,
             allowOutsideClick: false,
 
-        })
+        }).then(function (result) {
+            if (result.isConfirmed) {
+                if (callback) { callback(); }
+            } else if (result.isDismissed) {
+                if (fallback) { fallback(); }
+            }
+        });
     },
-    fire03(title, text, showCancelButton, confirmButtonText, cancelButtonText) {
+    fire03(title, text, showCancelButton, confirmButtonText, cancelButtonText, callback, fallback) {
         Swal.fire({
             showCancelButton: showCancelButton,
             showCloseButton: true,
@@ -413,9 +425,15 @@ const $swal = {
             buttonsStyling: false,
             // allowOutsideClick: false,
 
-        })
+        }).then(function (result) {
+            if (result.isConfirmed) {
+                if (callback) { callback(); }
+            } else if (result.isDismissed) {
+                if (fallback) { fallback(); }
+            }
+        });
     },
-    fire04(title, text, icon, confirmButtonText) {
+    fire04(title, text, icon, confirmButtonText, callback, fallback) {
         Swal.fire({
             showCloseButton: true,
             reverseButtons: true,
@@ -433,7 +451,13 @@ const $swal = {
                 <strong class="title-large mt8">${title}</strong>
                 <p class="body-large mt8 fw-400">${text}</p>
             `,
-        })
+        }).then(function (result) {
+            if (result.isConfirmed) {
+                if (callback) { callback(); }
+            } else if (result.isDismissed) {
+                if (fallback) { fallback(); }
+            }
+        });
     }
 }
 

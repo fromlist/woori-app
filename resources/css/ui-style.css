@@ -345,6 +345,7 @@ div.btn-xsmall .btn-inner span {white-space:nowrap;overflow:hidden;text-overflow
 }
 .chevron-only {display:flex;width:16px;height:16px;flex:0 0 16px;background:url(../images/arrow/ico_chevron_only.svg) center center / contain no-repeat;}
 .anchor-fluid span {white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.anchor.chevron.fc-status-active:after {background-color:var(--status-active);}
 
 /* fab */
 .fab {display:flex;width:52px;height:52px;box-shadow:0px 6px 24px -8px var(--shadow-gray_3, rgba(12, 12, 13, 0.12));backdrop-filter:blur(8px);align-items:center;justify-content:center;}

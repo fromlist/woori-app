@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="../../resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="../../resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="../../resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="../../resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="../../resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="../../resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="../../resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="../../resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="../../resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="../../resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="../../resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="../../resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="../../resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="../../resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="../../resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="../../resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="../../resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="../../resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="../../resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="../../resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="../../resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="../../resources/css/ui-variable.css">
+	<link rel="stylesheet" href="../../resources/css/ui-default.css">
+	<link rel="stylesheet" href="../../resources/css/ui-layout.css">
+	<link rel="stylesheet" href="../../resources/css/ui-style.css">
+	<link rel="stylesheet" href="../../resources/css/ui-content.css">
+	<link rel="stylesheet" href="../../resources/css/ui-plugins.css">
+
+	<script src="../../resources/js/ui-script.js"></script>
+	<script src="../../resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>고객 명함 메모 관리</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<!-- group-form -->
+					<div class="group-form mt16">
+						<div class="group-title">
+							<strong class="title-medium">수정 기간</strong>
+						</div>
+						<div class="group-content">
+							<div class="form">
+								<div class="label"></div>
+								<div class="input-wrap input-datepicker">
+									<button type="button" aria-label="대상기간 시작일" data-micromodal-trigger="modal-datepicker1">2023-11-11</button>
+									<div class="bul">-</div>
+									<button type="button" aria-label="대상기간 종료일" data-micromodal-trigger="modal-datepicker2">2024-10-11</button>
+								</div>
+								<p class="validate-text"></p>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+					<!-- group-form -->
+					<div class="group-form mt16">
+						<div class="group-content">
+							<div class="form">
+								<button class="select" data-micromodal-trigger="modal-select-list" data-placeholder="선택하세요"><span>등록자</span></button>
+							</div>
+						</div>
+						<div class="group-content">
+							<div class="form">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="text" placeholder="검색어 입력" aria-label="검색어">
+										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+					<div class="btn-wrap">
+						<button type="button" class="btn-medium btn-primary">검색</button>
+					</div>
+
+					<!-- memo-list -->
+					<div class="memo-list mt16">
+						<div class="memo-inner is-toggled">
+							<div class="tag-wrap mb12">
+								<div class="tags tags-small tags-white tags-round">나만보기</div>
+							</div>
+							<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+							<dl class="flex-column gap8 a-start">
+								<dt>등록자</dt>
+								<dd>
+									<div class="divide-list mt0">
+										<span class="fc-typography-gray fw-500">나우리</span>
+										<div class="division h14 mx8"></div>
+										<span>부점</span>
+										<div class="division h14 mx8"></div>
+										<span>팀</span>
+										<div class="division h14 mx8"></div>
+										<span>등록일시</span>
+										<div class="division h14 mx8"></div>
+										<span>수정일시</span>
+
+									</div>
+								</dd>
+							</dl>
+							<dl class="flex-column gap8 a-start">
+								<dt>고객정보</dt>
+								<dd>
+									<div class="divide-list mt0">
+										<span class="fc-typography-gray fw-500">나고객</span>
+										<div class="division h14 mx8"></div>
+										<span>부서명</span>
+										<div class="division h14 mx8"></div>
+										<span>직책</span>
+										<div class="division h14 mx8"></div>
+										<span>회사 정보</span>
+									</div>
+								</dd>
+							</dl>
+							<div class="memo-btn mt24">
+								<div class="right">
+									<button type="button" class="btn-noborder" id="fire01"><i class="ico-delete"></i>삭제</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="memo-inner is-toggled">
+							<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+							<dl class="flex-column gap8 a-start">
+								<dt>등록자</dt>
+								<dd>
+									<div class="divide-list mt0">
+										<span class="fc-typography-gray fw-500">나우리</span>
+										<div class="division h14 mx8"></div>
+										<span>부점</span>
+										<div class="division h14 mx8"></div>
+										<span>팀</span>
+										<div class="division h14 mx8"></div>
+										<span>등록일시</span>
+										<div class="division h14 mx8"></div>
+										<span>수정일시</span>
+
+									</div>
+								</dd>
+							</dl>
+							<dl class="flex-column gap8 a-start">
+								<dt>고객정보</dt>
+								<dd>
+									<div class="divide-list mt0">
+										<span class="fc-typography-gray fw-500">나고객</span>
+										<div class="division h14 mx8"></div>
+										<span>부서명</span>
+										<div class="division h14 mx8"></div>
+										<span>직책</span>
+										<div class="division h14 mx8"></div>
+										<span>회사 정보</span>
+									</div>
+								</dd>
+							</dl>
+							<div class="memo-btn mt24">
+								<div class="right">
+									<button type="button" class="btn-noborder" id="fire01"><i class="ico-delete"></i>삭제</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //memo-list -->
+
+					<!-- division-center -->
+					<div class="division-center">
+
+						<div class="no-result">
+							<i class="icon-only icon-48 icon-noresult bg-icon-gray_1"></i>
+							<p class="body-medium fw-400">내역이 없습니다.</p>
+						</div>
+
+					</div>
+					<!-- //division-center -->
+
+
+				</div>
+				<!-- //content -->
+
+
+
+
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+	</main>
+	<!-- //main -->
+
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker1" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+						<div class="datepicker-wrap">
+							<div class="datepicker-trigger" id="datepicker1"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker2" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+						<div class="datepicker-wrap">
+							<div class="datepicker-trigger" id="datepicker2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-select modal" id="modal-select-list">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header modal__header__alert">
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close=""></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content content-fluid">
+						<div class="select-option">
+							<ul>
+								<li><button type="button" data-micromodal-close onclick="console.log(1)"><span>키맨</span></button></li>
+								<li><button type="button" data-micromodal-close onclick="console.log(1)"><span>내가 등록한 명함</span></button></li>
+								<li><button type="button" data-micromodal-close onclick="console.log(1)"><span>내가 등록한 명함 내가 등록한 명함 내가 등록한 명함 내가 등록한 명함</span></button></li>
+								<li class="select-active"><button type="button" aria-label="선택됨" data-micromodal-close onclick="console.log(1)"><span>내가 등록한 명함 내가 등록한 명함 내가 등록한 명함 내가 등록한 명함</span></button></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<script>
+		const modalTrigger1 = document.querySelector('[data-micromodal-trigger="modal-datepicker1"]')
+
+		modalTrigger1.addEventListener("click", function(event) {
+			MicroModal.show('modal-datepicker1', {
+				// openTrigger: 'data-custom-open', // [3]
+				// closeTrigger: 'data-custom-close', // [4]
+				// openClass: 'is-open', // [5]
+				disableScroll: true, // [6]
+				disableFocus: true, // [7]
+				awaitOpenAnimation: true, // [8]
+				awaitCloseAnimation: true, // [9]
+				// debugMode: true // [10]
+				onShow: function(modalPopup) {
+					$("#datepicker1").datepicker({
+						dateFormat: 'yy-mm-dd',
+						prevText: '이전 달',
+						nextText: '다음 달',
+						monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+						monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+						dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+						dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+						dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+						showMonthAfterYear: true,
+						yearSuffix: '.',
+						// minDate: 0,
+						showButtonPanel: false,
+						closeText: "닫기",
+						showOtherMonths: true,
+						onSelect: function(input, date) {
+							MicroModal.close('modal-datepicker1');
+							modalTrigger1.innerText = input;
+						},
+					});
+				},
+				onClose: function(modalPopup) {
+					// console.log($(".jquery-datepicker").datepicker("refresh"))
+				}
+			});
+		});
+
+		const modalTrigger2 = document.querySelector('[data-micromodal-trigger="modal-datepicker2"]')
+
+		modalTrigger2.addEventListener("click", function(event) {
+			MicroModal.show('modal-datepicker2', {
+				// openTrigger: 'data-custom-open', // [3]
+				// closeTrigger: 'data-custom-close', // [4]
+				// openClass: 'is-open', // [5]
+				disableScroll: true, // [6]
+				disableFocus: true, // [7]
+				awaitOpenAnimation: true, // [8]
+				awaitCloseAnimation: true, // [9]
+				// debugMode: true // [10]
+				onShow: function(modalPopup) {
+					$("#datepicker2").datepicker({
+						dateFormat: 'yy-mm-dd',
+						prevText: '이전 달',
+						nextText: '다음 달',
+						monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+						monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+						dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+						dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+						dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+						showMonthAfterYear: true,
+						yearSuffix: '.',
+						// minDate: 0,
+						showButtonPanel: false,
+						closeText: "닫기",
+						showOtherMonths: true,
+						onSelect: function(input, date) {
+							MicroModal.close('modal-datepicker2');
+							modalTrigger2.innerText = input;
+						},
+					});
+				},
+				onClose: function(modalPopup) {
+					// console.log($(".jquery-datepicker").datepicker("refresh"))
+				}
+			});
+		});
+
+		$('#fire01').on('click', function() {
+			$swal.fire01('삭제하시겠습니까', '예', true, '아니요', function() {
+				toastr.caution('', '삭제되었습니다.')
+			}, function() {
+				console.log(2)
+			})
+		})
+	</script>
+
+</body>
+
+</html>
