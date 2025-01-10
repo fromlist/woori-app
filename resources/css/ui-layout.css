@@ -636,3 +636,6 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 
 .main-exchange-section {padding:32px 0 0;}
 .main-exchange-section .exchange-wrap {padding:0;}
+
+.banner {display:block;}
+.banner img {width:100%;}

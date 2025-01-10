@@ -1206,3 +1206,42 @@ i.live-off {display:inline-block;width:9px;height:9px;background:url(/resources/
 .notice-content picture {display:flex;margin-bottom:16px;}
 .notice-content .text {margin-bottom:16px;}
 .notice-content pre {font-size:16px;font-weight:400;color:var(--typography-body);}
+
+/* content-visual */
+.content-visual {display:flex;align-items:flex-end;justify-content:space-between;padding-top:34px;}
+.content-visual .text {}
+
+/* report-list */
+.report-list {}
+.report-list ul {}
+.report-list ul li {display:flex;align-items:center;justify-content:space-between;}
+.report-list ul li:not(:last-child) {border-bottom:1px solid var(--border-4);}
+.report-list a {display:flex;padding:16px;gap:16px;align-items:center;}
+.report-list a:after {content:'';flex:0 0 10px;width:10px;height:20px;
+    -webkit-mask-position:center center;
+    mask-position:center center;
+    -webkit-mask-size:contain;
+    mask-size:contain;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    -webkit-mask-image:url(/resources/images/arrow/ico_chevron.svg);
+    mask-image:url(/resources/images/arrow/ico_chevron.svg);
+    background-color:var(--icon-default);
+}
+.report-list .inp {padding:16px;}
+
+/* twochars-anchor */
+.twochars-anchor {padding:16px;}
+.twochars-anchor .inp {display:flex;justify-content:space-between;}
+.twochars-anchor a {display:inline-flex;;gap:16px;align-items:center;}
+.twochars-anchor a:after {content:'';flex:0 0 10px;width:10px;height:20px;
+    -webkit-mask-position:center center;
+    mask-position:center center;
+    -webkit-mask-size:contain;
+    mask-size:contain;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    -webkit-mask-image:url(/resources/images/arrow/ico_chevron.svg);
+    mask-image:url(/resources/images/arrow/ico_chevron.svg);
+    background-color:var(--icon-default);
+}
