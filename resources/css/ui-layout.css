@@ -414,7 +414,7 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .main-nav ul li a .icon {position:relative;width:32px;height:32px;}
 .main-nav ul li a strong {font-size:15px;font-weight:500;color:var(--gray-500);line-height:1;}
 .main-nav ul li.is-current .icon i {background-color:var(--icon-default)!important;}
-.main-nav ul li.list05 .icon:before {content:'';position:absolute;right:0;top:0;width:6px;height:6px;background-color:var(--yellow-600);border-radius:50%;}
+.main-nav ul li.list05.not-read .icon:before {content:'';position:absolute;right:0;top:0;width:6px;height:6px;background-color:var(--yellow-600);border-radius:50%;}
 .main-nav ul li.is-current strong {color:var(--typography-black);font-weight:700;}
 
 
