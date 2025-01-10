@@ -260,7 +260,7 @@ div:where(.swal2-container).swal2-backdrop-show, div:where(.swal2-container).swa
     80% {transform:scale(0.99)}
     100% {transform:scale(1)}
 }
-div:where(.swal2-container) button:where(.swal2-close) {position:absolute;font-size:0;width:24px;height:24px;right:24px;top:24px;background:url(../images/ico/ico_close.svg) center center / contain no-repeat;}
+div:where(.swal2-container) button:where(.swal2-close) {position:absolute;font-size:0;width:24px;height:24px;right:24px;top:24px;background:url(/resources/images/ico/ico_close.svg) center center / contain no-repeat;}
 div:where(.swal2-container) button:where(.swal2-close):hover {}
 
 
@@ -277,7 +277,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .modal__header__alert {padding:24px 24px 8px;min-height:40px;gap:10px;}
 .modal__header .modal__title {flex:1 1 100%;display:flex;justify-content:center;min-height:30px;}
 .modal__header .modal__close {position:absolute;right:0;top:0;width:24px;height:24px;padding:14.5px 16px;display:flex;align-items:center;justify-content:center;box-sizing:content-box;}
-.modal__header .modal__close:before {content:'';flex:0 0 24px;width:24px;height:24px;background:url(../images/ico/ico_close.svg) center center / contain no-repeat;display:block;}
+.modal__header .modal__close:before {content:'';flex:0 0 24px;width:24px;height:24px;background:url(/resources/images/ico/ico_close.svg) center center / contain no-repeat;display:block;}
 .modal__header__alert .title-large {justify-content:flex-start;}
 .modal__header__alert .modal__close {position:static;padding:0;margin-left:auto;}
 
@@ -345,10 +345,10 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 /* jstree folder */
 .jstree-work .jstree-default .jstree-node,
 .jstree-work .jstree-default .jstree-icon {}
-.jstree-work .jstree-default .jstree-closed>.jstree-ocl {background:url(../images/form/form-jstree-closed.svg) center center / 12px 12px no-repeat;}
-.jstree-work .jstree-default .jstree-open>.jstree-ocl {background:url(../images/form/form-jstree-open.svg) center center / 12px 12px no-repeat;}
+.jstree-work .jstree-default .jstree-closed>.jstree-ocl {background:url(/resources/images/form/form-jstree-closed.svg) center center / 12px 12px no-repeat;}
+.jstree-work .jstree-default .jstree-open>.jstree-ocl {background:url(/resources/images/form/form-jstree-open.svg) center center / 12px 12px no-repeat;}
 .jstree-work .jstree-anchor>.jstree-themeicon {display:none;}
-.jstree-work.jstree-folder .jstree-anchor>.jstree-themeicon {display:inline-block;background:url(../images/ico/ico-folder-16.svg) center center / 16px 16px no-repeat;}
+.jstree-work.jstree-folder .jstree-anchor>.jstree-themeicon {display:inline-block;background:url(/resources/images/ico/ico-folder-16.svg) center center / 16px 16px no-repeat;}
 
 
 
@@ -367,10 +367,10 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .toast-info .toast-title:before,
 .toast-caution .toast-title:before,
 .toast-error .toast-title:before {content:'';position:absolute;left:0;top:5px;width:18px;height:18px;}
-.toast-success .toast-title:before {background:url(../images/toastr/ico_success.svg) center center / contain no-repeat;}
-.toast-info .toast-title:before {background:url(../images/toastr/ico_info.svg) center center / contain no-repeat;}
-.toast-caution .toast-title:before {background:url(../images/toastr/ico_caution.svg) center center / contain no-repeat;}
-.toast-error .toast-title:before {background:url(../images/toastr/ico_error.svg) center center / contain no-repeat;}
+.toast-success .toast-title:before {background:url(/resources/images/toastr/ico_success.svg) center center / contain no-repeat;}
+.toast-info .toast-title:before {background:url(/resources/images/toastr/ico_info.svg) center center / contain no-repeat;}
+.toast-caution .toast-title:before {background:url(/resources/images/toastr/ico_caution.svg) center center / contain no-repeat;}
+.toast-error .toast-title:before {background:url(/resources/images/toastr/ico_error.svg) center center / contain no-repeat;}
 .toast-bottom-center {bottom:12px;}
 .toast-bottom-center.has-bottom-btn {bottom:76px;}
 #toast-container>div:hover {box-shadow:none;}
@@ -385,8 +385,8 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .datepicker-wrap .ui-datepicker .ui-datepicker-prev:active,
 .datepicker-wrap .ui-datepicker .ui-datepicker-next:active {background-color:var(--surface-surface200);}
 .datepicker-wrap .ui-datepicker .ui-icon {position:static;}
-.datepicker-wrap .ui-icon-circle-triangle-w {background:url(../images/arrow/arrow_date_prev.svg) center center / 12px 24px no-repeat;}
-.datepicker-wrap .ui-icon-circle-triangle-e {background:url(../images/arrow/arrow_date_next.svg) center center / 12px 24px no-repeat;}
+.datepicker-wrap .ui-icon-circle-triangle-w {background:url(/resources/images/arrow/arrow_date_prev.svg) center center / 12px 24px no-repeat;}
+.datepicker-wrap .ui-icon-circle-triangle-e {background:url(/resources/images/arrow/arrow_date_next.svg) center center / 12px 24px no-repeat;}
 
 
 .datepicker-wrap .ui-datepicker .ui-datepicker-next,
@@ -472,13 +472,13 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 
 .datepicker-weekend .datepicker-unfold {display:none;}
 .datepicker-weekend.datepicker-collapsed .datepicker-unfold {display:flex;align-items:center;justify-content:center;margin-top:8px;}
-.datepicker-weekend.datepicker-collapsed .datepicker-unfold button {flex:0 0 40px;width:40px;height:40px;background:url(../images/btn/btn_unfold.svg) center center / contain no-repeat;}
+.datepicker-weekend.datepicker-collapsed .datepicker-unfold button {flex:0 0 40px;width:40px;height:40px;background:url(/resources/images/btn/btn_unfold.svg) center center / contain no-repeat;}
 
 .datepicker-weekend .datepicker-arrow {display:none;}
 .datepicker-weekend.datepicker-weekend.datepicker-collapsed .datepicker-arrow {display:block;}
 .datepicker-weekend .datepicker-arrow button {position:absolute;width:16px;height:48px;top:16px;}
-.datepicker-weekend .datepicker-arrow .arrow-prev {background:url(../images/arrow/arrow_datepicker_prev.svg) center center / 6px 12px no-repeat;left:16px;}
-.datepicker-weekend .datepicker-arrow .arrow-next {background:url(../images/arrow/arrow_datepicker_next.svg) center center / 6px 12px no-repeat;right:16px;}
+.datepicker-weekend .datepicker-arrow .arrow-prev {background:url(/resources/images/arrow/arrow_datepicker_prev.svg) center center / 6px 12px no-repeat;left:16px;}
+.datepicker-weekend .datepicker-arrow .arrow-next {background:url(/resources/images/arrow/arrow_datepicker_next.svg) center center / 6px 12px no-repeat;right:16px;}
 
 
 @keyframes dpslideLeftIn {

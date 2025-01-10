@@ -8,7 +8,7 @@ $(function () {
     switchClass.init()
     $swal;
     toastrCont.init();
-    microModalFunc.init();
+    // microModalFunc.init();
     stickyContent();
     tippyContent.init();
     tableInnerScroll.init();
