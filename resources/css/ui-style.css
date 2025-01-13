@@ -652,7 +652,7 @@ input[type="checkbox"].type-blue:checked {background:url(/resources/images/form/
 .form-exchange .ex-input-wrap span {display:block;font-size:16px;line-height:1;font-weight:500;color:var(--typography-caption);margin-top:8px;text-align:right;}
 .form-exchange .sum {position:absolute;left:50%;top:-32px;margin-left:-12px;width:24px;height:24px;background:url(/resources/images/common/arrow_sum.svg) center center / contain no-repeat;}
 .ex-input-wrap .anchor-fluid {width:auto;padding:0;margin-left:auto;font-size:20px;font-weight:700;color:var(--typography-black);}
-.ex-input-wrap .anchor-fluid:empty:before {content:attr(aria-placeholder);color:var(--typography-disabled);}
+.ex-input-wrap .anchor-fluid:empty:before {content:attr(data-placeholder);color:var(--typography-disabled);}
 
 .form-wrap {display:flex;gap:8px;}
 
