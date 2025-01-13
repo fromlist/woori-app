@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="/resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="/resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="/resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="/resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="/resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="/resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1><span class="blind">신한글로벌탄소중립솔루션증권투자신탁(H)(주식)</span></h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="관심 펀드"><i class="i-favorite"></i></button>
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+
+					<!-- tab-content -->
+					<div class="tab-content tab-fluid">
+						<ul class="tab-list tab-col overflow-list" role="tablist">
+							<li class="tab"><a role="tab" href="#">펀드</a></li>
+							<li class="tab tab-active"><a role="tab" href="#">커뮤니티<i class="badge">8,999</i></a></li>
+						</ul>
+					</div>
+					<!-- //tab-content -->
+
+					<!-- snackbar-content -->
+					<div class="snackbar-content is-sticky">
+						<button type="button" class="fab fab-primary fab-square" aria-label="글쓰기"><i class="ico-reply"></i></button>
+					</div>
+					<!-- //snackbar-content -->
+
+
+					<!-- sort-wrap -->
+					<div class="sort-wrap py16">
+
+						<!-- sort-list -->
+						<button class="sort-list" data-micromodal-trigger="modal-myinfo">
+							<span class="filter">
+								<span class="sort">내 정보관리</span>
+							</span>
+						</button>
+						<!-- sort-list -->
+					</div>
+
+					<div class="community-wrap">
+						<ul class="dep01">
+
+							<li>
+								<!-- comment-wrap -->
+								<div class="comment-wrap">
+									<div class="comment-user">
+										<div class="comment-user-profile">
+											<div class="avartar avartar01"></div>
+											<strong class="name">나우리</strong>
+										</div>
+										<div class="comment-user-info">
+											<div class="divide-list">
+												<span>서울디지털프리미엄금융센터</span>
+											</div>
+											<span class="date">2024-12-17 16:33:51</span>
+											<button type="button" class="btn-more" data-micromodal-trigger="modal-dropdown-list" aria-label="수정 및 삭제"></button>
+										</div>
+									</div>
+									<div class="comment-desc" data-toggle="toggle-wrap">
+										<div class="comment-desc-inner">
+											<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+										</div>
+										<div class="comment-toggle-wrap">
+											<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
+												<span class="toggle-off">더보기</span>
+												<span class="toggle-on">접기</span>
+											</button>
+										</div>
+									</div>
+									<div class="comment-btn-wrap" data-toggle="toggle-wrap">
+										<div class="left">
+											<button type="button" class="btn-noborder fs-15 fc-icon-gray_2" data-toggle="toggle-trigger" data-switch-before="fc-icon-gray_2" data-switch-after="fc-blue-500">
+												<i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" data-switch-inner="true" data-switch-inner-before="icon-fav2 bg-icon-gray_2" data-switch-inner-after="icon-fav-active2 bg-blue-500"></i>
+												<span class="toggle-off blind">좋아요</span>
+												<span class="toggle-on blind">좋아요 해제</span>
+												120
+											</button>
+										</div>
+										<div class="right"><button type="button" class="btn-noborder" data-micromodal-trigger="modal-reply-write"><i class="ico-reply"></i>답글</button></div>
+									</div>
+								</div>
+								<!-- comment-wrap -->
+
+								<!-- dep02 -->
+								<ul class="dep02">
+									<li>
+										<!-- comment-wrap -->
+										<div class="comment-wrap">
+											<div class="comment-user-profile">
+												<div class="avartar avartar01"></div>
+												<strong class="name">나우리</strong>
+											</div>
+											<div class="comment-user-info">
+												<div class="divide-list">
+													<span>서울디지털프리미엄금융센터</span>
+												</div>
+												<span class="date">2024-12-17 16:33:51</span>
+												<button type="button" class="btn-more" data-micromodal-trigger="modal-dropdown-list" aria-label="수정 및 삭제"></button>
+											</div>
+											<div class="tags tags-small tags-lightBlue">@나우리</div>
+											<div class="comment-desc" data-toggle="toggle-wrap">
+												<div class="comment-desc-inner">
+													<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+												</div>
+												<div class="comment-toggle-wrap">
+													<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
+														<span class="toggle-off">더보기</span>
+														<span class="toggle-on">접기</span>
+													</button>
+												</div>
+											</div>
+											<div class="comment-btn-wrap" data-toggle="toggle-wrap">
+												<div class="left">
+													<button type="button" class="btn-noborder fs-15 fc-icon-gray_2" data-toggle="toggle-trigger" data-switch-before="fc-icon-gray_2" data-switch-after="fc-blue-500">
+														<i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" data-switch-inner="true" data-switch-inner-before="icon-fav2 bg-icon-gray_2" data-switch-inner-after="icon-fav-active2 bg-blue-500"></i>
+														<span class="toggle-off blind">좋아요</span>
+														<span class="toggle-on blind">좋아요 해제</span>
+														120
+													</button>
+												</div>
+												<div class="right"><button type="button" class="btn-noborder"><i class="ico-reply"></i>답글</button></div>
+											</div>
+										</div>
+										<!-- //comment-wrap -->
+
+									</li>
+
+									<li>
+										<!-- comment-wrap -->
+										<div class="comment-wrap">
+											<div class="comment-user-profile">
+												<div class="avartar avartar01"></div>
+												<strong class="name">나우리</strong>
+											</div>
+											<div class="comment-user-info">
+												<div class="divide-list">
+													<span>서울디지털프리미엄금융센터</span>
+												</div>
+												<span class="date">2024-12-17 16:33:51</span>
+												<button type="button" class="btn-more" data-micromodal-trigger="modal-dropdown-list" aria-label="수정 및 삭제"></button>
+											</div>
+											<div class="tags tags-small tags-lightBlue">@나우리</div>
+											<div class="comment-desc" data-toggle="toggle-wrap">
+												<div class="comment-desc-inner">
+													<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+												</div>
+												<div class="comment-toggle-wrap">
+													<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
+														<span class="toggle-off">더보기</span>
+														<span class="toggle-on">접기</span>
+													</button>
+												</div>
+											</div>
+											<div class="comment-btn-wrap" data-toggle="toggle-wrap">
+												<div class="left">
+													<button type="button" class="btn-noborder fs-15 fc-icon-gray_2" data-toggle="toggle-trigger" data-switch-before="fc-icon-gray_2" data-switch-after="fc-blue-500">
+														<i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" data-switch-inner="true" data-switch-inner-before="icon-fav2 bg-icon-gray_2" data-switch-inner-after="icon-fav-active2 bg-blue-500"></i>
+														<span class="toggle-off blind">좋아요</span>
+														<span class="toggle-on blind">좋아요 해제</span>
+														120
+													</button>
+												</div>
+												<div class="right"><button type="button" class="btn-noborder"><i class="ico-reply"></i>답글</button></div>
+											</div>
+										</div>
+										<!-- //comment-wrap -->
+
+									</li>
+								</ul>
+								<!-- dep02 -->
+
+							</li>
+							<li>
+
+								<!-- comment-wrap -->
+								<div class="comment-wrap">
+									<div class="comment-user-profile">
+										<div class="avartar avartar01"></div>
+										<strong class="name">나우리</strong>
+									</div>
+									<div class="comment-user-info">
+										<div class="divide-list">
+											<span>서울디지털프리미엄금융센터</span>
+										</div>
+										<span class="date">2024-12-17 16:33:51</span>
+										<button type="button" class="btn-more" data-micromodal-trigger="modal-dropdown-list" aria-label="수정 및 삭제"></button>
+									</div>
+									<div class="comment-desc" data-toggle="toggle-wrap">
+										<div class="comment-desc-inner">
+											<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+										</div>
+										<div class="comment-toggle-wrap">
+											<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
+												<span class="toggle-off">더보기</span>
+												<span class="toggle-on">접기</span>
+											</button>
+										</div>
+									</div>
+									<div class="comment-btn-wrap" data-toggle="toggle-wrap">
+										<div class="left">
+											<button type="button" class="btn-noborder fs-15 fc-icon-gray_2" data-toggle="toggle-trigger" data-switch-before="fc-icon-gray_2" data-switch-after="fc-blue-500">
+												<i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" data-switch-inner="true" data-switch-inner-before="icon-fav2 bg-icon-gray_2" data-switch-inner-after="icon-fav-active2 bg-blue-500"></i>
+												<span class="toggle-off blind">좋아요</span>
+												<span class="toggle-on blind">좋아요 해제</span>
+												120
+											</button>
+										</div>
+										<div class="right"><button type="button" class="btn-noborder"><i class="ico-reply"></i>답글</button></div>
+									</div>
+								</div>
+								<!-- comment-wrap -->
+
+							</li>
+							<li>
+
+								<!-- comment-wrap -->
+								<div class="comment-wrap">
+									<div class="comment-user">
+										<div class="comment-user-profile">
+											<div class="avartar avartar01"></div>
+											<strong class="name">나우리</strong>
+										</div>
+										<div class="comment-user-info">
+											<div class="divide-list">
+												<span>서울디지털프리미엄금융센터</span>
+											</div>
+											<span class="date">2024-12-17 16:33:51</span>
+											<button type="button" class="btn-more" data-micromodal-trigger="modal-dropdown-list" aria-label="수정 및 삭제"></button>
+										</div>
+									</div>
+									<div class="comment-desc" data-toggle="toggle-wrap">
+										<div class="comment-desc-inner">
+											<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+										</div>
+										<div class="comment-toggle-wrap">
+											<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
+												<span class="toggle-off">더보기</span>
+												<span class="toggle-on">접기</span>
+											</button>
+										</div>
+									</div>
+									<div class="comment-btn-wrap" data-toggle="toggle-wrap">
+										<div class="left">
+											<button type="button" class="btn-noborder fs-15 fc-icon-gray_2" data-toggle="toggle-trigger" data-switch-before="fc-icon-gray_2" data-switch-after="fc-blue-500">
+												<i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" data-switch-inner="true" data-switch-inner-before="icon-fav2 bg-icon-gray_2" data-switch-inner-after="icon-fav-active2 bg-blue-500"></i>
+												<span class="toggle-off blind">좋아요</span>
+												<span class="toggle-on blind">좋아요 해제</span>
+												120
+											</button>
+										</div>
+										<div class="right"><button type="button" class="btn-noborder" data-micromodal-trigger="modal-reply-write"><i class="ico-reply"></i>답글</button></div>
+									</div>
+								</div>
+								<!-- comment-wrap -->
+
+							</li>
+							<li>
+
+								<!-- comment-wrap -->
+								<div class="comment-wrap">
+									<div class="comment-user-profile">
+										<div class="avartar avartar-nodata "><i class="icon-only icon-24 icon-nodata bg-icon-gray_2"></i></div>
+									</div>
+									<div class="comment-user-info">
+										<p class="body-medium fw-400">원글이 삭제되었습니다.</p>
+									</div>
+								</div>
+								<!-- comment-wrap -->
+
+							</li>
+
+
+						</ul>
+					</div>
+
+				</div>
+				<!-- sort-wrap -->
+
+
+			</div>
+			<!-- //content -->
+		</div>
+		<!-- //container -->
+
+
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+	</main>
+	<!-- //main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-myinfo">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large">내 정보 관리</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content pt16">
+
+						<!-- group-form -->
+						<div class="group-form">
+							<div class="group-title">
+								<strong class="title-medium">아바타</strong>
+							</div>
+							<div class="group-content">
+								<div class="inp-image">
+									<div class="inp">
+										<label>
+											<input type="radio" name="radimg" class="blind">
+											<picture>
+												<source srcset="/resources/images/avatar/profile_type1.svg">
+												<img src="/resources/images/avatar/profile_type1.svg" alt="위비">
+											</picture>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="radimg" class="blind">
+											<picture>
+												<source srcset="/resources/images/avatar/profile_type2.svg">
+												<img src="/resources/images/avatar/profile_type2.svg" alt="쿠">
+											</picture>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="radimg" class="blind">
+											<picture>
+												<source srcset="/resources/images/avatar/profile_type3.svg">
+												<img src="/resources/images/avatar/profile_type3.svg" alt="푸딩">
+											</picture>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="radimg" class="blind">
+											<picture>
+												<source srcset="/resources/images/avatar/profile_type4.svg">
+												<img src="/resources/images/avatar/profile_type4.svg" alt="두지">
+											</picture>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="radimg" class="blind">
+											<picture>
+												<source srcset="/resources/images/avatar/profile_type5.svg">
+												<img src="/resources/images/avatar/profile_type5.svg" alt="달보">
+											</picture>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="radimg" class="blind">
+											<picture>
+												<source srcset="/resources/images/avatar/profile_type6.svg">
+												<img src="/resources/images/avatar/profile_type6.svg" alt="봄봄">
+											</picture>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt24">
+							<div class="group-title">
+								<strong class="title-medium">닉네임 <i class="apos" aria-label="필수 입력">*</i></strong>
+								<div class="body-caption fs-15">0/8자</div>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="text" placeholder="한글과 영문, 숫자만 입력해주세요." aria-label="닉네임">
+										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+					</div>
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" data-micromodal-close>저장</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-reply-write">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large">메모</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content pt16">
+
+						<div class="inp inp-medium">
+							<label>
+								<input type="checkbox">
+								<span class="label-title"><span class="fc-status-active">닉네임명</span>으로 등록</span>
+							</label>
+						</div>
+
+						<div class="form mt10">
+							<div class="input-wrap">
+								<textarea aria-label="메모"></textarea>
+							</div>
+							<div class="textarea-length">
+								<div class="left">0/500자</div>
+								<div class="right">
+									<button type="button" class="btn-xsmall btn-primary btn-round">저장</button>
+								</div>
+							</div>
+						</div>
+
+						<p class="description error body-small mt10 fc-typography-caption">펀드에 대한 정보 및 영업 비법 등을 직원들과 자유롭게 나누는 공간입니다.</p>
+						<p class="description error body-small mt10 fc-typography-caption">게시판 취지에 맞지 않은 글, 댓글(단순불만, 민감한 주제, 위화감을 주는 글)은 삭제될 수 있습니다.</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-dropdown modal" id="modal-dropdown-list">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header modal__header__alert">
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close=""></button>
+				</div>
+				<div class="modal__content">
+					<div class="content content-fluid pb0">
+						<div class="dropdown-option">
+							<ul>
+								<li><button type="button"><i class="ico-reply"></i>수정</button></li>
+								<li><button type="button"><i class="ico-delete"></i>삭제</button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+</body>
+
+</html>

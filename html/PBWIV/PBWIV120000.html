@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="/resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="/resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="/resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="/resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="/resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="/resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>금융뉴스</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<!-- snackbar-content -->
+					<div class="snackbar-content is-sticky">
+						<button type="button" class="fab fab-secondary fab-circle" aria-label="뉴스 검색" data-micromodal-trigger="modal-news-search"><i class="ico-search bg-icon-default"></i></button>
+					</div>
+					<!-- //snackbar-content -->
+
+					<!-- tab-content -->
+					<div class="tab-content tab-fluid">
+						<ul class="tab-list tab-col overflow-list px24" role="tablist">
+							<li class="tab"><a role="tab" href="#">전체</a></li>
+							<li class="tab"><a role="tab" href="#">경제</a></li>
+							<li class="tab"><a role="tab" href="#">세계</a></li>
+							<li class="tab tab-active"><a role="tab" href="#">펀드</a></li>
+						</ul>
+					</div>
+					<!-- //tab-content -->
+
+					<div class="financial-news">
+						<p class="description info body-small fc-typography-caption mt16">뉴스데이터는 하루에 2번(오전 7시 이후, 오후 3시 이후)업데이트됩니다. </p>
+
+						<div class="financial-news-list mt16">
+							<ul>
+								<li>
+									<button type="button" data-micromodal-trigger="modal-news-content">
+										<span class="financial-news-title">
+											<span class="media">연합뉴스</span>
+										</span>
+										<strong class="title-large ellipsis" data-ellipsis="2">뉴스 제목이 노출됩니다.</strong>
+										<span class="date">2024-10-15 14:43</span>
+										<span class="tag-wrap overflow-list">
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+										</span>
+									</button>
+								</li>
+								<li>
+									<button type="button">
+										<span class="financial-news-title">
+											<span class="media">매체 이름이 길어질 경우에는 이렇게 노출됩니다</span>
+										</span>
+										<strong class="title-large ellipsis" data-ellipsis="2">[속보] ‘겁나게 오르는’ 환율, 1480원선도 뚫었다…금융위기來 최고 수준[속보] ‘겁나게 오르는’ 환율, 1480원선도 뚫었다…금융위기來 최고 수준</strong>
+										<span class="date">2024-10-15 14:43</span>
+										<span class="tag-wrap overflow-list">
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+										</span>
+									</button>
+								</li>
+								<li>
+									<button type="button">
+										<span class="financial-news-title">
+											<span class="media">연합뉴스</span>
+										</span>
+										<strong class="title-large ellipsis" data-ellipsis="2">뉴스 제목이 노출됩니다.</strong>
+										<span class="date">2024-10-15 14:43</span>
+										<span class="tag-wrap overflow-list">
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+										</span>
+									</button>
+								</li>
+								<li>
+									<button type="button">
+										<span class="financial-news-title">
+											<span class="media">연합뉴스</span>
+										</span>
+										<strong class="title-large ellipsis" data-ellipsis="2">뉴스 제목이 노출됩니다.</strong>
+										<span class="date">2024-10-15 14:43</span>
+										<span class="tag-wrap overflow-list">
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+											<span class="tags tags-small tags-surface50">피델리티배당인컴증권</span>
+										</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+
+			<!-- 재생 전 -->
+			<div class="financial-player">
+				<div class="financial-player-title">
+					<i class="icon-only icon-24 icon-radio bg-icon-white"></i>
+					<strong>금융뉴스<span class="blind">읽어주기</span></strong>
+					<div class="soundwave-container">
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				</div>
+				<div class="financial-player-controller">
+					<button type="button" aria-label="재생">
+						<i class="icon-only icon-24 icon-player-play bg-icon-white"></i>
+					</button>
+					<button type="button" aria-label="이전">
+						<i class="icon-only icon-24 icon-player-prev bg-icon-white"></i>
+					</button>
+					<button type="button" aria-label="다음">
+						<i class="icon-only icon-24 icon-player-next bg-icon-white"></i>
+					</button>
+				</div>
+			</div>
+			<!-- 재생 전 -->
+
+			<!-- 재생 후 -->
+			<div class="financial-player is-playing">
+				<div class="financial-player-title">
+					<i class="icon-only icon-24 icon-radio bg-icon-white"></i>
+					<strong>금융뉴스<span class="blind">읽어주기</span></strong>
+					<div class="soundwave-container">
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				</div>
+				<div class="financial-player-controller">
+					<button type="button" aria-label="일시정지">
+						<i class="icon-only icon-24 icon-player-pause bg-icon-white"></i>
+					</button>
+					<button type="button" aria-label="이전">
+						<i class="icon-only icon-24 icon-player-prev bg-icon-white"></i>
+					</button>
+					<button type="button" aria-label="다음">
+						<i class="icon-only icon-24 icon-player-next bg-icon-white"></i>
+					</button>
+				</div>
+			</div>
+			<!-- 재생 후 -->
+
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- //main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-news-search">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large">뉴스 검색</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content pt16">
+
+						<!-- group-form -->
+						<div class="group-form">
+							<div class="group-title">
+								<strong class="title-medium">키워드 검색</strong>
+							</div>
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap">
+										<input type="text" placeholder="키워드로 검색해 보세요." aria-label="검색">
+										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+									</div>
+									<p class="validate-text"></p>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt24">
+							<div class="group-title">
+								<strong class="title-medium">언론사 선택</strong>
+							</div>
+							<div class="group-content">
+								<div class="inp inp-board">
+									<input type="checkbox" aria-label="전체">
+									<input type="checkbox" aria-label="매일경제">
+									<input type="checkbox" aria-label="한국경제">
+									<input type="checkbox" aria-label="연합뉴스">
+									<input type="checkbox" aria-label="이데일리">
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+					</div>
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" data-micromodal-close>검색</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-news-content" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large"><span class="blind">금융뉴스 상세</span></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+
+						<article class="news-article pt16">
+							<div class="news-article-title">
+								<div class="tags tags-large tags-cyan">레이블</div>
+								<div class="media">연합뉴스</div>
+							</div>
+							<h2 class="headline-medium">[속보] ‘겁나게 오르는’ 환율, 1480원선도 뚫었다…금융위기來 최고 수준</h2>
+							<div class="date">2024-10-15 14:43</div>
+							<div class="related-products">
+								<div class="tags-wrap">
+									<div class="tags tags-small tags-lightBlue tags-round">관련상품</div>
+								</div>
+								<ul>
+									<li>
+										<div class="anchor anchor-fluid anchor-bg title-small fw-700 fc-typography-body">피델리티글로벌배당인컴증권자투자신탁(주식-재간접형)</div>
+									</li>
+									<li>
+										<div class="anchor anchor-fluid anchor-bg title-small fw-700 fc-typography-body">피델리티글로벌배당인컴증권자투자신탁(주식-재간접형)</div>
+									</li>
+									<li>
+										<div class="anchor anchor-fluid anchor-bg title-small fw-700 fc-typography-body">피델리티글로벌배당인컴증권자투자신탁(주식-재간접형)</div>
+									</li>
+								</ul>
+							</div>
+							<div class="stroke my32"></div>
+							<p>뉴스 내용이 노출됩니다 뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다.
+								뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다 뉴스 내용이 노출됩니다 뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다.
+								뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다뉴스 내용이 노출됩니다</p>
+						</article>
+					</div>
+
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+
+						<!-- 재생 전 -->
+						<div class="financial-player">
+							<div class="financial-player-title">
+								<i class="icon-only icon-24 icon-radio bg-icon-white"></i>
+								<strong>금융뉴스<span class="blind">읽어주기</span></strong>
+								<div class="soundwave-container">
+									<div class="bar"></div>
+									<div class="bar"></div>
+									<div class="bar"></div>
+								</div>
+							</div>
+							<div class="financial-player-controller">
+								<button type="button" aria-label="재생">
+									<i class="icon-only icon-24 icon-player-play bg-icon-white"></i>
+								</button>
+							</div>
+						</div>
+						<!-- 재생 전 -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+</body>
+
+</html>

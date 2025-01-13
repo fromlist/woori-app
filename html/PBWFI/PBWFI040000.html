@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="/resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="/resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="/resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="/resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="/resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="/resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>환율계산기</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+				<!-- content -->
+				<div class="content">
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<!-- tab-content -->
+					<div class="tab-content tab-fluid">
+						<ul class="tab-list tab-col overflow-list px24" role="tablist">
+							<li class="tab tab-active"><a role="tab" href="#" class="fs-18">외국통화매도</a></li>
+							<li class="tab"><a role="tab" href="#" class="fs-18">외국통화매입</a></li>
+							<li class="tab"><a role="tab" href="#" class="fs-18">당발송금</a></li>
+							<li class="tab"><a role="tab" href="#" class="fs-18">타발송금</a></li>
+						</ul>
+					</div>
+					<!-- //tab-content -->
+
+					<!-- form -->
+					<div class="form mt40">
+						<div class="form-exchange">
+							<div class="label">
+								<button class="flag flag-us" data-micromodal-trigger="modal-select"><strong>USD</strong><span>미국 달러</span></button>
+								<!-- <button class="flag noflag" data-micromodal-trigger="modal-select"><strong>USD</strong><span>미국 달러</span></button> -->
+							</div>
+							<div class="ex-input-wrap">
+								<input type="number" placeholder="1">
+								<span>1달러</span>
+							</div>
+						</div>
+					</div>
+					<!-- //form -->
+
+
+					<!-- form -->
+					<div class="form mt16">
+						<div class="form-exchange bg-surface-surface50">
+							<div class="label">
+								<span class="flag flag-kr"><strong>KRW</strong><span>대한민국</span></span>
+							</div>
+							<div class="ex-input-wrap">
+								<input type="text" readonly value="1,427.30">
+								<span>1,427.30원</span>
+							</div>
+						</div>
+					</div>
+					<!-- //form -->
+
+
+					<!-- form -->
+					<div class="form mt16">
+						<div class="form-exchange bg-surface-surface50">
+							<div class="label">환율우대율<i class="icon-only icon-24 icon-percent bg-icon-default"></i></div>
+							<div class="ex-input-wrap d-flex">
+								<button type="button" class="anchor chevron anchor-fluid" aria-placeholder="없음" data-micromodal-trigger="modal-alert1"></button>
+							</div>
+						</div>
+					</div>
+					<!-- //form -->
+
+					<!-- form -->
+					<div class="form mt16">
+						<div class="form-exchange bg-surface-surface50">
+							<div class="label">환율우대율<i class="icon-only icon-24 icon-percent bg-icon-default"></i></div>
+							<div class="ex-input-wrap d-flex">
+								<button type="button" class="anchor chevron anchor-fluid" data-micromodal-trigger="modal-alert2">30%</button>
+							</div>
+						</div>
+					</div>
+					<!-- //form -->
+
+					<!-- form -->
+					<div class="form mt40">
+						<div class="form-exchange">
+							<div class="sum"></div>
+							<div class="label"><i class="icon-only icon-24 icon-calculator bg-icon-gray_1"></i>손익정보</div>
+							<div class="ex-input-wrap">
+								<input type="text" readonly value="12,345" class="fc-brandPrimary-blue600">
+								<span>1만2,345원</span>
+							</div>
+						</div>
+					</div>
+					<!-- //form -->
+
+					<p class="description caution body-small fc-typography-caption mt32">단순 계산 및 조회용으로 수수료는 포함되지 않았습니다.</p>
+					<p class="description caution body-small fc-typography-caption mt16">상세 계산은 WINI FG900(외환리테일 사전상담 금액계산)거래를 이용하시기 바랍니다.</p>
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+
+	</main>
+	<!-- //main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-select">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large">필터</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content content-fluid">
+						<div class="select-option select-exchange">
+							<ul>
+								<li><button type="button"><span>미국 달러</span><strong>USD</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li><button type="button"><span>일본 100엔</span><strong>JPY</strong></button></li>
+								<li class="select-active"><button type="button" aria-label="선택됨"><span>유럽 유로</span><strong>EUR</strong></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-alert1">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large">환율우대율 선택</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content modal__content__alert">
+					<div class="content">
+
+						<!-- group-form -->
+						<div class="group-form">
+							<div class="group-title py16 px8">
+								<strong class="title-large px0">우대율 선택</strong>
+							</div>
+							<div class="group-content mt0">
+								<div class="inp-round">
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="없음">
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="90%">
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="80%">
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="70%">
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="60%">
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="90%">
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="50%">
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="40%">
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="30%">
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="20%">
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="10%">
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt16">
+							<div class="group-title py16 px8">
+								<strong class="title-large px0">직접 입력</strong>
+							</div>
+							<div class="group-content mt0">
+								<div class="form">
+									<div class="input-wrap input-placeholder disabled">
+										<input type="number" class="ar" placeholder="우대율 입력" aria-label="우대율 직접 입력" disabled>
+										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+										<div class="visible-placeholder">%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+					</div>
+				</div>
+				<div class="modal__footer modal__footer_alert">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-outlined" data-micromodal-close>저장</button>
+							<button type="button" class="btn-large btn-primary" data-micromodal-close>저장</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-alert2">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large">환율우대율 선택</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content modal__content__alert">
+					<div class="content">
+
+						<!-- group-form -->
+						<div class="group-form">
+							<div class="group-title py16 px8">
+								<strong class="title-large px0">우대율 선택</strong>
+							</div>
+							<div class="group-content mt0">
+								<div class="inp-round">
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="없음" disabled>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="90%" disabled>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="80%" disabled>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="70%" disabled>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="60%" disabled>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="90%" disabled>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="50%" disabled>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="40%" disabled>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="30%" disabled>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="20%" disabled>
+										</label>
+									</div>
+									<div class="inp">
+										<label>
+											<input type="radio" name="rad001" aria-label="10%" disabled>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt16">
+							<div class="group-title py16 px8">
+								<strong class="title-large px0">직접 입력</strong>
+							</div>
+							<div class="group-content mt0">
+								<div class="form">
+									<div class="input-wrap input-placeholder">
+										<input type="number" class="ar" placeholder="우대율 입력" aria-label="우대율 직접 입력" value="100">
+										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+										<div class="visible-placeholder">%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+					</div>
+				</div>
+				<div class="modal__footer modal__footer_alert">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-outlined" data-micromodal-close>저장</button>
+							<button type="button" class="btn-large btn-primary" data-micromodal-close>저장</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+</body>
+
+</html>

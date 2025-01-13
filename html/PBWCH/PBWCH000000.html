@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>펀드/지수 비교</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="/resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="/resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="/resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="/resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="/resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="/resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>고객기여도 조회</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<!-- snackbar-content -->
+					<div class="snackbar-content is-sticky">
+						<a href="#" class="fab fab-secondary fab-circle" aria-label="펀드/지수 검색"><i class="ico-search bg-icon-default"></i></a>
+					</div>
+					<!-- //snackbar-content -->
+
+					<div class="chart-diff pt40">
+						<strong class="title-small ac">펀드 vs 지수, 차트로 비교하세요!</strong>
+						<!-- tab-content -->
+						<div class="tab-content mt24">
+							<ul class="tab-list tab-button" role="tablist">
+								<li class="tab tab-active"><a role="tab" href="#">1개월</a></li>
+								<li class="tab"><a role="tab" href="#">3개월</a></li>
+								<li class="tab"><a role="tab" href="#">1년</a></li>
+								<li class="tab"><a role="tab" href="#">2년</a></li>
+								<li class="tab"><a role="tab" href="#">3년</a></li>
+							</ul>
+						</div>
+						<!-- //tab-content -->
+						<div class="chart-wrap mt24">
+							<div style="height:180px;">
+								<div id="chart2" data-aos data-aos-id="chart2"></div>
+							</div>
+							<div class="group pb16 px24">
+								<div class="right">
+									<span class="divide-list">
+										<span class="fs-14">2024-11-13 기준</span>
+										<span class="division h14 mx8"></span>
+										<span class="fs-14">자료제공: 제로인</span>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="btn-wrap my16">
+							<button type="button" class="btn-xsmall btn-outlined btn-round" data-micromodal-trigger="modal-diff">기간별 수익률/기준가 보기</button>
+						</div>
+
+						<p class="description info body-small fc-typography-caption mt16">역외펀드의 경우, 데이터 제공업체로부터 제공받은 가장 최신의 수익률을 기반으로 안내하고 있으나 당일자 실제 수익률과는 차이가 있을 수 있습니다.</p>
+					</div>
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+
+	</main>
+	<!-- //main -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-diff">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header">
+					<strong class="modal__title title-large">기간별 기준가/수익률</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content content-fluid">
+
+						<strong class="title-large py16 px24">3개월</strong>
+
+						<div class="table-col">
+							<table>
+								<caption>기간별 기준가/수익률 3개월</caption>
+								<colgroup>
+									<col style="width:30%">
+									<col style="width:30%">
+									<col style="">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">기준일</th>
+										<th scope="col">기준가</th>
+										<th scope="col">수익률</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+									<tr>
+										<td>2024-11-15</td>
+										<td>text</td>
+										<td>-14.08%</td>
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<script>
+		var options2 = {
+			series: [{
+					name: "신한글로벌탄소중립솔루션증권투자신탁(H)(주식)",
+					data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+
+				},
+				{
+					name: "BM",
+					data: [1, 32, 26, 42, 40, 53, 60, 82, 18]
+				},
+				{
+					name: "유형평균",
+					data: [100, 320, 260, 420, 400, 530, 600, 820, 180]
+				}
+			],
+			chart: {
+				height: 180,
+				type: 'line',
+				zoom: {
+					enabled: false
+				},
+				toolbar: {
+					show: false,
+				}
+			},
+			colors: ['#7163EE', '#F35E9C', '#1AA3C1'],
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				curve: 'smooth',
+				width: [2, 2]
+			},
+			markers: {
+				size: 4,
+			},
+			grid: {
+				row: {
+					// colors: ['#E9ECEF', 'transparent'], // takes an array which will be repeated on columns
+					// opacity: 0.5
+				},
+			},
+			xaxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+			}
+		};
+
+		var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+
+		document.addEventListener('aos:in:chart2', ({
+			detail
+		}) => {
+			chart2.render();
+		});
+	</script>
+</body>
+
+</html>

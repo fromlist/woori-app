@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="/resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="/resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="/resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="/resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="/resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="/resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>영업캘린더</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+				<!-- content -->
+				<div class="content">
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<!-- snackbar-content -->
+					<div class="snackbar-content is-sticky">
+						<a href="#" class="fab fab-secondary fab-circle" aria-label="일정 검색"><i class="ico-search bg-icon-default"></i></a>
+					</div>
+					<!-- //snackbar-content -->
+
+					<!-- datepicker-wrap -->
+					<div class="datepicker-wrap datepicker-weekend content-fluid pt16 pb8 bg-surface-surface">
+
+						<!-- inp-group -->
+						<div class="inp-group gap16 px0">
+							<div class="inp inp-medium">
+								<label>
+									<input type="checkbox" class="type-black" id="chk04" checked>
+									<span class="label-title">한국</span>
+								</label>
+							</div>
+							<div class="inp inp-medium">
+								<label>
+									<input type="checkbox" class="type-blue" id="chk05" checked>
+									<span class="label-title">미국</span>
+								</label>
+							</div>
+							<div class="inp inp-medium">
+								<label>
+									<input type="checkbox" class="type-red700" id="chk06" checked>
+									<span class="label-title">중국</span>
+								</label>
+							</div>
+							<div class="inp inp-medium">
+								<label>
+									<input type="checkbox" class="type-red900" id="chk07" checked>
+									<span class="label-title">일본</span>
+								</label>
+							</div>
+							<div class="inp inp-medium">
+								<label>
+									<input type="checkbox" class="type-deepblue" id="chk08" checked>
+									<span class="label-title">유럽</span>
+								</label>
+							</div>
+						</div>
+						<!-- //inp-group -->
+
+						<div aria-label="날짜 선택" class="datepicker-trigger" id="datepicker_schedule"></div>
+
+
+						<div class="datepicker-arrow">
+							<button type="button" class="arrow-prev" aria-label="이전 주"></button>
+							<button type="button" class="arrow-next" aria-label="다음 주"></button>
+						</div>
+
+						<div class="datepicker-unfold">
+							<button type="button" aria-label="달력 펼치기"></button>
+						</div>
+					</div>
+					<!-- //datepicker-wrap -->
+
+					<!-- eco-section -->
+					<div class="eco-section content-fluid pt40">
+
+						<div class="eco-wrap mb24">
+							<div class="tags-wrap">
+								<div class="tags tags tags-medium tags-disabled_bg">2024년 11월 13일 일요일</div>
+							</div>
+						</div>
+
+						<div class="eco-wrap mb24">
+							<div class="tags-wrap">
+								<div class="tags tags tags-medium tags-disabled_bg">2024년 11월 14일 월요일</div>
+							</div>
+						</div>
+
+						<div class="eco-wrap py40">
+							<div class="tags-wrap mb16">
+								<div class="tags tags-medium tags-white">2024년 11월 15일 화요일</div>
+							</div>
+							<a href="#" class="eco-list">
+								<div class="eco-title">
+									<div class="tags tags-small tags-deepBlue-50">
+										<div class="flag flag-us"><strong></strong>미국</div>
+									</div>
+									<strong class="title-medium">유로존 무역수지</strong>
+								</div>
+								<div class="eco-content">
+									<dl>
+										<div class="list">
+											<dt>과거</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>예상</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>실제</dt>
+											<dd class="rise" aria-label="상승">9999.99</dd>
+										</div>
+									</dl>
+									<dl>
+										<dt>중요도</dt>
+										<dd>
+											<div class="star-rate"><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i></div>
+										</dd>
+									</dl>
+								</div>
+							</a>
+							<a href="#" class="eco-list">
+								<div class="eco-title">
+									<div class="tags tags-small tags-gray-800">
+										<div class="flag flag-kr"><strong></strong>한국</div>
+									</div>
+									<strong class="title-medium">제목이 노출됩니다</strong>
+								</div>
+								<div class="eco-content">
+									<dl>
+										<div class="list">
+											<dt>과거</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>예상</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>실제</dt>
+											<dd class="steady" aria-label="보합">9999.99</dd>
+										</div>
+									</dl>
+									<dl>
+										<dt>중요도</dt>
+										<dd>
+											<div class="star-rate"><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i></div>
+										</dd>
+									</dl>
+								</div>
+							</a>
+							<a href="#" class="eco-list">
+								<div class="eco-title">
+									<div class="tags tags-small tags-red-50">
+										<div class="flag flag-cn"><strong></strong>중국</div>
+									</div>
+									<strong class="title-medium">제목이 노출됩니다</strong>
+								</div>
+								<div class="eco-content">
+									<dl>
+										<div class="list">
+											<dt>과거</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>예상</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>실제</dt>
+											<dd class="fall" aria-label="하락">9999.99</dd>
+										</div>
+									</dl>
+									<dl>
+										<dt>중요도</dt>
+										<dd>
+											<div class="star-rate"><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i></div>
+										</dd>
+									</dl>
+								</div>
+							</a>
+							<a href="#" class="eco-list">
+								<div class="eco-title">
+									<div class="tags tags-small tags-red-200">
+										<div class="flag flag-jp"><strong></strong>일본</div>
+									</div>
+									<strong class="title-medium">제목이 노출됩니다</strong>
+								</div>
+								<div class="eco-content">
+									<dl>
+										<div class="list">
+											<dt>과거</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>예상</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>실제</dt>
+											<dd class="rise" aria-label="상승">9999.99</dd>
+										</div>
+									</dl>
+									<dl>
+										<dt>중요도</dt>
+										<dd>
+											<div class="star-rate"><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i></div>
+										</dd>
+									</dl>
+								</div>
+							</a>
+							<a href="#" class="eco-list">
+								<div class="eco-title">
+									<div class="tags tags-small tags-deepBlue-900">
+										<div class="flag flag-eu"><strong></strong>유럽</div>
+									</div>
+									<strong class="title-medium">제목이 노출됩니다</strong>
+								</div>
+								<div class="eco-content">
+									<dl>
+										<div class="list">
+											<dt>과거</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>예상</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>실제</dt>
+											<dd class="rise" aria-label="상승">9999.99</dd>
+										</div>
+									</dl>
+									<dl>
+										<dt>중요도</dt>
+										<dd>
+											<div class="star-rate"><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i></div>
+										</dd>
+									</dl>
+								</div>
+							</a>
+						</div>
+
+						<div class="eco-wrap py40">
+							<div class="tags-wrap mb16">
+								<div class="tags tags-medium tags-white tags-round fc-blue-600">오늘</div>
+								<div class="tags tags-medium tags-lightBlue">2024년 11월 16일 수요일</div>
+							</div>
+							<a href="#" class="eco-list">
+								<div class="eco-title">
+									<div class="tags tags-small tags-deepBlue-50">
+										<div class="flag flag-us"><strong></strong>미국</div>
+									</div>
+									<strong class="title-medium">유로존 무역수지</strong>
+								</div>
+								<div class="eco-content">
+									<dl>
+										<div class="list">
+											<dt>과거</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>예상</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>실제</dt>
+											<dd class="rise" aria-label="상승">9999.99</dd>
+										</div>
+									</dl>
+									<dl>
+										<dt>중요도</dt>
+										<dd>
+											<div class="star-rate"><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i></div>
+										</dd>
+									</dl>
+								</div>
+							</a>
+							<a href="#" class="eco-list">
+								<div class="eco-title">
+									<div class="tags tags-small tags-gray-800">
+										<div class="flag flag-kr"><strong></strong>한국</div>
+									</div>
+									<strong class="title-medium">제목이 노출됩니다</strong>
+								</div>
+								<div class="eco-content">
+									<dl>
+										<div class="list">
+											<dt>과거</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>예상</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>실제</dt>
+											<dd class="steady" aria-label="보합">9999.99</dd>
+										</div>
+									</dl>
+									<dl>
+										<dt>중요도</dt>
+										<dd>
+											<div class="star-rate"><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i></div>
+										</dd>
+									</dl>
+								</div>
+							</a>
+							<a href="#" class="eco-list">
+								<div class="eco-title">
+									<div class="tags tags-small tags-red-50">
+										<div class="flag flag-cn"><strong></strong>중국</div>
+									</div>
+									<strong class="title-medium">제목이 노출됩니다</strong>
+								</div>
+								<div class="eco-content">
+									<dl>
+										<div class="list">
+											<dt>과거</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>예상</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>실제</dt>
+											<dd class="fall" aria-label="하락">9999.99</dd>
+										</div>
+									</dl>
+									<dl>
+										<dt>중요도</dt>
+										<dd>
+											<div class="star-rate"><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i></div>
+										</dd>
+									</dl>
+								</div>
+							</a>
+							<a href="#" class="eco-list">
+								<div class="eco-title">
+									<div class="tags tags-small tags-red-200">
+										<div class="flag flag-jp"><strong></strong>일본</div>
+									</div>
+									<strong class="title-medium">제목이 노출됩니다</strong>
+								</div>
+								<div class="eco-content">
+									<dl>
+										<div class="list">
+											<dt>과거</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>예상</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>실제</dt>
+											<dd class="rise" aria-label="상승">9999.99</dd>
+										</div>
+									</dl>
+									<dl>
+										<dt>중요도</dt>
+										<dd>
+											<div class="star-rate"><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i></div>
+										</dd>
+									</dl>
+								</div>
+							</a>
+							<a href="#" class="eco-list">
+								<div class="eco-title">
+									<div class="tags tags-small tags-deepBlue-900">
+										<div class="flag flag-eu"><strong></strong>유럽</div>
+									</div>
+									<strong class="title-medium">제목이 노출됩니다</strong>
+								</div>
+								<div class="eco-content">
+									<dl>
+										<div class="list">
+											<dt>과거</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>예상</dt>
+											<dd>9999.99</dd>
+										</div>
+										<div class="list">
+											<dt>실제</dt>
+											<dd class="rise" aria-label="상승">9999.99</dd>
+										</div>
+									</dl>
+									<dl>
+										<dt>중요도</dt>
+										<dd>
+											<div class="star-rate"><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i><i class="icon-only icon-12 icon-star bg-brandPrimary-blue400" aria-label="별"></i></div>
+										</dd>
+									</dl>
+								</div>
+							</a>
+						</div>
+
+						<div class="eco-wrap mb24">
+							<div class="tags-wrap">
+								<div class="tags tags tags-medium tags-disabled_bg">2024년 11월 17일 목요일</div>
+							</div>
+						</div>
+						<div class="eco-wrap mb24">
+							<div class="tags-wrap">
+								<div class="tags tags tags-medium tags-disabled_bg">2024년 11월 18일 금요일</div>
+							</div>
+						</div>
+						<div class="eco-wrap mb24">
+							<div class="tags-wrap">
+								<div class="tags tags tags-medium tags-disabled_bg">2024년 11월 19일 토요일</div>
+							</div>
+						</div>
+
+						<p class="description info body-small fs-14 fc-typography-caption fw-400 mt40">지표 일정은 한국시간 기준입니다. <br> Bloomberg와 투자상품전략부의 칼럼을 참조합니다. <br> 일정은 월 1회, 세부 내용은 주 1회 업데이트 됩니다. <br> 중요도는 인베스팅닷컴 데이터를 참조합니다.</p>
+
+
+					</div>
+					<!-- //eco-section -->
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+
+	</main>
+	<!-- //main -->
+
+
+	<script>
+		var datepickerWeekend = {
+			init: function() {
+				$datepicker = $('.datepicker-weekend');
+				$selectDay = $datepicker.find('[aria-current=true]');
+				$selectWeek = $selectDay.closest('tr');
+				$selectWeek.addClass('thisWeek')
+			},
+			select: function() {
+				setTimeout(function() {
+					$datepicker.addClass('datepicker-collapsed');
+					$selectWeek.addClass('thisWeek');
+					$selectWeek.siblings('tr').hide();
+				}, 0)
+			},
+
+			// 오른으로 스와이프
+			selectPrev: function() {
+				if ($selectWeek.is(':first-child')) {
+					$datepicker.find("[data-handler='prev']").trigger('click');
+					if ($datepicker.find('table tbody tr:nth-last-child(1) td').hasClass('ui-datepicker-unselectable')) {
+						$datepicker.find('table tbody tr:nth-last-child(2)').addClass('thisWeek').siblings('').removeClass('thisWeek');
+					} else {
+						$datepicker.find('table tbody tr:nth-last-child(1)').addClass('thisWeek').siblings('').removeClass('thisWeek');
+					}
+					$datepicker.find('table .thisWeek a').trigger('click');
+				} else {
+					$selectWeek.prev('').addClass('thisWeek').siblings('').removeClass('thisWeek');
+				}
+
+				$datepicker.find('table .thisWeek a').trigger('click');
+				$datepicker.find('table tbody tr').each(function() {
+					if (!$(this).hasClass('thisWeek')) {
+						$(this).css('display', 'none');
+					} else {
+						$(this).removeClass('selectNext').addClass('selectPrev');
+						$(this).css('display', 'table-row')
+					}
+				})
+			},
+
+			// 왼쪽으로 스와이프
+			selectNext: function() {
+				if ($selectWeek.is(':last-child')) {
+					$datepicker.find("[data-handler='next']").trigger('click');
+					if ($datepicker.find('table tbody tr:nth-child(1) td').hasClass('ui-datepicker-unselectable')) {
+						$datepicker.find('table tbody tr:nth-child(2)').addClass('thisWeek').siblings('').removeClass('thisWeek');
+					} else {
+						$datepicker.find('table tbody tr:nth-child(1)').addClass('thisWeek').siblings('').removeClass('thisWeek');
+					}
+				} else {
+					$selectWeek.next('').addClass('thisWeek').siblings('').removeClass('thisWeek');
+				}
+
+				$datepicker.find('table .thisWeek a').trigger('click');
+				$datepicker.find('table tbody tr').each(function() {
+					if (!$(this).hasClass('thisWeek')) {
+						$(this).css('display', 'none');
+					} else {
+						$(this).removeClass('selectPrev').addClass('selectNext');
+						$(this).css('display', 'table-row')
+					}
+				})
+
+			},
+			unFold: function() {
+				$('.datepicker-unfold button').on('click', function() {
+					$datepicker.removeClass('datepicker-collapsed');
+					$datepicker.find('table tbody tr').each(function() {
+						$(this).css('display', 'table-row')
+					});
+					$('html, body').stop().animate({
+						scrollTop: 0
+					}, 300);
+				})
+				$('.datepicker-arrow .arrow-prev').on('click', function() {
+					datepickerWeekend.selectPrev();
+				});
+				$('.datepicker-arrow .arrow-next').on('click', function() {
+					datepickerWeekend.selectNext();
+				});
+			}
+		}
+		datepickerWeekend.unFold();
+
+
+		$(function() {
+			const schedule04 = ["2025-01-15", "2025-01-16", "2025-01-17", "2025-01-19"]; // 개인 일정
+			const schedule05 = ["2025-01-15", "2025-01-16", "2025-01-18", "2025-01-20"]; // 고객 생일
+			const schedule06 = ["2025-01-15", "2025-01-17", "2025-01-18", "2025-01-21"]; // 수신 만기
+			const schedule07 = ["2025-01-15", "2025-01-17", "2025-01-18", "2025-01-21"]; // 수신 만기
+			const schedule08 = ["2025-01-15", "2025-01-17", "2025-01-18", "2025-01-21"]; // 수신 만기
+
+			$("#datepicker_schedule").datepicker({
+				dateFormat: 'yy-mm-dd',
+				prevText: '이전 달',
+				nextText: '다음 달',
+				monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+				monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+				dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+				dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+				dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+				showMonthAfterYear: true,
+				yearSuffix: '.',
+				// minDate: 0,
+				showButtonPanel: false,
+				closeText: "닫기",
+				showOtherMonths: true,
+				onSelect: function(date, dp) {
+					datepickerWeekend.select();
+				},
+				onChangeMonthYear: function(year, month, dp) {},
+				beforeShowDay: function(date) {
+					var formattedDate = $.datepicker.formatDate('yy-mm-dd', date);
+
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule06.indexOf(formattedDate) !== -1 && schedule07.indexOf(formattedDate) !== -1 && schedule08.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_05 schedule_06 schedule_07 schedule_08'];
+					}
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule06.indexOf(formattedDate) !== -1 && schedule07.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_05 schedule_06 schedule_07'];
+					}
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule06.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_05 schedule_06'];
+					}
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule07.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_05 schedule_07'];
+					}
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1 && schedule08.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_05 schedule_08'];
+					}
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule08.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_08'];
+					}
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule07.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_07'];
+					}
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule06.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_06'];
+					}
+					if (schedule04.indexOf(formattedDate) !== -1 && schedule05.indexOf(formattedDate) !== -1) {
+						return [true, 'schedule_04 schedule_05'];
+					}
+					//...5팩토리얼 (120개)
+					return [true, ''];
+
+				},
+				onUpdateDatepicker: function() {
+					addTags()
+					datepickerWeekend.init();
+				}
+			});
+
+			function addTags() {
+
+				const datepickerWrap = document.querySelectorAll('.ui-datepicker-calendar td a');
+				datepickerWrap.forEach(function(div) {
+					const scheduleWrap = document.createElement('div');
+					scheduleWrap.classList.add('schedule-wrap');
+					div.appendChild(scheduleWrap)
+				})
+
+				//한국
+				const schedule_04 = document.querySelectorAll('.schedule_04 .schedule-wrap');
+				schedule_04.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label04" aria-label="한국"></div>');
+				})
+
+				//미국
+				const schedule_05 = document.querySelectorAll('.schedule_05 .schedule-wrap');
+				schedule_05.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label05 aria-label="미국"></div>');
+				})
+
+				//중국
+				const schedule_06 = document.querySelectorAll('.schedule_06 .schedule-wrap');
+				schedule_06.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label06" aria-label="중국"></div>');
+				})
+
+				//일본
+				const schedule_07 = document.querySelectorAll('.schedule_07 .schedule-wrap');
+				schedule_07.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label07" aria-label="일본"></div>');
+				})
+
+				//유럽
+				const schedule_08 = document.querySelectorAll('.schedule_08 .schedule-wrap');
+				schedule_08.forEach(function(item) {
+					item.insertAdjacentHTML('beforeend', '<div class="sc-label label08" aria-label="유럽"></div>');
+				})
+			}
+
+
+			$(document).on('click', '.ui-datepicker-next', function() {
+				$('body').find('.datepicker-wrap').find('.ui-datepicker:visible table').hide('slide', {
+					direction: 'left'
+				}, 1).show('slide', {
+					direction: 'right'
+				}, 250)
+			})
+
+			$(document).on('click', '.ui-datepicker-prev', function() {
+				$('body').find('.datepicker-wrap').find('.ui-datepicker:visible table').hide('slide', {
+					direction: 'right'
+				}, 1).show('slide', {
+					direction: 'left'
+				}, 250)
+			})
+
+
+			$('.datepicker-wrap').swipe({
+				swipeLeft: function() {
+					if ($(this).hasClass('datepicker-collapsed')) {
+						datepickerWeekend.selectNext();
+					} else {
+						$(this).find("[data-handler='next']").trigger('click');
+					}
+				},
+				swipeRight: function() {
+					if ($(this).hasClass('datepicker-collapsed')) {
+						datepickerWeekend.selectPrev();
+					} else {
+						$(this).find("[data-handler='prev']").trigger('click');
+					}
+				}
+			})
+
+			$('#chk04').on('change', function() {
+				if (!$(this).is(':checked')) {
+					$('.ui-datepicker-calendar .schedule_04').removeClass('schedule_04')
+					$('.ui-datepicker-calendar .label04').css({
+						'display': 'none'
+					});
+				} else {
+					$('.ui-datepicker-calendar .label04').closest('td').addClass('schedule_04')
+					// $('.ui-datepicker-calendar .schedule_04').removeClass('schedule_04')
+					$('.ui-datepicker-calendar .label04').css({
+						'display': 'block'
+					});
+				}
+			})
+			$('#chk05').on('change', function() {
+				if (!$(this).is(':checked')) {
+					$('.ui-datepicker-calendar .schedule_05').removeClass('schedule_05')
+					$('.ui-datepicker-calendar .label05').css({
+						'display': 'none'
+					});
+				} else {
+					$('.ui-datepicker-calendar .label05').closest('td').addClass('schedule_05')
+					// $('.ui-datepicker-calendar .schedule_05').removeClass('schedule_05')
+					$('.ui-datepicker-calendar .label05').css({
+						'display': 'block'
+					});
+				}
+			})
+			$('#chk06').on('change', function() {
+				if (!$(this).is(':checked')) {
+					$('.ui-datepicker-calendar .schedule_06').removeClass('schedule_06')
+					$('.ui-datepicker-calendar .label06').css({
+						'display': 'none'
+					});
+				} else {
+					$('.ui-datepicker-calendar .label06').closest('td').addClass('schedule_06')
+					// $('.ui-datepicker-calendar .schedule_06').removeClass('schedule_06')
+					$('.ui-datepicker-calendar .label06').css({
+						'display': 'block'
+					});
+				}
+			})
+			$('#chk07').on('change', function() {
+				if (!$(this).is(':checked')) {
+					$('.ui-datepicker-calendar .schedule_07').removeClass('schedule_07')
+					$('.ui-datepicker-calendar .label07').css({
+						'display': 'none'
+					});
+				} else {
+					$('.ui-datepicker-calendar .label07').closest('td').addClass('schedule_07')
+					// $('.ui-datepicker-calendar .schedule_07').removeClass('schedule_07')
+					$('.ui-datepicker-calendar .label07').css({
+						'display': 'block'
+					});
+				}
+			})
+			$('#chk08').on('change', function() {
+				if (!$(this).is(':checked')) {
+					$('.ui-datepicker-calendar .schedule_08').removeClass('schedule_08')
+					$('.ui-datepicker-calendar .label08').css({
+						'display': 'none'
+					});
+				} else {
+					$('.ui-datepicker-calendar .label08').closest('td').addClass('schedule_08')
+					// $('.ui-datepicker-calendar .schedule_08').removeClass('schedule_08')
+					$('.ui-datepicker-calendar .label08').css({
+						'display': 'block'
+					});
+				}
+			})
+
+		});
+	</script>
+</body>
+
+</html>

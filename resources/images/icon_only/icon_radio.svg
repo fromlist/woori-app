@@ -1,0 +1,9 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="solar:radio-minimalistic-linear">
+<g id="Group">
+<path id="Vector" d="M2 14C2 10.229 2 8.343 3.172 7.172C4.344 6.001 6.229 6 10 6H14C17.771 6 19.657 6 20.828 7.172C21.999 8.344 22 10.229 22 14C22 17.771 22 19.657 20.828 20.828C19.656 21.999 17.771 22 14 22H10C6.229 22 4.343 22 3.172 20.828C2.001 19.656 2 17.771 2 14Z" stroke="white" stroke-width="1.5"/>
+<path id="Vector_2" d="M8 17C9.65685 17 11 15.6569 11 14C11 12.3431 9.65685 11 8 11C6.34315 11 5 12.3431 5 14C5 15.6569 6.34315 17 8 17Z" stroke="white" stroke-width="1.5"/>
+<path id="Vector_3" d="M13.5 11H19M13.5 14H19M13.5 17H19M6.5 6L15 2" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+</g>
+</svg>

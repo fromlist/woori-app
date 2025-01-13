@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="/resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="/resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="/resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="/resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="/resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="/resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-logo-btn"><i></i>PB WON</button>
+				</div>
+				<div class="center">
+					<h1><span class="blind">금융+</span></h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<!-- main-figure-section -->
+					<div class="main-figure-section content-fluid bg-surface-surface">
+						<div class="main-section-title">
+							<strong class="headline-small">스마트한 업무 지원!</strong>
+						</div>
+						<div class="main-figure-list">
+							<ul>
+								<li>
+									<figure>
+										<picture>
+											<source srcset="/resources/images/PBWMA/ico_fig_main_list04.svg">
+											<img src="/resources/images/PBWMA/ico_fig_main_list04.svg" alt="">
+										</picture>
+										<figcaption>예적금 계산기</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<picture>
+											<source srcset="/resources/images/PBWMA/ico_fig_main_list05.svg">
+											<img src="/resources/images/PBWMA/ico_fig_main_list05.svg" alt="">
+										</picture>
+										<figcaption>대출 계산기</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<picture>
+											<source srcset="/resources/images/PBWMA/ico_fig_main_list06.svg">
+											<img src="/resources/images/PBWMA/ico_fig_main_list06.svg" alt="">
+										</picture>
+										<figcaption>환율 계산기</figcaption>
+									</figure>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //main-figure-section -->
+
+					<div class="main-exchange-section">
+
+						<div class="main-section-title">
+							<strong class="headline-small">실시간 환율조회</strong>
+						</div>
+
+						<div class="pl12 py8">
+							<ul class="label-list pl8">
+								<li class="list01"><i aria-label="매매기준율"></i></li>
+								<li class="list02"><i aria-label="본지점매도율"></i></li>
+								<li class="list03"><i aria-label="본지점매입율"></i></li>
+							</ul>
+						</div>
+
+						<div class="exchange-wrap mt16">
+							<div class="exchange-list">
+								<button class="flag flag-us flag-fluid" data-micromodal-trigger="modal-country"><strong>USD</strong><span>미국 달러</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-jp flag-fluid" data-micromodal-trigger="modal-country"><strong>JPY</strong><span>일본 100엔</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-eu flag-fluid" data-micromodal-trigger="modal-country"><strong>EUR</strong><span>유럽 유로</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-gb flag-fluid" data-micromodal-trigger="modal-country"><strong>GBP</strong><span>영국 파운드</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-ca flag-fluid" data-micromodal-trigger="modal-country"><strong>CAD</strong><span>캐나다 달러</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-ch flag-fluid" data-micromodal-trigger="modal-country"><strong>CHF</strong><span>스위스 프랑</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-hk flag-fluid" data-micromodal-trigger="modal-country"><strong>HKD</strong><span>홍콩 달러</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-cn flag-fluid" data-micromodal-trigger="modal-country"><strong>CNY</strong><span>중국 위안</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-th flag-fluid" data-micromodal-trigger="modal-country"><strong>THB</strong><span>태국 바트</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-se flag-fluid" data-micromodal-trigger="modal-country"><strong>SEK</strong><span>스웨덴 크로나</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-au flag-fluid" data-micromodal-trigger="modal-country"><strong>AUD</strong><span>호주 달러</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-dk flag-fluid" data-micromodal-trigger="modal-country"><strong>DKK</strong><span>덴마크 크로네</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-no flag-fluid" data-micromodal-trigger="modal-country"><strong>NOK</strong><span>노르웨이 크로네</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-sg flag-fluid" data-micromodal-trigger="modal-country"><strong>SGD</strong><span>싱가포르 달러</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-nz flag-fluid" data-micromodal-trigger="modal-country"><strong>NZD</strong><span>뉴질랜드 달러</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+							<div class="exchange-list">
+								<button class="flag flag-ph flag-fluid" data-micromodal-trigger="modal-country"><strong>PHP</strong><span>필리핀 페소</span></button>
+								<div class="stroke my16"></div>
+								<ul class="label-list">
+									<li class="list01"><i aria-label="매매기준율">9,999.99</i></li>
+									<li class="list02"><i aria-label="본지점매도율">9,999.99</i></li>
+									<li class="list03"><i aria-label="본지점매입율">9,999.99</i></li>
+								</ul>
+							</div>
+						</div>
+						<div class="caption-visible mt8 ar">고시기준일 : 2024-11-15 (단위:원)</div>
+					</div>
+
+					<div class="btn-wrap bg-transparent">
+						<button type="button" class="btn-xsmall btn-outlined btn-round">전체 환율 보기</button>
+					</div>
+
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+
+			<div class="main-nav">
+				<ul>
+					<li class="list01">
+						<a href="#">
+							<div class="icon"><i class="icon-only icon-32 icon-nav01 bg-icon-gray_1"></i></div>
+							<strong>펀드</strong>
+						</a>
+					</li>
+					<li class="list02">
+						<a href="#">
+							<div class="icon"><i class="icon-only icon-32 icon-nav02 bg-icon-gray_1"></i></div>
+							<strong>투자정보</strong>
+						</a>
+					</li>
+					<li class="list03">
+						<a href="#">
+							<div class="icon"><i class="icon-only icon-32 icon-nav03 bg-icon-gray_1"></i></div>
+							<strong>홈</strong>
+						</a>
+					</li>
+					<li class="list04 is-current">
+						<a href="#" aria-current="page">
+							<div class="icon"><i class="icon-only icon-32 icon-nav04 bg-icon-gray_1"></i></div>
+							<strong>금융+</strong>
+						</a>
+					</li>
+					<li class="list05">
+						<a href="#">
+							<div class="icon"><i class="icon-only icon-32 icon-nav05 bg-icon-gray_1"></i></div>
+							<strong>알림</strong>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- //bottom-btn -->
+
+
+
+	</main>
+	<!-- //main -->
+	<script>
+		var options2 = {
+			series: [{
+					name: "신한글로벌탄소중립솔루션증권투자신탁(H)(주식)",
+					data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+
+				},
+				{
+					name: "BM",
+					data: [1, 32, 26, 42, 40, 53, 60, 82, 18]
+				},
+				{
+					name: "유형평균",
+					data: [100, 320, 260, 420, 400, 530, 600, 820, 180]
+				}
+			],
+			chart: {
+				height: 180,
+				type: 'line',
+				zoom: {
+					enabled: false
+				},
+				toolbar: {
+					show: false,
+				}
+			},
+			colors: ['#7163EE', '#F35E9C', '#1AA3C1'],
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				curve: 'smooth',
+				width: [2, 2]
+			},
+			markers: {
+				size: 4,
+			},
+			grid: {
+				row: {
+					// colors: ['#E9ECEF', 'transparent'], // takes an array which will be repeated on columns
+					// opacity: 0.5
+				},
+			},
+			xaxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+			}
+		};
+
+		var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+
+		document.addEventListener('aos:in:chart2', ({
+			detail
+		}) => {
+			chart2.render();
+		});
+	</script>
+</body>
+
+</html>

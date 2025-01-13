@@ -8,7 +8,7 @@ $(function () {
     switchClass.init()
     $swal;
     toastrCont.init();
-    microModalFunc.init();
+    // microModalFunc.init();
     stickyContent();
     tippyContent.init();
     tableInnerScroll.init();
@@ -16,6 +16,7 @@ $(function () {
         once: true,
         offset: 150,
     });
+
 });
 
 const toggle = {
@@ -25,7 +26,7 @@ const toggle = {
         this.onClick();
     },
     onClick: function () {
-        $toggleCont.on('click', function () {
+        $(document).on('click', '[data-toggle="toggle-trigger"]', function () {
             const toggleWrap = $(this).closest('[data-toggle="toggle-wrap"]');
             if (toggleWrap.hasClass($toggleClass)) {
                 toggleWrap.removeClass($toggleClass);
@@ -41,7 +42,7 @@ const switchClass = {
         this.onClick();
     },
     onClick: function () {
-        $toggleCont.on('click', function () {
+        $(document).on('click', '[data-toggle="toggle-trigger"]', function () {
 
             const $switchBefore = this.dataset.switchBefore;
             const $switchAfter = this.dataset.switchAfter;
@@ -132,6 +133,7 @@ const tabContent = {
         })
     },
     afterLoadTab: function () {
+        $tabList = $('.tab-list li');
         $tabTrigger = $tabList.find('button:not(.link), a:not(.link)')
         $tabTrigger.each(function () {
             const $parent = $(this).closest('li');
@@ -294,12 +296,13 @@ const stickyContent = function () {
     const snackbarEl = document.querySelector('.snackbar-content')
 
     if (snackbarEl != null) {
-        const snackbaElClose = snackbarEl.querySelector('[data-snackbar-close]')
+        const snackbarWrapper = document.querySelector('.content');
+        snackbarWrapper.style.paddingBottom = snackbarEl.clientHeight + 'px';
 
         var timer = null;
         var close = 1500;
         window.addEventListener('scroll', function () {
-            if (!snackbarEl.classList.contains('snackbar-disabled')) {
+            if (!snackbarEl.classList.contains('`snackbar-disabled`')) {
                 if (timer !== null) {
                     clearTimeout(timer);
                     snackbarEl.classList.remove('is-sticky')
@@ -309,112 +312,24 @@ const stickyContent = function () {
                 }, close);
             }
         }, close);
-        snackbaElClose.addEventListener('click', function () {
-            snackbarEl.classList.remove('is-sticky');
-            snackbarEl.classList.add('snackbar-disabled');
-            clearTimeout(timer);
-        });
+
+        // snackbar disabled button
+        const snackbarElClose = snackbarEl.querySelector('[data-snackbar-close]')
+        if (snackbarElClose != null) {
+            snackbarElClose.addEventListener('click', function () {
+                snackbarEl.classList.remove('is-sticky');
+                snackbarEl.classList.add('snackbar-disabled');
+                clearTimeout(timer);
+            });
+        }
+
+        const mainContainer = document.querySelector('main');
+        const bottomBtn = mainContainer.querySelector('.bottom-btn')
+        if (bottomBtn != null) {
+            snackbarEl.style.bottom = bottomBtn.clientHeight + 'px';
+        }
     }
 
-}
-
-
-// micromodal
-const microModalFunc = {
-    init: function () {
-        // micromodal
-        let modalTrigger = '';
-        MicroModal.init({
-
-            onShow: function (modalPopup, trigger, event) {
-                modalTrigger = event.target;
-                const triggerPositionTop = $(modalTrigger).offset().top;
-                const triggerPositionLeft = $(modalTrigger).offset().left;
-                const triggerPositionBottom = $(modalTrigger).offset().top + $(modalTrigger).outerHeight();
-                const triggerPositionRight = $(modalTrigger).offset().left + $(modalTrigger).outerWidth()
-                const triggerWidth = $(modalTrigger).outerWidth();
-                const windowWidth = $(window).outerWidth();
-                const windowHeight = $(window).outerHeight();
-
-
-                let scrollPosition = $(window).scrollTop();
-                let scrollLeftPosition = $(window).scrollLeft();
-
-                modalPopup.querySelectorAll('.select-option ul').forEach(function (items) {
-                    if (items.childElementCount > 4) {
-                        modalPopup.classList.remove('micromodal-slide-select')
-                        modalPopup.classList.add('micromodal-slide-bottom');
-                    }
-                })
-
-                const dropDown = modalPopup.classList.contains('micromodal-slide-dropdown');
-                const selectBox = modalPopup.classList.contains('micromodal-slide-select');
-
-                if (dropDown || selectBox) {
-                    const modalPopupBody = modalPopup.querySelector('.modal__container');
-                    const modalPopupBodyWidth = modalPopupBody.clientWidth;
-                    const modalPopupBodyHeight = modalPopupBody.clientHeight;
-
-                    let padding = 10;
-
-                    // default (position right)
-                    if (triggerPositionRight > windowWidth / 2) {
-                        if (selectBox) {
-                            modalPopupBody.style.width = triggerWidth + 'px'
-                            modalPopupBody.style.left = triggerPositionRight - triggerWidth + 'px';
-                        } else {
-                            modalPopupBody.style.left = triggerPositionRight - modalPopupBodyWidth + 'px';
-                        }
-
-                    }
-                    // reverse (position left)
-                    else if (windowWidth / 2 > triggerPositionRight) {
-                        modalPopupBody.style.left = triggerPositionLeft + 'px';
-                    }
-
-                    // default (position bottom)
-                    // console.log('windowHeight / 2 ' + windowHeight / 2)
-
-                    if (windowHeight / 2 > triggerPositionTop - scrollPosition) {
-                        modalPopupBody.style.top = triggerPositionBottom + padding - scrollPosition + 'px';
-
-                        // //overflow bottom
-                        // if (windowHeight < triggerPositionBottom + padding + modalPopupBodyHeight) {
-                        //     modalPopupBody.style.overflow = 'auto'
-                        //     modalPopupBody.style.maxHeight = windowHeight - triggerPositionBottom - padding + 'px'
-                        // }
-                    }
-                    // reverse (position top)
-                    else if (windowHeight / 2 < triggerPositionTop - scrollPosition) {
-                        modalPopupBody.style.bottom = windowHeight - triggerPositionTop + padding + scrollPosition + 'px';
-
-                        //overflow top
-                        // if (windowHeight < windowHeight - triggerPositionTop + padding + modalPopupBodyHeight) {
-                        //     modalPopupBody.style.overflow = 'auto'
-                        //     modalPopupBody.style.maxHeight = windowHeight - (windowHeight - triggerPositionTop + padding) + 'px'
-                        // }
-                    }
-                }
-                modalTrigger.classList.add('is-modal-open');
-            }, // [1]
-            onClose: function (modalPopup, trigger, event) {
-                const modalPopupBody = modalPopup.querySelector('.modal__container');
-                setTimeout(function () {
-                    modalPopupBody.removeAttribute('style');
-                }, 300)
-                modalTrigger.classList.remove('is-modal-open');
-
-            }, // [2]
-            // openTrigger: 'data-custom-open', // [3]
-            // closeTrigger: 'data-custom-close', // [4]
-            // openClass: 'is-open', // [5]
-            disableScroll: true, // [6]
-            disableFocus: true, // [7]
-            awaitOpenAnimation: true, // [8]
-            awaitCloseAnimation: true, // [9]
-            // debugMode: true // [10]
-        });
-    }
 }
 
 // tippy tooltip
@@ -442,7 +357,7 @@ const tippyContent = {
 
 // sweetalert
 const $swal = {
-    fire01(title, confirmButtonText, showCancelButton, cancelButtonText) {
+    fire01(title, confirmButtonText, showCancelButton, cancelButtonText, callback, fallback) {
         Swal.fire({
             showCancelButton: showCancelButton,
             showCloseButton: false,
@@ -458,14 +373,20 @@ const $swal = {
             buttonsStyling: false,
             allowOutsideClick: false,
 
-        })
+        }).then(function (result) {
+            if (result.isConfirmed) {
+                if (callback) { callback(); }
+            } else if (result.isDismissed) {
+                if (fallback) { fallback(); }
+            }
+        });
     },
-    fire02(title, status, confirmButtonText, showCancelButton, cancelButtonText) {
+    fire02(title, status, confirmButtonText, showCancelButton, cancelButtonText, callback, fallback) {
         Swal.fire({
             showCancelButton: showCancelButton,
             showCloseButton: false,
             reverseButtons: true,
-            title: `<span class="description ${status} body-xlarge">${title}</span>`,
+            title: `<span class="description ${status} body-large">${title}</span>`,
             confirmButtonText: confirmButtonText,
             cancelButtonText: cancelButtonText,
             customClass: {
@@ -477,9 +398,15 @@ const $swal = {
             buttonsStyling: false,
             allowOutsideClick: false,
 
-        })
+        }).then(function (result) {
+            if (result.isConfirmed) {
+                if (callback) { callback(); }
+            } else if (result.isDismissed) {
+                if (fallback) { fallback(); }
+            }
+        });
     },
-    fire03(title, text, showCancelButton, confirmButtonText, cancelButtonText) {
+    fire03(title, text, showCancelButton, confirmButtonText, cancelButtonText, callback, fallback) {
         Swal.fire({
             showCancelButton: showCancelButton,
             showCloseButton: true,
@@ -498,16 +425,22 @@ const $swal = {
             buttonsStyling: false,
             // allowOutsideClick: false,
 
-        })
+        }).then(function (result) {
+            if (result.isConfirmed) {
+                if (callback) { callback(); }
+            } else if (result.isDismissed) {
+                if (fallback) { fallback(); }
+            }
+        });
     },
-    fire04(title, text, icon, confirmButtonText) {
+    fire04(title, text, icon, confirmButtonText, callback, fallback) {
         Swal.fire({
             showCloseButton: true,
             reverseButtons: true,
             confirmButtonText: confirmButtonText,
             customClass: {
                 htmlContainer: 'mt40',
-                actions: 'btn-wrap',
+                actions: 'btn-wrap pt40',
                 cancelButton: "btn-medium btn-outlined",
                 confirmButton: "btn-medium btn-primary",
             },
@@ -516,9 +449,15 @@ const $swal = {
             html: `
                 <i class="icon-only icon-48 ${icon} bg-icon-gray_1"></i>
                 <strong class="title-large mt8">${title}</strong>
-                <p class="body-large mt8">${text}</p>
+                <p class="body-large mt8 fw-400">${text}</p>
             `,
-        })
+        }).then(function (result) {
+            if (result.isConfirmed) {
+                if (callback) { callback(); }
+            } else if (result.isDismissed) {
+                if (fallback) { fallback(); }
+            }
+        });
     }
 }
 
@@ -553,3 +492,95 @@ const tableInnerScroll = {
         }
     }
 }
+
+
+var gnb = {
+    init: function () {
+        $gnbWrap = $('.gnb').closest('.modal__container');
+        $gnbScrollWrap = $gnbWrap.find('.modal__content');
+        gnb.oneDepthInit();
+        gnb.scrollDown();
+    },
+    menuCenter: function ($el, menuCenterOption) {
+        var snbwrap = menuCenterOption.scrollWrap;
+        var targetPos = menuCenterOption.scrollTarget.position();
+        var box = menuCenterOption.scrollWrap.parent();
+        var boxHalf = box.width() / 2;
+        var pos;
+        var scrollLeft2 = snbwrap.scrollLeft();
+        var selectTargetPos = targetPos.left + menuCenterOption.scrollTarget.outerWidth() / 2;
+        pos = selectTargetPos - boxHalf + scrollLeft2;
+        if (menuCenterOption.animation === true) {
+            setTimeout(function () {
+                snbwrap.stop().animate({
+                    scrollLeft: pos
+                }, 100)
+            })
+        } else {
+            snbwrap.scrollLeft(pos);
+        }
+    },
+
+    oneDepthInit: function () {
+        const gnbNavigation = $gnbWrap.find('.gnb-menu-nav')
+        gnbNavigation.find('a').unbind('click').bind({
+            'click': function (e) {
+                e.preventDefault();
+                const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu-nav').outerHeight();
+                var targetId = $(this).attr('href');
+                var targetY = $(targetId).offset().top - $stickyHeight + $gnbScrollWrap.scrollTop();
+                $gnbScrollWrap.stop().animate({ scrollTop: targetY }, 150);
+            }
+        });
+        var $el = $('.gnb .gnb-menu-nav ul');
+        var menuCenterOption = {
+            scrollWrap: $el,
+            scrollTarget: $el.find('li.tab-active'),
+            animation: true
+        };
+        gnb.menuCenter($el, menuCenterOption);
+
+    },
+    // gnb scroll 시 1뎁스 메뉴 좌우스크롤 및 active
+    scrollDown: function () {
+        $gnbScrollWrap.off().on('scroll', function () {
+            //vertical scroll
+            var $scrollDistance = Math.ceil($(this).scrollTop());
+            const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu-nav').outerHeight();
+            // menu auto scroll
+
+
+            $('.gnb').find('.gnb-menu-list .gnb-menu-section[id]').each(function (i) {
+                const $targetY = $(this).position().top - $stickyHeight + $gnbScrollWrap.scrollTop();
+                if ($targetY <= $scrollDistance) {
+                    $('.gnb .gnb-menu-nav li').siblings('').removeClass('tab-active').eq(i).addClass('tab-active');
+
+                }
+            })
+
+            //scroll down active menu
+            var $el = $('.gnb .gnb-menu-nav ul');
+            var menuCenterOption = {
+                scrollWrap: $el,
+                scrollTarget: $el.find('li.tab-active'),
+                animation: true
+            };
+            gnb.menuCenter($el, menuCenterOption);
+
+        })
+    },
+    sizeCheck: function () {
+
+        const $gnbScrollHeight = $gnbScrollWrap.outerHeight(); // device height - header height
+        const $gnbHeight = $gnbWrap.find('.gnb').outerHeight(); // gnb outerheight
+        const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu-nav').outerHeight(); // sticky height
+        $('.gnb').find('.gnb-menu-list .gnb-menu-section[id]').each(function () {
+            const $targetY = $(this).position().top;
+            if ($targetY > $gnbHeight + $stickyHeight - $gnbScrollHeight) {
+                $('.gnb').css('padding-bottom', $targetY - ($gnbHeight + $stickyHeight - $gnbScrollHeight))
+            }
+        });
+    },
+
+}
+

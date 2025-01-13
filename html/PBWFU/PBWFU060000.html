@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="/resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="/resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="/resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="/resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="/resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="/resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>펀드 비교</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="관심 펀드"><i class="i-favorite"></i></button>
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<div class="fund-diff content-fluid px0">
+
+						<div class="fund-diff-title">
+							<div class="tags tags-small tags-deepGray tags-round">행내한</div>
+
+							<ul>
+								<li>
+									<div class="tags-wrap">
+										<div class="tags tags-small tags-FFF4EB">높은위험</div>
+									</div>
+									<h2 class="title-medium">신한글로벌탄소중립솔루션증권투자신탁(H)(주식)</h2>
+									<div class="tags-bottom">
+										<div class="tags tags-small tags-gray">#글로벌</div>
+									</div>
+								</li>
+								<li>
+									<div class="tags-wrap">
+										<div class="tags tags-small tags-lightViolet">보통위험</div>
+									</div>
+									<h2 class="title-medium">피델리티글로벌대당인컴증권자투자신탁(주식-재간접형)</h2>
+									<div class="tags-bottom">
+										<div class="tags tags-small tags-gray">#글로벌</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="fund-diff-detail">
+
+							<div class="fund-diff-inner">
+								<h3 class="title-large">기본정보</h3>
+								<div class="diff-table">
+									<table>
+										<caption>기본정보</caption>
+										<tbody>
+											<tr>
+												<th scope="col">
+													<span class="blind">신한글로벌탄소중립솔루션증권투자신탁(H)(주식)</span>
+													<strong>상품특징</strong>
+												</th>
+												<th scope="col">
+													<span class="blind">피델리티글로벌대당인컴증권자투자신탁(주식-재간접형)</span>
+													<strong>상품특징</strong>
+												</th>
+											</tr>
+											<tr>
+												<td>
+													<p>이 투자신탁은 투자신탁재산의 대부분을 국내외 주식등에 투자하는 증권집합 투자기구입니다. 따라서 주된 투자대상인 국내외 주식등의 가격 변동에 따라 투자자의 이익 또는 손실이 결정됩니다.</p>
+												</td>
+												<td>
+													<p>텍스트가다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다텍스트가 들어갑니다</p>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>설정금액</strong></th>
+												<th scope="col"><strong>설정금액</strong></th>
+											</tr>
+											<tr>
+												<td>0</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>가입유형</strong></th>
+												<th scope="col"><strong>가입유형</strong></th>
+											</tr>
+											<tr>
+												<td>지점</td>
+												<td>지점</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>총보수</strong></th>
+												<th scope="col"><strong>총보수</strong></th>
+											</tr>
+											<tr>
+												<td>지점</td>
+												<td>지점</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>가입유형</strong></th>
+												<th scope="col"><strong>가입유형</strong></th>
+											</tr>
+											<tr>
+												<td>연 1.34%</td>
+												<td>연 1.34%</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>선취수수료</strong></th>
+												<th scope="col"><strong>선취수수료</strong></th>
+											</tr>
+											<tr>
+												<td>지점</td>
+												<td>지점</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>가입유형</strong></th>
+												<th scope="col"><strong>가입유형</strong></th>
+											</tr>
+											<tr>
+												<td>투자금액의 0.5%</td>
+												<td>투자금액의 0.5%</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>환매 수수료</strong></th>
+												<th scope="col"><strong>환매 수수료</strong></th>
+											</tr>
+											<tr>
+												<td>-</td>
+												<td>-</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>기준가(전일대비)</strong></th>
+												<th scope="col"><strong>기준가(전일대비)</strong></th>
+											</tr>
+											<tr>
+												<td>
+													<dl class="price">
+														<dt>1,813.84</dt>
+														<dd>
+															<span class="rise" aria-label="상승">0.0%</span>
+														</dd>
+													</dl>
+												</td>
+												<td>
+													<dl class="price">
+														<dt>1,813.84</dt>
+														<dd>
+															<span class="fall" aria-label="하락">0.0%</span>
+															<!-- <span class="steady" aria-label="보합">0.00%</span> -->
+														</dd>
+													</dl>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="stroke stroke4"></div>
+
+							<div class="fund-diff-inner">
+								<h3 class="title-large">수익률 정보</h3>
+								<div class="diff-table">
+									<table>
+										<caption>수익률 정보</caption>
+										<tbody>
+											<tr>
+												<th scope="col">
+													<span class="blind">신한글로벌탄소중립솔루션증권투자신탁(H)(주식)</span>
+													<strong>1개월</strong>
+												</th>
+												<th scope="col">
+													<span class="blind">피델리티글로벌대당인컴증권자투자신탁(주식-재간접형)</span>
+													<strong>1개월</strong>
+												</th>
+											</tr>
+											<tr>
+												<td class="fc-red-500">+11.54%</td>
+												<td class="fc-blue-500">+11.54%</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>3개월</strong></th>
+												<th scope="col"><strong>3개월</strong></th>
+											</tr>
+											<tr>
+												<td class="fc-red-500">+11.54%</td>
+												<td class="fc-blue-500">+11.54%</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>6개월</strong></th>
+												<th scope="col"><strong>6개월</strong></th>
+											</tr>
+											<tr>
+												<td class="fc-red-500">+11.54%</td>
+												<td class="fc-blue-500">+11.54%</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>12개월</strong></th>
+												<th scope="col"><strong>12개월</strong></th>
+											</tr>
+											<tr>
+												<td class="fc-red-500">+11.54%</td>
+												<td class="fc-blue-500">+11.54%</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<p class="body-caption ar mt24">2024-11-13 기준</p>
+
+								<div class="btn-wrap py0 mt24">
+									<button type="button" class="btn-xsmall btn-outlined btn-round" data-micromodal-trigger="modal-diff">수익률 추이</button>
+								</div>
+							</div>
+
+							<div class="stroke stroke4"></div>
+
+							<div class="fund-diff-inner">
+								<h3 class="title-large">지표 정보</h3>
+								<div class="diff-table">
+									<table>
+										<caption>지표 정보</caption>
+										<tbody>
+											<tr>
+												<th scope="col">
+													<span class="blind">신한글로벌탄소중립솔루션증권투자신탁(H)(주식)</span>
+													<strong>표준 편차</strong>
+												</th>
+												<th scope="col">
+													<span class="blind">피델리티글로벌대당인컴증권자투자신탁(주식-재간접형)</span>
+													<strong>표준 편차</strong>
+												</th>
+											</tr>
+											<tr>
+												<td>
+													<dl class="group-list">
+														<div class="list">
+															<dt>1M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>3M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>6M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>12M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+													</dl>
+												</td>
+												<td>
+													<dl class="group-list">
+														<div class="list">
+															<dt>1M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>3M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>6M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>12M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+													</dl>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>샤프</strong></th>
+												<th scope="col"><strong>샤프</strong></th>
+											</tr>
+											<tr>
+												<td>
+													<dl class="group-list">
+														<div class="list">
+															<dt>1M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>3M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>6M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>12M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+													</dl>
+												</td>
+												<td>
+													<dl class="group-list">
+														<div class="list">
+															<dt>1M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>3M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>6M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>12M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+													</dl>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>베타</strong></th>
+												<th scope="col"><strong>베타</strong></th>
+											</tr>
+											<tr>
+
+												<td>
+													<dl class="group-list">
+														<div class="list">
+															<dt>1M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>3M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>6M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>12M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+													</dl>
+												</td>
+												<td>
+													<dl class="group-list">
+														<div class="list">
+															<dt>1M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>3M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>6M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>12M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+													</dl>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col"><strong>1R</strong></th>
+												<th scope="col"><strong>1R</strong></th>
+											</tr>
+											<tr>
+
+												<td>
+													<dl class="group-list">
+														<div class="list">
+															<dt>1M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>3M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>6M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>12M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+													</dl>
+												</td>
+												<td>
+													<dl class="group-list">
+														<div class="list">
+															<dt>1M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>3M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>6M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+														<div class="list">
+															<dt>12M</dt>
+															<dd>30.89(89)</dd>
+														</div>
+													</dl>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="btn-wrap py0 mt24">
+									<button type="button" class="btn-xsmall btn-outlined btn-round" data-micromodal-trigger="modal-diff02">자산구성 비교</button>
+								</div>
+
+							</div>
+
+							<div class="stroke stroke4"></div>
+
+							<div class="fund-diff-inner">
+								<h3 class="title-large">TOP5 종목 정보</h3>
+								<div class="diff-table">
+									<table>
+										<caption>TOP5 종목 정보</caption>
+										<tbody>
+											<tr>
+												<th scope="col">
+													<span class="blind">신한글로벌탄소중립솔루션증권투자신탁(H)(주식)</span>
+													<strong>종목1</strong>
+												</th>
+												<th scope="col">
+													<span class="blind">피델리티글로벌대당인컴증권자투자신탁(주식-재간접형)</span>
+													<strong>종목1</strong>
+												</th>
+											</tr>
+											<tr>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col">
+													<strong>종목2</strong>
+												</th>
+												<th scope="col">
+													<strong>종목2</strong>
+												</th>
+											</tr>
+											<tr>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col">
+													<strong>종목3</strong>
+												</th>
+												<th scope="col">
+													<strong>종목3</strong>
+												</th>
+											</tr>
+											<tr>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col">
+													<strong>종목4</strong>
+												</th>
+												<th scope="col">
+													<strong>종목4</strong>
+												</th>
+											</tr>
+											<tr>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col">
+													<strong>종목5</strong>
+												</th>
+												<th scope="col">
+													<strong>종목5</strong>
+												</th>
+											</tr>
+											<tr>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+
+							<div class="stroke stroke4"></div>
+
+							<div class="fund-diff-inner">
+								<h3 class="title-large">TOP5 업종 정보</h3>
+								<div class="diff-table">
+									<table>
+										<caption>TOP5 업종 정보</caption>
+										<tbody>
+											<tr>
+												<th scope="col">
+													<span class="blind">신한글로벌탄소중립솔루션증권투자신탁(H)(주식)</span>
+													<strong>업종1</strong>
+												</th>
+												<th scope="col">
+													<span class="blind">피델리티글로벌대당인컴증권자투자신탁(주식-재간접형)</span>
+													<strong>업종1</strong>
+												</th>
+											</tr>
+											<tr>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col">
+													<strong>업종2</strong>
+												</th>
+												<th scope="col">
+													<strong>업종2</strong>
+												</th>
+											</tr>
+											<tr>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col">
+													<strong>업종3</strong>
+												</th>
+												<th scope="col">
+													<strong>업종3</strong>
+												</th>
+											</tr>
+											<tr>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col">
+													<strong>업종4</strong>
+												</th>
+												<th scope="col">
+													<strong>업종4</strong>
+												</th>
+											</tr>
+											<tr>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col">
+													<strong>업종5</strong>
+												</th>
+												<th scope="col">
+													<strong>업종5</strong>
+												</th>
+											</tr>
+											<tr>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+												<td>
+													<dl>
+														<dt>NBIDIA</dt>
+														<dd>0.00%</dd>
+													</dl>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<p class="body-caption ac mt24">자료제공 : 제로인</p>
+
+								<ul class="dot-list p0 mt24">
+									<li>펀드 상품 특성에 따라 내용이 빈칸으로 표기될 수 있습니다. 자세한 내용은 투자설명서를 통해 확인할 수 있습니다.</li>
+									<li>본 리포트는 단순 펀드 정보 제공을 목적으로 하며, 특정 운용사나 펀드를 권고하거나 거래를 목적으로 하지 않습니다. 본 리포트의 내용은 운용사가 공시간 기준가, 운용내역 등 신뢰할 만한 판단자료로 얻어진 것이나 그 정확성이나 완전성을 우리은행이 보증하는 것은 아닙니다. 또한 본 리포트의 수익률이 미래의 수익률을 보장하는 것은 아니며 동 자료를 통해 투자한 결과에 대해 우리은행은 어떠한 법적 책임도 지지 않음을 알려드립니다.</li>
+									<li>역외펀드는 외국의 자산운용 회사, 투자국의 휴일이 있는 경우 데이터 수신이 지연될 수 있습니다. 단순 참고자료로만 이용하여 주시기 바랍니다.</li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+	</main>
+	<!-- //main -->
+
+
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-diff">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header">
+					<strong class="modal__title title-large">수익률 추이</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+
+						<!-- tab-content -->
+						<div class="tab-content">
+							<ul class="tab-list tab-button" role="tablist">
+								<li class="tab tab-active"><a role="tab" href="#">1개월</a></li>
+								<li class="tab"><a role="tab" href="#">3개월</a></li>
+								<li class="tab"><a role="tab" href="#">6개월</a></li>
+								<li class="tab"><a role="tab" href="#">12개월</a></li>
+							</ul>
+						</div>
+						<!-- //tab-content -->
+
+						<div class="chart-wrap mt24">
+							<div id="chart2" data-aos data-aos-id="chart2"></div>
+							<div class="group pb16 px24">
+								<div class="right">
+									<span class="divide-list">
+										<span class="fs-14">2024-11-13 기준</span>
+										<span class="division h14 mx8"></span>
+										<span class="fs-14">자료제공: 제로인</span>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- tab-content -->
+						<div class="tab-content">
+							<ul class="tab-list tab-col overflow-list" role="tablist">
+								<li class="tab tab-active"><a role="tab" href="#">수익률</a></li>
+								<li class="tab"><a role="tab" href="#">기준가</a></li>
+							</ul>
+						</div>
+						<!-- //tab-content -->
+
+						<div class="table-col mt24">
+							<table>
+								<colgroup>
+									<col style="width:35%;">
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="fs-15 fc-typography-caption ar vt">기준일</th>
+										<th scope="col" class="fs-15 fc-typography-caption ar vt">신한글로벌탄소중립솔루션증권투자신탁(H)(주식)</th>
+										<th scope="col" class="fs-15 fc-typography-caption ar vt">피델리티글로벌대당인컴증권자투자신탁(주식-재간접형)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row" class="ac">2025-01-10</th>
+										<td class="ar fc-red-600">+14.082%</td>
+										<td class="ar fc-red-600">+14.082%</td>
+									</tr>
+									<tr>
+										<th scope="row" class="ac">2025-01-10</th>
+										<td class="ar fc-deepblue-600">-10.762%</td>
+										<td class="ar fc-deepblue-600">-10.762%</td>
+									</tr>
+									<tr>
+										<th scope="row" class="ac">2025-01-10</th>
+										<td class="ar">0.00%</td>
+										<td class="ar">0.00%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- tab-content -->
+						<div class="tab-content">
+							<ul class="tab-list tab-col overflow-list" role="tablist">
+								<li class="tab"><a role="tab" href="#">수익률</a></li>
+								<li class="tab tab-active"><a role="tab" href="#">기준가</a></li>
+							</ul>
+						</div>
+						<!-- //tab-content -->
+
+						<div class="table-col mt24">
+							<table>
+								<colgroup>
+									<col style="width:35%;">
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="fs-15 fc-typography-caption ar vt">기준일</th>
+										<th scope="col" class="fs-15 fc-typography-caption ar vt">신한글로벌탄소중립솔루션증권투자신탁(H)(주식)</th>
+										<th scope="col" class="fs-15 fc-typography-caption ar vt">피델리티글로벌대당인컴증권자투자신탁(주식-재간접형)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row" class="ac">2025-01-10</th>
+										<td class="ar">88,888</td>
+										<td class="ar">88,888</td>
+									</tr>
+									<tr>
+										<th scope="row" class="ac">2025-01-10</th>
+										<td class="ar">88,888</td>
+										<td class="ar">88,888</td>
+									</tr>
+									<tr>
+										<th scope="row" class="ac">2025-01-10</th>
+										<td class="ar">88,888</td>
+										<td class="ar">88,888</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom micromodal-slide-bottom-full modal" id="modal-diff02">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header">
+					<strong class="modal__title title-large">자산구성 비교</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+
+						<div class="chart-wrap mt16">
+							<div id="chart3" data-aos data-aos-id="chart3"></div>
+							<div class="group pb16 px24">
+								<div class="right">
+									<span class="divide-list">
+										<span class="fs-14">자료제공: 제로인</span>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="table-col mt24">
+							<table>
+								<colgroup>
+									<col style="width:25%;">
+									<col>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="fs-15 fc-typography-caption ar vt"><span class="blind">분류</span></th>
+										<th scope="col" class="fs-15 fc-typography-caption ar vt">신한글로벌탄소중립솔루션증권투자신탁(H)(주식)</th>
+										<th scope="col" class="fs-15 fc-typography-caption ar vt">피델리티글로벌대당인컴증권자투자신탁(주식-재간접형)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row" class="al">국내주식</th>
+										<td class="ar">6%</td>
+										<td class="ar">4%</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">해외주식</th>
+										<td class="ar">6%</td>
+										<td class="ar">4%</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">국내채권</th>
+										<td class="ar">6%</td>
+										<td class="ar">4%</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">해외채권</th>
+										<td class="ar">6%</td>
+										<td class="ar">4%</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">펀드</th>
+										<td class="ar">6%</td>
+										<td class="ar">4%</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">유동성</th>
+										<td class="ar">6%</td>
+										<td class="ar">4%</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">기타</th>
+										<td class="ar">6%</td>
+										<td class="ar">4%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- division-center -->
+						<div class="division-center">
+
+							<div class="no-result">
+								<i class="icon-only icon-48 icon-noresult bg-icon-gray_1"></i>
+								<p class="body-medium fw-400">자산구성 비교정보가 존재하지 않습니다.</p>
+							</div>
+
+						</div>
+						<!-- //division-center -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+	<script>
+		var options2 = {
+			series: [{
+					name: "신한글로벌탄소중립솔루션증권투자신탁(H)(주식)",
+					data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+
+				},
+				{
+					name: "BM",
+					data: [1, 32, 26, 42, 40, 53, 60, 82, 18]
+				},
+				{
+					name: "유형평균",
+					data: [100, 320, 260, 420, 400, 530, 600, 820, 180]
+				}
+			],
+			chart: {
+				height: 180,
+				type: 'line',
+				zoom: {
+					enabled: false
+				},
+				toolbar: {
+					show: false,
+				}
+			},
+			colors: ['#7163EE', '#F35E9C', '#1AA3C1'],
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				curve: 'smooth',
+				width: [2, 2]
+			},
+			markers: {
+				size: 4,
+			},
+			grid: {
+				row: {
+					// colors: ['#E9ECEF', 'transparent'], // takes an array which will be repeated on columns
+					// opacity: 0.5
+				},
+			},
+			xaxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+			}
+		};
+
+		var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+
+		document.addEventListener('aos:in:chart2', ({
+			detail
+		}) => {
+			chart2.render();
+		});
+	</script>
+	<script>
+		var options3 = {
+			series: [{
+					name: "신한글로벌탄소중립솔루션증권투자신탁(H)(주식)",
+					data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+
+				},
+				{
+					name: "BM",
+					data: [1, 32, 26, 42, 40, 53, 60, 82, 18]
+				},
+				{
+					name: "유형평균",
+					data: [100, 320, 260, 420, 400, 530, 600, 820, 180]
+				}
+			],
+			chart: {
+				height: 180,
+				type: 'line',
+				zoom: {
+					enabled: false
+				},
+				toolbar: {
+					show: false,
+				}
+			},
+			colors: ['#7163EE', '#F35E9C', '#1AA3C1'],
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				curve: 'smooth',
+				width: [2, 2]
+			},
+			markers: {
+				size: 4,
+			},
+			grid: {
+				row: {
+					// colors: ['#E9ECEF', 'transparent'], // takes an array which will be repeated on columns
+					// opacity: 0.5
+				},
+			},
+			xaxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+			}
+		};
+
+		var chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
+
+		document.addEventListener('aos:in:chart3', ({
+			detail
+		}) => {
+			chart3.render();
+		});
+	</script>
+</body>
+
+</html>

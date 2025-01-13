@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="/resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="/resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="/resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="/resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="/resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="/resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>일정 검색</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+				<!-- content -->
+				<div class="content">
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-content">
+							<div class="form">
+								<div class="label"></div>
+								<div class="input-wrap">
+									<input type="text" placeholder="제목, 메모 입력" aria-label="일정 검색">
+									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+								</div>
+								<p class="validate-text"></p>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-title">
+							<strong class="title-medium">기간</strong>
+						</div>
+						<div class="group-content">
+							<div class="form">
+								<div class="label"></div>
+								<div class="input-wrap input-datepicker">
+									<button type="button" aria-label="대상기간 시작일" data-micromodal-trigger="modal-datepicker1">2023-11-11</button>
+									<div class="bul">-</div>
+									<button type="button" aria-label="대상기간 종료일" data-micromodal-trigger="modal-datepicker2">2024-11-12</button>
+								</div>
+								<p class="validate-text"></p>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-title">
+							<strong class="title-medium">일정유형</strong>
+						</div>
+						<div class="group-content">
+							<!-- inp-group -->
+							<div class="inp-group gap16 px0">
+								<div class="inp inp-medium">
+									<label>
+										<input type="checkbox" checked>
+										<span class="label-title">전체</span>
+									</label>
+								</div>
+								<div class="inp inp-medium">
+									<label>
+										<input type="checkbox" class="type-red" checked>
+										<span class="label-title">개인 일정</span>
+									</label>
+								</div>
+								<div class="inp inp-medium">
+									<label>
+										<input type="checkbox" class="type-purple" checked>
+										<span class="label-title">고객 생일</span>
+									</label>
+								</div>
+								<div class="inp inp-medium">
+									<label>
+										<input type="checkbox" class="type-cyan" checked>
+										<span class="label-title">수신 만기</span>
+									</label>
+								</div>
+							</div>
+							<!-- //inp-group -->
+						</div>
+					</div>
+					<!-- //group-form -->
+
+					<!-- schedule-section -->
+					<div class="schedule-section content-fluid pt40">
+						<div class="tags-wrap mb24">
+							<div class="tags tags-medium tags-white">2024년 11월 17일 목요일</div>
+						</div>
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-birth bg-purple-600" aria-label="생일"></i>
+								<strong class="title-medium">홍길동 생일</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-user bg-icon-gray_1"></i>
+										16842121654866
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-wallet bg-cyan-500" aria-label="수신만기"></i>
+								<strong class="title-medium">홍길동 수신만기</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-won bg-black-88"></i>
+										1,000,000,000,000원
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-birth bg-purple-600" aria-label="생일"></i>
+								<strong class="title-medium">홍길동 생일</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-user bg-icon-gray_1"></i>
+										16842121654866
+									</div>
+								</div>
+							</div>
+						</a>
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-calendar" aria-label="개인일정"></i>
+								<strong class="title-medium">일정 제목이 길어질 경우에는 이렇게 노출됩니다.</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner fc-typography-body">
+										<i class="icon-only icon-16 icon-time bg-icon-gray_1"></i>
+										하루종일
+									</div>
+									<span class="division h12 mx10"></span>
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-location bg-icon-gray_1"></i>
+										12층 3번 회의실
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-calendar-repeat" aria-label="개인일정 반복"></i>
+								<strong class="title-medium">일정 제목</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-time bg-icon-gray_1"></i>
+										오후 2:00 - 오후 4:30
+									</div>
+									<span class="division h12 mx10"></span>
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-location bg-icon-gray_1"></i>
+										12층 3번 회의실
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+
+					</div>
+					<!-- //schedule-section -->
+
+					<!-- schedule-section -->
+					<div class="schedule-section content-fluid pt40">
+						<div class="tags-wrap mb24">
+							<div class="tags tags-medium tags-white">2024년 11월 16일 목요일</div>
+						</div>
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-birth bg-purple-600" aria-label="생일"></i>
+								<strong class="title-medium">홍길동 생일</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-user bg-icon-gray_1"></i>
+										16842121654866
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-wallet bg-cyan-500" aria-label="수신만기"></i>
+								<strong class="title-medium">홍길동 수신만기</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-won bg-black-88"></i>
+										1,000,000,000,000원
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-birth bg-purple-600" aria-label="생일"></i>
+								<strong class="title-medium">홍길동 생일</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-user bg-icon-gray_1"></i>
+										16842121654866
+									</div>
+								</div>
+							</div>
+						</a>
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-calendar" aria-label="개인일정"></i>
+								<strong class="title-medium">일정 제목이 길어질 경우에는 이렇게 노출됩니다.</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner fc-typography-body">
+										<i class="icon-only icon-16 icon-time bg-icon-gray_1"></i>
+										하루종일
+									</div>
+									<span class="division h12 mx10"></span>
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-location bg-icon-gray_1"></i>
+										12층 3번 회의실
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+						<a href="#" class="schedule-list">
+							<div class="schedule-title">
+								<i class="icon-only icon-24 icon-calendar-repeat" aria-label="개인일정 반복"></i>
+								<strong class="title-medium">일정 제목</strong>
+							</div>
+							<div class="schedule-content">
+								<div class="schedule-detail">
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-time bg-icon-gray_1"></i>
+										오후 2:00 - 오후 4:30
+									</div>
+									<span class="division h12 mx10"></span>
+									<div class="schedule-detail-inner">
+										<i class="icon-only icon-16 icon-location bg-icon-gray_1"></i>
+										12층 3번 회의실
+									</div>
+								</div>
+							</div>
+						</a>
+
+
+
+					</div>
+					<!-- //schedule-section -->
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+
+	</main>
+	<!-- //main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker1" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+						<div class="datepicker-wrap">
+							<div class="datepicker-trigger" id="datepicker1"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker2" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+						<div class="datepicker-wrap">
+							<div class="datepicker-trigger" id="datepicker2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<script>
+		const modalTrigger1 = document.querySelectorAll('[data-micromodal-trigger="modal-datepicker1"]')
+		modalTrigger1.forEach(function(button) {
+
+			button.addEventListener("click", function(event) {
+				MicroModal.show('modal-datepicker1', {
+					// openTrigger: 'data-custom-open', // [3]
+					// closeTrigger: 'data-custom-close', // [4]
+					// openClass: 'is-open', // [5]
+					disableScroll: true, // [6]
+					disableFocus: true, // [7]
+					awaitOpenAnimation: true, // [8]
+					awaitCloseAnimation: true, // [9]
+					// debugMode: true // [10]
+					onShow: function(modalPopup) {
+						$("#datepicker1").datepicker({
+							dateFormat: 'yy-mm-dd',
+							prevText: '이전 달',
+							nextText: '다음 달',
+							monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+							dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+							dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+							showMonthAfterYear: true,
+							yearSuffix: '년',
+							// minDate: 0,
+							showButtonPanel: true,
+							closeText: "닫기",
+							showOtherMonths: true,
+							onSelect: function(input, date) {
+								MicroModal.close('modal-datepicker1');
+								button.innerText = input;
+							},
+						});
+					},
+					onClose: function(modalPopup) {
+						// console.log($(".jquery-datepicker").datepicker("refresh"))
+					}
+				});
+			});
+		})
+	</script>
+	<script>
+		const modalTrigger2 = document.querySelectorAll('[data-micromodal-trigger="modal-datepicker2"]')
+		modalTrigger2.forEach(function(button) {
+
+			button.addEventListener("click", function(event) {
+				MicroModal.show('modal-datepicker2', {
+					// openTrigger: 'data-custom-open', // [3]
+					// closeTrigger: 'data-custom-close', // [4]
+					// openClass: 'is-open', // [5]
+					disableScroll: true, // [6]
+					disableFocus: true, // [7]
+					awaitOpenAnimation: true, // [8]
+					awaitCloseAnimation: true, // [9]
+					// debugMode: true // [10]
+					onShow: function(modalPopup) {
+						$("#datepicker2").datepicker({
+							dateFormat: 'yy-mm-dd',
+							prevText: '이전 달',
+							nextText: '다음 달',
+							monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+							dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+							dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+							showMonthAfterYear: true,
+							yearSuffix: '년',
+							// minDate: 0,
+							showButtonPanel: true,
+							closeText: "닫기",
+							showOtherMonths: true,
+							onSelect: function(input, date) {
+								MicroModal.close('modal-datepicker2');
+								button.innerText = input;
+							},
+						});
+					},
+					onClose: function(modalPopup) {
+						// console.log($(".jquery-datepicker").datepicker("refresh"))
+					}
+				});
+			});
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="/resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="/resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="/resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="/resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="/resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="/resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-logo-btn"><i></i>PB WON</button>
+				</div>
+				<div class="center">
+					<h1><span class="blind">PBWON 홈</span></h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<!-- visual-headline -->
+					<div class="visual-headline">
+						<figure>
+							<picture>
+								<source srcset="/resources/images/PBWMA/image_headline.svg">
+								<img src="/resources/images/PBWMA/image_headline.svg" alt="">
+							</picture>
+							<figcaption>
+								<span><b>김우리</b>님 안녕하세요</span>
+								<strong>오늘의 일정 <br> 잊지말고 챙기세요!</strong>
+							</figcaption>
+						</figure>
+
+					</div>
+					<!-- visual-headline -->
+
+					<!-- main-schedule-section -->
+					<div class="main-schedule-section">
+						<div class="main-schedule-title">
+							<div class="today">
+								<strong>17</strong>
+								<div class="date">11월 17일 목요일</div>
+							</div>
+							<a href="#" class="anchor chevron fs-15">전체보기</a>
+						</div>
+
+						<div class="main-schedule-week">
+							<ul>
+								<li class="weekend">
+									<div class="date">
+										<div class="text">13</div>
+									</div>
+								</li>
+								<li class="is-schedule">
+									<div class="date">
+										<div class="text">14</div>
+										<div class="schedule-wrap">
+											<div class="sc-label label02" aria-label="고객 생일"></div>
+											<div class="sc-label label03" aria-label="수신 만기"></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="date">
+										<div class="text">15</div>
+									</div>
+								</li>
+								<li>
+									<div class="date">
+										<div class="text">16</div>
+									</div>
+								</li>
+								<li class="is-schedule today">
+									<div class="date">
+										<div class="text">17</div>
+										<div class="schedule-wrap">
+											<div class="sc-label label01" aria-label="개인 일정"></div>
+											<div class="sc-label label02" aria-label="고객 생일"></div>
+											<div class="sc-label label03" aria-label="수신 만기"></div>
+										</div>
+									</div>
+								</li>
+								<li class="is-schedule">
+									<div class="date">
+										<div class="text">18</div>
+										<div class="schedule-wrap">
+											<div class="sc-label label02" aria-label="고객 생일"></div>
+										</div>
+									</div>
+								</li>
+								<li class="weekend">
+									<div class="date">
+										<div class="text">19</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="main-schedule-list">
+							<ul>
+								<li>
+									<a href="#">
+										<div class="tag-wrap">
+											<div class="tags tags-small tags-lightCyan tags-round">수신만기</div>
+										</div>
+										<div class="schedule-title">
+											<div class="schedule-title-inner">
+												<i class="icon-only icon-24 icon-wallet bg-cyan-500" aria-label="수신만기"></i>
+												<strong class="title-small"><span>홍*동</span></strong>
+											</div>
+											<div class="value">100,000,000원</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="tag-wrap">
+											<div class="tags tags-small tags-lightCyan tags-round">수신만기</div>
+										</div>
+										<div class="schedule-title">
+											<div class="schedule-title-inner">
+												<i class="icon-only icon-24 icon-wallet bg-cyan-500" aria-label="수신만기"></i>
+												<strong class="title-small"><span>Young *********** Park 수신만기</span></strong>
+											</div>
+											<div class="value">100,000,000원</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="tag-wrap">
+											<div class="tags tags-small tags-lightPurple tags-round">고객생일</div>
+										</div>
+										<div class="schedule-title">
+											<div class="schedule-title-inner">
+												<i class="icon-only icon-24 icon-birth bg-purple-600" aria-label="생일"></i>
+												<strong class="title-small"><span>홍*동 생일</span></strong>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<div class="mt8 ac">
+								<a href="#" class="anchor chevron chevron-down fs-15">2건 더보기</a>
+							</div>
+						</div>
+
+						<div class="main-schedule-list">
+							<ul>
+								<li>
+									<a href="#">
+										<div class="tag-wrap">
+											<div class="tags tags-small tags-lightBlue tags-round">하루종일</div>
+										</div>
+										<div class="schedule-title">
+											<div class="schedule-title-inner">
+												<i class="icon-only icon-24 icon-calendar" aria-label="개인일정"></i>
+												<strong class="title-small"><span>본부 Workshop</span></strong>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="tag-wrap">
+											<div class="tags">오후 12:00</div>
+										</div>
+										<div class="schedule-title">
+											<div class="schedule-title-inner">
+												<i class="icon-only icon-24 icon-calendar-repeat" aria-label="개인일정 반복"></i>
+												<strong class="title-small"><span>팀 주간보고(연말 성과 보고 및 송년회)</span></strong>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<div class="mt8 ac">
+								<a href="#" class="anchor chevron chevron-down fs-15">2건 더보기</a>
+							</div>
+						</div>
+					</div>
+					<!-- main-schedule-section -->
+
+					<!-- main-stock-section -->
+					<div class="main-stock-section content-fluid">
+						<div class="main-section-title">
+							<strong class="title-large">주요 지수</strong>
+							<a href="#" class="anchor chevron fs-15">전체보기</a>
+						</div>
+						<div class="main-stock-list">
+							<ul class="overflow-list">
+								<li>
+									<a href="#">
+										<dl>
+											<dt>코스피 <i class="live-on" aria-label="실시간"></i></dt>
+											<dd>
+												<strong>9,999.99</strong>
+												<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
+											</dd>
+											<dd>
+												<div class="tags tags-small tags-red-100" aria-label="등락율">+99.99%</div>
+											</dd>
+										</dl>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<dl>
+											<dt>코스닥 <i class="live-off" aria-label="비 실시간"></i></dt>
+											<dd>
+												<strong>9,999.99</strong>
+												<div class="stock fall" aria-label="등락폭(하락)">888.88</div>
+											</dd>
+											<dd>
+												<div class="tags tags-small tags-deepBlue" aria-label="등락율">-00.00</div>
+											</dd>
+										</dl>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<dl>
+											<dt>미국 USD <i class="live-on" aria-label="실시간"></i></dt>
+											<dd>
+												<strong>9,999.99</strong>
+												<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
+											</dd>
+											<dd>
+												<div class="tags tags-small tags-lightGray" aria-label="등락율">00.00</div>
+											</dd>
+										</dl>
+									</a>
+								</li>
+							</ul>
+							<div class="body-caption px4 ar mt8">2024-10-15 01:00 기준</div>
+						</div>
+					</div>
+					<!-- //main-stock-section -->
+
+					<!-- main-figure-section -->
+					<div class="main-figure-section">
+						<div class="main-section-title">
+							<strong class="title-large">펀드 동향</strong>
+						</div>
+						<div class="main-figure-list">
+							<ul>
+								<li>
+									<figure>
+										<picture>
+											<source srcset="/resources/images/PBWMA/ico_fig_main_list01.svg">
+											<img src="/resources/images/PBWMA/ico_fig_main_list01.svg" alt="">
+										</picture>
+										<figcaption>수익률 Best</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<picture>
+											<source srcset="/resources/images/PBWMA/ico_fig_main_list02.svg">
+											<img src="/resources/images/PBWMA/ico_fig_main_list02.svg" alt="">
+										</picture>
+										<figcaption>판매 Best</figcaption>
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<picture>
+											<source srcset="/resources/images/PBWMA/ico_fig_main_list03.svg">
+											<img src="/resources/images/PBWMA/ico_fig_main_list03.svg" alt="">
+										</picture>
+										<figcaption>이달의 추천</figcaption>
+									</figure>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //main-figure-section -->
+
+					<!-- main-banner-section -->
+					<div class="main-banner-section">
+						<div class="swiper mySwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#">
+										<picture>
+											<source srcset="/resources/images/PBWMA/img_banner01.png">
+											<img src="/resources/images/PBWMA/img_banner01.png" alt="">
+										</picture>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#">
+										<picture>
+											<source srcset="/resources/images/PBWMA/img_banner01.png">
+											<img src="/resources/images/PBWMA/img_banner02.png" alt="">
+										</picture>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+					<!-- main-banner-section -->
+
+					<!-- main-notice-section -->
+					<div class="main-notice-section">
+						<div class="main-section-title">
+							<strong class="title-large">공지사항</strong>
+							<a href="#" class="anchor chevron fs-15">전체보기</a>
+						</div>
+						<div class="main-notice-list">
+							<a href="#">
+								<p>우리은행 PB영업지원 APP이 오픈되었습니다.</p>
+								<div class="date">2024-11-04</div>
+							</a>
+							<a href="#">
+								<p class="description caution body-small fc-typography-caption ac">공지사항이 없습니다.</p>
+							</a>
+						</div>
+					</div>
+					<!-- //main-notice-section -->
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+
+			<div class="main-nav">
+				<ul>
+					<li class="list01">
+						<a href="#">
+							<div class="icon"><i class="icon-only icon-32 icon-nav01 bg-icon-gray_1"></i></div>
+							<strong>펀드</strong>
+						</a>
+					</li>
+					<li class="list02">
+						<a href="#">
+							<div class="icon"><i class="icon-only icon-32 icon-nav02 bg-icon-gray_1"></i></div>
+							<strong>투자정보</strong>
+						</a>
+					</li>
+					<li class="list03 is-current">
+						<a href="#" aria-current="page">
+							<div class="icon"><i class="icon-only icon-32 icon-nav03 bg-icon-gray_1"></i></div>
+							<strong>홈</strong>
+						</a>
+					</li>
+					<li class="list04">
+						<a href="#">
+							<div class="icon"><i class="icon-only icon-32 icon-nav04 bg-icon-gray_1"></i></div>
+							<strong>금융+</strong>
+						</a>
+					</li>
+					<li class="list05 not-read" aria-label="알림 있음">
+						<a href="#">
+							<div class="icon"><i class="icon-only icon-32 icon-nav05 bg-icon-gray_1"></i></div>
+							<strong>알림</strong>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- //bottom-btn -->
+
+
+
+	</main>
+	<!-- //main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-notice" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+						<strong class="title-medium">이곳에 공지사항의 제목이 들어갑니다.</strong>
+						<p class="fs-18 fw-400 px4 mt10">공지내용입니다. <br> 우리은행 PB영업지원 APP이 오픈되었습니다. 업무에 많은 도움이 되길 바랍니다. 공지내용입니다.</p>
+
+					</div>
+
+				</div>
+
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap pt16 pb0">
+							<button type="button" class="btn-large btn-primary" data-micromodal-close="">자세히 보기</button>
+						</div>
+						<div class="btn-wrap pt8 pb16">
+							<button type="button" class="btn-large fs-18" data-micromodal-close="">더 이상 보지 않기</button>
+							<button type="button" class="btn-large fs-18" data-micromodal-close="">닫기</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<script>
+		var swiper = new Swiper(" .mySwiper", {
+			slidesPerView: 1,
+			spaceBetween: 16,
+			pagination: {
+				el: ".swiper-pagination",
+			}
+		});
+		MicroModal.show('modal-notice');
+	</script>
+</body>
+
+</html>

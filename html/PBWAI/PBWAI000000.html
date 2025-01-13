@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="/resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="/resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="/resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="/resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="/resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="/resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>AI 지식상담</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<div class="chatgpt-wrap content-fluid px0">
+						<div class="chatgroup">
+
+							<!-- Intro -->
+							<div class="chatbody chatbody-intro">
+								<div class="message-text left">
+									<div class="cha">
+										<picture>
+											<source srcset="/resources/images/PBWAI/message_intro.svg">
+											<img src="/resources/images/PBWAI/message_intro.svg" alt="">
+										</picture>
+									</div>
+									<p class="text">우리은행 ChatGPT, AI 지식상담입니다. <br> 다음과 같이 구체적으로 물어보시면 도움되는 답변을 받으실 수 있어요</p>
+
+									<ul class="btn-link">
+										<li><button type="button" class="question-link">오늘의 주요 지수 알려줘</button></li>
+										<li><button type="button" class="question-link">3개월 기준 수익률 높은 펀드 알려줘</button></li>
+									</ul>
+
+									<p class="description caution body-small fc-typography-caption fw-400">고객의 개인정보, 직원정보, 행내한 자료 등이 외부로 유출되거나, 투자권유 등에 활용되지 않도록 유의하시기 바랍니다.</p>
+									<p class="description info body-small fc-typography-caption fw-400">이용 문의는 빅데이터플랫폼부(0000-0000)에 문의바랍니다.</p>
+
+								</div>
+							</div>
+							<!-- //Intro -->
+
+
+							<!-- 공지사항 -->
+							<div class="chatbody chatbody-notice">
+								<div class="message-text left">
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="body-caption ar px4">2024.08.30</div>
+												<strong class="title-large mt2">환전주머니 환율 우대율이 변경 안내</strong>
+												<div class="comment-desc" data-toggle="toggle-wrap">
+													<div class="comment-desc-inner">
+														<p class="text">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+													</div>
+													<div class="comment-toggle-wrap">
+														<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
+															<span class="toggle-off">더보기</span>
+															<span class="toggle-on">접기</span>
+														</button>
+													</div>
+												</div>
+
+												<ul class="btn-link">
+													<li><button type="button" class="question-link">오늘의 주요 지수 알려줘</button></li>
+													<li><button type="button" class="question-link">3개월 기준 수익률 높은 펀드 알려줘기준 수익률 높은 펀드 알려줘</button></li>
+													<li><button type="button" class="question-link">3개월 기준 수익률 높은 펀드 알려줘기준 수익률 높은 펀드 알려줘</button></li>
+												</ul>
+											</div>
+											<div class="swiper-slide">
+												<div class="body-caption ar px4">2024.08.30</div>
+												<strong class="title-large mt2">환전주머니 환율 우대율이 변경 안내</strong>
+												<div class="comment-desc" data-toggle="toggle-wrap">
+													<div class="comment-desc-inner">
+														<p class="text">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+													</div>
+													<div class="comment-toggle-wrap">
+														<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
+															<span class="toggle-off">더보기</span>
+															<span class="toggle-on">접기</span>
+														</button>
+													</div>
+												</div>
+
+												<ul class="btn-link">
+													<li><button type="button" class="question-link">오늘의 주요 지수 알려줘</button></li>
+													<li><button type="button" class="question-link">3개월 기준 수익률 높은 펀드 알려줘기준 수익률 높은 펀드 알려줘</button></li>
+													<li><button type="button" class="question-link">3개월 기준 수익률 높은 펀드 알려줘기준 수익률 높은 펀드 알려줘</button></li>
+												</ul>
+											</div>
+											<div class="swiper-slide">
+												<div class="body-caption ar px4">2024.08.30</div>
+												<strong class="title-large mt2">환전주머니 환율 우대율이 변경 안내</strong>
+												<div class="comment-desc" data-toggle="toggle-wrap">
+													<div class="comment-desc-inner">
+														<p class="text">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+													</div>
+													<div class="comment-toggle-wrap">
+														<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
+															<span class="toggle-off">더보기</span>
+															<span class="toggle-on">접기</span>
+														</button>
+													</div>
+												</div>
+
+												<ul class="btn-link">
+													<li><button type="button" class="question-link">오늘의 주요 지수 알려줘</button></li>
+													<li><button type="button" class="question-link">3개월 기준 수익률 높은 펀드 알려줘기준 수익률 높은 펀드 알려줘</button></li>
+													<li><button type="button" class="question-link">3개월 기준 수익률 높은 펀드 알려줘기준 수익률 높은 펀드 알려줘</button></li>
+												</ul>
+											</div>
+										</div>
+										<div class="swiper-button-next"></div>
+										<div class="swiper-button-prev"></div>
+									</div>
+
+								</div>
+							</div>
+							<!-- //공지사항 -->
+
+							<!-- 답변1 -->
+							<div class="chatbody">
+								<div class="message-text left">
+									<p class="text">원칙적으로 불가합니다. <br> 대리인을 통해 신규한 경우라도 대리인 해지는 원칙적으로 불가합니다.<br> 단, 예금업무메뉴얼 26조에 근거하여 아래의 경우 영업점 판단하에 예금의 해지절차에 준하여 업무처리하되 개인형 IRP는 퇴직금과 퇴직연금으로 해지 가능합니다.</p>
+									<div class="sub-text">
+										<div class="tags tags-small tags-lightBlue">관련민원</div>
+										<strong class="title-small">모바일 운전면허증</strong>
+										<p class="text fs-15">영업점에서 체크카드 수령 시 본인 확인을 위해 직원에게 모바일 운전면허증을 제시하였으나, 모바일 운전면허증을 제시하였으나, 모바일 운전면허증으로는 본인 확인이 불가하여 카드를 교부할 수 없다고 직원이 안내</p>
+									</div>
+									<div class="message-footer">
+										<div class="left">
+											<div class="btn-rating-wrap">
+												<button type="button" class="btn-rating" aria-label="좋아요">
+													<i class="icon-only icon-20 icon-thumbsup bg-icon-gray_1"></i>
+												</button>
+												<button type="button" class="btn-rating" aria-label="싫어요">
+													<i class="icon-only icon-20 icon-thumbsdown bg-icon-gray_1"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="message-text left">
+									<ol class="number-list">
+										<li>
+											<div class="number-list-title">
+												<i>1</i>
+												<div class="tags tags-small tags-lightBlue">고객센터</div>
+												<span class="date">2024.08.30</span>
+											</div>
+											<p class="text">주택보증공사 임대보증금</p>
+										</li>
+										<li>
+											<div class="number-list-title">
+												<i>2</i>
+												<div class="tags tags-small tags-lightBlue">부서홈페이지</div>
+												<span class="date">2024.08.30</span>
+											</div>
+											<p class="text">통화스왑업무개시</p>
+											<ul class="file-attach-list">
+												<li><a href="#" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+												<li><a href="#" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+											</ul>
+										</li>
+										<li>
+											<div class="number-list-title">
+												<i>3</i>
+												<div class="tags tags-small tags-lightBlue">고객센터</div>
+												<span class="date">2024.08.30</span>
+											</div>
+											<p class="text">주택보증공사 임대보증금</p>
+											<ul class="file-attach-list">
+												<li><a href="#" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+												<li><a href="#" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+											</ul>
+										</li>
+									</ol>
+								</div>
+							</div>
+							<!-- //답변1 -->
+
+
+							<!-- 답변2 -->
+							<div class="chatbody">
+								<div class="message-text left">
+									<p class="text">자산관리 사업 담당자는 홍길동 차장입니다.</p>
+									<div class="message-footer">
+										<div class="left">
+											<div class="btn-rating-wrap">
+												<button type="button" class="btn-rating" aria-label="좋아요">
+													<i class="icon-only icon-20 icon-thumbsup bg-icon-gray_1"></i>
+												</button>
+												<button type="button" class="btn-rating" aria-label="싫어요">
+													<i class="icon-only icon-20 icon-thumbsdown bg-icon-gray_1"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="message-text left">
+									<p class="text">자산관리 사업 담당자는 아래와 같습니다.</p>
+									<div class="sub-text">
+										<dl class="group j-start py0 gap10">
+											<dt>성명 :</dt>
+											<dd>홍길동 [휴가~23.12.29]</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>직위/호칭 :</dt>
+											<dd>과장</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>소속 :</dt>
+											<dd>우리은행/자산관리플랫폼부</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>행번 :</dt>
+											<dd>00000000</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>전화번호 :</dt>
+											<dd>800012345</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>팩스번호 :</dt>
+											<dd>0505-002-0000</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>메일주소 :</dt>
+											<dd>abcd@wooribank.com</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>대직자 :</dt>
+											<dd>김우리 부장대우, 이우리 차장</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>담당업무 :</dt>
+											<dd>데이터자산화 팀장-팀업무전반</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>세부업무 :</dt>
+											<dd>대면자산관리 채널 관리 및 운영</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>자격증 :</dt>
+											<dd>정보처리기사</dd>
+										</dl>
+									</div>
+
+								</div>
+							</div>
+							<!-- //답변2 -->
+
+							<!-- 답변2 -->
+							<div class="chatbody">
+								<div class="message-text left">
+									<p class="text">기업진단시스템 박아이 URL은 아래와 같습니다.</p>
+									<ul class="message-link">
+										<li><a href="http://srj.woorifg.com:8080">http://srj.woorifg.com:8080</a></li>
+									</ul>
+									<p class="text">URL을 클릭하시면 바로 이동하실 수 있습니다.</p>
+									<div class="message-footer">
+										<div class="left">
+											<div class="btn-rating-wrap">
+												<button type="button" class="btn-rating" aria-label="좋아요">
+													<i class="icon-only icon-20 icon-thumbsup bg-icon-gray_1"></i>
+												</button>
+												<button type="button" class="btn-rating" aria-label="싫어요">
+													<i class="icon-only icon-20 icon-thumbsdown bg-icon-gray_1"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //답변2 -->
+
+							<!-- 질문 -->
+							<div class="chatbody">
+								<div class="message-text right">
+									<p class="text">안녕하세요.</p>
+								</div>
+							</div>
+							<!-- //질문 -->
+
+						</div>
+					</div>
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<div class="input-wrap"><input type="text" placeholder="궁금하신 사항을 질문하세요."></div>
+				<button type="button" class="btn-large btn-primary" id="btn-send-text" style="flex:0">확인</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+
+
+	</main>
+	<!-- //main -->
+
+
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 1.02,
+			spaceBetween: 8,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+		});
+
+
+		$('#btn-send-text').click(function() {
+			// $('.input-wrap input').focus()
+			var inputText = $('.input-wrap input').val();
+			$('.chatgroup .chatbody:last').after('<div class="chatbody"><div class="message-text right"><p class="text">' + inputText + '</p></div></div>')
+			scrollBottom();
+			$('.input-wrap input').val('')
+		})
+		// scroll page bottom animation 100%
+		var scrollBottom = function() {
+			var $el = $('html, body');
+			var $elDefaultHeight = $(window).height();
+			var scrollTime = 400;
+			$('html,body').stop().animate({
+				scrollTop: $el.prop('scrollHeight')
+			}, scrollTime);
+		}
+	</script>
+
+</body>
+
+</html>

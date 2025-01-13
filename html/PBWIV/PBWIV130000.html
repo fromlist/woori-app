@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="/resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="/resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="/resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="/resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="/resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="/resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>지수분석</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<!-- sort-wrap -->
+					<div class="sort-wrap py0 mt40">
+						<!-- sort-list -->
+						<button class="sort-list mrauto" data-micromodal-trigger="modal-select-filter" aria-label="정렬">
+							<span class="filter">
+								<span>최근 3개월</span>
+							</span>
+							<span class="division mx8"></span>
+							<span class="filter">
+								<span>코스피</span>
+							</span>
+							<span class="division mx8"></span>
+							<span class="sort">과거 5년</span>
+						</button>
+						<!-- sort-list -->
+					</div>
+					<!-- sort-wrap -->
+
+
+					<div class="stock-analyze mt24">
+						<div class="top">
+							<div class="tags tags-small tags-lightBlue tags-round mr4">2023-08-09 ~ 2024-01-02</div> 기간과
+						</div>
+						<div class="bottom mt12"><strong>71% 유사</strong>합니다.</div>
+					</div>
+
+					<div class="content-fluid mt32 px0">
+						<div class="box">
+							<h2 class="headline-small">과거지수로 본 미래 예측</h2>
+
+							<div class="box-gray bg-background-bg_lightGray">
+								<div style="height:180px;">
+									<div id="chart1" data-aos data-aos-id="chart1"></div>
+								</div>
+							</div>
+
+							<div class="stroke my24"></div>
+
+							<p class="body-large fw-400 px0">최근 3개월간 코스피 지수는 약 6.5% 하락하였습니다. 이 기간에 유사한 기간은 약 71% 비슷하며, 이 유사기간동안 2,061에서 1,938으로 코스피 지수는 약 6.0% 하락하였습니다.
+								내용이 들어갑니다 내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다 내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다
+								내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다</p>
+
+							<p class="description caution body-small fc-typography-caption mt24">역외펀드의 경우, 데이터 제공업체로부터 제공받은 가장 최신의 수익률을 기반으로 안내하고 있으나 당일자 실제 수익률과는 차이가 있을 수 있습니다.</p>
+						</div>
+
+						<div class="stroke stroke4"></div>
+
+						<div class="box">
+							<h2 class="headline-small">그 당시 주요 경제지표는?</h2>
+
+							<!-- tab-content -->
+							<div class="tab-content mt24">
+								<ul class="tab-list tab-button" role="tablist">
+									<li class="tab tab-active"><a role="tab" href="#">달러/원</a></li>
+									<li class="tab"><a role="tab" href="#">유로/달러</a></li>
+									<li class="tab"><a role="tab" href="#">WTI</a></li>
+									<li class="tab"><a role="tab" href="#">금</a></li>
+								</ul>
+							</div>
+							<!-- //tab-content -->
+
+
+							<div class="box-gray bg-background-bg_lightGray">
+								<div style="height:180px;">
+									<div id="chart2" data-aos data-aos-id="chart2"></div>
+								</div>
+							</div>
+
+							<div class="stroke my24"></div>
+
+							<p class="description caution body-small fc-typography-caption fw-400 mt24">본 자료는 경제 및 투자여건에 대한 이해를 돕기 위한 정보제공 목적으로 작성, 배포되는 조사분석자료로서 특정 금융상품 또는 관련 서비스를 광고하기 위한 목적이 아니고, 내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다
+								내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다</p>
+
+
+						</div>
+					</div>
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+	</main>
+	<!-- //main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-select-filter">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+
+						<!-- group-form -->
+						<div class="group-form">
+							<div class="group-title py16 px8">
+								<strong class="title-large px0">지수 선택</strong>
+							</div>
+							<div class="group-content">
+								<div class="inp-group">
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">코스피</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">코스닥</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">나스닥</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">뉴욕</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">S&P500</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">상해종합</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">심천</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">항셍</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad001">
+											<span class="label-title">니케이</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form">
+							<div class="group-title py16 px8">
+								<strong class="title-large px0">기간 선택</strong>
+							</div>
+							<div class="group-content">
+								<div class="inp-group">
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad002">
+											<span class="label-title">3개월</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad002">
+											<span class="label-title">6개월</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad002">
+											<span class="label-title">12개월</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+
+						<!-- group-form -->
+						<div class="group-form mt16">
+							<div class="group-title py16 px8">
+								<strong class="title-large px0">과거구간 선택</strong>
+							</div>
+							<div class="group-content">
+								<div class="inp-group">
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad003">
+											<span class="label-title">5년</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad003">
+											<span class="label-title">10년</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad003">
+											<span class="label-title">20년</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+					</div>
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" data-micromodal-close>확인</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<script>
+		var options1 = {
+			series: [{
+					name: "과거",
+					data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+
+				},
+				{
+					name: "현재",
+					data: [1, 32, 26, 42, 40, 53, 60, 82, 18]
+				},
+			],
+			chart: {
+				height: 180,
+				type: 'line',
+				zoom: {
+					enabled: false
+				},
+				toolbar: {
+					show: false,
+				}
+			},
+			colors: ['#7163EE', '#F35E9C', '#1AA3C1'],
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				curve: 'smooth',
+				width: [2, 2]
+			},
+			markers: {
+				size: 4,
+			},
+			grid: {
+				row: {
+					// colors: ['#E9ECEF', 'transparent'], // takes an array which will be repeated on columns
+					// opacity: 0.5
+				},
+			},
+			xaxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+			}
+		};
+
+		var chart1 = new ApexCharts(document.querySelector("#chart1"), options1);
+
+		document.addEventListener('aos:in:chart1', ({
+			detail
+		}) => {
+			chart1.render();
+		});
+	</script>
+
+	<script>
+		var options2 = {
+			series: [{
+					name: "과거",
+					data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+
+				},
+				{
+					name: "현재",
+					data: [1, 32, 26, 42, 40, 53, 60, 82, 18]
+				},
+			],
+			chart: {
+				height: 180,
+				type: 'line',
+				zoom: {
+					enabled: false
+				},
+				toolbar: {
+					show: false,
+				}
+			},
+			colors: ['#7163EE', '#F35E9C', '#1AA3C1'],
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				curve: 'smooth',
+				width: [2, 2]
+			},
+			markers: {
+				size: 4,
+			},
+			grid: {
+				row: {
+					// colors: ['#E9ECEF', 'transparent'], // takes an array which will be repeated on columns
+					// opacity: 0.5
+				},
+			},
+			xaxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+			}
+		};
+
+		var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+
+		document.addEventListener('aos:in:chart2', ({
+			detail
+		}) => {
+			chart2.render();
+		});
+	</script>
+
+	<style>
+		.apexcharts-legend-marker {
+			border-radius: 4px !important;
+		}
+	</style>
+
+</body>
+
+</html>

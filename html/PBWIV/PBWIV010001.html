@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+	<!-- [plugins] -->
+	<!-- highlight -->
+	<link rel="stylesheet" href="/resources/plugins/highlight.js/11.9.0/styles/vs2015.min.css">
+	<script src="/resources/plugins/highlight.js/11.9.0/highlight.min.js"></script>
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<!-- quill -->
+	<link rel="stylesheet" href="/resources/plugins/quill/2.0.2/quill.snow.css">
+	<script src="/resources/plugins/quill/2.0.2/quill.js"></script>
+	<script src="/resources/plugins/quill/quill-resize-module/quill-resize-module.min.js"></script>
+	<!-- jstree -->
+	<link rel="stylesheet" href="/resources/plugins/jstree/3.3.16/themes/default/style.min.css">
+	<script src="/resources/plugins/jstree/3.3.16/jstree.min.js"></script>
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+	<!-- //[plugins] -->
+
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>지수 상세</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<div class="stock-detail">
+						<div class="stock-detail-title">
+							<dl>
+								<dt><strong class="headline-medium">코스피</strong></dt>
+								<dd>
+									<strong class="headline-large">9,999.99</strong>
+									<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
+									<!-- <div class="stock fall" aria-label="등락폭(하락)">888.88</div> -->
+									<!-- <div class="stock steady" aria-label="등락폭(보합)">00.00</div> -->
+
+									<div class="tags tags-small tags-red-100" aria-label="등락율">+99.99%</div>
+									<!-- <div class="tags tags-small tags-deepBlue" aria-label="등락율">-00.00</div> -->
+									<!-- <div class="tags tags-small tags-lightGray" aria-label="등락율">00.00</div> -->
+								</dd>
+							</dl>
+						</div>
+
+						<div class="favorite-btn-wrap" data-toggle="toggle-wrap">
+							<button type="button" data-toggle="toggle-trigger" id="success">
+								<i class="icon-only icon-36 icon-fav" data-switch-inner="true" data-switch-inner-before="icon-fav" data-switch-inner-after="icon-fav-active"></i>
+								<span class="toggle-off blind">관심펀드 등록</span>
+								<span class="toggle-on blind">관심펀드 등록해제</span>
+							</button>
+						</div>
+
+						<div class="stock-graph pt24 pb32 px16 mt24">
+
+							<div class="stock-rate">
+								<dl>
+									<dt>
+										1주일 전보다
+									</dt>
+									<dd>
+										<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
+										<!-- <div class="stock fall" aria-label="등락폭(하락)">888.88</div> -->
+										<!-- <div class="stock steady" aria-label="등락폭(보합)">00.00</div> -->
+
+										<div class="tags tags-small tags-red-100" aria-label="등락율">+99.99%</div>
+										<!-- <div class="tags tags-small tags-deepBlue" aria-label="등락율">-00.00</div> -->
+										<!-- <div class="tags tags-small tags-lightGray" aria-label="등락율">00.00</div> -->
+									</dd>
+								</dl>
+							</div>
+
+							<div class="mt32">
+								<div style="height:180px;">
+									<div id="chart2" data-aos="" data-aos-id="chart2" class="aos-init aos-animate" style="min-height: 195px;"></div>
+								</div>
+							</div>
+
+							<!-- tab-content -->
+							<div class="tab-content mt24">
+								<ul class="tab-list tab-button2" role="tablist">
+									<li class="tab tab-active"><a role="tab" href="#" aria-selected="true">1주일</a></li>
+									<li class="tab"><a role="tab" href="#" aria-selected="false">3개월</a></li>
+									<li class="tab"><a role="tab" href="#" aria-selected="false">1년</a></li>
+									<li class="tab"><a role="tab" href="#" aria-selected="false">3년</a></li>
+									<li class="tab"><a role="tab" href="#" aria-selected="false">5년</a></li>
+								</ul>
+							</div>
+							<!-- //tab-content -->
+
+							<div class="stroke px0 mt32"></div>
+							<dl class="group pb0">
+								<dt class="fs-18 fw-400 px-4">기초종가</dt>
+								<dd class="fs-18 fw-400 fc-status-info">9999.99</dd>
+							</dl>
+							<dl class="group pb0 pt12">
+								<dt class="fs-18 fw-400 px-4">기말종가</dt>
+								<dd class="fs-18 fw-400 fc-status-info">9999.99</dd>
+							</dl>
+							<dl class="group pb0 pt12">
+								<dt class="fs-18 fw-400 px-4">기간 최고(일)</dt>
+								<dd class="fs-18 fw-400 fc-status-info">9999.99(2024-11-21)</dd>
+							</dl>
+							<dl class="group pb0 pt12">
+								<dt class="fs-18 fw-400 px-4">기간 최저(일)</dt>
+								<dd class="fs-18 fw-400 fc-status-info">9999.99(2024-11-21)</dd>
+							</dl>
+
+							<div class="stroke px0 mt24"></div>
+
+							<div class="btn-wrap flex-column pt24 pb0">
+								<button type="button" class="btn-small btn-outlined btn-round w100" data-micromodal-trigger="modal-daily-stock">일자별 보기</button>
+								<button type="button" class="btn-small btn-outlined btn-round w100">시장지수 비교</button>
+								<button type="button" class="btn-small btn-outlined btn-round w100">환율정보상세</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+			<!-- //content -->
+		</div>
+		<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+
+	</main>
+	<!-- //main -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-daily-stock">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header">
+					<strong class="modal__title title-large">일자별 보기</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+
+						<div class="table-col">
+							<table class="table-layout-auto">
+								<caption>일자별 보기</caption>
+								<tbody>
+									<tr>
+										<th scope="row">
+											<div class="d-flex a-center gap2">
+												<div>2023-11-10</div>
+												<div class="tags tags-small tags-red-100" aria-label="등락율">기간최고</div>
+											</div>
+										</th>
+										<td>9999.99</td>
+										<td>
+											<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="d-flex a-center gap2">
+												<div>2023-11-09</div>
+												<div class="tags tags-small tags-deepBlue" aria-label="등락율">기간최저</div>
+											</div>
+										</th>
+										<td>9999.99</td>
+										<td>
+											<div class="stock fall" aria-label="등락폭(하락)">888.88</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="d-flex a-center gap2">
+												<div>2023-11-08</div>
+											</div>
+										</th>
+										<td>9999.99</td>
+										<td>
+											<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="d-flex a-center gap2">
+												<div>2023-11-08</div>
+											</div>
+										</th>
+										<td>9999.99</td>
+										<td>
+											<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="d-flex a-center gap2">
+												<div>2023-11-08</div>
+											</div>
+										</th>
+										<td>9999.99</td>
+										<td>
+											<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="d-flex a-center gap2">
+												<div>2023-11-08</div>
+											</div>
+										</th>
+										<td>9999.99</td>
+										<td>
+											<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="d-flex a-center gap2">
+												<div>2023-11-08</div>
+											</div>
+										</th>
+										<td>9999.99</td>
+										<td>
+											<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="d-flex a-center gap2">
+												<div>2023-11-08</div>
+											</div>
+										</th>
+										<td>9999.99</td>
+										<td>
+											<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="d-flex a-center gap2">
+												<div>2023-11-08</div>
+											</div>
+										</th>
+										<td>9999.99</td>
+										<td>
+											<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="d-flex a-center gap2">
+												<div>2023-11-08</div>
+											</div>
+										</th>
+										<td>9999.99</td>
+										<td>
+											<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="d-flex a-center gap2">
+												<div>2023-11-08</div>
+											</div>
+										</th>
+										<td>9999.99</td>
+										<td>
+											<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<div class="d-flex a-center gap2">
+												<div>2023-11-08</div>
+											</div>
+										</th>
+										<td>9999.99</td>
+										<td>
+											<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<script>
+		$('#success').click(function(event) {
+			if ($(this).closest('.favorite-btn-wrap').hasClass('is-toggled')) {
+				toastr.caution(``, '관심지수에서 삭제되었습니다.', {
+					"extendedTimeOut": 0,
+					"preventDuplicates": false,
+					"disableTimeOut": true,
+				});
+			} else {
+				toastr.success(``, '관심지수에 등록되었습니다', {
+					"extendedTimeOut": 0,
+					"preventDuplicates": false,
+					"disableTimeOut": true,
+				});
+			}
+		});
+	</script>
+
+	<script>
+		var options2 = {
+			series: [{
+				name: "신한글로벌탄소중립솔루션증권투자신탁(H)(주식)",
+				data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+
+			}, ],
+			chart: {
+				height: 180,
+				type: 'line',
+				zoom: {
+					enabled: false
+				},
+				toolbar: {
+					show: false,
+				}
+			},
+			colors: ['#7163EE', '#F35E9C', '#1AA3C1'],
+			dataLabels: {
+				enabled: false
+			},
+			stroke: {
+				curve: 'smooth',
+				width: [2, 2]
+			},
+			markers: {
+				size: 4,
+			},
+			grid: {
+				row: {
+					// colors: ['#E9ECEF', 'transparent'], // takes an array which will be repeated on columns
+					// opacity: 0.5
+				},
+			},
+			xaxis: {
+				categories: ['', '', '', '', '', '', '', '', ''],
+			}
+		};
+
+		var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+
+		document.addEventListener('aos:in:chart2', ({
+			detail
+		}) => {
+			chart2.render();
+		});
+	</script>
+
+</body>
+
+</html>
