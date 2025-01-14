@@ -85,7 +85,7 @@
 			<label class="scroll-items"><input type="radio" name="items1" /><span>21</span></label>
 			<label class="scroll-items"><input type="radio" name="items1" /><span>22</span></label>
 			<label class="scroll-items"><input type="radio" name="items1" /><span>23</span></label>
-			<label class="scroll-items"><input type="radio" name="items1" /><span>24</span></label>
+			<label class="scroll-items scroll-items-selected"><input type="radio" name="items1" /><span>24</span></label>
 		</section>
 		<section class="scroll-container">
 			<label class="scroll-items"><input type="radio" name="items2" /><span>00</span></label>
@@ -140,6 +140,18 @@
 			observer.observe(item)
 
 		});
+
+		const scrollWrap = document.querySelector('.scroll-container');
+		const scrollWrapFirst = scrollWrap.firstElementChild;
+		const scrollWrapFirstMargin = parseInt(window.getComputedStyle(scrollWrapFirst).marginTop, 10);
+		const scrollSelected = scrollWrap.querySelector('.scroll-items-selected');
+		if (scrollSelected != null) {
+			const selectedOffsetTop = scrollSelected.offsetTop;
+			scrollWrap.scrollTo({
+				top: selectedOffsetTop - scrollWrapFirstMargin,
+				behavior: 'smooth'
+			});
+		}
 	</script>
 </body>
 

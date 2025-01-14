@@ -374,7 +374,7 @@
 											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>수</span></label>
 											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>목</span></label>
 											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>금</span></label>
-											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>토</span></label>
+											<label class="scroll-items scroll-items-selected"><input type="radio" name="items1" class="blind"><span>토</span></label>
 										</section>
 										<section class="scroll-container" style="flex:1 1 30%;">
 											<label class="scroll-items"><input type="radio" name="items2" class="blind"><span class="j-start">요일</span></label>
@@ -871,6 +871,17 @@
 			observer1.observe(item)
 
 		});
+		const scrollWrap = document.querySelector('.scroll-container');
+		const scrollWrapFirst = scrollWrap.firstElementChild;
+		const scrollWrapFirstMargin = parseInt(window.getComputedStyle(scrollWrapFirst).marginTop, 10);
+		const scrollSelected = scrollWrap.querySelector('.scroll-items-selected');
+		if (scrollSelected != null) {
+			const selectedOffsetTop = scrollSelected.offsetTop;
+			scrollWrap.scrollTo({
+				top: selectedOffsetTop - scrollWrapFirstMargin,
+				behavior: 'smooth'
+			});
+		}
 	</script>
 </body>
 
