@@ -223,9 +223,9 @@
 							<strong class="title-medium">반복</strong>
 						</div>
 						<div class="group-content">
-							<button type="button" class="anchor chevron anchor-fluid anchor-border" data-micromodal-trigger="modal-repeat"><span class="body-large fw-700">3주 마다, 수요일</span></button>
-							<button type="button" class="anchor chevron anchor-fluid anchor-border" data-micromodal-trigger="modal-repeat"><span class="body-large fw-700">3주 마다, 수요일, 3회</span></button>
-							<button type="button" class="anchor chevron anchor-fluid anchor-border" data-micromodal-trigger="modal-repeat"><span class="body-large fw-700">3주 마다, 수요일, 2023-12-07까지</span></button>
+							<button type="button" class="anchor chevron anchor-fluid anchor-border" id="modal-repeat-trigger"><span class="body-large fw-700">3주 마다, 수요일</span></button>
+							<button type="button" class="anchor chevron anchor-fluid anchor-border" id="modal-repeat-trigger"><span class="body-large fw-700">3주 마다, 수요일, 3회</span></button>
+							<button type="button" class="anchor chevron anchor-fluid anchor-border" id="modal-repeat-trigger"><span class="body-large fw-700">3주 마다, 수요일, 2023-12-07까지</span></button>
 						</div>
 					</div>
 					<!-- //group-form -->
@@ -369,12 +369,12 @@
 									<div class="select-spinner" id="spinner01">
 										<section class="scroll-container" style="flex:1 1 70%;">
 											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>일</span></label>
-											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>월</span></label>
+											<label class="scroll-items scroll-items-selected"><input type="radio" name="items1" class="blind"><span>월</span></label>
 											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>화</span></label>
 											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>수</span></label>
 											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>목</span></label>
 											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>금</span></label>
-											<label class="scroll-items scroll-items-selected"><input type="radio" name="items1" class="blind"><span>토</span></label>
+											<label class="scroll-items "><input type="radio" name="items1" class="blind"><span>토</span></label>
 										</section>
 										<section class="scroll-container" style="flex:1 1 30%;">
 											<label class="scroll-items"><input type="radio" name="items2" class="blind"><span class="j-start">요일</span></label>
@@ -871,17 +871,39 @@
 			observer1.observe(item)
 
 		});
-		const scrollWrap = document.querySelector('.scroll-container');
-		const scrollWrapFirst = scrollWrap.firstElementChild;
-		const scrollWrapFirstMargin = parseInt(window.getComputedStyle(scrollWrapFirst).marginTop, 10);
-		const scrollSelected = scrollWrap.querySelector('.scroll-items-selected');
-		if (scrollSelected != null) {
-			const selectedOffsetTop = scrollSelected.offsetTop;
-			scrollWrap.scrollTo({
-				top: selectedOffsetTop - scrollWrapFirstMargin,
-				behavior: 'smooth'
+	</script>
+	<script>
+		const modalTrigger = document.querySelector('#modal-repeat-trigger')
+		modalTrigger.addEventListener("click", function() {
+			MicroModal.show('modal-repeat', {
+				// openTrigger: 'data-custom-open', // [3]
+				// closeTrigger: 'data-custom-close', // [4]
+				// openClass: 'is-open', // [5]
+				disableScroll: true, // [6]
+				disableFocus: true, // [7]
+				awaitOpenAnimation: true, // [8]
+				awaitCloseAnimation: true, // [9]
+				// debugMode: true // [10]
+				onShow: function(modal) {
+					console.log(1)
+					const scrollWrap = document.querySelector('.scroll-container');
+					const scrollWrapFirst = scrollWrap.firstElementChild;
+					const scrollWrapFirstMargin = parseInt(window.getComputedStyle(scrollWrapFirst).marginTop, 10);
+					const scrollSelected = scrollWrap.querySelector('.scroll-items-selected');
+					if (scrollSelected != null) {
+						const selectedOffsetTop = scrollSelected.offsetTop;
+						scrollWrap.scrollTo({
+							top: selectedOffsetTop - scrollWrapFirstMargin,
+							behavior: 'smooth'
+						});
+					}
+
+				},
+				onClose: function(modal) {
+					console.log('onclose');
+				}
 			});
-		}
+		});
 	</script>
 </body>
 
