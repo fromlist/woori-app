@@ -640,3 +640,5 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .banner {display:block;}
 .banner img {width:100%;}
 
+/* login */
+.login picture {display:flex;justify-content:center;}
