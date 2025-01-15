@@ -467,9 +467,9 @@ input:not([type="checkbox"],[type="radio"],[type="file"])[disabled] {color:var(-
 .input-placeholder .visible-placeholder:first-child {margin-left:0;margin-right:10px;}
 
 /* input-datepicker */
-.input-wrap.input-datepicker {font-size:18px;line-height:22px;font-weight:700;color:var(--typography-black);gap:4px;}
-.input-wrap.input-datepicker button {display:flex;align-items:center;justify-content:center;gap:8px;flex:1;text-align:center;padding:14px 0px;z-index:auto;opacity:1;background-color:transparent;width:auto;height:auto;}
-.input-wrap.input-datepicker button:after {content:'';flex:0 0 24px;width:24px;height:24px;background:url(/resources/images/form/form-datepicker.svg) center center / contain no-repeat;}
+.input-wrap.input-datepicker {font-size:18px;line-height:22px;font-weight:700;color:var(--typography-black);gap: 10px;}
+.input-wrap.input-datepicker button {position:relative;display:flex;align-items:center;justify-content:center;gap:6px;flex:1;text-align:center;padding: 14px 24px 14px 0;z-index:auto;opacity:1;background-color:transparent;width:auto;height:auto;min-height: 50px;}
+.input-wrap.input-datepicker button:after {content:'';position:absolute;right:0;top:50%;margin-top:-12px;flex:0 0 24px;width:24px;height:24px;background:url(/resources/images/form/form-datepicker.svg) center center / contain no-repeat;}
 .input-wrap.input-datepicker button:only-child {text-align:left;}
 .input-wrap.input-datepicker button:only-child:after {margin-left:auto;}
 
@@ -744,25 +744,25 @@ input[type="checkbox"].type-blue:checked {background:url(/resources/images/form/
     mask-image:url(/resources/images/toastr/ico_error.svg);
 }
 
-.description.headline-large {padding-left:32px;}
+.description.headline-large {padding-left:36px;}
 .description.headline-large:before {width:28px;height:28px;}
-.description.headline-medium {padding-left:28px;}
+.description.headline-medium {padding-left:32px;}
 .description.headline-medium:before {width:24px;height:24px;}
-.description.headline-small {padding-left:26px;}
+.description.headline-small {padding-left:30px;}
 .description.headline-small:before {width:22px;height:22px;}
-.description.title-large {padding-left:24px;}
+.description.title-large {padding-left:28px;}
 .description.title-large:before {width:20px;height:20px;}
-.description.title-medium {padding-left:22px;}
+.description.title-medium {padding-left:26px;}
 .description.title-medium:before {width:18px;height:18px;}
-.description.title-small {padding-left:20px;}
+.description.title-small {padding-left:24px;}
 .description.title-small:before {width:16px;height:16px;}
-.description.body-xlarge {padding-left:24px;font-weight:400;}
+.description.body-xlarge {padding-left:28px;font-weight:400;}
 .description.body-xlarge:before {width:20px;height:20px;}
-.description.body-large {padding-left:22px;font-weight:400;}
+.description.body-large {padding-left:26px;font-weight:400;}
 .description.body-large:before {width:18px;height:18px;}
-.description.body-medium {padding-left:20px;font-weight:400;}
+.description.body-medium {padding-left:24px;font-weight:400;}
 .description.body-medium:before {width:16px;height:16px;}
-.description.body-small {padding-left:18px;font-weight:400;}
+.description.body-small {padding-left:22px;font-weight:400;}
 .description.body-small:before {width:14px;height:14px;}
 
 .description.al {margin-right:auto;display:table;}

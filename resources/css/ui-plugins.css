@@ -378,7 +378,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 
 /* datepicker-wrap */
 .datepicker-wrap {}
-.datepicker-wrap .ui-widget.ui-widget-content {border:0;background-color:var(--white-100);color:var(--typography-black);border-radius:0;font-family:inherit;font-size:inherit;width:auto;padding:16px 0 0;height:425px;position:relative;overflow:hidden;}
+.datepicker-wrap .ui-widget.ui-widget-content {border:0;background-color:var(--white-100);color:var(--typography-black);border-radius:0;font-family:inherit;font-size:inherit;width:auto;padding:16px 0 0;height:456px;position:relative;overflow:hidden;}
 .datepicker-wrap .ui-datepicker .ui-datepicker-header {padding:0;border-radius:0;border:0;background-color:var(--white-100);margin-bottom:20px;font-size:26px;font-weight:500;color:var(--typography-black);}
 .datepicker-wrap .ui-datepicker .ui-datepicker-prev,
 .datepicker-wrap .ui-datepicker .ui-datepicker-next {top:0;width:52px;height:52px;background-color:var(--surface-surface50);border-radius:50%;display:flex;align-items:center;justify-content:center;}
@@ -419,6 +419,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .datepicker-wrap .ui-widget-content .ui-datepicker-today .ui-state-default {border:2px solid var(--blue-100);color:var(--brandPrimary-blue600);line-height:36px;}
 .datepicker-wrap .ui-widget-content .ui-datepicker-current-day.ui-datepicker-today .ui-state-active {line-height:36px;color:var(--typography-white);}
 
+.datepicker-wrap .ui-datepicker .ui-datepicker-buttonpane button {float:none;opacity:1;display: inline-flex;align-items: center;justify-content: center;height: 32px;font-size: 16px;border-width: 1px;border-radius: 8px;padding: 6px 12px;white-space: nowrap;text-align: center;vertical-align: top;gap: 4px;line-height: 18px;background-color: var(--button-outlined-enabled);color: var(--button-outlined-onEnabled);border-color: var(--button-outlined-border);border-style: solid;margin:0;}
 
 .datepicker-wrap .ui-state-disabled,
 .datepicker-wrap .ui-widget-content .ui-state-disabled,

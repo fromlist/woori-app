@@ -86,26 +86,10 @@
 				<!-- content -->
 				<div class="content">
 
-					<!-- group-form -->
-					<div class="group-form mt40">
-						<div class="group-content">
-							<div class="form">
-								<div class="label"></div>
-								<div class="input-wrap">
-									<input type="text" placeholder="제목, 메모 입력" aria-label="일정 검색">
-									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
-								</div>
-								<p class="validate-text"></p>
-							</div>
-						</div>
-					</div>
-					<!-- //group-form -->
+					<p class="description caution body-small fc-typography-caption mt24">개인일정의 제목과 메모의 내용에서 검색해드려요.</p>
 
 					<!-- group-form -->
-					<div class="group-form mt40">
-						<div class="group-title">
-							<strong class="title-medium">기간</strong>
-						</div>
+					<div class="group-form mt24">
 						<div class="group-content">
 							<div class="form">
 								<div class="label"></div>
@@ -120,44 +104,27 @@
 					</div>
 					<!-- //group-form -->
 
-
 					<!-- group-form -->
-					<div class="group-form mt40">
-						<div class="group-title">
-							<strong class="title-medium">일정유형</strong>
-						</div>
+					<div class="group-form mt24">
 						<div class="group-content">
-							<!-- inp-group -->
-							<div class="inp-group gap16 px0">
-								<div class="inp inp-medium">
-									<label>
-										<input type="checkbox" checked>
-										<span class="label-title">전체</span>
-									</label>
+							<div class="form">
+								<div class="label"></div>
+								<div class="input-wrap">
+									<input type="text" placeholder="검색어를 2자 이상 입력해 주세요." aria-label="일정 검색">
+									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 								</div>
-								<div class="inp inp-medium">
-									<label>
-										<input type="checkbox" class="type-red" checked>
-										<span class="label-title">개인 일정</span>
-									</label>
-								</div>
-								<div class="inp inp-medium">
-									<label>
-										<input type="checkbox" class="type-purple" checked>
-										<span class="label-title">고객 생일</span>
-									</label>
-								</div>
-								<div class="inp inp-medium">
-									<label>
-										<input type="checkbox" class="type-cyan" checked>
-										<span class="label-title">수신 만기</span>
-									</label>
-								</div>
+								<p class="validate-text"></p>
 							</div>
-							<!-- //inp-group -->
 						</div>
 					</div>
 					<!-- //group-form -->
+
+					<!-- btn-wrap -->
+					<div class="btn-wrap pt40 pb24">
+						<button type="button" class="btn-large btn-primary">검색</button>
+					</div>
+					<!-- //btn-wrap -->
+
 
 					<!-- schedule-section -->
 					<div class="schedule-section content-fluid pt40">
@@ -449,6 +416,7 @@
 							yearSuffix: '년',
 							// minDate: 0,
 							showButtonPanel: true,
+							currentText: "오늘",
 							closeText: "닫기",
 							showOtherMonths: true,
 							onSelect: function(input, date) {
@@ -492,6 +460,7 @@
 							yearSuffix: '년',
 							// minDate: 0,
 							showButtonPanel: true,
+							currentText: "오늘",
 							closeText: "닫기",
 							showOtherMonths: true,
 							onSelect: function(input, date) {

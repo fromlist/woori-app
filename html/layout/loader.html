@@ -58,22 +58,11 @@
 
 
 <body>
+	<script src="/resources/plugins/dotlottie-web/dotlottie-player.mjs" type="module"></script>
 
 	<div class="loader-wrap">
-		<canvas id="loader" style="width:360px"></canvas>
+		<dotlottie-player src="/resources/lottie/loader.json" background="transparent" speed="1" style="width: 360px; height:100%" direction="1" playMode="normal" loop autoplay></dotlottie-player>
 	</div>
-	<script type="module">
-		import {DotLottie} from "/resources/plugins/dotlottie-web/+esm.js";
-
-		new DotLottie({
-			autoplay: true,
-			loop: true,
-			canvas: document.getElementById("loader"),
-			loop: true,
-			autoplay: true,
-			src: "/resources/lottie/loader.lottie", // or .json file
-		});
-	</script>
 </body>
 
 </html>

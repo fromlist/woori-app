@@ -109,36 +109,24 @@
 								<li>
 									<a href="#">
 										<dl>
-											<dt>KOSPI <i class="live-on" aria-label="실시간"></i></dt>
-											<dd>
-												<strong>9,999.99</strong>
-												<div class="stock rise" aria-label="등락폭(상승)">00.00</div>
-												<div class="tags tags-small tags-red-100" aria-label="등락율">+00.00</div>
-											</dd>
+											<dt></dt>
+											<dd></dd>
 										</dl>
 									</a>
 								</li>
 								<li>
 									<a href="#">
 										<dl>
-											<dt>KOSDAQ <i class="live-on" aria-label="실시간"></i></dt>
-											<dd>
-												<strong>9,999.99</strong>
-												<div class="stock fall" aria-label="등락폭(하락)">100.00</div>
-												<div class="tags tags-small tags-deepBlue" aria-label="등락율">-00.00</div>
-											</dd>
+											<dt></dt>
+											<dd></dd>
 										</dl>
 									</a>
 								</li>
 								<li>
 									<a href="#">
 										<dl>
-											<dt>KOSPI200 <i class="live-off" aria-label="비 실시간"></i></dt>
-											<dd>
-												<strong>9,999.99</strong>
-												<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
-												<div class="tags tags-small tags-lightGray" aria-label="등락율">00.00</div>
-											</dd>
+											<dt></dt>
+											<dd></dd>
 										</dl>
 									</a>
 								</li>
@@ -161,6 +149,13 @@
 
 	</main>
 	<!-- //main -->
+
+	<script>
+		$('.content').addClass('loading')
+		setTimeout(function() {
+			$('.content').removeClass('loading')
+		}, 3000)
+	</script>
 
 </body>
 

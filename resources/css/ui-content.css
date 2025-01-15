@@ -1084,6 +1084,32 @@ button.flag-fluid span {margin-top:0;}
 .stock-index-list.content-fluid dl dt {font-size:18px;color:var(--typography-body);}
 .stock-index-list.content-fluid dl dd {display:flex;align-items:center;gap:8px;}
 
+
+.content.loading .stock-index-core {}
+.content.loading .stock-index-core ul {}
+.content.loading .stock-index-core ul li {}
+.content.loading .stock-index-core ul li:not(:last-child):after {}
+.content.loading .stock-index-core dl {padding:0 10px;}
+.content.loading .stock-index-core dl dt {height:15px;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius: 5px;background-size: 200% 100%;-webkit-animation: 1.5s shine linear infinite;animation: 1.5s shine linear infinite;}
+.content.loading .stock-index-core dl dd {height:37px;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius: 5px;background-size: 200% 100%;-webkit-animation: 1.5s shine linear infinite;animation: 1.5s shine linear infinite;}
+.content.loading .stock-index-core dl dd:last-child {height:23px;}
+
+.content.loading .stock-index-list a > * {flex:auto;}
+.content.loading .stock-index-list dl dt {height:15px;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius: 5px;background-size: 200% 100%;-webkit-animation: 1.5s shine linear infinite;animation: 1.5s shine linear infinite;}
+.content.loading .stock-index-list dl dd {height:18px;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius: 5px;background-size: 200% 100%;-webkit-animation: 1.5s shine linear infinite;animation: 1.5s shine linear infinite;}
+.content.loading .stock-index-list a > div {height:23px;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius: 5px;background-size: 200% 100%;-webkit-animation: 1.5s shine linear infinite;animation: 1.5s shine linear infinite;}
+.content.loading .stock-index-list .stock-remove {height:15px;}
+
+.content.loading .stock-index-list.content-fluid a {padding:24px;box-shadow:none;border-radius:0;}
+.content.loading .stock-index-list.content-fluid dl {}
+.content.loading .stock-index-list.content-fluid dl dt {height:18px;}
+.content.loading .stock-index-list.content-fluid dl dd {height:23px;}
+
+
+@keyframes shine {
+    to {background-position-x: -200%;}
+}
+
 /* stock-detail */
 .stock-detail {position:relative;padding-top:64px;}
 .stock-detail-title {padding-bottom:16px;}
