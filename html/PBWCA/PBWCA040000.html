@@ -424,6 +424,9 @@
 								button.innerText = input;
 							},
 						});
+						$("#datepicker1 .ui-datepicker-current").on('click', function() {
+							$('#datepicker1 .ui-datepicker-current-day').trigger('click');
+						})
 					},
 					onClose: function(modalPopup) {
 						// console.log($(".jquery-datepicker").datepicker("refresh"))
@@ -468,6 +471,10 @@
 								button.innerText = input;
 							},
 						});
+						$("#datepicker2 .ui-datepicker-current").on('click', function() {
+							console.log(1)
+							$('#datepicker2 .ui-datepicker-current-day').trigger('click');
+						})
 					},
 					onClose: function(modalPopup) {
 						// console.log($(".jquery-datepicker").datepicker("refresh"))
