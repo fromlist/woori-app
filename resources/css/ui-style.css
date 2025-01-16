@@ -467,8 +467,8 @@ input:not([type="checkbox"],[type="radio"],[type="file"])[disabled] {color:var(-
 .input-placeholder .visible-placeholder:first-child {margin-left:0;margin-right:10px;}
 
 /* input-datepicker */
-.input-wrap.input-datepicker {font-size:18px;line-height:22px;font-weight:700;color:var(--typography-black);gap: 10px;}
-.input-wrap.input-datepicker button {position:relative;display:flex;align-items:center;justify-content:center;gap:6px;flex:1;text-align:center;padding: 14px 24px 14px 0;z-index:auto;opacity:1;background-color:transparent;width:auto;height:auto;min-height: 50px;}
+.input-wrap.input-datepicker {font-size:18px;line-height:22px;font-weight:700;color:var(--typography-black);gap:10px;}
+.input-wrap.input-datepicker button {position:relative;display:flex;align-items:center;justify-content:center;gap:6px;flex:1;text-align:center;padding:14px 24px 14px 0;z-index:auto;opacity:1;background-color:transparent;width:auto;height:auto;min-height:50px;}
 .input-wrap.input-datepicker button:after {content:'';position:absolute;right:0;top:50%;margin-top:-12px;flex:0 0 24px;width:24px;height:24px;background:url(/resources/images/form/form-datepicker.svg) center center / contain no-repeat;}
 .input-wrap.input-datepicker button:only-child {text-align:left;}
 .input-wrap.input-datepicker button:only-child:after {margin-left:auto;}

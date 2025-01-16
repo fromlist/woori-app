@@ -61,8 +61,160 @@
 	<script src="/resources/plugins/dotlottie-web/dotlottie-player.mjs" type="module"></script>
 
 	<div class="loader-wrap">
-		<dotlottie-player src="/resources/lottie/loader.json" background="transparent" speed="1" style="width: 360px; height:100%" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+		<dotlottie-player src="/resources/lottie/loader.json" background="transparent" speed="1" style="width: 200px; height:100%" direction="1" playMode="normal" loop autoplay></dotlottie-player>
 	</div>
+
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>종합주요지수</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<!-- tab-content -->
+					<div class="tab-content tab-fluid">
+						<ul class="tab-list tab-col overflow-list px24" role="tablist">
+							<li class="tab tab-active"><a role="tab" href="#">주요지수</a></li>
+							<li class="tab"><a role="tab" href="#">주가지수</a></li>
+							<li class="tab"><a role="tab" href="#">채권금리</a></li>
+							<li class="tab"><a role="tab" href="#">환율/원자재</a></li>
+							<li class="tab"><a role="tab" href="#">경제지표</a></li>
+							<li class="tab"><a role="tab" href="#">섹터지수</a></li>
+							<li class="tab"><a role="tab" href="#">관심</a></li>
+						</ul>
+					</div>
+					<!-- //tab-content -->
+
+					<div class="stock-index">
+						<div class="body-caption px4 ar mt16">2024-10-15 01:00 기준</div>
+
+						<div class="stock-index-core mt8">
+							<ul>
+								<li>
+									<a href="#">
+										<dl>
+											<dt></dt>
+											<dd>
+												<strong></strong>
+											</dd>
+											<dd></dd>
+										</dl>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<dl>
+											<dt></dt>
+											<dd>
+												<strong></strong>
+											</dd>
+											<dd></dd>
+										</dl>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<dl>
+											<dt></dt>
+											<dd>
+												<strong></strong>
+											</dd>
+											<dd></dd>
+										</dl>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="stock-index-list mt16">
+							<ul>
+								<li>
+									<a href="#">
+										<dl>
+											<dt></dt>
+											<dd></dd>
+										</dl>
+										<div></div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<dl>
+											<dt></dt>
+											<dd></dd>
+										</dl>
+										<div></div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<dl>
+											<dt></dt>
+											<dd></dd>
+										</dl>
+										<div></div>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<p class="description caution body-small fc-typography-caption mt16">장 시작(8:30~9:30)과 장마감(15:00~16:00)중에는 일부 투자금액이 맞지 않을 수 있습니다.</p>
+					</div>
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+
+	</main>
+	<!-- //main -->
+
+
+	<script>
+		$('.content').addClass('loading')
+		// setTimeout(function() {
+		// 	$('.content').removeClass('loading')
+		// }, 3000)
+	</script>
+
 </body>
 
 </html>
