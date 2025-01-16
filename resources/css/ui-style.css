@@ -664,6 +664,7 @@ input[type="checkbox"].type-blue:checked {background:url(/resources/images/form/
 
 /* tab-content */ 
 .tab-content {}
+.tab-content.tab-sticky {position:sticky;top:var(--header-height);background-color:var(--surface-surface);z-index:calc(var(--header-zIndex) - 1);}
 .tab-content .tab-col {position:relative;display:flex;z-index:var(--tab-zIndex);gap:8px;border-bottom:1px solid var(--border-8);background-color:var(--white-100);}
 .tab-content .tab-col li {flex:1;position:relative;padding:0 10px;}
 .tab-content .tab-col li button,
@@ -707,6 +708,7 @@ input[type="checkbox"].type-blue:checked {background:url(/resources/images/form/
 .tab-content .tab-button2 li.tab-active a {color:var(--button-primary-onEnabled);background-color:var(--button-primary-enabled);}
 
 
+.modal__content .tab-content.tab-sticky {top:0;}
 .modal__content .tab-content .tab-col {border-bottom:0;}
 
 /* overflow-list */
