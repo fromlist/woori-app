@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		/* main */
+		main {
+			position: relative;
+			min-height: 100vh;
+		}
+
+		main {
+			display: flex;
+			flex-direction: column;
+		}
+
+		main .main-inner {
+			flex: 1 1 calc(100% - 52px);
+			display: flex;
+		}
+
+		#container {
+			flex: 1 1 100%;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.content {
+			padding: 0 16px 24px;
+			height: 100%;
+			flex: 1 1 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.division-center {
+			flex: 1 1 100%;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 16px 0;
+		}
+
+		.img {
+			text-align: center;
+		}
+
+		h1 {
+			position: relative;
+			font-size: 20px;
+			line-height: 1.5;
+			color: #212528;
+			text-align: center;
+			margin: 32px auto 0;
+			padding: 0 0 0 20px;
+			display: table;
+
+		}
+
+		h1 svg {
+			position: absolute;
+			left: 0;
+			top: 4px;
+		}
+
+		h1>* {
+			vertical-align: middle;
+		}
+
+		h1 span {
+			padding: 0 8px;
+		}
+
+		h2 {
+			font-size: 16px;
+			font-weight: 700;
+			color: #495057;
+			text-align: center;
+			line-height: 1.5;
+			margin: 16px 0 0;
+		}
+
+		p {
+			font-size: 16px;
+			color: #495057;
+			line-height: 1.6;
+			text-align: center;
+			margin: 16px 0 0;
+		}
+
+		.bottom-btn {
+			position: sticky;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+			background-color: #fff;
+			z-index: 2;
+		}
+
+		.btn-wrap {
+			display: flex;
+			gap: 8px;
+			padding: 12px 16px;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+		}
+
+		.btn-wrap>*:only-child {
+			flex: 1 1 100%;
+		}
+
+		.btn-wrap>* {
+			flex: 1;
+		}
+
+		.btn-large {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 52px;
+			font-size: 20px;
+			border-width: 1px;
+			border-radius: 8px;
+			padding: 16px;
+			white-space: nowrap;
+			text-align: center;
+			vertical-align: top;
+			gap: 4px;
+			line-height: 18px;
+		}
+
+		.btn-primary {
+			background-color: #2589F4;
+			color: #fff;
+			border-color: transparent;
+			border-style: solid;
+		}
+
+		.btn-primary:not([aria-disabled="true"]):active {
+			background-color: #1D61AA;
+		}
+
+		.btn-outlined {
+			background-color: #FFFFFF;
+			color: #495057;
+			border-color: #0C0C0D1F;
+			border-style: solid;
+		}
+
+		.btn-outlined:not([aria-disabled="true"]):active {
+			background-color: #7484950D;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<!-- division-center -->
+					<div class="division-center">
+						<!-- init-regist -->
+						<div class="init-regist">
+							<div class="img">
+								<svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82" fill="none">
+									<path d="M53.5655 15.5735L51.7259 17.6175L51.7259 17.6175L53.5655 15.5735ZM66.2334 26.9745L64.3937 29.0186L64.3937 29.0186L66.2334 26.9745ZM73.6005 35.0945L71.0884 36.2133L71.0884 36.2133L73.6005 35.0945ZM14.4579 69.2517L16.4025 67.3072L16.4025 67.3072L14.4579 69.2517ZM70.9587 69.2517L69.0142 67.3072L69.0142 67.3072L70.9587 69.2517ZM49.1082 70.2507H36.3085V75.7507H49.1082V70.2507ZM13.459 47.4012V34.6014H7.95898V47.4012H13.459ZM71.9577 46.0025V47.4012H77.4577V46.0025H71.9577ZM51.7259 17.6175L64.3937 29.0186L68.073 24.9305L55.4052 13.5294L51.7259 17.6175ZM77.4577 46.0025C77.4577 40.6308 77.5132 37.1205 76.1126 33.9757L71.0884 36.2133C71.9022 38.0406 71.9577 40.1449 71.9577 46.0025H77.4577ZM64.3937 29.0186C68.7476 32.9371 70.2746 34.3861 71.0884 36.2133L76.1126 33.9757C74.7121 30.8309 72.0658 28.524 68.073 24.9305L64.3937 29.0186ZM36.4038 11.752C41.4919 11.752 43.3248 11.7944 44.9526 12.4191L46.923 7.28414C44.1225 6.2095 41.0755 6.25195 36.4038 6.25195V11.752ZM55.4052 13.5294C51.9496 10.4194 49.7231 8.35863 46.923 7.28414L44.9526 12.4191C46.5807 13.0438 47.9633 14.2312 51.7259 17.6175L55.4052 13.5294ZM36.3085 70.2507C30.1969 70.2507 25.8898 70.2448 22.6301 69.8066C19.4495 69.3789 17.6809 68.5855 16.4025 67.3072L12.5134 71.1962C14.984 73.6668 18.1067 74.7479 21.8972 75.2575C25.6086 75.7565 30.3524 75.7507 36.3085 75.7507V70.2507ZM7.95898 47.4012C7.95898 53.3573 7.95314 58.101 8.45213 61.8124C8.96174 65.6029 10.0428 68.7257 12.5134 71.1962L16.4025 67.3072C15.1241 66.0288 14.3307 64.2601 13.9031 61.0795C13.4648 57.8198 13.459 53.5128 13.459 47.4012H7.95898ZM49.1082 75.7507C55.0643 75.7507 59.8081 75.7565 63.5194 75.2575C67.3099 74.7479 70.4327 73.6668 72.9033 71.1962L69.0142 67.3072C67.7358 68.5855 65.9672 69.3789 62.7866 69.8066C59.5269 70.2448 55.2198 70.2507 49.1082 70.2507V75.7507ZM71.9577 47.4012C71.9577 53.5128 71.9518 57.8198 71.5136 61.0795C71.086 64.2601 70.2926 66.0288 69.0142 67.3072L72.9033 71.1962C75.3739 68.7257 76.4549 65.6029 76.9645 61.8124C77.4635 58.101 77.4577 53.3573 77.4577 47.4012H71.9577ZM13.459 34.6014C13.459 28.4898 13.4648 24.1828 13.9031 20.9231C14.3307 17.7425 15.1241 15.9738 16.4025 14.6955L12.5134 10.8064C10.0428 13.277 8.96174 16.3997 8.45213 20.1902C7.95314 23.9016 7.95898 28.6453 7.95898 34.6014H13.459ZM36.4038 6.25195C30.4156 6.25195 25.649 6.24616 21.9227 6.74488C18.1194 7.2539 14.9861 8.33363 12.5134 10.8064L16.4025 14.6955C17.6787 13.4192 19.4528 12.6245 22.6523 12.1963C25.9289 11.7577 30.2607 11.752 36.4038 11.752V6.25195Z" fill="#CFD4D9" />
+									<path d="M45.9082 10.6016V18.6014C45.9082 26.1437 45.9082 29.9149 48.2513 32.258C50.5944 34.6011 54.3656 34.6011 61.9079 34.6011H74.7076" stroke="#CFD4D9" stroke-width="5.5" />
+									<path d="M23.5088 60.2014L33.1086 50.6016M33.1086 60.2014L23.5088 50.6016" stroke="#CFD4D9" stroke-width="5.5" stroke-linecap="round" />
+								</svg>
+							</div>
+							<h1>
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+									<path d="M3.96678 8.81106C6.60108 3.95949 7.91824 1.53418 10.0046 1.53418C12.0909 1.53418 13.408 3.95949 16.0423 8.81106L16.3709 9.41481C18.5602 13.4461 19.6553 15.4617 18.6658 16.9354C17.6764 18.4092 15.228 18.4092 10.3332 18.4092H9.67595C4.78109 18.4092 2.33275 18.4092 1.34331 16.9354C0.353863 15.4617 1.44893 13.4461 3.63817 9.41481L3.96678 8.81106Z" stroke="#EE444A" stroke-width="1.625" />
+									<path d="M10.0066 6.25391V11.4862" stroke="#EE444A" stroke-width="1.625" stroke-linecap="round" />
+									<path d="M10.0047 15.6779C10.5826 15.6779 11.0512 15.2094 11.0512 14.6314C11.0512 14.0535 10.5826 13.585 10.0047 13.585C9.42676 13.585 8.95825 14.0535 8.95825 14.6314C8.95825 15.2094 9.42676 15.6779 10.0047 15.6779Z" fill="#EE444A" />
+								</svg>
+								<span>요청하신 페이지를 찾을 수 없습니다.</span>
+							</h1>
+							<p>요청하신 페이지의 주소가 잘못 되었거나,<br> 페이지가 존재하지 않습니다. <br><br> 입력하신 주소가 정확한지 <br>다시 한번 확인해 주시기 바랍니다.</p>
+						</div>
+						<!-- //init-regist -->
+					</div>
+					<!-- //division-center -->
+
+				</div>
+				<!-- //content -->
+
+			</div>
+			<!-- //container -->
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+	</main>
+	<!-- //main -->
+
+</body>
+
+</html>

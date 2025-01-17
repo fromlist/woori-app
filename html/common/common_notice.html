@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		/* main */
+		main {
+			position: relative;
+			min-height: 100vh;
+		}
+
+		main {
+			display: flex;
+			flex-direction: column;
+		}
+
+		main .main-inner {
+			flex: 1 1 calc(100% - 52px);
+			display: flex;
+		}
+
+		#container {
+			flex: 1 1 100%;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.content {
+			padding: 0 16px 24px;
+			height: 100%;
+			flex: 1 1 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.division-center {
+			flex: 1 1 100%;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 16px 0;
+		}
+
+		.img {
+			text-align: center;
+		}
+
+		h1 {
+			position: relative;
+			font-size: 20px;
+			line-height: 1.5;
+			color: #212528;
+			text-align: center;
+			margin: 32px auto 0;
+			padding: 0 0 0 20px;
+			display: table;
+
+		}
+
+		h1 svg {
+			position: absolute;
+			left: 0;
+			top: 4px;
+		}
+
+		h1>* {
+			vertical-align: middle;
+		}
+
+		h1 span {
+			padding: 0 8px;
+		}
+
+		h2 {
+			font-size: 16px;
+			font-weight: 700;
+			color: #495057;
+			text-align: center;
+			line-height: 1.5;
+			margin: 16px 0 0;
+		}
+
+		p {
+			font-size: 16px;
+			color: #495057;
+			line-height: 1.6;
+			text-align: center;
+			margin: 16px 0 0;
+		}
+
+		.bottom-btn {
+			position: sticky;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+			background-color: #fff;
+			z-index: 2;
+		}
+
+		.btn-wrap {
+			display: flex;
+			gap: 8px;
+			padding: 12px 16px;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+		}
+
+		.btn-wrap>*:only-child {
+			flex: 1 1 100%;
+		}
+
+		.btn-wrap>* {
+			flex: 1;
+		}
+
+		.btn-large {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 52px;
+			font-size: 20px;
+			border-width: 1px;
+			border-radius: 8px;
+			padding: 16px;
+			white-space: nowrap;
+			text-align: center;
+			vertical-align: top;
+			gap: 4px;
+			line-height: 18px;
+		}
+
+		.btn-primary {
+			background-color: #2589F4;
+			color: #fff;
+			border-color: transparent;
+			border-style: solid;
+		}
+
+		.btn-primary:not([aria-disabled="true"]):active {
+			background-color: #1D61AA;
+		}
+
+		.btn-outlined {
+			background-color: #FFFFFF;
+			color: #495057;
+			border-color: #0C0C0D1F;
+			border-style: solid;
+		}
+
+		.btn-outlined:not([aria-disabled="true"]):active {
+			background-color: #7484950D;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+					<!-- division-center -->
+					<div class="division-center">
+						<!-- init-regist -->
+						<div class="init-regist">
+							<div class="img">
+								<svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82" fill="none">
+									<path d="M58.0206 23.4432L59.2027 22.261C60.3014 21.1592 60.8539 20.6098 61.1848 20.038C61.6258 19.2755 61.858 18.4101 61.858 17.5292C61.858 16.6482 61.6258 15.7828 61.1848 15.0203C60.8539 14.4485 60.3014 13.8959 59.2027 12.7973C58.1041 11.6986 57.5515 11.1461 56.9797 10.8184C56.2172 10.3774 55.3518 10.1452 54.4709 10.1452C53.5899 10.1452 52.7245 10.3774 51.962 10.8184C51.3902 11.1461 50.8376 11.6986 49.739 12.7973L48.5568 13.9794M34.3612 47.0994L16.6191 64.8447C15.5172 65.9465 14.9679 66.4959 14.3961 66.8268C13.6335 67.2678 12.7681 67.5 11.8872 67.5C11.0062 67.5 10.1409 67.2678 9.37829 66.8268C8.80327 66.4959 8.25395 65.9465 7.15531 64.8447C6.05345 63.7461 5.50413 63.1935 5.17325 62.6217C4.73222 61.8591 4.5 60.9938 4.5 60.1128C4.5 59.2319 4.73222 58.3665 5.17325 57.6039C5.50413 57.0321 6.05345 56.4796 7.15531 55.3809L24.8974 37.6388M22.5331 35.2713L36.7287 49.4701C42.3022 55.0436 45.0906 57.832 48.5568 57.832C52.023 57.832 54.8082 55.0436 60.3849 49.4669C65.9616 43.8902 68.75 41.1018 68.75 37.6388C68.75 34.1726 65.9616 31.3843 60.3849 25.8107L46.1893 11.6119C40.6157 6.04158 37.8274 3.25 34.3612 3.25C30.895 3.25 28.1098 6.03837 22.5331 11.6151C16.9564 17.1918 14.168 19.9802 14.168 23.4432C14.168 26.9094 16.9564 29.6977 22.5331 35.2713Z" stroke="#CFD4D9" stroke-width="5.5" />
+									<path d="M4.5 78.875H77.625" stroke="#CFD4D9" stroke-width="5.5" stroke-linecap="round" />
+								</svg>
+							</div>
+							<h1>
+								<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
+									<path d="M1.27344 8.23521C1.27344 5.4328 1.27344 4.03159 1.61895 3.56014C1.96355 3.08956 3.33739 2.63827 6.08598 1.73655L6.60973 1.5648C8.04207 1.09422 8.75778 0.859375 9.5 0.859375C10.2422 0.859375 10.9579 1.09422 12.3903 1.5648L12.914 1.73655C15.6626 2.63827 17.0364 3.08956 17.381 3.56014C17.7266 4.03159 17.7266 5.43367 17.7266 8.23521V9.61451C17.7266 14.5551 13.8519 16.9535 11.4204 17.9709C10.7614 18.247 10.4323 18.3854 9.5 18.3854C8.56766 18.3854 8.23859 18.247 7.57955 17.9709C5.14815 16.9527 1.27344 14.556 1.27344 9.61451V8.23521Z" stroke="#FEBB10" stroke-width="1.64531" />
+									<path d="M9.49854 5.41895V9.99332" stroke="#FEBB10" stroke-width="1.64531" stroke-linecap="round" />
+									<path d="M9.49638 14.5743C10.128 14.5743 10.64 14.0623 10.64 13.4307C10.64 12.7991 10.128 12.2871 9.49638 12.2871C8.86479 12.2871 8.35278 12.7991 8.35278 13.4307C8.35278 14.0623 8.86479 14.5743 9.49638 14.5743Z" fill="#FEBB10" />
+								</svg>
+								<span>서비스 점검 중입니다.</span>
+							</h1>
+							<h2>2024-12-01 00:00 ~ 2024-12-01 06:00</h2>
+							<p>서비스 이용에 불편을 드려 죄송합니다. <br> 잠시후에 이용해 주시기 바랍니다.</p>
+						</div>
+						<!-- //init-regist -->
+					</div>
+					<!-- //division-center -->
+
+				</div>
+				<!-- //content -->
+
+			</div>
+			<!-- //container -->
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-primary">재시도</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- //main -->
+
+</body>
+
+</html>
