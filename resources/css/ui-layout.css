@@ -293,7 +293,20 @@ header {position:sticky;left:0;top:0;width:100%;z-index:var(--header-zIndex);bac
 .gnb-user-info .gnb-user-name span {font-size:18px;font-weight:400;color:var(--typography-caption);}
 .gnb-user-info .gnb-login-date {font-size:14px;font-weight:400;color:var(--gray-500);}
 .gnb-menu-search {}
-.gnb-menu-search .form {padding:16px;}
+.gnb-menu-search .form {display:flex;padding:16px;gap:8px;}
+.gnb-menu-search .gnb-menu-search-close {width:0;flex:0;height:52px;overflow:hidden;transition:all 0.3s ease;}
+.gnb-menu-search .gnb-menu-search-close button {display:flex;width:40px;height:52px;
+    -webkit-mask-position:center center;
+    mask-position:center center;
+    -webkit-mask-size:10px 20px;
+    mask-size:10px 20px;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    -webkit-mask-image:url(/resources/images/arrow/ico_history_back.svg);
+    mask-image:url(/resources/images/arrow/ico_history_back.svg);
+    background-color:var(--icon-default);
+}
+
 .gnb-menu-search .gnb-menu-search-recent {padding:16px;}
 .gnb-menu-search .gnb-menu-search-recent dl {}
 .gnb-menu-search .gnb-menu-search-recent dl dt {font-size:18px;font-weight:500;color:var(--typography-title);line-height:1;padding:0 4px;}
@@ -342,6 +355,13 @@ header {position:sticky;left:0;top:0;width:100%;z-index:var(--header-zIndex);bac
 .gnb-menu-search {position:sticky;top:0;z-index:var(--sticky-zIndex);flex:1 1 100%;display:flex;flex-direction:column;}
 .gnb-menu-nav {position:sticky;top:84px;z-index:var(--sticky-zIndex);}
 
+/* gnb search */
+.modal__container .main-header {transition:margin 0.3s ease;margin-top:0;}
+.modal__container.is-search .main-header {margin-top:calc(var(--header-height) * -1);}
+.modal__container .gnb-user-info {transition:margin 0.3s ease;margin-top:0;}
+.modal__container.is-search .gnb-user-info {margin-top:-58px;}
+.modal__container.is-search .gnb-menu-search .gnb-menu-search-close {width:40px;flex:0 0 40px;}
+/* .modal__container .gnb-menu-search .gnb-menu-search-close button {} */
 
 /* main */
 main {position:relative;min-height:100vh;}

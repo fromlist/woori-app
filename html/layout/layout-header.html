@@ -149,6 +149,7 @@
 						</div>
 						<div class="gnb-menu-search">
 							<div class="form">
+								<div class="gnb-menu-search-close"><button type="button" aria-label="검색메뉴 닫기"></button></div>
 								<div class="input-wrap input-btn">
 									<input type="text" placeholder="메뉴를 검색해 보세요." aria-label="메뉴 검색">
 									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
@@ -384,6 +385,29 @@
 				}
 			});
 		});
+	</script>
+	<script>
+		const gnbMenuSearch = {
+			init: function() {
+
+				this.onFocus();
+				this.onFocusOut();
+			},
+			onFocus: function() {
+				$('.gnb .gnb-menu-search input').on('focus', function() {
+					const container = $(this).closest('.modal__container');
+					container.addClass('is-search');
+				})
+			},
+			onFocusOut: function() {
+				$('.gnb .gnb-menu-search .gnb-menu-search-close').on('click', function() {
+					const container = $(this).closest('.modal__container');
+					container.removeClass('is-search');
+				})
+
+			}
+		}
+		gnbMenuSearch.init();
 	</script>
 
 </body>
