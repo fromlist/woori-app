@@ -25,8 +25,9 @@ table td {font-size:14px!important;}
 .section-index .table-col {border-top:1px solid #222;}
 .section-index .table-col table {table-layout:auto;width:100%;border-collapse:collapse;}
 .section-index .table-col thead th {font-size:16px;font-weight:700;text-align:center;padding:10px 5px;border-bottom:1px solid #E0E0E0;}
-.section-index .table-col tbody:nth-child(odd) {background-color:#f1f1f1;}
+.section-index .table-col tbody:nth-child(even) {background-color:#f7f7f7;}
 .section-index .table-col tbody td {font-size:16px;text-align:center;padding:5px;border-bottom:1px solid #E0E0E0;}
+.section-index .table-col tbody td br {display: block;padding:1px 0 0 0 ;content: '';background: var(--border-8);}
 .section-index .table-col td {position:relative;}
 .section-index .table-col td .link {color:#0072FC;}
 .section-index .table-col td .link[href="#"]:not(.popup) {pointer-events:none;color:var(--black9)}

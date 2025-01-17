@@ -524,9 +524,10 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .visual-headline span {display:block;font-size:18px;color:var(--typography-title);line-height:1.5;padding:0 2px;}
 .visual-headline span b {font-weight:700;}
 .visual-headline strong {display:block;font-size:30px;font-weight:700;color:var(--typography-title);line-height:1.5;margin-top:10px;}
-.main-section-title {display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+.main-section-title {display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;gap:16px;}
 .main-schedule-section {padding:24px 0 48px;}
 
+.main-schedule-title {display:flex;align-items:center;justify-content:space-between;}
 .main-schedule-title .today {display:flex;gap:12px;align-items:center;}
 .main-schedule-title .today strong {display:flex;align-items:center;justify-content:center;flex:0 0 54px;width:54px;height:54px;background-color:var(--surface-surface50);border-radius:20px;font-size:30px;font-weight:700;color:var(--brandPrimary-blue600);}
 .main-schedule-title .today .date {font-size:16px;font-weight:700;color:var(--typography-gray);}
