@@ -465,7 +465,7 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .select-option li.select-all button {}
 .select-option li.select-all button span {font-weight:700;}
 .select-option li.select-active button {background-color:var(--background-bg_gray);padding-right:52px;}
-.select-option li.select-active button:after {content:'';position:absolute;right:24px;top:50%;margin-top:-14px;display:block;width:28px;height:28px;background:url(/resources/images/ico/ico_select_option.svg) center center / contain no-repeat;}
+.select-option li.select-active button:after {content:'';position:absolute;right: 12px;top:50%;margin-top: -10px;display:block;width: 20px;height: 20px;background:url(/resources/images/ico/ico_select_option.svg) center center / contain no-repeat;}
 
 .select-exchange li button {display:flex;align-items:center;}
 .select-exchange li span {width:140px;margin-right:24px;}
@@ -479,7 +479,7 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .micromodal-slide-select .select-option ul {margin-bottom:0;}
 .micromodal-slide-select .select-option ul li button {height:48px;padding:0 16px;}
 .micromodal-slide-select .select-option ul li button span {font-size:16px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.micromodal-slide-select .select-option ul li.select-active button {padding-right:52px;}
+.micromodal-slide-select .select-option ul li.select-active button {padding-right: 32px;}
 
 /* dropdown-option */
 .dropdown-option {}

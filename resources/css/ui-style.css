@@ -473,6 +473,12 @@ input:not([type="checkbox"],[type="radio"],[type="file"])[disabled] {color:var(-
 .input-wrap.input-datepicker button:only-child {text-align:left;}
 .input-wrap.input-datepicker button:only-child:after {margin-left:auto;}
 
+/* input-select */
+.input-select {padding-left:0;}
+.input-select button.select {border:0;flex:0;}
+.input-select button.select.is-modal-open,
+.input-select button:focus-visible,
+.input-select a:focus-visible {outline-color:transparent;}
 
 input[type="search"] {-webkit-appearance:none;align-items:center;}
 input[type="search"]::-webkit-search-cancel-button {-webkit-appearance:none;width:24px;height:24px;flex:0 0 24px;margin-right:0;margin-left:0;background:url(/resources/images/btn/btn_close_small.svg) center center no-repeat;;align-items:center;}

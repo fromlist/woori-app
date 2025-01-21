@@ -398,13 +398,13 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 
 .datepicker-wrap .ui-datepicker .ui-datepicker-title {display:flex;gap:4px;margin:0 52px;line-height:52px;align-items:center;justify-content:center;}
 
-.datepicker-wrap .ui-datepicker table {position:relative;table-layout:fixed;margin:0 auto;font-size:inherit;border-collapse:separate;}
+.datepicker-wrap .ui-datepicker table {position:relative;table-layout:fixed;margin:0 auto;font-size:inherit;border-collapse:separate;border: 0;}
 .datepicker-wrap .ui-datepicker table tbody {clip:auto!important;width:100%!important;}
 
 .datepicker-wrap .ui-datepicker-calendar thead th {color:var(--gray-400);}
 .datepicker-wrap .ui-datepicker-calendar tbody td {color:var(--typography-black);}
 .datepicker-wrap .ui-datepicker-calendar thead th,
-.datepicker-wrap .ui-datepicker-calendar tbody td {font-size:16px;font-weight:500;line-height:40px;border:4px solid transparent;text-align:center;padding:0;}
+.datepicker-wrap .ui-datepicker-calendar tbody td {font-size:16px;font-weight:500;line-height:40px;border: 4px solid transparent;text-align:center;padding:0;}
 .datepicker-wrap .ui-widget-content .schedule_01 > *,
 .datepicker-wrap .ui-widget-content .schedule_02 > *,
 .datepicker-wrap .ui-widget-content .schedule_03 > * {background-color:var(--surface-surface50);}
@@ -452,13 +452,18 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 /* datepicker collapsed */
 .datepicker-weekend.datepicker-collapsed {position:sticky;top:var(--header-height);background-color:var(--surface-surface);z-index:var(--sticky-zIndex);}
 .datepicker-weekend.datepicker-collapsed .inp-group {display:none;}
-.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content {height:48px;overflow:hidden;padding-top:0;background-color:#ECF6FF;border-radius:8px;padding:0 16px;}
-.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content .ui-datepicker-header {height:0;overflow:hidden;margin:0;}
-.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table {overflow:hidden;}
+.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content {height:82px;overflow:hidden;padding:0}
+.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content .ui-datepicker-header {height:14px;overflow:hidden;margin: 0 0 16px;}
+.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table {overflow:hidden;background-color:#ECF6FF;border-radius:8px;padding: 2px 16px;}
 .datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table thead {display:none;}
 .datepicker-weekend .ui-widget-content .ui-state-active {border-color:transparent;background-color:transparent;color:var(--typography-body);}
 .datepicker-weekend .ui-widget-content .ui-datepicker-current-day.ui-datepicker-today .ui-state-active {color:var(--brandPrimary-blue600);}
 .datepicker-weekend.datepicker-collapsed .ui-datepicker-calendar td.ui-datepicker-other-month {color:var(--typography-black);}
+.datepicker-weekend.datepicker-collapsed .ui-datepicker .ui-datepicker-title {font-size:14px;line-height:1;color:var(--typography-caption);align-items:center;justify-content:center;}
+
+.datepicker-weekend.datepicker-collapsed .ui-datepicker .ui-datepicker-prev,
+.datepicker-weekend.datepicker-collapsed .ui-datepicker .ui-datepicker-next {top:-9999px;}
+
 
 .datepicker-weekend:not(.datepicker-collapsed) .thisWeek td {background-color:#ECF6FF;border-radius:0;}
 .datepicker-weekend:not(.datepicker-collapsed) .thisWeek td:first-child {border-radius:8px 0 0 8px;}
@@ -477,9 +482,10 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 
 .datepicker-weekend .datepicker-arrow {display:none;}
 .datepicker-weekend.datepicker-weekend.datepicker-collapsed .datepicker-arrow {display:block;}
-.datepicker-weekend .datepicker-arrow button {position:absolute;width:16px;height:48px;top:16px;}
+.datepicker-weekend .datepicker-arrow button {position:absolute;width:16px;height:48px;top:46px;}
 .datepicker-weekend .datepicker-arrow .arrow-prev {background:url(/resources/images/arrow/arrow_datepicker_prev.svg) center center / 6px 12px no-repeat;left:16px;}
 .datepicker-weekend .datepicker-arrow .arrow-next {background:url(/resources/images/arrow/arrow_datepicker_next.svg) center center / 6px 12px no-repeat;right:16px;}
+.datepicker-weekend .ui-helper-clearfix:after {display:none;}
 
 
 @keyframes dpslideLeftIn {

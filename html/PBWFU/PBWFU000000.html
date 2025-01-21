@@ -96,8 +96,9 @@
 							<!-- form -->
 							<div class="form">
 								<div class="label"></div>
-								<div class="input-wrap input-btn">
-									<input type="text" placeholder="펀드명으로 검색해 보세요." aria-label="검색">
+								<div class="input-wrap input-placeholder input-select">
+									<button class="select" data-micromodal-trigger="modal-select-list" data-placeholder="선택하세요"><span>선택</span></button>
+									<input type="text" placeholder="검색어를 입력해해 보세요." aria-label="검색">
 									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 									<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
 								</div>
@@ -266,7 +267,6 @@
 							<div class="tab-content">
 								<ul class="tab-list tab-col overflow-list px24" role="tablist">
 									<li class="tab tab-active"><a role="tab" href="#" class="fs-18">수익률 BEST</a></li>
-									<li class="tab"><a role="tab" href="#" class="fs-18">키워드</a></li>
 									<li class="tab"><a role="tab" href="#" class="fs-18">섹터</a></li>
 									<li class="tab"><a role="tab" href="#" class="fs-18">국가</a></li>
 								</ul>
@@ -402,6 +402,33 @@
 
 	</main>
 	<!-- //main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-select modal" id="modal-select-list">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header modal__header__alert">
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close=""></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content content-fluid">
+						<div class="select-option">
+							<ul>
+								<li><button type="button" data-micromodal-close onclick="console.log(1)"><span>키워드</span></button></li>
+								<li class="select-active"><button type="button" aria-label="선택됨" data-micromodal-close onclick="console.log(1)"><span>펀드명</span></button></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
 
 
 </body>
