@@ -122,7 +122,19 @@
 
 						<div class="stock-graph pt24 pb32 px16 mt24">
 
-							<div class="stock-rate">
+							<!-- tab-content -->
+							<div class="tab-content">
+								<ul class="tab-list tab-button" role="tablist">
+									<li class="tab tab-active"><a role="tab" href="#" aria-selected="true">1주일</a></li>
+									<li class="tab"><a role="tab" href="#" aria-selected="false">3개월</a></li>
+									<li class="tab"><a role="tab" href="#" aria-selected="false">1년</a></li>
+									<li class="tab"><a role="tab" href="#" aria-selected="false">3년</a></li>
+									<li class="tab"><a role="tab" href="#" aria-selected="false">5년</a></li>
+								</ul>
+							</div>
+							<!-- //tab-content -->
+
+							<div class="stock-rate mt16">
 								<dl>
 									<dt>
 										1주일 전보다
@@ -139,23 +151,11 @@
 								</dl>
 							</div>
 
-							<div class="mt32">
+							<div class="mt16">
 								<div style="height:180px;">
 									<div id="chart2" data-aos="" data-aos-id="chart2" class="aos-init aos-animate" style="min-height: 195px;"></div>
 								</div>
 							</div>
-
-							<!-- tab-content -->
-							<div class="tab-content mt24">
-								<ul class="tab-list tab-button2" role="tablist">
-									<li class="tab tab-active"><a role="tab" href="#" aria-selected="true">1주일</a></li>
-									<li class="tab"><a role="tab" href="#" aria-selected="false">3개월</a></li>
-									<li class="tab"><a role="tab" href="#" aria-selected="false">1년</a></li>
-									<li class="tab"><a role="tab" href="#" aria-selected="false">3년</a></li>
-									<li class="tab"><a role="tab" href="#" aria-selected="false">5년</a></li>
-								</ul>
-							</div>
-							<!-- //tab-content -->
 
 							<div class="stroke px0 mt32"></div>
 							<dl class="group pb0">
@@ -217,6 +217,13 @@
 						<div class="table-col">
 							<table class="table-layout-auto">
 								<caption>일자별 보기</caption>
+								<thead>
+									<tr>
+										<th scope="col">기준일</th>
+										<th scope="col">지수값</th>
+										<th scope="col">등락폭</th>
+									</tr>
+								</thead>
 								<tbody>
 									<tr>
 										<th scope="row">

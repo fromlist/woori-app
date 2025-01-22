@@ -433,7 +433,7 @@
 /* memo-list */
 .memo-list {}
 .memo-list .memo-inner {border-radius:8px;border:1px solid var(--border-4);background-color:var(--background-bg_lightGray);padding:16px;}
-.memo-list .memo-inner:not(:last-child) {margin-bottom:8px;}
+.memo-list .memo-inner:not(:last-child) {margin-bottom:12px;}
 .memo-inner p {}
 .memo-inner .memo-btn {display:flex;justify-content:space-between;margin-top:4px;}
 .memo-inner .memo-btn .left {display:flex;align-items:center;justify-content:center;gap:6px;}
@@ -616,7 +616,7 @@
 .customer-card-list {}
 .customer-card-list .search-result {display:block;text-align:center;font-size:18px;font-weight:500;color:var(--typography-gray);line-height:1;margin-bottom:24px;}
 .customer-card-list .customer-card {display:block;border-radius:16px;background-color:var(--surface-surface);box-shadow:0px 8px 16px -4px rgba(0, 0, 0, 0.05);padding:24px;width:100%;}
-.customer-card-list .customer-card:not(:last-child) {margin-bottom:8px;}
+.customer-card-list .customer-card:not(:last-child) {margin-bottom:16px;}
 .customer-card-list .customer-card .title-medium {margin-bottom:12px;}
 .customer-card-list .customer-card .group {padding:0;}
 .customer-card-list .customer-card .group:not(:last-child) {padding-bottom:4px;}
@@ -733,7 +733,7 @@ button.flag-fluid span {margin-top:0;}
 /* exchange-wrap */
 .exchange-wrap {background-color:var(--background-bg_lightGray);padding:16px;}
 .exchange-list {padding:16px 20px;border-radius:16px;background-color:var(--surface-surface);}
-.exchange-list:not(:last-child) {margin-bottom:8px;}
+.exchange-list:not(:last-child) {margin-bottom:12px;}
 
 /* community-wrap */
 .community-wrap {}
@@ -837,8 +837,8 @@ button.flag-fluid span {margin-top:0;}
 /* schedule-section */
 .schedule-section {background-color:var(--background-bg_lightGray);}
 .schedule-section .tags-wrap {display:flex;justify-content:center;}
-.schedule-section .schedule-list {display:block;padding:14px 16px 16px;background-color:var(--surface-surface);border-radius:12px;box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
-.schedule-section .schedule-list:not(:last-child) {margin-bottom:8px;}
+.schedule-section .schedule-list {display:block;padding: 14px 12px 16px 16px;background-color:var(--surface-surface);border-radius:12px;box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
+.schedule-section .schedule-list:not(:last-child) {margin-bottom:12px;}
 .schedule-list .schedule-title {display:flex;align-items:flex-start;gap:8px;}
 .schedule-list .schedule-title:after {content:'';flex:0 0 10px;width:10px;height:20px;margin-left:auto;
     -webkit-mask-position:center center;
@@ -1056,7 +1056,7 @@ button.flag-fluid span {margin-top:0;}
 
 .stock-index-list {}
 .stock-index-list ul li {}
-.stock-index-list > ul li:not(:last-child) {margin-bottom:8px;}
+.stock-index-list > ul li:not(:last-child) {margin-bottom:12px;}
 .stock-index-list a {display:flex;align-items:center;justify-content:space-between;border-radius:12px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);padding:14px 16px 16px 24px;gap:16px;}
 .stock-index-list a:after {content:'';display:flex;align-items:center;justify-content:center;flex:0 0 10px;width:10px;height:20px;
     -webkit-mask-position:center center;
@@ -1106,7 +1106,7 @@ i.live-off {display:inline-block;width:9px;height:9px;background:url(/resources/
 .financial-news-list {}
 .financial-news-list ul {}
 .financial-news-list ul li {}
-.financial-news-list ul li:not(:last-child) {margin-bottom:8px;}
+.financial-news-list ul li:not(:last-child) {margin-bottom:12px;}
 .financial-news-list button {display:block;width:100%;border-radius:8px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);padding:14px 16px;}
 .financial-news-list button .financial-news-title {display:flex;align-items:center;gap:8px;margin-bottom:8px;}
 .financial-news-list button .financial-news-title .media {font-size:16px;font-weight:500;color:var(--typography-gray);line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 4px;}
@@ -1138,7 +1138,7 @@ i.live-off {display:inline-block;width:9px;height:9px;background:url(/resources/
 .eco-section {background-color:var(--background-bg_lightGray);}
 .eco-wrap .tags-wrap {display:flex;flex-direction:column;gap:8px;align-items:center;}
 .eco-wrap .eco-list {display:block;padding:14px 16px 16px;background-color:var(--surface-surface);border-radius:12px;box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
-.eco-wrap .eco-list:not(:last-child) {margin-bottom:16px;}
+.eco-wrap .eco-list:not(:last-child) {margin-bottom:12px;}
 .eco-list .eco-title {display:flex;align-items:center;gap:6px;}
 
 .eco-list .eco-title .title-medium {padding:0;}

@@ -579,13 +579,21 @@ input[type="checkbox"].type-blue:checked {background:url(/resources/images/form/
 .inp-toggle input:checked {background-color:var(--brandPrimary-blue500);}
 .inp-toggle input:checked:before {left:21px;}
 
+/* inp-toggle-large */
 .inp-toggle-large label {display:flex;align-items:center;gap:8px;}
-.inp-toggle input {position:relative;display:flex;flex:0 0 64px;width:64px;height:28px;appearance:none;-webkit-appearance:none;border:0;cursor:inherit;background-color:var(--gray-400);border-radius:42px;transition:background-color 0.15s ease;}
-.inp-toggle input:before {content:'';position:absolute;left:3px;top:3px;width:22px;height:22px;background-color:var(--basic-white);filter:drop-shadow(0px 0px 4px var(--shadow-gray_3));border-radius:18px;transition:left 0.15s ease;}
-.inp-toggle input:after {content:attr(data-label);padding-left:30px;font-size:14px;font-weight:400;color:var(--typography-white);line-height:28px;transition:padding 0.3s ease;}
-.inp-toggle input:checked {background-color:var(--brandPrimary-blue500);}
-.inp-toggle input:checked:before {left:39px;}
-.inp-toggle input:checked:after {content:attr(data-label-checked);padding-left:9px;}
+.inp-toggle-large .label-title {font-size:16px;font-weight:400;color:var(--typography-gray);}
+.inp-toggle-large input {position:relative;display:flex;flex:0 0 58px;width:58px;height:32px;appearance:none;-webkit-appearance:none;border:0;cursor:inherit;background-color:var(--gray-400);border-radius:58px;transition:background-color 0.15s ease;}
+.inp-toggle-large input:before {content:'';position:absolute;left:4px;top:4px;width:24px;height:24px;background-color:var(--basic-white);filter:drop-shadow(0px 0px 4px var(--shadow-gray_3));border-radius:18px;transition:left 0.15s ease;}
+.inp-toggle-large input:checked {background-color:var(--brandPrimary-blue500);}
+.inp-toggle-large input:checked:before {left:30px;}
+
+.inp-toggle-inner-text label {display:flex;align-items:center;gap:8px;}
+.inp-toggle-inner-text input {position:relative;display:flex;flex:0 0 64px;width:64px;height:28px;appearance:none;-webkit-appearance:none;border:0;cursor:inherit;background-color:var(--gray-400);border-radius:42px;transition:background-color 0.15s ease;}
+.inp-toggle-inner-text input:before {content:'';position:absolute;left:3px;top:3px;width:22px;height:22px;background-color:var(--basic-white);filter:drop-shadow(0px 0px 4px var(--shadow-gray_3));border-radius:18px;transition:left 0.15s ease;}
+.inp-toggle-inner-text input:after {content:attr(data-label);padding-left:30px;font-size:14px;font-weight:400;color:var(--typography-white);line-height:28px;transition:padding 0.3s ease;}
+.inp-toggle-inner-text input:checked {background-color:var(--brandPrimary-blue500);}
+.inp-toggle-inner-text input:checked:before {left:39px;}
+.inp-toggle-inner-text input:checked:after {content:attr(data-label-checked);padding-left:9px;}
 
 /* inp-toggle-group */
 .inp-toggle-group {}
@@ -779,7 +787,7 @@ input[type="checkbox"].type-blue:checked {background:url(/resources/images/form/
 .description.ar {margin-left:auto;display:table;}
 
 /* tags */
-.tags {display:inline-flex;vertical-align:top;white-space:nowrap;}
+.tags {display:inline-flex;vertical-align:top;white-space:nowrap;align-items: center;gap: 2px;}
 .tags-small {font-size:15px;font-weight:500;line-height:1;padding:4px 8px;border-radius:4px;}
 .tags-medium {font-size:16px;font-weight:500;line-height:1;padding:8px 12px;border-radius:8px;}
 .tags-large {font-size:18px;font-weight:500;line-height:1;padding:10px 12px;border-radius:8px;}
@@ -900,7 +908,9 @@ input[type="checkbox"].type-blue:checked {background:url(/resources/images/form/
 .icon-26 {flex:0 0 26px;width:26px;height:26px;}
 .icon-24 {flex:0 0 24px;width:24px;height:24px;}
 .icon-20 {flex:0 0 20px;width:20px;height:20px;}
+.icon-18 {flex:0 0 18px;width:18px;height:18px;}
 .icon-16 {flex:0 0 16px;width:16px;height:16px;}
+.icon-15 {flex:0 0 15px;width:15px;height:15px;}
 .icon-14 {flex:0 0 14px;width:14px;height:14px;}
 .icon-12 {flex:0 0 12px;width:12px;height:12px;}
 
@@ -1079,6 +1089,14 @@ input[type="checkbox"].type-blue:checked {background:url(/resources/images/form/
 .icon-notebook {
     -webkit-mask-image:url(/resources/images/icon_only/icon_notebook.svg);
     mask-image:url(/resources/images/icon_only/icon_notebook.svg);
+}
+.icon-leave {
+    -webkit-mask-image:url(/resources/images/icon_only/icon_leave.svg);
+    mask-image:url(/resources/images/icon_only/icon_leave.svg);
+}
+.icon-keyman {
+    background-color:initial;
+    background-image:url(/resources/images/icon_only/icon_keyman.svg);
 }
 
 
