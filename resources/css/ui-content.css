@@ -445,7 +445,7 @@
 
 .memo-inner p {display:-webkit-inline-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;vertical-align:top;-webkit-line-clamp:2;word-break:break-all;font-size:16px;font-weight:400;color:var(--typography-body);}
 .memo-inner .memo-btn .left {display:none;}
-.memo-inner.is-toggled p {-webkit-line-clamp:none;}
+.memo-inner.is-toggled p {-webkit-line-clamp:inherit;}
 .memo-inner.is-toggled .memo-btn {margin-top:12px;}
 .memo-inner.is-toggled .memo-btn .left {display:flex;}
 
@@ -939,7 +939,7 @@ button.flag-fluid span {margin-top:0;}
 .message-text .comment-desc {margin-top:8px;}
 .message-text .comment-desc-inner {}
 .message-text .comment-desc .text {display:-webkit-inline-box!important;-webkit-box-orient:vertical!important;overflow:hidden!important;text-overflow:ellipsis!important;vertical-align:top;word-break:break-all;}
-.message-text .comment-desc.is-toggled .text {-webkit-line-clamp:none;}
+.message-text .comment-desc.is-toggled .text {-webkit-line-clamp:inherit;}
 .message-text .comment-toggle-wrap {display:flex;justify-content:flex-end;margin-top:2px;padding:0 4px;}
 
 /* message-text */
