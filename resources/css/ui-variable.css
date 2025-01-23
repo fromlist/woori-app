@@ -236,8 +236,8 @@
     --tab-zIndex:10;
     --sticky-zIndex:50;
     --header-zIndex:100;
-    --alert-zIndex:200;
-    --modal-zIndex:300;
+    --modal-zIndex:200;
+    --alert-zIndex:300;
     --loader-zIndex:400;
 }
 .fc-black-0{color:var(--black-0)!important;}

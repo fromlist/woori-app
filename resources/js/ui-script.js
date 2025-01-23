@@ -565,7 +565,10 @@ var gnb = {
                 scrollTarget: $el.find('li.tab-active'),
                 animation: true
             };
-            gnb.menuCenter($el, menuCenterOption);
+            if (menuCenterOption.scrollTarget.length !== 0) {
+                gnb.menuCenter($el, menuCenterOption);
+            }
+
 
         })
     },
