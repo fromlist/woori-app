@@ -146,7 +146,7 @@
 									</div>
 									<div class="comment-desc" data-toggle="toggle-wrap">
 										<div class="comment-desc-inner">
-											<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+											<p data-line="3">이곳에 내용이 들어갑니다</p>
 										</div>
 										<div class="comment-toggle-wrap">
 											<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
@@ -188,7 +188,7 @@
 											<div class="tags tags-small tags-lightBlue">@나우리</div>
 											<div class="comment-desc" data-toggle="toggle-wrap">
 												<div class="comment-desc-inner">
-													<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+													<p data-line="3">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
 												</div>
 												<div class="comment-toggle-wrap">
 													<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
@@ -230,7 +230,7 @@
 											<div class="tags tags-small tags-lightBlue">@나우리</div>
 											<div class="comment-desc" data-toggle="toggle-wrap">
 												<div class="comment-desc-inner">
-													<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+													<p data-line="3">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
 												</div>
 												<div class="comment-toggle-wrap">
 													<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
@@ -275,7 +275,7 @@
 									</div>
 									<div class="comment-desc" data-toggle="toggle-wrap">
 										<div class="comment-desc-inner">
-											<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+											<p data-line="3">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
 										</div>
 										<div class="comment-toggle-wrap">
 											<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
@@ -318,7 +318,7 @@
 									</div>
 									<div class="comment-desc" data-toggle="toggle-wrap">
 										<div class="comment-desc-inner">
-											<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+											<p data-line="3">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
 										</div>
 										<div class="comment-toggle-wrap">
 											<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
@@ -558,6 +558,23 @@
 	<!-- //micromodal -->
 
 
+	<script>
+		const toggleViewMore = document.querySelectorAll('[data-switch-before="chevron-down"]');
+		toggleViewMore.forEach(function(items) {
+			const toggleViewMoreWrap = items.closest('[data-toggle="toggle-wrap"]');
+			const text = toggleViewMoreWrap.querySelector('p');
+			const textLineHeight = parseInt(window.getComputedStyle(text).lineHeight);
+			const textOuterHeight = parseInt(window.getComputedStyle(text).height);
+			const textLineClamp = text.dataset.line;
+			const textMaxHeight = textLineHeight * textLineClamp;
+			if (textOuterHeight > textMaxHeight) {
+				text.classList.add('line-clamp')
+				console.log(text)
+			} else {
+				items.style.display = 'none'
+			}
+		})
+	</script>
 
 </body>
 
