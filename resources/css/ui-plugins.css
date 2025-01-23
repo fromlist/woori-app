@@ -444,10 +444,10 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .sc-label.label02 {background-color:var(--cyan-500);}
 .sc-label.label03 {background-color:var(--purple-500);}
 .sc-label.label04 {background-color:var(--gray-900);}
-.sc-label.label05 {background-color:var(--blue-400);}
-.sc-label.label06 {background-color:var(--red-500);}
-.sc-label.label07 {background-color:var(--red-900);}
-.sc-label.label08 {background-color:var(--deepblue-900);}
+.sc-label.label05 {background-color:var(--cyan-400);}
+.sc-label.label06 {background-color:var(--red-600);}
+.sc-label.label07 {background-color:var(--yellow-700);}
+.sc-label.label08 {background-color:var(--deepblue-600);}
 
 /* datepicker collapsed */
 .datepicker-weekend.datepicker-collapsed {position:sticky;top:var(--header-height);background-color:var(--surface-surface);z-index:var(--sticky-zIndex);}

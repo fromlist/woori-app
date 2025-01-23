@@ -68,7 +68,7 @@
 					<button type="button" class="btn-large btn-primary" onclick="$swal.fire01('삭제하시겠습니까', '예', true, '아니요');">Alert1</button>
 					<button type="button" class="btn-large btn-primary" onclick="$swal.fire02('삭제하시겠습니까', 'caution', '예',  true, '아니요');">Alert2</button>
 					<button type="button" class="btn-large btn-primary" onclick="$swal.fire03('삭제하시겠습니까', '예', true, '아니요')">Alert3</button>
-					<button type="button" class="btn-large btn-primary" onclick="$swal.fire04('삭제하시겠습니까', '예', 'icon-locked', '확인')">Alert4</button>
+					<button type="button" class="btn-large btn-primary" onclick="$swal.fire04('삭제하시겠습니까', '예', 'icon-locked', `<i class='ico-check'></i>확인`)">Alert4</button>
 					<button type="button" class="btn-large btn-primary" onclick="swalFire2()">AlertCamera</button>
 
 				</div>
@@ -80,12 +80,12 @@
 			Swal.fire({
 				showCloseButton: true,
 				reverseButtons: true,
-				confirmButtonText: '확인',
+				confirmButtonText: `<i class='ico-check'></i>확인`,
 				customClass: {
 					htmlContainer: 'mt40',
 					actions: 'btn-wrap pt40',
 					cancelButton: "btn-large btn-outlined",
-					confirmButton: "btn-large btn-primary",
+					confirmButton: "btn-large btn-primary inflex",
 				},
 				// allowOutsideClick: false,
 				buttonsStyling: false,

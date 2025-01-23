@@ -505,7 +505,8 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 
 
 /* no-result */
-.no-result {display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;}
+.no-result {display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;}
+.no-result p {color:var(--gray-500);}
 
 /* sticky-content */
 .sticky-content {padding:8px 0;}
@@ -666,3 +667,5 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 
 /* login */
 .login picture {display:flex;justify-content:center;}
+
+.list-spacing {display:block;margin-top:8px;}

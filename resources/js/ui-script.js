@@ -442,7 +442,7 @@ const $swal = {
                 htmlContainer: 'mt40',
                 actions: 'btn-wrap pt40',
                 cancelButton: "btn-medium btn-outlined",
-                confirmButton: "btn-medium btn-primary",
+                confirmButton: "btn-medium btn-primary inflex",
             },
             buttonsStyling: false,
             // allowOutsideClick: false,

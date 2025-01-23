@@ -276,7 +276,7 @@
 
 .content.loading .main-section-title {}
 
-.content.loading .main-stock-list ul li a {padding:24px;}
+.content.loading .main-stock-list ul li a {padding:24px;min-width:143px;}
 .content.loading .main-stock-list dl dt {height:18px;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius:5px;background-size:200% 100%;-webkit-animation:1.5s shine linear infinite;animation:1.5s shine linear infinite;}
 .content.loading .main-stock-list dl dd strong {height:18px;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius:5px;background-size:200% 100%;-webkit-animation:1.5s shine linear infinite;animation:1.5s shine linear infinite;}
 .content.loading .main-stock-list dl dd .stock {height:15px;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius:5px;background-size:200% 100%;-webkit-animation:1.5s shine linear infinite;animation:1.5s shine linear infinite;}

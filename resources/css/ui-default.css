@@ -616,8 +616,8 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .hauto {height:auto!important;}
 .w100 {width:100%;}
 
-/* Mobile */
 .block {display:block!important;}
 .d-none {display:none!important;}
+.inflex {display:inline-flex!important;}
 
 .noafter:after {display:none;}

@@ -1,19 +1,15 @@
-<svg width="80" height="71" viewBox="0 0 80 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group 2958">
-<g id="Group 2957">
-<g id="Group">
-<path id="Vector" d="M2.83594 30.1693C2.83594 17.285 2.83594 10.8412 6.84027 6.84027C10.8446 2.83935 17.285 2.83594 30.1693 2.83594H43.8359C56.7202 2.83594 63.164 2.83594 67.1649 6.84027C71.1659 10.8446 71.1693 17.285 71.1693 30.1693C71.1693 43.0535 71.1693 49.4974 67.1649 53.4983C63.1606 57.4992 56.7202 57.5026 43.8359 57.5026H30.1693C17.285 57.5026 10.8412 57.5026 6.84027 53.4983C2.83935 49.4939 2.83594 43.0535 2.83594 30.1693Z" stroke="#CFD4D9" stroke-width="4.5"/>
-<path id="Vector_2" d="M26.7525 26.7526C30.5265 26.7526 33.5859 23.6932 33.5859 19.9193C33.5859 16.1453 30.5265 13.0859 26.7525 13.0859C22.9786 13.0859 19.9192 16.1453 19.9192 19.9193C19.9192 23.6932 22.9786 26.7526 26.7525 26.7526Z" stroke="#CFD4D9" stroke-width="4.5"/>
-<path id="Vector_3" d="M40.4193 40.4193C40.4193 44.1947 40.4193 47.2526 26.7526 47.2526C13.0859 47.2526 13.0859 44.1947 13.0859 40.4193C13.0859 36.6439 19.2018 33.5859 26.7526 33.5859C34.3034 33.5859 40.4193 36.6439 40.4193 40.4193Z" stroke="#CFD4D9" stroke-width="4.5"/>
-<path id="Vector_4" d="M60.9193 30.1693H47.2526M60.9193 19.9193H43.8359" stroke="#CFD4D9" stroke-width="4.5" stroke-linecap="round"/>
-<path id="Vector_5" opacity="0.9" d="M60.9192 40.4193H50.6692" stroke="#CFD4D9" stroke-width="4.5" stroke-linecap="round"/>
-</g>
-</g>
-<g id="Group 2928">
-<circle id="Ellipse 450" cx="67" cy="57.1641" r="11.25" fill="white" stroke="#CFD4D9" stroke-width="3.5"/>
+<svg width="82" height="72" viewBox="0 0 82 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 3000">
+<path id="Vector" d="M70.8333 29.9974C70.8333 17.1131 70.8299 10.6727 66.829 6.6684C62.8281 2.66406 56.3842 2.66406 43.5 2.66406H29.8333C16.9491 2.66406 10.5087 2.66748 6.50433 6.6684C2.5 10.6693 2.5 17.1131 2.5 29.9974C2.5 42.8816 2.50342 49.3221 6.50433 53.3264C10.5052 57.3307 16.9491 57.3307 29.8333 57.3307H43.5" stroke="#CFD4D9" stroke-width="4.5" stroke-linecap="round"/>
+<path id="Vector 57" d="M43.875 17.9375H59.125" stroke="#CFD4D9" stroke-width="5" stroke-linecap="round"/>
+<path id="Vector 58" d="M52.351 28L59.125 28" stroke="#CFD4D9" stroke-width="5" stroke-linecap="round"/>
+<path id="Vector_2" d="M26.9036 26.2135C30.0347 26.2135 32.5729 23.6753 32.5729 20.5443C32.5729 17.4132 30.0347 14.875 26.9036 14.875C23.7726 14.875 21.2344 17.4132 21.2344 20.5443C21.2344 23.6753 23.7726 26.2135 26.9036 26.2135Z" fill="white" stroke="#CFD4D9" stroke-width="4.5"/>
+<path id="Vector_3" d="M38.5026 38.6146C38.5026 42.1094 38.5026 44.9401 26.9036 44.9401C15.3047 44.9401 15.3047 42.1094 15.3047 38.6146C15.3047 35.1197 20.4952 32.2891 26.9036 32.2891C33.3121 32.2891 38.5026 35.1197 38.5026 38.6146Z" fill="white" stroke="#CFD4D9" stroke-width="4.5"/>
+<g id="Group 3001">
+<circle id="Ellipse 509" cx="64.9765" cy="51.4922" r="13.8828" transform="rotate(-45 64.9765 51.4922)" fill="white" stroke="#CFD4D9" stroke-width="4.5"/>
 <g id="Group 2911">
-<path id="Line 94" d="M63.4636 53.6285L70.5347 60.6996" stroke="#CFD4D9" stroke-width="3.5" stroke-linecap="round"/>
-<path id="Line 95" d="M63.4636 60.6996L70.5347 53.6285" stroke="#CFD4D9" stroke-width="3.5" stroke-linecap="round"/>
+<path id="Line 94" d="M61.4596 47.978L68.4957 55.0141" stroke="#CFD4D9" stroke-width="4.5" stroke-linecap="round"/>
+<path id="Line 95" d="M61.4753 55.0289L68.5114 47.9928" stroke="#CFD4D9" stroke-width="4.5" stroke-linecap="round"/>
 </g>
 </g>
 </g>

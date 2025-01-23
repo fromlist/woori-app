@@ -253,7 +253,7 @@
 /* business-card */
 .init-regist {/* border-radius:8px; *//* border:1.5px dashed var(--deepblue-300); *//* background-color:var(--background-bg_white); *//* box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1); *//* padding:24px; */}
 .init-regist picture {display:flex;align-items:center;justify-content:center;}
-.init-regist p {margin-top:4px;}
+.init-regist p {margin-top: 8px;}
 
 /* businesscard-list */
 .businesscard-list {}
