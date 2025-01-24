@@ -1057,7 +1057,7 @@ button.flag-fluid span {margin-top:0;}
 .stock-index-list {}
 .stock-index-list ul li {}
 .stock-index-list > ul li:not(:last-child) {margin-bottom:12px;}
-.stock-index-list a {display:flex;align-items:center;justify-content:space-between;border-radius: 10px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);padding:14px 16px 16px 24px;gap:16px;}
+.stock-index-list a {display:flex;align-items:center;justify-content:space-between;border-radius: 10px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);padding:20px 16px 20px 20px;gap:16px;}
 .stock-index-list a:after {content:'';display:flex;align-items:center;justify-content:center;flex:0 0 10px;width:10px;height:20px;
     -webkit-mask-position:center center;
     mask-position:center center;
