@@ -242,7 +242,7 @@
 
 /* sweetalert2 */
 div:where(.swal2-container) {left:0;top:0;width:100%;}
-div:where(.swal2-container) div:where(.swal2-popup) {width:calc(100vw - 72px);border-radius:8px;padding-bottom:0;overflow:hidden;}
+div:where(.swal2-container) div:where(.swal2-popup) {width:calc(100vw - 72px);border-radius:12px;padding-bottom:0;overflow:hidden;}
 
 
 div:where(.swal2-container) h2:where(.swal2-title) {font-size:18px;color:var(--typography-title);text-align:left;font-weight:500;padding:24px 24px 8px!important;}

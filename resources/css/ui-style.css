@@ -348,11 +348,11 @@ div.btn-xsmall .btn-inner span {white-space:nowrap;overflow:hidden;text-overflow
 .anchor.chevron.fc-status-active:after {background-color:var(--status-active);}
 
 /* fab */
-.fab {display:flex;width:52px;height:52px;box-shadow:0px 6px 24px -8px var(--shadow-gray_3, rgba(12, 12, 13, 0.12));backdrop-filter:blur(8px);align-items:center;justify-content:center;}
+.fab {display:flex;width:54px;height:54px;box-shadow: 0px 6px 24px -8px var(--shadow-gray_3);backdrop-filter:blur(8px);align-items:center;justify-content:center;}
 .fab-primary {background-color:var(--brandPrimary-blue500);}
-.fab-secondary {background-color:var(--white-80);border:1px solid var(--border-8);}
-.fab-square {border-radius:16px;}
-.fab-circle {border-radius:52px;}
+.fab-secondary {background-color:var(--white-80);border:1px solid var(--border-8);box-shadow: 0px 2px 10px 0px var(--shadow-gray_2);}
+.fab-square {border-radius:12px;}
+.fab-circle {border-radius:54px;}
 
 /* button inner icon */
 .btn-large i,
@@ -369,7 +369,7 @@ div.btn-xsmall .btn-inner span {white-space:nowrap;overflow:hidden;text-overflow
 .btn-xsmall i {flex:0 0 16px;width:16px;height:16px;}
 .btn-noborder i {flex:0 0 16px;width:16px;height:16px;}
 .btn-border i {flex:0 0 24px;width:24px;height:24px;}
-.fab i {flex:0 0 24px;width:24px;height:24px;}
+.fab i {flex:0 0 28px;width:28px;height:28px;}
 
 .btn-primary i {background-color:var(--button-primary-onEnabled);}
 .btn-secondary i {background-color:var(--button-secondary-onEnabled);}
@@ -660,7 +660,7 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
 .form-valid .validate-text {color:var(--status-success);}
 .form + .form {margin-top:8px;}
 
-.form-exchange {position:relative;display:flex;justify-content:space-between;border-radius:16px;background:var(--surface-surface);padding:24px;gap:8px;z-index:1;}
+.form-exchange {position:relative;display:flex;justify-content:space-between;border-radius:12px;background:var(--surface-surface);padding:24px;gap:8px;z-index:1;}
 .form-exchange .label {font-size:22px;font-weight:700;color:var(--typography-title);gap:3px;margin-bottom:0;}
 .form-exchange .ex-input-wrap {flex:1}
 .form-exchange .ex-input-wrap input {height:36px;text-align:right;font-size:24px;font-weight:700;color:var(--typography-title);}
