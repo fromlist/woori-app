@@ -616,7 +616,7 @@
 .customer-card-list {}
 .customer-card-list .search-result {display:block;text-align:center;font-size:18px;font-weight:500;color:var(--typography-gray);line-height:1;margin-bottom:24px;}
 .customer-card-list .customer-card {display:block;border-radius:16px;background-color:var(--surface-surface);box-shadow:0px 8px 16px -4px rgba(0, 0, 0, 0.05);padding:24px;width:100%;}
-.customer-card-list .customer-card:not(:last-child) {margin-bottom:16px;}
+.customer-card-list .customer-card:not(:last-child) {margin-bottom:12px;}
 .customer-card-list .customer-card .title-medium {margin-bottom:12px;}
 .customer-card-list .customer-card .group {padding:0;}
 .customer-card-list .customer-card .group:not(:last-child) {padding-bottom:4px;}
@@ -891,7 +891,7 @@ button.flag-fluid span {margin-top:0;}
 .chatbody {padding:0 20px;}
 .chatbody:after {content:'';display:block;clear:both;}
 .chatbody:not(:last-child) {margin-bottom:64px;}
-.message-text {position:relative;display:table;border-radius:16px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
+.message-text {position:relative;display:table;border-radius:8px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
 .message-text > *:not(:last-child) {margin-bottom:24px;}
 .message-text .text {font-size:18px;font-weight:400;color:var(--typography-black);padding:0 4px;}
 
@@ -946,7 +946,7 @@ button.flag-fluid span {margin-top:0;}
 .message-text {max-width:100%;padding:24px 16px;}
 .message-text:not(:last-child) {margin-bottom:8px;}
 .message-text.left {float:left;clear:both;width:100%;}
-.message-text.right {float:right;clear:both;padding:8px 16px;background-color:var(--deepblue-500);}
+.message-text.right {float:right;clear:both;padding:8px 16px;background-color:var(--deepblue-500);border-radius:22.5px;}
 .message-text.right .text {color:var(--typography-white);}
 .message-text.right {}
 .message-text .sub-text {padding:8px;border-radius:4px;background-color:var(--surface-surface50);}
