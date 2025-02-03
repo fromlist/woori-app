@@ -225,7 +225,7 @@
 						</div>
 						<div class="group-content">
 							<button type="button" class="anchor chevron anchor-fluid anchor-border" id="modal-repeat-trigger"><span class="body-large fw-700">3주 마다, 수요일</span></button>
-							<button type="button" class="anchor chevron anchor-fluid anchor-border" id="modal-repeat-trigger"><span class="body-large fw-700">3주 마다, 수요일, 3회</span></button>
+							<button type="button" class="anchor chevron anchor-fluid anchor-border" id="modal-repeat-trigger"><span class="body-large fw-700">3주 마다, 수요일, 3회 반복</span></button>
 							<button type="button" class="anchor chevron anchor-fluid anchor-border" id="modal-repeat-trigger"><span class="body-large fw-700">3주 마다, 수요일, 2023-12-07까지</span></button>
 						</div>
 					</div>
@@ -344,49 +344,55 @@
 
 
 							<!-- 매주 반복 -->
-							<div class="group-content">
-								<div class="inp-group py24 gap16">
-									<div class="inp inp-medium inp-combi pl0">
-										<div class="form">
-											<div class="label"></div>
-											<div class="input-wrap input-placeholder input-inner-text">
-												<input type="number" class="ac pr0" placeholder="1" aria-label="주" value="1">
-												<div class="visible-placeholder">주 마다</div>
-											</div>
-											<p class="validate-text"></p>
-										</div>
+							<div class="group-content mt24 px8">
+								<div class="form">
+									<div class="label"></div>
+									<div class="input-wrap input-placeholder input-medium">
+										<input type="number" class="ac pr0" placeholder="1" aria-label="주" value="1">
+										<div class="visible-placeholder">주 마다</div>
 									</div>
-									<div class="inp inp-medium inp-combi pl0">
-										<div class="form">
-											<div class="label"></div>
-											<div class="input-wrap input-placeholder input-inner-text">
-												<button type="button" class="text-button ac" data-placeholder="월요일"></button>
-												<div class="visible-placeholder">에 반복</div>
-											</div>
-											<p class="validate-text"></p>
-										</div>
-									</div>
-									<!-- 선택 시 활성화 -->
-									<div class="select-spinner" id="spinner01">
-										<section class="scroll-container" style="flex:1 1 70%;">
-											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>일</span></label>
-											<label class="scroll-items scroll-items-selected"><input type="radio" name="items1" class="blind"><span>월</span></label>
-											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>화</span></label>
-											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>수</span></label>
-											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>목</span></label>
-											<label class="scroll-items"><input type="radio" name="items1" class="blind"><span>금</span></label>
-											<label class="scroll-items "><input type="radio" name="items1" class="blind"><span>토</span></label>
-										</section>
-										<section class="scroll-container" style="flex:1 1 30%;">
-											<label class="scroll-items"><input type="radio" name="items2" class="blind"><span class="j-start">요일</span></label>
-										</section>
-									</div>
-									<!-- 선택 시 활성화 -->
+									<p class="validate-text"></p>
 								</div>
 							</div>
-							<!-- //매주 반복 -->
+						</div>
+
+						<!-- group-form -->
+						<div class="group-form mt16">
+							<div class="group-title">
+								<strong class="title-medium fw-500 px6 py8">다음 요일에 반복</strong>
+							</div>
+
+							<div class="group-content">
+								<div class="form">
+									<div class="label"></div>
+									<div class="inp-circle">
+										<input type="checkbox" class="sun" aria-label="일">
+										<input type="checkbox" aria-label="월">
+										<input type="checkbox" aria-label="화">
+										<input type="checkbox" aria-label="수">
+										<input type="checkbox" aria-label="목">
+										<input type="checkbox" aria-label="금">
+										<input type="checkbox" class="sat" aria-label="토">
+									</div>
+									<p class="validate-text"></p>
+								</div>
 
 
+								<div class="form form-invalid">
+									<div class="label"></div>
+									<div class="inp-circle">
+										<input type="checkbox" class="sun" aria-label="일">
+										<input type="checkbox" aria-label="월">
+										<input type="checkbox" aria-label="화">
+										<input type="checkbox" aria-label="수">
+										<input type="checkbox" aria-label="목">
+										<input type="checkbox" aria-label="금">
+										<input type="checkbox" class="sat" aria-label="토">
+									</div>
+									<p class="validate-text">적어도 하나의 요일 선택은 필수입니다.</p>
+								</div>
+
+							</div>
 						</div>
 						<!-- //group-form -->
 
@@ -395,15 +401,22 @@
 						<!-- group-form -->
 						<div class="group-form">
 							<div class="group-title">
-								<strong class="title-medium">반복 설정</strong>
+								<strong class="title-medium">반복 범위</strong>
 							</div>
 							<div class="group-content">
 								<div class="inp-group py24 gap0">
 									<div class="inp inp-medium inp-combi">
-										<label>
+										<label style="flex:none;">
 											<input type="radio" name="rad003">
-											<span class="label-title">지정 안함</span>
+											<span class="label-title">종료일 지정</span>
 										</label>
+										<!-- 종료일 지정 체크 시 활성화 -->
+										<div class="form" style="flex:none;width:180px;">
+											<div class="input-wrap input-datepicker input-medium">
+												<button type="button" aria-label="날짜 선택">2024-01-01</button>
+											</div>
+										</div>
+										<!-- //종료일 지정 체크 시 활성화 -->
 									</div>
 									<div class="inp inp-medium inp-combi">
 										<label>
@@ -411,9 +424,9 @@
 											<span class="label-title">반복 횟수 지정</span>
 										</label>
 										<!-- 반복 횟수 지정 체크 시 활성화 -->
-										<div class="form">
+										<div class="form" style="width:140px;">
 											<div class="label"></div>
-											<div class="input-wrap input-placeholder">
+											<div class="input-wrap input-placeholder input-medium">
 												<input type="number" class="ac pr0" placeholder="1" aria-label="회">
 												<div class="visible-placeholder">회</div>
 											</div>
@@ -423,17 +436,10 @@
 									<div class="inp inp-medium inp-combi">
 										<label>
 											<input type="radio" name="rad003">
-											<span class="label-title">종료일 지정</span>
+											<span class="label-title">지정 안함</span>
 										</label>
-										<!-- 종료일 지정 체크 시 활성화 -->
-										<div class="form">
-											<div class="label"></div>
-											<strong class="title-medium ar px0 fw-500">2023-12-07</strong>
-										</div>
-										<!-- //종료일 지정 체크 시 활성화 -->
 									</div>
 									<!-- 종료일 지정 체크 시 활성화 -->
-
 									<div class="datepicker-wrap">
 										<div aria-label="날짜 선택" class="datepicker-trigger" id="datepicker"></div>
 									</div>
@@ -723,26 +729,6 @@
 	</div>
 	<!-- //micromodal -->
 
-	<script>
-		const inpCombiRadio = $('.inp-combi input[type="radio"]')
-
-		inpCombiRadio.on('change', function() {
-			const inpCombiRadioName = $(this).attr('name')
-			const inpCombi = $(this).closest('.inp-combi');
-			const inpCombiText = inpCombi.find('.input-wrap')
-
-			if ($(this).is(':checked')) {
-				const inpCombiSiblings = $(this).closest('.inp-combi').siblings('')
-				const inpCombiSiblingsText = inpCombiSiblings.find('.input-wrap')
-
-				if (inpCombiSiblings.find(`[name=${inpCombiRadioName}]`).length) {
-					inpCombiSiblingsText.removeClass('input-inner-text')
-				}
-				inpCombiText.addClass('input-inner-text')
-			}
-		})
-	</script>
-
 
 	<script>
 		$('.schedule-regist-trigger').on('click', function() {
@@ -860,46 +846,6 @@
 			}
 		})
 	</script>
-
-	<!-- wheel -->
-	<script>
-		const spinnerWrap1 = document.querySelector('#spinner01')
-		let observer1 = new IntersectionObserver(function(entries) {
-			entries.forEach(function(entry) {
-				const prevChild = entry.target.previousElementSibling;
-				const nextChild = entry.target.nextElementSibling;
-
-				if (entry.isIntersecting) {
-					entry.target.querySelector('input').checked = true;
-					entry.target.classList.add('center');
-					if (prevChild != null) {
-						prevChild.classList.add('outside');
-					}
-					if (nextChild != null) {
-						nextChild.classList.add('outside');
-					}
-				} else {
-					entry.target.classList.remove('center');
-					if (prevChild != null) {
-						prevChild.classList.remove('outside');
-					}
-					if (nextChild != null) {
-						nextChild.classList.remove('outside');
-					}
-				}
-
-			})
-		}, {
-			root: spinnerWrap1,
-			rootMargin: `-50% 0px`,
-			threshold: [0, 0.25, 0.5, 0.75, 1]
-		});
-		let box1 = spinnerWrap1.querySelectorAll(`.scroll-items`);
-		box1.forEach(function(item) {
-			observer1.observe(item)
-
-		});
-	</script>
 	<script>
 		const modalTrigger = document.querySelector('#modal-repeat-trigger')
 		modalTrigger.addEventListener("click", function() {
@@ -913,18 +859,6 @@
 				awaitCloseAnimation: true, // [9]
 				// debugMode: true // [10]
 				onShow: function(modal) {
-					console.log(1)
-					const scrollWrap = document.querySelector('.scroll-container');
-					const scrollWrapFirst = scrollWrap.firstElementChild;
-					const scrollWrapFirstMargin = parseInt(window.getComputedStyle(scrollWrapFirst).marginTop, 10);
-					const scrollSelected = scrollWrap.querySelector('.scroll-items-selected');
-					if (scrollSelected != null) {
-						const selectedOffsetTop = scrollSelected.offsetTop;
-						scrollWrap.scrollTo({
-							top: selectedOffsetTop - scrollWrapFirstMargin,
-							behavior: 'smooth'
-						});
-					}
 
 				},
 				onClose: function(modal) {

@@ -225,7 +225,7 @@
 						</div>
 						<div class="group-content">
 							<button type="button" class="anchor chevron anchor-fluid anchor-border" data-micromodal-trigger="modal-repeat"><span class="body-large fw-700">반복 없음</span></button>
-							<button type="button" class="anchor chevron anchor-fluid anchor-border" data-micromodal-trigger="modal-repeat"><span class="body-large fw-700">매일, 3회, 2023-12-07까지</span></button>
+							<button type="button" class="anchor chevron anchor-fluid anchor-border" data-micromodal-trigger="modal-repeat"><span class="body-large fw-700">매일(평일), 3회, 2023-12-07까지</span></button>
 						</div>
 					</div>
 					<!-- //group-form -->
@@ -350,7 +350,7 @@
 										</label>
 										<div class="form">
 											<div class="label"></div>
-											<div class="input-wrap input-placeholder">
+											<div class="input-wrap input-placeholder input-medium">
 												<input type="number" class="ac pr0" placeholder="1" aria-label="일" value="1">
 												<div class="visible-placeholder">일 마다</div>
 											</div>
@@ -364,7 +364,7 @@
 										</label>
 										<div class="form">
 											<div class="label"></div>
-											<div class="input-wrap input-placeholder">
+											<div class="input-wrap input-placeholder input-medium">
 												<input type="text" class="al pr0" placeholder="매일(평일)" aria-label="매일(평일)" value="">
 											</div>
 										</div>
@@ -378,7 +378,7 @@
 										</label>
 										<div class="form">
 											<div class="label"></div>
-											<div class="input-wrap input-placeholder">
+											<div class="input-wrap input-placeholder input-medium">
 												<input type="text" class="al pr0" placeholder="매일(평일)" aria-label="매일(평일)" value="매일(평일)">
 											</div>
 										</div>
@@ -396,15 +396,22 @@
 						<!-- group-form -->
 						<div class="group-form">
 							<div class="group-title">
-								<strong class="title-medium">반복 설정</strong>
+								<strong class="title-medium">반복 범위</strong>
 							</div>
 							<div class="group-content">
 								<div class="inp-group py24 gap0">
 									<div class="inp inp-medium inp-combi">
-										<label>
+										<label style="flex:none;">
 											<input type="radio" name="rad003">
-											<span class="label-title">지정 안함</span>
+											<span class="label-title">종료일 지정</span>
 										</label>
+										<!-- 종료일 지정 체크 시 활성화 -->
+										<div class="form" style="flex:none;width:180px;">
+											<div class="input-wrap input-datepicker input-medium">
+												<button type="button" aria-label="날짜 선택">2024-01-01</button>
+											</div>
+										</div>
+										<!-- //종료일 지정 체크 시 활성화 -->
 									</div>
 									<div class="inp inp-medium inp-combi">
 										<label>
@@ -412,9 +419,9 @@
 											<span class="label-title">반복 횟수 지정</span>
 										</label>
 										<!-- 반복 횟수 지정 체크 시 활성화 -->
-										<div class="form">
+										<div class="form" style="width:140px;">
 											<div class="label"></div>
-											<div class="input-wrap input-placeholder">
+											<div class="input-wrap input-placeholder input-medium">
 												<input type="number" class="ac pr0" placeholder="1" aria-label="회">
 												<div class="visible-placeholder">회</div>
 											</div>
@@ -424,17 +431,10 @@
 									<div class="inp inp-medium inp-combi">
 										<label>
 											<input type="radio" name="rad003">
-											<span class="label-title">종료일 지정</span>
+											<span class="label-title">지정 안함</span>
 										</label>
-										<!-- 종료일 지정 체크 시 활성화 -->
-										<div class="form">
-											<div class="label"></div>
-											<strong class="title-medium ar px0 fw-500">2023-12-07</strong>
-										</div>
-										<!-- //종료일 지정 체크 시 활성화 -->
 									</div>
 									<!-- 종료일 지정 체크 시 활성화 -->
-
 									<div class="datepicker-wrap">
 										<div aria-label="날짜 선택" class="datepicker-trigger" id="datepicker"></div>
 									</div>
@@ -727,27 +727,6 @@
 		</div>
 	</div>
 	<!-- //micromodal -->
-
-	<script>
-		const inpCombiRadio = $('.inp-combi input[type="radio"]')
-
-		inpCombiRadio.on('change', function() {
-			const inpCombiRadioName = $(this).attr('name')
-			const inpCombi = $(this).closest('.inp-combi');
-			const inpCombiText = inpCombi.find('.input-wrap')
-
-			if ($(this).is(':checked')) {
-				const inpCombiSiblings = $(this).closest('.inp-combi').siblings('')
-				const inpCombiSiblingsText = inpCombiSiblings.find('.input-wrap')
-
-				if (inpCombiSiblings.find(`[name=${inpCombiRadioName}]`).length) {
-					inpCombiSiblingsText.removeClass('input-inner-text')
-				}
-				inpCombiText.addClass('input-inner-text')
-			}
-		})
-	</script>
-
 
 	<script>
 		$('.schedule-regist-trigger').on('click', function() {

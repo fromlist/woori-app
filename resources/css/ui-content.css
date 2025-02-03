@@ -342,7 +342,7 @@
 .upload-picture .upload-picture-anchor {display:block;width:100%;}
 
 /* pinch-zoom-wrap */
-.pinch-zoom-wrap {display:flex;height:calc(100vh - 96px);}
+.pinch-zoom-wrap {display:flex;height:calc(100vh - 96px);align-items:center;justify-content:center;}
 .pinch-zoom-container {width:100%!important;}
 
 /* business-card-info */
