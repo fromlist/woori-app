@@ -975,7 +975,14 @@ button.flag-fluid span {margin-top:0;}
 }
 
 .file-attach-list a {display:inline-flex;border-radius:4px;background-color:var(--surface-surface50);padding:4px 8px;gap:10px;}
-.file-attach-list a:before {content:'';display:table-cell;flex:0 0 16px;width:16px;height:22px;background:url(/resources/images/PBWAI/ico_file_attach.svg) center center / 16px 16px no-repeat;}
+.file-attach-list a:before {content:'';display:table-cell;flex:0 0 22px;width:22px;height:22px;background:url(/resources/images/PBWAI/ico_file_attach.svg) center center / contain no-repeat;}
+.file-attach-list a[data-ext="word"]:before {background:url(../images/PBWAI/ico_file_attach_word.svg) center center / contain no-repeat;}
+.file-attach-list a[data-ext="excel"]:before {background:url(../images/PBWAI/ico_file_attach_excel.svg) center center / contain no-repeat;}
+.file-attach-list a[data-ext="hwp"]:before {background:url(../images/PBWAI/ico_file_attach_hwp.svg) center center / contain no-repeat;}
+.file-attach-list a[data-ext="img"]:before {background:url(../images/PBWAI/ico_file_attach_img.svg) center center / contain no-repeat;}
+.file-attach-list a[data-ext="pdf"]:before {background:url(../images/PBWAI/ico_file_attach_pdf.svg) center center / contain no-repeat;}
+.file-attach-list a[data-ext="ppt"]:before {background:url(../images/PBWAI/ico_file_attach_ppt.svg) center center / contain no-repeat;}
+
 .file-attach-list a:after {content:'';display:table-cell;flex:0 0 20px;width:20px;height:22px;background:url(/resources/images/PBWAI/ico_file_attach_download.svg) center center / 20px 20px no-repeat;}
 .file-attach-list a.link:after {flex:0 0 6px;width:6px;height:22px;
     -webkit-mask-position:center center;

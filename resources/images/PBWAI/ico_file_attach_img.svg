@@ -1,0 +1,13 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ico_file">
+<mask id="mask0_5907_87110" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="14" height="14">
+<rect id="Rectangle 4026" x="1.33325" y="1.33203" width="13.3333" height="13.332" rx="3" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_5907_87110)">
+<rect id="Rectangle 4029" x="1.33325" y="1.33203" width="13.3333" height="13.332" rx="3" fill="#FFDB66"/>
+<rect id="Rectangle 4028" x="11.196" y="5.75" width="15.1452" height="15.1438" rx="4" transform="rotate(43.8186 11.196 5.75)" fill="#FEBB10"/>
+<rect id="Rectangle 4027" x="4.36157" y="4.34375" width="15.1452" height="15.1438" rx="4" transform="rotate(43.8186 4.36157 4.34375)" fill="#F9AA01"/>
+<circle id="Ellipse 509" cx="11.5" cy="4.32812" r="1.48438" fill="white"/>
+</g>
+</g>
+</svg>
