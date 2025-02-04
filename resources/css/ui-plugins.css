@@ -354,9 +354,9 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 
 /* toastr */
 #toast-container.toast-bottom-center>div, #toast-container.toast-top-center>div {width:auto;margin:8px 16px;}
-#toast-container>div {border-radius:8px;padding:16px;box-shadow:none;-webkit-box-shadow:none;opacity:1;background-color:var(--surface-surface800);}
+#toast-container>div {border-radius:8px;padding:12px 14px;box-shadow:none;-webkit-box-shadow:none;opacity:1;background-color:var(--surface-surface800);}
 .toast-title,
-.toast-message {font-size:18px;color:var(--white-100);font-weight:400;padding:0 4px;}
+.toast-message {font-size:16px;color:var(--white-100);font-weight:400;padding:0 4px;}
 .toast-message {margin-top:10px;}
 .btn-toast-wrap {display:flex;justify-content:flex-end;}
 .toast-success .toast-title,
@@ -366,7 +366,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .toast-success .toast-title:before,
 .toast-info .toast-title:before,
 .toast-caution .toast-title:before,
-.toast-error .toast-title:before {content:'';position:absolute;left:0;top:5px;width:18px;height:18px;}
+.toast-error .toast-title:before {content:'';position:absolute;left:0;top:5px;width:16px;height:16px;}
 .toast-success .toast-title:before {background:url(/resources/images/toastr/ico_success.svg) center center / contain no-repeat;}
 .toast-info .toast-title:before {background:url(/resources/images/toastr/ico_info.svg) center center / contain no-repeat;}
 .toast-caution .toast-title:before {background:url(/resources/images/toastr/ico_caution.svg) center center / contain no-repeat;}
@@ -398,13 +398,13 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 
 .datepicker-wrap .ui-datepicker .ui-datepicker-title {display:flex;gap:4px;margin:0 52px;line-height:52px;align-items:center;justify-content:center;}
 
-.datepicker-wrap .ui-datepicker table {position:relative;table-layout:fixed;margin:0 auto;font-size:inherit;border-collapse:separate;border: 0;}
+.datepicker-wrap .ui-datepicker table {position:relative;table-layout:fixed;margin:0 auto;font-size:inherit;border-collapse:separate;border:0;}
 .datepicker-wrap .ui-datepicker table tbody {clip:auto!important;width:100%!important;}
 
 .datepicker-wrap .ui-datepicker-calendar thead th {color:var(--gray-400);}
 .datepicker-wrap .ui-datepicker-calendar tbody td {color:var(--typography-black);}
 .datepicker-wrap .ui-datepicker-calendar thead th,
-.datepicker-wrap .ui-datepicker-calendar tbody td {font-size:16px;font-weight:500;line-height:40px;border: 4px solid transparent;text-align:center;padding:0;}
+.datepicker-wrap .ui-datepicker-calendar tbody td {font-size:16px;font-weight:500;line-height:40px;border:4px solid transparent;text-align:center;padding:0;}
 .datepicker-wrap .ui-widget-content .schedule_01 > *,
 .datepicker-wrap .ui-widget-content .schedule_02 > *,
 .datepicker-wrap .ui-widget-content .schedule_03 > * {background-color:var(--surface-surface50);}
@@ -453,8 +453,8 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .datepicker-weekend.datepicker-collapsed {position:sticky;top:var(--header-height);background-color:var(--surface-surface);z-index:var(--sticky-zIndex);}
 .datepicker-weekend.datepicker-collapsed .inp-group {display:none;}
 .datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content {height:82px;overflow:hidden;padding:0}
-.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content .ui-datepicker-header {height:14px;overflow:hidden;margin: 0 0 16px;}
-.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table {overflow:hidden;background-color:#ECF6FF;border-radius:8px;padding: 2px 16px;}
+.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content .ui-datepicker-header {height:14px;overflow:hidden;margin:0 0 16px;}
+.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table {overflow:hidden;background-color:#ECF6FF;border-radius:8px;padding:2px 16px;}
 .datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table thead {display:none;}
 .datepicker-weekend .ui-widget-content .ui-state-active {border-color:transparent;background-color:transparent;color:var(--typography-body);}
 .datepicker-weekend .ui-widget-content .ui-datepicker-current-day.ui-datepicker-today .ui-state-active {color:var(--brandPrimary-blue600);}
