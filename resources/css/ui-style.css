@@ -257,7 +257,7 @@
 .btn-large {display:inline-flex;align-items:center;justify-content:center;height:52px;font-size:20px;border-width:1px;border-radius:8px;padding:16px;white-space:nowrap;text-align:center;vertical-align:top;gap:4px;line-height:18px;}
 .btn-medium {display:inline-flex;align-items:center;justify-content:center;height:48px;font-size:18px;border-width:1px;border-radius:8px;padding:14px 16px;white-space:nowrap;text-align:center;vertical-align:top;gap:4px;line-height:18px;}
 .btn-small {display:inline-flex;align-items:center;justify-content:center;height:40px;font-size:18px;border-width:1px;border-radius:8px;padding:12px 16px;white-space:nowrap;text-align:center;vertical-align:top;gap:4px;line-height:18px;}
-.btn-xsmall {display:inline-flex;align-items:center;justify-content:center;height:32px;font-size:16px;border-width:1px;border-radius:8px;padding:6px 12px;white-space:nowrap;text-align:center;vertical-align:top;gap:4px;line-height:18px;}
+.btn-xsmall {display:inline-flex;align-items:center;justify-content:center;height:32px;font-size:16px;border-width:1px;border-radius:8px;padding: 6px 14px;white-space:nowrap;text-align:center;vertical-align:top;gap:4px;line-height:18px;}
 .btn-large,
 .btn-medium,
 .btn-small,
