@@ -330,6 +330,17 @@
 							</div>
 							<!-- //질문 -->
 
+							<!-- 로딩 -->
+							<div class="chatbottom">
+								<div class="chatbody chat-loading" style="display:none;">
+									<div class="spinner">
+										<div class="bounce1"></div>
+										<div class="bounce2"></div>
+										<div class="bounce3"></div>
+									</div>
+								</div>
+							</div>
+
 						</div>
 					</div>
 
@@ -463,15 +474,15 @@
 			},
 		});
 
-
 		$('#btn-send-text').click(function() {
 			// $('.input-wrap input').focus()
 			var inputText = $('.input-wrap .textarea').text();
 			console.dir(inputText)
-			$('.chatgroup .chatbody:last').after('<div class="chatbody"><div class="message-text right"><p class="text" data-line="2">' + inputText + '</p></div></div>')
+			$('.chatgroup > *:last-child').before('<div class="chatbody"><div class="message-text right"><p class="text">' + inputText + '</p></div></div>')
 			scrollBottom();
 			$('.input-wrap .textarea').text('')
 		})
+
 		// scroll page bottom animation 100%
 		var scrollBottom = function() {
 			var $el = $('html, body');
@@ -481,6 +492,24 @@
 				scrollTop: $el.prop('scrollHeight')
 			}, scrollTime);
 		}
+		var loadingSpinner = function() {
+			var random = Math.random() * 1000 + 1000; //(1000 ~ 2000 사이)
+			var loading = $('.chat-loading');
+			loading.show();
+			loading.removeClass('hide');
+			loading.addClass('show');
+
+			setTimeout(function() {
+				loading.addClass('hide');
+				loading.removeClass('show');
+				console.log(random)
+			}, random)
+			scrollBottom();
+		}
+
+		$('#btn-send-text').click(function() {
+			loadingSpinner();
+		})
 	</script>
 
 
@@ -515,7 +544,6 @@
 			$(this).find('*').removeAttr('style');
 		});
 	</script>
-
 </body>
 
 </html>
