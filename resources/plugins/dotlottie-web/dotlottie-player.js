@@ -1,13 +1,15 @@
-import { b, c as c$1, a as a$3 } from './chunk-ODPU3M3Z.mjs';
-import { g, c, a as a$2, e, j, i, f } from './chunk-TRZ6EGBZ.mjs';
-export { g as PlayMode } from './chunk-TRZ6EGBZ.mjs';
-import './chunk-HDDX7F4A.mjs';
-import { a as a$1 } from './chunk-ZWH2ESXT.mjs';
+import { b, c as c$1, a as a$3 } from './chunk-ODPU3M3Z.js';
+import { g, c, a as a$2, e, j, i, f } from './chunk-TRZ6EGBZ.js';
+export { g as PlayMode } from './chunk-TRZ6EGBZ.js';
+import './chunk-HDDX7F4A.js';
+import { a as a$1 } from './chunk-ZWH2ESXT.js';
 
-var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,finisher(e){e.createProperty(t.key,r);}}:{kind:"field",key:Symbol(),placement:"own",descriptor:{},originalKey:t.key,initializer(){typeof t.initializer=="function"&&(this[t.key]=t.initializer.call(this));},finisher(e){e.createProperty(t.key,r);}},x=(r,t,e)=>{t.constructor.createProperty(e,r);};function p(r){return (t,e)=>e!==void 0?x(r,t,e):M(r,t)}function k(r){return p({...r,state:!0})}var v=({finisher:r,descriptor:t})=>(e,i)=>{var n;if(i===void 0){let l=(n=e.originalKey)!==null&&n!==void 0?n:e.key,h=t!=null?{kind:"method",placement:"prototype",key:l,descriptor:t(e.key)}:{...e,key:l};return r!=null&&(h.finisher=function(b){r(b,l);}),h}{let l=e.constructor;t!==void 0&&Object.defineProperty(e,i,t(i)),r==null||r(l,i);}};function O(r,t){return v({descriptor:e=>{let i={get(){var n,l;return (l=(n=this.renderRoot)===null||n===void 0?void 0:n.querySelector(r))!==null&&l!==void 0?l:null},enumerable:!0,configurable:!0};if(t){let n=typeof e=="symbol"?Symbol():"__"+e;i.get=function(){var l,h;return this[n]===void 0&&(this[n]=(h=(l=this.renderRoot)===null||l===void 0?void 0:l.querySelector(r))!==null&&h!==void 0?h:null),this[n]};}return i}})}var L;((L=window.HTMLSlotElement)===null||L===void 0?void 0:L.prototype.assignedElements)!=null?(r,t)=>r.assignedElements(t):(r,t)=>r.assignedNodes(t).filter(e=>e.nodeType===Node.ELEMENT_NODE);var I={name:"@dotlottie/player-component",version:"2.7.12",description:"dotLottie animation player web component.",repository:"https://github.com/dotlottie/player-component.git",homepage:"https://dotlottie.io/players",bugs:"https://github.com/dotlottie/player-component/issues",author:"Jawish Hameed <jawish@lottiefiles.com>",license:"MIT",main:"dist/dotlottie-player.js",module:"dist/dotlottie-player.mjs",types:"dist/dotlottie-player.d.ts",files:["dist"],keywords:["dotlottie","animation","web component","component","lit-element","player"],scripts:{build:"tsup","cypress:open":"cypress open --component",dev:"tsup --watch",lint:"eslint .","lint:fix":"eslint --fix",test:"cypress run --component","type-check":"tsc --noEmit"},dependencies:{"@dotlottie/common":"workspace:*",lit:"^2.7.5"},devDependencies:{"@vitejs/plugin-legacy":"^4.1.0","axe-core":"^4.7.2",cypress:"^12.11.0","cypress-axe":"^1.4.0","cypress-ct-lit":"^0.3.2","lottie-web":"^5.12.2",terser:"^5.19.0",tsup:"^7.2.0",typescript:"^4.7.4",vite:"^4.3.9"},publishConfig:{access:"public"},browserslist:["> 3%"]};var T="dotlottie-player";var a=class extends b{defaultTheme="";container;playMode=g.Normal;autoplay=!1;background="transparent";controls=!1;direction=1;hover=!1;loop;renderer="svg";speed=1;src;intermission=0;activeAnimationId=null;light=!1;worker=!1;activeStateId;_seeker=0;_dotLottieCommonPlayer;_io;_loop;_renderer="svg";_unsubscribeListeners;_hasMultipleAnimations=!1;_hasMultipleThemes=!1;_hasMultipleStates=!1;_popoverIsOpen=!1;_animationsTabIsOpen=!1;_statesTabIsOpen=!1;_styleTabIsOpen=!1;_themesForCurrentAnimation=[];_statesForCurrentAnimation=[];_parseLoop(t){let e=parseInt(t,10);return Number.isInteger(e)&&e>0?(this._loop=e,e):typeof t=="string"&&["true","false"].includes(t)?(this._loop=t==="true",this._loop):(c("loop must be a positive integer or a boolean"),!1)}_handleSeekChange(t){let e=t.currentTarget;try{let i=parseInt(e.value,10);if(!this._dotLottieCommonPlayer)return;let n=i/100*this._dotLottieCommonPlayer.totalFrames;this.seek(n);}catch{throw a$2("Error while seeking animation")}}_initListeners(){let t=this._dotLottieCommonPlayer;if(t===void 0){c("player not initialized - cannot add event listeners","dotlottie-player-component");return}this._unsubscribeListeners=t.state.subscribe((e$1,i)=>{this._seeker=e$1.seeker,this.requestUpdate(),i.currentState!==e$1.currentState&&this.dispatchEvent(new CustomEvent(e$1.currentState)),this.dispatchEvent(new CustomEvent(e.Frame,{detail:{frame:e$1.frame,seeker:e$1.seeker}})),this.dispatchEvent(new CustomEvent(e.VisibilityChange,{detail:{visibilityPercentage:e$1.visibilityPercentage}}));}),t.addEventListener("complete",()=>{this.dispatchEvent(new CustomEvent(e.Complete));}),t.addEventListener("loopComplete",()=>{this.dispatchEvent(new CustomEvent(e.LoopComplete));}),t.addEventListener("DOMLoaded",()=>{let e$1=this.getManifest();e$1&&e$1.themes&&(this._themesForCurrentAnimation=e$1.themes.filter(i=>i.animations.includes(this.getCurrentAnimationId()||""))),e$1&&e$1.states&&(this._hasMultipleStates=e$1.states.length>0,this._statesForCurrentAnimation=[],e$1.states.forEach(i=>{this._statesForCurrentAnimation.push(i);})),this.dispatchEvent(new CustomEvent(e.Ready));}),t.addEventListener("data_ready",()=>{this.dispatchEvent(new CustomEvent(e.DataReady));}),t.addEventListener("data_failed",()=>{this.dispatchEvent(new CustomEvent(e.DataFail));}),window&&window.addEventListener("click",e=>this._clickOutListener(e));}async load(t,e,i){if(!this.shadowRoot)return;this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.destroy(),this._dotLottieCommonPlayer=new j(t,this.container,{rendererSettings:e!=null?e:{scaleMode:"noScale",clearCanvas:!0,progressiveLoad:!0,hideOnTransparent:!0},hover:this.hasAttribute("hover")?this.hover:void 0,renderer:this.hasAttribute("renderer")?this._renderer:void 0,loop:this.hasAttribute("loop")?this._loop:void 0,direction:this.hasAttribute("direction")?this.direction===1?1:-1:void 0,speed:this.hasAttribute("speed")?this.speed:void 0,intermission:this.hasAttribute("intermission")?Number(this.intermission):void 0,playMode:this.hasAttribute("playMode")?this.playMode:void 0,autoplay:this.hasAttribute("autoplay")?this.autoplay:void 0,activeAnimationId:this.hasAttribute("activeAnimationId")?this.activeAnimationId:void 0,defaultTheme:this.hasAttribute("defaultTheme")?this.defaultTheme:void 0,light:this.light,worker:this.worker,activeStateId:this.hasAttribute("activeStateId")?this.activeStateId:void 0}),await this._dotLottieCommonPlayer.load(i);let n=this.getManifest();this._hasMultipleAnimations=this.animationCount()>1,n&&(n.themes&&(this._themesForCurrentAnimation=n.themes.filter(l=>l.animations.includes(this.getCurrentAnimationId()||"")),this._hasMultipleThemes=n.themes.length>0),n.states&&(this._hasMultipleStates=n.states.length>0,this._statesForCurrentAnimation=[],n.states.forEach(l=>{this._statesForCurrentAnimation.push(l);}))),this._initListeners();}getCurrentAnimationId(){var t;return (t=this._dotLottieCommonPlayer)==null?void 0:t.currentAnimationId}animationCount(){var t;return this._dotLottieCommonPlayer&&((t=this._dotLottieCommonPlayer.getManifest())==null?void 0:t.animations.length)||0}animations(){if(!this._dotLottieCommonPlayer)return [];let t=this._dotLottieCommonPlayer.getManifest();return (t==null?void 0:t.animations.map(e=>e.id))||[]}currentAnimation(){return !this._dotLottieCommonPlayer||!this._dotLottieCommonPlayer.currentAnimationId?"":this._dotLottieCommonPlayer.currentAnimationId}getState(){return this._dotLottieCommonPlayer?this._dotLottieCommonPlayer.getState():i}getManifest(){var t;return (t=this._dotLottieCommonPlayer)==null?void 0:t.getManifest()}getLottie(){var t;return (t=this._dotLottieCommonPlayer)==null?void 0:t.getAnimationInstance()}getVersions(){return {lottieWebVersion:j.getLottieWebVersion(),dotLottiePlayerVersion:`${I.version}`}}previous(t){var e;(e=this._dotLottieCommonPlayer)==null||e.previous(t);}next(t){var e;(e=this._dotLottieCommonPlayer)==null||e.next(t);}reset(){var t;(t=this._dotLottieCommonPlayer)==null||t.reset();}play(t,e){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.play(t,e);}pause(){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.pause();}stop(){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.stop();}playOnShow(t){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.playOnShow(t);}stopPlayOnShow(){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.stopPlayOnShow();}playOnScroll(t){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.playOnScroll(t);}stopPlayOnScroll(){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.stopPlayOnScroll();}seek(t){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.seek(t);}snapshot(t=!0){if(!this.shadowRoot)return "";let e=this.shadowRoot.querySelector(".animation svg"),i=new XMLSerializer().serializeToString(e);if(t){let n=document.createElement("a");n.href=`data:image/svg+xml;charset=utf-8,${encodeURIComponent(i)}`,n.download=`download_${this._seeker}.svg`,document.body.appendChild(n),n.click(),document.body.removeChild(n);}return i}setTheme(t){var e;(e=this._dotLottieCommonPlayer)==null||e.setDefaultTheme(t);}themes(){var e;if(!this._dotLottieCommonPlayer)return [];let t=this._dotLottieCommonPlayer.getManifest();return ((e=t==null?void 0:t.themes)==null?void 0:e.map(i=>i.id))||[]}getDefaultTheme(){return this._dotLottieCommonPlayer?this._dotLottieCommonPlayer.defaultTheme:""}getActiveStateMachine(){return this._dotLottieCommonPlayer?this._dotLottieCommonPlayer.activeStateId:""}_freeze(){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.freeze();}setSpeed(t=1){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.setSpeed(t);}setDirection(t){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.setDirection(t);}setLooping(t){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.setLoop(t);}isLooping(){return this._dotLottieCommonPlayer?this._dotLottieCommonPlayer.loop:!1}togglePlay(){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.togglePlay();}toggleLooping(){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.toggleLoop();}setPlayMode(t){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.setMode(t);}enterInteractiveMode(t){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.enterInteractiveMode(t);}exitInteractiveMode(){this._dotLottieCommonPlayer&&this._dotLottieCommonPlayer.exitInteractiveMode();}revertToManifestValues(t){var e;(e=this._dotLottieCommonPlayer)==null||e.revertToManifestValues(t);}static get styles(){return c$1}async firstUpdated(){var t;this.container=(t=this.shadowRoot)==null?void 0:t.querySelector("#animation"),"IntersectionObserver"in window&&(this._io=new IntersectionObserver(e=>{var i,n;e[0]!==void 0&&e[0].isIntersecting?((i=this._dotLottieCommonPlayer)==null?void 0:i.currentState)===f.Frozen&&this.play():((n=this._dotLottieCommonPlayer)==null?void 0:n.currentState)===f.Playing&&this._freeze();}),this._io.observe(this.container)),this.loop?this._parseLoop(this.loop):this.hasAttribute("loop")&&this._parseLoop("true"),this.renderer==="svg"?this._renderer="svg":this.renderer==="canvas"?this._renderer="canvas":this.renderer==="html"&&(this._renderer="html"),this.src&&await this.load(this.src);}disconnectedCallback(){var t,e;this._io&&(this._io.disconnect(),this._io=void 0),(t=this._dotLottieCommonPlayer)==null||t.destroy(),(e=this._unsubscribeListeners)==null||e.call(this),window&&window.removeEventListener("click",i=>this._clickOutListener(i));}_clickOutListener(t){!t.composedPath().some(i=>i instanceof HTMLElement?i.classList.contains("popover")||i.id==="lottie-animation-options":!1)&&this._popoverIsOpen&&(this._popoverIsOpen=!1,this.requestUpdate());}renderControls(){var i,n,l,h,b;let t=((i=this._dotLottieCommonPlayer)==null?void 0:i.currentState)===f.Playing,e=((n=this._dotLottieCommonPlayer)==null?void 0:n.currentState)===f.Paused;return a$3`
+var M = (r, t) => t.kind === "method" && t.descriptor && !("value" in t.descriptor) ? { ...t, finisher(e) { e.createProperty(t.key, r); } } : { kind: "field", key: Symbol(), placement: "own", descriptor: {}, originalKey: t.key, initializer() { typeof t.initializer == "function" && (this[t.key] = t.initializer.call(this)); }, finisher(e) { e.createProperty(t.key, r); } }, x = (r, t, e) => { t.constructor.createProperty(e, r); }; function p(r) { return (t, e) => e !== void 0 ? x(r, t, e) : M(r, t) } function k(r) { return p({ ...r, state: !0 }) } var v = ({ finisher: r, descriptor: t }) => (e, i) => { var n; if (i === void 0) { let l = (n = e.originalKey) !== null && n !== void 0 ? n : e.key, h = t != null ? { kind: "method", placement: "prototype", key: l, descriptor: t(e.key) } : { ...e, key: l }; return r != null && (h.finisher = function (b) { r(b, l); }), h } { let l = e.constructor; t !== void 0 && Object.defineProperty(e, i, t(i)), r == null || r(l, i); } }; function O(r, t) { return v({ descriptor: e => { let i = { get() { var n, l; return (l = (n = this.renderRoot) === null || n === void 0 ? void 0 : n.querySelector(r)) !== null && l !== void 0 ? l : null }, enumerable: !0, configurable: !0 }; if (t) { let n = typeof e == "symbol" ? Symbol() : "__" + e; i.get = function () { var l, h; return this[n] === void 0 && (this[n] = (h = (l = this.renderRoot) === null || l === void 0 ? void 0 : l.querySelector(r)) !== null && h !== void 0 ? h : null), this[n] }; } return i } }) } var L; ((L = window.HTMLSlotElement) === null || L === void 0 ? void 0 : L.prototype.assignedElements) != null ? (r, t) => r.assignedElements(t) : (r, t) => r.assignedNodes(t).filter(e => e.nodeType === Node.ELEMENT_NODE); var I = { name: "@dotlottie/player-component", version: "2.7.12", description: "dotLottie animation player web component.", repository: "https://github.com/dotlottie/player-component.git", homepage: "https://dotlottie.io/players", bugs: "https://github.com/dotlottie/player-component/issues", author: "Jawish Hameed <jawish@lottiefiles.com>", license: "MIT", main: "dist/dotlottie-player.js", module: "dist/dotlottie-player.js", types: "dist/dotlottie-player.d.ts", files: ["dist"], keywords: ["dotlottie", "animation", "web component", "component", "lit-element", "player"], scripts: { build: "tsup", "cypress:open": "cypress open --component", dev: "tsup --watch", lint: "eslint .", "lint:fix": "eslint --fix", test: "cypress run --component", "type-check": "tsc --noEmit" }, dependencies: { "@dotlottie/common": "workspace:*", lit: "^2.7.5" }, devDependencies: { "@vitejs/plugin-legacy": "^4.1.0", "axe-core": "^4.7.2", cypress: "^12.11.0", "cypress-axe": "^1.4.0", "cypress-ct-lit": "^0.3.2", "lottie-web": "^5.12.2", terser: "^5.19.0", tsup: "^7.2.0", typescript: "^4.7.4", vite: "^4.3.9" }, publishConfig: { access: "public" }, browserslist: ["> 3%"] }; var T = "dotlottie-player"; var a = class extends b {
+    defaultTheme = ""; container; playMode = g.Normal; autoplay = !1; background = "transparent"; controls = !1; direction = 1; hover = !1; loop; renderer = "svg"; speed = 1; src; intermission = 0; activeAnimationId = null; light = !1; worker = !1; activeStateId; _seeker = 0; _dotLottieCommonPlayer; _io; _loop; _renderer = "svg"; _unsubscribeListeners; _hasMultipleAnimations = !1; _hasMultipleThemes = !1; _hasMultipleStates = !1; _popoverIsOpen = !1; _animationsTabIsOpen = !1; _statesTabIsOpen = !1; _styleTabIsOpen = !1; _themesForCurrentAnimation = []; _statesForCurrentAnimation = []; _parseLoop(t) { let e = parseInt(t, 10); return Number.isInteger(e) && e > 0 ? (this._loop = e, e) : typeof t == "string" && ["true", "false"].includes(t) ? (this._loop = t === "true", this._loop) : (c("loop must be a positive integer or a boolean"), !1) } _handleSeekChange(t) { let e = t.currentTarget; try { let i = parseInt(e.value, 10); if (!this._dotLottieCommonPlayer) return; let n = i / 100 * this._dotLottieCommonPlayer.totalFrames; this.seek(n); } catch { throw a$2("Error while seeking animation") } } _initListeners() { let t = this._dotLottieCommonPlayer; if (t === void 0) { c("player not initialized - cannot add event listeners", "dotlottie-player-component"); return } this._unsubscribeListeners = t.state.subscribe((e$1, i) => { this._seeker = e$1.seeker, this.requestUpdate(), i.currentState !== e$1.currentState && this.dispatchEvent(new CustomEvent(e$1.currentState)), this.dispatchEvent(new CustomEvent(e.Frame, { detail: { frame: e$1.frame, seeker: e$1.seeker } })), this.dispatchEvent(new CustomEvent(e.VisibilityChange, { detail: { visibilityPercentage: e$1.visibilityPercentage } })); }), t.addEventListener("complete", () => { this.dispatchEvent(new CustomEvent(e.Complete)); }), t.addEventListener("loopComplete", () => { this.dispatchEvent(new CustomEvent(e.LoopComplete)); }), t.addEventListener("DOMLoaded", () => { let e$1 = this.getManifest(); e$1 && e$1.themes && (this._themesForCurrentAnimation = e$1.themes.filter(i => i.animations.includes(this.getCurrentAnimationId() || ""))), e$1 && e$1.states && (this._hasMultipleStates = e$1.states.length > 0, this._statesForCurrentAnimation = [], e$1.states.forEach(i => { this._statesForCurrentAnimation.push(i); })), this.dispatchEvent(new CustomEvent(e.Ready)); }), t.addEventListener("data_ready", () => { this.dispatchEvent(new CustomEvent(e.DataReady)); }), t.addEventListener("data_failed", () => { this.dispatchEvent(new CustomEvent(e.DataFail)); }), window && window.addEventListener("click", e => this._clickOutListener(e)); } async load(t, e, i) { if (!this.shadowRoot) return; this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.destroy(), this._dotLottieCommonPlayer = new j(t, this.container, { rendererSettings: e != null ? e : { scaleMode: "noScale", clearCanvas: !0, progressiveLoad: !0, hideOnTransparent: !0 }, hover: this.hasAttribute("hover") ? this.hover : void 0, renderer: this.hasAttribute("renderer") ? this._renderer : void 0, loop: this.hasAttribute("loop") ? this._loop : void 0, direction: this.hasAttribute("direction") ? this.direction === 1 ? 1 : -1 : void 0, speed: this.hasAttribute("speed") ? this.speed : void 0, intermission: this.hasAttribute("intermission") ? Number(this.intermission) : void 0, playMode: this.hasAttribute("playMode") ? this.playMode : void 0, autoplay: this.hasAttribute("autoplay") ? this.autoplay : void 0, activeAnimationId: this.hasAttribute("activeAnimationId") ? this.activeAnimationId : void 0, defaultTheme: this.hasAttribute("defaultTheme") ? this.defaultTheme : void 0, light: this.light, worker: this.worker, activeStateId: this.hasAttribute("activeStateId") ? this.activeStateId : void 0 }), await this._dotLottieCommonPlayer.load(i); let n = this.getManifest(); this._hasMultipleAnimations = this.animationCount() > 1, n && (n.themes && (this._themesForCurrentAnimation = n.themes.filter(l => l.animations.includes(this.getCurrentAnimationId() || "")), this._hasMultipleThemes = n.themes.length > 0), n.states && (this._hasMultipleStates = n.states.length > 0, this._statesForCurrentAnimation = [], n.states.forEach(l => { this._statesForCurrentAnimation.push(l); }))), this._initListeners(); } getCurrentAnimationId() { var t; return (t = this._dotLottieCommonPlayer) == null ? void 0 : t.currentAnimationId } animationCount() { var t; return this._dotLottieCommonPlayer && ((t = this._dotLottieCommonPlayer.getManifest()) == null ? void 0 : t.animations.length) || 0 } animations() { if (!this._dotLottieCommonPlayer) return []; let t = this._dotLottieCommonPlayer.getManifest(); return (t == null ? void 0 : t.animations.map(e => e.id)) || [] } currentAnimation() { return !this._dotLottieCommonPlayer || !this._dotLottieCommonPlayer.currentAnimationId ? "" : this._dotLottieCommonPlayer.currentAnimationId } getState() { return this._dotLottieCommonPlayer ? this._dotLottieCommonPlayer.getState() : i } getManifest() { var t; return (t = this._dotLottieCommonPlayer) == null ? void 0 : t.getManifest() } getLottie() { var t; return (t = this._dotLottieCommonPlayer) == null ? void 0 : t.getAnimationInstance() } getVersions() { return { lottieWebVersion: j.getLottieWebVersion(), dotLottiePlayerVersion: `${I.version}` } } previous(t) { var e; (e = this._dotLottieCommonPlayer) == null || e.previous(t); } next(t) { var e; (e = this._dotLottieCommonPlayer) == null || e.next(t); } reset() { var t; (t = this._dotLottieCommonPlayer) == null || t.reset(); } play(t, e) { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.play(t, e); } pause() { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.pause(); } stop() { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.stop(); } playOnShow(t) { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.playOnShow(t); } stopPlayOnShow() { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.stopPlayOnShow(); } playOnScroll(t) { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.playOnScroll(t); } stopPlayOnScroll() { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.stopPlayOnScroll(); } seek(t) { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.seek(t); } snapshot(t = !0) { if (!this.shadowRoot) return ""; let e = this.shadowRoot.querySelector(".animation svg"), i = new XMLSerializer().serializeToString(e); if (t) { let n = document.createElement("a"); n.href = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(i)}`, n.download = `download_${this._seeker}.svg`, document.body.appendChild(n), n.click(), document.body.removeChild(n); } return i } setTheme(t) { var e; (e = this._dotLottieCommonPlayer) == null || e.setDefaultTheme(t); } themes() { var e; if (!this._dotLottieCommonPlayer) return []; let t = this._dotLottieCommonPlayer.getManifest(); return ((e = t == null ? void 0 : t.themes) == null ? void 0 : e.map(i => i.id)) || [] } getDefaultTheme() { return this._dotLottieCommonPlayer ? this._dotLottieCommonPlayer.defaultTheme : "" } getActiveStateMachine() { return this._dotLottieCommonPlayer ? this._dotLottieCommonPlayer.activeStateId : "" } _freeze() { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.freeze(); } setSpeed(t = 1) { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.setSpeed(t); } setDirection(t) { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.setDirection(t); } setLooping(t) { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.setLoop(t); } isLooping() { return this._dotLottieCommonPlayer ? this._dotLottieCommonPlayer.loop : !1 } togglePlay() { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.togglePlay(); } toggleLooping() { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.toggleLoop(); } setPlayMode(t) { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.setMode(t); } enterInteractiveMode(t) { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.enterInteractiveMode(t); } exitInteractiveMode() { this._dotLottieCommonPlayer && this._dotLottieCommonPlayer.exitInteractiveMode(); } revertToManifestValues(t) { var e; (e = this._dotLottieCommonPlayer) == null || e.revertToManifestValues(t); } static get styles() { return c$1 } async firstUpdated() { var t; this.container = (t = this.shadowRoot) == null ? void 0 : t.querySelector("#animation"), "IntersectionObserver" in window && (this._io = new IntersectionObserver(e => { var i, n; e[0] !== void 0 && e[0].isIntersecting ? ((i = this._dotLottieCommonPlayer) == null ? void 0 : i.currentState) === f.Frozen && this.play() : ((n = this._dotLottieCommonPlayer) == null ? void 0 : n.currentState) === f.Playing && this._freeze(); }), this._io.observe(this.container)), this.loop ? this._parseLoop(this.loop) : this.hasAttribute("loop") && this._parseLoop("true"), this.renderer === "svg" ? this._renderer = "svg" : this.renderer === "canvas" ? this._renderer = "canvas" : this.renderer === "html" && (this._renderer = "html"), this.src && await this.load(this.src); } disconnectedCallback() { var t, e; this._io && (this._io.disconnect(), this._io = void 0), (t = this._dotLottieCommonPlayer) == null || t.destroy(), (e = this._unsubscribeListeners) == null || e.call(this), window && window.removeEventListener("click", i => this._clickOutListener(i)); } _clickOutListener(t) { !t.composedPath().some(i => i instanceof HTMLElement ? i.classList.contains("popover") || i.id === "lottie-animation-options" : !1) && this._popoverIsOpen && (this._popoverIsOpen = !1, this.requestUpdate()); } renderControls() {
+        var i, n, l, h, b; let t = ((i = this._dotLottieCommonPlayer) == null ? void 0 : i.currentState) === f.Playing, e = ((n = this._dotLottieCommonPlayer) == null ? void 0 : n.currentState) === f.Paused; return a$3`
       <div id="lottie-controls" aria-label="lottie-animation-controls" class="toolbar">
-        ${this._hasMultipleAnimations?a$3`
-              <button @click=${()=>this.previous()} aria-label="Previous animation" class="btn-spacing-left">
+        ${this._hasMultipleAnimations ? a$3`
+              <button @click=${() => this.previous()} aria-label="Previous animation" class="btn-spacing-left">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fill-rule="evenodd"
@@ -17,14 +19,14 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                   />
                 </svg>
               </button>
-            `:a$3``}
+            `: a$3``}
         <button
           id="lottie-play-button"
-          @click=${()=>{this.togglePlay();}}
-          class=${t||e?`active ${this._hasMultipleAnimations?"btn-spacing-center":"btn-spacing-right"}`:`${this._hasMultipleAnimations?"btn-spacing-center":"btn-spacing-right"}`}
+          @click=${() => { this.togglePlay(); }}
+          class=${t || e ? `active ${this._hasMultipleAnimations ? "btn-spacing-center" : "btn-spacing-right"}` : `${this._hasMultipleAnimations ? "btn-spacing-center" : "btn-spacing-right"}`}
           aria-label="play / pause animation"
         >
-          ${t?a$3`
+          ${t ? a$3`
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M3.99996 2C3.26358 2 2.66663 2.59695 2.66663 3.33333V12.6667C2.66663 13.403 3.26358 14 3.99996 14H5.33329C6.06967 14 6.66663 13.403 6.66663 12.6667V3.33333C6.66663 2.59695 6.06967 2 5.33329 2H3.99996Z"
@@ -35,7 +37,7 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                     fill="#20272C"
                   />
                 </svg>
-              `:a$3`
+              `: a$3`
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M3.33337 3.46787C3.33337 2.52312 4.35948 1.93558 5.17426 2.41379L12.8961 6.94592C13.7009 7.41824 13.7009 8.58176 12.8961 9.05408L5.17426 13.5862C4.35948 14.0644 3.33337 13.4769 3.33337 12.5321V3.46787Z"
@@ -44,8 +46,8 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                 </svg>
               `}
         </button>
-        ${this._hasMultipleAnimations?a$3`
-              <button @click=${()=>this.next()} aria-label="Next animation" class="btn-spacing-right">
+        ${this._hasMultipleAnimations ? a$3`
+              <button @click=${() => this.next()} aria-label="Next animation" class="btn-spacing-right">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fill-rule="evenodd"
@@ -55,18 +57,18 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                   />
                 </svg>
               </button>
-            `:a$3``}
+            `: a$3``}
         <input
           id="lottie-seeker-input"
-          class="seeker ${((l=this._dotLottieCommonPlayer)==null?void 0:l.direction)===-1?"to-left":""}"
+          class="seeker ${((l = this._dotLottieCommonPlayer) == null ? void 0 : l.direction) === -1 ? "to-left" : ""}"
           type="range"
           min="0"
           step="1"
           max="100"
           .value=${this._seeker}
-          @input=${s=>this._handleSeekChange(s)}
-          @mousedown=${()=>{this._freeze();}}
-          @mouseup=${()=>{var s;(s=this._dotLottieCommonPlayer)==null||s.unfreeze();}}
+          @input=${s => this._handleSeekChange(s)}
+          @mousedown=${() => { this._freeze(); }}
+          @mouseup=${() => { var s; (s = this._dotLottieCommonPlayer) == null || s.unfreeze(); }}
           aria-valuemin="1"
           aria-valuemax="100"
           role="slider"
@@ -76,8 +78,8 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
         />
         <button
           id="lottie-loop-toggle"
-          @click=${()=>this.toggleLooping()}
-          class=${(h=this._dotLottieCommonPlayer)!=null&&h.loop?"active btn-spacing-left":"btn-spacing-left"}
+          @click=${() => this.toggleLooping()}
+          class=${(h = this._dotLottieCommonPlayer) != null && h.loop ? "active btn-spacing-left" : "btn-spacing-left"}
           aria-label="loop-toggle"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,13 +93,13 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
             />
           </svg>
         </button>
-        ${this._hasMultipleAnimations||this._hasMultipleThemes||this._hasMultipleStates?a$3`
+        ${this._hasMultipleAnimations || this._hasMultipleThemes || this._hasMultipleStates ? a$3`
               <button
                 id="lottie-animation-options"
-                @click=${()=>{this._popoverIsOpen=!this._popoverIsOpen,this.requestUpdate();}}
+                @click=${() => { this._popoverIsOpen = !this._popoverIsOpen, this.requestUpdate(); }}
                 aria-label="options"
                 class="btn-spacing-right"
-                style=${`background-color: ${this._popoverIsOpen?"var(--lottie-player-toolbar-icon-hover-color)":""}`}
+                style=${`background-color: ${this._popoverIsOpen ? "var(--lottie-player-toolbar-icon-hover-color)" : ""}`}
               >
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -114,23 +116,23 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                   />
                 </svg>
               </button>
-            `:a$3``}
+            `: a$3``}
       </div>
-      ${this._popoverIsOpen?a$3`
+      ${this._popoverIsOpen ? a$3`
             <div
               id="popover"
               class="popover"
               tabindex="0"
               aria-label="lottie animations themes popover"
-              style="min-height: ${this.themes().length>0?"84px":"auto"}"
+              style="min-height: ${this.themes().length > 0 ? "84px" : "auto"}"
             >
-              ${!this._animationsTabIsOpen&&!this._styleTabIsOpen&&!this._statesTabIsOpen?a$3`
+              ${!this._animationsTabIsOpen && !this._styleTabIsOpen && !this._statesTabIsOpen ? a$3`
                     <button
                       class="popover-button"
                       tabindex="0"
                       aria-label="animations"
-                      @click=${()=>{this._animationsTabIsOpen=!this._animationsTabIsOpen,this.requestUpdate();}}
-                      @keydown=${s=>{(s.code==="Space"||s.code==="Enter")&&(this._animationsTabIsOpen=!this._animationsTabIsOpen,this.requestUpdate());}}
+                      @click=${() => { this._animationsTabIsOpen = !this._animationsTabIsOpen, this.requestUpdate(); }}
+                      @keydown=${s => { (s.code === "Space" || s.code === "Enter") && (this._animationsTabIsOpen = !this._animationsTabIsOpen, this.requestUpdate()); }}
                     >
                       <div class="popover-button-text">Animations</div>
                       <div>
@@ -144,12 +146,12 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                         </svg>
                       </div>
                     </button>
-                  `:a$3``}
-              ${this._hasMultipleThemes&&!this._styleTabIsOpen&&!this._animationsTabIsOpen&&!this._statesTabIsOpen?a$3` <button
+                  `: a$3``}
+              ${this._hasMultipleThemes && !this._styleTabIsOpen && !this._animationsTabIsOpen && !this._statesTabIsOpen ? a$3` <button
                     class="popover-button"
                     aria-label="Themes"
-                    @click=${()=>{this._styleTabIsOpen=!this._styleTabIsOpen,this.requestUpdate();}}
-                    @keydown=${s=>{(s.code==="Space"||s.code==="Enter")&&(this._styleTabIsOpen=!this._styleTabIsOpen,this.requestUpdate());}}
+                    @click=${() => { this._styleTabIsOpen = !this._styleTabIsOpen, this.requestUpdate(); }}
+                    @keydown=${s => { (s.code === "Space" || s.code === "Enter") && (this._styleTabIsOpen = !this._styleTabIsOpen, this.requestUpdate()); }}
                   >
                     <div class="popover-button-text">Themes</div>
                     <div>
@@ -162,12 +164,12 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                         />
                       </svg>
                     </div>
-                  </button>`:""}
-              ${this._hasMultipleStates&&!this._styleTabIsOpen&&!this._animationsTabIsOpen&&!this._statesTabIsOpen?a$3` <button
+                  </button>`: ""}
+              ${this._hasMultipleStates && !this._styleTabIsOpen && !this._animationsTabIsOpen && !this._statesTabIsOpen ? a$3` <button
                     class="popover-button"
                     aria-label="States"
-                    @click=${()=>{this._statesTabIsOpen=!this._statesTabIsOpen,this.requestUpdate();}}
-                    @keydown=${s=>{(s.code==="Space"||s.code==="Enter")&&(this._statesTabIsOpen=!this._statesTabIsOpen,this.requestUpdate());}}
+                    @click=${() => { this._statesTabIsOpen = !this._statesTabIsOpen, this.requestUpdate(); }}
+                    @keydown=${s => { (s.code === "Space" || s.code === "Enter") && (this._statesTabIsOpen = !this._statesTabIsOpen, this.requestUpdate()); }}
                   >
                     <div class="popover-button-text">States</div>
                     <div>
@@ -180,11 +182,11 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                         />
                       </svg>
                     </div>
-                  </button>`:""}
-              ${this._animationsTabIsOpen?a$3`<button
+                  </button>`: ""}
+              ${this._animationsTabIsOpen ? a$3`<button
                       class="option-title-button"
                       aria-label="Back to main popover menu"
-                      @click=${()=>{this._animationsTabIsOpen=!this._animationsTabIsOpen,this.requestUpdate();}}
+                      @click=${() => { this._animationsTabIsOpen = !this._animationsTabIsOpen, this.requestUpdate(); }}
                     >
                       <div class="option-title-chevron">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -201,16 +203,16 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                     <div class="option-title-separator"></div>
                     <div class="option-row">
                       <ul>
-                        ${this.animations().map(s=>a$3`
+                        ${this.animations().map(s => a$3`
                             <li>
                               <button
                                 class="option-button"
                                 aria-label=${`${s}`}
-                                @click=${()=>{this._animationsTabIsOpen=!this._animationsTabIsOpen,this._popoverIsOpen=!this._popoverIsOpen,this.play(s),this.requestUpdate();}}
-                                @keydown=${c=>{(c.code==="Space"||c.code==="Enter")&&(this._animationsTabIsOpen=!this._animationsTabIsOpen,this._popoverIsOpen=!this._popoverIsOpen,this.play(s),this.requestUpdate());}}
+                                @click=${() => { this._animationsTabIsOpen = !this._animationsTabIsOpen, this._popoverIsOpen = !this._popoverIsOpen, this.play(s), this.requestUpdate(); }}
+                                @keydown=${c => { (c.code === "Space" || c.code === "Enter") && (this._animationsTabIsOpen = !this._animationsTabIsOpen, this._popoverIsOpen = !this._popoverIsOpen, this.play(s), this.requestUpdate()); }}
                               >
                                 <div class="option-tick">
-                                  ${this.currentAnimation()===s?a$3`
+                                  ${this.currentAnimation() === s ? a$3`
                                         <svg
                                           width="24"
                                           height="24"
@@ -225,19 +227,19 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                                             fill="#20272C"
                                           />
                                         </svg>
-                                      `:a$3`<div style="width: 24px; height: 24px"></div>`}
+                                      `: a$3`<div style="width: 24px; height: 24px"></div>`}
                                 </div>
                                 <div>${s}</div>
                               </button>
                             </li>
                           `)}
                       </ul>
-                    </div> `:a$3``}
-              ${this._styleTabIsOpen?a$3`<div class="option-title-themes-row">
+                    </div> `: a$3``}
+              ${this._styleTabIsOpen ? a$3`<div class="option-title-themes-row">
                       <button
                         class="option-title-button themes"
                         aria-label="Back to main popover menu"
-                        @click=${()=>{this._styleTabIsOpen=!this._styleTabIsOpen,this.requestUpdate();}}
+                        @click=${() => { this._styleTabIsOpen = !this._styleTabIsOpen, this.requestUpdate(); }}
                       >
                         <div class="option-title-chevron">
                           <svg
@@ -256,10 +258,10 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                           </svg>
                         </div>
                         <div class="option-title-text">Themes</div>
-                        ${((b=this._dotLottieCommonPlayer)==null?void 0:b.defaultTheme)===""?a$3``:a$3`
+                        ${((b = this._dotLottieCommonPlayer) == null ? void 0 : b.defaultTheme) === "" ? a$3`` : a$3`
                               <button
                                 class="reset-btn"
-                                @click=${()=>{this.setTheme(""),this.requestUpdate();}}
+                                @click=${() => { this.setTheme(""), this.requestUpdate(); }}
                               >
                                 Reset
                               </button>
@@ -269,16 +271,16 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                     <div class="option-title-separator"></div>
                     <div class="option-row">
                       <ul>
-                        ${this._themesForCurrentAnimation.map(s=>a$3`
+                        ${this._themesForCurrentAnimation.map(s => a$3`
                             <li>
                               <button
                                 class="option-button"
                                 aria-label="${s.id}"
-                                @click=${()=>{this.setTheme(s.id);}}
-                                @keydown=${c=>{(c.code==="Space"||c.code==="Enter")&&this.setTheme(s.id);}}
+                                @click=${() => { this.setTheme(s.id); }}
+                                @keydown=${c => { (c.code === "Space" || c.code === "Enter") && this.setTheme(s.id); }}
                               >
                                 <div class="option-tick">
-                                  ${this.getDefaultTheme()===s.id?a$3`
+                                  ${this.getDefaultTheme() === s.id ? a$3`
                                         <svg
                                           width="24"
                                           height="24"
@@ -293,19 +295,19 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                                             fill="#20272C"
                                           />
                                         </svg>
-                                      `:a$3`<div style="width: 24px; height: 24px"></div>`}
+                                      `: a$3`<div style="width: 24px; height: 24px"></div>`}
                                 </div>
                                 <div>${s.id}</div>
                               </button>
                             </li>
                           `)}
                       </ul>
-                    </div>`:a$3``}
-              ${this._statesTabIsOpen?a$3`<div class="option-title-themes-row">
+                    </div>`: a$3``}
+              ${this._statesTabIsOpen ? a$3`<div class="option-title-themes-row">
                       <button
                         class="option-title-button themes"
                         aria-label="Back to main popover menu"
-                        @click=${()=>{this._statesTabIsOpen=!this._statesTabIsOpen,this.requestUpdate();}}
+                        @click=${() => { this._statesTabIsOpen = !this._statesTabIsOpen, this.requestUpdate(); }}
                       >
                         <div class="option-title-chevron">
                           <svg
@@ -326,7 +328,7 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                         <div class="option-title-text">States</div>
                         <button
                           class="reset-btn"
-                          @click=${()=>{this.exitInteractiveMode(),this.requestUpdate();}}
+                          @click=${() => { this.exitInteractiveMode(), this.requestUpdate(); }}
                         >
                           Reset
                         </button>
@@ -335,16 +337,16 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                     <div class="option-title-separator"></div>
                     <div class="option-row">
                       <ul>
-                        ${this._statesForCurrentAnimation.map(s=>a$3`
+                        ${this._statesForCurrentAnimation.map(s => a$3`
                             <li>
                               <button
                                 class="option-button"
                                 aria-label="${s}"
-                                @click=${()=>{this.enterInteractiveMode(s);}}
-                                @keydown=${c=>{(c.code==="Space"||c.code==="Enter")&&this.enterInteractiveMode(s);}}
+                                @click=${() => { this.enterInteractiveMode(s); }}
+                                @keydown=${c => { (c.code === "Space" || c.code === "Enter") && this.enterInteractiveMode(s); }}
                               >
                                 <div class="option-tick">
-                                  ${this.getActiveStateMachine()===s?a$3`
+                                  ${this.getActiveStateMachine() === s ? a$3`
                                         <svg
                                           width="24"
                                           height="24"
@@ -359,24 +361,26 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
                                             fill="#20272C"
                                           />
                                         </svg>
-                                      `:a$3`<div style="width: 24px; height: 24px"></div>`}
+                                      `: a$3`<div style="width: 24px; height: 24px"></div>`}
                                 </div>
                                 <div>${s}</div>
                               </button>
                             </li>
                           `)}
                       </ul>
-                    </div>`:a$3``}
+                    </div>`: a$3``}
             </div>
-          `:a$3``}
-    `}render(){var i;let t=this.controls?"main controls":"main",e=this.controls?"animation controls":"animation";return a$3`
+          `: a$3``}
+    `} render() {
+        var i; let t = this.controls ? "main controls" : "main", e = this.controls ? "animation controls" : "animation"; return a$3`
       <div id="animation-container" class=${t} lang="en" role="img" aria-label="lottie-animation-container">
         <div id="animation" class=${e} style="background:${this.background};">
-          ${((i=this._dotLottieCommonPlayer)==null?void 0:i.currentState)===f.Error?a$3` <div class="error">⚠️</div> `:void 0}
+          ${((i = this._dotLottieCommonPlayer) == null ? void 0 : i.currentState) === f.Error ? a$3` <div class="error">⚠️</div> ` : void 0}
         </div>
-        ${this.controls?this.renderControls():void 0}
+        ${this.controls ? this.renderControls() : void 0}
       </div>
-    `}};a$1([p({type:String})],a.prototype,"defaultTheme",2),a$1([O("#animation")],a.prototype,"container",2),a$1([p()],a.prototype,"playMode",2),a$1([p({type:Boolean})],a.prototype,"autoplay",2),a$1([p({type:String})],a.prototype,"background",2),a$1([p({type:Boolean})],a.prototype,"controls",2),a$1([p({type:Number})],a.prototype,"direction",2),a$1([p({type:Boolean})],a.prototype,"hover",2),a$1([p({type:String})],a.prototype,"loop",2),a$1([p({type:String})],a.prototype,"renderer",2),a$1([p({type:Number})],a.prototype,"speed",2),a$1([p({type:String})],a.prototype,"src",2),a$1([p()],a.prototype,"intermission",2),a$1([p({type:String})],a.prototype,"activeAnimationId",2),a$1([p({type:Boolean})],a.prototype,"light",2),a$1([p({type:Boolean})],a.prototype,"worker",2),a$1([p({type:String})],a.prototype,"activeStateId",2),a$1([k()],a.prototype,"_seeker",2);customElements.get(T)||customElements.define(T,a);/*! Bundled license information:
+    `}
+}; a$1([p({ type: String })], a.prototype, "defaultTheme", 2), a$1([O("#animation")], a.prototype, "container", 2), a$1([p()], a.prototype, "playMode", 2), a$1([p({ type: Boolean })], a.prototype, "autoplay", 2), a$1([p({ type: String })], a.prototype, "background", 2), a$1([p({ type: Boolean })], a.prototype, "controls", 2), a$1([p({ type: Number })], a.prototype, "direction", 2), a$1([p({ type: Boolean })], a.prototype, "hover", 2), a$1([p({ type: String })], a.prototype, "loop", 2), a$1([p({ type: String })], a.prototype, "renderer", 2), a$1([p({ type: Number })], a.prototype, "speed", 2), a$1([p({ type: String })], a.prototype, "src", 2), a$1([p()], a.prototype, "intermission", 2), a$1([p({ type: String })], a.prototype, "activeAnimationId", 2), a$1([p({ type: Boolean })], a.prototype, "light", 2), a$1([p({ type: Boolean })], a.prototype, "worker", 2), a$1([p({ type: String })], a.prototype, "activeStateId", 2), a$1([k()], a.prototype, "_seeker", 2); customElements.get(T) || customElements.define(T, a);/*! Bundled license information:
 
 @lit/reactive-element/decorators/custom-element.js:
   (**
@@ -451,4 +455,4 @@ var M=(r,t)=>t.kind==="method"&&t.descriptor&&!("value"in t.descriptor)?{...t,fi
 
 export { a as DotLottiePlayer };
 //# sourceMappingURL=out.js.map
-//# sourceMappingURL=dotlottie-player.mjs.map
+//# sourceMappingURL=dotlottie-player.js.map
