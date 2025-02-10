@@ -527,6 +527,8 @@ button.select.is-modal-open:after {background:url(/resources/images/form/select-
 .inp-medium label {}
 .inp-medium input[type="checkbox"] {position:absolute;left:0;top:2px;display:flex;align-items:flex-end;justify-content:center;appearance:none;-webkit-appearance:none;border:0;cursor:inherit;flex:0 0 24px;width:24px;height:24px;background:url(/resources/images/form/form-checkbox-medium.svg) center center / contain no-repeat;}
 .inp-medium input[type="checkbox"]:checked {background:url(/resources/images/form/form-checkbox-medium-checked.svg) center center / contain no-repeat;}
+.inp-medium input[type="checkbox"]:disabled {background:url(/resources/images/form/form-checkbox-medium-disabled.svg) center center / contain no-repeat;}
+.inp-medium input[type="checkbox"]:disabled:checked {background:url(/resources/images/form/form-checkbox-medium-disabled-checked.svg) center center / contain no-repeat;}
 .inp-medium .label-title {display:block;font-size:18px;line-height:1.5;color:var(--typography-gray);}
 .inp-medium .label-subtitle {display:block;font-size:15px;font-weight:400;color:var(--typography-body);margin-top:8px;}
 
