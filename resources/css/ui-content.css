@@ -1188,8 +1188,8 @@ button.flag-fluid span {margin-top:0;}
 .stock-rate dl {display:flex;align-items:center;justify-content:center;gap:4px;}
 .stock-rate dl dt {font-size:18px;font-weight:400;color:var(--typography-body);}
 .stock-rate dl dd {display:flex;align-items:center;justify-content:center;gap:8px;}
-i.live-on {display:inline-block;width:9px;height:9px;background:url(/resources/images/PBWIV/live_on.svg) center center / contain no-repeat;}
-i.live-off {display:inline-block;width:9px;height:9px;background:url(/resources/images/PBWIV/live_off.svg) center center / contain no-repeat;}
+i.live-on {display:inline-block;width:16px;height:16px;background:url(/resources/images/PBWIV/live_on.svg) center center / contain no-repeat;}
+i.live-off {display:inline-block;width:16px;height:16px;background:url(/resources/images/PBWIV/live_off.svg) center center / contain no-repeat;}
 
 /* financial-news */
 .financial-news {}
