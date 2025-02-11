@@ -174,7 +174,7 @@
     --button-ghostw-enabled:#FFFFFF00;
     --button-ghostw-onDisabled:#FFFFFF3D;
     --button-ghostw-onEnabled:#FFFFFFF5;
-    --button-ghostw-pressed:##FFFFFF29;
+    --button-ghostw-pressed:FFFFFF29;
     --button-outlined-border:#0C0C0D1F;
     --button-outlined-disabled:#7786973D;
     --button-outlined-enabled:#FFFFFF;
@@ -578,8 +578,8 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .main-schedule-week .is-schedule.today {border-color:var(--blue-200);color:var(--brandPrimary-blue600);}
 .main-schedule-week .is-active {background-color:var(--brandPrimary-blue600);color:var(--typography-white);}
 .main-schedule-week .is-schedule.today.is-active {color:var(--typography-white);}
-.main-schedule-week .weekend:first-child:not(.today) {color:var(--red-400);}
-.main-schedule-week .weekend:last-child:not(.today) {color:var(--blue-400);}
+.main-schedule-week .weekend:first-child {color:var(--red-400);}
+.main-schedule-week .weekend:last-child {color:var(--blue-400);}
 .main-schedule-week li.today {color:var(--typography-white);}
 
 .main-schedule-list {}
