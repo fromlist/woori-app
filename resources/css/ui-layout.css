@@ -333,7 +333,7 @@ header {position:sticky;left:0;top:0;width:100%;z-index:var(--header-zIndex);bac
 }
 
 .gnb-figure-list {}
-.gnb-figure-list ul {display:flex;align-items:center;justify-content:center;padding:16px 16px 32px;}
+.gnb-figure-list ul {display:flex;justify-content:center;padding:16px 16px 32px;}
 .gnb-figure-list ul li {flex:1;}
 .gnb-figure-list ul li a {display:block;}
 .gnb-figure-list figure picture {border-radius:24px;background-color:var(--surface-surface50);display:flex;align-items:center;justify-content:center;flex:0 0 68px;width:68px;height:68px;margin:0 auto;}
@@ -585,7 +585,7 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 
 .main-schedule-week {margin:8px 0 24px;}
 .main-schedule-week ul {display:flex;gap:6px;justify-content:space-between;padding:6px;}
-.main-schedule-week ul li {position:relative;flex:0 0 40px;width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--typography-black);border:2px solid transparent;}
+.main-schedule-week ul li {position:relative;flex:0 1 40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--typography-black);border:2px solid transparent;}
 .main-schedule-week .date {font-size:16px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
 .main-schedule-week .is-schedule {background-color:var(--surface-surface50);}
 .main-schedule-week .today,
