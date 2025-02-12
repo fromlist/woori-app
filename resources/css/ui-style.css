@@ -696,7 +696,7 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
 .form-wrap {display:flex;gap:8px;}
 
 /* shortcut-button-wrap */
-.shortcut-button-wrap {display:flex;align-items:center;justify-content:center;gap:4px;margin-top:12px;}
+.shortcut-button-wrap {display:flex;align-items:center;justify-content:center;gap:4px;margin-top:12px;flex-wrap:wrap;}
 .shortcut-button-wrap button {flex:1;}
 
 
