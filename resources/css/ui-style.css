@@ -502,12 +502,12 @@ textarea::placeholder {color:var(--typography-placeholder);font-weight:700;}
 
 /* select {appearance:none;-webkit-appearance:none;font-size:16px;font-weight:700;color:var(--gray900);border-radius:6px;padding:0 34px 0 0;width:100%;height:50px;border:0;background:url(/resources/images/form/form-select.svg) right center / 24px 24px no-repeat var(--white);} */
 /* select[disabled] {background-color:var(--graye6);color:var(--graya7);} */
-button.select {display:flex;font-size:18px;font-weight:700;line-height:1;gap:8px;border-radius:8px;border:1px solid var(--border-12);background-color:var(--surface-surface);min-height:52px;padding:16px;align-items:center;justify-content:space-between;width:100%;}
+button.select {display:flex;font-size:18px;font-weight:700;line-height:1;gap:8px;border-radius:8px;border:1px solid var(--border-12);background-color:var(--surface-surface);min-height:52px;padding:13px 16px;align-items:center;justify-content:space-between;width:100%;}
 button.select:empty:before {content:attr(data-placeholder);color:var(--typography-placeholder);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%;}
 button.select span {white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 button.select:after {content:'';flex:0 0 24px;width:24px;height:24px;background:url(/resources/images/form/select-chevron-down.svg) center center / contain no-repeat;}
 
-button.select.is-modal-open {outline:2px solid var(--status-focused);padding:16px;outline-offset:-1px;}
+button.select.is-modal-open {outline:2px solid var(--status-focused);outline-offset:-1px;}
 button.select.is-modal-open:after {background:url(/resources/images/form/select-chevron-up.svg) center center / contain no-repeat;}
 
 .input-divide {display:flex;align-items:center;gap:8px;}

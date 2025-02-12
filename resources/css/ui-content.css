@@ -282,7 +282,7 @@
 .card-select .inp.inp-large {padding-left:0;}
 .card-select label {position:absolute;left:0;top:0;z-index:100;}
 .card-select .tags {position:absolute;left:12px;bottom:12px;z-index:var(--tab-zIndex);}
-.card-select input[type="radio"] {}
+.card-select input[type="radio"] {opacity:0;}
 /* .card-select picture img{width:100%;border-radius:8px;border:1px solid var(--border-8);opacity:0.8;background-color:var(--background-bg_lightGray);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);} */
 .card-select input[type="radio"]:checked ~ label picture img {border-color:var(--status-active);}
 .swiper-business-card.swiper-cards .swiper-slide {border-radius:8px;}
@@ -642,7 +642,7 @@
 .accordion-select .accordion-select-list {}
 .accordion-select .accordion-select-list > li {}
 .accordion-select .accordion-select-list > li > button:before {content:'';position:absolute;left:24px;right:24px;bottom:0;background-color:var(--border-4);height:1px;}
-.accordion-select .accordion-select-list > li > button {position:relative;font-size:18px;font-weight:500;color:var(--typography-body);padding:24px;width:100%;}
+.accordion-select .accordion-select-list > li > button {position:relative;font-size:18px;font-weight:500;color:var(--typography-body);padding:24px;width:100%;white-space:pre-wrap;line-height:1.5;}
 
 .accordion-select .dep01.dep02-show {left:-100%;}
 .accordion-select .dep01.dep02-show .accordion-select-list > li:not(.is-selected) {display:none;}
@@ -1199,7 +1199,13 @@ i.live-off {display:inline-block;width:16px;height:16px;background:url(/resource
 .financial-news-list ul li:not(:last-child) {margin-bottom:12px;}
 .financial-news-list button {display:block;width:100%;border-radius:8px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);padding:14px 16px;}
 .financial-news-list button .financial-news-title {display:flex;align-items:center;gap:8px;margin-bottom:8px;}
-.financial-news-list button .financial-news-title .media {font-size:16px;font-weight:500;color:var(--typography-gray);line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 4px;}
+.financial-news-list button .financial-news-title .media {display:flex;align-items:center;gap:6px;font-size:16px;font-weight:500;color:var(--typography-gray);line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 4px;}
+.financial-news-list button .financial-news-title .media i {display:flex;flex:0 0 26px;width:26px;height:26px;border-radius:50%;}
+.financial-news-list button .financial-news-title .media i.media01 {background:url(/resources/images/PBWIV/media01.svg) center center / contain no-repeat;}
+.financial-news-list button .financial-news-title .media i.media02 {background:url(/resources/images/PBWIV/media02.svg) center center / contain no-repeat;}
+.financial-news-list button .financial-news-title .media i.media03 {background:url(/resources/images/PBWIV/media03.svg) center center / contain no-repeat;}
+.financial-news-list button .financial-news-title .media i.media04 {background:url(/resources/images/PBWIV/media04.svg) center center / contain no-repeat;}
+.financial-news-list button .financial-news-title .media i.mediaetc {background:url(/resources/images/PBWIV/mediaetc.svg) center center / contain no-repeat;}
 .financial-news-list button .title-large {margin-bottom:8px;}
 .financial-news-list button .date {display:block;font-size:14px;font-weight:400;color:var(--gray-500);padding:0 4px;}
 .financial-news-list button .tag-wrap {display:flex;gap:4px;margin-top:8px;}
@@ -1213,9 +1219,10 @@ i.live-off {display:inline-block;width:16px;height:16px;background:url(/resource
 .news-article .date {font-size:14px;font-weight:400;color:var(--typography-caption);line-height:1;margin-bottom:32px;text-align:center;}
 .news-article .related-products {}
 .news-article .related-products .tags-wrap {margin-bottom:16px;display:flex;justify-content:center;}
-.news-article .related-products ul {}
+.news-article .related-products ul {display:flex;flex-wrap:wrap;}
 .news-article .related-products ul li {}
 .news-article .related-products ul li:not(:last-child) {margin-bottom:4px;}
+.news-article .related-products ul li div {display:inline-flex;width:auto;}
 .news-article p {font-size:18px;font-weight:400;color:var(--typography-body);padding:0 4px;}
 
 
