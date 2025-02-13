@@ -150,6 +150,7 @@ const tabContent = {
                 const scrollPositionLeft = $(this).offset().left;
                 scroll.scrollTo({
                     left: scrollPositionLeft - scrollPadding,
+                    top: 0,
                     behavior: 'smooth',
                 })
             } else {
