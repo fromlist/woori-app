@@ -232,7 +232,7 @@ const toastrCont = {
     init: function () {
         let toastPositionDef = 'toast-bottom-center';
         $('html').each(function () {
-            if ($('main').find('.bottom-btn').length) {
+            if ($('main').find('.bottom-btn:visible').length) {
                 toastPositionDef = 'toast-bottom-center has-bottom-btn'
             }
         })

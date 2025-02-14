@@ -166,53 +166,21 @@
 							</ul>
 						</div>
 
-						<div class="main-schedule-list">
-							<ul>
-								<li>
-									<a href="#">
-										<div class="tag-wrap">
-											<div class="tags tags-small tags-lightCyan tags-round">수신만기</div>
-										</div>
-										<div class="schedule-title">
-											<div class="schedule-title-inner">
-												<i class="icon-only icon-24 icon-wallet bg-cyan-500" aria-label="수신만기"></i>
-												<strong class="title-small"><span>홍*동</span></strong>
-											</div>
-											<div class="value">100,000,000원</div>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="tag-wrap">
-											<div class="tags tags-small tags-lightCyan tags-round">수신만기</div>
-										</div>
-										<div class="schedule-title">
-											<div class="schedule-title-inner">
-												<i class="icon-only icon-24 icon-wallet bg-cyan-500" aria-label="수신만기"></i>
-												<strong class="title-small"><span>Young *********** Park 수신만기</span></strong>
-											</div>
-											<div class="value">100,000,000원</div>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<div class="tag-wrap">
-											<div class="tags tags-small tags-lightPurple tags-round">고객생일</div>
-										</div>
-										<div class="schedule-title">
-											<div class="schedule-title-inner">
-												<i class="icon-only icon-24 icon-birth bg-purple-600" aria-label="생일"></i>
-												<strong class="title-small"><span>홍*동 생일</span></strong>
-											</div>
-										</div>
-									</a>
-								</li>
-							</ul>
-							<div class="mt8 ac">
-								<a href="#" class="anchor chevron chevron-down fs-15">2건 더보기</a>
-							</div>
+						<div class="main-schedule-detail">
+							<a href="">
+								<dl>
+									<dt>
+										<div class="tags tags-medium tags-lightCyan tags-round">수신만기</div>
+									</dt>
+									<dd><strong>11111</strong>건</dd>
+								</dl>
+								<dl>
+									<dt>
+										<div class="tags tags-medium tags-lightPurple tags-round">고객생일</div>
+									</dt>
+									<dd><strong>11111</strong>건</dd>
+								</dl>
+							</a>
 						</div>
 
 						<div class="main-schedule-list">
@@ -225,7 +193,7 @@
 										<div class="schedule-title">
 											<div class="schedule-title-inner">
 												<i class="icon-only icon-24 icon-calendar" aria-label="개인일정"></i>
-												<strong class="title-small"><span>본부 Workshop</span></strong>
+												<strong class="body-small"><span>본부 Workshop</span></strong>
 											</div>
 										</div>
 									</a>
@@ -238,14 +206,33 @@
 										<div class="schedule-title">
 											<div class="schedule-title-inner">
 												<i class="icon-only icon-24 icon-calendar-repeat" aria-label="개인일정 반복"></i>
-												<strong class="title-small"><span>팀 주간보고(연말 성과 보고 및 송년회)</span></strong>
+												<strong class="body-small"><span>팀 주간보고(연말 성과 보고 및 송년회)</span></strong>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="tag-wrap">
+											<div class="tags">오후 12:00</div>
+										</div>
+										<div class="schedule-title">
+											<div class="schedule-title-inner">
+												<i class="icon-only icon-24 icon-calendar-repeat" aria-label="개인일정 반복"></i>
+												<strong class="body-small"><span>팀 주간보고(연말 성과 보고 및 송년회)</span></strong>
 											</div>
 										</div>
 									</a>
 								</li>
 							</ul>
 							<div class="mt8 ac">
-								<a href="#" class="anchor chevron chevron-down fs-15">2건 더보기</a>
+								<a href="#" class="anchor chevron chevron-down fs-15 py16 gap4">2건 더보기</a>
+							</div>
+						</div>
+
+						<div class="main-schedule-list">
+							<div class="py24">
+								<p class="description caution body-small fc-typography-caption ac my12">일정이 없습니다.</p>
 							</div>
 						</div>
 					</div>
@@ -524,7 +511,7 @@
 				el: ".swiper-pagination",
 			}
 		});
-		MicroModal.show('modal-notice');
+		// MicroModal.show('modal-notice');
 	</script>
 </body>
 
