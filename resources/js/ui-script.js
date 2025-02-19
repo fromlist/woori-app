@@ -1,6 +1,6 @@
 
 $(function () {
-    bsCardResize.init();
+    // bsCardResize.init();
     tabContent.init();
     accordionContent.init();
     formStyle.init();
@@ -82,25 +82,6 @@ const switchClass = {
 }
 
 
-// global tab
-const bsCardResize = {
-    init: function () {
-        const bsCard = $('.bs-card');
-        const bsParent = $('.bs-card-wrap').parent('').outerWidth();
-        const bsCardwWidth = 360;
-        let percent = (bsParent / bsCardwWidth).toFixed(1);
-        // console.log(percent)
-        bsCard.css('zoom', percent);
-        this.onResize();
-    },
-    onResize: function () {
-        $(window).resize(function () {
-            setTimeout(function () {
-                bsCardResize.init();
-            }, 300)
-        })
-    }
-}
 
 
 // global tab
@@ -150,7 +131,6 @@ const tabContent = {
                 const scrollPositionLeft = $(this).offset().left;
                 scroll.scrollTo({
                     left: scrollPositionLeft - scrollPadding,
-                    top: 0,
                     behavior: 'smooth',
                 })
             } else {
