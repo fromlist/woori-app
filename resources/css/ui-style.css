@@ -306,6 +306,9 @@ div.btn-xsmall .btn-inner span {white-space:nowrap;overflow:hidden;text-overflow
 
 .btn-round {border-radius:50px;}
 
+.btn-border-dashed {border-style:dashed;}
+.btn-border-dashed.btn-outlined {color:var(--typography-placeholder);}
+
 .text-ellipsis span {display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 
 .anchor {display:inline-flex;color:var(--button-textBtn-Enabled);line-height:1;font-weight:400;}
@@ -380,7 +383,7 @@ div.btn-xsmall .btn-inner span {white-space:nowrap;overflow:hidden;text-overflow
 .btn-border.is-active i {background-color:var(--status-active);}
 .fab-primary i {background-color:var(--icon-white);}
 .fab-secondary i {background-color:var(--icon-gray_2);}
-
+.btn-border-dashed i {background-color:var(--typography-placeholder);}
 
 i.ico-check {-webkit-mask-image:url(/resources/images/ico/ico_check.svg);mask-image:url(/resources/images/ico/ico_check.svg);}
 i.ico-share {-webkit-mask-image:url(/resources/images/ico/ico_share.svg);mask-image:url(/resources/images/ico/ico_share.svg);}

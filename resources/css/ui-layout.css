@@ -466,7 +466,6 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .btn-nowrap {}
 .btn-nowrap:not(.overflow-list) button {flex:0 0 calc(50% - 4px);white-space:inherit;max-width:calc(50% - 4px);}
 .btn-nowrap button span {white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.btn-nowrap button.btn-outlined {border-style:dashed;color:var(--typography-placeholder);}
 .btn-nowrap.overflow-list {justify-content:flex-start;}
 .btn-nowrap.overflow-list button.btn-primary {max-width:169px;flex:0;}
 .btn-nowrap.overflow-list button.btn-outlined {max-width:calc((100vw - 44px) / 3);flex:1 0 100%;}
