@@ -199,7 +199,6 @@
 .memo-list {}
 .memo-list .memo-inner {border-radius:8px;border:1px solid var(--border-4);background-color:var(--background-bg_lightGray);padding:16px;}
 .memo-list .memo-inner:not(:last-child) {margin-bottom:12px;}
-.memo-inner p {}
 .memo-inner .memo-btn {display:flex;justify-content:space-between;margin-top:4px;}
 .memo-inner .memo-btn .left {display:flex;align-items:center;justify-content:center;gap:6px;}
 .memo-inner .memo-btn .right {display:flex;align-items:center;justify-content:center;gap:6px;margin-left:auto;}
@@ -208,8 +207,8 @@
 .memo-inner dl dd {font-size:14px;color:var(--typography-caption);}
 .memo-inner .divide-list {margin-top:8px;}
 
-.memo-inner p {display:-webkit-inline-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;vertical-align:top;-webkit-line-clamp:2;word-break:break-all;font-size:16px;font-weight:400;color:var(--typography-body);}
-.memo-inner .memo-btn .left {display:none;}
+.memo-inner p {display:-webkit-inline-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;vertical-align:top;word-break:break-all;font-size:16px;font-weight:400;color:var(--typography-body);}
+/* .memo-inner .memo-btn .left {display:none;} */
 .memo-inner.is-toggled p {-webkit-line-clamp:inherit;}
 .memo-inner.is-toggled .memo-btn {margin-top:12px;}
 .memo-inner.is-toggled .memo-btn .left {display:flex;}

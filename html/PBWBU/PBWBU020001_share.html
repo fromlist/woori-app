@@ -168,7 +168,7 @@
 					<!-- memo-list -->
 					<div class="memo-list mt8">
 						<div class="memo-inner" data-toggle="toggle-wrap">
-							<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+							<p data-line="3">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
 							<div class="memo-btn">
 								<div class="left">
 									<button type="button" class="btn-noborder"><i class="ico-modify"></i>수정</button>
@@ -192,7 +192,7 @@
 							</div>
 						</div>
 						<div class="memo-inner" data-toggle="toggle-wrap">
-							<p>이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+							<p data-line="3">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
 							<div class="memo-btn">
 								<div class="left">
 									<button type="button" class="btn-noborder"><i class="ico-modify"></i>수정</button>
@@ -402,6 +402,24 @@
 
 	</main>
 	<!-- //main -->
+
+	<script>
+		const toggleViewMore = document.querySelectorAll('[data-switch-before="chevron-down"]');
+		toggleViewMore.forEach(function(items) {
+			const toggleViewMoreWrap = items.closest('[data-toggle="toggle-wrap"]');
+			const text = toggleViewMoreWrap.querySelector('p');
+			const textLineHeight = parseInt(window.getComputedStyle(text).lineHeight);
+			const textOuterHeight = parseInt(window.getComputedStyle(text).height);
+			const textLineClamp = text.dataset.line;
+			const textMaxHeight = textLineHeight * textLineClamp;
+			console.log(textOuterHeight)
+			if (textOuterHeight > textMaxHeight) {
+				text.classList.add('line-clamp')
+			} else {
+				items.style.display = 'none'
+			}
+		})
+	</script>
 
 </body>
 
