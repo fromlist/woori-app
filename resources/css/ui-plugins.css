@@ -372,7 +372,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .toast-caution .toast-title:before {background:url(/resources/images/toastr/ico_caution.svg) center center / contain no-repeat;}
 .toast-error .toast-title:before {background:url(/resources/images/toastr/ico_error.svg) center center / contain no-repeat;}
 .toast-bottom-center {bottom:12px;}
-.toast-bottom-center.has-bottom-btn {bottom:76px;}
+/* .toast-bottom-center.has-bottom-btn {bottom:76px;} */
 #toast-container>div:hover {box-shadow:none;}
 
 

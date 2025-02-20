@@ -699,7 +699,7 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
 .form-wrap {display:flex;gap:8px;}
 
 /* shortcut-button-wrap */
-.shortcut-button-wrap {display:flex;align-items:center;justify-content:center;gap:4px;margin-top:12px;flex-wrap:wrap;}
+.shortcut-button-wrap {display:flex;align-items:center;justify-content:center;gap:3px;margin-top:12px;flex-wrap:wrap;}
 .shortcut-button-wrap button {flex:1;}
 
 
@@ -727,7 +727,7 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
 .tab-content .tab-button {display:flex;padding:2px;background-color:var(--surface-surface50);border-radius:8px;gap:0;}
 .tab-content .tab-button li {flex:1;}
 .tab-content .tab-button li button,
-.tab-content .tab-button li a {position:relative;display:flex;align-items:center;justify-content:center;flex:1 1 100%;width:100%;appearance:none;-webkit-appearance:none;border:0;text-align:center;padding:0 8px;font-size:16px;font-weight:400;color:var(--typography-gray);line-height:44px;min-height:44px;border-radius:8px;background-color:transparent;transition:background-color 0.15s ease;height:100%;}
+.tab-content .tab-button li a {position:relative;display:flex;align-items:center;justify-content:center;flex:1 1 100%;width:100%;appearance:none;-webkit-appearance:none;border:0;text-align:center;padding:0;font-size:16px;font-weight:400;color:var(--typography-gray);line-height:44px;min-height:44px;border-radius:8px;background-color:transparent;transition:background-color 0.15s ease;height:100%;}
 .tab-content .tab-button li button:after,
 .tab-content .tab-button li a:after {content:'';position:absolute;left:0;top:50%;width:1px;height:14px;background-color:var(--border-8);margin-top:-7px;}
 .tab-content .tab-button li.tab-active button,

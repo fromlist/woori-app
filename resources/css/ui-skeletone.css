@@ -263,8 +263,8 @@
 .content.loading .stock-index-list.content-fluid dl dt {height:18px;}
 .content.loading .stock-index-list.content-fluid dl dd {height:23px;}
 
-.content.loading .visual-headline span {height:27px;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius:5px;background-size:200% 100%;-webkit-animation:1.5s shine linear infinite;animation:1.5s shine linear infinite;}
-.content.loading .visual-headline strong {height:90px;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius:5px;background-size:200% 100%;-webkit-animation:1.5s shine linear infinite;animation:1.5s shine linear infinite;}
+/* .content.loading .visual-headline span {height:27px;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius:5px;background-size:200% 100%;-webkit-animation:1.5s shine linear infinite;animation:1.5s shine linear infinite;} */
+/* .content.loading .visual-headline strong {height:90px;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius:5px;background-size:200% 100%;-webkit-animation:1.5s shine linear infinite;animation:1.5s shine linear infinite;} */
 .content.loading .main-schedule-title .today strong {background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius:5px;background-size:200% 100%;-webkit-animation:1.5s shine linear infinite;animation:1.5s shine linear infinite;}
 .content.loading .main-schedule-title .today {flex:1 1 100%;}
 .content.loading .main-schedule-title .today .date {height:26px;flex:1 1 100%;background:linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);border-radius:5px;background-size:200% 100%;-webkit-animation:1.5s shine linear infinite;animation:1.5s shine linear infinite;}

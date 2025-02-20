@@ -20,10 +20,10 @@
 
 /* businesscard-list */
 .businesscard-list {}
-.businesscard-list .list-group-item {position:relative;display:flex;padding:24px 0px;align-items:center;justify-content:space-between;gap:16px;border:1px solid transparent;}
+.businesscard-list .list-group-item {position:relative;display:flex;padding:24px 40px 24px 0px;align-items:center;justify-content:space-between;gap:16px;border:1px solid transparent;}
 .businesscard-list .list-group-item:first-child:before {content:'';position:absolute;left:8px;right:8px;top:0;height:1px;background-color:var(--border-4);}
 .businesscard-list .list-group-item:after {content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background-color:var(--border-4);}
-.businesscard-list .list-group-item .handler {flex:0 0 24px;width:24px;height:24px;
+.businesscard-list .list-group-item .handler {position:absolute;right:0;top:0;width:24px;height:100%;
     -webkit-mask-position:center center;
     mask-position:center center;
     -webkit-mask-size:contain;
