@@ -81,9 +81,25 @@ const switchClass = {
     }
 }
 
-
-
-
+// business card
+const bsCardResize = {
+    init: function () {
+        const bsCard = $('.bs-card');
+        const bsParent = $('.bs-card-wrap').parent('').outerWidth();
+        const bsCardwWidth = 360;
+        let percent = (bsParent / bsCardwWidth).toFixed(1);
+        // console.log(percent)
+        bsCard.css('zoom', percent);
+        this.onResize();
+    },
+    onResize: function () {
+        $(window).resize(function () {
+            setTimeout(function () {
+                bsCardResize.init();
+            }, 300)
+        })
+    }
+}
 // global tab
 const tabContent = {
     init: function () {
@@ -309,8 +325,10 @@ const stickyContent = function () {
         if (bottomBtn != null) {
             snackbarEl.style.bottom = bottomBtn.clientHeight + 'px';
         }
+    } else {
+        const snackbarWrapper = document.querySelector('.content');
+        snackbarWrapper.style.paddingBottom = 0 + 'px';
     }
-
 }
 
 // tippy tooltip
