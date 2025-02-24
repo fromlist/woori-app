@@ -2,14 +2,13 @@
 $(function () {
     // bsCardResize.init();
     tabContent.init();
-    accordionContent.init();
     formStyle.init();
     toggle.init()
     switchClass.init()
     $swal;
     toastrCont.init();
     // microModalFunc.init();
-    stickyContent();
+    stickyContent.init();
     tippyContent.init();
     tableInnerScroll.init();
     AOS.init({
@@ -159,41 +158,6 @@ const tabContent = {
     }
 }
 
-// global accordion
-const accordionContent = {
-    init: function () {
-        $accordionList = $('.accordion-content .acc-title');
-        $accTrigger = $accordionList;
-        this.onClick();
-        this.afterLoad();
-    },
-    onClick: function () {
-        $accTrigger.on('click', function () {
-            const parent = $(this).closest('.acc-title')
-            if (parent.hasClass('acc-active')) {
-                parent.removeClass('acc-active');
-                $(this).attr('aria-expanded', 'true');
-                $('#' + $(this).attr('data-controls')).removeClass('acc-active');
-            } else {
-                parent.addClass('acc-active');
-                $(this).attr('aria-expanded', 'false');
-                $('#' + $(this).attr('data-controls')).addClass('acc-active');
-            }
-        })
-    },
-    afterLoad: function () {
-        $accTrigger.each(function () {
-            const parent = $(this).closest('.acc-title')
-            if (parent.hasClass('acc-active')) {
-                $(this).attr('aria-expanded', 'false');
-                $('#' + $(this).attr('data-controls')).addClass('acc-active')
-            } else {
-                $(this).attr('aria-expanded', 'true');
-                $('#' + $(this).attr('data-controls')).removeClass('acc-active')
-            }
-        });
-    }
-}
 
 // global form
 const formStyle = {
@@ -253,84 +217,102 @@ const toastrCont = {
 
 
 //sticky
-const stickyContent = function () {
-    const headerEl = document.querySelector('header');
-    const sentinalEl = document.querySelector('.sticky-sentinal');
-    const stickyEl = document.querySelector('.sticky-content')
-    // Initial state
-    const handler = (entries) => {
-        if (!entries[0].isIntersecting) {
-            stickyEl.classList.add('enabled');
-            stickyEl.style.top = sentinalEl.offsetTop + 'px';
-        } else {
-            stickyEl.classList.remove('enabled');
-        }
-    }
-
-    const observer = new window.IntersectionObserver(handler);
-    if (sentinalEl != null) {
-        observer.observe(sentinalEl);
-
+const stickyContent = {
+    init: function () {
+        this.sentinal();
+        this.snackBar();
+    },
+    sentinal: function () {
         // Initial state
         var scrollPos = 0;
         // adding scroll event
+
+        //sentinal sticky content
         window.addEventListener('scroll', function () {
-            // detects new state and compares it with the new one
+
+            const sentinalEl = document.querySelector('.sticky-sentinal');
+            const stickyEl = document.querySelector('.sticky-content')
+
+            // Initial state
+            const handler = (entries) => {
+                if (!entries[0].isIntersecting) {
+                    stickyEl.classList.add('enabled');
+                    stickyEl.style.top = sentinalEl.offsetTop + 'px';
+                } else {
+                    stickyEl.classList.remove('enabled');
+                }
+            }
+
+            const observer = new window.IntersectionObserver(handler);
+
+            if (sentinalEl != null) {
+                observer.observe(sentinalEl);
+            }
+
             if ((document.body.getBoundingClientRect()).top > scrollPos) {
                 document.body.setAttribute('data-scroll-direction', 'UP');
-                stickyEl.style.top = sentinalEl.offsetTop + 'px';
+                if (stickyEl != null) {
+                    stickyEl.style.top = sentinalEl.offsetTop + 'px';
+                }
             }
             else {
                 document.body.setAttribute('data-scroll-direction', 'DOWN');
-                stickyEl.removeAttribute('style');
-
+                if (stickyEl != null) {
+                    stickyEl.removeAttribute('style');
+                }
             }
-            // saves the new position for iteration.
             scrollPos = (document.body.getBoundingClientRect()).top;
+
+
+
         });
-    }
-
-    const snackbarEl = document.querySelector('.snackbar-content')
-
-    if (snackbarEl != null) {
-        const snackbarWrapper = document.querySelector('.content');
-        snackbarWrapper.style.paddingBottom = snackbarEl.clientHeight + 'px';
+    },
+    snackBar: function () {
 
         var timer = null;
-        var close = 1500;
+        var close = 500;
+        let snackbarEl = null
         window.addEventListener('scroll', function () {
-            if (!snackbarEl.classList.contains('`snackbar-disabled`')) {
-                if (timer !== null) {
-                    clearTimeout(timer);
-                    snackbarEl.classList.remove('is-sticky')
+
+            console.log()
+            snackbarEl = document.querySelector('.snackbar-content')
+            const snackbarWrapper = document.querySelector('.content');
+
+            if (snackbarEl != null) {
+                snackbarWrapper.style.paddingBottom = snackbarEl.clientHeight + 'px';
+
+                if (!snackbarEl.classList.contains('snackbar-disabled')) {
+                    if (timer !== null) {
+                        clearTimeout(timer);
+                        snackbarEl.classList.remove('is-sticky')
+                    }
+                    timer = setTimeout(function () {
+                        snackbarEl.classList.add('is-sticky')
+                    }, close);
                 }
-                timer = setTimeout(function () {
-                    snackbarEl.classList.add('is-sticky')
-                }, close);
+
+
+                const mainContainer = document.querySelector('main');
+                const bottomBtn = mainContainer.querySelector('.bottom-btn')
+                if (bottomBtn != null) {
+                    snackbarEl.style.bottom = bottomBtn.clientHeight + 'px';
+                }
+            } else {
+                snackbarWrapper.style.removeProperty('padding-bottom');
             }
+
         }, close);
 
         // snackbar disabled button
-        const snackbarElClose = snackbarEl.querySelector('[data-snackbar-close]')
-        if (snackbarElClose != null) {
-            snackbarElClose.addEventListener('click', function () {
-                snackbarEl.classList.remove('is-sticky');
-                snackbarEl.classList.add('snackbar-disabled');
-                clearTimeout(timer);
-            });
-        }
+        $(document).on('click', '[data-snackbar-close]', function () {
+            $(this).closest('.snackbar-content').removeClass('is-sticky');
+            $(this).closest('.snackbar-content').addClass('snackbar-disabled');
+            clearTimeout(timer);
+        });
 
-        const mainContainer = document.querySelector('main');
-        const bottomBtn = mainContainer.querySelector('.bottom-btn')
-        if (bottomBtn != null) {
-            snackbarEl.style.bottom = bottomBtn.clientHeight + 'px';
-        }
-    } else {
-        const snackbarWrapper = document.querySelector('.content');
-        snackbarWrapper.style.paddingBottom = 0 + 'px';
     }
-}
 
+}
 // tippy tooltip
 const tippyContent = {
     init: function () {
