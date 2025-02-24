@@ -989,9 +989,7 @@ i.live-off {display:inline-block;width:16px;height:16px;background:url(/resource
 
 
 /* stock-analyze */
-.stock-analyze {text-align:center;font-size:18px;font-weight:400;color:var(--brandPrimary-blue500);line-height:1;}
-.stock-analyze .top {display:flex;align-items:center;justify-content:center;}
-
+.stock-analyze {text-align:center;}
 
 /* eco-section */
 .eco-section {background-color:var(--background-bg_lightGray);}

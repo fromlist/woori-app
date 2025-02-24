@@ -433,7 +433,7 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .modal__footer .financial-player-title strong {display:none;}
 
 .main-nav {background-color:var(--background-bg_white);box-shadow:0px 2px 30px -4px rgba(0, 0, 0, 0.15);}
-.main-nav ul {display:flex;padding:10px 12px 2px;gap:8px;}
+.main-nav ul {display:flex;padding:8px 12px;gap:8px;}
 .main-nav ul li {flex:1;}
 .main-nav ul li a {display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 0 10px;gap:8px;border-radius:18px;}
 .main-nav ul li a .icon {position:relative;width:32px;height:32px;}
@@ -632,6 +632,7 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .main-stock-list ul {margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px;gap:12px;}
 .main-stock-list ul li {}
 .main-stock-list ul li a {display:block;/* width:128px; */height:176px;background-color:var(--surface-surface);border-radius:8px;padding:24px;white-space:nowrap;}
+.main-stock-list ul li button {display:flex;flex-direction:column;width:128px;height:100%;align-items:center;justify-content:center;gap:4px;border:1px dashed var(--border-12);border-radius:8px;}
 .main-stock-list dl {}
 .main-stock-list dl dt {font-size:18px;font-weight:700;color:var(--typography-title);line-height:1;padding:0 4px;}
 .main-stock-list dl dt i {vertical-align:top;}

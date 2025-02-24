@@ -87,6 +87,7 @@ body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretenda
 .relative {position:relative!important;}
 .table-layout-auto {table-layout:auto!important;}
 .br8 {border-radius:8px!important;}
+.br12 {border-radius:12px!important;}
 
 /* font */
 .fw-300 {font-weight:300!important;}
