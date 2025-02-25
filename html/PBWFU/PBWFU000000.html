@@ -94,7 +94,7 @@
 					<div class="sticky-content content-fluid">
 						<div class="sticky-content-inner">
 							<!-- form -->
-							<div class="form">
+							<div class="form form-invalid">
 								<div class="label"></div>
 								<div class="input-wrap input-placeholder input-select">
 									<button class="select" data-micromodal-trigger="modal-select-list" data-placeholder="선택하세요"><span>선택</span></button>
@@ -652,6 +652,7 @@
 	<script>
 		const tab = ['수익률 BEST', '섹터', '국가']
 		var swiper = new Swiper(".keyword-swiper", {
+			autoHeight: true,
 			pagination: {
 				el: ".swiper-pagination",
 				clickable: true,

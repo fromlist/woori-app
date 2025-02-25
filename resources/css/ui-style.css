@@ -552,8 +552,8 @@ button.select.is-modal-open:after {background:url(/resources/images/form/select-
 .inp-medium input[type="radio"] ~ .label-title {font-weight:400;color:var(--typography-gray);}
 .inp-medium input[type="radio"]:checked ~ .label-title {font-weight:500;color:var(--typography-title);}
 
-input[type="checkbox"].type-red {background:url(/resources/images/form/form_red.svg) center center / 24px 24px no-repeat;}
-input[type="checkbox"].type-red:checked {background:url(/resources/images/form/form_red_checked.svg) center center / 24px 24px no-repeat;}
+input[type="checkbox"].type-yellow {background:url(/resources/images/form/form_red.svg) center center / 24px 24px no-repeat;}
+input[type="checkbox"].type-yellow:checked {background:url(/resources/images/form/form_red_checked.svg) center center / 24px 24px no-repeat;}
 
 input[type="checkbox"].type-purple {background:url(/resources/images/form/form_purple.svg) center center / 24px 24px no-repeat;}
 input[type="checkbox"].type-purple:checked {background:url(/resources/images/form/form_purple_checked.svg) center center / 24px 24px no-repeat;}
@@ -678,6 +678,7 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
 .form-invalid .input-wrap {border:1px solid var(--status-error);background-color:var(--background-bg_lightRed);}
 .form-invalid .input-wrap:focus-within {outline-color:var(--status-error);}
 .form-invalid .validate-text {display:block;color:var(--status-error);}
+.form-invalid button.select {background-color:inherit;}
 
 .form-valid .input-wrap {border:1px solid var(--status-success);}
 .form-valid .input-wrap:focus-within {outline-color:var(--status-success);}

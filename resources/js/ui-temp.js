@@ -38,10 +38,10 @@ const microModalFunc = {
                 let scrollLeftPosition = $(window).scrollLeft();
 
                 modalPopup.querySelectorAll('.select-option ul').forEach(function (items) {
-                    if (items.childElementCount > 4) {
-                        modalPopup.classList.remove('micromodal-slide-select')
-                        modalPopup.classList.add('micromodal-slide-bottom');
-                    }
+                    // if (items.childElementCount > 4) {
+                    modalPopup.classList.remove('micromodal-slide-select')
+                    modalPopup.classList.add('micromodal-slide-bottom');
+                    // }
                 })
 
                 const dropDown = modalPopup.classList.contains('micromodal-slide-dropdown');

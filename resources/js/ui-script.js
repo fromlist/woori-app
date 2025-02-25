@@ -270,11 +270,10 @@ const stickyContent = {
     snackBar: function () {
 
         var timer = null;
-        var close = 500;
+        var close = 250;
         let snackbarEl = null
         window.addEventListener('scroll', function () {
 
-            console.log()
             snackbarEl = document.querySelector('.snackbar-content')
             const snackbarWrapper = document.querySelector('.content');
 
@@ -293,9 +292,15 @@ const stickyContent = {
 
 
                 const mainContainer = document.querySelector('main');
-                const bottomBtn = mainContainer.querySelector('.bottom-btn')
+                const bottomBtn = mainContainer.querySelectorAll('.bottom-btn')
+
                 if (bottomBtn != null) {
-                    snackbarEl.style.bottom = bottomBtn.clientHeight + 'px';
+                    bottomBtn.forEach(function (element) {
+                        const visibility = window.getComputedStyle(element).display;
+                        if (visibility === 'block') {
+                            snackbarEl.style.bottom = element.clientHeight + 'px';
+                        }
+                    })
                 }
             } else {
                 snackbarWrapper.style.removeProperty('padding-bottom');
