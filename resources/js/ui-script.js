@@ -230,8 +230,8 @@ const stickyContent = {
         //sentinal sticky content
         window.addEventListener('scroll', function () {
 
-            const sentinalEl = document.querySelector('.sticky-sentinal');
-            const stickyEl = document.querySelector('.sticky-content')
+            const sentinalEl = document.querySelector('main .sticky-sentinal');
+            const stickyEl = document.querySelector('main .sticky-content')
 
             // Initial state
             const handler = (entries) => {
