@@ -221,6 +221,41 @@ const stickyContent = {
     init: function () {
         this.sentinal();
         this.snackBar();
+
+        var timer = null;
+        var close = 250;
+
+        const snackbarEl = document.querySelector('.snackbar-content')
+        const snackbarWrapper = document.querySelector('.content');
+
+        if (snackbarEl != null) {
+            snackbarWrapper.style.paddingBottom = snackbarEl.clientHeight + 'px';
+
+            if (!snackbarEl.classList.contains('snackbar-disabled')) {
+                if (timer !== null) {
+                    clearTimeout(timer);
+                    snackbarEl.classList.remove('is-sticky')
+                }
+                timer = setTimeout(function () {
+                    snackbarEl.classList.add('is-sticky')
+                }, close);
+            }
+
+
+            const mainContainer = document.querySelector('main');
+            const bottomBtn = mainContainer.querySelectorAll('.bottom-btn')
+
+            if (bottomBtn != null) {
+                bottomBtn.forEach(function (element) {
+                    const visibility = window.getComputedStyle(element).display;
+                    if (visibility === 'block') {
+                        snackbarEl.style.bottom = element.clientHeight + 'px';
+                    }
+                })
+            }
+        } else {
+            snackbarWrapper.style.removeProperty('padding-bottom');
+        }
     },
     sentinal: function () {
         // Initial state
@@ -271,10 +306,14 @@ const stickyContent = {
 
         var timer = null;
         var close = 250;
-        let snackbarEl = null
-        window.addEventListener('scroll', function () {
+        snackBarFunc();
 
-            snackbarEl = document.querySelector('.snackbar-content')
+        window.addEventListener('scroll', function () {
+            snackBarFunc();
+        }, close);
+
+        function snackBarFunc() {
+            const snackbarEl = document.querySelector('.snackbar-content')
             const snackbarWrapper = document.querySelector('.content');
 
             if (snackbarEl != null) {
@@ -305,8 +344,7 @@ const stickyContent = {
             } else {
                 snackbarWrapper.style.removeProperty('padding-bottom');
             }
-
-        }, close);
+        }
 
         // snackbar disabled button
         $(document).on('click', '[data-snackbar-close]', function () {
