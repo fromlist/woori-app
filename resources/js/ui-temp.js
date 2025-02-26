@@ -104,7 +104,7 @@ const microModalFunc = {
                 if (dropDown || selectBox) {
                     setTimeout(function () {
                         modalPopupBody.removeAttribute('style');
-                    }, 300)
+                    }, 500)
                 }
                 modalTrigger.classList.remove('is-modal-open');
 
