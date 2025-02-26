@@ -114,6 +114,9 @@
 .business-card-info .info-title .info-name {display:flex;justify-content:space-between;}
 .business-card-info .info-title .info-name .info-thumb {display:flex;gap:12px;align-items:center;margin:0 4px;}
 .business-card-info .info-title .info-name .tags {}
+.business-card-info .info-title .btn-more {display:flex;width:42px;height:42px;align-items:center;justify-content:center;border-radius:8px;margin-left:auto;}
+.business-card-info .info-title .btn-more:active {background-color:var(--surface-surface100);}
+.business-card-info .info-title .btn-more:before {content:'';width:100%;height:100%;background:url(/resources/images/btn/btn_more.svg) center center / contain no-repeat;}
 .business-card-info .info-title .tags-wrap {display:flex;align-items:center;margin:0 4px;gap:4px;}
 
 /* info-detail-list */

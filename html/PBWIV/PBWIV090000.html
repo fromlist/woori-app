@@ -537,9 +537,9 @@
 			<div class="financial-player">
 				<div class="financial-player-top">
 					<div class="financial-player-title">
-						<button type="button" class="btn-xsmall btn-ghost-white btn-round">
+						<button type="button" class="btn-xsmall btn-ghost-white btn-round" id="listening">
 							<i class="icon-only icon-16 icon-sound bg-icon-white"></i>
-							전체듣기
+							<span class="text">전체듣기</span>
 							<span class="soundwave-container">
 								<span class="bar"></span>
 								<span class="bar"></span>
@@ -567,9 +567,9 @@
 			<div class="financial-player is-playing">
 				<div class="financial-player-top">
 					<div class="financial-player-title">
-						<button type="button" class="btn-xsmall btn-ghost-white btn-round">
+						<button type="button" class="btn-xsmall btn-ghost-white btn-round" id="listening">
 							<i class="icon-only icon-16 icon-sound bg-icon-white"></i>
-							전체듣기
+							<span class="text">전체듣기</span>
 							<span class="soundwave-container">
 								<span class="bar"></span>
 								<span class="bar"></span>
@@ -718,15 +718,16 @@
 	<!-- //micromodal -->
 	<script>
 		$('#modal-01').on('click', function() {
-			console.log(1)
 			$('#bottom-btn').css({
 				'zIndex': 'calc(var(--modal-zIndex) + 1)'
 			})
+			$('#listening .text').text('이 뉴스 듣기');
 		})
 		$('[data-micromodal-close]').on('click', function() {
 			$('#bottom-btn').css({
 				'z-index': ''
 			})
+			$('#listening .text').text('전체듣기');
 		});
 	</script>
 </body>

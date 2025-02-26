@@ -281,8 +281,7 @@ header {position:sticky;left:0;top:0;width:100%;z-index:var(--header-zIndex);bac
 .header-btn .i-home {background:url(/resources/images/header/ico_home.svg) center center / 24px 24px no-repeat;}
 .header-btn .i-close {background:url(/resources/images/header/ico_close.svg) center center / 24px 24px no-repeat;}
 
-.header-logo-btn {display:flex;margin-left:8px;padding:0 4px;height:52px;align-items:center;gap:6px;font-size:22px;font-weight:800;color:var(--brandPrimary-blue600);}
-.header-logo-btn i {flex:0 0 20px;width:20px;height:20px;background-color:var(--brandPrimary-blue600);border-radius:50%;}
+.header-logo-btn {display:flex;margin-left:4px;height:52px;width:147px;flex:0 0 147px;background:url(/resources/images/logo/logo_pbwon.svg) center center / contain no-repeat;}
 
 /* gnb */
 .gnb {min-height:100%;display:flex;flex-direction:column;}
@@ -601,11 +600,13 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .main-schedule-week .date {font-size:16px;width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
 .main-schedule-week .is-schedule {background-color:var(--surface-surface50);}
 .main-schedule-week .today,
-.main-schedule-week .is-schedule.today {border-color:var(--blue-200);color:var(--brandPrimary-blue600);}.main-schedule-week .is-active,
+.main-schedule-week .is-schedule.today {border-color:var(--blue-200);color:var(--brandPrimary-blue600);}
+.main-schedule-week .is-active,
 .main-schedule-week .is-schedule.today.is-active {color:var(--typography-white);}
 .main-schedule-week .weekend:first-child {color:var(--red-400);}
 .main-schedule-week .weekend:last-child {color:var(--blue-400);}
 .main-schedule-week li.today {color:var(--typography-white);}
+.main-schedule-week .is-active,
 .main-schedule-week .is-active.weekend {background-color:var(--brandPrimary-blue600);color:var(--typography-white);}
 
 .main-schedule-detail {margin-bottom:16px;}
