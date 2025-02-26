@@ -957,21 +957,29 @@ i.live-off {display:inline-block;width:16px;height:16px;background:url(/resource
 .financial-news {}
 .financial-news-list {}
 .financial-news-list ul {}
-.financial-news-list ul li {}
+.financial-news-list ul li {position:relative;}
 .financial-news-list ul li:not(:last-child) {margin-bottom:12px;}
-.financial-news-list button {display:block;width:100%;border-radius:8px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);padding:14px 16px;}
-.financial-news-list button .financial-news-title {display:flex;align-items:center;gap:8px;margin-bottom:8px;}
-.financial-news-list button .financial-news-title .media {display:flex;align-items:center;gap:6px;font-size:16px;font-weight:500;color:var(--typography-gray);line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 4px;}
-.financial-news-list button .financial-news-title .media i {display:flex;flex:0 0 26px;width:26px;height:26px;border-radius:50%;}
-.financial-news-list button .financial-news-title .media i.media01 {background:url(/resources/images/PBWIV/media01.svg) center center / contain no-repeat;}
-.financial-news-list button .financial-news-title .media i.media02 {background:url(/resources/images/PBWIV/media02.svg) center center / contain no-repeat;}
-.financial-news-list button .financial-news-title .media i.media03 {background:url(/resources/images/PBWIV/media03.svg) center center / contain no-repeat;}
-.financial-news-list button .financial-news-title .media i.media04 {background:url(/resources/images/PBWIV/media04.svg) center center / contain no-repeat;}
-.financial-news-list button .financial-news-title .media i.mediaetc {background:url(/resources/images/PBWIV/mediaetc.svg) center center / contain no-repeat;}
-.financial-news-list button .title-large {margin-bottom:8px;}
-.financial-news-list button .date {display:block;font-size:14px;font-weight:400;color:var(--gray-500);padding:0 4px;}
-.financial-news-list button .tag-wrap {display:flex;gap:4px;margin-top:8px;}
-/* .financial-news-list button .tag-wrap::-webkit-scrollbar {display:none;} */
+.financial-news-list .financial-news-detail {display:block;width:100%;border-radius:8px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);padding:14px 16px;}
+.financial-news-list .financial-news-detail .financial-news-title {display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.financial-news-list .financial-news-detail .financial-news-title .media {display:flex;align-items:center;gap:6px;font-size:16px;font-weight:500;color:var(--typography-gray);line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 4px;}
+.financial-news-list .financial-news-detail .financial-news-title .media i {display:flex;flex:0 0 26px;width:26px;height:26px;border-radius:50%;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.media01 {background:url(/resources/images/PBWIV/media01.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.media02 {background:url(/resources/images/PBWIV/media02.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.media03 {background:url(/resources/images/PBWIV/media03.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.media04 {background:url(/resources/images/PBWIV/media04.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.media05 {background:url(/resources/images/PBWIV/media05.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.media06 {background:url(/resources/images/PBWIV/media06.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.media07 {background:url(/resources/images/PBWIV/media07.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.media08 {background:url(/resources/images/PBWIV/media08.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.media09 {background:url(/resources/images/PBWIV/media09.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.media10 {background:url(/resources/images/PBWIV/media10.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.media11 {background:url(/resources/images/PBWIV/media11.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.media12 {background:url(/resources/images/PBWIV/media12.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .financial-news-title .media i.mediaetc {background:url(/resources/images/PBWIV/mediaetc.svg) center center / contain no-repeat;}
+.financial-news-list .financial-news-detail .title-large {margin-bottom:8px;}
+.financial-news-list .financial-news-detail .date {display:block;font-size:14px;font-weight:400;color:var(--gray-500);padding:0 4px;}
+.financial-news-list .financial-news-detail .tag-wrap {display:flex;gap:4px;margin-top:8px;}
+.financial-news-list .financial-news-control {position:absolute;top:4px;right:4px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
 
 /* news-article  */
 .news-article {}

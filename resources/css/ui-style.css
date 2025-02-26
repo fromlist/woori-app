@@ -421,10 +421,6 @@ i.ico-chevron-large {-webkit-mask-image:url(/resources/images/ico/ico_chevron_la
 [class^="headline"].inner-ico {display:flex;gap:6px;align-items:center;}
 [class^="headline"].inner-ico i {flex:0 0 24px;width:24px;height:24px;}
 
-.icon-wrap {position:relative;}
-.icon-wrap > i {position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
-
-
 /* form */ 
 input:not([type="checkbox"],[type="radio"],[type="file"]),
 button.text-button {font-size:18px;font-weight:700;color:var(--typography-black);background-color:transparent;border:0;width:100%;height:50px;line-height:50px;caret-color:var(--status-focused);outline:0;}
@@ -1157,17 +1153,9 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
     -webkit-mask-image:url(/resources/images/icon_only/icon_sound.svg);
     mask-image:url(/resources/images/icon_only/icon_sound.svg);
 }
-.icon-sound-effect-1 {
-    -webkit-mask-image:url(/resources/images/icon_only/icon_sound_effect_1.svg);
-    mask-image:url(/resources/images/icon_only/icon_sound_effect_1.svg);
-}
-.icon-sound-effect-2 {
-    -webkit-mask-image:url(/resources/images/icon_only/icon_sound_effect_2.svg);
-    mask-image:url(/resources/images/icon_only/icon_sound_effect_2.svg);
-}
-.icon-sound-effect-3 {
-    -webkit-mask-image:url(/resources/images/icon_only/icon_sound_effect_3.svg);
-    mask-image:url(/resources/images/icon_only/icon_sound_effect_3.svg);
+.icon-sound2 {
+    -webkit-mask-image:url(/resources/images/icon_only/icon_sound2.svg);
+    mask-image:url(/resources/images/icon_only/icon_sound2.svg);
 }
 
 /* toggle-trigger */
