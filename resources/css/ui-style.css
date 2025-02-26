@@ -1057,8 +1057,8 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
     mask-image:url(/resources/images/icon_only/icon_wallet.svg);
 }
 .icon-calendar {
-    -webkit-mask-image:url(/resources/images/icon_only/icon_calendar.svg);
-    mask-image:url(/resources/images/icon_only/icon_calendar.svg);
+    background-color:initial;
+    background-image:url(/resources/images/icon_only/icon_calendar.svg);
 }
 .icon-calendar-repeat {
     background-color:initial;
