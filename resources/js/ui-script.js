@@ -148,7 +148,7 @@ const tabContent = {
                     left: scrollPositionLeft - scrollPadding,
                     behavior: 'smooth',
                 })
-                
+
             } else {
                 $(this).attr({
                     'aria-selected': 'false'
@@ -517,7 +517,25 @@ const tableInnerScroll = {
         }
     }
 }
-
+function menuCenter($el, menuCenterOption) {
+    var snbwrap = menuCenterOption.scrollWrap;
+    var targetPos = menuCenterOption.scrollTarget.position();
+    var box = menuCenterOption.scrollWrap.parent();
+    var boxHalf = box.width() / 2;
+    var pos;
+    var scrollLeft2 = snbwrap.scrollLeft();
+    var selectTargetPos = targetPos.left + menuCenterOption.scrollTarget.outerWidth() / 2;
+    pos = selectTargetPos - boxHalf + scrollLeft2;
+    if (menuCenterOption.animation === true) {
+        setTimeout(function () {
+            snbwrap.stop().animate({
+                scrollLeft: pos
+            }, 100)
+        })
+    } else {
+        snbwrap.scrollLeft(pos);
+    }
+}
 
 var gnb = {
     init: function () {
@@ -526,25 +544,7 @@ var gnb = {
         gnb.oneDepthInit();
         gnb.scrollDown();
     },
-    menuCenter: function ($el, menuCenterOption) {
-        var snbwrap = menuCenterOption.scrollWrap;
-        var targetPos = menuCenterOption.scrollTarget.position();
-        var box = menuCenterOption.scrollWrap.parent();
-        var boxHalf = box.width() / 2;
-        var pos;
-        var scrollLeft2 = snbwrap.scrollLeft();
-        var selectTargetPos = targetPos.left + menuCenterOption.scrollTarget.outerWidth() / 2;
-        pos = selectTargetPos - boxHalf + scrollLeft2;
-        if (menuCenterOption.animation === true) {
-            setTimeout(function () {
-                snbwrap.stop().animate({
-                    scrollLeft: pos
-                }, 100)
-            })
-        } else {
-            snbwrap.scrollLeft(pos);
-        }
-    },
+
 
     oneDepthInit: function () {
         const gnbNavigation = $gnbWrap.find('.gnb-menu-nav')
@@ -563,7 +563,7 @@ var gnb = {
             scrollTarget: $el.find('li.tab-active'),
             animation: true
         };
-        gnb.menuCenter($el, menuCenterOption);
+        menuCenter($el, menuCenterOption);
 
     },
     // gnb scroll 시 1뎁스 메뉴 좌우스크롤 및 active
@@ -591,7 +591,7 @@ var gnb = {
                 animation: true
             };
             if (menuCenterOption.scrollTarget.length !== 0) {
-                gnb.menuCenter($el, menuCenterOption);
+                menuCenter($el, menuCenterOption);
             }
 
 
