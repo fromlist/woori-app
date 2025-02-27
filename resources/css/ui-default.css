@@ -45,7 +45,7 @@ object {display:block;}
 
 button:focus-visible,a:focus-visible {outline-offset:-1px;outline:1px solid var(--status-focused);}
 
-html {-webkit-text-size-adjust:none;overscroll-behavior:none;}
+html {-webkit-text-size-adjust:none;-webkit-overflow-scrolling:touch;}
 
 body {word-break:break-word;font-size:14px;line-height:1.6;font-family:'Pretendard';font-weight:500;color:var(--typography-body);}
 

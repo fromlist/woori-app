@@ -308,37 +308,32 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .micromodal-slide-left .modal__container {height:100%;max-height:100%;border-radius:0;}
 
 /* .micromodal-slide-dropdown .modal__container {position:absolute;background-color:var(--white);padding:10px 24px;border-radius:12px;} */
-.micromodal-slide-left[aria-hidden="false"] .modal__overlay {
-    animation:mmfadeLeftIn .5s cubic-bezier(0.0, 0.0, 0.2, 1);
-}
-
-.micromodal-slide-left[aria-hidden="false"] .modal__container {
-    animation:mmslideLeftIn .5s cubic-bezier(0, 0, .2, 1);
-}
-
-.micromodal-slide-left[aria-hidden="true"] .modal__overlay {
-    animation:mmfadeLeftOut .5s cubic-bezier(0.0, 0.0, 0.2, 1);
-}
-
-.micromodal-slide-left[aria-hidden="true"] .modal__container {
-    animation:mmslideLeftOut .5s cubic-bezier(0, 0, .2, 1);
-}
 
 .micromodal-slide[aria-hidden="false"] .modal__overlay {
     animation: mmfadeIn .5s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
-
 .micromodal-slide[aria-hidden="false"] .modal__container {
     animation: mmslideIn .5s cubic-bezier(0, 0, .2, 1);
 }
-
 .micromodal-slide[aria-hidden="true"] .modal__overlay {
     animation: mmfadeOut .5s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
-
 .micromodal-slide[aria-hidden="true"] .modal__container {
     animation: mmslideOut .5s cubic-bezier(0, 0, .2, 1);
 }
+.micromodal-slide-left[aria-hidden="false"] .modal__overlay {
+    animation:mmfadeLeftIn .5s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+.micromodal-slide-left[aria-hidden="false"] .modal__container {
+    animation:mmslideLeftIn .5s cubic-bezier(0, 0, .2, 1);
+}
+.micromodal-slide-left[aria-hidden="true"] .modal__overlay {
+    animation:mmfadeLeftOut .5s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+.micromodal-slide-left[aria-hidden="true"] .modal__container {
+    animation:mmslideLeftOut .5s cubic-bezier(0, 0, .2, 1);
+}
+
 @keyframes mmslideIn {
     from {transform:translateY(5%);}
     to {transform:translateY(0);}
