@@ -269,7 +269,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .modal {font-family:inherit;}
 .micromodal-slide.is-open {position:relative;z-index:var(--modal-zIndex);}
 .modal__container {padding:0;max-width:none;max-height:calc(100% - 40px);flex:1 1 100%;background-color:var(--white-100);border-radius:20px 20px 0 0;display:flex;flex-direction:column;}
-.modal__content {margin:0;line-height:inherit;color:inherit;padding:0;border-radius:0;flex:1 1 calc(100% - 56px);overflow-y:auto;}
+.modal__content {margin:0;line-height:inherit;color:inherit;padding:0;border-radius:0;flex:1 1 calc(100% - 56px);overflow-y:auto;overscroll-behavior: none;}
 
 .micromodal-content .modal__overlay {background-color:transparent;}
 
