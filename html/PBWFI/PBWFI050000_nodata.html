@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script><!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>환율조회</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+				<!-- content -->
+				<div class="content">
+
+					<!-- form -->
+					<div class="form py16">
+						<div class="label">
+							<strong class="title-medium">고시기준일</strong>
+						</div>
+						<div class="input-wrap input-datepicker">
+							<button type="button" aria-label="날짜 선택" id="modal-datepicker-trigger"></button>
+						</div>
+						<ul class="label-list px12 py8 mt8">
+							<li class="list01"><i aria-label="매매기준율"></i></li>
+							<li class="list02"><i aria-label="본지점매도율"></i></li>
+							<li class="list03"><i aria-label="본지점매입율"></i></li>
+						</ul>
+					</div>
+					<!-- //form -->
+
+					<!-- division-center -->
+					<div class="division-center">
+
+						<div class="no-result">
+							<i class="icon-only icon-48 icon-noresult bg-icon-gray_1"></i>
+							<p class="body-medium fw-400">환율 정보는 영업일에만 제공하고 있습니다.</p>
+						</div>
+
+					</div>
+					<!-- //division-center -->
+
+
+
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+
+	</main>
+	<!-- //main -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-datepicker" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+						<div class="datepicker-wrap">
+							<div class="jquery-datepicker"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-country">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large">환율정보 조회</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+
+						<div class="flag flag-us px8 py16"><strong>USD</strong><span>미국 달러</span></div>
+						<div class="table-col px8">
+							<table>
+								<caption>환율정보 조회</caption>
+								<tbody>
+									<tr>
+										<th scope="row" class="al">고시기준일</th>
+										<td class="ar">2024-11-18</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">고시시각</th>
+										<td class="ar">17:18:29</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">매매기준율</th>
+										<td class="ar">9,999.99원</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">전신환매도율</th>
+										<td class="ar">9,999.99원</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">전신환매입율</th>
+										<td class="ar">9,999.99원</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">현찰매입율</th>
+										<td class="ar">9,999.99원</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">대미환산율</th>
+										<td class="ar">1,000배</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">미불당환산율</th>
+										<td class="ar">1,000배</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">본지점매도율</th>
+										<td class="ar">9,999.99원</td>
+									</tr>
+									<tr>
+										<th scope="row" class="al">본지점매입율</th>
+										<td class="ar">9,999.99원</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" data-micromodal-close>환율계산하기</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+
+	<script>
+		const modalTrigger = document.querySelector('#modal-datepicker-trigger')
+		modalTrigger.addEventListener("click", function(event) {
+			MicroModal.show('modal-datepicker', {
+				// openTrigger: 'data-custom-open', // [3]
+				// closeTrigger: 'data-custom-close', // [4]
+				// openClass: 'is-open', // [5]
+				disableScroll: true, // [6]
+				disableFocus: true, // [7]
+				awaitOpenAnimation: true, // [8]
+				awaitCloseAnimation: true, // [9]
+				// debugMode: true // [10]
+				onShow: function(modalPopup) {
+					$(".jquery-datepicker").datepicker({
+						dateFormat: 'yy-mm-dd',
+						prevText: '이전 달',
+						nextText: '다음 달',
+						monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+						monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+						dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+						dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+						dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+						showMonthAfterYear: true,
+						yearSuffix: '년',
+						// minDate: 0,
+						showButtonPanel: true,
+						closeText: "닫기",
+						showOtherMonths: true,
+						onSelect: function(input, date) {
+							MicroModal.close('modal-datepicker');
+							modalTrigger.innerText = input;
+						},
+					});
+				},
+				onClose: function(modalPopup) {
+					// console.log($(".jquery-datepicker").datepicker("refresh"))
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

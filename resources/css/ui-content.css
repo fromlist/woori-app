@@ -1070,7 +1070,7 @@ i.live-off {display:inline-block;width:16px;height:16px;background:url(/resource
 .notice-wrap {}
 .notice-title {padding:0 8px;}
 .notice-title-inner {display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;}
-.notice-title-inner .date {font-size:14px;font-weight:400;color:var(--typography-caption);}
+.notice-title-inner .date {font-size:14px;font-weight:400;color:var(--typography-caption);margin-left:auto;}
 .notice-content {padding:0 8px;}
 .notice-content .file-attach-list {margin-bottom:16px;}
 .notice-content picture {display:flex;margin-bottom:16px;}
