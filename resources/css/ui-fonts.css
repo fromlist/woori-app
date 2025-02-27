@@ -6,7 +6,7 @@
     font-style:normal;
     font-weight:100;
 	font-display:swap;
-    src:url(/resources/fonts/Pretendard-ExtraLight.otf) format("opentype")
+    src:url(/resources/fonts/Pretendard-ExtraLight.woff2) format("woff2"),
 }
 /* Thin */
 @font-face {
@@ -14,7 +14,7 @@
     font-style:normal;
     font-weight:200;
 	font-display:swap;
-    src:url(/resources/fonts/Pretendard-Thin.otf) format("opentype")
+    src:url(/resources/fonts/Pretendard-Thin.woff2) format("woff2"),
 }
 /* Light */
 @font-face {
@@ -22,7 +22,7 @@
     font-style:normal;
     font-weight:300;
 	font-display:swap;
-    src:url(/resources/fonts/Pretendard-Light.otf) format("opentype")
+    src:url(/resources/fonts/Pretendard-Light.woff2) format("woff2"),
 }
 /* Regular */
 @font-face {
@@ -30,7 +30,7 @@
     font-style:normal;
     font-weight:400;
 	font-display:swap;
-    src:url(/resources/fonts/Pretendard-Regular.otf) format("opentype")
+    src:url(/resources/fonts/Pretendard-Regular.woff2) format("woff2"),
 }
 /* Medium */
 @font-face {
@@ -38,7 +38,7 @@
     font-style:normal;
     font-weight:500;
 	font-display:swap;
-    src:url(/resources/fonts/Pretendard-Medium.otf) format("opentype")
+    src:url(/resources/fonts/Pretendard-Medium.woff2) format("woff2"),
 }
 /* SemiBold */
 @font-face {
@@ -46,7 +46,7 @@
     font-style:normal;
     font-weight:600;
 	font-display:swap;
-    src:url(/resources/fonts/Pretendard-SemiBold.otf) format("opentype")
+    src:url(/resources/fonts/Pretendard-SemiBold.woff2) format("woff2"),
 }
 /* Bold */
 @font-face {
@@ -54,7 +54,7 @@
     font-style:normal;
     font-weight:700;
 	font-display:swap;
-    src:url(/resources/fonts/Pretendard-Bold.otf) format("opentype")
+    src:url(/resources/fonts/Pretendard-Bold.woff2) format("woff2"),
 }
 /* ExtraBold */
 @font-face {
@@ -62,7 +62,7 @@
     font-style:normal;
     font-weight:800;
 	font-display:swap;
-    src:url(/resources/fonts/Pretendard-ExtraBold.otf) format("opentype")
+    src:url(/resources/fonts/Pretendard-ExtraBold.woff2) format("woff2"),
 }
 /* Black */
 @font-face {
@@ -70,5 +70,5 @@
     font-style:normal;
     font-weight:900;
 	font-display:swap;
-    src:url(/resources/fonts/Pretendard-Black.otf) format("opentype")
+    src:url(/resources/fonts/Pretendard-Black.woff2) format("woff2"),
 }

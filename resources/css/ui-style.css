@@ -362,8 +362,8 @@ div.btn-xsmall .btn-inner span {white-space:nowrap;overflow:hidden;text-overflow
 .fab-secondary {background-color:var(--white-80);border:1px solid var(--border-8);box-shadow:0px 2px 10px 0px var(--shadow-gray_2);}
 .fab-square {border-radius:12px;}
 .fab-circle {border-radius:54px;}
-.fab span {font-size:18px;font-weight:700;line-height:1;}
-.fab-primary span {color:var(--button-primary-onEnabled);}
+.fab strong {font-size:18px;font-weight:700;line-height:1;}
+.fab-primary strong {color:var(--button-primary-onEnabled);}
 
 /* button inner icon */
 .btn-large i,

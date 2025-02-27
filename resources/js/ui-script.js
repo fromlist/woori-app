@@ -148,6 +148,7 @@ const tabContent = {
                     left: scrollPositionLeft - scrollPadding,
                     behavior: 'smooth',
                 })
+                
             } else {
                 $(this).attr({
                     'aria-selected': 'false'
