@@ -270,11 +270,11 @@
 
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-search">
+	<div class="micromodal-slide micromodal-slide-bottom modal micromodal-slide-bottom" id="modal-search">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 				<div class="modal__header">
-					<strong class="modal__title title-large">기간별 기준가/수익률</strong>
+					<strong class="modal__title title-large">펀드/지수 검색</strong>
 					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
 				</div>
 				<div class="modal__content">
@@ -287,7 +287,11 @@
 							<div class="sticky-content-inner">
 								<!-- form -->
 								<div class="form">
+									<!-- 
+                                    <div class="form is-searched"> 검색된 상태
+                                    -->
 									<div class="label"></div>
+									<div class="search-history-back"><button type="button" aria-label="검색메뉴 닫기"></button></div>
 									<div class="input-wrap input-btn">
 										<input type="text" placeholder="펀드/지수명으로 검색해 보세요." aria-label="검색">
 										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>

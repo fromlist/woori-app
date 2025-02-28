@@ -106,7 +106,7 @@
 	<!-- //main -->
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-search">
+	<div class="micromodal-slide micromodal-slide-bottom micromodal-slide-bottom-full modal" id="modal-search">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 				<div class="modal__header">
@@ -123,8 +123,9 @@
 						<div class="sticky-content content-fluid">
 							<div class="sticky-content-inner">
 								<!-- form -->
-								<div class="form">
+								<div class="form is-searched">
 									<div class="label"></div>
+									<div class="search-history-back"><button type="button" aria-label="검색메뉴 닫기"></button></div>
 									<div class="input-wrap input-btn">
 										<input type="text" placeholder="펀드/지수명으로 검색해 보세요." aria-label="검색">
 										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
@@ -168,36 +169,113 @@
 						<!-- group-form -->
 						<div class="group-form mt16">
 							<div class="group-content content-fluid px0">
-								<!-- tab-content -->
-								<div class="tab-content">
-									<ul class="tab-list tab-col overflow-list px24" role="tablist">
-										<li class="tab tab-active"><a role="tab" href="#" class="fs-18">주가지수</a></li>
-										<li class="tab"><a role="tab" href="#" class="fs-18">채권금리</a></li>
-										<li class="tab"><a role="tab" href="#" class="fs-18">환율</a></li>
-										<li class="tab"><a role="tab" href="#" class="fs-18">원자재</a></li>
-										<li class="tab"><a role="tab" href="#" class="fs-18">나의 관심펀드</a></li>
-									</ul>
+
+								<!-- Swiper -->
+								<div class="swiper keyword-swiper">
+									<div class="swiper-pagination swiper-pagination-tab overflow-list px24"></div>
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="d-flex flex-wrap px16 gap10 bg-transparent mt16">
+												<button class="btn-xsmall btn-primary btn-round" id="error" aria-label="선택됨">KOSPI</button>
+												<button class="btn-xsmall btn-primary btn-round" aria-label="선택됨">KOSDAQ</button>
+												<button class="btn-xsmall btn-outlined btn-round">KOSPI200</button>
+												<button class="btn-xsmall btn-outlined btn-round">S&P500</button>
+												<button class="btn-xsmall btn-outlined btn-round">NASDAQ</button>
+												<button class="btn-xsmall btn-outlined btn-round">DOW</button>
+												<button class="btn-xsmall btn-outlined btn-round">EUROSTOXX50</button>
+												<button class="btn-xsmall btn-outlined btn-round">상해종합</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="d-flex flex-wrap px16 gap10 bg-transparent mt16">
+												<button class="btn-xsmall btn-primary btn-round" id="error" aria-label="선택됨">KOSPI</button>
+												<button class="btn-xsmall btn-primary btn-round" aria-label="선택됨">KOSDAQ</button>
+												<button class="btn-xsmall btn-outlined btn-round">KOSPI200</button>
+												<button class="btn-xsmall btn-outlined btn-round">S&P500</button>
+												<button class="btn-xsmall btn-outlined btn-round">NASDAQ</button>
+												<button class="btn-xsmall btn-outlined btn-round">DOW</button>
+												<button class="btn-xsmall btn-outlined btn-round">EUROSTOXX50</button>
+												<button class="btn-xsmall btn-outlined btn-round">상해종합</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="d-flex flex-wrap px16 gap10 bg-transparent mt16">
+												<button class="btn-xsmall btn-primary btn-round" id="error" aria-label="선택됨">KOSPI</button>
+												<button class="btn-xsmall btn-primary btn-round" aria-label="선택됨">KOSDAQ</button>
+												<button class="btn-xsmall btn-outlined btn-round">KOSPI200</button>
+												<button class="btn-xsmall btn-outlined btn-round">S&P500</button>
+												<button class="btn-xsmall btn-outlined btn-round">NASDAQ</button>
+												<button class="btn-xsmall btn-outlined btn-round">DOW</button>
+												<button class="btn-xsmall btn-outlined btn-round">EUROSTOXX50</button>
+												<button class="btn-xsmall btn-outlined btn-round">상해종합</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="d-flex flex-wrap px16 gap10 bg-transparent mt16">
+												<button class="btn-xsmall btn-primary btn-round" id="error" aria-label="선택됨">KOSPI</button>
+												<button class="btn-xsmall btn-primary btn-round" aria-label="선택됨">KOSDAQ</button>
+												<button class="btn-xsmall btn-outlined btn-round">KOSPI200</button>
+												<button class="btn-xsmall btn-outlined btn-round">S&P500</button>
+												<button class="btn-xsmall btn-outlined btn-round">NASDAQ</button>
+												<button class="btn-xsmall btn-outlined btn-round">DOW</button>
+												<button class="btn-xsmall btn-outlined btn-round">EUROSTOXX50</button>
+												<button class="btn-xsmall btn-outlined btn-round">상해종합</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="d-flex flex-wrap px16 gap10 bg-transparent mt16">
+												<button class="btn-xsmall btn-primary btn-round" id="error" aria-label="선택됨">KOSPI</button>
+												<button class="btn-xsmall btn-primary btn-round" aria-label="선택됨">KOSDAQ</button>
+												<button class="btn-xsmall btn-outlined btn-round">KOSPI200</button>
+												<button class="btn-xsmall btn-outlined btn-round">S&P500</button>
+												<button class="btn-xsmall btn-outlined btn-round">NASDAQ</button>
+												<button class="btn-xsmall btn-outlined btn-round">DOW</button>
+												<button class="btn-xsmall btn-outlined btn-round">EUROSTOXX50</button>
+												<button class="btn-xsmall btn-outlined btn-round">상해종합</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+												<button class="btn-xsmall btn-outlined btn-round">HSCEI</button>
+											</div>
+										</div>
+									</div>
 								</div>
+
 
 								<!-- //tab-content -->
 								<div class="tab-content mt16">
-									<div class="d-flex flex-wrap px16 gap10 bg-transparent">
-										<button class="btn-xsmall btn-primary btn-round normal-wrap" id="error" aria-label="선택됨">KOSPI</button>
-										<button class="btn-xsmall btn-primary btn-round normal-wrap" aria-label="선택됨">KOSDAQ</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">KOSPI200</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">S&P500</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">NASDAQ</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">DOW</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">EUROSTOXX50</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">상해종합</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">HSCEI</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">HSCEI</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">HSCEI</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">HSCEI</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">HSCEI</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">HSCEI</button>
-										<button class="btn-xsmall btn-outlined btn-round normal-wrap">HSCEI</button>
-									</div>
+
 								</div>
 
 							</div>
@@ -236,6 +314,30 @@
 
 	<script>
 		MicroModal.show('modal-search'); // [1]
+	</script>
+	<script>
+		const tab = ['주가지수', '채권금리', '환율', '원자재', '나의 관심펀드']
+		var swiper = new Swiper(".keyword-swiper", {
+			autoHeight: true,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+				renderBullet: function(index, className) {
+					return `<span class="${className}"><button>${tab[index]}</button></span>`
+				},
+			},
+			on: {
+				slideChange: function() {
+					const $el = $('.swiper-pagination');
+					var swiperCenter = {
+						scrollWrap: $el,
+						scrollTarget: $el.find('.swiper-pagination-bullet-active'),
+						animation: true
+					};
+					menuCenter($el, swiperCenter);
+				}
+			}
+		});
 	</script>
 
 

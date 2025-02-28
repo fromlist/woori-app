@@ -107,7 +107,7 @@
 
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-search">
+	<div class="micromodal-slide micromodal-slide-bottom micromodal-slide-bottom-full modal" id="modal-search">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 				<div class="modal__header">
@@ -122,8 +122,9 @@
 						<div class="sticky-content content-fluid">
 							<div class="sticky-content-inner">
 								<!-- form -->
-								<div class="form">
+								<div class="form is-searched">
 									<div class="label"></div>
+									<div class="search-history-back"><button type="button" aria-label="검색메뉴 닫기"></button></div>
 									<div class="input-wrap input-btn">
 										<input type="text" placeholder="펀드/지수명으로 검색해 보세요." aria-label="검색">
 										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
@@ -182,6 +183,30 @@
 		$('#error').click(function(event) {
 			toastr.error('', '더이상 추가할 수 없습니다.')
 			toastr.error('', '이미 추가된 펀드/지수입니다.')
+		});
+	</script>
+	<script>
+		const tab = ['주가지수', '채권금리', '환율', '원자재', '나의 관심펀드']
+		var swiper = new Swiper(".keyword-swiper", {
+			autoHeight: true,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+				renderBullet: function(index, className) {
+					return `<span class="${className}"><button>${tab[index]}</button></span>`
+				},
+			},
+			on: {
+				slideChange: function() {
+					const $el = $('.swiper-pagination');
+					var swiperCenter = {
+						scrollWrap: $el,
+						scrollTarget: $el.find('.swiper-pagination-bullet-active'),
+						animation: true
+					};
+					menuCenter($el, swiperCenter);
+				}
+			}
 		});
 	</script>
 </body>
