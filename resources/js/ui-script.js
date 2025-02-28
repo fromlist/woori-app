@@ -549,7 +549,7 @@ var gnb = {
     oneDepthInit: function () {
         const gnbNavigation = $gnbWrap.find('.gnb-menu-nav')
         gnbNavigation.find('a').unbind('click').bind({
-            'click': function (e) {
+            'click': function (e) { 
                 e.preventDefault();
                 const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu-nav').outerHeight();
                 var targetId = $(this).attr('href');

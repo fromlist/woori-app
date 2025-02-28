@@ -91,6 +91,18 @@
 						body {
 							background-color: var(--background-bg_lightGray);
 						}
+
+						.datepicker-wrap.datepicker-collapsed .ui-datepicker-calendar td.ui-datepicker-other-month span,
+						.datepicker-wrap.datepicker-collapsed .ui-datepicker-calendar td.ui-datepicker-other-month a {
+							color: inherit;
+						}
+
+						.datepicker-collapsed .ui-priority-secondary,
+						.datepicker-collapsed .ui-widget-content .ui-priority-secondary,
+						.datepicker-collapsed .ui-widget-header .ui-priority-secondary {
+							opacity: 1;
+							font-weight: inherit;
+						}
 					</style>
 
 					<!-- snackbar-content -->
@@ -516,7 +528,6 @@
 	</main>
 	<!-- //main -->
 
-
 	<script>
 		var datepickerWeekend = {
 			init: function() {
@@ -625,6 +636,7 @@
 				showButtonPanel: false,
 				closeText: "닫기",
 				showOtherMonths: true,
+				selectOtherMonths: true,
 				onSelect: function(date, dp) {
 					datepickerWeekend.select();
 				},

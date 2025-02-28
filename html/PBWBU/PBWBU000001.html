@@ -228,7 +228,7 @@
 										</div>
 										<div class="right">
 											<dl>
-												<dt>김우리</dt>
+												<dt>장원영</dt>
 												<dd>직위/호칭</dd>
 												<dd>소속</dd>
 											</dl>
@@ -556,7 +556,7 @@
 																		</div>
 																		<div class="right">
 																			<dl>
-																				<dt>김우리</dt>
+																				<dt>장원영</dt>
 																				<dd>직위/호칭</dd>
 																				<dd>소속</dd>
 																			</dl>
@@ -640,14 +640,14 @@
 																		<div class="left">
 																			<figure>
 																				<picture>
-																					<source srcset="/resources/images/bs_card/bs_photo.svg">
-																					<img src="/resources/images/bs_card/bs_photo.svg" alt="">
+																					<source srcset="/resources/images/bs_card/bs_photo.png">
+																					<img src="/resources/images/bs_card/bs_photo.png" alt="">
 																				</picture>
 																			</figure>
 																		</div>
 																		<div class="right">
 																			<dl>
-																				<dt>김우리</dt>
+																				<dt>장원영</dt>
 																				<dd>직위/호칭</dd>
 																				<dd>소속</dd>
 																			</dl>
@@ -739,7 +739,7 @@
 																		</div>
 																		<div class="right">
 																			<dl>
-																				<dt>김우리</dt>
+																				<dt>장원영</dt>
 																				<dd>직위/호칭</dd>
 																				<dd>소속</dd>
 																			</dl>
@@ -820,7 +820,7 @@
 																		</div>
 																		<div class="right">
 																			<dl>
-																				<dt>김우리</dt>
+																				<dt>장원영</dt>
 																				<dd>직위/호칭</dd>
 																				<dd>소속</dd>
 																			</dl>
@@ -904,8 +904,8 @@
 																		<div class="left">
 																			<figure>
 																				<picture>
-																					<source srcset="/resources/images/bs_card/bs_photo.svg">
-																					<img src="/resources/images/bs_card/bs_photo.svg" alt="">
+																					<source srcset="/resources/images/bs_card/bs_photo.png">
+																					<img src="/resources/images/bs_card/bs_photo.png" alt="">
 																				</picture>
 																			</figure>
 																			<object type="image/svg+xml" data="/resources/images/bs_card/bs_b_center_logo01.svg">
@@ -913,7 +913,7 @@
 																		</div>
 																		<div class="right">
 																			<dl>
-																				<dt>김우리</dt>
+																				<dt>장원영</dt>
 																				<dd>직위/호칭</dd>
 																				<dd>소속</dd>
 																			</dl>
@@ -1245,25 +1245,6 @@
 		});
 
 
-		// global tab
-		const bsCardResize = {
-			init: function() {
-				const bsCard = $('.bs-card');
-				const bsParent = $('.bs-card-wrap').parent('').outerWidth();
-				const bsCardwWidth = 360;
-				let percent = (bsParent / bsCardwWidth).toFixed(1);
-				// console.log(percent)
-				bsCard.css('zoom', percent);
-				this.onResize();
-			},
-			onResize: function() {
-				$(window).resize(function() {
-					setTimeout(function() {
-						bsCardResize.init();
-					}, 300)
-				})
-			}
-		}
 		bsCardResize.init();
 	</script>
 
