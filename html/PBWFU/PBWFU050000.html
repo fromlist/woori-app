@@ -108,7 +108,7 @@
 
 					<!-- snackbar-content -->
 					<div class="snackbar-content is-sticky">
-						<button type="button" class="fab fab-primary fab-square" aria-label="글쓰기"><i class="ico-reply"></i></button>
+						<button type="button" class="fab fab-primary fab-square" aria-label="글쓰기" data-micromodal-trigger="modal-reply-write"><i class="ico-reply"></i></button>
 					</div>
 					<!-- //snackbar-content -->
 
@@ -519,7 +519,7 @@
 							<div class="textarea-length">
 								<div class="left">0/500자</div>
 								<div class="right">
-									<button type="button" class="btn-xsmall btn-primary btn-round">저장</button>
+									<button type="button" class="btn-xsmall btn-primary btn-round" onclick="toastr.success('', '저장되었습니다.')">저장</button>
 								</div>
 							</div>
 						</div>

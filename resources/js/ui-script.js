@@ -163,7 +163,7 @@ const tabContent = {
 // global form
 const formStyle = {
     init: function () {
-        this.textareaResize();
+        // this.textareaResize();
         this.inputRemove()
     },
     textareaResize: function () {

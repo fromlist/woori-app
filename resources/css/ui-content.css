@@ -1078,8 +1078,13 @@ i.live-off {display:inline-block;width:16px;height:16px;background:url(/resource
 .notice-content pre {font-size:16px;font-weight:400;color:var(--typography-body);}
 
 /* content-visual */
-.content-visual {display:flex;align-items:flex-end;justify-content:space-between;padding-top:34px;}
-.content-visual .text {}
+.content-visual {position:relative;display:flex;align-items:center;justify-content:space-between;overflow:hidden;}
+.content-visual picture {position:absolute;top:0;height:100%;width:100%;z-index:0;display:flex;}
+.content-visual picture img {max-width:none;height:100%;}
+.content-visual.picture-left picture {justify-content:flex-start;}
+.content-visual.picture-left {justify-content:flex-end;text-align:right;}
+.content-visual.picture-right picture {justify-content:flex-end;}
+.content-visual .text {position:relative;z-index:1;}
 
 /* report-list */
 .report-list {}
