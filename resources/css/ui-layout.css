@@ -579,13 +579,14 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 /* .chart-wrap {background-color:var(--background-bg_lightGray);border-radius:8px;} */
 
 /* main */
-.visual-headline {position:relative;height:203px;display:flex;align-items:flex-end;padding:0 4px 3px;}
+.visual-headline {position:relative;height:220px;display:flex;}
 .visual-headline figure {flex:1 1 100%;}
-.visual-headline figure picture {position:absolute;right:0;top:0;}
-.visual-headline figure figcaption {display:flex;flex-direction:column;justify-content:flex-end;}
-.visual-headline span {display:block;font-size:18px;color:var(--typography-title);line-height:1.5;padding:0 2px;}
+.visual-headline figure picture {position:absolute;right:0;top:0;z-index:-1;height:100%;width:100%;display:flex;align-items:center;justify-content:flex-end;}
+.visual-headline figure picture  img {height:220px;width:auto;max-width:none;}
+.visual-headline figure figcaption {display:flex;flex-direction:column;justify-content:flex-end;height:100%;}
+.visual-headline span {display:block;font-size:15px;color:var(--typography-gray);line-height:150%;padding:0 2px;}
 .visual-headline span b {font-weight:700;}
-.visual-headline strong {display:block;font-size:30px;font-weight:700;color:var(--typography-title);line-height:1.5;margin-top:10px;}
+.visual-headline strong {display:block;font-size:30px;font-weight:700;color:var(--typography-title);line-height:140%;margin-top:2px;}
 .main-section-title {display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;gap:16px;}
 .main-schedule-section {padding:24px 0 48px;}
 
@@ -621,7 +622,7 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .main-schedule-list ul {}
 .main-schedule-list ul li {}
 .main-schedule-list ul li:not(:last-child) {margin-bottom:8px;}
-.main-schedule-list ul li a {position:relative;display:flex;padding: 8px 22px 8px 8px;background-color:var(--surface-surface50);border-radius:12px;gap:8px;}
+.main-schedule-list ul li a {position:relative;display:flex;padding:8px 22px 8px 8px;background-color:var(--surface-surface50);border-radius:12px;gap:8px;}
 .main-schedule-list ul li a:after {content:'';position:absolute;right:12px;top:50%;margin-top:-7px;align-items:center;justify-content:center;flex:0 0 7px;width:7px;height:14px;
     -webkit-mask-position:center center;
     mask-position:center center;
