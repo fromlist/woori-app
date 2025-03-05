@@ -163,20 +163,18 @@ const tabContent = {
 // global form
 const formStyle = {
     init: function () {
-        // this.textareaResize();
+        this.textareaResize();
         this.inputRemove()
     },
     textareaResize: function () {
-        $.each($('textarea'), function () {
+        $(document).on('keyup input', 'textarea', function () {
             if (!$(this).is('[readonly]')) {
                 const offset = this.offsetHeight - this.clientHeight;
                 const resizeTextarea = function (el) {
                     $(el).css('height', 'auto').css('height', el.scrollHeight + offset);
                     $(el).addClass('areaResize')
                 };
-                $(document).on('keyup input', 'textarea', function () {
-                    resizeTextarea(this);
-                });
+                resizeTextarea(this);
             }
         });
     },
@@ -222,41 +220,6 @@ const stickyContent = {
     init: function () {
         this.sentinal();
         this.snackBar();
-
-        var timer = null;
-        var close = 250;
-
-        const snackbarEl = document.querySelector('.snackbar-content')
-        const snackbarWrapper = document.querySelector('.content');
-
-        if (snackbarEl != null) {
-            snackbarWrapper.style.paddingBottom = snackbarEl.clientHeight + 'px';
-
-            if (!snackbarEl.classList.contains('snackbar-disabled')) {
-                if (timer !== null) {
-                    clearTimeout(timer);
-                    snackbarEl.classList.remove('is-sticky')
-                }
-                timer = setTimeout(function () {
-                    snackbarEl.classList.add('is-sticky')
-                }, close);
-            }
-
-
-            const mainContainer = document.querySelector('main');
-            const bottomBtn = mainContainer.querySelectorAll('.bottom-btn')
-
-            if (bottomBtn != null) {
-                bottomBtn.forEach(function (element) {
-                    const visibility = window.getComputedStyle(element).display;
-                    if (visibility === 'block') {
-                        snackbarEl.style.bottom = element.clientHeight + 'px';
-                    }
-                })
-            }
-        } else {
-            snackbarWrapper.style.removeProperty('padding-bottom');
-        }
     },
     sentinal: function () {
         // Initial state
@@ -306,7 +269,7 @@ const stickyContent = {
     snackBar: function () {
 
         var timer = null;
-        var close = 250;
+        var close = 500;
         snackBarFunc();
 
         window.addEventListener('scroll', function () {
@@ -549,7 +512,7 @@ var gnb = {
     oneDepthInit: function () {
         const gnbNavigation = $gnbWrap.find('.gnb-menu-nav')
         gnbNavigation.find('a').unbind('click').bind({
-            'click': function (e) { 
+            'click': function (e) {
                 e.preventDefault();
                 const $stickyHeight = $gnbWrap.find('.main-header').outerHeight() + $gnbWrap.find('.gnb-menu-search').outerHeight() + $gnbWrap.find('.gnb-menu-nav').outerHeight();
                 var targetId = $(this).attr('href');

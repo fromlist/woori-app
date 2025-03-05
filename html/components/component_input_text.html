@@ -122,13 +122,39 @@
 					<dt>Textarea</dt>
 					<dd>
 						<div class="form">
-							<div class="input-wrap">
-								<textarea aria-label="메모"></textarea>
+							<div class="input-wrap" id="textarea1">
+								<!-- <textarea aria-label="메모"></textarea> -->
 							</div>
 							<div class="textarea-length">
 								<div class="left">0/300자</div>
 								<div class="right">
-									<button type="button" class="btn-xsmall btn-primary btn-round">저장</button>
+									<button type="button" class="btn-xsmall btn-primary btn-round" id="btn1">저장</button>
+									<script>
+										$('#btn1').click(function() {
+											$('#textarea1').html('<textarea></textarea>')
+										})
+									</script>
+								</div>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>Textarea</dt>
+					<dd>
+						<div class="form">
+							<div class="input-wrap" id="textarea2">
+								<!-- <textarea aria-label="메모"></textarea> -->
+							</div>
+							<div class="textarea-length">
+								<div class="left">0/300자</div>
+								<div class="right">
+									<button type="button" class="btn-xsmall btn-primary btn-round" id="btn2">저장</button>
+									<script>
+										$('#btn2').click(function() {
+											$('#textarea2').html('<textarea></textarea>')
+										})
+									</script>
 								</div>
 							</div>
 						</div>
