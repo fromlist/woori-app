@@ -41,6 +41,7 @@
 	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
 	<!-- jquery-touchSwipe -->
 	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script><!-- //[plugins] -->
+	<script src="/resources/plugins/html2canvas.js"></script><!-- //[plugins] -->
 
 	<!-- ui source -->
 	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
@@ -49,6 +50,7 @@
 	<link rel="stylesheet" href="/resources/css/ui-layout.css">
 	<link rel="stylesheet" href="/resources/css/ui-style.css">
 	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
 	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
 	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
 	<link rel="stylesheet" href="/resources/css/ui-guide.css">
@@ -58,9 +60,17 @@
 	<!-- //ui source -->
 
 	<style>
+		.ui-guide.content {
+			padding: 0 16px 24px;
+		}
 
+		.ui-guide .ui-guide-box {
+			border: 0;
+			padding: 0;
+		}
 	</style>
 </head>
+
 
 <body>
 	<div class="ui-guide content">
@@ -74,17 +84,18 @@
 
 					<!-- bs-card-wrap -->
 					<div class="bs-card-wrap">
+						<input type="radio" name="rad001">
 						<div class="bs-card ">
 							<div class="bs-typeA">
 								<div class="top">
 									<div class="left">
-										<picture>
+										<picture class="top-logo01">
 											<source srcset="/resources/images/bs_card/bs_a_top_logo01.svg">
 											<img src="/resources/images/bs_card/bs_a_top_logo01.svg" alt="우리 마음속 첫번째 금융">
 										</picture>
 									</div>
 									<div class="right">
-										<picture>
+										<picture class="top-aff01">
 											<source srcset="/resources/images/bs_card/bs_a_aff.svg">
 											<img src="/resources/images/bs_card/bs_a_aff.svg" alt="우리금융그룹">
 										</picture>
@@ -99,11 +110,11 @@
 								<div class="center">
 									<div class="title">
 										<div class="left">
-											<picture>
+											<picture class="center-logo01">
 												<source srcset="/resources/images/bs_card/bs_a_center_logo01.svg">
-												<img src="/resources/images/bs_card/bs_a_center_logo01.svg" alt="우리금융그룹">
+												<img src="/resources/images/bs_card/bs_a_center_logo01.svg" alt="우리은행">
 											</picture>
-											<object type="image/svg+xml" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
+											<object type="image/svg+xml" class="center-cfp" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
 										</div>
 										<div class="right">
 											<dl>
@@ -165,13 +176,13 @@
 							<div class="bs-typeA">
 								<div class="top">
 									<div class="left">
-										<picture>
+										<picture class="top-logo01">
 											<source srcset="/resources/images/bs_card/bs_a_top_logo01.svg">
 											<img src="/resources/images/bs_card/bs_a_top_logo01.svg" alt="우리 마음속 첫번째 금융">
 										</picture>
 									</div>
 									<div class="right">
-										<picture>
+										<picture class="top-aff01">
 											<source srcset="/resources/images/bs_card/bs_a_aff.svg">
 											<img src="/resources/images/bs_card/bs_a_aff.svg" alt="우리금융그룹">
 										</picture>
@@ -192,7 +203,7 @@
 													<img src="/resources/images/bs_card/bs_photo.png" alt="">
 												</picture>
 											</figure>
-											<object type="image/svg+xml" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
+											<object type="image/svg+xml" class="center-cfp" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
 										</div>
 										<div class="right">
 											<dl>
@@ -204,7 +215,7 @@
 									</div>
 									<div class="info">
 										<div class="left">
-											<picture>
+											<picture class="info-logo01">
 												<source srcset="/resources/images/bs_card/bs_a_center_logo02.svg">
 												<img src="/resources/images/bs_card/bs_a_center_logo02.svg" alt="우리은행">
 											</picture>
@@ -259,11 +270,10 @@
 							<div class="bs-typeA">
 								<div class="top">
 									<div class="left">
-										<object type="image/svg+xml" data="/resources/images/bs_card/bs_a_top_logo02.svg" style="margin-bottom:-10px;">
-										</object>
+										<object type="image/svg+xml" class="top-logo02" data="/resources/images/bs_card/bs_a_top_logo02.svg"></object>
 									</div>
 									<div class="right">
-										<picture>
+										<picture class="top-aff01">
 											<source srcset="/resources/images/bs_card/bs_a_aff.svg">
 											<img src="/resources/images/bs_card/bs_a_aff.svg" alt="우리금융그룹">
 										</picture>
@@ -278,11 +288,11 @@
 								<div class="center">
 									<div class="title">
 										<div class="left">
-											<picture>
+											<picture class="center-logo01">
 												<source srcset="/resources/images/bs_card/bs_a_center_logo01.svg">
-												<img src="/resources/images/bs_card/bs_a_center_logo01.svg" alt="우리금융그룹">
+												<img src="/resources/images/bs_card/bs_a_center_logo01.svg" alt="우리은행">
 											</picture>
-											<object type="image/svg+xml" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
+											<object type="image/svg+xml" class="center-cfp" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
 										</div>
 										<div class="right">
 											<dl>
@@ -344,13 +354,13 @@
 							<div class="bs-typeB">
 								<div class="top">
 									<div class="left">
-										<picture>
+										<picture class="top-logo03">
 											<source srcset="/resources/images/bs_card/bs_b_top_logo01.svg">
 											<img src="/resources/images/bs_card/bs_b_top_logo01.svg" alt="TWO CHAIRS">
 										</picture>
 									</div>
 									<div class="right">
-										<picture>
+										<picture class="top-aff01">
 											<source srcset="/resources/images/bs_card/bs_a_aff.svg">
 											<img src="/resources/images/bs_card/bs_a_aff.svg" alt="우리금융그룹">
 										</picture>
@@ -359,8 +369,7 @@
 								<div class="center">
 									<div class="title">
 										<div class="left">
-											<object type="image/svg+xml" data="/resources/images/bs_card/bs_b_center_logo01.svg">
-											</object>
+											<object type="image/svg+xml" class="center-cfp" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
 										</div>
 										<div class="right">
 											<dl>
@@ -373,7 +382,7 @@
 									<div class="info">
 										<div class="left">
 											<div class="left">
-												<picture>
+												<picture class="info-logo01">
 													<source srcset="/resources/images/bs_card/bs_a_center_logo02.svg">
 													<img src="/resources/images/bs_card/bs_a_center_logo02.svg" alt="우리은행">
 												</picture>
@@ -423,18 +432,18 @@
 				<div class="guide-column-list">
 
 					<!-- bs-card-wrap -->
-					<div class="bs-card-wrap">
+					<div class="bs-card-wrap" id="main_capture">
 						<div class="bs-card ">
 							<div class="bs-typeB">
 								<div class="top">
 									<div class="left">
-										<picture>
+										<picture class="top-logo03">
 											<source srcset="/resources/images/bs_card/bs_b_top_logo01.svg">
 											<img src="/resources/images/bs_card/bs_b_top_logo01.svg" alt="TWO CHAIRS">
 										</picture>
 									</div>
 									<div class="right">
-										<picture>
+										<picture class="top-aff01">
 											<source srcset="/resources/images/bs_card/bs_a_aff.svg">
 											<img src="/resources/images/bs_card/bs_a_aff.svg" alt="우리금융그룹">
 										</picture>
@@ -449,8 +458,7 @@
 													<img src="/resources/images/bs_card/bs_photo.png" alt="">
 												</picture>
 											</figure>
-											<object type="image/svg+xml" data="/resources/images/bs_card/bs_b_center_logo01.svg">
-											</object>
+											<object type="image/svg+xml" class="center-cfp" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
 										</div>
 										<div class="right">
 											<dl>
@@ -463,7 +471,7 @@
 									<div class="info">
 										<div class="left">
 											<div class="left">
-												<picture>
+												<picture class="info-logo01">
 													<source srcset="/resources/images/bs_card/bs_a_center_logo02.svg">
 													<img src="/resources/images/bs_card/bs_a_center_logo02.svg" alt="우리은행">
 												</picture>
@@ -509,8 +517,37 @@
 			</div>
 			<hr>
 		</div>
+		<button type="button" id="pick">pickpickpickpickpickpick</button>
 	</div>
 
+
+
+	<script>
+		$(function() {
+			// bsCardResize.init();
+
+			$("#pick").on("click", function() {
+				// 캡처 라이브러리를 통해 canvas 오브젝트 받고 이미지 파일로 리턴함
+				html2canvas(document.querySelector("#main_capture"), ).then(canvas => {
+					saveAs(canvas.toDataURL('image/jpg'), "lime.jpg"); //다운로드 되는 이미지 파일 이름 지정
+				});
+			});
+
+			function saveAs(uri, filename) {
+				// 캡처된 파일을 이미지 파일로 내보냄
+				var link = document.createElement('a');
+				if (typeof link.download === 'string') {
+					link.href = uri;
+					link.download = filename;
+					document.body.appendChild(link);
+					link.click();
+					document.body.removeChild(link);
+				} else {
+					window.open(uri);
+				}
+			}
+		});
+	</script>
 </body>
 
 

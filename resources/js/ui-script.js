@@ -81,24 +81,26 @@ const switchClass = {
 }
 
 // business card
-const bsCardResize = {
-    init: function () {
-        const bsCard = $('.bs-card');
-        const bsParent = $('.bs-card-wrap').parent('').outerWidth();
-        const bsCardwWidth = 360;
-        let percent = (bsParent / bsCardwWidth).toFixed(1);
-        // console.log(percent)
-        bsCard.css('zoom', percent);
-        this.onResize();
-    },
-    onResize: function () {
-        $(window).resize(function () {
-            setTimeout(function () {
-                bsCardResize.init();
-            }, 300)
-        })
-    }
-}
+// const bsCardResize = {
+// init: function () {
+//     const bsCard = $('.bs-card');
+//     const bsParent = $('.bs-card-wrap').closest('.content').outerWidth();
+//     console.log(bsParent)
+//     const bsCardwWidth = 360;
+//     let percent = (bsParent / bsCardwWidth).toFixed(2);
+//     // console.log(percent)
+//     bsCard.css('zoom', percent);
+//     console.log(percent)
+//     this.onResize();
+// },
+// onResize: function () {
+//     $(window).resize(function () {
+//         setTimeout(function () {
+//             bsCardResize.init();
+//         }, 300)
+//     })
+// }
+// }
 // global tab
 const tabContent = {
     init: function () {
@@ -281,7 +283,9 @@ const stickyContent = {
             const snackbarWrapper = document.querySelector('.content');
 
             if (snackbarEl != null) {
-                snackbarWrapper.style.paddingBottom = snackbarEl.clientHeight + 'px';
+                if (snackbarWrapper != null) {
+                    snackbarWrapper.style.paddingBottom = snackbarEl.clientHeight + 'px';
+                }
 
                 if (!snackbarEl.classList.contains('snackbar-disabled')) {
                     if (timer !== null) {
@@ -306,7 +310,9 @@ const stickyContent = {
                     })
                 }
             } else {
-                snackbarWrapper.style.removeProperty('padding-bottom');
+                if (snackbarWrapper != null) {
+                    snackbarWrapper.style.removeProperty('padding-bottom');
+                }
             }
         }
 
