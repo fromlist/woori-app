@@ -41,7 +41,7 @@
 	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
 	<!-- jquery-touchSwipe -->
 	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script><!-- //[plugins] -->
-	<script src="/resources/plugins/html2canvas.js"></script><!-- //[plugins] -->
+	<script src="/resources/js/common/html2canvas.js"></script><!-- //[plugins] -->
 
 	<!-- ui source -->
 	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
@@ -83,21 +83,21 @@
 				<div class="guide-column-list">
 
 					<!-- bs-card-wrap -->
-					<div class="bs-card-wrap">
+					<div class="bs-card-wrap" id="main_capture1">
 						<input type="radio" name="rad001">
 						<div class="bs-card ">
 							<div class="bs-typeA">
 								<div class="top">
 									<div class="left">
 										<picture class="top-logo01">
-											<source srcset="/resources/images/bs_card/bs_a_top_logo01.svg">
-											<img src="/resources/images/bs_card/bs_a_top_logo01.svg" alt="우리 마음속 첫번째 금융">
+											<source srcset="/resources/images/bs_card/bs_a_top_logo01.png">
+											<img src="/resources/images/bs_card/bs_a_top_logo01.png" alt="우리 마음속 첫번째 금융">
 										</picture>
 									</div>
 									<div class="right">
 										<picture class="top-aff01">
-											<source srcset="/resources/images/bs_card/bs_a_aff.svg">
-											<img src="/resources/images/bs_card/bs_a_aff.svg" alt="우리금융그룹">
+											<source srcset="/resources/images/bs_card/bs_a_aff.png">
+											<img src="/resources/images/bs_card/bs_a_aff.png" alt="우리금융그룹">
 										</picture>
 									</div>
 								</div>
@@ -111,10 +111,13 @@
 									<div class="title">
 										<div class="left">
 											<picture class="center-logo01">
-												<source srcset="/resources/images/bs_card/bs_a_center_logo01.svg">
-												<img src="/resources/images/bs_card/bs_a_center_logo01.svg" alt="우리은행">
+												<source srcset="/resources/images/bs_card/bs_a_center_logo01.png">
+												<img src="/resources/images/bs_card/bs_a_center_logo01.png" alt="우리은행">
 											</picture>
-											<object type="image/svg+xml" class="center-cfp" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
+											<picture class="center-cfp">
+												<source srcset="/resources/images/bs_card/bs_b_center_logo01.png">
+												<img src="/resources/images/bs_card/bs_b_center_logo01.png" alt="CFP">
+											</picture>
 										</div>
 										<div class="right">
 											<dl>
@@ -171,20 +174,21 @@
 				<div class="guide-column-list">
 
 					<!-- bs-card-wrap -->
-					<div class="bs-card-wrap">
+					<div class="bs-card-wrap" id="main_capture2">
+						<input type="radio" name="rad001">
 						<div class="bs-card ">
 							<div class="bs-typeA">
 								<div class="top">
 									<div class="left">
 										<picture class="top-logo01">
-											<source srcset="/resources/images/bs_card/bs_a_top_logo01.svg">
-											<img src="/resources/images/bs_card/bs_a_top_logo01.svg" alt="우리 마음속 첫번째 금융">
+											<source srcset="/resources/images/bs_card/bs_a_top_logo01.png">
+											<img src="/resources/images/bs_card/bs_a_top_logo01.png" alt="우리 마음속 첫번째 금융">
 										</picture>
 									</div>
 									<div class="right">
 										<picture class="top-aff01">
-											<source srcset="/resources/images/bs_card/bs_a_aff.svg">
-											<img src="/resources/images/bs_card/bs_a_aff.svg" alt="우리금융그룹">
+											<source srcset="/resources/images/bs_card/bs_a_aff.png">
+											<img src="/resources/images/bs_card/bs_a_aff.png" alt="우리금융그룹">
 										</picture>
 									</div>
 								</div>
@@ -203,7 +207,10 @@
 													<img src="/resources/images/bs_card/bs_photo.png" alt="">
 												</picture>
 											</figure>
-											<object type="image/svg+xml" class="center-cfp" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
+											<picture class="center-cfp">
+												<source srcset="/resources/images/bs_card/bs_b_center_logo01.png">
+												<img src="/resources/images/bs_card/bs_b_center_logo01.png" alt="CFP">
+											</picture>
 										</div>
 										<div class="right">
 											<dl>
@@ -216,8 +223,8 @@
 									<div class="info">
 										<div class="left">
 											<picture class="info-logo01">
-												<source srcset="/resources/images/bs_card/bs_a_center_logo02.svg">
-												<img src="/resources/images/bs_card/bs_a_center_logo02.svg" alt="우리은행">
+												<source srcset="/resources/images/bs_card/bs_a_center_logo01.png">
+												<img src="/resources/images/bs_card/bs_a_center_logo01.png" alt="우리은행">
 											</picture>
 											<div class="location">04632 서울특별시 중구 소공로 51</div>
 											<div class="email">woori@woorifg.com</div>
@@ -265,17 +272,21 @@
 				<div class="guide-column-list">
 
 					<!-- bs-card-wrap -->
-					<div class="bs-card-wrap">
+					<div class="bs-card-wrap" id="main_capture3">
+						<input type="radio" name="rad001">
 						<div class="bs-card ">
 							<div class="bs-typeA">
 								<div class="top">
 									<div class="left">
-										<object type="image/svg+xml" class="top-logo02" data="/resources/images/bs_card/bs_a_top_logo02.svg"></object>
+										<picture class="top-logo02">
+											<source srcset="/resources/images/bs_card/bs_a_top_logo02.png">
+											<img src="/resources/images/bs_card/bs_a_top_logo02.png" alt="위비프렌즈">
+										</picture>
 									</div>
 									<div class="right">
 										<picture class="top-aff01">
-											<source srcset="/resources/images/bs_card/bs_a_aff.svg">
-											<img src="/resources/images/bs_card/bs_a_aff.svg" alt="우리금융그룹">
+											<source srcset="/resources/images/bs_card/bs_a_aff.png">
+											<img src="/resources/images/bs_card/bs_a_aff.png" alt="우리금융그룹">
 										</picture>
 									</div>
 								</div>
@@ -289,10 +300,13 @@
 									<div class="title">
 										<div class="left">
 											<picture class="center-logo01">
-												<source srcset="/resources/images/bs_card/bs_a_center_logo01.svg">
-												<img src="/resources/images/bs_card/bs_a_center_logo01.svg" alt="우리은행">
+												<source srcset="/resources/images/bs_card/bs_a_center_logo01.png">
+												<img src="/resources/images/bs_card/bs_a_center_logo01.png" alt="우리은행">
 											</picture>
-											<object type="image/svg+xml" class="center-cfp" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
+											<picture class="center-cfp">
+												<source srcset="/resources/images/bs_card/bs_b_center_logo01.png">
+												<img src="/resources/images/bs_card/bs_b_center_logo01.png" alt="CFP">
+											</picture>
 										</div>
 										<div class="right">
 											<dl>
@@ -349,27 +363,31 @@
 				<div class="guide-column-list">
 
 					<!-- bs-card-wrap -->
-					<div class="bs-card-wrap">
+					<div class="bs-card-wrap" id="main_capture4">
+						<input type="radio" name="rad001">
 						<div class="bs-card ">
 							<div class="bs-typeB">
 								<div class="top">
 									<div class="left">
 										<picture class="top-logo03">
-											<source srcset="/resources/images/bs_card/bs_b_top_logo01.svg">
-											<img src="/resources/images/bs_card/bs_b_top_logo01.svg" alt="TWO CHAIRS">
+											<source srcset="/resources/images/bs_card/bs_b_top_logo01.png">
+											<img src="/resources/images/bs_card/bs_b_top_logo01.png" alt="TWO CHAIRS">
 										</picture>
 									</div>
 									<div class="right">
 										<picture class="top-aff01">
-											<source srcset="/resources/images/bs_card/bs_a_aff.svg">
-											<img src="/resources/images/bs_card/bs_a_aff.svg" alt="우리금융그룹">
+											<source srcset="/resources/images/bs_card/bs_a_aff.png">
+											<img src="/resources/images/bs_card/bs_a_aff.png" alt="우리금융그룹">
 										</picture>
 									</div>
 								</div>
 								<div class="center">
 									<div class="title">
 										<div class="left">
-											<object type="image/svg+xml" class="center-cfp" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
+											<picture class="center-cfp">
+												<source srcset="/resources/images/bs_card/bs_b_center_logo01.png">
+												<img src="/resources/images/bs_card/bs_b_center_logo01.png" alt="CFP">
+											</picture>
 										</div>
 										<div class="right">
 											<dl>
@@ -383,8 +401,8 @@
 										<div class="left">
 											<div class="left">
 												<picture class="info-logo01">
-													<source srcset="/resources/images/bs_card/bs_a_center_logo02.svg">
-													<img src="/resources/images/bs_card/bs_a_center_logo02.svg" alt="우리은행">
+													<source srcset="/resources/images/bs_card/bs_a_center_logo01.png">
+													<img src="/resources/images/bs_card/bs_a_center_logo01.png" alt="우리은행">
 												</picture>
 												<div class="location">04632 서울특별시 중구 소공로 51</div>
 												<div class="email">woori@woorifg.com</div>
@@ -432,20 +450,21 @@
 				<div class="guide-column-list">
 
 					<!-- bs-card-wrap -->
-					<div class="bs-card-wrap" id="main_capture">
+					<div class="bs-card-wrap" id="main_capture5">
+						<input type="radio" name="rad001">
 						<div class="bs-card ">
 							<div class="bs-typeB">
 								<div class="top">
 									<div class="left">
 										<picture class="top-logo03">
-											<source srcset="/resources/images/bs_card/bs_b_top_logo01.svg">
-											<img src="/resources/images/bs_card/bs_b_top_logo01.svg" alt="TWO CHAIRS">
+											<source srcset="/resources/images/bs_card/bs_b_top_logo01.png">
+											<img src="/resources/images/bs_card/bs_b_top_logo01.png" alt="TWO CHAIRS">
 										</picture>
 									</div>
 									<div class="right">
 										<picture class="top-aff01">
-											<source srcset="/resources/images/bs_card/bs_a_aff.svg">
-											<img src="/resources/images/bs_card/bs_a_aff.svg" alt="우리금융그룹">
+											<source srcset="/resources/images/bs_card/bs_a_aff.png">
+											<img src="/resources/images/bs_card/bs_a_aff.png" alt="우리금융그룹">
 										</picture>
 									</div>
 								</div>
@@ -458,7 +477,10 @@
 													<img src="/resources/images/bs_card/bs_photo.png" alt="">
 												</picture>
 											</figure>
-											<object type="image/svg+xml" class="center-cfp" data="/resources/images/bs_card/bs_b_center_logo01.svg"></object>
+											<picture class="center-cfp">
+												<source srcset="/resources/images/bs_card/bs_b_center_logo01.png">
+												<img src="/resources/images/bs_card/bs_b_center_logo01.png" alt="CFP">
+											</picture>
 										</div>
 										<div class="right">
 											<dl>
@@ -472,8 +494,8 @@
 										<div class="left">
 											<div class="left">
 												<picture class="info-logo01">
-													<source srcset="/resources/images/bs_card/bs_a_center_logo02.svg">
-													<img src="/resources/images/bs_card/bs_a_center_logo02.svg" alt="우리은행">
+													<source srcset="/resources/images/bs_card/bs_a_center_logo01.png">
+													<img src="/resources/images/bs_card/bs_a_center_logo01.png" alt="우리은행">
 												</picture>
 												<div class="location">04632 서울특별시 중구 소공로 51</div>
 												<div class="email">woori@woorifg.com</div>
@@ -517,20 +539,65 @@
 			</div>
 			<hr>
 		</div>
-		<button type="button" id="pick">pickpickpickpickpickpick</button>
+		<button type="button" id="pick1">pickpickpickpickpickpick</button>
+		<button type="button" id="pick2">pickpickpickpickpickpick</button>
+		<button type="button" id="pick3">pickpickpickpickpickpick</button>
+		<button type="button" id="pick4">pickpickpickpickpickpick</button>
+		<button type="button" id="pick5">pickpickpickpickpickpick</button>
 	</div>
 
 
 
 	<script>
 		$(function() {
-			// bsCardResize.init();
-
-			$("#pick").on("click", function() {
-				// 캡처 라이브러리를 통해 canvas 오브젝트 받고 이미지 파일로 리턴함
-				html2canvas(document.querySelector("#main_capture"), ).then(canvas => {
+			$("#pick1").on("click", function() {
+				document.querySelector("#main_capture1").classList.add('capturing');
+				html2canvas(document.querySelector("#main_capture1"), {
+					scale: 5,
+				}).then(canvas => {
 					saveAs(canvas.toDataURL('image/jpg'), "lime.jpg"); //다운로드 되는 이미지 파일 이름 지정
 				});
+				document.querySelector("#main_capture1").classList.remove('capturing')
+			});
+
+			$("#pick2").on("click", function() {
+				document.querySelector("#main_capture2").classList.add('capturing');
+				html2canvas(document.querySelector("#main_capture2"), {
+					scale: 5,
+				}).then(canvas => {
+					saveAs(canvas.toDataURL('image/jpg'), "lime.jpg"); //다운로드 되는 이미지 파일 이름 지정
+				});
+				document.querySelector("#main_capture2").classList.remove('capturing')
+			});
+
+			$("#pick3").on("click", function() {
+				document.querySelector("#main_capture3").classList.add('capturing');
+				html2canvas(document.querySelector("#main_capture3"), {
+					scale: 5,
+				}).then(canvas => {
+					saveAs(canvas.toDataURL('image/jpg'), "lime.jpg"); //다운로드 되는 이미지 파일 이름 지정
+				});
+				document.querySelector("#main_capture3").classList.remove('capturing')
+			});
+
+			$("#pick4").on("click", function() {
+				document.querySelector("#main_capture4").classList.add('capturing');
+				html2canvas(document.querySelector("#main_capture4"), {
+					scale: 5,
+				}).then(canvas => {
+					saveAs(canvas.toDataURL('image/jpg'), "lime.jpg"); //다운로드 되는 이미지 파일 이름 지정
+				});
+				document.querySelector("#main_capture4").classList.remove('capturing')
+			});
+
+			$("#pick5").on("click", function() {
+				document.querySelector("#main_capture5").classList.add('capturing');
+				html2canvas(document.querySelector("#main_capture5"), {
+					scale: 5,
+				}).then(canvas => {
+					saveAs(canvas.toDataURL('image/jpg'), "lime.jpg"); //다운로드 되는 이미지 파일 이름 지정
+				});
+				document.querySelector("#main_capture5").classList.remove('capturing')
 			});
 
 			function saveAs(uri, filename) {
