@@ -414,7 +414,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .datepicker-wrap .ui-datepicker-calendar thead th {color:var(--gray-400);}
 .datepicker-wrap .ui-datepicker-calendar tbody td {color:var(--typography-black);}
 .datepicker-wrap .ui-datepicker-calendar thead th,
-.datepicker-wrap .ui-datepicker-calendar tbody td {font-size:16px;font-weight:500;line-height:40px;border:4px solid transparent;text-align:center;padding:0;}
+.datepicker-wrap .ui-datepicker-calendar tbody td {font-size:16px;font-weight:500;line-height:40px;border-top:4px solid transparent;border-bottom:4px solid transparent;text-align:center;padding:0;}
 .datepicker-wrap .ui-widget-content .schedule_01 > *,
 .datepicker-wrap .ui-widget-content .schedule_02 > *,
 .datepicker-wrap .ui-widget-content .schedule_03 > * {background-color:var(--surface-surface50);}
