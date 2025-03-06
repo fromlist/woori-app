@@ -388,7 +388,9 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .financial-player-top {display:flex;align-items:center;justify-content:space-between;}
 
 .financial-player-title {display:flex;gap:8px;align-items:center;justify-content:center;}
+.financial-player-title strong {font-size:18px;font-weight:700;color:var(--typography-white);line-height:1;}
 .financial-player-controller {display:flex;gap:8px;align-items:center;justify-content:center;}
+
 .financial-player-controller button {display:flex;flex:0 0 46px;width:46px;height:46px;align-items:center;justify-content:center;}
 .financial-player-bottom {padding:6px 0;}
 .financial-player-bottom p {font-size:15px;font-weight:400;color:var(--white-72);line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}

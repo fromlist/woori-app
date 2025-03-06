@@ -417,6 +417,7 @@ i.ico-gototop {-webkit-mask-image:url(/resources/images/ico/ico_gototop.svg);mas
 i.ico-calendar {-webkit-mask-image:url(/resources/images/ico/ico_calendar.svg);mask-image:url(/resources/images/ico/ico_calendar.svg);}
 i.ico-search {-webkit-mask-image:url(/resources/images/ico/ico_search.svg);mask-image:url(/resources/images/ico/ico_search.svg);}
 i.ico-chevron-large {-webkit-mask-image:url(/resources/images/ico/ico_chevron_large.svg);mask-image:url(/resources/images/ico/ico_chevron_large.svg);}
+i.ico-speaker {-webkit-mask-image:url(/resources/images/ico/ico_speaker.svg);mask-image:url(/resources/images/ico/ico_speaker.svg);}
 
 [class^="headline"].inner-ico {display:flex;gap:6px;align-items:center;}
 [class^="headline"].inner-ico i {flex:0 0 24px;width:24px;height:24px;}

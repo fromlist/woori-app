@@ -1009,8 +1009,8 @@ i.live-off {display:inline-block;width:16px;height:16px;background:url(/resource
 .news-article {}
 .news-article-title {display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:24px;}
 .news-article-title .media {font-size:18px;font-weight:400;color:var(--typography-gray);}
-.news-article .headline-medium {text-align:center;margin-bottom:24px;}
-.news-article .date {font-size:14px;font-weight:400;color:var(--typography-caption);line-height:1;margin-bottom:32px;text-align:center;}
+.news-article .headline-medium {text-align:center;margin-bottom: 8px;}
+.news-article .date {font-size:14px;font-weight:400;color:var(--typography-caption);margin-bottom: 24px;text-align:center;}
 .news-article .related-products {}
 .news-article .related-products .tags-wrap {margin-bottom:16px;display:flex;justify-content:center;}
 .news-article .related-products ul {display:flex;flex-wrap:wrap;}
