@@ -581,3 +581,14 @@ var gnb = {
 
 }
 
+function scrollReset() {
+    let position = window.pageYOffset;
+    window.scrollTo({
+        top: position + 1,
+    });
+    setTimeout(function () {
+        window.scroll({
+            top: position - 1,
+        });
+    }, 1)
+}
