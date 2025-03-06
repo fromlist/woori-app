@@ -516,7 +516,7 @@ button.select span {white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 button.select:after {content:'';flex:0 0 24px;width:24px;height:24px;background:url(/resources/images/form/select-chevron-down.svg) center center / contain no-repeat;}
 
 button.select.is-modal-open {outline:2px solid var(--status-focused);outline-offset:-1px;}
-button.select.is-modal-open:after {background:url(/resources/images/form/select-chevron-up.svg) center center / contain no-repeat;}
+/* button.select.is-modal-open:after {background:url(/resources/images/form/select-chevron-up.svg) center center / contain no-repeat;} */
 
 .input-divide {display:flex;align-items:center;gap:8px;}
 .input-divide .bul {font-size:20px;font-weight:500;color:var(--icon-gray_2);}
