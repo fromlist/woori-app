@@ -255,11 +255,12 @@ const stickyContent = {
                 if (stickyEl != null) {
                     stickyEl.style.top = sentinalEl.offsetTop + 'px';
                 }
-            }
-            else {
+            } else {
                 document.body.setAttribute('data-scroll-direction', 'DOWN');
                 if (stickyEl != null) {
-                    stickyEl.removeAttribute('style');
+                    if (!stickyEl.classList.contains('sticky-always')) {
+                        stickyEl.removeAttribute('style');
+                    }
                 }
             }
             scrollPos = (document.body.getBoundingClientRect()).top;

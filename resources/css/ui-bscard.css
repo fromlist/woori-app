@@ -43,12 +43,12 @@
 .bs-card figure picture {display:flex;width:12.7778vw;height:16.3889vw;align-items:center;justify-content:center;}
 .bs-card figure picture img {object-fit:contain;width:100%;height:100%;}
 
-.bs-card .top-logo01 {display:flex;width:18.8889vw;}
-.bs-card .top-logo02 {display:flex;width:37.7778vw;margin-bottom:-2.7778vw;}
-.bs-card .top-logo03 {display:flex;width:31.1111vw;}
-.bs-card .top-aff01 {display:flex;width:19.1667vw;}
-.bs-card .center-logo01 {display:flex;width:21.3889vw;}
-.bs-card .center-cfp {display:flex;width:8.8889vw;}
+.bs-card .top-logo01 {display:flex;width:18.8889vw;height:5.5556vw;}
+.bs-card .top-logo02 {display:flex;width:37.7778vw;height:8.6111vw;margin-bottom:-2.7778vw;}
+.bs-card .top-logo03 {display:flex;width:31.1111vw;height:4.1667vw;}
+.bs-card .top-aff01 {display:flex;width:19.1667vw;height:3.3333vw;}
+.bs-card .center-logo01 {display:flex;width:21.3889vw;height:5.0000vw;}
+.bs-card .center-cfp {display:flex;width:8.8889vw;height:5.8333vw;}
 .bs-card .info-logo01 {display:flex;width:18.8889vw;}
 
 .bs-card .top-logo01 img,
@@ -57,7 +57,7 @@
 .bs-card .top-aff01 img,
 .bs-card .center-logo01 img,
 .bs-card .center-cfp img,
-.bs-card .info-logo01 img {width:100%;}
+.bs-card .info-logo01 img {width:100%;object-fit:contain;}
 .bs-card-wrap.capturing .bs-card {box-shadow:none!important;transition:none!important;overflow:hidden!important;}
 
 /* http://publishing.kr/vw/ */
