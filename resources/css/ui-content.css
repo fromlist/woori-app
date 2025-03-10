@@ -251,11 +251,11 @@
 .keyword-list {display:flex;flex-wrap:wrap;padding:24px 24px 60px;background-color:var(--background-bg_lightGray);gap:8px 4px;}
 .keyword-list button {display:flex;align-items:center;justify-content:center;border-radius:24px;border:1px solid var(--border-8);background-color:var(--surface-surface);padding:10px 8px 10px 16px;gap:6px;font-size:18px;font-weight:400;color:var(--typography-gray);line-height:1;}
 .keyword-list button:after {content:'';flex:0 0 12px;width:12px;height:12px;background:url(/resources/images/ico/ico_link_12_gr.svg) center center / contain no-repeat;}
-.keyword-list button .rise {display:flex;align-items:center;gap:2px;color:var(--red-600)}
+.keyword-list button .rise {display:flex;align-items:center;gap:2px;color:var(--red-600);white-space:nowrap;}
 .keyword-list button .rise:before {content:'+';}
-.keyword-list button .fall {display:flex;align-items:center;gap:2px;color:var(--deepblue-600)}
+.keyword-list button .fall {display:flex;align-items:center;gap:2px;color:var(--deepblue-600);white-space:nowrap;}
 .keyword-list button .fall:before {content:'-';}
-.keyword-list button .steady {display:flex;align-items:center;gap:2px;color:var(--gray-500);}
+.keyword-list button .steady {display:flex;align-items:center;gap:2px;color:var(--gray-500);white-space:nowrap;}
 .keyword-list button .steady:before {content:'';}
 .keyword-list button .flag {flex:0 0 18px;width:18px;height:18px;}
 
@@ -960,7 +960,7 @@ button.flag-fluid span {margin-top:0;}
 .stock-index-list.content-fluid a {padding:24px;box-shadow:none;border-radius:0;}
 .stock-index-list.content-fluid dl {}
 .stock-index-list.content-fluid dl dt {font-size:18px;color:var(--typography-body);}
-.stock-index-list.content-fluid dl dd {display:flex;align-items:center;gap:8px;}
+.stock-index-list.content-fluid dl dd {display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
 
 
 /* stock-detail */
@@ -1034,7 +1034,7 @@ i.live-off {display:inline-block;width:16px;height:16px;background:url(/resource
 
 .eco-list .eco-title .title-medium {padding:0;}
 .eco-list > *:not(:last-child) {margin-bottom:8px;}
-.eco-list .eco-content dl {display:flex;align-items:center;gap:16px;}
+.eco-list .eco-content dl {display:flex;align-items:center;gap:8px 16px;flex-wrap:wrap;}
 .eco-list .eco-content dl:not(:last-child) {margin-bottom:2px;}
 .eco-list .eco-content dl .list {display:flex;gap:6px;}
 .eco-list .eco-content dt {font-size:14px;font-weight:400;color:var(--typography-caption);line-height:1.5;}
