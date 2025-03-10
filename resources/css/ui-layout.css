@@ -537,8 +537,9 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 
 /* sticky-content */
 .sticky-content {padding:8px 0;}
-.sticky-content {position:static;background-color:var(--white-100);z-index:var(--sticky-zIndex);top:0;transition:top 0.3s ease;}
-[data-scroll-direction="UP"] main .sticky-content:not(.sticky-always) {position:sticky;}
+.sticky-content {position:sticky;opacity:1;background-color:var(--white-100);z-index:var(--sticky-zIndex);top:0;transition:top 0.3s ease, opacity 0.3s ease,transform 0.3s ease;}
+[data-scroll-direction="DOWN"] main .sticky-content:not(.sticky-always) {transform:translateY(-100%);opacity:0;}
+[data-scroll-direction="UP"] main .sticky-content:not(.sticky-always) {}
 main .sticky-content.sticky-always {position:sticky}
 
 /* snackbar-content */

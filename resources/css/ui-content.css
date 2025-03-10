@@ -252,11 +252,11 @@
 .keyword-list button {display:flex;align-items:center;justify-content:center;border-radius:24px;border:1px solid var(--border-8);background-color:var(--surface-surface);padding:10px 8px 10px 16px;gap:6px;font-size:18px;font-weight:400;color:var(--typography-gray);line-height:1;}
 .keyword-list button:after {content:'';flex:0 0 12px;width:12px;height:12px;background:url(/resources/images/ico/ico_link_12_gr.svg) center center / contain no-repeat;}
 .keyword-list button .rise {display:flex;align-items:center;gap:2px;color:var(--red-600)}
-.keyword-list button .rise:before {content:'';flex:0 0 12px;width:12px;height:12px;background:url(/resources/images/ico/ico_triangle_up.svg) center center / contain no-repeat;}
+.keyword-list button .rise:before {content:'+';}
 .keyword-list button .fall {display:flex;align-items:center;gap:2px;color:var(--deepblue-600)}
-.keyword-list button .fall:before {content:'';flex:0 0 12px;width:12px;height:12px;background:url(/resources/images/ico/ico_triangle_down.svg) center center / contain no-repeat;}
+.keyword-list button .fall:before {content:'-';}
 .keyword-list button .steady {display:flex;align-items:center;gap:2px;color:var(--gray-500);}
-.keyword-list button .steady:before {content:'';flex:0 0 12px;width:12px;height:12px;background:url(/resources/images/ico/ico_steady.svg) center center / contain no-repeat;}
+.keyword-list button .steady:before {content:'';}
 .keyword-list button .flag {flex:0 0 18px;width:18px;height:18px;}
 
 .keyword-list button .flag-kr {background:url(/resources/images/flag/flag_kr.svg) center center / contain no-repeat;}
@@ -361,7 +361,7 @@
 .fund-detail-rate .status-list dd.fall {display:flex;align-items:center;gap:2px;color:var(--deepblue-600)}
 .fund-detail-rate .status-list dd.fall:before {content:'';flex:0 0 14px;width:14px;height:14px;background:url(/resources/images/ico/ico_triangle_down.svg) center center / contain no-repeat;}
 .fund-detail-rate .status-list dd.steady {display:flex;align-items:center;gap:2px;color:var(--gray-500);}
-.fund-detail-rate .status-list dd.steady:before {content:'';flex:0 0 14px;width:14px;height:14px;background:url(/resources/images/ico/ico_steady.svg) center center / contain no-repeat;}
+.fund-detail-rate .status-list dd.steady:before {content:'';}
 
 .fund-detail-info {padding:40px 0;background-color:var(--white-100);}
 .fund-detail-info h4.headline-small {text-align:center;margin-bottom:24px;}
