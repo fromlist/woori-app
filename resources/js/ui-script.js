@@ -282,10 +282,15 @@ const stickyContent = {
         function snackBarFunc() {
             const snackbarEl = document.querySelector('.snackbar-content')
             const snackbarWrapper = document.querySelector('.content');
+            const snackbarWrapperPadding = document.querySelector('.content-padding');
 
             if (snackbarEl != null) {
                 if (snackbarWrapper != null) {
-                    snackbarWrapper.style.paddingBottom = snackbarEl.clientHeight + 'px';
+                    if (snackbarWrapperPadding != null) {
+                        snackbarWrapperPadding.style.paddingBottom = snackbarEl.clientHeight + 'px';
+                    } else {
+                        snackbarWrapper.style.paddingBottom = snackbarEl.clientHeight + 'px';
+                    }
                 }
 
                 if (!snackbarEl.classList.contains('snackbar-disabled')) {
@@ -300,19 +305,22 @@ const stickyContent = {
 
 
                 const mainContainer = document.querySelector('main');
-                const bottomBtn = mainContainer.querySelectorAll('.bottom-btn')
+                const bottomBtn = mainContainer.querySelectorAll('.bottom-btn');
 
                 if (bottomBtn != null) {
                     bottomBtn.forEach(function (element) {
-                        const visibility = window.getComputedStyle(element).display;
-                        if (visibility === 'block') {
-                            snackbarEl.style.bottom = element.clientHeight + 'px';
-                        }
+                        // const visibility = window.getComputedStyle(element).display;
+                        snackbarEl.style.bottom = element.clientHeight + 'px';
                     })
                 }
             } else {
                 if (snackbarWrapper != null) {
-                    snackbarWrapper.style.removeProperty('padding-bottom');
+                    if (snackbarWrapperPadding != null) {
+                        snackbarWrapperPadding.style.removeProperty('padding-bottom');
+                    } else {
+                        snackbarWrapper.style.removeProperty('padding-bottom');
+                    }
+
                 }
             }
         }

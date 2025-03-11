@@ -95,6 +95,12 @@
 						}
 					</style>
 
+					<!-- snackbar-content -->
+					<div class="snackbar-content is-sticky">
+						<button type="button" class="fab fab-secondary fab-circle" aria-label="최상단으로 이동"><i class="ico-gototop"></i></button>
+					</div>
+					<!-- //snackbar-content -->
+
 					<p class="description info body-small fc-typography-caption mt16">관심펀드는 최대 10개까지 등록할 수 있습니다. <br> 상위 3개의 펀드는 메인&gt;펀드 탭에서 수익율 비교 차트로 조회할 수 있습니다.</p>
 
 					<div class="group content-fluid">
@@ -208,8 +214,10 @@
 
 					</div>
 
+					<div class="content-padding"></div>
+
 					<!-- bottom-btn -->
-					<div class="bottom-btn">
+					<div class="bottom-btn" style="display:none;">
 						<div class="bottom-btn-title">
 							<strong class="title-medium">2개의 펀드를 담아 비교하세요.</strong>
 						</div>
@@ -239,7 +247,12 @@
 	</main>
 	<!-- //main -->
 
-
+	<div id="layoutBtnDiv" class="bottom-btn" style="display : none">
+		<div class="btn-wrap">
+			<button id="layoutBtn1" type="button" class="btn-large btn-outlined">ë±ë¡</button>
+			<button id="layoutBtn2" type="button" class="btn-large btn-primary"><i class="ico-check"></i><span>ê³µì&nbsp;</span></button>
+		</div>
+	</div>
 
 	<!-- micromodal -->
 	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard" aria-hidden="true">

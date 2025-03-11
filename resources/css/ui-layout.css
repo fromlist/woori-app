@@ -145,6 +145,7 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .content .bottom-btn {width:auto;margin:auto -16px -24px;padding-top:24px;}
 .content .bottom-btn .btn-wrap {padding:12px 16px;}
 .content .bottom-btn .btn-wrap.btn-nowrap {padding:8px 16px;}
+.content .content-padding ~ .bottom-btn {padding-top:0;}
 
 .financial-player {background-color:rgba(31, 40, 54, 0.95);border-radius:16px;padding:8px 8px 8px 16px;margin:0px 8px 8px;}
 .financial-player-top {display:flex;align-items:center;justify-content:space-between;}
