@@ -319,7 +319,6 @@ main .sticky-content.sticky-always {position:sticky}
     -webkit-mask-image:url(/resources/images/snackbar/ico_snackbar_close.svg);
     mask-image:url(/resources/images/snackbar/ico_snackbar_close.svg);
 }
-.snackbar-content.include-bottom-btn.is-sticky {bottom:76px;}
 
 /* box */
 .box {padding:60px 24px;}

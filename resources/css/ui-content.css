@@ -371,7 +371,7 @@
 .fund-detail-info .top10-list dl .list {display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 0;}
 .fund-detail-info .top10-list dl .list:not(:last-child) {border-bottom:1px solid var(--border-4);}
 .fund-detail-info .top10-list dl dt {font-size:18px;font-weight:400;color:var(--typography-body);}
-.fund-detail-info .top10-list dl dd {font-size:18px;font-weight:400;color:var(--status-info);}
+.fund-detail-info .top10-list dl dd {font-size:18px;font-weight:400;color:var(--status-info);white-space:nowrap;}
 
 .fund-detail-info .fund-rate h5 {display:flex;align-items:center;justify-content:center;gap:10px;}
 .fund-detail-info .fund-rate h5 span {font-size:18px;font-weight:500;color:var(--typography-title);}
