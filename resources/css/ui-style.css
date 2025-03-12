@@ -539,9 +539,7 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
 
 /* overflow-list */
 .overflow-list {display:flex!important;flex-wrap:nowrap!important;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;gap:6px;}
-.overflow-list::-webkit-scrollbar {
-	display:none;
-}
+.overflow-list::-webkit-scrollbar {display:none;}
 
 /* description */
 .description {position:relative;display:block;}

@@ -550,9 +550,9 @@
 					if (!$datepicker.hasClass('datepicker-collapsed')) {
 						$("#datepicker_schedule").datepicker("setDate", currentDate);
 					}
+					$selectWeek.siblings('tr').hide();
 					$datepicker.addClass('datepicker-collapsed');
 					$selectWeek.addClass('thisWeek');
-					$selectWeek.siblings('tr').hide();
 				}, 0)
 			},
 

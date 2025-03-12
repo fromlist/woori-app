@@ -209,7 +209,13 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .datepicker-wrap tbody .ui-datepicker-week-end:first-child {color:var(--red-400);}
 .datepicker-wrap tbody .ui-datepicker-week-end:last-child {color:var(--blue-400);}
 .schedule-wrap {position:absolute;left:0;bottom:1px;width:100%;height:6px;display:flex;align-items:center;justify-content:center;gap:2px;}
-.schedule-wrap .sc-label {flex:0 0 6px;width:6px;height:6px;border-radius:50%;}
+.schedule-wrap .sc-label {flex:0 0 6px;width:6px;height:6px;border-radius:50%;animation:scSlideUp 0.3s ease forwards;opacity:0;}
+.thisWeek .schedule-wrap .sc-label {opacity:1;}
+.schedule-wrap .sc-label:nth-child(1) {animation-delay:0.2s;}
+.schedule-wrap .sc-label:nth-child(2) {animation-delay:0.4s;}
+.schedule-wrap .sc-label:nth-child(3) {animation-delay:0.6s;}
+.schedule-wrap .sc-label:nth-child(4) {animation-delay:0.8s;}
+.schedule-wrap .sc-label:nth-child(5) {animation-delay:0.10s;}
 .sc-label.label01 {background-color:var(--yellow-700);}
 .sc-label.label02 {background-color:var(--cyan-500);}
 .sc-label.label03 {background-color:var(--purple-500);}
@@ -219,6 +225,11 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .sc-label.label07 {background-color:var(--yellow-700);}
 .sc-label.label08 {background-color:var(--deepblue-600);}
 
+@keyframes scSlideUp {
+    0% {transform:translateY(0);}
+    50% {transform:translateY(35%);}
+    100% {transform:translateY(0);}
+}
 /* datepicker collapsed */
 .datepicker-weekend.datepicker-collapsed {position:sticky;top:var(--header-height);background-color:var(--surface-surface);z-index:var(--sticky-zIndex);}
 .datepicker-weekend.datepicker-collapsed .inp-group {display:none;}
