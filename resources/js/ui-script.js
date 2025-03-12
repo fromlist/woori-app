@@ -590,6 +590,14 @@ var gnb = {
 
 }
 
+$(document).on('click', '#gototop', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+    console.log(1)
+})
+
 function scrollReset() {
     let position = window.pageYOffset;
     window.scrollTo({
