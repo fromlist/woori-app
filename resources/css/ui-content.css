@@ -449,9 +449,9 @@
 .accordion-select-list-nodepth .dep02 ul button {padding:21px 24px;}
 .accordion-select-list-nodepth .dep02 ul button:before {display:none;}
 
-.accordion-select .dep02 button:not(:only-child):before {background:url(/resources/images/arrow/ico_acc_up.svg) center center / contain no-repeat;}
+.accordion-select .dep02 button:not(:only-child):before {background:url(/resources/images/arrow/ico_chevron_down.svg) center center / contain no-repeat;}
 
-.accordion-select .dep02 .is-acc > button:not(:only-child):before {background:url(/resources/images/arrow/ico_chevron_down.svg) center center / contain no-repeat;}
+.accordion-select .dep02 .is-acc > button:not(:only-child):before {background:url(/resources/images/arrow/ico_acc_up.svg) center center / contain no-repeat;}
 .accordion-select .dep02 ul ul {padding-left:16px;}
 .accordion-select .dep02 li:not(.is-acc) ul {display:none;}
 
@@ -463,12 +463,37 @@
 .customer-info-title .tag-wrap {display:flex;align-items:center;justify-content:center;margin-top:8px;}
 
 .grade-wrap {display:flex;gap:30px;}
-.grade-wrap .grade-circle {flex:0 0 150px;width:150px;height:150px;border:8px solid var(--blue-500);border-radius:50%;display:flex;align-items:center;justify-content:center;}
-.grade-wrap .grade-circle .BBB {font-size:34px;font-weight:700;color:var(--brandPrimary-blue600);}
+.grade-circle {flex:0 0 150px;width:150px;height:150px;border:8px solid var(--blue-500);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.grade-circle .rate {font-size:34px;font-weight:700;}
 .grade-wrap dl {flex:auto;}
 .grade-wrap dl .list {padding:8px;}
 .grade-wrap dl .list dt {font-size:15px;font-weight:700;line-height:1;}
 .grade-wrap dl .list dd {font-size:15px;font-weight:400;margin-top:8px;}
+
+.rate-AAA,
+.rate-AA,
+.rate-A {border-color:#278AF0}
+.rate-AAA .rate,
+.rate-AA .rate,
+.rate-A .rate {color:#278AF0;}
+
+.rate-BBB {border-color:#27D8F0}
+.rate-BBB .rate {color:#27D8F0;}
+.rate-BB {border-color:#98F027}
+.rate-BB .rate {color:#98F027;}
+.rate-B {border-color:#F0DC27}
+.rate-B .rate {color:#F0DC27;}
+
+.rate-CCC,
+.rate-CC,
+.rate-C,
+.rate-D {border-color:#F04B27}
+.rate-CCC .rate,
+.rate-CC .rate,
+.rate-C .rate
+.rate-D .rate {color:#F04B27;}
+
+
 
 /* loan-calculator */
 .loan-calculator {padding:40px 24px 32px;}

@@ -308,9 +308,17 @@ const stickyContent = {
                 const bottomBtn = mainContainer.querySelectorAll('.bottom-btn');
 
                 if (bottomBtn != null) {
+                    let bottomHeight = null;
                     bottomBtn.forEach(function (element) {
-                        // const visibility = window.getComputedStyle(element).display;
-                        snackbarEl.style.bottom = element.clientHeight + 'px';
+                        const visibility = window.getComputedStyle(element).display;
+                        bottomHeight = bottomHeight + element.clientHeight * 1;
+                        console.log(bottomHeight)
+                        // if (visibility == 'block') {
+                        snackbarEl.style.bottom = bottomHeight + 'px';
+                        // } else {
+                        // console.log(element.clientHeight)
+                        // snackbarEl.style.bottom = element.clientHeight + 'px';
+                        // }
                     })
                 }
             } else {
