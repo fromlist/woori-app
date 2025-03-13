@@ -51,8 +51,9 @@
 	<link rel="stylesheet" href="/resources/css/ui-content.css">
 	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
 	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
-	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
 
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
 	<script src="/resources/js/ui-script.js"></script>
 	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
@@ -95,6 +96,12 @@
 							background-color: var(--background-bg_lightGray);
 						}
 					</style>
+
+					<!-- snackbar-content -->
+					<div class="snackbar-content is-sticky">
+						<button type="button" class="fab fab-secondary fab-circle" aria-label="최상단으로 이동" id="gototop"><i class="ico-gototop"></i></button>
+					</div>
+					<!-- //snackbar-content -->
 
 					<div class="fund-result">
 
@@ -211,6 +218,8 @@
 						<!-- //fund-card-list -->
 
 					</div>
+
+					<div class="content-padding"></div>
 
 					<!-- bottom-btn -->
 					<div class="bottom-btn">

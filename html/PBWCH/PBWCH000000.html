@@ -51,8 +51,9 @@
 	<link rel="stylesheet" href="/resources/css/ui-content.css">
 	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
 	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
-	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
 
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
 	<script src="/resources/js/ui-script.js"></script>
 	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
@@ -103,7 +104,7 @@
 							<div class="form">
 								<div class="label"></div>
 								<div class="input-wrap input-btn">
-									<input type="text" placeholder="펀드/지수명으로 검색해 보세요." aria-label="검색">
+									<input type="text" placeholder="펀드 또는 지수 검색" aria-label="검색">
 									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 									<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
 								</div>
@@ -183,7 +184,7 @@
 								<caption>기간별 기준가/수익률 3개월</caption>
 								<colgroup>
 									<col style="width:30%">
-									<col style="width:30%">
+									<col style="width:36%">
 									<col style="">
 								</colgroup>
 								<thead>
@@ -198,63 +199,63 @@
 										<td>2024-11-15</td>
 										<td>text</td>
 										<td>
-											<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
+											<div class="fc-red-600" aria-label="등락폭(상승)">888.88%</div>
 										</td>
 									</tr>
 									<tr>
 										<td>2024-11-15</td>
 										<td>text</td>
 										<td>
-											<div class="stock fall" aria-label="등락폭(하락)">888.88</div>
+											<div class="fc-deepblue-600" aria-label="등락폭(하락)">888.88%</div>
 										</td>
 									</tr>
 									<tr>
 										<td>2024-11-15</td>
 										<td>text</td>
 										<td>
-											<div class="stock steady" aria-label="등락폭(보합)">00.00</div>
+											<div class="fc-gray-500" aria-label="등락폭(보합)">00.00%</div>
 										</td>
 									</tr>
 									<tr>
 										<td>2024-11-15</td>
 										<td>text</td>
 										<td>
-											<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
+											<div class="fc-red-600" aria-label="등락폭(상승)">888.88%</div>
 										</td>
 									</tr>
 									<tr>
 										<td>2024-11-15</td>
 										<td>text</td>
 										<td>
-											<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
+											<div class="fc-red-600" aria-label="등락폭(상승)">888.88%</div>
 										</td>
 									</tr>
 									<tr>
 										<td>2024-11-15</td>
 										<td>text</td>
 										<td>
-											<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
+											<div class="fc-red-600" aria-label="등락폭(상승)">888.88%</div>
 										</td>
 									</tr>
 									<tr>
 										<td>2024-11-15</td>
 										<td>text</td>
 										<td>
-											<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
+											<div class="fc-red-600" aria-label="등락폭(상승)">888.88%</div>
 										</td>
 									</tr>
 									<tr>
 										<td>2024-11-15</td>
 										<td>text</td>
 										<td>
-											<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
+											<div class="fc-red-600" aria-label="등락폭(상승)">888.88%</div>
 										</td>
 									</tr>
 									<tr>
 										<td>2024-11-15</td>
 										<td>text</td>
 										<td>
-											<div class="stock rise" aria-label="등락폭(상승)">888.88</div>
+											<div class="fc-red-600" aria-label="등락폭(상승)">888.88%</div>
 										</td>
 									</tr>
 								</tbody>
@@ -294,7 +295,7 @@
 									<div class="label"></div>
 									<div class="search-history-back"><button type="button" aria-label="검색메뉴 닫기"></button></div>
 									<div class="input-wrap input-btn">
-										<input type="text" placeholder="펀드/지수명으로 검색해 보세요." aria-label="검색">
+										<input type="text" placeholder="펀드 또는 지수 검색" aria-label="검색">
 										<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 										<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
 									</div>
@@ -309,7 +310,7 @@
 						<!-- group-form -->
 						<div class="group-form py16">
 							<div class="group-title">
-								<strong class="title-medium fw-500">최근 본 펀드/지수 담기</strong>
+								<strong class="title-medium fw-500">최근 본 펀드/지수</strong>
 							</div>
 							<div class="group-content content-fluid px0 mt14">
 								<ul class="d-flex overflow-list px16">

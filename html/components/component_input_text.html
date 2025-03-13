@@ -51,7 +51,9 @@
 	<link rel="stylesheet" href="/resources/css/ui-content.css">
 	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
 	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
 	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
 	<link rel="stylesheet" href="/resources/css/ui-guide.css">
 
 	<script src="/resources/js/ui-script.js"></script>
@@ -230,7 +232,7 @@
 						<div class="form form-invalid">
 							<div class="label">예치금액 <span class="right">5억5000만원</span></div>
 							<div class="input-wrap input-placeholder">
-								<input type="number" class="ar" placeholder="금액입력" aria-label="예치금액">
+								<input type="number" class="ar" placeholder="금액입력" aria-label="예치금액" pattern="[0-9]*" inputmode="decimal">
 								<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 								<div class="visible-placeholder">원</div>
 							</div>

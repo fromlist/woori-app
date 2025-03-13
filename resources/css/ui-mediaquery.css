@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* 320 해상도 대응 */
+@media (max-width:320px) {
+    .main-nav ul {gap:4px;}
+    .main-figure-list ul {gap:8px;}
+    .main-figure-list figure picture {flex:0 0 80px;width:80px;height:80px;}
+    .main-figure-list figure figcaption {font-size:16px;}
+
+    .label-list {gap:8px;}
+    .label-list i {font-size:13px;}
+
+    .figure-list figure picture {flex:0 0 68px;width:68px;height:68px;}
+    .figure-list figure figcaption {font-size:13px;}
+
+    .shortcut-button-wrap .btn-xsmall {padding:6px;}
+}

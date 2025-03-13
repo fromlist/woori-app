@@ -40,8 +40,8 @@
 .bs-card .bottom ul {display:flex;gap:0.5556vw 1.6667vw;flex-wrap:wrap;}
 .bs-card .bottom ul li {font-size:2.2222vw;font-weight:400;color:var(--typography-gray);line-height:1.3;}
 
-.bs-card figure picture {display:flex;width:12.7778vw;height:16.3889vw;align-items:center;justify-content:center;}
-.bs-card figure picture img {object-fit:contain;width:100%;height:100%;}
+.bs-card figure picture {display:flex;width:12.7778vw;height:16.3889vw;align-items:center;justify-content:center;overflow:hidden;}
+/* .bs-card figure picture img {object-fit:contain;width:100%;height:100%;} */
 
 .bs-card .top-logo01 {display:flex;width:18.8889vw;height:5.5556vw;}
 .bs-card .top-logo02 {display:flex;width:37.7778vw;height:8.6111vw;margin-bottom:-2.7778vw;}

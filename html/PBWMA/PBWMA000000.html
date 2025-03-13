@@ -51,8 +51,9 @@
 	<link rel="stylesheet" href="/resources/css/ui-content.css">
 	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
 	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
-	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
 
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
 	<script src="/resources/js/ui-script.js"></script>
 	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
 	<!-- //ui source -->
@@ -331,31 +332,37 @@
 						<div class="main-figure-list">
 							<ul class="flex-wrap">
 								<li>
-									<figure>
-										<picture>
-											<source srcset="/resources/images/PBWMA/ico_fig_main_list01.svg">
-											<img src="/resources/images/PBWMA/ico_fig_main_list01.svg" alt="">
-										</picture>
-										<figcaption>수익률 BEST</figcaption>
-									</figure>
+									<a href="javascript:void(0);">
+										<figure>
+											<picture>
+												<source srcset="/resources/images/PBWMA/ico_fig_main_list01.svg">
+												<img src="/resources/images/PBWMA/ico_fig_main_list01.svg" alt="">
+											</picture>
+											<figcaption>수익률 BEST</figcaption>
+										</figure>
+									</a>
 								</li>
 								<li>
-									<figure>
-										<picture>
-											<source srcset="/resources/images/PBWMA/ico_fig_main_list02.svg">
-											<img src="/resources/images/PBWMA/ico_fig_main_list02.svg" alt="">
-										</picture>
-										<figcaption>판매 BEST</figcaption>
-									</figure>
+									<a href="">
+										<figure>
+											<picture>
+												<source srcset="/resources/images/PBWMA/ico_fig_main_list02.svg">
+												<img src="/resources/images/PBWMA/ico_fig_main_list02.svg" alt="">
+											</picture>
+											<figcaption>판매 BEST</figcaption>
+										</figure>
+									</a>
 								</li>
 								<li>
-									<figure>
-										<picture>
-											<source srcset="/resources/images/PBWMA/ico_fig_main_list03.svg">
-											<img src="/resources/images/PBWMA/ico_fig_main_list03.svg" alt="">
-										</picture>
-										<figcaption>이달의 추천</figcaption>
-									</figure>
+									<a href="">
+										<figure>
+											<picture>
+												<source srcset="/resources/images/PBWMA/ico_fig_main_list03.svg">
+												<img src="/resources/images/PBWMA/ico_fig_main_list03.svg" alt="">
+											</picture>
+											<figcaption>이달의 추천</figcaption>
+										</figure>
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -448,7 +455,7 @@
 						</a>
 					</li>
 					<li class="list04">
-						<a href="#">
+						<a href="none">
 							<div class="icon"></div>
 							<strong>금융+</strong>
 						</a>
@@ -520,7 +527,7 @@
 				el: ".swiper-pagination",
 			}
 		});
-		MicroModal.show('modal-notice');
+		//MicroModal.show('modal-notice');
 	</script>
 </body>
 
