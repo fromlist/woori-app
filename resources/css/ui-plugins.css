@@ -180,8 +180,8 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .datepicker-wrap .ui-widget-content .schedule_03 > * {background-color:var(--surface-surface50);}
 .datepicker-wrap .ui-datepicker-calendar tbody tr:not(:last-child) > * {}
 .datepicker-wrap .ui-datepicker-calendar td.ui-datepicker-other-month {}
-.datepicker-wrap .ui-datepicker-calendar td.ui-datepicker-other-month span,
-.datepicker-wrap .ui-datepicker-calendar td.ui-datepicker-other-month a {color:var(--gray-400);}
+.datepicker-wrap:not(.datepicker-collapsed) .ui-datepicker-calendar td.ui-datepicker-other-month span,
+.datepicker-wrap:not(.datepicker-collapsed) .ui-datepicker-calendar td.ui-datepicker-other-month a {color:var(--gray-400);}
 .datepicker-wrap .ui-datepicker-calendar td span,
 .datepicker-wrap .ui-datepicker-calendar td a {position:relative;padding:0;text-align:center;border:2px solid transparent;background:none;font-weight:inherit;color:inherit;width:40px;height:40px;line-height:36px;border-radius:8px;margin:0 auto;}
 
@@ -238,7 +238,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table thead {display:none;}
 /* .datepicker-weekend .ui-widget-content .ui-state-active {border-color:transparent;background-color:transparent;color:var(--typography-body);} */
 /* .datepicker-weekend .ui-widget-content .ui-datepicker-current-day.ui-datepicker-today .ui-state-active {color:var(--brandPrimary-blue600);} */
-.datepicker-weekend.datepicker-collapsed .ui-datepicker-calendar td.ui-datepicker-other-month {color:var(--typography-black);}
+/* .datepicker-weekend.datepicker-collapsed .ui-datepicker-calendar td.ui-datepicker-other-month {color:var(--typography-black);} */
 .datepicker-weekend.datepicker-collapsed .ui-datepicker .ui-datepicker-title {font-size:14px;line-height:1;color:var(--typography-caption);align-items:center;justify-content:center;}
 
 .datepicker-weekend.datepicker-collapsed .ui-datepicker .ui-datepicker-prev,

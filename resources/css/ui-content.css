@@ -1112,7 +1112,7 @@ i.live-off {display:inline-block;width:16px;height:16px;background:url(/resource
     background-color:var(--icon-default);
 }
 .notice-list .tag-wrap {margin-bottom:8px;}
-.notice-list .text {font-size:16px;font-weight:400;color:var(--gray-600);}
+.notice-list .text {font-size:16px;font-weight:400;color:var(--typography-gray);}
 .notice-list .date {font-size:14px;font-weight:400;color:var(--typography-caption);margin-top:4px;}
 
 .notice-wrap {}
