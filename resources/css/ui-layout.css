@@ -430,7 +430,7 @@ main .sticky-content.sticky-always {position:sticky}
 .main-figure-list ul {display:flex;gap:12px;padding:0 4px;}
 .main-figure-list ul li {flex:1;}
 .main-figure-list figure {}
-.main-figure-list figure picture {border-radius:32px;background-color:var(--surface-surface50);display:flex;align-items:center;justify-content:center;flex:0 0 96px;width:96px;height:96px;margin:0 auto;}
+.main-figure-list figure picture {border-radius:32px;background-color:var(--surface-surface50);display:flex;align-items:center;justify-content:center;flex:0 0 90px;width:90px;height:90px;margin:0 auto;}
 .main-figure-list figure picture img {}
 .main-figure-list figure figcaption {font-size:18px;color:var(--typography-black);line-height:1;text-align:center;margin-top:16px;}
 

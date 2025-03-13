@@ -534,10 +534,10 @@ button.flag-fluid span {margin-top:0;}
 
 
 /* label-list */
-.label-list {display:flex;gap:16px;}
+.label-list {display:flex;gap:8px;}
 .label-list li {display:flex;gap:4px;align-items:center;}
 .label-list li:before {content:'';flex:0 0 13px;width:13px;height:13px;border-radius:4px;}
-.label-list i {display:flex;font-size:14px;font-weight:400;color:var(--typography-gray);line-height:1;}
+.label-list i {display:flex;font-size:13px;font-weight:400;color:var(--typography-gray);line-height:1;}
 .label-list i:empty:before {content:attr(aria-label);}
 .label-list .list01:before {background-color:var(--deepblue-700);}
 .label-list .list02:before {background-color:var(--cyan-500);}
@@ -545,7 +545,7 @@ button.flag-fluid span {margin-top:0;}
 
 /* exchange-wrap */
 .exchange-wrap {background-color:var(--background-bg_lightGray);padding:16px;}
-.exchange-list {padding:16px 20px;border-radius:10px;background-color:var(--surface-surface);}
+.exchange-list {padding:16px;border-radius:10px;background-color:var(--surface-surface);}
 .exchange-list:not(:last-child) {margin-bottom:12px;}
 
 /* community-wrap */
