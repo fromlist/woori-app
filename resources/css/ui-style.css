@@ -299,7 +299,7 @@ button.select.is-modal-open {outline:2px solid var(--status-focused);outline-off
 .inp-medium input[type="checkbox"]:checked {background:url(/resources/images/form/form-checkbox-medium-checked.svg) center center / contain no-repeat;}
 .inp-medium input[type="checkbox"]:disabled {background:url(/resources/images/form/form-checkbox-medium-disabled.svg) center center / contain no-repeat;}
 .inp-medium input[type="checkbox"]:disabled:checked {background:url(/resources/images/form/form-checkbox-medium-disabled-checked.svg) center center / contain no-repeat;}
-.inp-medium .label-title {display:block;font-size:18px;line-height:1.5;color:var(--typography-gray);}
+.inp-medium .label-title {display:block;font-size:18px;line-height:1.5;color:var(--typography-gray);min-height:26px;}
 .inp-medium .label-subtitle {display:block;font-size:15px;font-weight:400;color:var(--typography-body);margin-top:8px;}
 
 .inp-small {display:flex;justify-content:space-between;gap:8px;padding-left:32px;}
