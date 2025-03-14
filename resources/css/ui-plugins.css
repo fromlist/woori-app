@@ -236,6 +236,7 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content .ui-datepicker-header {height:14px;overflow:hidden;margin:0 0 16px;}
 .datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table {overflow:hidden;background-color:#ECF6FF;border-radius:8px;padding:2px 16px;}
 .datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table thead {display:none;}
+.datepicker-weekend.datepicker-collapsed .ui-widget.ui-widget-content table tr:not(.thisWeek) {display:none;}
 /* .datepicker-weekend .ui-widget-content .ui-state-active {border-color:transparent;background-color:transparent;color:var(--typography-body);} */
 /* .datepicker-weekend .ui-widget-content .ui-datepicker-current-day.ui-datepicker-today .ui-state-active {color:var(--brandPrimary-blue600);} */
 /* .datepicker-weekend.datepicker-collapsed .ui-datepicker-calendar td.ui-datepicker-other-month {color:var(--typography-black);} */
