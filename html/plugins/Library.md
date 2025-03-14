@@ -1,43 +1,58 @@
-1. query 입력 시 source code view
- - highlight.js (https://highlightjs.org/)
- - license (https://github.com/highlightjs/highlight.js/blob/main/LICENSE)
+1. modal 레이어팝업
 
-2. 메뉴 이동 drag & drop (메인 포틀릿)
- - sortableJs (https://sortablejs.github.io/Sortable/)
- - license (https://github.com/SortableJS/Sortable/blob/master/LICENSE)
+-   micromodal.js (https://micromodal.vercel.app/)
+-   license (https://github.com/ghosh/Micromodal/blob/master/LICENSE.md)
 
-3. 툴팁
- - Tippy.js (https://atomiks.github.io/tippyjs/)
- - license (https://github.com/atomiks/tippyjs/blob/master/LICENSE)
+2. 메뉴 이동 drag & drop
 
-4. tree
- - https://www.jstree.com/
- - license (https://github.com/vakata/jstree/blob/master/LICENSE-MIT)
+-   sortableJs (https://sortablejs.github.io/Sortable/)
+-   license (https://github.com/SortableJS/Sortable/blob/master/LICENSE)
 
-5-1. 텍스트 에디터(1)
- - naver SmartEditor2 (https://naver.github.io/smarteditor2/)
- - license (https://github.com/naver/smarteditor2/blob/master/LICENSE.md)
+3. Alert 팝업
 
-5-2. 텍스트 에디터(2)
- - summernote (https://summernote.org/)
- - license (https://github.com/summernote/summernote/blob/develop/LICENSE)
+-   sweetalert2 (https://github.com/sweetalert2/sweetalert2)
+-   license (https://github.com/sweetalert2/sweetalert2/blob/main/LICENSE)
 
-6. Loading 시 html skeleton (메인 포틀릿)
- - 자체제작 (https://seons-dev.tistory.com/entry/Skeleton-Loading-JS#google_vignette)
- - type이 너무 많거나 시간 없을 경우 제외
+4. swiper
 
-7. 파일 업로드
- - dropzone (https://www.dropzone.dev/)
- - license (https://github.com/dropzone/dropzone/blob/main/LICENSE)
+-   swiperjs (https://github.com/nolimits4web/swiper)
+-   license (https://github.com/nolimits4web/swiper/blob/master/LICENSE)
 
-8. toast
- - toastr (https://github.com/CodeSeven/toastr)
- - license (https://github.com/CodeSeven/toastr/blob/master/LICENSE)
+5. 툴팁 (popper.js + tippy.js)
 
-9. modal
- - micromodal.js (https://micromodal.vercel.app/)
- - license (https://github.com/ghosh/Micromodal/blob/master/LICENSE.md)
+-   floating-ui (https://github.com/floating-ui/floating-ui)
+-   license (https://github.com/floating-ui/floating-ui/blob/master/LICENSE)
 
-10. select
- - select2 (https://select2.org/)
- - license (https://github.com/select2/select2/blob/develop/LICENSE.md)
+6. toast 팝업
+
+-   toastr (https://github.com/CodeSeven/toastr)
+-   license (https://github.com/CodeSeven/toastr/blob/master/LICENSE)
+
+7. pinch-zoom
+
+-   pinchzoom (https://github.com/manuelstofer/pinchzoom)
+-   license (https://github.com/manuelstofer/pinchzoom/blob/master/LICENSE)
+
+8. scroll up animation event
+
+-   AOS (https://github.com/michalsnik/aos)
+-   license (https://github.com/michalsnik/aos/blob/next/LICENSE)
+
+8. datepicker monthpicker
+
+-   jquery.ui.monthpicker (https://github.com/jpoumailloux/jquery.ui.monthpicker)
+
+9. touch swipe
+
+-   TouchSwipe-Jquery-Plugin (https://github.com/mattbryson/TouchSwipe-Jquery-Plugin)
+-   license (https://github.com/mattbryson/TouchSwipe-Jquery-Plugin/blob/master/LICENSE)
+
+10. jquery
+
+-   jQuery (https://github.com/jquery/jquery)
+-   license (https://github.com/jquery/jquery/blob/main/LICENSE.txt)
+
+11. jquery-ui
+
+-   jQuery-ui (https://github.com/jquery/jquery-ui)
+-   license (https://github.com/jquery/jquery-ui/blob/main/LICENSE.txt)

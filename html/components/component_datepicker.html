@@ -284,6 +284,14 @@
 			const schedule01 = ["2024-12-15", "2024-12-16", "2024-12-17", "2024-12-19"]; // 개인 일정
 			const schedule02 = ["2024-12-15", "2024-12-16", "2024-12-18", "2024-12-20"]; // 고객 생일
 			const schedule03 = ["2024-12-15", "2024-12-17", "2024-12-18", "2024-12-21"]; // 수신 만기
+			let today = new Date();
+
+			let year = today.getFullYear(); // 년도
+			let month = today.getMonth() + 1; // 월
+			let date = today.getDate(); // 날짜
+			let day = today.getDay(); // 요일
+			let destinyToday = (year + '-' + month + '-' + date)
+
 
 			$("#datepicker_schedule").datepicker({
 				dateFormat: 'yy-mm-dd',
@@ -301,6 +309,7 @@
 				currentText: "오늘",
 				closeText: "닫기",
 				showOtherMonths: true,
+				maxDate: new Date(destinyToday),
 				onSelect: function(date, dp) {},
 				onChangeMonthYear: function(year, month, dp) {},
 				beforeShowDay: function(date) {

@@ -734,9 +734,9 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
 .icon-14 {flex:0 0 14px;width:14px;height:14px;}
 .icon-12 {flex:0 0 12px;width:12px;height:12px;}
 
-.icon-info {
-    -webkit-mask-image:url(/resources/images/toastr/ico_info.svg);
-    mask-image:url(/resources/images/toastr/ico_info.svg);
+.icon-tooltip {
+    -webkit-mask-image:url(/resources/images/icon_only/icon_tooltip.svg);
+    mask-image:url(/resources/images/icon_only/icon_tooltip.svg);
 }
 .icon-caution {
     -webkit-mask-image:url(/resources/images/icon_only/icon_caution.svg);
