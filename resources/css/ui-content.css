@@ -943,23 +943,25 @@ button.flag-fluid span {margin-top:0;}
 /* .stock.steady:before {content:'';flex:0 0 10px;width:10px;height:10px;background:url(/resources/images/ico/ico_steady.svg) center center / contain no-repeat;} */
 
 
-.stock-index-core {border-radius:10px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
+.stock-index-core {}
 .stock-index-core ul {display:flex;}
-.stock-index-core ul li {position:relative;flex:1;}
+.stock-index-core ul li {position:relative;flex:1;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);}
+.stock-index-core ul li:first-child {border-radius:10px 0 0 10px;}
+.stock-index-core ul li:last-child {border-radius:0 10px 10px 0;}
 .stock-index-core ul li:not(:last-child) {border-right:1px dashed var(--border-8);}
 .stock-index-core a {display:block;padding:20px 8px;}
 .stock-index-core dl {text-align:center;}
-.stock-index-core dl dt {margin-bottom:16px;font-size:15px;font-weight:500;color:var(--typography-black);line-height:1;}
+.stock-index-core dl dt {margin-bottom:16px;font-size:15px;font-weight:500;color:var(--typography-black);line-height:1;white-space:nowrap;}
 .stock-index-core dl dd {}
 .stock-index-core dl dd:not(:last-child) {margin-bottom:16px;}
-.stock-index-core dl dd strong {display:block;font-size:18px;font-weight:700;color:var(--typography-black);line-height:1;margin-bottom:4px;}
+.stock-index-core dl dd strong {display:block;font-size:18px;font-weight:700;color:var(--typography-black);line-height:1;margin-bottom:4px;white-space:nowrap;}
 .stock-index-core dl dd strong {}
 
 .stock-index-list {}
 .stock-index-list ul li {}
 .stock-index-list > ul li:not(:last-child) {margin-bottom:12px;}
-.stock-index-list a {display:flex;align-items:center;justify-content:space-between;border-radius:10px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);padding:20px 16px 20px 20px;gap:16px;}
-.stock-index-list a:after {content:'';display:flex;align-items:center;justify-content:center;flex:0 0 10px;width:10px;height:20px;
+.stock-index-list a {position:relative;display:flex;align-items:center;justify-content:space-between;border-radius:10px;background-color:var(--surface-surface);box-shadow:0px 0.5px 0px 0px var(--shadow-gray_1), 0px 2px 4px -1px var(--shadow-gray_1);padding:20px 16px 20px 20px;gap:16px;flex-wrap:wrap;}
+.stock-index-list a:after {content:'';position:absolute;right:16px;top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;flex:0 0 10px;width:10px;height:20px;
     -webkit-mask-position:center center;
     mask-position:center center;
     -webkit-mask-size:contain;
@@ -972,8 +974,8 @@ button.flag-fluid span {margin-top:0;}
 }
 .stock-index-list dl dt {font-size:15px;font-weight:500;color:var(--typography-gray);line-height:1;}
 .stock-index-list dl dd {display:block;font-size:18px;font-weight:700;color:var(--typography-black);line-height:1;margin-top:10px;}
-.stock-index-list a > div {display:flex;gap:8px;margin-left:auto;}
-.stock-index-list .stock-remove {position:absolute;right:24px;top:50%;transform:translateY(-50%);background-color:var(--surface-surface)}
+.stock-index-list a > div {display:flex;gap:8px;margin-left:auto;margin-right:16px;}
+.stock-index-list .stock-remove {position:absolute;right:24px;top:50%;transform:translateY(-50%);background-color:var(--surface-surface);z-index:1;}
 
 .stock-index-list.content-fluid {}
 .stock-index-list.content-fluid ul {}
@@ -981,6 +983,7 @@ button.flag-fluid span {margin-top:0;}
 .stock-index-list.content-fluid ul li:not(:last-child) {margin-bottom:0;}
 .stock-index-list.content-fluid ul li:after {content:'';position:absolute;left:24px;right:24px;bottom:0;height:1px;background-color:var(--border-4);}
 .stock-index-list.content-fluid a {padding:24px;box-shadow:none;border-radius:0;}
+.stock-index-list.content-fluid a:after {right:30px;}
 .stock-index-list.content-fluid dl {}
 .stock-index-list.content-fluid dl dt {font-size:18px;color:var(--typography-body);}
 .stock-index-list.content-fluid dl dd {display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
