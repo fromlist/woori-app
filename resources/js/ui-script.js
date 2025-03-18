@@ -310,15 +310,8 @@ const stickyContent = {
                 if (bottomBtn != null) {
                     let bottomHeight = null;
                     bottomBtn.forEach(function (element) {
-                        const visibility = window.getComputedStyle(element).display;
-                        bottomHeight = bottomHeight + element.clientHeight * 1;
-                        console.log(bottomHeight)
-                        // if (visibility == 'block') {
+                        bottomHeight = bottomHeight + element.clientHeight;
                         snackbarEl.style.bottom = bottomHeight + 'px';
-                        // } else {
-                        // console.log(element.clientHeight)
-                        // snackbarEl.style.bottom = element.clientHeight + 'px';
-                        // }
                     })
                 }
             } else {

@@ -487,11 +487,13 @@
 .rate-CCC,
 .rate-CC,
 .rate-C,
-.rate-D {border-color:#F04B27}
+.rate-D,
+.rate-NR {border-color:#F04B27;}
 .rate-CCC .rate,
 .rate-CC .rate,
 .rate-C .rate
-.rate-D .rate {color:#F04B27;}
+.rate-D .rate,
+.rate-NR .rate {color:#F04B27;}
 
 
 
