@@ -526,20 +526,10 @@ div.flag {display:flex;align-items:center;gap:8px;}
 span.flag {display:block;}
 span.flag span {margin-top:8px;}
 button.flag {}
-button.flag strong:after {content:'';flex:0 0 10px;width:10px;height:20px;
-    -webkit-mask-position:center center;
-    mask-position:center center;
-    -webkit-mask-size:contain;
-    mask-size:contain;
-    -webkit-mask-repeat:no-repeat;
-    mask-repeat:no-repeat;
-    background:var(--icon-default);
-    -webkit-mask-image:url(/resources/images/arrow/ico_chevron.svg);
-    mask-image:url(/resources/images/arrow/ico_chevron.svg);
-}
+button.flag strong:after {content:'';flex:0 0 10px;width:10px;height:20px;background:url(/resources/images/arrow/ico_chevron.svg) center center / contain no-repeat;margin-left:8px;}
 button.flag strong span {font-size:14px;margin-top:0;margin-left:-4px;}
 .flag span {display:block;font-size:16px;font-weight:500;color:var(--typography-caption);line-height:1;}
-button.flag span {display:block;margin-top:8px;}
+button.flag span {display:block;margin-top:4px;}
 button.flag-fluid {display:flex;align-items:center;width:100%;gap:8px;}
 button.flag-fluid:after {content:'';flex:0 0 10px;width:10px;height:20px;background:url(/resources/images/arrow/ico_chevron.svg) center center / contain no-repeat;margin-left:auto;}
 button.flag-fluid strong:after {display:none;}
