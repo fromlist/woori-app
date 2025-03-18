@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script><!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
+	<link rel="stylesheet" href="/resources/css/ui-guide.css">
+
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+	<style>
+		body {
+			line-height: 1.8;
+			margin: 50px auto;
+			padding: 40px;
+			max-width: 800px;
+			background-color: #fff;
+			color: #000;
+			border: 1px solid #ccc;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		h1 {
+			text-align: center;
+			background: #222;
+			color: white;
+			padding: 20px;
+			font-size: 28px;
+			font-weight: bold;
+			border-radius: 5px;
+		}
+
+		h2 {
+			color: #333;
+			border-bottom: 2px solid #444;
+			padding-bottom: 5px;
+			margin-top: 40px;
+			font-size: 22px;
+			font-weight: bold;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 20px;
+			border-radius: 5px;
+			background: #f8f8f8;
+			border: 1px solid #ddd;
+		}
+
+		li {
+			margin-bottom: 12px;
+			padding: 10px;
+			border-bottom: 1px dashed #bbb;
+			font-size: 18px;
+		}
+
+		li:last-child {
+			border-bottom: none;
+		}
+
+		strong {
+			color: #000;
+			font-weight: bold;
+		}
+
+		p {
+			font-size: 16px;
+			color: #666;
+		}
+
+		/* 인쇄용 스타일 */
+		@media print {
+			body {
+				background: white;
+				color: black;
+				box-shadow: none;
+				border: none;
+			}
+
+			h1 {
+				background: black;
+				color: white;
+				padding: 15px;
+			}
+
+			ul {
+				border: none;
+				background: transparent;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+	<h2>1. 프로젝트 개요</h2>
+	<ul>
+		<li>
+			<strong>프로젝트명</strong>
+			<p>우리은행 자산관리 APP 구축</p>
+		</li>
+		<li>
+			<strong>담당 부서</strong>
+			<p>디지털공통개발부</p>
+		</li>
+		<li>
+			<strong>담당자</strong>
+			<p>김성민</p>
+		</li>
+		<li>
+			<strong>프로젝트 기간</strong>
+			<p>2024-10 ~ 2025-03</p>
+		</li>
+	</ul>
+
+	<h2>2. 퍼블리싱 범위</h2>
+	<ul>
+		<li>
+			<strong>작업한 페이지 목록</strong>
+			<p>총 140장</p>
+		</li>
+		<li>
+			<strong>주요 기능 및 특징</strong>
+			<p>모바일(앱) 환경에 맞게 반응형으로 구축 <br> Component화 시켜 Source를 합치는 방식으로 작업</p>
+		</li>
+		<li>
+			<strong>사용한 기술 스택(HTML, CSS, JavaScript 등)</strong>
+			<p>HTML, CSS, JS, Plugins(<a href="../plugins/library.md" target="_blank" class="underline">html/plugins/library.md</a> 안에 상세 내용 삽입)</p>
+		</li>
+		<li>
+			<strong>반응형 웹 여부</strong>
+			<p>반응형 지원</p>
+		</li>
+	</ul>
+
+	<h2>3. 개발 환경</h2>
+	<ul>
+		<li>
+			<strong>코드 저장소(SVN 등) 및 접근 방법</strong>
+			<p>개발소스에 포함</p>
+		</li>
+		<li>
+			<strong>브랜치 관리 방식</strong>
+			<p>-</p>
+		</li>
+		<li>
+			<strong>개발 및 운영 서버 정보</strong>
+			<p>-</p>
+		</li>
+		<li>
+			<strong>로컬 개발 환경 설정 방법</strong>
+			<p>-</p>
+		</li>
+	</ul>
+
+	<h2>4. 스타일 가이드</h2>
+	<ul>
+		<li>
+			<strong>폰트 및 색상 사용 규칙</strong>
+			<p>Pretendard 폰트 사용</p>
+		</li>
+		<li>
+			<strong>공통 UI 요소 및 컴포넌트 설명</strong>
+			<p>Component 폴더에 상세 내용 반영</p>
+		</li>
+		<li>
+			<strong>CSS/SCSS 구조 및 네이밍 규칙</strong>
+			<p>dash case 사용 <br> 페이지 명에 맞게 class 생성 <br> 공통요소는 공통요소에 맞게 생성</p>
+		</li>
+		<li>
+			<strong>접근성 및 크로스 브라우징 대응 사항</strong>
+			<p>크로스 브라우징 대응 완료(Android, iOS)</p>
+		</li>
+	</ul>
+</body>
+
+
+</html>
