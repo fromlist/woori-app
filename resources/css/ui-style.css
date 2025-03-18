@@ -201,7 +201,7 @@ input:not([type="checkbox"],[type="radio"],[type="file"])[disabled] {color:var(-
 /* input-wrap size medium */
 .input-medium {background-color:var(--surface-surface50);border-color:transparent;}
 .input-medium input:not([type="checkbox"],[type="radio"],[type="file"]),
-.input-medium button.text-button {height:46px;}
+.input-medium button.text-button {height:46px;line-height:46px;}
 .input-medium:focus-within {outline:0;background-color:var(--surface-surface100);}
 .input-medium input:not([type="checkbox"],[type="radio"],[type="file"]) {padding-right:0;}
 .input-wrap.input-datepicker.input-medium button {min-height:46px;padding:12px 24px 12px 0;}
@@ -463,6 +463,12 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
 .form-exchange .sum {position:absolute;left:50%;top:-32px;margin-left:-12px;width:24px;height:24px;background:url(/resources/images/common/arrow_sum.svg) center center / contain no-repeat;}
 .ex-input-wrap .anchor-fluid {width:auto;padding:0;margin-left:auto;font-size:20px;font-weight:700;color:var(--typography-black);}
 .ex-input-wrap .anchor-fluid:empty:before {content:attr(data-placeholder);color:var(--typography-disabled);}
+
+.form-exchange .ex-benefit-wrap {flex:1;text-align:right;}
+.form-exchange .ex-benefit-wrap dl {}
+.form-exchange .ex-benefit-wrap dl dt {font-size:20px;font-weight:700;color:var(--typography-title);line-height:1.5;}
+.form-exchange .ex-benefit-wrap dl dd {font-size:24px;font-weight:700;color:var(--brandPrimary-blue500);line-height:1.4;margin-top:4px;}
+.form-exchange .ex-benefit-wrap dl dd.sub-text {font-size:16px;font-weight:500;color:var(--typography-caption);line-height:1;}
 
 .form-wrap {display:flex;gap:8px;}
 

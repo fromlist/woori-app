@@ -82,16 +82,6 @@
 					</dd>
 				</dl>
 				<dl>
-					<dt>Default</dt>
-					<dd>
-						<div class="form">
-							<div class="input-wrap">
-								<input type="text" placeholder="Placeholder" aria-label="input">
-							</div>
-						</div>
-					</dd>
-				</dl>
-				<dl>
 					<dt>Value</dt>
 					<dd>
 						<div class="form">
@@ -126,17 +116,12 @@
 					<dd>
 						<div class="form">
 							<div class="input-wrap" id="textarea1">
-								<!-- <textarea aria-label="메모"></textarea> -->
+								<textarea aria-label="메모"></textarea>
 							</div>
 							<div class="textarea-length">
 								<div class="left">0/300자</div>
 								<div class="right">
 									<button type="button" class="btn-xsmall btn-primary btn-round" id="btn1">저장</button>
-									<script>
-										$('#btn1').click(function() {
-											$('#textarea1').html('<textarea></textarea>')
-										})
-									</script>
 								</div>
 							</div>
 						</div>
@@ -147,17 +132,12 @@
 					<dd>
 						<div class="form">
 							<div class="input-wrap" id="textarea2">
-								<!-- <textarea aria-label="메모"></textarea> -->
+								<textarea aria-label="메모"></textarea>
 							</div>
 							<div class="textarea-length">
 								<div class="left">0/300자</div>
 								<div class="right">
 									<button type="button" class="btn-xsmall btn-primary btn-round" id="btn2">저장</button>
-									<script>
-										$('#btn2').click(function() {
-											$('#textarea2').html('<textarea></textarea>')
-										})
-									</script>
 								</div>
 							</div>
 						</div>
@@ -197,6 +177,7 @@
 						<div class="form">
 							<div class="input-wrap input-btn">
 								<input type="text" placeholder="Placeholder" value="Text">
+								<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 								<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
 							</div>
 						</div>
