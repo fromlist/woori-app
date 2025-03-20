@@ -22,7 +22,7 @@ Component화 시켜 Source를 합치는 방식으로 작업
 
 사용한 기술 스택 (HTML, CSS, JavaScript 등):
 
-HTML, CSS, JS, Plugins (html/plugins/library.md 안에 상세 내용 삽입)
+HTML, CSS, JS, Plugins (plugins/plugins/library.md 안에 상세 내용 삽입)
 
 반응형 웹 여부: 반응형 지원
 
