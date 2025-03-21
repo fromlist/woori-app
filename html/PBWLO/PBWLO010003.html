@@ -130,7 +130,7 @@
 		<!-- bottom-btn -->
 		<div class="bottom-btn">
 			<div class="btn-wrap">
-				<button type="button" class="btn-large btn-primary" data-micromodal-trigger="modal-privacy"><i class="ico-check"></i>동의</button>
+				<button type="button" class="btn-large btn-primary" data-micromodal-trigger="cmmModal"><i class="ico-check"></i>동의</button>
 			</div>
 		</div>
 		<!-- //bottom-btn -->
@@ -140,7 +140,7 @@
 
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-privacy" aria-hidden="true">
+	<div class="micromodal-slide micromodal-slide-bottom modal" aria-hidden="true" id="cmmModal">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 
@@ -175,6 +175,9 @@
 						</div>
 						<!-- //privacy-wrap -->
 
+						<!-- sticky-content -->
+						<div class="sticky-sentinal-terms"></div>
+						<!-- //sticky-content -->
 					</div>
 
 				</div>
@@ -182,7 +185,7 @@
 					<!-- bottom-btn -->
 					<div class="bottom-btn">
 						<div class="btn-wrap">
-							<button type="button" class="btn-large btn-primary"><i class="ico-check"></i>전체 동의</button>
+							<button type="button" class="btn-large btn-primary" id="btmBtn2"><i class="ico-check"></i>전체 동의</button>
 						</div>
 					</div>
 					<!-- //bottom-btn -->
@@ -191,7 +194,32 @@
 		</div>
 	</div>
 	<!-- //micromodal -->
+	<script>
+		const modal = document.querySelector('#cmmModal');
+		const modalScrollWrap = modal.querySelector('.modal__content');
 
+		$('#btmBtn2').attr('aria-disabled', true)
+		$('#btmBtn2').attr('disabled', '')
+		modalScrollWrap.addEventListener('scroll', function() {
+			const sentinalEl = modal.querySelector('.sticky-sentinal-terms');
+			const termsButton = modal.querySelector('.modal__footer #btmBtn2')
+
+
+			// Initial state
+			const handler = (entries) => {
+				if (entries[0].isIntersecting) {
+					termsButton.setAttribute('aria-disabled', false)
+					termsButton.removeAttribute('disabled', '')
+				}
+			}
+
+			const observer = new window.IntersectionObserver(handler);
+
+			if (sentinalEl != null) {
+				observer.observe(sentinalEl);
+			}
+		});
+	</script>
 </body>
 
 </html>
