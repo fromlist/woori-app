@@ -596,7 +596,6 @@ $(document).on('click', '#gototop', function () {
         top: 0,
         behavior: 'smooth'
     });
-    console.log(1)
 })
 
 function scrollReset() {
