@@ -808,7 +808,7 @@ button.flag-fluid span {margin-top:0;}
     mask-image:url(/resources/images/arrow/ico_chevron.svg);
 }
 
-.file-attach-list a {display:inline-flex;border-radius:4px;background-color:var(--surface-surface50);padding:4px 8px;gap:10px;}
+.file-attach-list a {display:inline-flex;border-radius:4px;background-color:var(--surface-surface50);padding:4px 8px;gap:6px;}
 .file-attach-list a:before {content:'';display:table-cell;flex:0 0 22px;width:22px;height:22px;background:url(/resources/images/PBWAI/ico_file_attach.svg) center center / contain no-repeat;}
 .file-attach-list a[data-ext="word"]:before {background:url(/resources/images/PBWAI/ico_file_attach_word.svg) center center / contain no-repeat;}
 .file-attach-list a[data-ext="excel"]:before {background:url(/resources/images/PBWAI/ico_file_attach_excel.svg) center center / contain no-repeat;}
@@ -818,7 +818,7 @@ button.flag-fluid span {margin-top:0;}
 .file-attach-list a[data-ext="ppt"]:before {background:url(/resources/images/PBWAI/ico_file_attach_ppt.svg) center center / contain no-repeat;}
 
 .file-attach-list a:after {content:'';display:table-cell;flex:0 0 20px;width:20px;height:22px;background:url(/resources/images/PBWAI/ico_file_attach_download.svg) center center / 20px 20px no-repeat;}
-.file-attach-list a.link:after {flex:0 0 6px;width:6px;height:22px;
+.file-attach-list a.link:after {flex:0 0 6px;width:6px;height:22px;margin-left:6px;
     -webkit-mask-position:center center;
     mask-position:center center;
     -webkit-mask-size:6px 12px;
@@ -831,7 +831,15 @@ button.flag-fluid span {margin-top:0;}
 }
 .file-attach-list li:not(:last-child) {margin-bottom:4px;}
 .file-attach-list a span {font-size:14px;font-weight:400;color:var(--typography-black);line-height:22px;}
-
+.file-attach-list a.link.loading:after {display:flex;flex:0 0 16px;width:16px;height:inherit;margin-left:0;
+    background:url(/resources/images/loading-animation/loading-spinner.svg) center center / 24px no-repeat;
+    -webkit-mask:none;
+    mask:none;
+}
+@keyframes loading-file {
+	0%,50% {background-color:var(--icon-white);}
+	25%,75% {background-color:var(--brandPrimary-blue400);}
+}
 .message-link {}
 .message-link li {}
 .message-link li a {display:inline-flex;font-size:15px;font-weight:400;color:var(--blue-400);border-radius:4px;background-color:var(--surface-surface50);padding:4px 8px;gap:4px;}
