@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('.left .header-btn').on('click', function () {
-        window.location.href = '/html'
+        window.location.href = '../'
         console.log(window.location.href)
     })
 

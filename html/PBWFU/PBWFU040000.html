@@ -769,8 +769,8 @@
 
 		$('#alert1').click(function(event) {
 			toastr.alert(`<p class="fs-14 fw-500 mt-10">파일 크기나 네트워크 상태에 따라 60초 이상 걸릴 수 있습니다.</p> `, '<div class="file-attach-loading fs-16 fc-brandPrimary-blue400 gap6">파일 다운로드중입니다.</div>', {
-				"positionClass": "toast-bottom-center",
-				// "closeButton": true,
+				"positionClass": ["toast-bottom-center", "toast-dimmed"],
+				"closeButton": true,
 				"timeOut": 0,
 				"tapToDismiss": false,
 				"extendedTimeOut": 10000000000,
