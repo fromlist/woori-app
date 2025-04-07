@@ -97,6 +97,7 @@ div.btn-xsmall .btn-inner span {white-space:nowrap;overflow:hidden;text-overflow
     mask-image:url(/resources/images/arrow/ico_chevron.svg);
     background-color:var(--icon-gray_2);
 }
+.anchor.chevron.fc-typography-white:after {background-color:var(--icon-white);}
 .anchor.chevron.anchor-fluid:after {flex:0 0 10px;width:10px;height:20px;}
 .anchor.chevron-up {gap:2px}
 .anchor.chevron-up:after {

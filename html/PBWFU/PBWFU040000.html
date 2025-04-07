@@ -534,7 +534,7 @@
 					<div class="content">
 
 						<div class="content-fluid px0">
-							<button type="button" class="anchor chevron anchor-fluid w100 py16"><strong class="title-medium fw-500" data-micromodal-trigger="modal-popup04">집합투자 규약</strong></button>
+							<button type="button" class="anchor chevron anchor-fluid w100 py16" id="alert1"><strong class="title-medium fw-500" data-micromodal-trigger="modal-popup04">집합투자 규약</strong></button>
 							<button type="button" class="anchor chevron anchor-fluid w100 py16"><strong class="title-medium fw-500">투자설명서</strong></button>
 							<button type="button" class="anchor chevron anchor-fluid w100 py16"><strong class="title-medium fw-500">간이설명서</strong></button>
 							<button type="button" class="anchor chevron anchor-fluid w100 py16"><strong class="title-medium fw-500">자산운용보고서</strong></button>
@@ -765,6 +765,21 @@
 			detail
 		}) => {
 			chart2.render();
+		});
+
+		$('#alert1').click(function(event) {
+			toastr.alert(`<p class="fs-14 fw-500 mt-10">파일 크기나 네트워크 상태에 따라 60초 이상 걸릴 수 있습니다.</p> `, '<div class="file-attach-loading fs-16 fc-brandPrimary-blue400 gap6">파일 다운로드중입니다.</div>', {
+				"positionClass": "toast-bottom-center",
+				// "closeButton": true,
+				"timeOut": 0,
+				"tapToDismiss": false,
+				"extendedTimeOut": 10000000000,
+				"preventDuplicates": false,
+				"disableTimeOut": true,
+			});
+			setTimeout(function() {
+				toastr.clear()
+			}, 10000)
 		});
 	</script>
 	<style>

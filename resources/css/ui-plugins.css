@@ -144,7 +144,20 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .toast-bottom-center {bottom:12px;}
 /* .toast-bottom-center.has-bottom-btn {bottom:76px;} */
 #toast-container>div:hover {box-shadow:none;}
-
+button.toast-close-button {position:absolute;right:12px;top:14px;font-size:0;width:16px;height:16px;opacity:1;
+    -webkit-mask-image:url(/resources/images/icon_only/icon_close.svg);
+    mask-image:url(/resources/images/icon_only/icon_close.svg);
+    -webkit-mask-position:center center;
+    mask-position:center center;
+    -webkit-mask-size:contain;
+    mask-size:contain;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    background-position:center center;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-color:var(--background-bg_white);
+}
 
 /* datepicker-wrap */
 .datepicker-wrap {}

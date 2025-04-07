@@ -193,7 +193,11 @@
 											<p class="text">통화스왑업무개시</p>
 											<ul class="file-attach-list">
 												<li><a href="#" class="loading link"><span>불완전 판매사례 안내.hwp</span></a></li>
-												<li><a href="#" data-ext="word" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+												<li>
+													<a href="#" class="loading link"><span>불완전 판매사례 안내.hwp</span></a>
+													<p class="description caution body-small fc-typography-caption my8 lh130">모바일에서 확인이 불가한 파일입니다.<br> PC 우리상품바로알기에서 확인해주세요. </p>
+												</li>
+												<li><a href="#" data-ext="word" class="link" id="alert1"><span>불완전 판매사례 안내.hwp</span></a></li>
 												<li><a href="#" data-ext="excel" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
 												<li><a href="#" data-ext="hwp" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
 												<li><a href="#" data-ext="img" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
@@ -544,6 +548,33 @@
 	<script>
 		$(document).on('keyup input', '.textarea', function() {
 			$(this).find('*').removeAttr('style');
+		});
+	</script>
+
+	<script>
+		$('#alert1').click(function(event) {
+			toastr.alert(`<p class="fs-14 fw-500 mt-10">파일 크기나 네트워크 상태에 따라 60초 이상 걸릴 수 있습니다.</p> `, '<div class="file-attach-loading fs-16 fc-brandPrimary-blue400 gap6">파일 다운로드중입니다. (1/4)</div>', {
+				"positionClass": "toast-top-center",
+				// "closeButton": true,
+				"timeOut": 0,
+				"tapToDismiss": false,
+				"extendedTimeOut": 0,
+				"preventDuplicates": false,
+				"disableTimeOut": true,
+			});
+			setTimeout(function() {
+				toastr.alert(``, '<a href="#" class="anchor chevron fs-14 fc-typography-white normal-wrap mr30"><span class="ellipsis">불완전 판매사례 안내.hwp</span></a>', {
+					"positionClass": "toast-top-center",
+					"closeButton": true,
+					"timeOut": 0,
+					"tapToDismiss": false,
+					"extendedTimeOut": 0,
+					"preventDuplicates": false,
+					"disableTimeOut": true,
+				});
+
+			}, 1000);
+
 		});
 	</script>
 </body>

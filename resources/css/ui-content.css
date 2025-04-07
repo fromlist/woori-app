@@ -808,7 +808,7 @@ button.flag-fluid span {margin-top:0;}
     mask-image:url(/resources/images/arrow/ico_chevron.svg);
 }
 
-.file-attach-list a {display:inline-flex;border-radius:4px;background-color:var(--surface-surface50);padding:4px 8px;gap:6px;}
+.file-attach-list a {display:inline-flex;gap:6px;}
 .file-attach-list a:before {content:'';display:table-cell;flex:0 0 22px;width:22px;height:22px;background:url(/resources/images/PBWAI/ico_file_attach.svg) center center / contain no-repeat;}
 .file-attach-list a[data-ext="word"]:before {background:url(/resources/images/PBWAI/ico_file_attach_word.svg) center center / contain no-repeat;}
 .file-attach-list a[data-ext="excel"]:before {background:url(/resources/images/PBWAI/ico_file_attach_excel.svg) center center / contain no-repeat;}
@@ -829,8 +829,12 @@ button.flag-fluid span {margin-top:0;}
     -webkit-mask-image:url(/resources/images/arrow/ico_chevron.svg);
     mask-image:url(/resources/images/arrow/ico_chevron.svg);
 }
+.file-attach-list li {border-radius:4px;background-color:var(--surface-surface50);padding:6px 8px;}
 .file-attach-list li:not(:last-child) {margin-bottom:4px;}
 .file-attach-list a span {font-size:14px;font-weight:400;color:var(--typography-black);line-height:22px;}
+
+.file-attach-list a.link.loading span {color:var(--icon-disabled);}
+.file-attach-list a.link.loading:before {background:url(/resources/images/PBWAI/ico_file_attach_loading.svg) center center / contain no-repeat;}
 .file-attach-list a.link.loading:after {display:flex;flex:0 0 16px;width:16px;height:inherit;margin-left:0;
     background:url(/resources/images/loading-animation/loading-spinner.svg) center center / 24px no-repeat;
     -webkit-mask:none;
@@ -1185,3 +1189,6 @@ i.live-off {display:inline-block;width:16px;height:16px;background:url(/resource
 .line-clamp[data-line="2"] {-webkit-line-clamp:2;}
 .line-clamp[data-line="3"] {-webkit-line-clamp:3;}
 
+
+.file-attach-loading {display:flex;}
+.file-attach-loading:before {content:'';display: flex;flex: 0 0 16px;width: 16px;height: inherit;margin-left: 0;background: url(/resources/images/loading-animation/loading-spinner.svg) center center / 24px no-repeat;-webkit-mask: none;mask: none;}

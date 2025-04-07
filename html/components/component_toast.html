@@ -75,6 +75,8 @@
 				<button class="btn-large btn-outlined" id="info">Info</button>
 				<button class="btn-large btn-outlined" id="caution">caution</button>
 				<button class="btn-large btn-outlined" id="error">Error</button>
+				<button class="btn-large btn-outlined" id="alert2">alert2</button>
+				<button class="btn-large btn-outlined" id="alert3">alert3</button>
 			</div>
 		</div>
 	</div>
@@ -121,7 +123,30 @@
 				"extendedTimeOut": 0,
 				"preventDuplicates": false,
 				"disableTimeOut": true,
+				"positionClass": "toast-bottom-center",
+			});
+		});
 
+		$('#alert2').click(function(event) {
+			toastr.alert(`<p class="fs-14 fw-500 mt-10">파일 크기나 네트워크 상태에 따라 60초 이상 걸릴 수 있습니다.</p> `, '<div class="file-attach-loading fs-16 fc-brandPrimary-blue400 gap6">파일 다운로드중입니다. (1/4)</div>', {
+				"positionClass": "toast-top-center",
+				// "closeButton": true,
+				"timeOut": 0,
+				"tapToDismiss": false,
+				"extendedTimeOut": 0,
+				"preventDuplicates": false,
+				"disableTimeOut": true,
+			});
+		});
+		$('#alert3').click(function(event) {
+			toastr.alert(``, '<a href="#" class="anchor chevron fs-14 fc-typography-white normal-wrap mr30"><span class="ellipsis">불완전 판매사례 안내.hwp</span></a>', {
+				"positionClass": "toast-top-center",
+				"closeButton": true,
+				"timeOut": 0,
+				"tapToDismiss": false,
+				"extendedTimeOut": 0,
+				"preventDuplicates": false,
+				"disableTimeOut": true,
 			});
 		});
 	</script>
