@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script><!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>AI 지식상담</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content pb0">
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<div class="chatgpt-wrap content-fluid px0">
+
+						<div class="chatgroup chatgroup-notice">
+
+							<!-- Intro -->
+							<div class="chatbody">
+								<div class="message-text left">
+									<div class="message-group">
+										<p class="text">우리은행 ChatGPT, AI 지식상담입니다. <br> 다음과 같이 구체적으로 물어보시면 도움되는 답변을 받으실 수 있어요</p>
+										<ol class="text">
+											<li>우리상품 바로알기에서 상품 정보와 근거 문서를 빠르게 찾아드립니다.</li>
+											<li>질문은 최대한 구체적으로 부탁드립니다.</li>
+										</ol>
+									</div>
+
+									<ul class="btn-link">
+										<li><button type="button" class="question-link">1년 미만 근로자의 경우 개인형퇴직연금 가입시 필요한 서류는?</button></li>
+									</ul>
+
+									<div class="message-group">
+										<p class="description info body-small fc-typography-caption fw-400">생성형AI가 만든 답변은 부정확 할 수 있으니, 근거문서를 확인 후 활용해 주세요.</p>
+										<p class="description caution body-small fc-typography-caption fw-400">행내한 자료 등이 외부로 유출되거나, 투자권유등에 활용되지 않도록 유의하시기 바랍니다.</p>
+									</div>
+
+								</div>
+							</div>
+							<!-- //Intro -->
+
+							<div class="chatbody">
+								<div class="message-text left anchor">
+									<button type="button" data-micromodal-trigger="modal-message01">
+										<strong class="fc-deepblue-600">자주하는 질문</strong><span>개인형퇴직연금 가입 시 긴 텍스트가 들어갈 경우</span>
+									</button>
+								</div>
+								<div class="message-text left anchor">
+									<button type="button" data-micromodal-trigger="modal-message02">
+										<strong class="fc-deepblue-600">자주하는 질문</strong><span>제목이 노출됩니다.</span>
+									</button>
+								</div>
+								<div class="message-text left anchor">
+									<button type="button" data-micromodal-trigger="modal-message03">
+										<strong class="fc-status-error">공지</strong><span>공지 제목이 노출됩니다.</span>
+									</button>
+								</div>
+								<div class="message-text left anchor">
+									<button type="button" data-micromodal-trigger="modal-message03">
+										<strong class="fc-status-error">공지</strong><span>공지 제목이 노출됩니다.</span>
+									</button>
+								</div>
+								<div class="message-text left anchor">
+									<button type="button" data-micromodal-trigger="modal-message03">
+										<strong class="fc-status-error">공지</strong><span>공지 제목이 노출됩니다.</span>
+									</button>
+								</div>
+								<div class="message-text left anchor">
+									<button type="button" data-micromodal-trigger="modal-message03">
+										<strong class="fc-status-error">공지</strong><span>공지 제목이 노출됩니다.</span>
+									</button>
+								</div>
+								<div class="message-text left anchor">
+									<button type="button" data-micromodal-trigger="modal-message03">
+										<strong class="fc-status-error">공지</strong><span>공지 제목이 노출됩니다.</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="chatgroup chatgroup-body">
+
+							<!-- 질문 -->
+							<div class="chatbody">
+								<div class="message-text right">
+									<p class="text">IRP 대리인 해지 가능해?</p>
+								</div>
+							</div>
+							<!-- //질문 -->
+
+							<!-- 답변1 -->
+							<div class="chatbody">
+								<div class="message-text left">
+									<p class="text">원칙적으로 불가합니다. <br> 대리인을 통해 신규한 경우라도 대리인 해지는 원칙적으로 불가합니다.<br> 단, 예금업무메뉴얼 26조에 근거하여 아래의 경우 영업점 판단하에 예금의 해지절차에 준하여 업무처리하되 개인형 IRP는 퇴직금과 퇴직연금으로 해지 가능합니다.</p>
+									<div class="sub-text">
+										<div class="tags tags-small tags-lightBlue">관련민원</div>
+										<strong class="title-small">모바일 운전면허증</strong>
+										<p class="text fs-15">영업점에서 체크카드 수령 시 본인 확인을 위해 직원에게 모바일 운전면허증을 제시하였으나, 모바일 운전면허증을 제시하였으나, 모바일 운전면허증으로는 본인 확인이 불가하여 카드를 교부할 수 없다고 직원이 안내</p>
+									</div>
+									<div class="message-footer">
+										<div class="left">
+											<div class="btn-rating-wrap">
+												<button type="button" class="btn-rating" aria-label="좋아요">
+													<i class="icon-only icon-20 icon-thumbsup bg-brandPrimary-blue400"></i>
+												</button>
+												<button type="button" class="btn-rating" aria-label="싫어요">
+													<i class="icon-only icon-20 icon-thumbsdown bg-icon-gray_1"></i>
+												</button>
+											</div>
+										</div>
+										<div class="right">
+											<button type="button" class="btn-xsmall btn-outlined btn-round">근거</button>
+										</div>
+									</div>
+								</div>
+								<div class="message-text left">
+									<ol class="number-list">
+										<li>
+											<div class="number-list-title">
+												<i>1</i>
+												<div class="tags tags-small tags-lightBlue">고객센터</div>
+												<span class="date">2024.08.30</span>
+											</div>
+											<p class="text">주택보증공사 임대보증금</p>
+										</li>
+										<li>
+											<div class="number-list-title">
+												<i>2</i>
+												<div class="tags tags-small tags-lightBlue">부서홈페이지</div>
+												<span class="date">2024.08.30</span>
+											</div>
+											<p class="text">통화스왑업무개시</p>
+											<ul class="file-attach-list">
+												<li><a href="#" class="loading link"><span>불완전 판매사례 안내.hwp</span></a></li>
+												<li>
+													<a href="#" class="loading link"><span>불완전 판매사례 안내.hwp</span></a>
+													<p class="description caution body-small fc-typography-caption my8 lh130">모바일에서 확인이 불가한 파일입니다.<br> PC 우리상품바로알기에서 확인해주세요. </p>
+												</li>
+												<li><a href="#" data-ext="word" class="link" id="alert1"><span>불완전 판매사례 안내.hwp</span></a></li>
+												<li><a href="#" data-ext="excel" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+												<li><a href="#" data-ext="hwp" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+												<li><a href="#" data-ext="img" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+												<li><a href="#" data-ext="pdf" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+												<li><a href="#" data-ext="ppt" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+											</ul>
+										</li>
+										<li>
+											<div class="number-list-title">
+												<i>3</i>
+												<div class="tags tags-small tags-lightBlue">고객센터</div>
+												<span class="date">2024.08.30</span>
+											</div>
+											<p class="text">주택보증공사 임대보증금</p>
+											<ul class="file-attach-list">
+												<li><a href="#" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+												<li><a href="#" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+											</ul>
+										</li>
+									</ol>
+								</div>
+							</div>
+							<!-- //답변1 -->
+
+
+							<!-- 질문 -->
+							<div class="chatbody">
+								<div class="message-text right">
+									<p class="text">자산관리플랫폼부 홍길동 과장 찾아줘</p>
+								</div>
+							</div>
+							<!-- //질문 -->
+
+							<!-- 답변2 -->
+							<div class="chatbody">
+								<div class="message-text left">
+									<p class="text">자산관리 사업 담당자는 홍길동 차장입니다.</p>
+									<div class="message-footer">
+										<div class="left">
+											<div class="btn-rating-wrap">
+												<button type="button" class="btn-rating" aria-label="좋아요">
+													<i class="icon-only icon-20 icon-thumbsup bg-icon-gray_1"></i>
+												</button>
+												<button type="button" class="btn-rating" aria-label="싫어요">
+													<i class="icon-only icon-20 icon-thumbsdown bg-icon-gray_1"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="message-text left">
+									<p class="text">자산관리 사업 담당자는 아래와 같습니다.</p>
+									<div class="sub-text">
+										<dl class="group j-start py0 gap10">
+											<dt>성명 :</dt>
+											<dd>홍길동 [휴가~23.12.29]</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>직위/호칭 :</dt>
+											<dd>과장</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>소속 :</dt>
+											<dd>우리은행/자산관리플랫폼부</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>행번 :</dt>
+											<dd>00000000</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>전화번호 :</dt>
+											<dd>800012345</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>팩스번호 :</dt>
+											<dd>0505-002-0000</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>메일주소 :</dt>
+											<dd>abcd@wooribank.com</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>대직자 :</dt>
+											<dd>김우리 부장대우, 이우리 차장</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>담당업무 :</dt>
+											<dd>데이터자산화 팀장-팀업무전반</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>세부업무 :</dt>
+											<dd>대면자산관리 채널 관리 및 운영</dd>
+										</dl>
+										<dl class="group j-start py0 gap10">
+											<dt>자격증 :</dt>
+											<dd>정보처리기사</dd>
+										</dl>
+									</div>
+
+								</div>
+							</div>
+							<!-- //답변2 -->
+
+							<!-- 답변2 -->
+							<div class="chatbody">
+								<div class="message-text left">
+									<p class="text">기업진단시스템 박아이 URL은 아래와 같습니다.</p>
+									<ul class="message-link">
+										<li><a href="http://srj.woorifg.com:8080">http://srj.woorifg.com:8080</a></li>
+									</ul>
+									<p class="text">URL을 클릭하시면 바로 이동하실 수 있습니다.</p>
+									<div class="message-footer">
+										<div class="left">
+											<div class="btn-rating-wrap">
+												<button type="button" class="btn-rating" aria-label="좋아요">
+													<i class="icon-only icon-20 icon-thumbsup bg-icon-gray_1"></i>
+												</button>
+												<button type="button" class="btn-rating" aria-label="싫어요">
+													<i class="icon-only icon-20 icon-thumbsdown bg-icon-gray_1"></i>
+												</button>
+											</div>
+										</div>
+										<div class="right">
+											<button type="button" class="btn-xsmall btn-outlined btn-round">근거</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //답변2 -->
+
+							<!-- 질문 -->
+							<div class="chatbody">
+								<div class="message-text right">
+									<p class="text">안녕하세요.</p>
+								</div>
+							</div>
+							<!-- //질문 -->
+
+							<!-- 로딩 -->
+							<div class="chatbottom">
+								<div class="chatbody chat-loading" style="display:none;">
+									<div class="spinner">
+										<div class="bounce1"></div>
+										<div class="bounce2"></div>
+										<div class="bounce3"></div>
+									</div>
+								</div>
+							</div>
+
+
+
+
+						</div>
+
+						<!-- bottom-btn -->
+						<div class="bottom-btn bottom-btn-chatgpt">
+							<div class="btn-wrap a-end" style="box-shadow: 0px -2px 40px -1px rgba(12, 12, 13, 0.12);">
+								<div class="input-wrap input-chat-wrap">
+									<div contenteditable="true" class="textarea" data-placeholder="궁금하신 사항을 질문하세요."></div>
+								</div>
+								<button type="button" class="btn-small btn-primary btn-round" id="btn-send-text" style="flex:0">확인</button>
+							</div>
+						</div>
+						<!-- //bottom-btn -->
+					</div>
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+	</main>
+	<!-- //main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal micromodal-slide-bottom-right-full" id="modal-message01" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+						<div class="message-notice">
+							<strong class="fc-deepblue-600">자주하는 질문</strong>
+							<h2 class="title-large px0 mb12">개인형퇴직연금 가입 시 자주하는 질문 모음</h2>
+							<p class="body-small fc-typography-gray mb16">효과적인 의사소통을 위한 비언어적 신호에는 몸짓, 표정, 제스처의 중요성이 있습니다. 몸짓은 말을 보완하며 메시지를 강화하는 역할을 합니다. 표정은 감정을 전달하고 상대방과의 공감을 형성하는 데 중요한 요소입니다.</p>
+							<ul class="btn-link">
+								<li><button type="button" class="question-link">1년 미만 근로자의 경우 개인형퇴직연금 가입시 필요한 서류는?</button></li>
+								<li><button type="button" class="question-link">질문 내용이 노출됩니다</button></li>
+								<li><button type="button" class="question-link">질문 내용이 노출됩니다</button></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal micromodal-slide-bottom-right-full" id="modal-message02" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+						<div class="message-notice">
+							<strong class="fc-status-error">공지</strong>
+							<h2 class="title-large px0 mb12">공지사항 제목이 노출됩니다.</h2>
+							<p class="body-small fc-typography-gray mb16">효과적인 의사소통을 위한 비언어적 신호에는 몸짓, 표정, 제스처의 중요성이 있습니다. 몸짓은 말을 보완하며 메시지를 강화하는 역할을 합니다. 표정은 감정을 전달하고 상대방과의 공감을 형성하는 데 중요한 요소입니다.</p>
+							<ul class="btn-link">
+								<li><button type="button" class="question-link">1년 미만 근로자의 경우 개인형퇴직연금 가입시 필요한 서류는?</button></li>
+								<li><button type="button" class="question-link">질문 내용이 노출됩니다</button></li>
+								<li><button type="button" class="question-link">질문 내용이 노출됩니다</button></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal micromodal-slide-bottom-right-full" id="modal-message03" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+						<div class="message-notice">
+							<strong class="fc-status-error">공지</strong>
+							<h2 class="title-large px0 mb12">공지사항 제목이 노출됩니다.</h2>
+							<p class="body-small fc-typography-gray mb16">효과적인 의사소통을 위한 비언어적 신호에는 몸짓, 표정, 제스처의 중요성이 있습니다. 몸짓은 말을 보완하며 메시지를 강화하는 역할을 합니다. 표정은 감정을 전달하고 상대방과의 공감을 형성하는 데 중요한 요소입니다.</p>
+							<ul class="btn-link">
+								<li><button type="button" class="question-link">1년 미만 근로자의 경우 개인형퇴직연금 가입시 필요한 서류는?</button></li>
+								<li><button type="button" class="question-link">질문 내용이 노출됩니다</button></li>
+								<li><button type="button" class="question-link">질문 내용이 노출됩니다</button></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 1.02,
+			spaceBetween: 8,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+		});
+
+		$('#btn-send-text').click(function() {
+			// $('.input-wrap input').focus()
+			var inputText = $('.input-wrap .textarea').text();
+			console.dir(inputText)
+			$('.chatgroup.chatgroup-body > *:last-child').before('<div class="chatbody"><div class="message-text right"><p class="text">' + inputText + '</p></div></div>')
+			scrollBottom();
+			$('.input-wrap .textarea').text('')
+		})
+
+		// scroll page bottom animation 100%
+		var scrollBottom = function() {
+			var $el = $('.chatgroup.chatgroup-body');
+			var $elDefaultHeight = $(window).height();
+			var scrollTime = 400;
+			$el.stop().animate({
+				scrollTop: $el.prop('scrollHeight')
+			}, scrollTime);
+		}
+		var loadingSpinner = function() {
+			var random = Math.random() * 1000 + 1000; //(1000 ~ 2000 사이)
+			var loading = $('.chat-loading');
+			loading.show();
+			loading.removeClass('hide');
+			loading.addClass('show');
+
+			setTimeout(function() {
+				loading.addClass('hide');
+				loading.removeClass('show');
+				console.log(random)
+			}, random)
+			scrollBottom();
+		}
+
+		$('#btn-send-text').click(function() {
+			loadingSpinner();
+		})
+	</script>
+
+
+	<script>
+		const toggleViewMore = document.querySelectorAll('[data-switch-before="chevron-down"]');
+		toggleViewMore.forEach(function(items) {
+			const toggleViewMoreWrap = items.closest('[data-toggle="toggle-wrap"]');
+			const text = toggleViewMoreWrap.querySelector('p');
+			const textLineHeight = parseInt(window.getComputedStyle(text).lineHeight);
+			const textOuterHeight = parseInt(window.getComputedStyle(text).height);
+			const textLineClamp = text.dataset.line;
+			const textMaxHeight = textLineHeight * textLineClamp;
+			if (textOuterHeight > textMaxHeight) {
+				text.classList.add('line-clamp')
+			} else {
+				items.style.display = 'none'
+			}
+		})
+	</script>
+
+	<script>
+		toastrCont.init();
+		toastr.caution(``, 'AI답변은 부정확할 수 있으니, 근거 확인 후 활용해 주세요.', {
+			"extendedTimeOut": 0,
+			"preventDuplicates": false,
+			"disableTimeOut": true,
+		});
+	</script>
+
+	<script>
+		$(document).on('keyup input', '.textarea', function() {
+			$(this).find('*').removeAttr('style');
+		});
+	</script>
+
+	<script>
+		$('#alert1').click(function(event) {
+			toastr.alert(`<p class="fs-14 fw-500 mt-10">파일 크기나 네트워크 상태에 따라 60초 이상 걸릴 수 있습니다.</p> `, '<div class="file-attach-loading fs-16 fc-brandPrimary-blue400 gap6">파일 다운로드중입니다. (1/4)</div>', {
+				"positionClass": "toast-top-center",
+				// "closeButton": true,
+				"timeOut": 0,
+				"tapToDismiss": false,
+				"extendedTimeOut": 0,
+				"preventDuplicates": false,
+				"disableTimeOut": true,
+			});
+			setTimeout(function() {
+				toastr.alert(``, '<a href="#" class="anchor chevron fs-14 fc-typography-white normal-wrap mr30"><span class="ellipsis">불완전 판매사례 안내.hwp</span></a>', {
+					"positionClass": "toast-top-center",
+					"closeButton": true,
+					"timeOut": 0,
+					"tapToDismiss": false,
+					"extendedTimeOut": 0,
+					"preventDuplicates": false,
+					"disableTimeOut": true,
+				});
+
+			}, 1000);
+
+		});
+	</script>
+</body>
+
+</html>
