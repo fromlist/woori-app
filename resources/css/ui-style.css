@@ -473,6 +473,8 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
 .form-exchange .ex-benefit-wrap dl dd.sub-text {font-size:16px;font-weight:500;color:var(--typography-caption);line-height:1;}
 
 .form-wrap {display:flex;gap:8px;}
+.form-inner-btn {display:flex;gap:8px;}
+.form-inner-btn .btn-border {flex:0 0 52px;}
 
 /* shortcut-button-wrap */
 .shortcut-button-wrap {display:flex;align-items:center;justify-content:center;gap:3px;margin-top:12px;flex-wrap:wrap;}

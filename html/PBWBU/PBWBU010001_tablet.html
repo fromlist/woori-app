@@ -88,43 +88,39 @@
 			<div id="container">
 
 				<!-- content -->
-				<div class="content">
+				<div class="content content-tablet">
 
 					<!-- sticky-content -->
 					<div class="sticky-sentinal"></div>
 					<div class="sticky-content content-fluid">
 						<div class="sticky-content-inner">
 							<!-- form -->
-							<div class="form">
+							<div class="form form-inner-btn form-filter">
 								<div class="label"></div>
 								<div class="input-wrap input-btn">
-									<input type="text" placeholder="이름, 회사명으로 검색해 보세요." aria-label="검색">
+									<input type="text" placeholder="이름, 회사명으로 검색" aria-label="검색">
 									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
 									<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
 								</div>
 								<p class="validate-text"></p>
+								<button class="filter-combination" data-micromodal-trigger="modal-select-filter" aria-label="정렬">
+									<span class="btn-border">
+										<i class="ico-sorting"></i>
+									</span>
+									<span class="sort-list">
+										<span class="filter">
+											<span>전체</span>
+											<i class="badge ml0">3</i>
+										</span>
+										<span class="division mx8"></span>
+										<span class="sort">최신순</span>
+									</span>
+								</button>
 							</div>
 							<!-- //form -->
 						</div>
 					</div>
 					<!-- //sticky-content -->
-
-					<!-- sort-wrap -->
-					<div class="sort-wrap pt4">
-
-						<!-- sort-list -->
-						<button class="sort-list" data-micromodal-trigger="modal-select-filter" aria-label="정렬">
-							<span class="filter">
-								<span>전체</span>
-								<i class="badge ml0">3</i>
-							</span>
-							<span class="division mx8"></span>
-							<span class="sort">최신순</span>
-						</button>
-						<!-- sort-list -->
-
-					</div>
-					<!-- sort-wrap -->
 
 
 					<!-- business-card-customer -->
@@ -494,7 +490,7 @@
 	<!-- //main -->
 
 	<!-- micromodal -->
-	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-select-filter">
+	<div class="micromodal-slide micromodal-slide-bottom micromodal-slide-bottom-right-full modal" id="modal-select-filter">
 		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
 			<div class="modal__container" role="dialog" aria-modal="true">
 

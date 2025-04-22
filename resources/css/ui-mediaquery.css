@@ -16,14 +16,15 @@
     .input-wrap.input-datepicker button {font-size:14px;}
     .stock-index-list a {}
 }
+@media (max-width:767px) {
+    .filter-combination .btn-border {display:flex;}
+    .filter-combination .sort-list {display:none;}
+    .is-mobile {display:block;}
+    .is-tablet {display:none;}
+}
 @media (min-width:768px) {
-    .chatgpt-wrap {display:flex;height:calc(100vh - 52px);overflow:hidden;}
-    .chatgpt-wrap .chatgroup {height:100%;overflow:auto;padding-bottom:24px;}
-
-    .chatgpt-wrap .chatgroup.chatgroup-notice {flex:0 0 360px;}
-    .chatgpt-wrap .chatgroup.chatgroup-body {padding-bottom:calc(69px + 24px);background-color:var(--background-bg_lightBlue);}
-    .chatgpt-wrap .bottom-btn {position:fixed;left:auto;right:0;bottom:0;width:calc(100% - 360px);}
-    .message-notice {width:100%;}
+    .is-mobile {display:none;}
+    .is-tablet {display:block;}
 
     /* ui-plugins */
     #toast-container {max-width:360px;}
@@ -44,5 +45,32 @@
     .micromodal-slide-bottom-right-full[aria-hidden="true"] .modal__container {
         animation:mmslideLeftOut .5s cubic-bezier(0, 0, .2, 1);
     }
+
+    /* ui-style */
+    .customer-contribution-list .stroke.stroke4{display:none;}
+    .customer-contribution-list > * {padding-left: 146px;padding-right: 146px;}
+    .business-card-customer-list {display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:0;}
+    .business-card-customer {padding:24px 40px;border-radius: 8px;border: 1px solid rgba(12, 12, 13, 0.08);box-shadow: 0px 0.5px 0px 0px rgba(12, 12, 13, 0.04), 0px 2px 4px -1px rgba(12, 12, 13, 0.04);}
+
+    /* ui-content */
+    .content-tablet {padding-left:58px;padding-right:58px;}
+    .chatgpt-wrap {display:flex;height:calc(100vh - 52px);overflow:hidden;}
+    .chatgpt-wrap .chatgroup {height:100%;overflow:auto;padding-bottom:24px;}
+
+    .chatgpt-wrap .chatgroup.chatgroup-notice {flex:0 0 360px;}
+    .chatgpt-wrap .chatgroup.chatgroup-body {padding-bottom:calc(69px + 24px);background-color:var(--background-bg_lightBlue);}
+    .chatgpt-wrap .bottom-btn {position:fixed;left:auto;right:0;bottom:0;width:calc(100% - 360px);}
+    .message-notice {width:100%;}
+    .form-filter {justify-content:space-between;}
+    .form-filter .input-wrap {max-width:328px;}
+    .filter-combination .btn-border {display:none;}
+    .filter-combination .sort-list {display:flex;margin-top:0;}
+
+    .content-tablet-row {display:flex;gap:40px;flex-direction:row;max-height:calc(100vh - 52px);overflow:hidden;padding-bottom:0;}
+    .content-tablet-row .content-tablet-left,
+    .content-tablet-row .content-tablet-right {height:100%;overflow:auto;padding-bottom:24px;}
+    .content-tablet-left {flex:0 0 calc(55% - 20px);}
+    .content-tablet-right {flex:0 0 calc(45% - 20px);}
+    .content-tablet-row .bottom-btn {margin:0;}
 }
 
