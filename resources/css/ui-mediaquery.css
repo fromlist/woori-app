@@ -18,10 +18,11 @@
 }
 @media (min-width:768px) {
     .chatgpt-wrap {display:flex;height:calc(100vh - 52px);overflow:hidden;}
-    .chatgpt-wrap .chatgroup {height:100%;overflow:auto;flex:0 0 50%;padding-bottom:24px;}
+    .chatgpt-wrap .chatgroup {height:100%;overflow:auto;padding-bottom:24px;}
 
+    .chatgpt-wrap .chatgroup.chatgroup-notice {flex:0 0 360px;}
     .chatgpt-wrap .chatgroup.chatgroup-body {padding-bottom:calc(69px + 24px);background-color:var(--background-bg_lightBlue);}
-    .chatgpt-wrap .bottom-btn {position:fixed;left:50%;bottom:0;width:50%;}
+    .chatgpt-wrap .bottom-btn {position:fixed;left:auto;right:0;bottom:0;width:calc(100% - 360px);}
     .message-notice {width:100%;}
 
     /* ui-plugins */
