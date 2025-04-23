@@ -26,6 +26,18 @@
     .is-mobile {display:none;}
     .is-tablet {display:block;}
 
+    /* ui-layout */
+    .section-tablet {padding-left:38px;padding-right:38px;}
+    .section-tablet-row {display:flex;flex-direction:row;max-height:calc(100vh - 52px);overflow:hidden;padding-bottom:0;}
+    .section-has-bottom {max-height:calc(100vh - 52px - 76px);}
+    .section-tablet-row .section-tablet-left,
+    .section-tablet-row .section-tablet-right {overflow:auto;padding-bottom:24px;padding:0 20px;}
+    .section-tablet-left {flex:0 0 57.27%;}
+    .section-tablet-right {flex:0 0 42.73%;}
+    .section-tablet-right > .mt40:first-child {margin-top:16px!important;}
+    .section-tablet-row .bottom-btn {margin:0;}
+
+
     /* ui-plugins */
     #toast-container {max-width:360px;}
 
@@ -46,6 +58,8 @@
         animation:mmslideLeftOut .5s cubic-bezier(0, 0, .2, 1);
     }
 
+    .micromodal-slide-bottom-tablet .modal__container {max-height:100%;border-radius:0;}
+
     /* ui-style */
     .customer-contribution-list .stroke.stroke4{display:none;}
     .customer-contribution-list > * {padding-left: 146px;padding-right: 146px;}
@@ -53,7 +67,6 @@
     .business-card-customer {padding:24px 40px;border-radius: 8px;border: 1px solid rgba(12, 12, 13, 0.08);box-shadow: 0px 0.5px 0px 0px rgba(12, 12, 13, 0.04), 0px 2px 4px -1px rgba(12, 12, 13, 0.04);}
 
     /* ui-content */
-    .content-tablet {padding-left:58px;padding-right:58px;}
     .chatgpt-wrap {display:flex;height:calc(100vh - 52px);overflow:hidden;}
     .chatgpt-wrap .chatgroup {height:100%;overflow:auto;padding-bottom:24px;}
 
@@ -66,11 +79,9 @@
     .filter-combination .btn-border {display:none;}
     .filter-combination .sort-list {display:flex;margin-top:0;}
 
-    .content-tablet-row {display:flex;gap:40px;flex-direction:row;max-height:calc(100vh - 52px);overflow:hidden;padding-bottom:0;}
-    .content-tablet-row .content-tablet-left,
-    .content-tablet-row .content-tablet-right {height:100%;overflow:auto;padding-bottom:24px;}
-    .content-tablet-left {flex:0 0 calc(55% - 20px);}
-    .content-tablet-right {flex:0 0 calc(45% - 20px);}
-    .content-tablet-row .bottom-btn {margin:0;}
+    .business-card-info {margin-top:0;}
+
+    .bottom-btn-contact {position:fixed;margin:0 0 58px 58px;}
+    .bottom-btn-contact .info-anchor {box-shadow: 0px 2px 30px -4px rgba(0, 0, 0, 0.15);border-radius:26px;}
 }
 

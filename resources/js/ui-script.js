@@ -11,6 +11,7 @@ $(function () {
     stickyContent.init();
     tippyContent.init();
     tableInnerScroll.init();
+    resizeWindow.init();
     AOS.init({
         once: true,
         offset: 150,
@@ -608,4 +609,47 @@ function scrollReset() {
             top: position - 1,
         });
     }, 1)
+}
+
+let $WINDOW_MODE = '';
+const DESKTOP = 'DESKTOP';
+const TABLET = 'TABLET';
+const MOBILE = 'MOBILE';
+const $html = $('html');
+
+var resizeWindow = {
+    init: function () {
+        resizeWindow.onResize();
+        resizeWindow.sizeCheck();
+    },
+    reset: function () {
+    },
+    sizeCheck: function () {
+        $windowWidth = $(window).outerWidth();
+        var TABLET_SIZE = $windowWidth >= 768;
+        var MOBILE_SIZE = $windowWidth < 768;
+
+        if ((TABLET_SIZE)) {
+            $html.addClass(TABLET);
+            $html.removeClass(DESKTOP);
+            $html.removeClass(MOBILE);
+            $WINDOW_MODE = TABLET;
+        } else {
+            $html.addClass(MOBILE);
+            $html.removeClass(DESKTOP);
+            $html.removeClass(TABLET);
+            $WINDOW_MODE = MOBILE;
+        }
+
+    },
+    onResize: function (callback) {
+        $(window).on('resize', function () {
+            $windowWidth = $(window).outerWidth();
+            resizeWindow.sizeCheck();
+            if (callback !== undefined) {
+                callback();
+            }
+        })
+
+    },
 }

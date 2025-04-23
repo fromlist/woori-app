@@ -29,14 +29,14 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 .modal {font-family:inherit;}
 .micromodal-slide.is-open {position:relative;z-index:var(--modal-zIndex);}
 .modal__container {padding:0;max-width:none;max-height:calc(100% - 40px);flex:1 1 100%;background-color:var(--white-100);border-radius:20px 20px 0 0;display:flex;flex-direction:column;}
-.modal__content {margin:0;line-height:inherit;color:inherit;padding:0;border-radius:0;flex:1 1 calc(100% - 56px);overflow-y:auto;overscroll-behavior: none;}
+.modal__content {margin:0;line-height:inherit;color:inherit;padding:0;border-radius:0;flex:1 1 calc(100% - 52px);overflow-y:auto;overscroll-behavior:none;}
 
 .micromodal-content .modal__overlay {background-color:transparent;}
 
-.modal__header {position:sticky;top:0;left:0;width:100%;padding:14.5px 16px;background-color:var(--white-100);border-radius:20px 20px 0 0;min-height:59px;}
+.modal__header {position:sticky;top:0;left:0;width:100%;padding:11px 16px;background-color:var(--white-100);border-radius:20px 20px 0 0;}
 .modal__header__alert {padding:24px 24px 8px;min-height:56px;gap:10px;}
 .modal__header .modal__title {flex:1 1 100%;display:flex;justify-content:center;min-height:30px;}
-.modal__header .modal__close {position:absolute;right:0;top:0;width:24px;height:24px;padding:14.5px 16px;display:flex;align-items:center;justify-content:center;box-sizing:content-box;}
+.modal__header .modal__close {position:absolute;right:0;top:0;width:24px;height:24px;padding:14px 16px;display:flex;align-items:center;justify-content:center;box-sizing:content-box;}
 .modal__header .modal__close:before {content:'';flex:0 0 24px;width:24px;height:24px;background:url(/resources/images/ico/ico_close.svg) center center / contain no-repeat;display:block;}
 .modal__header__alert .title-large {justify-content:flex-start;}
 .modal__header__alert .modal__close {position:static;padding:0;margin-left:auto;}
@@ -70,16 +70,16 @@ div:where(.swal2-container) button:where(.swal2-close):hover {}
 /* .micromodal-slide-dropdown .modal__container {position:absolute;background-color:var(--white);padding:10px 24px;border-radius:12px;} */
 
 .micromodal-slide[aria-hidden="false"] .modal__overlay {
-    animation: mmfadeIn .5s cubic-bezier(0.0, 0.0, 0.2, 1);
+    animation:mmfadeIn .5s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 .micromodal-slide[aria-hidden="false"] .modal__container {
-    animation: mmslideIn .5s cubic-bezier(0, 0, .2, 1);
+    animation:mmslideIn .5s cubic-bezier(0, 0, .2, 1);
 }
 .micromodal-slide[aria-hidden="true"] .modal__overlay {
-    animation: mmfadeOut .5s cubic-bezier(0.0, 0.0, 0.2, 1);
+    animation:mmfadeOut .5s cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 .micromodal-slide[aria-hidden="true"] .modal__container {
-    animation: mmslideOut .5s cubic-bezier(0, 0, .2, 1);
+    animation:mmslideOut .5s cubic-bezier(0, 0, .2, 1);
 }
 .micromodal-slide-left[aria-hidden="false"] .modal__overlay {
     animation:mmfadeLeftIn .5s cubic-bezier(0.0, 0.0, 0.2, 1);

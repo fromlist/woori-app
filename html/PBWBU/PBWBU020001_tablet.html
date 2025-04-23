@@ -88,240 +88,247 @@
 			<div id="container">
 
 				<!-- content -->
-				<div class="content content-tablet content-tablet-row">
+				<div class="content">
 
-					<!-- content-tablet-left -->
-					<div class="content-tablet-left">
-						<!-- upload-picture -->
-						<div class="upload-picture mt16">
-							<button type="button" class="upload-picture-anchor" id="modalTrigger" aria-label="이미지 확대보기">
-								<picture>
-									<source srcset="/resources/images/@temp/@business_card.png">
-									<img src="/resources/images/@temp/@business_card.png" alt="">
-								</picture>
-							</button>
+
+					<style>
+						@media (min-width:768px) {
+							.main-inner .content {
+								padding-bottom: 0;
+								padding-left: 0;
+								padding-right: 0;
+							}
+						}
+					</style>
+					<!-- section-tablet -->
+					<div class="section-tablet section-tablet-row">
+						<!-- section-tablet-left -->
+						<div class="section-tablet-left">
+							<!-- upload-picture -->
+							<div class="upload-picture mt16">
+								<button type="button" class="upload-picture-anchor" id="modalTrigger" aria-label="이미지 확대보기">
+									<picture>
+										<source srcset="/resources/images/@temp/@business_card.png">
+										<img src="/resources/images/@temp/@business_card.png" alt="">
+									</picture>
+								</button>
+							</div>
+							<!-- //upload-picture -->
+							<div class="is-tablet">
+								<p class="description error body-small fc-typography-caption my40">등록된 고객명함은 현재 소속 지점으로 등록되어 지점 이동 후에는 조회하실 수 없습니다. <br> 개인정보 또는 부적절한 내용 작성을 금지하며, 마케팅 정보로 이용할 수 없습니다.</p>
+							</div>
 						</div>
-						<!-- //upload-picture -->
-
-
-
-
-						<div class="is-tablet">
-							<p class="description error body-small fc-typography-caption my40">등록된 고객명함은 현재 소속 지점으로 등록되어 지점 이동 후에는 조회하실 수 없습니다. <br> 개인정보 또는 부적절한 내용 작성을 금지하며, 마케팅 정보로 이용할 수 없습니다.</p>
-						</div>
-
-					</div>
-					<!-- //content-tablet-left -->
-
-					<!-- content-tablet-right -->
-					<div class="content-tablet-right">
-						<!-- business-card-info -->
-						<div class="business-card-info mt40">
-							<div class="info-title">
-								<div class="info-name">
-									<div class="info-thumb">
-										<picture>
-											<source srcset="/resources/images/ico/ico_profile.svg">
-											<img src="/resources/images/ico/ico_profile.svg" alt="">
-										</picture>
-										<strong class="headline-small">나고객</strong>
+						<!-- //section-tablet-left -->
+                         
+						<!-- section-tablet-right -->
+						<div class="section-tablet-right">
+							<!-- business-card-info -->
+							<div class="business-card-info">
+								<div class="info-title">
+									<div class="info-name">
+										<div class="info-thumb">
+											<picture>
+												<source srcset="/resources/images/ico/ico_profile.svg">
+												<img src="/resources/images/ico/ico_profile.svg" alt="">
+											</picture>
+											<strong class="headline-small">나고객</strong>
+										</div>
+										<button type="button" class="btn-more" data-micromodal-trigger="modal-dropdown-list" aria-label="수정 및 삭제"></button>
 									</div>
-									<button type="button" class="btn-more" data-micromodal-trigger="modal-dropdown-list" aria-label="수정 및 삭제"></button>
+									<div class="divide-list mt16 px4">
+										<div class="tags-wrap mr10">
+											<div class="tags tags-medium tags-lightBlue"><i class="icon-only icon-18 icon-keyman"></i>키맨</div>
+										</div>
+										<span>부서명</span>
+										<div class="division h14 mx8"></div>
+										<span>직책</span>
+									</div>
 								</div>
-								<div class="divide-list mt16 px4">
-									<div class="tags-wrap mr10">
-										<div class="tags tags-medium tags-lightBlue"><i class="icon-only icon-18 icon-keyman"></i>키맨</div>
+								<div class="info-detail-list mt24">
+									<div class="info-table">
+										<div class="info-body">
+											<div class="info-row">
+												<div class="info-th">회사</div>
+												<div class="info-td">
+													<div class="group gap10 py0">
+														<span>회사이름</span>
+														<a href="#" class="anchor chevron fs-16">기업조회</a>
+													</div>
+												</div>
+											</div>
+											<div class="info-row">
+												<div class="info-th">휴대폰</div>
+												<div class="info-td">010-****-5736</div>
+											</div>
+											<div class="info-row">
+												<div class="info-th">이메일</div>
+												<div class="info-td">**c@a**.com</div>
+											</div>
+											<div class="info-row">
+												<div class="info-th">전화번호</div>
+												<div class="info-td">02-****-5678</div>
+											</div>
+											<div class="info-row">
+												<div class="info-th">팩스번호</div>
+												<div class="info-td">02-****-4321</div>
+											</div>
+										</div>
 									</div>
-									<span>부서명</span>
-									<div class="division h14 mx8"></div>
-									<span>직책</span>
 								</div>
 							</div>
-							<div class="info-detail-list mt24">
+							<!-- //business-card-info -->
+							<!-- group -->
+							<div class="group py0 px4 mt24">
+								<strong class="title-large">메모</strong>
+							</div>
+							<!-- group -->
+							<!-- memo-list -->
+							<div class="memo-list mt8">
+								<div class="memo-inner" data-toggle="toggle-wrap">
+									<div class="tag-wrap mb12">
+										<div class="tags tags-small tags-white tags-round">나만보기</div>
+									</div>
+									<p data-line="3">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+									<div class="memo-btn">
+										<div class="left">
+											<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
+												<span class="toggle-off">더보기</span>
+												<span class="toggle-on">접기</span>
+											</button>
+										</div>
+										<div class="right">
+											<button type="button" class="btn-noborder"><i class="ico-modify"></i>수정</button>
+											<button type="button" class="btn-noborder"><i class="ico-delete"></i>삭제</button>
+										</div>
+									</div>
+									<dl>
+										<dt>작성자이름</dt>
+										<dd>2024-11-06 10:48</dd>
+									</dl>
+									<div class="divide-list">
+										<span>부서명</span>
+										<div class="division h14 mx8"></div>
+										<span>부서명</span>
+									</div>
+								</div>
+								<div class="memo-inner" data-toggle="toggle-wrap">
+									<p data-line="3">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
+									<div class="memo-btn">
+										<div class="left">
+											<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
+												<span class="toggle-off">더보기</span>
+												<span class="toggle-on">접기</span>
+											</button>
+										</div>
+										<div class="right">
+											<button type="button" class="btn-noborder"><i class="ico-modify"></i>수정</button>
+											<button type="button" class="btn-noborder"><i class="ico-delete"></i>삭제</button>
+										</div>
+									</div>
+									<dl>
+										<dt>작성자이름</dt>
+										<dd>2024-11-06 10:48</dd>
+									</dl>
+									<div class="divide-list">
+										<span>부서명</span>
+										<div class="division h14 mx8"></div>
+										<span>부서명</span>
+									</div>
+								</div>
+							</div>
+							<!-- //memo-list -->
+							<div class="btn-wrap">
+								<button type="button" class="btn-xsmall btn-outlined btn-round" data-micromodal-trigger="modal-memo">전체보기</button>
+							</div>
+							<!-- nodata-wrap -->
+							<div class="nodata-wrap mt8 py32">
+								<p class="description caution body-large ac">등록된 메모가 없습니다.</p>
+								<div class="btn-wrap pb0">
+									<button type="button" class="btn-xsmall btn-outlined btn-round" data-micromodal-trigger="modal-memo-write"><i class="ico-memo"></i>메모 등록</button>
+								</div>
+							</div>
+							<!-- //nodata-wrap -->
+							<div class="stroke my24"></div>
+							<!-- group -->
+							<div class="group py0 px4">
+								<strong class="title-large">등록/만료 정보</strong>
+								<button type="button" class="anchor chevron fs-16" data-micromodal-trigger="modal-bscard-change-history">변경 내역</button>
+							</div>
+							<!-- group -->
+							<!-- info-detail-list -->
+							<div class="info-detail-list mt10 pb32">
 								<div class="info-table">
 									<div class="info-body">
 										<div class="info-row">
-											<div class="info-th">회사</div>
+											<div class="info-th">등록자</div>
 											<div class="info-td">
-												<div class="group gap10 py0">
-													<span>회사이름</span>
-													<a href="#" class="anchor chevron fs-16">기업조회</a>
+												<div>나우리</div>
+												<div class="divide-list mt4">
+													<span>부서명</span>
+													<div class="division h14 mx8"></div>
+													<span>직책</span>
 												</div>
 											</div>
 										</div>
 										<div class="info-row">
-											<div class="info-th">휴대폰</div>
-											<div class="info-td">010-****-5736</div>
+											<div class="info-th">공유일</div>
+											<div class="info-td">2024-11-22</div>
 										</div>
 										<div class="info-row">
-											<div class="info-th">이메일</div>
-											<div class="info-td">**c@a**.com</div>
+											<div class="info-th">최종수정자</div>
+											<div class="info-td">
+												<div>나은행</div>
+												<div class="divide-list mt4">
+													<span>부서명</span>
+													<div class="division h14 mx8"></div>
+													<span>직책</span>
+												</div>
+											</div>
 										</div>
 										<div class="info-row">
-											<div class="info-th">전화번호</div>
-											<div class="info-td">02-****-5678</div>
+											<div class="info-th">최종수정일</div>
+											<div class="info-td">2024-11-22</div>
 										</div>
 										<div class="info-row">
-											<div class="info-th">팩스번호</div>
-											<div class="info-td">02-****-4321</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- //business-card-info -->
-						<!-- group -->
-						<div class="group py0 px4 mt24">
-							<strong class="title-large">메모</strong>
-						</div>
-						<!-- group -->
-						<!-- memo-list -->
-						<div class="memo-list mt8">
-							<div class="memo-inner" data-toggle="toggle-wrap">
-								<div class="tag-wrap mb12">
-									<div class="tags tags-small tags-white tags-round">나만보기</div>
-								</div>
-								<p data-line="3">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
-								<div class="memo-btn">
-									<div class="left">
-										<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
-											<span class="toggle-off">더보기</span>
-											<span class="toggle-on">접기</span>
-										</button>
-									</div>
-									<div class="right">
-										<button type="button" class="btn-noborder"><i class="ico-modify"></i>수정</button>
-										<button type="button" class="btn-noborder"><i class="ico-delete"></i>삭제</button>
-									</div>
-								</div>
-								<dl>
-									<dt>작성자이름</dt>
-									<dd>2024-11-06 10:48</dd>
-								</dl>
-								<div class="divide-list">
-									<span>부서명</span>
-									<div class="division h14 mx8"></div>
-									<span>부서명</span>
-								</div>
-							</div>
-							<div class="memo-inner" data-toggle="toggle-wrap">
-								<p data-line="3">이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다 이곳에 내용이 들어갑니다</p>
-								<div class="memo-btn">
-									<div class="left">
-										<button type="button" class="anchor chevron chevron-down fs-15" data-toggle="toggle-trigger" data-switch-before="chevron-down" data-switch-after="chevron-up">
-											<span class="toggle-off">더보기</span>
-											<span class="toggle-on">접기</span>
-										</button>
-									</div>
-									<div class="right">
-										<button type="button" class="btn-noborder"><i class="ico-modify"></i>수정</button>
-										<button type="button" class="btn-noborder"><i class="ico-delete"></i>삭제</button>
-									</div>
-								</div>
-								<dl>
-									<dt>작성자이름</dt>
-									<dd>2024-11-06 10:48</dd>
-								</dl>
-								<div class="divide-list">
-									<span>부서명</span>
-									<div class="division h14 mx8"></div>
-									<span>부서명</span>
-								</div>
-							</div>
-						</div>
-						<!-- //memo-list -->
-						<div class="btn-wrap">
-							<button type="button" class="btn-xsmall btn-outlined btn-round" data-micromodal-trigger="modal-memo">전체보기</button>
-						</div>
-						<!-- nodata-wrap -->
-						<div class="nodata-wrap mt8 py32">
-							<p class="description caution body-large ac">등록된 메모가 없습니다.</p>
-							<div class="btn-wrap pb0">
-								<button type="button" class="btn-xsmall btn-outlined btn-round" data-micromodal-trigger="modal-memo-write"><i class="ico-memo"></i>메모 등록</button>
-							</div>
-						</div>
-						<!-- //nodata-wrap -->
-						<div class="stroke my24"></div>
-						<!-- group -->
-						<div class="group py0 px4">
-							<strong class="title-large">등록/만료 정보</strong>
-							<button type="button" class="anchor chevron fs-16" data-micromodal-trigger="modal-bscard-change-history">변경 내역</button>
-						</div>
-						<!-- group -->
-						<!-- info-detail-list -->
-						<div class="info-detail-list mt10 pb32">
-							<div class="info-table">
-								<div class="info-body">
-									<div class="info-row">
-										<div class="info-th">등록자</div>
-										<div class="info-td">
-											<div>나우리</div>
-											<div class="divide-list mt4">
-												<span>부서명</span>
-												<div class="division h14 mx8"></div>
-												<span>직책</span>
+											<div class="info-th">만료일</div>
+											<div class="info-td">
+												<div class="group gap8 py0 j-start flex-wrap">
+													<div>2024-11-22</div>
+													<div class="tags tags-small tags-lightRed">삭제예정</div>
+													<button type="button" class="btn-xsmall btn-outlined btn-round">연장</button>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="info-row">
-										<div class="info-th">공유일</div>
-										<div class="info-td">2024-11-22</div>
-									</div>
-									<div class="info-row">
-										<div class="info-th">최종수정자</div>
-										<div class="info-td">
-											<div>나은행</div>
-											<div class="divide-list mt4">
-												<span>부서명</span>
-												<div class="division h14 mx8"></div>
-												<span>직책</span>
-											</div>
-										</div>
-									</div>
-									<div class="info-row">
-										<div class="info-th">최종수정일</div>
-										<div class="info-td">2024-11-22</div>
-									</div>
-									<div class="info-row">
-										<div class="info-th">만료일</div>
-										<div class="info-td">
-											<div class="group gap8 py0 j-start flex-wrap">
-												<div>2024-11-22</div>
-												<div class="tags tags-small tags-lightRed">삭제예정</div>
-												<button type="button" class="btn-xsmall btn-outlined btn-round">연장</button>
-											</div>
-										</div>
-									</div>
-									<div class="info-row">
-										<div class="info-th">만료일</div>
-										<div class="info-td">
-											<div class="group gap8 py0 j-start flex-wrap">
-												<div>2024-11-22</div>
-												<div class="tags tags-small tags-lightBlue">D-30</div>
-												<button type="button" class="btn-xsmall btn-outlined btn-round">연장</button>
+										<div class="info-row">
+											<div class="info-th">만료일</div>
+											<div class="info-td">
+												<div class="group gap8 py0 j-start flex-wrap">
+													<div>2024-11-22</div>
+													<div class="tags tags-small tags-lightBlue">D-30</div>
+													<button type="button" class="btn-xsmall btn-outlined btn-round">연장</button>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							<!-- //info-detail-list -->
+							<div class="is-mobile">
+								<p class="description error body-small fc-typography-caption my40">등록된 고객명함은 현재 소속 지점으로 등록되어 지점 이동 후에는 조회하실 수 없습니다. <br> 개인정보 또는 부적절한 내용 작성을 금지하며, 마케팅 정보로 이용할 수 없습니다.</p>
+							</div>
+							<!-- btn-wrap -->
+							<!-- <div class="btn-wrap">
+                                                    <button type="button" class="btn-large btn-outlined">삭제</button>
+                                                    <button type="button" class="btn-large btn-primary">수정</button>
+                                                </div> -->
+							<!-- //btn-wrap -->
 						</div>
-						<!-- //info-detail-list -->
-						<div class="is-mobile">
-							<p class="description error body-small fc-typography-caption my40">등록된 고객명함은 현재 소속 지점으로 등록되어 지점 이동 후에는 조회하실 수 없습니다. <br> 개인정보 또는 부적절한 내용 작성을 금지하며, 마케팅 정보로 이용할 수 없습니다.</p>
-						</div>
-						<!-- btn-wrap -->
-						<!-- <div class="btn-wrap">
-                            <button type="button" class="btn-large btn-outlined">삭제</button>
-                            <button type="button" class="btn-large btn-primary">수정</button>
-                        </div> -->
-						<!-- //btn-wrap -->
+						<!-- //section-tablet-right -->
 					</div>
-					<!-- //content-tablet-right -->
+					<!-- //section-tablet -->
+
 				</div>
 				<!-- //content -->
-
-
-
 
 			</div>
 			<!-- //container -->
@@ -333,7 +340,7 @@
 
 
 		<!-- bottom-btn -->
-		<div class="bottom-btn">
+		<div class="bottom-btn bottom-btn-contact">
 			<div class="info-anchor">
 				<ul>
 					<li>
@@ -664,6 +671,28 @@
 				items.style.display = 'none'
 			}
 		})
+	</script>
+	<script>
+		$(function() {
+			// textarea length
+			const bottomBtn = $('.bottom-btn-contact');
+			const sectionLeft = $('.section-tablet-left');
+			let sectionLeftWidth = sectionLeft.width();
+			if ($('html').hasClass('TABLET')) {
+				bottomBtn.css('width', sectionLeftWidth);
+			} else {
+				bottomBtn.css('width', '');
+			}
+
+			$(window).on('resize', function() {
+				sectionLeftWidth = sectionLeft.width();
+				if ($('html').hasClass('TABLET')) {
+					bottomBtn.css('width', sectionLeftWidth);
+				} else {
+					bottomBtn.css('width', '');
+				}
+			});
+		});
 	</script>
 </body>
 
