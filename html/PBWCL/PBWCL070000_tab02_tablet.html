@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script><!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>기업정보 상세</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<!-- customer-card-list -->
+					<div class="customer-info-list mb-24">
+
+						<div class="customer-info-title">
+							<strong class="headline-large ac">삼성중공업(주)</strong>
+							<div class="tag-wrap">
+								<div class="tags tags-medium tags-white">대표자 : 가의정</div>
+							</div>
+						</div>
+
+						<!-- tab-content -->
+						<div class="tab-content tab-fluid tab-sticky">
+							<ul class="tab-list tab-col overflow-list px24" role="tablist">
+								<li class="tab"><a role="tab" href="#">기업일반</a></li>
+								<li class="tab tab-active"><a role="tab" href="#">기업신용</a></li>
+								<li class="tab"><a role="tab" href="#">재무정보</a></li>
+								<li class="tab"><a role="tab" href="#">종합의견</a></li>
+								<li class="tab"><a role="tab" href="#">연혁</a></li>
+								<li class="tab"><a role="tab" href="#">경영진현황</a></li>
+								<li class="tab"><a role="tab" href="#">거래처현황</a></li>
+								<li class="tab"><a role="tab" href="#">주요주주현황</a></li>
+							</ul>
+						</div>
+						<!-- //tab-content -->
+
+						<div class="tablet-maxwidth tablet-maxwidth-fluid bg-background-bg_white">
+							<a class="ui-tab ui-tab-prev" aria-label="이전 탭"></a>
+							<a class="ui-tab ui-tab-next" aria-label="다음 탭"></a>
+							<!-- customer-contribution-list -->
+							<div class="customer-contribution-list content-fluid px0">
+								<!-- box -->
+								<div class="box">
+									<h2 class="headline-small">기업 등급</h2>
+									<div class="grade-wrap mt24">
+										<div class="grade-circle rate-BBB">
+											<div class="rate">BBB+</div>
+										</div>
+										<dl>
+											<div class="list">
+												<dt>평가일자</dt>
+												<dd>2024-03-08</dd>
+											</div>
+											<div class="list">
+												<dt>결산기준일</dt>
+												<dd>2022-12-31</dd>
+											</div>
+											<div class="list">
+												<dt>등급구분</dt>
+												<dd>모형등급</dd>
+											</div>
+										</dl>
+									</div>
+									<h3 class="title-medium mt32">기업 등급 이력</h3>
+									<div class="table-col content-fluid overflow-visible px0 mt24 mx-24">
+										<table>
+											<caption>기업 등급 이력</caption>
+											<thead>
+												<tr>
+													<th scope="col">신용등급</th>
+													<th scope="col">평가(산출)일자</th>
+													<th scope="col">결산기준일</th>
+													<th scope="col">등급구분</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>BBB+</td>
+													<td>2024-03-08</td>
+													<td>2024-03-08</td>
+													<td>모형등급</td>
+												</tr>
+												<tr>
+													<td>BBB</td>
+													<td>2024-03-08</td>
+													<td>2024-03-08</td>
+													<td>모형등급</td>
+												</tr>
+												<tr>
+													<td>B</td>
+													<td>2024-03-08</td>
+													<td>2024-03-08</td>
+													<td>모형등급</td>
+												</tr>
+												<tr>
+													<td>B+</td>
+													<td>2024-03-08</td>
+													<td>2024-03-08</td>
+													<td>모형등급</td>
+												</tr>
+												<tr>
+													<td>BB+</td>
+													<td>2024-03-08</td>
+													<td>2024-03-08</td>
+													<td>모형등급</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- //box -->
+								<!-- box -->
+								<div class="box">
+									<h2 class="headline-small">기타 신용정보</h2>
+									<div class="caption-visible mt24">(단위: 천원)</div>
+									<div class="table-col">
+										<table>
+											<caption>기타 신용정보</caption>
+											<thead>
+												<tr>
+													<th scope="col">구분</th>
+													<th scope="col">건수</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row" class="al">채무불이행</th>
+													<td class="ar">0</td>
+												</tr>
+												<tr>
+													<th scope="row" class="al">당좌거래정지</th>
+													<td class="ar">0</td>
+												</tr>
+												<tr>
+													<th scope="row" class="al">법정관리/회의</th>
+													<td class="ar">0</td>
+												</tr>
+												<tr>
+													<th scope="row" class="al">카드발급/당좌개설</th>
+													<td class="ar">12</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- //box -->
+								<div class="stroke stroke4"></div>
+								<!-- box -->
+								<div class="box">
+									<h2 class="headline-small">휴폐업 정보</h2>
+									<div class="caption-visible mt24">(단위: 명)</div>
+									<div class="table-col">
+										<table>
+											<caption>휴폐업 정보</caption>
+											<thead>
+												<tr>
+													<th scope="col">기준일자</th>
+													<th scope="col">휴폐업상태</th>
+													<th scope="col">발생일자</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>2024-03-10</td>
+													<td>부가가치세 <br> 일반 과세자</td>
+													<td>-</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- //box -->
+							</div>
+							<!-- //customer-contribution-list -->
+						</div>
+
+
+
+
+					</div>
+					<!-- //customer-card-list -->
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+	</main>
+	<!-- //main -->
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script><!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>기업정보 상세</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<!-- customer-card-list -->
+					<div class="customer-info-list mb-24">
+
+						<div class="customer-info-title">
+							<strong class="headline-large ac">삼성중공업(주)</strong>
+							<div class="tag-wrap">
+								<div class="tags tags-medium tags-white">대표자 : 가의정</div>
+							</div>
+						</div>
+
+						<!-- tab-content -->
+						<div class="tab-content tab-fluid tab-sticky">
+							<ul class="tab-list tab-col overflow-list px24" role="tablist">
+								<li class="tab"><a role="tab" href="#">기업일반</a></li>
+								<li class="tab"><a role="tab" href="#">기업신용</a></li>
+								<li class="tab"><a role="tab" href="#">재무정보</a></li>
+								<li class="tab"><a role="tab" href="#">종합의견</a></li>
+								<li class="tab"><a role="tab" href="#">연혁</a></li>
+								<li class="tab"><a role="tab" href="#">경영진현황</a></li>
+								<li class="tab"><a role="tab" href="#">거래처현황</a></li>
+								<li class="tab tab-active"><a role="tab" href="#">주요주주현황</a></li>
+							</ul>
+						</div>
+						<!-- //tab-content -->
+
+						<div class="tablet-maxwidth tablet-maxwidth-fluid bg-background-bg_white">
+							<a class="ui-tab ui-tab-prev" aria-label="이전 탭"></a>
+							<a class="ui-tab ui-tab-next" aria-label="다음 탭"></a>
+							<!-- customer-contribution-list -->
+							<div class="customer-contribution-list content-fluid px0">
+								<!-- box -->
+								<div class="box">
+									<h2 class="headline-small">주요주주 현황</h2>
+									<div class="caption-visible mt24">기준일자 : 2022-08-16</div>
+									<div class="table-col content-fluid overflow-visible px0 mx-24">
+										<table class="column01-sticky">
+											<caption>주요주주 현황</caption>
+											<thead>
+												<tr>
+													<th scope="col" rowspan="2">주주명</th>
+													<th scope="colgroup" colspan="3">지분율</th>
+													<th scope="col" rowspan="2">경영실권자와의 관계</th>
+												</tr>
+												<tr>
+													<th scope="col">보통주</th>
+													<th scope="col">우선주</th>
+													<th scope="col">합계</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>삼성전자</td>
+													<td>00.00</td>
+													<td>미등기</td>
+													<td>대표이사</td>
+													<td>타인</td>
+												</tr>
+												<tr>
+													<td>삼성전자</td>
+													<td>00.00</td>
+													<td>미등기</td>
+													<td>대표이사</td>
+													<td>타인</td>
+												</tr>
+												<tr>
+													<td>삼성전자</td>
+													<td>00.00</td>
+													<td>미등기</td>
+													<td>대표이사</td>
+													<td>타인</td>
+												</tr>
+												<tr>
+													<td>삼성전자</td>
+													<td>00.00</td>
+													<td>미등기</td>
+													<td>대표이사</td>
+													<td>타인</td>
+												</tr>
+												<tr>
+													<td>삼성전자</td>
+													<td>00.00</td>
+													<td>미등기</td>
+													<td>대표이사</td>
+													<td>타인</td>
+												</tr>
+												<tr>
+													<td>삼성전자</td>
+													<td>00.00</td>
+													<td>미등기</td>
+													<td>대표이사</td>
+													<td>타인</td>
+												</tr>
+												<tr>
+													<td colspan="5">
+														<p class="description caution body-small d-inflex">내용이 없습니다.</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- //box -->
+							</div>
+							<!-- //customer-contribution-list -->
+						</div>
+
+					</div>
+					<!-- //customer-card-list -->
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+	</main>
+	<!-- //main -->
+
+
+
+</body>
+
+</html>

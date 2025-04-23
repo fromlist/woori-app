@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script><!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>고객기여도 조회</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+
+					<!-- group-form -->
+					<div class="group-form mt16">
+						<div class="group-title">
+							<strong class="title-medium">통합고객번호 <i class="apos" aria-label="필수 입력">*</i></strong>
+						</div>
+						<div class="group-content">
+							<div class="form">
+								<div class="input-wrap input-btn">
+									<input type="button" value=" " aria-label="통합고객번호" data-micromodal-trigger="modal-number-search">
+									<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+									<button type="button" class="input-search" data-micromodal-trigger="modal-number-search" aria-label="입력 내용 검색"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-title">
+							<strong class="title-medium">대상기간</strong>
+						</div>
+						<div class="group-content">
+							<div class="form">
+								<div class="input-wrap input-datepicker">
+									<button type="button" aria-label="대상기간 시작일" data-micromodal-trigger="modal-datepicker-month1">2023-11</button>
+									<div class="bul">-</div>
+									<button type="button" aria-label="대상기간 종료일" data-micromodal-trigger="modal-datepicker-month2">2024-10</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+
+					<!-- group-form -->
+					<div class="group-form mt40">
+						<div class="group-title">
+							<strong class="title-medium">처리구분</strong>
+						</div>
+						<div class="group-content">
+							<div class="form">
+								<div class="inp-group">
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad002">
+											<span class="label-title">전점 동일인</span>
+										</label>
+									</div>
+									<div class="inp inp-medium">
+										<label>
+											<input type="radio" name="rad002">
+											<span class="label-title">자점 동일인</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //group-form -->
+
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-outlined">초기화</button>
+				<button type="button" class="btn-large btn-primary"><i class="ico-check"></i>조회</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- //main -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom micromodal-slide-bottom-full modal" id="modal-number-search">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header">
+					<strong class="modal__title title-medium">통합고객번호 검색</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content pb0">
+
+						<!-- tab-content -->
+						<div class="tab-content tab-sticky mb32">
+							<ul class="tab-list tab-col overflow-list" role="tablist">
+								<li class="tab tab-active"><a role="tab" href="#">법인/사업자번호</a></li>
+								<li class="tab"><a role="tab" href="#">고객명</a></li>
+								<li class="tab"><a role="tab" href="#">계좌번호</a></li>
+							</ul>
+						</div>
+						<!-- //tab-content -->
+
+						<div class="group-form mb8">
+							<div class="group-content">
+								<div class="form">
+									<div class="inp-group">
+										<div class="inp inp-medium">
+											<label>
+												<input type="radio" name="rad003">
+												<span class="label-title">법인</span>
+											</label>
+										</div>
+										<div class="inp inp-medium">
+											<label>
+												<input type="radio" name="rad003">
+												<span class="label-title">사업자</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- form -->
+						<div class="form">
+							<div class="label"></div>
+							<div class="input-wrap input-btn">
+								<input type="tel" placeholder="‘-’ 없이 숫자만 입력해주세요." aria-label="검색">
+								<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+								<button type="button" class="input-search" aria-label="입력 내용 검색"></button>
+							</div>
+							<p class="validate-text"></p>
+						</div>
+						<!-- //form -->
+
+
+						<!-- division-center -->
+						<div class="division-center content-fluid bg-background-bg_lightGray px16 py40 mt16">
+
+							<!-- customer-card-list -->
+							<div class="customer-card-list">
+								<strong class="search-result">검색결과</strong>
+								<a href="#" class="customer-card">
+									<strong class="title-medium">홍길동</strong>
+									<dl class="group">
+										<dt>실명번호</dt>
+										<dd>1013456123</dd>
+									</dl>
+									<dl class="group">
+										<dt>실명번호구분</dt>
+										<dd>사업자등록번호</dd>
+									</dl>
+									<dl class="group">
+										<dt>통합고객번호</dt>
+										<dd>10219022371</dd>
+									</dl>
+									<dl class="group">
+										<dt>여권발급국가</dt>
+										<dd>99</dd>
+									</dl>
+									<dl class="group">
+										<dt>잠재고객여부</dt>
+										<dd>Y</dd>
+									</dl>
+								</a>
+
+								<a href="#" class="customer-card" data-micromodal-close>
+									<strong class="title-medium">홍길동</strong>
+									<dl class="group">
+										<dt>실명번호</dt>
+										<dd>1013456123</dd>
+									</dl>
+									<dl class="group">
+										<dt>실명번호구분</dt>
+										<dd>사업자등록번호</dd>
+									</dl>
+									<dl class="group">
+										<dt>통합고객번호</dt>
+										<dd>10219022371</dd>
+									</dl>
+									<dl class="group">
+										<dt>여권발급국가</dt>
+										<dd>99</dd>
+									</dl>
+									<dl class="group">
+										<dt>잠재고객여부</dt>
+										<dd>Y</dd>
+									</dl>
+								</a>
+							</div>
+							<!-- //customer-card-list -->
+
+						</div>
+						<!-- //division-center -->
+
+
+
+
+						<!-- division-center -->
+						<div class="division-center content-fluid bg-background-bg_lightGray mt16">
+
+							<div class="no-result">
+								<i class="icon-only icon-48 icon-noresult bg-icon-gray_1"></i>
+								<p class="body-medium fw-400">검색 결과가 없습니다.</p>
+							</div>
+
+						</div>
+						<!-- //division-center -->
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal micromodal-slide-bottom-right-full" id="modal-datepicker-month1" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+						<div class="datepicker-wrap datepicker-wrap-month">
+							<div class="datepicker-trigger" id="datepicker_month1"></div>
+
+							<div class="stroke my24"></div>
+							<p class="description info body-small fc-typography-caption">대상기간은 전월/전전월 기준 1년 이내만 가능합니다.</p>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal micromodal-slide-bottom-right-full" id="modal-datepicker-month2" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+						<div class="datepicker-wrap datepicker-wrap-month">
+							<div class="datepicker-trigger" id="datepicker_month2"></div>
+
+							<div class="stroke my24"></div>
+							<p class="description info body-small fc-typography-caption">대상기간은 전월/전전월 기준 1년 이내만 가능합니다.</p>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<script>
+		const monthTrigger1 = document.querySelectorAll('[data-micromodal-trigger="modal-datepicker-month1"]')
+		monthTrigger1.forEach(function(button) {
+			button.addEventListener("click", function(event) {
+				MicroModal.show('modal-datepicker-month1', {
+					// openTrigger: 'data-custom-open', // [3]
+					// closeTrigger: 'data-custom-close', // [4]
+					// openClass: 'is-open', // [5]
+					disableScroll: true, // [6]
+					disableFocus: true, // [7]
+					awaitOpenAnimation: true, // [8]
+					awaitCloseAnimation: true, // [9]
+					// debugMode: true // [10]
+					onShow: function() {
+						$('#datepicker_month1').monthpicker({
+							dateFormat: 'yy-mm',
+							prevText: '이전 달',
+							nextText: '다음 달',
+							monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+							monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							showMonthAfterYear: true,
+
+							closeText: "닫기",
+							onSelect: function(input, date) {
+								MicroModal.close('modal-datepicker-month1');
+								button.innerText = input;
+							},
+						});
+					},
+					onClose: function() {
+						// $("#datepicker_month").datepicker("destroy")
+					}
+				});
+			});
+		})
+
+		const monthTrigger2 = document.querySelectorAll('[data-micromodal-trigger="modal-datepicker-month2"]')
+		monthTrigger2.forEach(function(button) {
+			button.addEventListener("click", function(event) {
+				MicroModal.show('modal-datepicker-month2', {
+					// openTrigger: 'data-custom-open', // [3]
+					// closeTrigger: 'data-custom-close', // [4]
+					// openClass: 'is-open', // [5]
+					disableScroll: true, // [6]
+					disableFocus: true, // [7]
+					awaitOpenAnimation: true, // [8]
+					awaitCloseAnimation: true, // [9]
+					// debugMode: true // [10]
+					onShow: function() {
+						$('#datepicker_month2').monthpicker({
+							dateFormat: 'yy-mm',
+							prevText: '이전 달',
+							nextText: '다음 달',
+							monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+							monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+							showMonthAfterYear: true,
+
+							closeText: "닫기",
+							onSelect: function(input, date) {
+								MicroModal.close('modal-datepicker-month2');
+								button.innerText = input;
+							},
+						});
+					},
+					onClose: function() {
+						// $("#datepicker_month").datepicker("destroy")
+					}
+				});
+			});
+		})
+	</script>
+
+</body>
+
+</html>
