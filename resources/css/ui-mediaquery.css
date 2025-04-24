@@ -89,16 +89,19 @@
     .chatgpt-wrap .chatgroup.chatgroup-notice {flex:0 0 360px;}
     .chatgpt-wrap .chatgroup.chatgroup-body {padding-bottom:calc(69px + 24px);background-color:var(--background-bg_lightBlue);}
     .chatgpt-wrap .bottom-btn {position:fixed;left:auto;right:0;bottom:0;width:calc(100% - 360px);}
+
     .message-notice {width:100%;}
+
     .form-filter {justify-content:space-between;}
     .form-filter .input-wrap {max-width:328px;}
     .filter-combination .btn-border {display:none;}
     .filter-combination .sort-list {display:flex;margin-top:0;}
 
-    .business-card-info {margin-top:0;}
-
+    .business-card-info {margin-top:16px;}
+    .upload-picture .upload-type-select {height:29.6vw;}
     .bottom-btn-contact {position:fixed;margin:0 0 58px 58px;}
-    .bottom-btn-contact .info-anchor {box-shadow:0px 2px 30px -4px rgba(0, 0, 0, 0.15);border-radius:26px;}
+    .bottom-btn-contact .info-anchor {box-shadow:0px 2px 30px -4px rgba(0, 0, 0, 0.15);border-radius:26px;padding:8px 32px;}
+    .info-anchor ul li button {height:82px;justify-content:center;}
 
     .tablet-grid {display:grid;grid-template-columns:repeat(2, 1fr);gap:12px;}
     .tablet-grid.tablet-grid-3 {display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;}
