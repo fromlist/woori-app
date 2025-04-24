@@ -96,6 +96,17 @@
 						body {
 							background-color: var(--background-bg_lightGray);
 						}
+
+						@media (max-width:360px) {
+							.fs-responsive {
+								padding-left: 0;
+							}
+
+							.fs-responsive ul {
+								font-size: 14px;
+							}
+						}
+					</style>
 					</style>
 
 
@@ -482,36 +493,41 @@
 
 						<strong class="title-large py16">매수 방법</strong>
 
-						<div class="box-gray">
+						<div class="box-gray fs-responsive">
 							<ul class="dot-list px0">
-								<li>17시00분 이전~제03영업일기준가</li>
-								<li>17시00분 이후~제04영업일기준가</li>
-								<li>역외펀드의 경우 15시 00분 이후-신청불가</li>
+								<li id="scnt1" style="display: none;"></li>
+								<li id="scnt2" style="display: none;"></li>
+								<li>
+									<table>
+										<tr>
+											<td class="nowrap vt" style="width:0;">외화펀드 매수신청 가능시간 : </td>
+											<td class="vt">영업일 9~15시</td>
+										</tr>
+									</table>
+								</li>
 							</ul>
 						</div>
 
 						<strong class="title-large py16">매수 방법</strong>
 
-						<div class="box-gray">
+						<div class="box-gray fs-responsive">
 							<ul class="dot-list px0">
-								<li>17시00분 이전~제03영업일기준가, 제08영업일 출금</li>
-								<li>17시00분 이후~제04영업일기준가, 제09영업일 출금</li>
-								<li>역외펀드의 경우 15시 00분 이후-신청불가</li>
-							</ul>
-						</div>
+								<li id="rprh1">17시00분 이전 - 제02영업일 기준가, 제02영업일 출금</li>
+								<li id="rprh2" style="display: none;"></li>
+								<li>
+									<table>
+										<tr>
+											<td class="vt nowrap" style="width:0;">환매신청 가능시간 : </td>
+											<td class="vt">원화펀드 영업일 9~17시</td>
+										</tr>
+										<tr>
+											<td class="vt"></td>
+											<td class="vt">외화펀드 영업일 9~15시</td>
+										</tr>
+									</table>
 
-						<div class="vertical-step content-fluid mt24">
-							<div class="vertical-step-title">
-								<div class="tags tags-small tags-round tags-lightCyan">예시</div>
-								<div class="vertical-step-desc">17시 이전 매수신청, 기준가별점 2영업일, 매매완료 4영업일인 경우</div>
-							</div>
-							<ol>
-								<li>매입신청</li>
-								<li>1영업일</li>
-								<li>2영업일 기준가결정</li>
-								<li>3영업일</li>
-								<li>4영업일 매수완료</li>
-							</ol>
+								</li>
+							</ul>
 						</div>
 
 					</div>
