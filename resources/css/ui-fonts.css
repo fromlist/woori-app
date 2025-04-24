@@ -72,3 +72,13 @@
 	font-display:swap;
     src:url(/resources/fonts/Pretendard-Black.woff2) format("woff2"),
 }
+/* Black */
+@font-face {
+    font-family:"42DotSans";
+    font-style:normal;
+    font-weight:400;
+	font-display:swap;
+    src:url(/resources/fonts/42dotSans-Regular.woff2) format("woff2"),
+}
+
+
