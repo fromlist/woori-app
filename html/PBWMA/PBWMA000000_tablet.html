@@ -102,7 +102,8 @@
 							<div class="visual-headline content-fluid">
 								<figure>
 									<picture>
-										<source srcset="/resources/images/PBWMA/image_headline.png">
+										<source srcset="/resources/images/PBWMA/image_headline.png" media="(max-width:767px)">
+										<source srcset="/resources/images/PBWMA/image_headline_tablet.png 2x" media="(min-width:768px)">
 										<img src="/resources/images/PBWMA/image_headline.png" alt="">
 									</picture>
 									<figcaption>
@@ -230,10 +231,11 @@
 											</a>
 										</li>
 									</ul>
-									<!-- Tablet 더보기 삭제됨 -->
-									<!-- <div class="mt8 ac">
-										<a href="#" class="anchor chevron chevron-down fs-15 py16 gap4">2건 더보기</a>
-									</div> -->
+									<div id="chevronContainer" class="view-more">
+										<div class="mt8 ac">
+											<a href="#" class="anchor chevron chevron-down fs-15 py16 gap4">2건 더보기</a>
+										</div>
+									</div>
 								</div>
 								<div class="main-schedule-list">
 									<div class="py24">
@@ -328,10 +330,6 @@
 							</div>
 							<!-- //main-stock-section -->
 
-							<div class="is-tablet">
-								<div class="divide content-fluid"></div>
-							</div>
-
 							<!-- main-figure-section -->
 							<div class="main-figure-section">
 								<div class="main-section-title">
@@ -377,10 +375,6 @@
 							</div>
 							<!-- //main-figure-section -->
 
-							<div class="is-tablet">
-								<div class="divide content-fluid"></div>
-							</div>
-
 							<!-- main-banner-section -->
 							<div class="main-banner-section">
 								<div class="swiper mySwiper">
@@ -414,10 +408,6 @@
 								</div>
 							</div>
 							<!-- main-banner-section -->
-
-							<div class="is-tablet">
-								<div class="divide content-fluid"></div>
-							</div>
 
 							<!-- main-notice-section -->
 							<div class="main-notice-section">
@@ -544,7 +534,7 @@
 				el: ".swiper-pagination",
 			}
 		});
-		MicroModal.show('modal-notice');
+		// MicroModal.show('modal-notice');
 	</script>
 </body>
 
