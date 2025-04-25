@@ -1426,13 +1426,24 @@
 		$(".link").each(function() {
 			var linkName = $(this).html();
 			var linkFolder = $(this).closest("tbody").data("folder");
+			const location = window.location.href;
 
 			//add anchor
 			if (this.attributes.href.value === "") {
-				$(this).attr({
-					href: `./${linkFolder}/${linkName}.html`,
-					target: "_blank",
-				});
+
+				if (location.includes("vercel")) {
+					$(this).attr({
+						href: `html/${linkFolder}/${linkName}.html`,
+						target: "_blank",
+					});
+				} else {
+					$(this).attr({
+						href: `./${linkFolder}/${linkName}.html`,
+						target: "_blank",
+					});
+				}
+
+
 			} else {
 				this.outerHTML = linkName;
 			}
