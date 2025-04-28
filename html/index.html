@@ -1431,9 +1431,9 @@
 			//add anchor
 			if (this.attributes.href.value === "") {
 
-				if (location.includes("vercel")) {
+				if (location.includes("vercel.app/html/")) {
 					$(this).attr({
-						href: `html/${linkFolder}/${linkName}.html`,
+						href: `../${linkFolder}/${linkName}.html`,
 						target: "_blank",
 					});
 				} else {
