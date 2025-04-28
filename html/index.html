@@ -1423,14 +1423,13 @@
 	<!-- /.content -->
 
 	<script>
-		const location = window.location.href;
-		if (location.includes("vercel.app")) {
+		const loc = window.location.href;
+		if (loc.includes("vercel.app")) {
 			window.location.href = 'https://woori-app.vercel.app/html';
 		}
 		$(".link").each(function() {
 			var linkName = $(this).html();
 			var linkFolder = $(this).closest("tbody").data("folder");
-			console.log(location)
 
 			//add anchor
 			if (this.attributes.href.value === "") {
