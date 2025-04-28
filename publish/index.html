@@ -1423,13 +1423,6 @@
 	<!-- /.content -->
 
 	<script>
-		const loc = window.location.href;
-		if (loc.includes("vercel.app/html/")) {
-			window.location.href = 'https://woori-app.vercel.app/html';
-		}
-		if (loc.includes("vercel.app/html/index.html")) {
-			window.location.href = 'https://woori-app.vercel.app/html';
-		}
 		$(".link").each(function() {
 			var linkName = $(this).html();
 			var linkFolder = $(this).closest("tbody").data("folder");
@@ -1437,7 +1430,7 @@
 			//add anchor
 			if (this.attributes.href.value === "") {
 				$(this).attr({
-					href: `./${linkFolder}/${linkName}.html`,
+					href: `/publish/${linkFolder}/${linkName}.html`,
 					target: "_blank",
 				});
 			} else {
