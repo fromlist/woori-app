@@ -1427,6 +1427,9 @@
 		if (loc.includes("vercel.app/html/")) {
 			window.location.href = 'https://woori-app.vercel.app/html';
 		}
+		if (loc.includes("vercel.app/html/index.html")) {
+			window.location.href = 'https://woori-app.vercel.app/html';
+		}
 		$(".link").each(function() {
 			var linkName = $(this).html();
 			var linkFolder = $(this).closest("tbody").data("folder");
