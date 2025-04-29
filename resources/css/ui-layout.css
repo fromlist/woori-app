@@ -215,10 +215,10 @@ main .main-inner {flex:1 1 calc(100% - 52px);display:flex;}
 .main-nav ul li {flex:1;}
 .main-nav ul li a {display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 0 10px;gap:8px;border-radius:18px;}
 .main-nav ul li a .icon {position:relative;width:32px;height:32px;}
-.main-nav ul li a strong {font-size:16px;font-weight:500;color:var(--gray-500);line-height:1;}
+.main-nav ul li a strong {font-size:15px;font-weight:500;color:var(--gray-500);line-height:1;}
 .main-nav ul li.is-current a {background-color:var(--surface-surface50);}
 .main-nav ul li.list05.not-read .icon:before {content:'';position:absolute;right:0;top:0;width:6px;height:6px;background-color:var(--yellow-600);border-radius:50%;}
-.main-nav ul li.is-current strong {color:var(--brandPrimary-blue600);font-weight:700;}
+.main-nav ul li.is-current strong {color:var(--brandPrimary-blue600);font-weight:700;font-size:16px;}
 
 .main-nav ul li.list01 a .icon {background:url(/resources/images/PBWMA/ico-main-nav01.svg) center center / contain no-repeat;}
 .main-nav ul li.list02 a .icon {background:url(/resources/images/PBWMA/ico-main-nav02.svg) center center / contain no-repeat;}

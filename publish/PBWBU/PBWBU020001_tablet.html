@@ -114,9 +114,9 @@
 								</button>
 							</div>
 							<!-- //upload-picture -->
-							<div class="is-tablet">
+							<!-- <div class="is-tablet">
 								<p class="description error body-small fc-typography-caption my40">등록된 고객명함은 현재 소속 지점으로 등록되어 지점 이동 후에는 조회하실 수 없습니다. <br> 개인정보 또는 부적절한 내용 작성을 금지하며, 마케팅 정보로 이용할 수 없습니다.</p>
-							</div>
+							</div> -->
 						</div>
 						<!-- //section-tablet-left -->
 
@@ -313,15 +313,45 @@
 								</div>
 							</div>
 							<!-- //info-detail-list -->
-							<div class="is-mobile">
-								<p class="description error body-small fc-typography-caption my40">등록된 고객명함은 현재 소속 지점으로 등록되어 지점 이동 후에는 조회하실 수 없습니다. <br> 개인정보 또는 부적절한 내용 작성을 금지하며, 마케팅 정보로 이용할 수 없습니다.</p>
+
+							<!-- bottom-btn -->
+							<div class="bottom-btn bottom-btn-contact">
+								<div class="info-anchor">
+									<ul>
+										<li>
+											<button type="button">
+												<i class="icon-only icon-36 icon-phone bg-status-active"></i>
+												<span>휴대폰</span>
+											</button>
+										</li>
+										<li>
+											<button type="button">
+												<i class="icon-only icon-36 icon-sms bg-status-active"></i>
+												<span>문자</span>
+											</button>
+										</li>
+										<li>
+											<button type="button">
+												<i class="icon-only icon-36 icon-mail bg-status-active"></i>
+												<span>이메일</span>
+											</button>
+										</li>
+										<li>
+											<button type="button">
+												<i class="icon-only icon-36 icon-call bg-status-active"></i>
+												<span>회사전화</span>
+											</button>
+										</li>
+										<li>
+											<button type="button">
+												<i class="icon-only icon-36 icon-memo bg-status-active"></i>
+												<span>메모 </span>
+											</button>
+										</li>
+									</ul>
+								</div>
 							</div>
-							<!-- btn-wrap -->
-							<!-- <div class="btn-wrap">
-                                                    <button type="button" class="btn-large btn-outlined">삭제</button>
-                                                    <button type="button" class="btn-large btn-primary">수정</button>
-                                                </div> -->
-							<!-- //btn-wrap -->
+							<!-- //bottom-btn -->
 						</div>
 						<!-- //section-tablet-right -->
 					</div>
@@ -339,44 +369,6 @@
 		<!-- //main-inner -->
 
 
-		<!-- bottom-btn -->
-		<div class="bottom-btn bottom-btn-contact">
-			<div class="info-anchor">
-				<ul>
-					<li>
-						<button type="button">
-							<i class="icon-only icon-36 icon-phone bg-status-active"></i>
-							<span>휴대폰</span>
-						</button>
-					</li>
-					<li>
-						<button type="button">
-							<i class="icon-only icon-36 icon-sms bg-status-active"></i>
-							<span>문자</span>
-						</button>
-					</li>
-					<li>
-						<button type="button">
-							<i class="icon-only icon-36 icon-mail bg-status-active"></i>
-							<span>이메일</span>
-						</button>
-					</li>
-					<li>
-						<button type="button">
-							<i class="icon-only icon-36 icon-call bg-status-active"></i>
-							<span>회사전화</span>
-						</button>
-					</li>
-					<li>
-						<button type="button">
-							<i class="icon-only icon-36 icon-memo bg-status-active"></i>
-							<span>메모 </span>
-						</button>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- //bottom-btn -->
 
 	</main>
 	<!-- //main -->
@@ -598,26 +590,26 @@
 		})
 	</script>
 	<script>
-		$(function() {
-			// textarea length
-			const bottomBtn = $('.bottom-btn-contact');
-			const sectionLeft = $('.section-tablet-left');
-			let sectionLeftWidth = sectionLeft.width();
-			if ($('html').hasClass('TABLET')) {
-				bottomBtn.css('width', sectionLeftWidth);
-			} else {
-				bottomBtn.css('width', '');
-			}
+		// $(function() {
+		// 	// textarea length
+		// 	const bottomBtn = $('.bottom-btn-contact');
+		// 	const sectionLeft = $('.section-tablet-left');
+		// 	let sectionLeftWidth = sectionLeft.width();
+		// 	if ($('html').hasClass('TABLET')) {
+		// 		bottomBtn.css('width', sectionLeftWidth);
+		// 	} else {
+		// 		bottomBtn.css('width', '');
+		// 	}
 
-			$(window).on('resize', function() {
-				sectionLeftWidth = sectionLeft.width();
-				if ($('html').hasClass('TABLET')) {
-					bottomBtn.css('width', sectionLeftWidth);
-				} else {
-					bottomBtn.css('width', '');
-				}
-			});
-		});
+		// 	$(window).on('resize', function() {
+		// 		sectionLeftWidth = sectionLeft.width();
+		// 		if ($('html').hasClass('TABLET')) {
+		// 			bottomBtn.css('width', sectionLeftWidth);
+		// 		} else {
+		// 			bottomBtn.css('width', '');
+		// 		}
+		// 	});
+		// });
 	</script>
 </body>
 
