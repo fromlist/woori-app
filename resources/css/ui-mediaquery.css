@@ -30,7 +30,7 @@
     .is-tablet {display:block;}
 
     /* ui-layout */
-    .section-tablet {padding:0 42px;}
+    .section-tablet {padding:0 32px;}
     .section-tablet-row {display:flex;flex-direction:row;max-height:calc(100vh - 52px);overflow:hidden;padding:0 38px;}
     .section-has-bottom {max-height:calc(100vh - 52px - 76px);}
     .section-tablet-row .section-tablet-left,
@@ -41,8 +41,9 @@
     .section-tablet-row .bottom-btn {margin:0;}
 
     .section-tablet-half {display:flex;flex-direction:row;justify-content:space-between;max-height:calc(100vh - 52px - 94px);overflow:hidden;padding:0;margin:0 -16px;}
-    .section-tablet-half .section {flex:1;overflow:auto;padding:0 16px;background-color:var(--background-bg_white);}
-    .section-tablet-half .section:last-child {border-radius:40px 0 0 0;background: var(--background-bg_lightGray);}
+    .section-tablet-half .section {flex:1;overflow:auto;padding:0 20px;background-color:var(--background-bg_white);}
+    .section-tablet-half .section:first-child {flex:0 0 54.11%;}
+    .section-tablet-half .section:last-child {border-radius:40px 0 0 0;background: var(--background-bg_lightGray);flex:0 0 45.89%;}
     .section-tablet-half .section:last-child > * {background-color:transparent;}
     .section-tablet-half .divide {height:4px;background:var(--background-bg_lightGray);}
     .bottom-btn .btn-wrap .btn-outlined {flex:0 0 302px;}
@@ -119,7 +120,7 @@
     .business-card-customer-list {display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:0;margin-top:12px;}
     .business-card-customer {padding:24px 40px;border-radius:8px;border:1px solid rgba(12, 12, 13, 0.08);box-shadow:0px 0.5px 0px 0px rgba(12, 12, 13, 0.04), 0px 2px 4px -1px rgba(12, 12, 13, 0.04);}
 
-    .main-schedule-section {padding:48px 0 100px;}
+    .main-schedule-section {padding:44px 0 100px;}
     .visual-headline {height:164px;}
     .visual-headline figure picture {z-index:0;align-items:flex-end;}
     .visual-headline figure figcaption {position:relative;z-index:1;}
@@ -135,5 +136,10 @@
     .main-notice-list a {display:flex;align-items:center;justify-content:space-between;border-bottom:none;gap:16px;}
     .main-notice-list a p {white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
     .main-notice-list a .date {margin-top:0;white-space:nowrap;}
+
+    .main-nav ul {padding:4px 0;}
+    .main-nav ul li a {padding:10px 0 8px;gap:4px;}
+    .main-nav ul li a .icon {width:24px;height:24px;}
+    .main-nav ul li a strong {font-size:12px;}
 }
 
