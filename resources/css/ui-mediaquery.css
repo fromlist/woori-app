@@ -106,7 +106,7 @@
 
     .business-card-info {margin-top:16px;}
     .upload-picture .upload-type-select {height:23.15vw;}
-    .bottom-btn.bottom-btn-contact {margin:0;padding-left:108px;}
+    .bottom-btn.bottom-btn-contact {position:fixed;left:auto;right:48px;bottom:24px;width:390px;}
     .bottom-btn.bottom-btn-contact .info-anchor {box-shadow:0px 2px 30px -4px rgba(0, 0, 0, 0.15);border-radius:26px;padding:4px 32px;}
     .info-anchor ul li button {height:82px;justify-content:center;}
 

@@ -109,7 +109,7 @@
 .pinch-zoom-container {width:100%!important;}
 
 /* business-card-info */
-.business-card-info {margin-top:40px;}
+.business-card-info {}
 .business-card-info .info-title {}
 .business-card-info .info-title .info-name {display:flex;justify-content:space-between;}
 .business-card-info .info-title .info-name .info-thumb {display:flex;gap:12px;align-items:center;margin:0 4px;}
@@ -120,7 +120,7 @@
 .business-card-info .info-title .tags-wrap {display:flex;align-items:center;margin:0 4px;gap:4px;}
 
 /* info-detail-list */
-.info-detail-list {border-radius:4px;background-color:var(--background-bg_lightGray);padding:24px 16px 16px;}
+.info-detail-list {border-radius:4px;background-color:var(--background-bg_lightGray);padding:24px 16px 16px;margin-top:24px;}
 .info-table {display:table;width:100%;table-layout:auto;}
 .info-table .info-body {display:table-row-group;}
 .info-table .info-body .info-row {display:table-row;}
@@ -419,7 +419,7 @@
 
 /* accordion-select */
 .accordion-select {}
-.accordion-select .accordion-select-all {position:relative;display:flex;background-color:var(--surface-surface50);font-size:18px;font-weight:500;color:var(--typography-black);padding:24px;width:100%;}
+.accordion-select .accordion-select-all {position:relative;display:flex;background-color:var(--surface-surface50);font-size:18px;line-height:1;font-weight:500;color:var(--typography-black);padding:24px;width:100%;}
 .accordion-select .accordion-select-all:before {content:'';position:absolute;left:24px;right:24px;bottom:0;background-color:var(--border-4);height:1px;}
 .accordion-select .accordion-select-all.is-selected {font-weight:700;padding-right:52px;}
 .accordion-select .accordion-select-all.is-selected:after {content:'';position:absolute;right:24px;top:50%;margin-top:-14px;display:block;width:28px;height:28px;background:url(/resources/images/ico/ico_select_option.svg) center center / contain no-repeat;}
@@ -428,7 +428,7 @@
 .accordion-select .accordion-select-list {}
 .accordion-select .accordion-select-list > li {}
 .accordion-select .accordion-select-list > li > button:before {content:'';position:absolute;left:24px;right:24px;bottom:0;background-color:var(--border-4);height:1px;}
-.accordion-select .accordion-select-list > li > button {position:relative;font-size:18px;font-weight:500;color:var(--typography-body);padding:24px;width:100%;white-space:pre-wrap;line-height:1.5;}
+.accordion-select .accordion-select-list > li > button {position:relative;font-size:18px;font-weight:500;color:var(--typography-body);padding:24px;width:100%;white-space:pre-wrap;line-height:1;}
 
 .accordion-select .dep01.dep02-show {left:-100%;}
 .accordion-select .dep01.dep02-show .accordion-select-list > li:not(.is-selected) {display:none;}

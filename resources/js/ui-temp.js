@@ -63,12 +63,15 @@ const microModalFunc = {
                             modalPopupBody.style.left = triggerPositionRight - modalPopupBodyWidth + 'px';
 
                         }
-
                     }
                     // reverse (position left)
                     else if (windowWidth / 2 > triggerPositionRight) {
-                        modalPopupBody.style.left = triggerPositionLeft + 'px';
-                        modalPopupBody.style.width = triggerWidth + 'px'
+                        if (selectBox) {
+                            modalPopupBody.style.width = triggerWidth + 'px'
+                            modalPopupBody.style.left = triggerPositionRight - triggerWidth + 'px';
+                        } else {
+                            modalPopupBody.style.left = triggerPositionRight - modalPopupBodyWidth + 'px';
+                        }
                     }
 
                     // default (position bottom)

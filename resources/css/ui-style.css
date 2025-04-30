@@ -698,7 +698,7 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
 
 
 /* badge */
-.badge {display:inline-block;font-size:15px;font-weight:500;color:var(--typography-gray);line-height:1;padding:4px 6px;border-radius:50px;background-color:var(--background-bg_lightGray);vertical-align:middle;margin-left:8px;min-width:23px;}
+.badge {display:inline-block;font-size:15px;font-weight:500;color:var(--typography-gray);line-height:1;padding:4px 6px;border-radius:50px;background-color:var(--background-bg_lightGray);vertical-align:middle;margin-left:8px;min-width:23px;text-align:center;}
 .select-all .badge,
 .tab-active .badge {font-weight:700;}
 .select-active i {background-color:var(--background-bg_white);}
