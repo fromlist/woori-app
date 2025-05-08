@@ -109,7 +109,7 @@
 .pinch-zoom-container {width:100%!important;}
 
 /* business-card-info */
-.business-card-info {}
+.business-card-info {margin-top:40px;}
 .business-card-info .info-title {}
 .business-card-info .info-title .info-name {display:flex;justify-content:space-between;}
 .business-card-info .info-title .info-name .info-thumb {display:flex;gap:12px;align-items:center;margin:0 4px;}
