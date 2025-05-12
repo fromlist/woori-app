@@ -26,6 +26,8 @@
 
 
     .group-form-flex {display:flex;flex-direction:column;gap:40px;}
+    .tablet-grid > *:not(:last-child) {margin-bottom:12px;}
+
 
 }
 
@@ -112,7 +114,6 @@
 
     .tablet-grid {display:grid;grid-template-columns:repeat(2, 1fr);gap:12px;}
     .tablet-grid.tablet-grid-3 {display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;}
-    .customer-card-list .tablet-grid .customer-card:not(:last-child) {margin:0;}
 
     .ui-tab {position:fixed;top:50%;transform:translateY(-50%);width:52px;height:52px;background-color:var(--surface-surface50);border-radius:50%;display:flex;align-items:center;justify-content:center;}
     .ui-tab-prev {left:24px;}

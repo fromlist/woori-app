@@ -404,7 +404,6 @@
 .customer-card-list {}
 .customer-card-list .search-result {display:block;text-align:center;font-size:18px;font-weight:500;color:var(--typography-gray);line-height:1;margin-bottom:24px;}
 .customer-card-list .customer-card {display:block;border-radius:12px;background-color:var(--surface-surface);box-shadow:0px 8px 16px -4px rgba(0, 0, 0, 0.05);padding:24px;width:100%;}
-.customer-card-list .customer-card:not(:last-child) {margin-bottom:12px;}
 .customer-card-list .customer-card .title-medium {margin-bottom:12px;}
 .customer-card-list .customer-card .group {padding:0;}
 .customer-card-list .customer-card .group:not(:last-child) {padding-bottom:4px;}
@@ -1192,3 +1191,15 @@ i.live-off {display:inline-block;width:16px;height:16px;background:url(/resource
 
 .file-attach-loading {display:flex;}
 .file-attach-loading:before {content:'';display: flex;flex: 0 0 16px;width: 16px;height: inherit;margin-left: 0;background: url(/resources/images/loading-animation/loading-spinner.svg) center center / 24px no-repeat;-webkit-mask: none;mask: none;}
+
+/* community-list */
+.community-list {margin-top:16px;}
+.community-list .community-card {display:flex;flex-direction:column;justify-content:space-between;padding:24px;border-radius:12px;background-color:var(--surface-surface);box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.05);}
+.community-card .community-title {display:flex;flex-direction:column;}
+.community-card .community-title > * {}
+.community-card .community-etc {display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;margin-top:auto;}
+.community-card .community-etc .left {display:flex;align-items:center;gap:8px;}
+.community-card .community-etc .left dl {display:flex;align-items:center;gap:4px;font-size:15px;font-weight:500;color:var(--icon-gray_2);}
+.community-card .community-etc .left dt {display:flex;align-items:center;}
+.community-card .community-etc .right {display:flex;align-items:center;margin-left:auto;}
+.community-card .community-etc .right .date {font-size:14px;font-weight:500;color:var(--gray-500);}

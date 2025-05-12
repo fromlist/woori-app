@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script><!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>나의 댓글</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+
+				<!-- content -->
+				<div class="content">
+
+
+					<style>
+						body {
+							background-color: var(--background-bg_lightGray);
+						}
+					</style>
+
+					<div class="community-list">
+						<div class="section-tablet">
+							<div class="tablet-grid tablet-grid-3">
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁다올글로벌빅테크1등주증권투자신탁다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+								<a class="community-card">
+									<div class="community-title">
+										<strong class="title-large ellipsis" data-ellipsis="2">다올글로벌빅테크1등주증권투자신탁[주식]</strong>
+										<span class="body-small ellipsis px4 mt8" data-ellipsis="3">
+											최근 수익률 변동이 큰데, 안정성이 괜찮을까요? 해외 채권 비중이 높은 편이라 변동성이 낮을 줄 알았는데, 최근 시장 변동으로 흔들리는 것 같네요.
+											고객들에게 추천하기 전에 리스크를 더 고려해야 할까요?
+										</span>
+									</div>
+									<div class="community-etc mt8">
+										<div class="left">
+											<dl>
+												<dt><i class="icon-only icon-20 icon-fav2 bg-icon-gray_2" aria-label="좋아요"></i></dt>
+												<dd>120</dd>
+											</dl>
+											<dl>
+												<dt><i class="icon-only icon-20 icon-comment bg-icon-gray_2" aria-label="댓글"></i></dt>
+												<dd>999</dd>
+											</dl>
+										</div>
+										<div class="right">
+											<div class="date">2024-11-04 17:13:19</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- //content -->
+
+
+
+
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+	</main>
+	<!-- //main -->
+
+</body>
+
+</html>

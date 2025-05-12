@@ -952,6 +952,10 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
     -webkit-mask-image:url(/resources/images/icon_only/icon_file_loader.svg);
     mask-image:url(/resources/images/icon_only/icon_file_loader.svg);
 }
+.icon-comment {
+    -webkit-mask-image:url(/resources/images/icon_only/icon_comment.svg);
+    mask-image:url(/resources/images/icon_only/icon_comment.svg);
+}
 
 /* toggle-trigger */
 [data-toggle="toggle-trigger"] .toggle-off {display:block;}
