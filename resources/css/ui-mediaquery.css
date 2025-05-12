@@ -96,7 +96,7 @@
 
     .chatgpt-wrap .chatgroup.chatgroup-notice {flex:0 0 400px;}
     .chatgpt-wrap .chatgroup.chatgroup-body {padding-bottom:calc(69px + 24px);background-color:var(--background-bg_lightBlue);}
-    .bottom-btn-chatgpt.bottom-btn {position:fixed;left:auto;right:0;bottom:0;width:calc(100% - 400px);transition:width 0.3s ease;}
+    .bottom-btn-chatgpt.bottom-btn {position:fixed;left:auto;right:0;bottom:0;width:calc(100% - 400px);margin:0;transition:width 0.3s ease;}
     .bottom-btn-chatgpt.bottom-btn:focus-within {width:100%;}
 
     .message-notice {width:100%;}

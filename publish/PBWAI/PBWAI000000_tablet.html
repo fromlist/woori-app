@@ -380,18 +380,18 @@
 
 						</div>
 
-						<!-- bottom-btn -->
-						<div class="bottom-btn bottom-btn-chatgpt">
-							<div class="btn-wrap a-end" style="box-shadow: 0px -2px 40px -1px rgba(12, 12, 13, 0.12);">
-								<div class="input-wrap input-chat-wrap">
-									<div contenteditable="true" class="textarea" data-placeholder="궁금하신 사항을 질문하세요."></div>
-								</div>
-								<button type="button" class="btn-small btn-primary btn-round" id="btn-send-text" style="flex:0">확인</button>
-							</div>
-						</div>
-						<!-- //bottom-btn -->
 					</div>
 
+					<!-- bottom-btn -->
+					<div class="bottom-btn bottom-btn-chatgpt">
+						<div class="btn-wrap a-end" style="box-shadow: 0px -2px 40px -1px rgba(12, 12, 13, 0.12);">
+							<div class="input-wrap input-chat-wrap">
+								<div contenteditable="true" class="textarea" data-placeholder="궁금하신 사항을 질문하세요."></div>
+							</div>
+							<button type="button" class="btn-small btn-primary btn-round" id="btn-send-text" style="flex:0">확인</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
 
 				</div>
 				<!-- //content -->
@@ -521,7 +521,13 @@
 
 		// scroll page bottom animation 100%
 		var scrollBottom = function() {
-			var $el = $('.chatgroup.chatgroup-body');
+			var $el = '';
+			if ($('html').hasClass('MOBILE')) {
+				$el = $('html, body');
+			} else {
+				$el = $('.chatgroup.chatgroup-body');
+			}
+			console.log($el)
 			var $elDefaultHeight = $(window).height();
 			var scrollTime = 400;
 			$el.stop().animate({
