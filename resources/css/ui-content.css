@@ -885,7 +885,7 @@ button.flag-fluid span {margin-top:0;}
 
 .input-chat-wrap {border:0;padding:8px 0 10px 8px;}
 .input-chat-wrap:focus-within {outline:0;}
-.input-chat-wrap .textarea {display:block;font-size:18px;line-height:27px;font-weight:700;color:var(--typography-body);background-color:transparent;border:0;flex:1 1 100%;caret-color:var(--status-focused);outline:0;max-height:calc(27px * 3);overflow:auto;}
+.input-chat-wrap .textarea {display:block;font-size:18px;line-height:27px;font-weight:700;color:var(--typography-body);background-color:transparent;border:0;flex:1 1 100%;caret-color:var(--status-focused);outline:0;max-height:calc(27px * 3);overflow:auto;height:auto;}
 .input-chat-wrap .textarea:empty:before {content:attr(data-placeholder);font-size:inherit;font-family:inherit;line-height:inherit;color:var(--typography-placeholder);font-weight:700;}
 
 /* message-notice */
