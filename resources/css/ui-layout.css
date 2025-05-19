@@ -451,7 +451,7 @@ main .sticky-content.sticky-always {position:sticky}
 .main-notice-section {padding:40px 0;}
 .main-notice-list {}
 .main-notice-list a {display:block;padding:0 4px 16px;border-bottom:1px solid var(--border-4);}
-.main-notice-list a p {font-size:16px;font-weight:400;color:var(--typography-gray);}
+.main-notice-list a {font-size:16px;font-weight:400;color:var(--typography-gray);}
 .main-notice-list a .date {font-size:14px;font-weight:400;color:var(--typography-caption);text-align:right;margin-top:2px;}
 
 .main-fund-section {padding:32px 0;}

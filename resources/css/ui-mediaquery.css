@@ -152,5 +152,9 @@
     .group-content-flex {display:flex;gap:16px;}
     .group-content-flex .form {flex:1;}
     .group-content-flex .form + .form {margin-top:0;}
+
+    .grade-wrap {justify-content:center;align-items:center;}
+    .grade-wrap dl {flex:none;display:flex;}
+    .grade-wrap dl .list {flex:0 0 116px;}
 }
 
