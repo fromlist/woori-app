@@ -40,7 +40,7 @@ td a.vscodepath{position:absolute;right:0;top:50%;transform:translateY(-50%);dis
 
 .current {background-color:var(--red200);}
 
-@media screen and (max-width:768px) {
+@media (max-width:768px) {
     .section-index .table-col table {display:block;}
     .section-index .table-col table thead {position:absolute !important;color:transparent !important;opacity:0 !important;width:1px !important;height:1px !important;font-size:1px !important;overflow:hidden !important;padding:0 !important;border:0 !important;}
     .section-index .table-col table tbody {display:block;}
