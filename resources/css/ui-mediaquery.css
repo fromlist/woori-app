@@ -45,7 +45,7 @@
     .section-tablet-right {flex:0 0 calc(100% - 44.43%);}
     .section-tablet-right > .mt40:first-child {margin-top:16px!important;}
 
-    .section-tablet-half {display:flex;flex-direction:row;justify-content:space-between;max-height:calc(100vh - 52px - 94px);overflow:hidden;padding:0;margin:0 -16px;}
+    .section-tablet-half {display:flex;flex-direction:row;justify-content:space-between;max-height:calc(100vh - 52px - 94px);overflow:hidden;padding:0;margin:0 -16px;flex:1 1 100%;}
     .section-tablet-half .section {flex:1;overflow:auto;padding:0 20px;background-color:var(--background-bg_white);}
     .section-tablet-half .section:first-child {flex:0 0 54.11%;}
     .section-tablet-half .section:last-child {border-radius:40px 0 0 0;background: var(--background-bg_lightGray);flex:0 0 45.89%;}
