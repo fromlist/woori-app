@@ -86,59 +86,7 @@
 
 			<!-- container -->
 			<div id="container">
-				<!-- content -->
-				<div class="content">
 
-					<div class="schedule-section-title content-fluid">
-						<i class="icon-only icon-24 icon-birth bg-purple-600" aria-label="생일"></i>
-						<strong class="headline-medium">홍길동 생일</strong>
-					</div>
-
-					<div class="stroke"></div>
-
-					<!-- group-form -->
-					<div class="group-form mt32">
-						<div class="group-title">
-							<strong class="title-medium">일시</strong>
-						</div>
-						<div class="group-content">
-							<div class="d-flex a-center gap8 px4">
-								<div class="body-large">12월 2일 월요일</div>
-								<div class="tags tags-small tags-lightCyan tag-round">음력</div>
-							</div>
-						</div>
-					</div>
-					<!-- //group-form -->
-
-					<!-- group-form -->
-					<div class="group-form mt40">
-						<div class="group-title">
-							<strong class="title-medium">통합고객번호</strong>
-						</div>
-						<div class="group-content">
-							<div class="d-flex a-center gap8 px4">
-								<div class="body-large">1234678901</div>
-							</div>
-						</div>
-					</div>
-					<!-- //group-form -->
-
-					<!-- group-form -->
-					<div class="group-form mt40">
-						<div class="group-title">
-							<strong class="title-medium">고객등급</strong>
-						</div>
-						<div class="group-content">
-							<div class="d-flex a-center gap8 px4">
-								<div class="body-large">TC등급</div>
-							</div>
-						</div>
-					</div>
-					<!-- //group-form -->
-
-
-				</div>
-				<!-- //content -->
 			</div>
 			<!-- //container -->
 
@@ -151,6 +99,85 @@
 
 	</main>
 	<!-- //main -->
+
+
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-detail" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header modal__header__alert">
+					<strong class="modal__title title-large"></strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close=""></button>
+				</div>
+				<div class="modal__content modal__content__alert">
+					<!-- content -->
+					<div class="content">
+
+						<div class="schedule-section-title content-fluid">
+							<i class="icon-only icon-24 icon-birth bg-purple-600" aria-label="생일"></i>
+							<strong class="headline-medium">홍길동 생일</strong>
+						</div>
+
+						<div class="stroke"></div>
+
+						<!-- group-form -->
+						<div class="group-form mt32">
+							<div class="group-title">
+								<strong class="title-medium">일시</strong>
+							</div>
+							<div class="group-content">
+								<div class="d-flex a-center gap8 px4">
+									<div class="body-large">12월 2일 월요일</div>
+									<div class="tags tags-small tags-lightCyan tag-round">음력</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">통합고객번호</strong>
+							</div>
+							<div class="group-content">
+								<div class="d-flex a-center gap8 px4">
+									<div class="body-large">1234678901</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+						<!-- group-form -->
+						<div class="group-form mt40">
+							<div class="group-title">
+								<strong class="title-medium">고객등급</strong>
+							</div>
+							<div class="group-content">
+								<div class="d-flex a-center gap8 px4">
+									<div class="body-large">TC등급</div>
+								</div>
+							</div>
+						</div>
+						<!-- //group-form -->
+
+
+					</div>
+					<!-- //content -->
+				</div>
+				<div class="modal__footer">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+
+	<script>
+		MicroModal.show('modal-detail'); // [1]
+	</script>
 
 
 </body>

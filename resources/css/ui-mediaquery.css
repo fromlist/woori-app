@@ -150,7 +150,7 @@
     .group-form-flex > * {flex:1;}
 
     .group-content-flex {display:flex;gap:16px;}
-    .group-content-flex .form {flex:1;}
+    .group-content-flex .form {flex:1;max-width:50%;}
     .group-content-flex .form + .form {margin-top:0;}
 
     .grade-wrap {justify-content:center;align-items:center;}
