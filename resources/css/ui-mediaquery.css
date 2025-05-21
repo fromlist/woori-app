@@ -99,7 +99,7 @@
     .chatgpt-wrap .chatgroup.chatgroup-notice {flex:0 0 400px;}
     .chatgpt-wrap .chatgroup.chatgroup-body {padding-bottom:calc(69px + 24px);background-color:var(--background-bg_lightBlue);}
     .bottom-btn-chatgpt.bottom-btn {position:fixed;left:auto;right:0;bottom:0;width:calc(100% - 400px);margin:0;transition:width 0.3s ease;}
-    .bottom-btn-chatgpt.bottom-btn:focus-within {width:100%;}
+    .bottom-btn-chatgpt.bottom-btn:has(.textarea:focus-within) {width:100%;}
 
     .message-notice {width:100%;}
 
@@ -152,7 +152,7 @@
     .group-form-flex > * {flex:1;}
 
     .group-content-flex {display:flex;gap:16px;}
-    .group-content-flex .form {flex:1;max-width:50%;}
+    .group-content-flex .form {flex:1;max-width:calc(50% - 8px);}
     .group-content-flex .form + .form {margin-top:0;}
 
     .grade-wrap {justify-content:center;align-items:center;}

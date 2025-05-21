@@ -12,6 +12,7 @@ $(function () {
     tippyContent.init();
     tableInnerScroll.init();
     resizeWindow.init();
+    orientationCheck.init();
     AOS.init({
         once: true,
         offset: 150,
@@ -652,4 +653,28 @@ var resizeWindow = {
         })
 
     },
+}
+var orientationCheck = {
+    init: function () {
+        // Check if the device is in portrait mode
+        const portrait = window.matchMedia("(orientation: portrait)");
+
+        function handleOrientationChange(e) {
+            if (e.matches) {
+                // Portrait mode
+                $html.addClass("PORTRAIT")
+                $html.removeClass("LANDSCAPE")
+            } else {
+                // Landscape mode
+                $html.addClass("LANDSCAPE")
+                $html.removeClass("PORTRAIT")
+            }
+        }
+
+        portrait.addEventListener("change", handleOrientationChange);
+
+        // Check initial orientation
+        handleOrientationChange(portrait);
+    }
+
 }

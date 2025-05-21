@@ -386,7 +386,7 @@
 					<div class="bottom-btn bottom-btn-chatgpt">
 						<div class="btn-wrap a-end" style="box-shadow: 0px -2px 40px -1px rgba(12, 12, 13, 0.12);">
 							<div class="input-wrap input-chat-wrap">
-								<div contenteditable="true" class="textarea" data-placeholder="궁금하신 사항을 질문하세요."></div>
+								<input class="textarea" data-placeholder="궁금하신 사항을 질문하세요.">
 							</div>
 							<button type="button" class="btn-small btn-primary btn-round" id="btn-send-text" style="flex:0">확인</button>
 						</div>
@@ -512,11 +512,11 @@
 
 		$('#btn-send-text').click(function() {
 			// $('.input-wrap input').focus()
-			var inputText = $('.input-wrap .textarea').text();
+			var inputText = $('.input-wrap .textarea').val();
 			console.dir(inputText)
 			$('.chatgroup.chatgroup-body > *:last-child').before('<div class="chatbody"><div class="message-text right"><p class="text">' + inputText + '</p></div></div>')
 			scrollBottom();
-			$('.input-wrap .textarea').text('')
+			$('.input-wrap .textarea').val('')
 		})
 
 		// scroll page bottom animation 100%
