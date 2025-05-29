@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script><!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>내 명함 공유</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+				<!-- content -->
+				<div class="content">
+
+					<p class="description error body-small fc-typography-caption mt16">내 명함은 상대방 동의 없이 마케팅 목적으로 공유할 수 없습니다.</p>
+
+					<!-- group -->
+					<div class="group content-fluid pt10">
+						<div class="right">
+							<button type="button" class="btn-xsmall btn-outlined btn-round" data-micromodal-trigger="modal-businesscard"><i class="ico-order"></i>순서 설정</button>
+						</div>
+					</div>
+					<!-- //group -->
+
+					<div class="stroke stroke-fluid my0"></div>
+
+					<!-- group -->
+					<div class="group pt24 px4">
+						<strong class="title-medium">별칭명</strong>
+						<button type="button" class="btn-noborder"><i class="ico-modify"></i>수정</button>
+					</div>
+					<!-- //group -->
+
+					<!-- bs-card-wrap -->
+					<div class="bs-card-wrap mb16">
+						<input type="radio" name="rad001" />
+						<div class="bs-card ">
+							<div class="bs-typeA">
+								<div class="top">
+									<div class="left">
+										<picture class="top-logo01">
+											<source srcset="/resources/images/bs_card/bs_a_top_logo01.png">
+											<img src="/resources/images/bs_card/bs_a_top_logo01.png" alt="우리 마음속 첫번째 금융">
+										</picture>
+									</div>
+									<div class="right">
+										<picture class="top-aff01">
+											<source srcset="/resources/images/bs_card/bs_a_aff.png">
+											<img src="/resources/images/bs_card/bs_a_aff.png" alt="우리금융그룹">
+										</picture>
+									</div>
+								</div>
+								<div class="line">
+									<picture>
+										<source srcset="/resources/images/bs_card/bs_a_line.svg">
+										<img src="/resources/images/bs_card/bs_a_line.svg" alt="">
+									</picture>
+								</div>
+								<div class="center">
+									<div class="title">
+										<div class="left">
+											<picture class="center-logo01">
+												<source srcset="/resources/images/bs_card/bs_a_center_logo01.png">
+												<img src="/resources/images/bs_card/bs_a_center_logo01.png" alt="우리은행">
+											</picture>
+											<picture class="center-cfp">
+												<source srcset="/resources/images/bs_card/bs_b_center_logo01.png">
+												<img src="/resources/images/bs_card/bs_b_center_logo01.png" alt="CFP">
+											</picture>
+										</div>
+										<div class="right">
+											<dl>
+												<dt>김우리</dt>
+												<dd>직위/호칭</dd>
+												<dd>소속</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="info">
+										<div class="left">
+											<div class="location">04632 서울특별시 중구 소공로 51</div>
+											<div class="email">woori@woorifg.com</div>
+										</div>
+										<div class="right">
+											<div class="contact">
+												<div class="row">
+													<div class="th">Mobile</div>
+													<div class="td">010.1234.5678</div>
+												</div>
+												<div class="row">
+													<div class="th">Tel</div>
+													<div class="td">02.1234.5678</div>
+												</div>
+												<div class="row">
+													<div class="th">내선</div>
+													<div class="td">123</div>
+												</div>
+												<div class="row">
+													<div class="th">Fax</div>
+													<div class="td">0505.001.6161</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="bottom">
+									<ul>
+										<li>LabelⅢ</li>
+										<li>CFP(국제공인재무설계사)</li>
+										<li>CFP(국제공인재무설계사)</li>
+										<li>CFP(국제공인재무설계사)</li>
+										<li>CFP(국제공인재무설계사)</li>
+										<li>신용위험분석사(CRA)2차</li>
+										<li>신용위험분석사(CRA)1차</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //bs-card-wrap -->
+
+					<div class="stroke stroke-fluid my0"></div>
+
+					<!-- group -->
+					<div class="group pt24 px4">
+						<strong class="title-medium">별칭명</strong>
+						<button type="button" class="btn-noborder"><i class="ico-modify"></i>수정</button>
+					</div>
+					<!-- //group -->
+
+					<!-- bs-card-wrap -->
+					<div class="bs-card-wrap mb16">
+						<input type="radio" name="rad001">
+						<div class="bs-card ">
+							<div class="bs-typeA">
+								<div class="top">
+									<div class="left">
+										<picture class="top-logo01">
+											<source srcset="/resources/images/bs_card/bs_a_top_logo01.png">
+											<img src="/resources/images/bs_card/bs_a_top_logo01.png" alt="우리 마음속 첫번째 금융">
+										</picture>
+									</div>
+									<div class="right">
+										<picture class="top-aff01">
+											<source srcset="/resources/images/bs_card/bs_a_aff.png">
+											<img src="/resources/images/bs_card/bs_a_aff.png" alt="우리금융그룹">
+										</picture>
+									</div>
+								</div>
+								<div class="line">
+									<picture>
+										<source srcset="/resources/images/bs_card/bs_a_line.svg">
+										<img src="/resources/images/bs_card/bs_a_line.svg" alt="">
+									</picture>
+								</div>
+								<div class="center">
+									<div class="title">
+										<div class="left">
+											<picture class="center-logo01">
+												<source srcset="/resources/images/bs_card/bs_a_center_logo01.png">
+												<img src="/resources/images/bs_card/bs_a_center_logo01.png" alt="우리은행">
+											</picture>
+											<picture class="center-cfp">
+												<source srcset="/resources/images/bs_card/bs_b_center_logo01.png">
+												<img src="/resources/images/bs_card/bs_b_center_logo01.png" alt="CFP">
+											</picture>
+										</div>
+										<div class="right">
+											<dl>
+												<dt>김우리</dt>
+												<dd>직위/호칭</dd>
+												<dd>소속</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="info">
+										<div class="left">
+											<div class="location">04632 서울특별시 중구 소공로 51</div>
+											<div class="email">woori@woorifg.com</div>
+										</div>
+										<div class="right">
+											<div class="contact">
+												<div class="row">
+													<div class="th">Mobile</div>
+													<div class="td">010.1234.5678</div>
+												</div>
+												<div class="row">
+													<div class="th">Tel</div>
+													<div class="td">02.1234.5678</div>
+												</div>
+												<div class="row">
+													<div class="th">내선</div>
+													<div class="td">123</div>
+												</div>
+												<div class="row">
+													<div class="th">Fax</div>
+													<div class="td">0505.001.6161</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="bottom">
+									<ul>
+										<li>CFP(국제공인재무설계사)</li>
+										<li>신용위험분석사(CRA)2차</li>
+										<li>신용위험분석사(CRA)1차</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //bs-card-wrap -->
+
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+		<!-- bottom-btn -->
+		<div class="bottom-btn">
+			<div class="btn-wrap">
+				<button type="button" class="btn-large btn-outlined" data-micromodal-trigger="modal-businesscard-regist">등록</button>
+				<button type="button" class="btn-large btn-primary"><i class="ico-share"></i>공유</button>
+			</div>
+		</div>
+		<!-- //bottom-btn -->
+
+	</main>
+	<!-- //main -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-businesscard" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large">명함 순서 설정</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content px24">
+						<p class="description info body-large my24">순서를 바꿀 명함을 끌어 순서를 변경하세요.</p>
+
+						<div id="sortingBusinessCard" class="businesscard-list">
+							<div class="list-group-item">
+								<strong class="title-medium">Item 1</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 2</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 3</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 4</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 5</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+							<div class="list-group-item">
+								<strong class="title-medium">Item 6</strong>
+								<button type="button" class="handler" aria-label="순서 이동"></button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" onclick="toastr.success('', '저장되었습니다.')" data-micromodal-close>저장</button>
+						</div>
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom micromodal-slide-bottom-tablet modal" id="modal-businesscard-regist" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+
+				<div class="modal__header">
+					<strong class="modal__title title-large">명함 순서 설정</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+
+					<div class="content">
+
+						<style>
+							@media (min-width:768px) and (orientation:landscape) {
+								.modal__content>.content {
+									padding-bottom: 0;
+									padding-left: 0;
+									padding-right: 0;
+								}
+
+							}
+						</style>
+						<!-- section-tablet -->
+						<div class="section-tablet section-tablet-row section-has-bottom">
+							<!-- section-tablet-left -->
+							<div class="section-tablet-left">
+								<!-- group-form -->
+								<div class="group-form mt16">
+									<div class="group-title">
+										<strong class="title-medium">명함 스타일</strong>
+									</div>
+									<div class="group-content content-fluid mt8 px0">
+										<div class="swiper swiper-business-card">
+											<!-- Additional required wrapper -->
+											<div class="swiper-wrapper">
+												<!-- Slides -->
+
+												<div class="swiper-slide">
+													<!-- card-select -->
+													<div class="card-select">
+														<div class="inp inp-large">
+															<span class="tags tags-medium tags-black-80">A타입</span>
+															<label><input type="radio" name="radbsCard"></label>
+															<!-- bs-card-wrap -->
+															<div class="bs-card-wrap">
+																<div class="bs-card ">
+																	<div class="bs-typeA">
+																		<div class="top">
+																			<div class="left">
+																				<picture class="top-logo01">
+																					<source srcset="/resources/images/bs_card/bs_a_top_logo01.png">
+																					<img src="/resources/images/bs_card/bs_a_top_logo01.png" alt="우리 마음속 첫번째 금융">
+																				</picture>
+																			</div>
+																			<div class="right">
+																				<picture class="top-aff01">
+																					<source srcset="/resources/images/bs_card/bs_a_aff.png">
+																					<img src="/resources/images/bs_card/bs_a_aff.png" alt="우리금융그룹">
+																				</picture>
+																			</div>
+																		</div>
+																		<div class="line">
+																			<picture>
+																				<source srcset="/resources/images/bs_card/bs_a_line.svg">
+																				<img src="/resources/images/bs_card/bs_a_line.svg" alt="">
+																			</picture>
+																		</div>
+																		<div class="center">
+																			<div class="title">
+																				<div class="left">
+																					<picture class="center-logo01">
+																						<source srcset="/resources/images/bs_card/bs_a_center_logo01.png">
+																						<img src="/resources/images/bs_card/bs_a_center_logo01.png" alt="우리은행">
+																					</picture>
+																					<picture class="center-cfp">
+																						<source srcset="/resources/images/bs_card/bs_b_center_logo01.png">
+																						<img src="/resources/images/bs_card/bs_b_center_logo01.png" alt="CFP">
+																					</picture>
+																				</div>
+																				<div class="right">
+																					<dl>
+																						<dt>김우리</dt>
+																						<dd>직위/호칭</dd>
+																						<dd>소속</dd>
+																					</dl>
+																				</div>
+																			</div>
+																			<div class="info">
+																				<div class="left">
+																					<div class="location">04632 서울특별시 중구 소공로 51</div>
+																					<div class="email">woori@woorifg.com</div>
+																				</div>
+																				<div class="right">
+																					<div class="contact">
+																						<div class="row">
+																							<div class="th">Mobile</div>
+																							<div class="td">010.1234.5678</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">Tel</div>
+																							<div class="td">02.1234.5678</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">내선</div>
+																							<div class="td">123</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">Fax</div>
+																							<div class="td">0505.001.6161</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="bottom">
+																			<ul>
+																				<li>CFP(국제공인재무설계사)</li>
+																				<li>신용위험분석사(CRA)2차</li>
+																				<li>신용위험분석사(CRA)1차</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!-- //bs-card-wrap -->
+														</div>
+													</div>
+													<!-- //card-select -->
+												</div>
+
+												<div class="swiper-slide">
+													<!-- card-select -->
+													<div class="card-select">
+														<div class="inp inp-large">
+															<span class="tags tags-medium tags-black-80">A사진 타입</span>
+															<label><input type="radio" name="radbsCard"></label>
+															<!-- bs-card-wrap -->
+															<div class="bs-card-wrap">
+																<div class="bs-card ">
+																	<div class="bs-typeA">
+																		<div class="top">
+																			<div class="left">
+																				<picture class="top-logo01">
+																					<source srcset="/resources/images/bs_card/bs_a_top_logo01.png">
+																					<img src="/resources/images/bs_card/bs_a_top_logo01.png" alt="우리 마음속 첫번째 금융">
+																				</picture>
+																			</div>
+																			<div class="right">
+																				<picture class="top-aff01">
+																					<source srcset="/resources/images/bs_card/bs_a_aff.png">
+																					<img src="/resources/images/bs_card/bs_a_aff.png" alt="우리금융그룹">
+																				</picture>
+																			</div>
+																		</div>
+																		<div class="line">
+																			<picture>
+																				<source srcset="/resources/images/bs_card/bs_a_line.svg">
+																				<img src="/resources/images/bs_card/bs_a_line.svg" alt="">
+																			</picture>
+																		</div>
+																		<div class="center">
+																			<div class="title">
+																				<div class="left">
+																					<figure>
+																						<picture>
+																							<source srcset="/resources/images/bs_card/bs_photo.png">
+																							<img src="/resources/images/bs_card/bs_photo.png" alt="">
+																						</picture>
+																					</figure>
+																					<picture class="center-cfp">
+																						<source srcset="/resources/images/bs_card/bs_b_center_logo01.png">
+																						<img src="/resources/images/bs_card/bs_b_center_logo01.png" alt="CFP">
+																					</picture>
+																				</div>
+																				<div class="right">
+																					<dl>
+																						<dt>김우리</dt>
+																						<dd>직위/호칭</dd>
+																						<dd>소속</dd>
+																					</dl>
+																				</div>
+																			</div>
+																			<div class="info">
+																				<div class="left">
+																					<picture class="info-logo01">
+																						<source srcset="/resources/images/bs_card/bs_a_center_logo01.png">
+																						<img src="/resources/images/bs_card/bs_a_center_logo01.png" alt="우리은행">
+																					</picture>
+																					<div class="location">04632 서울특별시 중구 소공로 51</div>
+																					<div class="email">woori@woorifg.com</div>
+																				</div>
+																				<div class="right">
+																					<div class="contact">
+																						<div class="row">
+																							<div class="th">Mobile</div>
+																							<div class="td">010.1234.5678</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">Tel</div>
+																							<div class="td">02.1234.5678</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">내선</div>
+																							<div class="td">123</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">Fax</div>
+																							<div class="td">0505.001.6161</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="bottom">
+																			<ul>
+																				<li>CFP(국제공인재무설계사)</li>
+																				<li>신용위험분석사(CRA)2차</li>
+																				<li>신용위험분석사(CRA)1차</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!-- //bs-card-wrap -->
+														</div>
+													</div>
+													<!-- //card-select -->
+												</div>
+
+												<div class="swiper-slide">
+													<!-- card-select -->
+													<div class="card-select">
+														<div class="inp inp-large">
+															<span class="tags tags-medium tags-black-80">위비프렌즈 타입</span>
+															<!-- 화면에 표시되는 input은 추후 숨길 예정, 개발 작업 시 swiper-slide-active slide 안 input에 checked 시키게끔 작업 부탁드립니다. -->
+															<label><input type="radio" name="radbsCard"></label>
+															<!-- bs-card-wrap -->
+															<div class="bs-card-wrap">
+																<div class="bs-card ">
+																	<div class="bs-typeA">
+																		<div class="top">
+																			<div class="left">
+																				<picture class="top-logo02">
+																					<source srcset="/resources/images/bs_card/bs_a_top_logo02.png">
+																					<img src="/resources/images/bs_card/bs_a_top_logo02.png" alt="위비프렌즈">
+																				</picture>
+																			</div>
+																			<div class="right">
+																				<picture class="top-aff01">
+																					<source srcset="/resources/images/bs_card/bs_a_aff.png">
+																					<img src="/resources/images/bs_card/bs_a_aff.png" alt="우리금융그룹">
+																				</picture>
+																			</div>
+																		</div>
+																		<div class="line">
+																			<picture>
+																				<source srcset="/resources/images/bs_card/bs_a_line.svg">
+																				<img src="/resources/images/bs_card/bs_a_line.svg" alt="">
+																			</picture>
+																		</div>
+																		<div class="center">
+																			<div class="title">
+																				<div class="left">
+																					<picture class="center-logo01">
+																						<source srcset="/resources/images/bs_card/bs_a_center_logo01.png">
+																						<img src="/resources/images/bs_card/bs_a_center_logo01.png" alt="우리은행">
+																					</picture>
+																					<picture class="center-cfp">
+																						<source srcset="/resources/images/bs_card/bs_b_center_logo01.png">
+																						<img src="/resources/images/bs_card/bs_b_center_logo01.png" alt="CFP">
+																					</picture>
+																				</div>
+																				<div class="right">
+																					<dl>
+																						<dt>김우리</dt>
+																						<dd>직위/호칭</dd>
+																						<dd>소속</dd>
+																					</dl>
+																				</div>
+																			</div>
+																			<div class="info">
+																				<div class="left">
+																					<div class="location">04632 서울특별시 중구 소공로 51</div>
+																					<div class="email">woori@woorifg.com</div>
+																				</div>
+																				<div class="right">
+																					<div class="contact">
+																						<div class="row">
+																							<div class="th">Mobile</div>
+																							<div class="td">010.1234.5678</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">Tel</div>
+																							<div class="td">02.1234.5678</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">내선</div>
+																							<div class="td">123</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">Fax</div>
+																							<div class="td">0505.001.6161</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="bottom">
+																			<ul>
+																				<li>CFP(국제공인재무설계사)</li>
+																				<li>신용위험분석사(CRA)2차</li>
+																				<li>신용위험분석사(CRA)1차</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!-- //bs-card-wrap -->
+														</div>
+													</div>
+													<!-- //card-select -->
+												</div>
+
+												<div class="swiper-slide">
+													<!-- card-select -->
+													<div class="card-select">
+														<div class="inp inp-large">
+															<span class="tags tags-medium tags-black-80">TC타입</span>
+															<label><input type="radio" name="radbsCard"></label>
+															<!-- bs-card-wrap -->
+															<div class="bs-card-wrap">
+																<div class="bs-card ">
+																	<div class="bs-typeB">
+																		<div class="top">
+																			<div class="left">
+																				<picture class="top-logo03">
+																					<source srcset="/resources/images/bs_card/bs_b_top_logo01.png">
+																					<img src="/resources/images/bs_card/bs_b_top_logo01.png" alt="TWO CHAIRS">
+																				</picture>
+																			</div>
+																			<div class="right">
+																				<picture class="top-aff01">
+																					<source srcset="/resources/images/bs_card/bs_a_aff.png">
+																					<img src="/resources/images/bs_card/bs_a_aff.png" alt="우리금융그룹">
+																				</picture>
+																			</div>
+																		</div>
+																		<div class="center">
+																			<div class="title">
+																				<div class="left">
+																					<picture class="center-cfp">
+																						<source srcset="/resources/images/bs_card/bs_b_center_logo01.png">
+																						<img src="/resources/images/bs_card/bs_b_center_logo01.png" alt="CFP">
+																					</picture>
+																				</div>
+																				<div class="right">
+																					<dl>
+																						<dt>김우리</dt>
+																						<dd>직위/호칭</dd>
+																						<dd>소속</dd>
+																					</dl>
+																				</div>
+																			</div>
+																			<div class="info">
+																				<div class="left">
+																					<div class="left">
+																						<picture class="info-logo01">
+																							<source srcset="/resources/images/bs_card/bs_a_center_logo01.png">
+																							<img src="/resources/images/bs_card/bs_a_center_logo01.png" alt="우리은행">
+																						</picture>
+																						<div class="location">04632 서울특별시 중구 소공로 51</div>
+																						<div class="email">woori@woorifg.com</div>
+																					</div>
+																				</div>
+																				<div class="right">
+																					<div class="contact">
+																						<div class="row">
+																							<div class="th">Mobile</div>
+																							<div class="td">010.1234.5678</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">Tel</div>
+																							<div class="td">02.1234.5678</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">내선</div>
+																							<div class="td">123</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">Fax</div>
+																							<div class="td">0505.001.6161</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="bottom">
+																			<ul>
+																				<li>CFP(국제공인재무설계사)</li>
+																				<li>신용위험분석사(CRA)2차</li>
+																				<li>신용위험분석사(CRA)1차</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!-- //bs-card-wrap -->
+														</div>
+													</div>
+													<!-- //card-select -->
+												</div>
+
+												<div class="swiper-slide">
+													<!-- card-select -->
+													<div class="card-select">
+														<div class="inp inp-large">
+															<span class="tags tags-medium tags-black-80">TC사진 타입</span>
+															<label><input type="radio" name="radbsCard" checked></label>
+															<!-- bs-card-wrap -->
+															<div class="bs-card-wrap" id="main_capture">
+																<div class="bs-card ">
+																	<div class="bs-typeB">
+																		<div class="top">
+																			<div class="left">
+																				<picture class="top-logo03">
+																					<source srcset="/resources/images/bs_card/bs_b_top_logo01.png">
+																					<img src="/resources/images/bs_card/bs_b_top_logo01.png" alt="TWO CHAIRS">
+																				</picture>
+																			</div>
+																			<div class="right">
+																				<picture class="top-aff01">
+																					<source srcset="/resources/images/bs_card/bs_a_aff.png">
+																					<img src="/resources/images/bs_card/bs_a_aff.png" alt="우리금융그룹">
+																				</picture>
+																			</div>
+																		</div>
+																		<div class="center">
+																			<div class="title">
+																				<div class="left">
+																					<figure>
+																						<picture>
+																							<source srcset="/resources/images/bs_card/bs_photo.png">
+																							<img src="/resources/images/bs_card/bs_photo.png" alt="">
+																						</picture>
+																					</figure>
+																					<picture class="center-cfp">
+																						<source srcset="/resources/images/bs_card/bs_b_center_logo01.png">
+																						<img src="/resources/images/bs_card/bs_b_center_logo01.png" alt="CFP">
+																					</picture>
+																				</div>
+																				<div class="right">
+																					<dl>
+																						<dt>김우리</dt>
+																						<dd>직위/호칭</dd>
+																						<dd>소속</dd>
+																					</dl>
+																				</div>
+																			</div>
+																			<div class="info">
+																				<div class="left">
+																					<div class="left">
+																						<picture class="info-logo01">
+																							<source srcset="/resources/images/bs_card/bs_a_center_logo01.png">
+																							<img src="/resources/images/bs_card/bs_a_center_logo01.png" alt="우리은행">
+																						</picture>
+																						<div class="location">04632 서울특별시 중구 소공로 51</div>
+																						<div class="email">woori@woorifg.com</div>
+																					</div>
+																				</div>
+																				<div class="right">
+																					<div class="contact">
+																						<div class="row">
+																							<div class="th">Mobile</div>
+																							<div class="td">010.1234.5678</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">Tel</div>
+																							<div class="td">02.1234.5678</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">내선</div>
+																							<div class="td">123</div>
+																						</div>
+																						<div class="row">
+																							<div class="th">Fax</div>
+																							<div class="td">0505.001.6161</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="bottom">
+																			<ul>
+																				<li>CFP(국제공인재무설계사)</li>
+																				<li>신용위험분석사(CRA)2차</li>
+																				<li>신용위험분석사(CRA)1차</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<!-- //bs-card-wrap -->
+														</div>
+													</div>
+													<!-- //card-select -->
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //group-form -->
+							</div>
+
+							<!-- section-tablet-right -->
+							<div class="section-tablet-right">
+
+								<!-- group-form -->
+								<div class="group-form mt40">
+									<div class="group-title">
+										<strong class="title-medium">별칭 <i class="apos" aria-label="필수 입력">*</i></strong>
+									</div>
+									<div class="group-content">
+										<div class="form">
+											<div class="label"></div>
+											<div class="input-wrap">
+												<input type="text" aria-label="별칭" placeholder="예) 자주쓰는 명함, OO고객 전용">
+												<button type="button" class="input-remove" aria-label="입력 내용 삭제"></button>
+											</div>
+											<p class="validate-text"></p>
+										</div>
+									</div>
+								</div>
+								<!-- //group-form -->
+
+								<!-- group-form -->
+								<div class="group-form mt40">
+									<div class="group-title">
+										<strong class="title-medium">직급</strong>
+									</div>
+									<div class="group-content">
+										<div class="inp-group">
+											<div class="inp inp-medium">
+												<label>
+													<input type="radio" name="rad002">
+													<span class="label-title">과장</span>
+												</label>
+											</div>
+											<div class="inp inp-medium">
+												<label>
+													<input type="radio" name="rad002">
+													<span class="label-title">팀장</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //group-form -->
+
+								<div class="stroke my40"></div>
+
+								<!-- group-form -->
+								<div class="group-form">
+									<div class="group-title">
+										<strong class="title-medium">휴대폰번호</strong>
+									</div>
+									<div class="group-content">
+										<div class="inp-group">
+											<div class="inp inp-medium">
+												<label>
+													<input type="radio" name="rad012">
+													<span class="label-title">공개</span>
+												</label>
+											</div>
+											<div class="inp inp-medium">
+												<label>
+													<input type="radio" name="rad012">
+													<span class="label-title">비공개</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //group-form -->
+
+								<!-- group-form -->
+								<div class="group-form mt40">
+									<div class="group-title">
+										<strong class="title-medium">전화번호</strong>
+									</div>
+									<div class="group-content">
+										<div class="inp-group flex-column">
+											<div class="inp inp-medium">
+												<label>
+													<input type="radio" name="rad003">
+													<span class="label-title">02-1588-6161</span>
+												</label>
+											</div>
+											<div class="inp inp-medium flex-column">
+												<label>
+													<input type="radio" name="rad003">
+													<span class="label-title">직접 입력</span>
+												</label>
+												<div class="form">
+													<div class="label"></div>
+													<div class="input-wrap">
+														<input type="tel" placeholder="전화번호" aria-label="전화번호">
+													</div>
+													<p class="validate-text"></p>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<!-- //group-form -->
+
+								<div class="stroke my40"></div>
+
+								<!-- group -->
+								<div class="group-form mt40">
+									<div class="group-title">
+										<strong class="title-medium">자격증</strong>
+										<div class="inp inp-toggle mx16">
+											<label>
+												<input type="checkbox" checked aria-label="자격증 노출">
+											</label>
+										</div>
+									</div>
+									<div class="group-content">
+										<!-- <p class="description info body-small fc-typography-caption mt24">최대 5개 선택할 수 있습니다.</p> -->
+										<div class="inp-column-list form">
+											<div class="inp inp-medium">
+												<label>
+													<input type="checkbox">
+													<span class="label-title ff-42DotSans">LevelⅢ</span>
+												</label>
+											</div>
+											<div class="inp inp-medium">
+												<label>
+													<input type="checkbox">
+													<span class="label-title ff-42DotSans">공인신용분석사</span>
+												</label>
+											</div>
+											<div class="inp inp-medium">
+												<label>
+													<input type="checkbox">
+													<span class="label-title ff-42DotSans">CFP(국제공인재무설계사)</span>
+												</label>
+											</div>
+											<div class="inp inp-medium">
+												<label>
+													<input type="checkbox">
+													<span class="label-title ff-42DotSans">CDCS(국제공인신용장전문가자격증)</span>
+												</label>
+											</div>
+										</div>
+										<p class="description caution body-small fc-typography-caption">지점 주소와 전화번호는 우리금융 Portal Service &gt; 직원조회에서 본인이 속한 부점명으로 검색해 수정할 수 있습니다.</p>
+									</div>
+								</div>
+								<!-- //group -->
+
+								<!-- group -->
+								<div class="group-form mt40">
+									<div class="group-title">
+										<strong class="title-medium">자격증</strong>
+										<div class="inp inp-toggle mx16">
+											<label>
+												<input type="checkbox" aria-label="자격증 노출">
+											</label>
+										</div>
+									</div>
+									<div class="group-content">
+										<!-- <p class="description info body-small fc-typography-caption mt24">최대 5개 선택할 수 있습니다.</p> -->
+										<div class="inp-column-list form form-invalid">
+											<div class="inp inp-medium">
+												<label>
+													<input type="checkbox" checked disabled>
+													<span class="label-title ff-42DotSans">선택안함</span>
+												</label>
+											</div>
+											<div class="inp inp-medium">
+												<label>
+													<input type="checkbox" disabled>
+													<span class="label-title ff-42DotSans">LevelⅢ</span>
+												</label>
+											</div>
+											<div class="inp inp-medium">
+												<label>
+													<input type="checkbox" disabled>
+													<span class="label-title ff-42DotSans">공인신용분석사</span>
+												</label>
+											</div>
+											<div class="inp inp-medium">
+												<label>
+													<input type="checkbox" disabled>
+													<span class="label-title ff-42DotSans">CFP(국제공인재무설계사)</span>
+												</label>
+											</div>
+											<div class="inp inp-medium">
+												<label>
+													<input type="checkbox" disabled>
+													<span class="label-title ff-42DotSans">CDCS(국제공인신용장전문가자격증)</span>
+												</label>
+											</div>
+											<p class="validate-text">1개 이상 선택해 주세요.</p>
+										</div>
+										<p class="description caution body-small fc-typography-caption">지점 주소와 전화번호는 우리금융 Portal Service &gt; 직원조회에서 본인이 속한 부점명으로 검색해 수정할 수 있습니다.</p>
+									</div>
+								</div>
+								<!-- //group -->
+
+
+								<!-- group -->
+								<div class="group-form mt40">
+									<div class="group-title">
+										<strong class="title-medium">자격증</strong>
+										<div class="inp inp-toggle mx16">
+											<label>
+												<input type="checkbox" aria-label="자격증 노출">
+											</label>
+										</div>
+									</div>
+									<div class="group-content">
+										<div class="py24">
+											<p class="description caution body-small fc-typography-caption ac my12">자격증 정보가 없습니다.</p>
+										</div>
+										<p class="description caution body-small fc-typography-caption">지점 주소와 전화번호는 우리금융 Portal Service &gt; 직원조회에서 본인이 속한 부점명으로 검색해 수정할 수 있습니다.</p>
+									</div>
+								</div>
+								<!-- //group -->
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="modal__footer">
+					<!-- bottom-btn -->
+					<div class="bottom-btn">
+						<!-- 등록 -->
+						<div class="btn-wrap">
+							<button type="button" class="btn-large btn-primary" onclick="toastr.success('', '저장되었습니다.')" data-micromodal-close><i class="ico-check"></i>저장</button>
+						</div>
+
+						<!-- 수정 -->
+						<!-- <div class="btn-wrap">
+							<button type="button" class="btn-large btn-outlined" onclick="$swal.fire02('삭제하시겠습니까', 'caution', '예',  true, '아니요');">삭제</button>
+							<button type="button" class="btn-large btn-primary" onclick="toastr.success('', '저장되었습니다.')" data-micromodal-close><i class="ico-check"></i>저장</button>
+						</div> -->
+						<!-- //수정 -->
+					</div>
+					<!-- //bottom-btn -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
+
+	<script>
+		// alert popup
+		function swalFire() {
+			Swal.fire({
+				showCancelButton: true,
+				showCloseButton: false,
+				reverseButtons: true,
+				title: '<span class="description body-xlarge fw-500">삭제하시겠습니까?</span>',
+				confirmButtonText: '예',
+				cancelButtonText: '아니요',
+				customClass: {
+					actions: 'btn-wrap',
+					cancelButton: "btn-large btn-outlined",
+					confirmButton: "btn-large btn-primary",
+				},
+				buttonsStyling: false
+			}).then((result) => {
+				/* Read more about isConfirmed, isDenied below */
+				if (result.isConfirmed) {
+					toastr.success('', '삭제되었습니다.')
+				}
+			});
+		}
+
+		// sortable
+		var sortableOption = {
+			group: 'shared',
+			animation: 150,
+			handle: '.handler', // handle's class
+		}
+		sortableLeft = Sortable.create(sortingBusinessCard, sortableOption);
+
+		// swiper
+
+
+		const newSwiper = new Swiper('.swiper-business-card', {
+			spaceBetween: 1,
+			effect: 'cards',
+			observer: true,
+			observeParents: true,
+			on: {
+				//기본 0번 slide에 checked 삽입
+				//slide change 시 실행(등록, 수정페이지에 삽입)
+				slideChange: function() {
+					const index_currentSlide = this.realIndex;
+					const currentSlide = this.slides[index_currentSlide]
+					currentSlide.querySelector('input').checked = true;
+				},
+				//수정페이지에 삽입
+				slidesUpdated: function() {
+					const slides = this.el.querySelectorAll('.swiper-slide')
+					slides.forEach(function(slide, index) {
+						const checkbox = slide.querySelector('input[type="radio"]')
+						if (checkbox.checked == true) {
+							if (index > 0) {
+								newSwiper.slideTo(index, 300)
+							}
+						}
+					})
+				}
+			}
+		});
+
+
+		// bsCardResize.init();
+	</script>
+
+</body>
+
+</html>

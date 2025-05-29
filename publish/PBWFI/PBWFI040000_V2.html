@@ -153,7 +153,7 @@
 								<div class="d-flex a-center j-end gap4 mt8">
 									<span class="mt0 nowrap">적용환율</span>
 									<span class="bul mt0 fs-16">/</span>
-									<span class="mt0 nowrap">우대전</span>
+									<span class="mt0 nowrap">우대 전</span>
 								</div>
 							</div>
 						</div>
@@ -162,7 +162,7 @@
 								<dl>
 									<dt>환율우대 90%</dt>
 									<dd>1,437,010,000</dd>
-									<dd class="sub-text">우대전 1,459,600</dd>
+									<dd class="sub-text">우대 전 1,459,600</dd>
 								</dl>
 							</div>
 						</div>
@@ -171,12 +171,21 @@
 								<dl>
 									<dt>손익정보</dt>
 									<dd>24,300,000</dd>
-									<dd class="sub-text">우대전 24,300</dd>
+									<dd class="sub-text">우대 전 24,300</dd>
 								</dl>
 							</div>
 						</div>
 					</div>
 					<!-- //form -->
+
+					<!-- 당발솜금 시 노출 -->
+					<div class="stroke stroke4 stroke-fluid mt40"></div>
+					<div class="content-fluid px0">
+						<button type="button" class="anchor chevron anchor-fluid" data-micromodal-trigger="modal-popup05"><strong class="title-medium px4">당발송금수수료</strong></button>
+					</div>
+					<div class="stroke stroke4 stroke-fluid"></div>
+					<!-- //당발솜금 시 노출 -->
+
 
 					<p class="description caution body-small fc-typography-caption mt32">단순 계산 및 조회용으로 수수료는 포함되지 않았습니다.</p>
 					<p class="description caution body-small fc-typography-caption mt16">상세 계산은 WINI FG900(외환리테일 사전상담 금액계산)거래를 이용하시기 바랍니다.</p>
@@ -356,6 +365,73 @@
 	</div>
 	<!-- //micromodal -->
 
+	<!-- micromodal -->
+	<div class="micromodal-slide micromodal-slide-bottom modal" id="modal-popup05">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true">
+				<div class="modal__header">
+					<strong class="modal__title title-large">당발송금 수수료 안내</strong>
+					<button type="button" class="modal__close" aria-label="팝업 닫기" data-micromodal-close></button>
+				</div>
+				<div class="modal__content">
+					<div class="content">
+
+
+						<div class="table-col">
+							<table>
+								<caption>당발송금 수수료 안내</caption>
+								<colgroup>
+									<col style="">
+									<col style="">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">송금액</th>
+										<th scope="col">수수료</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>USD500 상당액 이하</td>
+										<td>5,000 원</td>
+									</tr>
+									<tr>
+										<td>USD500 상당액 초과 ~ USD2,000 상당액 이하</td>
+										<td>10,000 원</td>
+									</tr>
+									<tr>
+										<td>USD2,000 상당액 초과 ~ USD5,000 상당액 이하</td>
+										<td>15,000 원</td>
+									</tr>
+									<tr>
+										<td>USD5,000 상당액 초과 ~ USD20,000 상당액 이하</td>
+										<td>15,000 원</td>
+									</tr>
+									<tr>
+										<td>USD20,000 상당액 초과</td>
+										<td>20,000 원</td>
+									</tr>
+									<tr>
+										<td>CRS 및 WEFAS 송금수표 발행시</td>
+										<td>건당 USD5 상당액 추가징수</td>
+									</tr>
+									<tr>
+										<td>인터넷뱅킹 또는 영업점에서 국외점포로 바로바로 해외송금시</td>
+										<td>건당 2,000원 상당액 추가징수</td>
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+
+						<p class="description success body-small fc-typography-caption mt16">인터넷/WON 뱅킹을 통한 송금시 우리가족우대서비스에 따라 Family 등급 이상은 당발송금수수료 면제</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //micromodal -->
 
 </body>
 

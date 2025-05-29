@@ -414,7 +414,6 @@
 			const textOuterHeight = parseInt(window.getComputedStyle(text).height);
 			const textLineClamp = text.dataset.line;
 			const textMaxHeight = textLineHeight * textLineClamp;
-			console.log(textOuterHeight)
 			if (textOuterHeight > textMaxHeight) {
 				text.classList.add('line-clamp')
 			} else {

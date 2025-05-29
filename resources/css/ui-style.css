@@ -956,6 +956,10 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
     -webkit-mask-image:url(/resources/images/icon_only/icon_comment.svg);
     mask-image:url(/resources/images/icon_only/icon_comment.svg);
 }
+.icon-privacy {
+    background-color:initial;
+    background-image:url(/resources/images/icon_only/icon_privacy.svg);
+}
 
 /* toggle-trigger */
 [data-toggle="toggle-trigger"] .toggle-off {display:block;}

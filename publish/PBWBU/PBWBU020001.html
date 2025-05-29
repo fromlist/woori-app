@@ -90,8 +90,14 @@
 				<!-- content -->
 				<div class="content">
 
+
+					<div class="tags-wrap d-flex gap8 mt16">
+						<div class="tags tags-medium tags-lightBlue"><i class="icon-only icon-18 icon-keyman"></i>키맨</div>
+						<div class="tags tags-medium tags-lightCyan"><i class="icon-only icon-18 icon-privacy"></i>나만보기</div>
+					</div>
+
 					<!-- upload-picture -->
-					<div class="upload-picture mt16">
+					<div class="upload-picture mt8">
 						<button type="button" class="upload-picture-anchor" id="modalTrigger" aria-label="이미지 확대보기">
 							<picture>
 								<source srcset="/resources/images/@temp/@business_card.png">
@@ -116,9 +122,6 @@
 
 							</div>
 							<div class="divide-list mt16 px4">
-								<div class="tags-wrap mr10">
-									<div class="tags tags-medium tags-lightBlue"><i class="icon-only icon-18 icon-keyman"></i>키맨</div>
-								</div>
 								<span>부서명</span>
 								<div class="division h14 mx8"></div>
 								<span>직책</span>
@@ -582,7 +585,6 @@
 			const textOuterHeight = parseInt(window.getComputedStyle(text).height);
 			const textLineClamp = text.dataset.line;
 			const textMaxHeight = textLineHeight * textLineClamp;
-			console.log(textOuterHeight)
 			if (textOuterHeight > textMaxHeight) {
 				text.classList.add('line-clamp')
 			} else {
