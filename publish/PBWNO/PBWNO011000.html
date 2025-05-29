@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script><!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>오늘의 주요뉴스</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+				<!-- content -->
+				<div class="content">
+
+					<div class="notice-wrap pt16">
+						<div class="notice-title">
+							<div class="notice-title-inner j-end">
+								<span class="divide-list">
+									<span class="date">홍길동</span>
+									<span class="division h14 mx8"></span>
+									<span class="date">2025-05-29</span>
+								</span>
+							</div>
+							<h2 class="title-large px0">우리은행 PB영업지원 APP이 오픈되었습니다. 업무에 많은 도움이 되길 바랍니다.</h2>
+						</div>
+						<div class="stroke my32"></div>
+						<div class="notice-content">
+							<ul class="file-attach-list">
+								<li><a href="#" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+								<li><a href="#" data-ext="word" class="link"><span>불완전 판매사례 안내.word</span></a></li>
+								<li><a href="#" data-ext="excel" class="link"><span>불완전 판매사례 안내.excel</span></a></li>
+								<li><a href="#" data-ext="hwp" class="link"><span>불완전 판매사례 안내.hwp</span></a></li>
+								<li><a href="#" data-ext="img" class="link"><span>불완전 판매사례 안내.img</span></a></li>
+								<li><a href="#" data-ext="pdf" class="link"><span>불완전 판매사례 안내.pdf</span></a></li>
+								<li><a href="#" data-ext="ppt" class="link"><span>불완전 판매사례 안내.ppt</span></a></li>
+							</ul>
+							<picture>
+								<source srcset="/resources/@temp/thumb_w.png">
+								<img src="/resources/@temp/thumb_w.png" alt="">
+							</picture>
+							<div class="text">
+								<pre>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+Ducimus nesciunt rerum odit natus consequuntur ab porro mollitia error distinctio aliquam eligendi vero provident illum, dolores cupiditate vitae, numquam similique ipsam?
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus voluptas repellendus adipisci provident, veritatis id omnis in assumenda? Laudantium ex est, porro velit quia aut suscipit dolore accusamus et?
+</pre>
+							</div>
+							<ul class="message-link">
+								<li><a href="http://srj.woorifg.com:8080">http://srj.woorifg.com:8080</a></li>
+							</ul>
+						</div>
+						<div class="btn-wrap mt32 py0">
+							<button type="button" class="btn-small btn-outlined btn-round">목록으로 돌아가기</button>
+						</div>
+					</div>
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+	</main>
+	<!-- //main -->
+
+</body>
+
+</html>

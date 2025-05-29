@@ -218,8 +218,8 @@
 
 /* fund-result */
 .fund-result {padding-top:40px;}
-.fund-result .result-title {display:flex;align-items:center;justify-content:center;text-align:center;font-size:16px;font-weight:700;line-height:1.5;margin-bottom:24px;}
-.fund-result .result-title span {font-size:18px;color:var(--status-active);vertical-align:top;}
+.result-title {display:flex;align-items:center;justify-content:center;text-align:center;font-size:16px;font-weight:700;line-height:1.5;margin-bottom:24px;}
+.result-title span {font-size:18px;color:var(--status-active);vertical-align:top;}
 
 /* func-card-list */
 .fund-card-list {}

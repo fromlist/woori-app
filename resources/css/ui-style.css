@@ -250,6 +250,7 @@ input:not([type="checkbox"],[type="radio"],[type="file"])[disabled] {color:var(-
 .input-wrap.input-datepicker button:after {content:'';position:absolute;right:0;top:50%;margin-top:-12px;flex:0 0 24px;width:24px;height:24px;background:url(/resources/images/form/form-datepicker.svg) center center / contain no-repeat;}
 .input-wrap.input-datepicker button:only-child {text-align:left;}
 .input-wrap.input-datepicker button:only-child:after {margin-left:auto;}
+.input-wrap.input-datepicker input[type="date"] {flex:1 1 auto;width:0;}
 
 /* input-select */
 .input-select {padding-left:0;}
