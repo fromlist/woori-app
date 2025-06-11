@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>자산관리 영업지원 App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+
+	<script src="/resources/plugins/jquery/jquery.min.js"></script>
+
+	<!-- [plugins] -->
+	<!-- micromodal -->
+	<link rel="stylesheet" href="/resources/plugins/micromodal/0.4.10/micromodal.css">
+	<script src="/resources/plugins/micromodal/0.4.10/micromodal.min.js"></script>
+	<!-- sortable -->
+	<script src="/resources/plugins/sortable/1.15.2/Sortable.min.js"></script>
+	<!-- sweetalert2 -->
+	<link rel="stylesheet" href="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.css">
+	<script src="/resources/plugins/sweetalert2/11.11.0/sweetalert2.min.js"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="/resources/plugins/swiper/11.1.1/swiper-bundle.min.css">
+	<script src="/resources/plugins/swiper/11.1.1/swiper-bundle.min.js"></script>
+	<!-- tippy -->
+	<script src="/resources/plugins/popper.js/2.11.8/umd/popper.min.js"></script>
+	<script src="/resources/plugins/popper.js/2.11.8/umd/tippy-bundle.umd.min.js"></script>
+	<!-- toastr -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/2.1.4/toastr.min.css">
+	<script src="/resources/plugins/toastr/2.1.4/toastr.min.js"></script>
+	<!-- jquery-ui -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/jquery-ui/jquery-ui.css">
+	<script src="/resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<!-- pinch-zoom -->
+	<script src="/resources/plugins/pinch-zoom/pinch-zoom.umd.js"></script>
+	<!-- apexcharts -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/apexcharts/3.50.0/apexcharts.css">
+	<script src="/resources/plugins/apexcharts/3.50.0/apexcharts.min.js"></script>
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/resources/plugins/aos/3.0.0-beta.6/aos.css">
+	<script src="/resources/plugins/aos/3.0.0-beta.6/aos.js"></script>
+	<!-- jquery-ui-monthpicker-master -->
+	<script src="/resources/plugins/jquery-ui-monthpicker-master/monthpicker.js"></script>
+	<!-- jquery-touchSwipe -->
+	<script src="/resources/plugins/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script><!-- //[plugins] -->
+
+	<!-- ui source -->
+	<link rel="stylesheet" href="/resources/css/ui-fonts.css">
+	<link rel="stylesheet" href="/resources/css/ui-variable.css">
+	<link rel="stylesheet" href="/resources/css/ui-default.css">
+	<link rel="stylesheet" href="/resources/css/ui-layout.css">
+	<link rel="stylesheet" href="/resources/css/ui-style.css">
+	<link rel="stylesheet" href="/resources/css/ui-content.css">
+	<link rel="stylesheet" href="/resources/css/ui-bscard.css">
+	<link rel="stylesheet" href="/resources/css/ui-plugins.css">
+
+	<link rel="stylesheet" href="/resources/css/ui-skeletone.css">
+	<link rel="stylesheet" href="/resources/css/ui-mediaquery.css">
+	<script src="/resources/js/ui-script.js"></script>
+	<script src="/resources/js/ui-temp.js"></script> <!-- 개발서버에서 include 제외해주세요 -->
+	<!-- //ui source -->
+</head>
+
+<body>
+
+	<!-- main -->
+	<main>
+
+		<!-- header -->
+		<header>
+			<div class="main-header">
+				<div class="left">
+					<button type="button" class="header-btn" aria-label="뒤로 가기"><i class="i-back"></i></button>
+				</div>
+				<div class="center">
+					<h1>환율알림 설정</h1>
+				</div>
+				<div class="right">
+					<button type="button" class="header-btn" aria-label="메뉴 열기"><i class="i-menu"></i></button>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- main-inner -->
+		<!-- content start -->
+		<div class="main-inner">
+
+			<!-- container -->
+			<div id="container">
+				<!-- content -->
+				<div class="content">
+
+					<div class="exchange-wrap content-fluid mb-24">
+						<h2 class="title-large al mb16">어느 국가의 환율을 알림받으시겠어요?</h2>
+
+						<div class="exchange-list">
+							<button class="flag flag-us flag-fluid">
+								<strong>USD</strong>
+								<span>미국 달러</span>
+								<i class="mlauto fc-status-active">알림받는 중</i>
+							</button>
+
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-jp flag-fluid"><strong>JPY</strong><span>일본 엔</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-eu flag-fluid"><strong>EUR</strong><span>유럽 유로</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-gb flag-fluid"><strong>GBP</strong><span>영국 파운드</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-ca flag-fluid"><strong>CAD</strong><span>캐나다 달러</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-ch flag-fluid"><strong>CHF</strong><span>스위스 프랑</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-hk flag-fluid"><strong>HKD</strong><span>홍콩 달러</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-cn flag-fluid"><strong>CNY</strong><span>중국 위안</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-th flag-fluid"><strong>THB</strong><span>태국 바트</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-se flag-fluid"><strong>SEK</strong><span>스웨덴 크로나</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-au flag-fluid"><strong>AUD</strong><span>호주 달러</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-dk flag-fluid"><strong>DKK</strong><span>덴마크 크로네</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-no flag-fluid"><strong>NOK</strong><span>노르웨이 크로네</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-sg flag-fluid"><strong>SGD</strong><span>싱가포르 달러</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-nz flag-fluid"><strong>NZD</strong><span>뉴질랜드 달러</span></button>
+						</div>
+						<div class="exchange-list">
+							<button class="flag flag-ph flag-fluid"><strong>PHP</strong><span>필리핀 페소</span></button>
+						</div>
+					</div>
+				</div>
+				<!-- //content -->
+			</div>
+			<!-- //container -->
+
+
+		</div>
+		<!-- //content end -->
+		<!-- //main-inner -->
+
+
+
+	</main>
+	<!-- //main -->
+
+</body>
+
+</html>

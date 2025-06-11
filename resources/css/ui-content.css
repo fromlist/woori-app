@@ -462,9 +462,9 @@ button.flag strong span {font-size:14px;margin-top:0;margin-left:-4px;}
 .flag span {display:block;font-size:16px;font-weight:500;color:var(--typography-caption);line-height:1;}
 button.flag span {display:block;margin-top:4px;}
 button.flag-fluid {display:flex;align-items:center;width:100%;gap:8px;}
-button.flag-fluid:after {content:'';flex:0 0 10px;width:10px;height:20px;background:url(/resources/images/arrow/ico_chevron.svg) center center / contain no-repeat;margin-left:auto;}
+button.flag-fluid:after {content:'';flex:0 0 10px;width:10px;height:20px;background:url(/resources/images/arrow/ico_chevron.svg) center center / contain no-repeat;margin-left:10px;}
 button.flag-fluid strong:after {display:none;}
-button.flag-fluid span {margin-top:0;}
+button.flag-fluid span {margin-top:0;margin-right:auto;}
 
 
 /* label-list */

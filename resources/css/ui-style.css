@@ -349,6 +349,7 @@ input[type="checkbox"].type-eu:checked {background:url(/resources/images/form/fo
 
 /* inpboard */
 .inp-board {display:grid;grid-template-columns:repeat(3, 1fr);gap:4px;}
+.inp-board-repeat5 {grid-template-columns:repeat(5, 1fr);}
 .inp-board input[type="checkbox"] {position:relative;display:flex;align-items:center;justify-content:center;flex:1 1 100%;appearance:none;-webkit-appearance:none;text-align:center;padding:0 8px;font-size:18px;font-weight:400;color:var(--typography-gray);min-height:48px;border-radius:8px;background-color:var(--surface-surface50);border:2px solid transparent;transition:background-color 0.15s ease,border-color 0.15s ease;width:100%;}
 .inp-board input[type="checkbox"]:before {content:attr(aria-label);}
 .inp-board input[type="checkbox"]:checked {background-color:var(--background-bg_white);border-color:var(--border-primary_enabled);font-weight:700;}
